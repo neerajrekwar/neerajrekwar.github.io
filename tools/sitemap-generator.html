@@ -7,49 +7,22 @@
 </head>
 <body>
     <h1>Sitemap Generator</h1>
+    <label for="websiteUrl">Enter Website URL:</label>
+    <input type="text" id="websiteUrl" placeholder="https://example.com">
     <button onclick="generateSitemap()">Generate Sitemap</button>
-    <pre id="sitemapOutput"></pre>
+    <pre id="sitemapResult"></pre>
 
     <script>
-        function generateSitemap() {
-            const baseURL = prompt("Enter the base URL of the website (e.g., https://example.com):");
-            
-            if (!baseURL) {
-                alert("Please enter a valid base URL.");
-                return;
+        async function generateSitemap() {
+            const websiteUrl = document.getElementById('websiteUrl').value;
+
+            try {
+                const response = await fetch(`/sitemap?url=${encodeURIComponent(websiteUrl)}`);
+                const sitemapXml = await response.text();
+                document.getElementById('sitemapResult').innerText = sitemapXml;
+            } catch (error) {
+                console.error('Error generating sitemap:', error);
             }
-
-            fetch(`${baseURL}/robots.txt`)
-                .then(response => response.text())
-                .then(robotsTxt => {
-                    const sitemapRegex = /Sitemap: (.+)/g;
-                    let match;
-                    const sitemaps = [];
-
-                    while ((match = sitemapRegex.exec(robotsTxt)) !== null) {
-                        sitemaps.push(match[1]);
-                    }
-
-                    if (sitemaps.length === 0) {
-                        alert("No sitemap found in robots.txt.");
-                        return;
-                    }
-
-                    const fetchPromises = sitemaps.map(sitemapURL =>
-                        fetch(sitemapURL)
-                            .then(response => response.text())
-                            .then(sitemapXML => {
-                                document.getElementById("sitemapOutput").textContent += sitemapXML;
-                            })
-                    );
-
-                    Promise.all(fetchPromises)
-                        .then(() => alert("Sitemap generated successfully."))
-                        .catch(error => alert(`Error: ${error}`));
-                })
-                .catch(error => {
-                    alert(`Error fetching robots.txt: ${error}`);
-                });
         }
     </script>
 </body>
