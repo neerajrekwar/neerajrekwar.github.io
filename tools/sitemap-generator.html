@@ -1,1 +1,53 @@
-t
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap Generator</title>
+</head>
+<body>
+
+  <h1>Sitemap Generator</h1>
+  <button onclick="generateSitemap()">Generate Sitemap</button>
+
+  <script>
+    function generateSitemap() {
+      // Hardcoded URLs for demonstration purposes
+      const urls = [
+        'https://example.com/page1',
+        'https://example.com/page2',
+        'https://example.com/page3',
+      ];
+
+      // Create XML content
+      let xmlContent = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+      // Add each URL to the XML content
+      urls.forEach(url => {
+        xmlContent += `\n  <url>\n    <loc>${url}</loc>\n  </url>`;
+      });
+
+      // Close the XML content
+      xmlContent += '\n</urlset>';
+
+      // Create a Blob with the XML content
+      const blob = new Blob([xmlContent], { type: 'application/xml' });
+
+      // Create a download link
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = 'sitemap.xml';
+      a.style.display = 'none';
+
+      // Append the link to the body and trigger a click
+      document.body.appendChild(a);
+      a.click();
+
+      // Remove the link from the body
+      document.body.removeChild(a);
+    }
+  </script>
+
+</body>
+</html>
+
