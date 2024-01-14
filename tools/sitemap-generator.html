@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML Sitemap Generator</title>
+    <title>Sitemap Generator</title>
 </head>
 <body>
-    <h1>XML Sitemap Generator</h1>
-
-    <label for="websiteInput">Enter your website URL:</label>
-    <input type="text" id="websiteInput" placeholder="https://example.com">
+    <h1>Sitemap Generator</h1>
     <button onclick="generateSitemap()">Generate Sitemap</button>
-
-    <h2>Generated XML Sitemap:</h2>
-    <textarea id="sitemapResult" rows="10" cols="50" readonly></textarea>
+    <pre id="sitemapOutput"></pre>
 
     <script>
         function generateSitemap() {
-            const websiteURL = document.getElementById('websiteInput').value.trim();
-
-            if (websiteURL === '') {
-                alert('Please enter a valid website URL.');
+            const baseURL = prompt("Enter the base URL of the website (e.g., https://example.com):");
+            
+            if (!baseURL) {
+                alert("Please enter a valid base URL.");
                 return;
             }
 
-            const xmlSitemap = `
-                <?xml version="1.0" encoding="UTF-8"?>
-                <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-                    <url>
-                        <loc>${websiteURL}</loc>
-                        <lastmod>${new Date().toISOString()}</lastmod>
-                        <changefreq>monthly</changefreq>
-                        <priority>1.0</priority>
-                    </url>
-                    <!-- Add more URLs as needed -->
-                </urlset>
-            `;
+            fetch(`${baseURL}/robots.txt`)
+                .then(response => response.text())
+                .then(robotsTxt => {
+                    const sitemapRegex = /Sitemap: (.+)/g;
+                    let match;
+                    const sitemaps = [];
 
-            document.getElementById('sitemapResult').value = xmlSitemap;
+                    while ((match = sitemapRegex.exec(robotsTxt)) !== null) {
+                        sitemaps.push(match[1]);
+                    }
+
+                    if (sitemaps.length === 0) {
+                        alert("No sitemap found in robots.txt.");
+                        return;
+                    }
+
+                    const fetchPromises = sitemaps.map(sitemapURL =>
+                        fetch(sitemapURL)
+                            .then(response => response.text())
+                            .then(sitemapXML => {
+                                document.getElementById("sitemapOutput").textContent += sitemapXML;
+                            })
+                    );
+
+                    Promise.all(fetchPromises)
+                        .then(() => alert("Sitemap generated successfully."))
+                        .catch(error => alert(`Error: ${error}`));
+                })
+                .catch(error => {
+                    alert(`Error fetching robots.txt: ${error}`);
+                });
         }
     </script>
 </body>
