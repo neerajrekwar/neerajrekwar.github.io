@@ -17,6 +17,7 @@
   <link rel="canonical" href="https://neerajrekwar.github.io/" />
 
   <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="grid.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" sizes="180x180" href="/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,25 +94,48 @@
 
 <body>
 <header></header>
-<main>
-  <section>
-    <figure class="ms:lg flex-1 justify-center bg-slate-100 p-10">
-      <img class="m-auto h-32 w-32 rounded-full border-4" src="https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true" alt="Neeraj Rekwar" />
-      <figcaption>
-        <h1 class="p-2 text-center sm:bg-orange-200 lg:text-3xl">Neeraj Rekwar</h1>
-        <p class="p-1 text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum at voluptatum deleniti labore porro illo rem tempore corporis dolores!</p>
-      </figcaption>
-      <div>
-        <button class="m-1 rounded bg-slate-300 p-1 px-3 font-bold"><a href="mailto:dev.neerajrekwar@gmail.com" data-abc="true">Email</a></button>
-        <button class="m-1 rounded bg-slate-300 p-1 px-3 font-bold"><a href="/" download="/" data-abc="true"> resume </a></button>
-      </div>
-    </figure>
-  </section>
-  <section></section>
-  <section></section>
-  <section></section>
-  
-</main>
+  <main class="grid-tamplate-area">
+    <section class="grid-box a grid-col-span-2  grid-row-span-2">
+      <figure class="ms:lg flex-1 justify-center bg-slate-100 p-10">
+        <img class="m-auto h-32 w-32 rounded-full border-4" src="https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true" alt="Neeraj Rekwar" />
+        <figcaption>
+          <h1 class="p-2 text-center sm:bg-orange-200 lg:text-3xl">Neeraj Rekwar</h1>
+          <p class="p-1 text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum at voluptatum deleniti labore porro illo rem tempore corporis dolores!</p>
+        </figcaption>
+        <div>
+          <button class="m-1 rounded bg-slate-300 p-1 px-3 font-bold"><a href="mailto:dev.neerajrekwar@gmail.com" data-abc="true">Email</a></button>
+          <button class="m-1 rounded bg-slate-300 p-1 px-3 font-bold"><a href="/" download="/" data-abc="true"> resume </a></button>
+        </div>
+      </figure>
+    </section>
+    <section class="grid-box b">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+      reprehenderit eaque totam numquam unde facere, voluptatibus beatae, iste
+      maxime earum est magnam suscipit. Ea sequi magnam quo eaque sint
+      ducimus.
+    </section>
+    <section class="grid-box c  grid-row-span-2 ">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+      reprehenderit eaque totam numquam unde facere, voluptatibus beatae, iste
+      maxime earum est magnam suscipit. Ea sequi magnam quo eaque sint
+      ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+      reprehenderit eaque totam numquam unde facere, voluptatibus beatae, iste
+      maxime earum est magnam suscipit. Ea sequi magnam quo eaque sint
+      ducimus.
+    </section>
+    <section class="grid-box d grid-col-span-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+      reprehenderit eaque totam numquam unde facere, voluptatibus beatae, iste
+      maxime earum est magnam suscipit. Ea sequi magnam quo eaque sint
+      ducimus.
+    </section>
+    <section class="grid-box e">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+      reprehenderit eaque totam numquam unde facere, voluptatibus beatae, iste
+      maxime earum est magnam suscipit. Ea sequi magnam quo eaque sint
+      ducimus.
+    </section>
+  </main>
 <footer></footer>
   <script src="script.js"></script>
 </body>
