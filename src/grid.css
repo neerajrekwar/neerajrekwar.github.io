@@ -12,7 +12,6 @@ main {
     gap: 1.5em;
     border: 2px solid;
     margin-inline: auto;
-    width: min(95%, 70rem);
     padding-block: 2rem;
   }
   
