@@ -3,12 +3,12 @@ main {
   }
   .grid-tamplate-area {
     display: grid;
-    grid-template-areas:
+    /* grid-template-areas:
       'One'
       'Two'
       'Three'
       'Four'
-      'Five';
+      'Five'; */
     gap: 1.5em;
     border: 2px solid;
     margin:0 auto;
