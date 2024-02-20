@@ -11,8 +11,8 @@ main {
       'Five';
     gap: 1.5em;
     border: 2px solid;
-    margin-inline: auto;
-    padding-block: 2rem;
+    margin:0 auto;
+    padding: 2rem;
   }
   
   section {
