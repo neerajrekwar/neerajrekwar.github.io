@@ -14,7 +14,8 @@ main {
     'Two'
     'Three'
     'Four'
-    'Five';
+    'Five'
+    'Six';
   gap: 1.5em; 
   /* border: 2px solid; */
   margin:0 auto;
