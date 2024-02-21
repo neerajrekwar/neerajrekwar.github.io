@@ -4,7 +4,7 @@
   padding: 0;
 }
 main {
-  background-color: rgb(192, 238, 238);
+  /* background-color: rgb(192, 238, 238); */
 }
 .grid-tamplate-area {
   display: grid;
@@ -49,7 +49,7 @@ section {
     height: auto;
   }
   main {
-    background-color: rgb(189, 228, 153);
+    /* background-color: rgb(189, 228, 153); */
 
   }
   .grid-tamplate-area{
@@ -69,7 +69,7 @@ section {
     height: auto;
   }
   main {
-    background-color: rgb(78, 78, 129);
+    /* background-color: rgb(78, 78, 129); */
   }
   .grid-tamplate-area {
     height: auto;
