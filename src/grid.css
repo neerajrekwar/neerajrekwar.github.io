@@ -16,7 +16,7 @@ main {
     'Four'
     'Five';
   gap: 1.5em; 
-  border: 2px solid;
+  /* border: 2px solid; */
   margin:0 auto;
   height: auto;
   padding: 2rem;
