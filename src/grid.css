@@ -5,12 +5,16 @@
   font-size: 16px;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: ;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 main {
   font-size: 1.5em;
   /* background-color: rgb(192, 238, 238); */
 }
+
 .grid-tamplate-area {
   display: grid;
   grid-auto-columns: 1fr;
@@ -21,30 +25,37 @@ main {
     'Four'
     'Five'
     'Six';
-  gap: 1.5em; 
+  gap: 1.5em;
   /* border: 2px solid; */
-  margin:0 auto;
+  margin: 0 auto;
   height: auto;
   padding: 2rem;
 }
-.grid-box:nth-child(1){
+
+.grid-box:nth-child(1) {
   grid-area: One;
 }
-.grid-box:nth-child(2){
+
+.grid-box:nth-child(2) {
   grid-area: Two;
 }
-.grid-box:nth-child(3){
+
+.grid-box:nth-child(3) {
   grid-area: Three;
 }
-.grid-box:nth-child(4){
+
+.grid-box:nth-child(4) {
   grid-area: Four;
 }
-.grid-box:nth-child(5){
+
+.grid-box:nth-child(5) {
   grid-area: Five;
 }
-.grid-box:nth-child(6){
+
+.grid-box:nth-child(6) {
   grid-area: Six;
 }
+
 section {
   padding: 5px;
   /* border-radius: 5px; */
@@ -57,20 +68,23 @@ section {
     padding: 0;
     height: auto;
   }
+
   main {
     /* background-color: rgb(189, 228, 153); */
 
   }
-  .grid-tamplate-area{
-    grid-template-areas: 
-    'One One'
-    'Two Five'
-    'Three Five'
-    'Four Four'
-    'Six Six';
+
+  .grid-tamplate-area {
+    grid-template-areas:
+      'One One'
+      'Two Five'
+      'Three Five'
+      'Four Four'
+      'Six Six';
   }
-  
+
 }
+
 @media (min-width: 50em) {
   * {
     box-sizing: border-box;
@@ -78,36 +92,43 @@ section {
     padding: 0;
     height: auto;
   }
+
   main {
     /* background-color: rgb(78, 78, 129); */
   }
+
   .grid-tamplate-area {
     height: auto;
-    grid-template-areas: 
-    'One One Two Five'
-    'Three Four Four Five'
-    'Six Six Six Six';
+    grid-template-areas:
+      'One One Two Five'
+      'Three Four Four Five'
+      'Six Six Six Six';
     grid-column: 50%;
   }
-  
-  
+
+
 }
+
 .a {
   border: 2px solid tomato;
 }
+
 .b {
   border: 2px solid gold;
 }
+
 .c {
   border: 2px solid gray;
 }
+
 .d {
   border: 2px solid rgb(30, 158, 30);
 }
+
 .e {
   border: 2px solid rgb(34, 121, 161);
 }
+
 .f {
   border: 2px solid rgb(255, 83, 183);
 }
-
