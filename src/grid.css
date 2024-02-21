@@ -2,8 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: ;
 }
 main {
+  font-size: 1.5em;
   /* background-color: rgb(192, 238, 238); */
 }
 .grid-tamplate-area {
