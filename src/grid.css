@@ -36,6 +36,9 @@ main {
 .grid-box:nth-child(5){
   grid-area: Five;
 }
+.grid-box:nth-child(6){
+  grid-area: Six;
+}
 section {
   padding: 5px;
   /* border-radius: 5px; */
@@ -57,7 +60,8 @@ section {
     'One One'
     'Two Five'
     'Three Five'
-    'Four Four';
+    'Four Four'
+    'Six Six';
   }
   
 }
@@ -75,7 +79,8 @@ section {
     height: auto;
     grid-template-areas: 
     'One One Two Five'
-    'Three Four Four Five';
+    'Three Four Four Five'
+    'Six Six Six Six';
     grid-column: 50%;
   }
   
