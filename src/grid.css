@@ -84,8 +84,8 @@ section {
       'One One'
       'Two Five'
       'Three Five'
-      'Four Six'
-      'Four Six';
+      'Four Four'
+      'Six Six';
   }
 
 }
@@ -114,7 +114,7 @@ section {
 
 }
 
-/* .a {
+.a {
   border: 2px solid tomato;
 }
 
@@ -136,4 +136,4 @@ section {
 
 .f {
   border: 2px solid rgb(255, 83, 183);
-} */
+}
