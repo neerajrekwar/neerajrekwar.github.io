@@ -60,13 +60,7 @@ main {
 .grid-box:nth-child(6) {
   grid-area: Six;
 }
-.grid-box{
-  /* resulting css */
-  filter: contrast(170%) brightness(1000%);
-  background: 
-	linear-gradient(0deg, rgb(243, 255, 73), rgba(0, 0, 0, 0)),
-	url(/assets/svgImages/box.svg);
-}
+
 
 @media (min-width: 30em) {
   * {
