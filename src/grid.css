@@ -61,11 +61,6 @@ main {
   grid-area: Six;
 }
 
-section {
-  padding: 5px;
-  /* border-radius: 5px; */
-}
-
 @media (min-width: 30em) {
   * {
     box-sizing: border-box;
