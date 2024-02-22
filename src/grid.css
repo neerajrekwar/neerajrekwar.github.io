@@ -30,7 +30,7 @@ main {
     'Four'
     'Five'
     'Six';
-  gap: 1.5em;
+  gap: 1em;
   /* border: 2px solid; */
   margin: 0 auto;
   height: auto;
