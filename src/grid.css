@@ -107,8 +107,7 @@ section {
     grid-template-areas:
       'One One Two Five'
       'Three Four Four Five'
-      'Six Six Six Six';
-    grid-column: 50%;
+      'Six Six Six Six'
   }
 
 
