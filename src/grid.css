@@ -62,9 +62,6 @@ main {
 }
 .grid-box{
   /* resulting css */
-
-  width: 250px;
-  height: 250px;
   filter: contrast(170%) brightness(1000%);
   background: 
 	linear-gradient(0deg, rgb(243, 255, 73), rgba(0, 0, 0, 0)),
