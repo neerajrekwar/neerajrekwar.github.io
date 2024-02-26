@@ -141,19 +141,13 @@ main {
   border: 2px solid rgb(255, 83, 183);
 } */
 
-.scroll-watcher{
-  height: 10px;
-  top: 10px;
-  position: fixed;
-  z-index: 1000;
-  background-color: aquamarine;
-  width: 100%;
-  scale: 0 1;
-  transform-origin: left;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
+section > img {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: contain 100px;
 }
 
-@keyframes scroll-watcher {
-  to {scale: 1 1;}
+@keyframes fade-in {
+  from{scale: .8; opacity: 0;}
+  to {scale: 1; opacity: 1;}
 }
