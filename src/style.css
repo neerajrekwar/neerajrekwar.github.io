@@ -140,3 +140,19 @@ main {
 .f {
   border: 2px solid rgb(255, 83, 183);
 } */
+
+.scroll-watcher{
+  height: 10px;
+  top: 10px;
+  position: fixed;
+  z-index: 1000;
+  background-color: aquamarine;
+  width: 100%;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {scale: 1 1;}
+}
