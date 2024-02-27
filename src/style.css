@@ -142,22 +142,27 @@ main {
 .f {
   border: 2px solid rgb(255, 83, 183);
 } */
-/* @media (prefers-reduced-motion: no-preference) {
-  section>img {
-    animation: fade-in linear;
-    animation-timeline: scroll();
-    animation-range: contain 100px;
-  }
+.scroll-container {
+  height: 200vh; /* Create enough scrollable height for demonstration */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
 
-  @keyframes fade-in {
-    from {
-      scale: .8;
-      opacity: 0;
-    }
+.scroll-text {
+  opacity: 0;
+  transform: translateX(-220px);
+  scroll-snap-align: start;
+  will-change: opacity, transform;
+  animation: fade-in .3s ease-out 0.5s forwards;
+  scroll-timeline: scroll();
+  animation-range: entry 2000px;
+}
 
-    to {
-      scale: 1;
+@keyframes fade-in {
+  to {
       opacity: 1;
-    }
+      transform: translateX(0);
   }
-} */
+}
