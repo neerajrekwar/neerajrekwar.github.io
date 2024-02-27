@@ -142,7 +142,7 @@ main {
 .f {
   border: 2px solid rgb(255, 83, 183);
 } */
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   section>img {
     animation: fade-in linear;
     animation-timeline: scroll();
@@ -160,4 +160,4 @@ main {
       opacity: 1;
     }
   }
-}
+} */
