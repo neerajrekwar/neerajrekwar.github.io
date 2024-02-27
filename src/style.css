@@ -152,7 +152,7 @@ main {
 
 .scroll-text {
   opacity: 0;
-  transform: translateX(-220px);
+  transform: translateX(-20px);
   scroll-snap-align: start;
   will-change: opacity, transform;
   animation: fade-in .3s ease-out 0.5s forwards;
