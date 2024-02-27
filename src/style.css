@@ -156,7 +156,7 @@ main {
   scroll-snap-align: start;
   will-change: opacity, transform;
   animation: fade-in .3s ease-out 0.5s forwards;
-  scroll-timeline: scroll();
+  scroll-timeline: view();
   animation-range: entry;
 }
 
@@ -165,4 +165,21 @@ main {
       opacity: 1;
       transform: translateX(0);
   }
+}
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  transition: width 0.3s;
 }
