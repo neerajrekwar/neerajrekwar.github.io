@@ -157,7 +157,7 @@ main {
   will-change: opacity, transform;
   animation: fade-in .3s ease-out 0.5s forwards;
   scroll-timeline: scroll();
-  animation-range: entry 2000px;
+  animation-range: entry;
 }
 
 @keyframes fade-in {
