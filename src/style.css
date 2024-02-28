@@ -118,8 +118,8 @@ main {
 
 
 }
-.hello{
-  background: linear-gradient(45deg, black, transparent);
+span.hello{
+  background: linear-gradient(45deg, #cdff10, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
