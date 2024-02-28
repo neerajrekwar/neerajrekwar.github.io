@@ -118,6 +118,11 @@ main {
 
 
 }
+.hello{
+  background: linear-gradient(45deg, black, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* .a {
   border: 2px solid tomato;
