@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Time Zone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="displayLocalTimeZone()">
+    <h1>Local Time Zone</h1>
+    <!-- This paragraph will display the local time zone -->
+    <p id="local-time-zone"></p>
+
+    <!-- Inline JavaScript code -->
+    <script>
+        // Function to display the local time zone
+        function displayLocalTimeZone() {
+            // Get the local time zone using Intl.DateTimeFormat
+            var localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            // Display the local time zone in the paragraph element with id "local-time-zone"
+            document.getElementById("local-time-zone").textContent = "Local Time Zone: " + localTimeZone;
+        }
+    </script>
+</body>
+</html>
