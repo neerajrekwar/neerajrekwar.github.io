@@ -19,6 +19,7 @@
 
 }
 
+
 .alata-regular {
   font-family: "Alata", sans-serif;
   font-weight: 400;
@@ -115,8 +116,6 @@ main {
       'Three Four Four Five'
       'Six Six Six Six'
   }
-
-
 }
 span.hello{
   background: linear-gradient(45deg, #cdff10, transparent);
@@ -187,4 +186,8 @@ span.hello{
   width: 0;
   background-color: #4caf50;
   transition: width 0.3s;
+}
+
+#form-container{
+  background-image: url('https://images.unsplash.com/photo-1516613835066-91cb1a42dda5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
