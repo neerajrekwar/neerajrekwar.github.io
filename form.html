@@ -12,37 +12,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/output.css">
+
   <title>form</title>
 </head>
 
 <body>
-  <div id="form-container" class="h-[100vh] grid ">
-    <div class="m-auto w-[64vw] backdrop-blur-sm p-2 h-auto bg-[#f9ffa571] rounded">
-      <h1 class="text-[#242424] text-4xl ">Hi, I'm there</h1>
-      <form action="" method="get" class="py-1 my-2 m-2 ">
-        <h2 class="text-[#242424] text-2xl my-2">Tell about me</h2>
-         <legend>Choose my favorite to eat? <select name="" id="">
-           <option value="choose" disabled selected >choose</option>
-           <option value="figs">figs</option>
-           <option value="Potato">Potato</option>
-           <option value="Tomato">Tomato</option>
-           </select></legend>
-         <legend>how is my expression? <br>
-          <input type="text" placeholder="tell me" class="px-1">
-         </legend>
-  
-         <legend>Who is your favorite animal? <br>
-          <label for="">
-            <input type="radio" name="" id="" value="" checked> me
-          </label>
-          <label for="">
-            <input type="radio" name="" id="" value="" disabled> Cats
-          </label>
-         </legend>
-        <button type="submit" class="p-2 px-4 shadow-xl rounded-md hover:bg-yellow-600 bg-yellow-300 mt-4">Send</button>
-      </form>
+  <main>
+    <div id="form-container" class="h-[100vh] grid ">
+      <div class="m-auto w-[64vw] backdrop-blur-sm p-2 h-auto bg-[#f9ffa571] rounded">
+        <h1 class="text-[#242424] text-4xl ">Hi, I'm there</h1>
+        <p class="p-1 bg-[#ffffff] rounded my-3">Lumer could be a mysterious shop filled with relics, a post-punk band
+          channeling social woes, or both! They unearth forgotten treasures, be it vinyl records or raw emotions.</p>
+        <form action="" method="get" class="py-1 my-2 m-2 ">
+          <h2 class="text-[#242424] text-2xl my-2">Tell about me</h2>
+          <legend>Choose my favorite to eat? <select name="" id="">
+              <option value="choose" disabled selected>choose</option>
+              <option value="figs">figs</option>
+              <option value="Potato">Potato</option>
+              <option value="Tomato">Tomato</option>
+            </select></legend>
+          <legend>how is my expression? <br>
+            <input type="text" placeholder="tell me" class="px-1">
+          </legend>
+
+          <legend>Who is your favorite animal? <br>
+            <label for="">
+              <input type="radio" name="" id="" value="" checked> me
+            </label>
+            <label for="">
+              <input type="radio" name="" id="" value="" disabled> Cats
+            </label>
+          </legend>
+          <button type="submit"
+            class="p-2 px-4 shadow-xl rounded-md hover:bg-yellow-600 bg-yellow-300 mt-4">Send</button>
+        </form>
+      </div>
     </div>
-  </div>
+  </main>
 
 </body>
 
