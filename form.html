@@ -20,11 +20,11 @@
   <main>
     <div id="form-container" class="h-[100vh] grid text-sm ">
       <div class="m-auto w-[95vw] sm:w-[64vw]  lg:w-[44vw] backdrop-blur-md p-2 h-auto bg-[#3535353f] rounded">
-        <h1 class="text-[#242424] text-4xl ">Hi, I'm there</h1>
-        <p class="p-1 bg-[#ffffff] rounded my-3 h-[23vh]">Lumer could be a mysterious shop filled with relics, a post-punk band
+        <h1 class="text-[#fff] text-5xl ">Hi, I'm there</h1>
+        <p class="p-1 bg-[#ffdc42bb] text-base  rounded my-3 h-[23vh]">Lumer could be a mysterious shop filled with relics, a post-punk band
           channeling social woes, or both! They unearth forgotten treasures, be it vinyl records or raw emotions.</p>
-        <form action="" method="get" class="py-1 my-2 m-2 ">
-          <h2 class="text-[#ffffff] text-2xl my-2">Tell about me</h2>
+        <form action="" method="get" class="p-2 my-2 m-1 rounded text-[#353535] bg-slate-50">
+          <h2 class="text-2xl my-2">Tell about me</h2>
           <legend>Choose my favorite to eat? <select name="" id="" class="p-2">
               <option value="choose" disabled selected>choose</option>
               <option value="figs">figs</option>
@@ -36,15 +36,18 @@
           </legend>
 
           <legend>Who is your favorite animal? <br>
-            <label for="">
-              <input type="radio" name="" id="" value="" class="" checked> me
+            <label for="" class="flex">
+              <input type="radio" name="" id="" value="" class="h-5 mx-2" checked> me
             </label>
-            <label for="">
-              <input type="radio" name="" id="" value="" class="" disabled> Cats
+            <label for="" class="flex">
+              <input type="radio" name="" id="" value="" class="h-5 mx-2" disabled> Cats
+            </label>
+            <label for="" class="flex">
+              <input type="radio" name="" id="" value="" class="h-5 mx-2" > None
             </label>
           </legend>
           <button type="submit"
-            class="p-2 px-4 shadow-xl rounded-md hover:bg-yellow-600 bg-yellow-300 mt-4">Send</button>
+            class="p-2 px-5 shadow-xl rounded hover:bg-yellow-600 bg-yellow-300 mt-4">Send</button>
         </form>
       </div>
     </div>
