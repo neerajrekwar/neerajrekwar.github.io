@@ -33,8 +33,19 @@
       </ul>
     </nav>
   </header>
+  <header class="absolute top-0 flex h-9 w-[100%] items-center justify-between bg-transparent px-1 text-white">
+    <a href="" class="font-bold tracking-[1px] text-[#353535] lg:text-[#fff]">nee</a>
+    <nav class="flex">
+      <ul class="flex">
+        <li class="m-2 font-bold hover:text-[gold]"><a class="text-[#353535] hover:underline lg:text-[#fff]"
+            href="#about">about</a></li>
+        <li class="m-2 font-bold hover:text-[gold]"><a href="">f</a></li>
+        <li class="m-2 font-bold hover:text-[gold]"><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <main class="text-sm">
-    <section class="flex h-[100vh] items-center justify-center bg-[#242424] text-[#fff]">
+    <section id="intro" class="flex h-[100vh] items-center justify-center bg-[#242424] text-[#fff]">
       <div class="absolute h-[56vh] w-[98%] self-center rounded-lg bg-[#5e716a2c] p-2 backdrop-blur">
         <span class="hello text-3xl font-bold">hello, world</span><br />
         <span class="text-3xl font-bold">Neeraj Rekwar</span><br />
@@ -245,11 +256,11 @@
         </div>
       </div>
     </section>
-    <section class="m-auto h-[100vh] md:w-[75%]">
+    <section class="m-auto h-[100vh] ">
       <h2 id="about" class="mb-2 p-2 text-center text-3xl font-bold text-[#353535]">Projects</h2>
       <p class="mb-10 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-      <div id="project" class="three border p-2 text-gray-600">
-        <div class="flex-1 overflow-hidden ">
+      <div class="three  border p-2 text-gray-600">
+        <div class="flex-1 m-auto md:w-[75%] overflow-hidden ">
           <div class="mb-2 w-[100%] bg-[#242424cb] rounded-2xl p-2">
             <ul class="mb-5">
               <li class="text-yellow-300 inline-flex items-center pb-1 text-xl font-bold">
@@ -278,7 +289,7 @@
                   <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                 </svg>
               </li>
-              <li class="pb-2 text-sm text-[#a0a0a0]">SEO audit</li>
+              <li class="pb-2 text-sm  text-[#a0a0a0]">SEO audit</li>
             </ul>
             <p class="text-[#c9c9c9] font-bold">Webstuck, the web design agency that turns visitors into customers and
               helps businesses grow."</p>
@@ -296,7 +307,9 @@
       <div>x(twitter)</div>
       </div>
     </section>
+
   </main>
+
 
   <footer class="h-[52vh] bg-[#242424] text-sky-50">
     <ul class="flex">
