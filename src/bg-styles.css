@@ -9,7 +9,7 @@ div.two {
     background-size: 2rem 2rem, 2rem 2rem;
 }
 
-div.three {
+section.three {
     background-color: #353535;
     background-image: radial-gradient(circle at 100% 50%,
             transparent 1rem,
