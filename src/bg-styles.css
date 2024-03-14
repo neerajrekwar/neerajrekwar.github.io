@@ -1,0 +1,31 @@
+
+
+div.two {
+    background-color: hsl(177, 27%, 69%);
+    background-image: linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
+        linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
+        linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
+        linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%);
+    background-size: 2rem 2rem, 2rem 2rem;
+}
+
+div.three {
+    background-color: #353535;
+    background-image: radial-gradient(circle at 100% 50%,
+            transparent 1rem,
+            #a1b1c1 1rem,
+            #a1b1c1 1.5rem,
+            transparent 1.5rem),
+        radial-gradient(circle at 0% 50%,
+            transparent 1rem,
+            #f1b1c1 1rem,
+            #f1b1c1 1.5rem,
+            transparent 1.5rem);
+    background-size: 9rem 10rem;
+    background-position: 0 0, 0 2.5rem;
+
+}
+div.five{
+    background-color: #353535;
+    background-image: conic;
+}
