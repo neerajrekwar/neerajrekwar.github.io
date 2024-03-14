@@ -269,3 +269,7 @@ span.hello{
 .dark .jumbo::after {
   background-image: var(--stripesDark), var(--rainbow);
 }
+
+#aboutme{
+  background-image: url(../assets/svg-images/bg-1-section.svg);
+}
