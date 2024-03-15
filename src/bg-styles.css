@@ -12,7 +12,7 @@ div.two {
 
 div.three {
     /* background-color: #f9ffe0; */
-    background-color: #353535;
+    background-color: #353535, rgb(255, 255, 255);
    background-image: radial-gradient(circle at 100% 50%,
            transparent 1rem,
            #a1b1c156 1rem,
@@ -48,3 +48,10 @@ div.five{
     background-color: #353535;
     background-image: conic;
 }
+#imagep{
+    background-image: url(https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true);
+    background-repeat: repeat-x;
+    background-size: cover 13rem;
+    background-position:center;
+    border-radius: none;
+  }
