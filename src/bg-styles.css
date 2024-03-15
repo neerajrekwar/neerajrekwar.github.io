@@ -1,5 +1,3 @@
-
-
 div.two {
     background-color: hsl(177, 27%, 69%);
     background-image: linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
@@ -13,18 +11,18 @@ div.two {
 div.three {
     /* background-color: #f9ffe0; */
     background-color: #353535, rgb(255, 255, 255);
-   background-image: radial-gradient(circle at 100% 50%,
-           transparent 1rem,
-           #a1b1c156 1rem,
-           #a1b1c156 1.5rem,
-           transparent 1.5rem),
-       radial-gradient(circle at 0% 50%,
-           transparent 1rem,
-           #a1b1c156 1rem,
-           #a1b1c156 1.5rem,
-           transparent 1.5rem);
-   background-size: 5rem 5rem;
-   background-position: 0 0, 0 2.5rem;
+    background-image: radial-gradient(circle at 100% 50%,
+            transparent 1rem,
+            #a1b1c156 1rem,
+            #a1b1c156 1.5rem,
+            transparent 1.5rem),
+        radial-gradient(circle at 0% 50%,
+            transparent 1rem,
+            #a1b1c156 1rem,
+            #a1b1c156 1.5rem,
+            transparent 1.5rem);
+    background-size: 5rem 5rem;
+    background-position: 0 0, 0 2.5rem;
 
 }
 
@@ -44,14 +42,15 @@ div.three {
     background-position: 0 0, 0 2.5rem;
 
 } */
-div.five{
+div.five {
     background-color: #353535;
     background-image: conic;
 }
-#imagep{
+
+#imagep {
     background-image: url(https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true);
     background-repeat: repeat-x;
-    background-size: auto 100%;
-background-position:bottom 10px 3em;
+    background-size: cover 13rem;
+    background-position: bottom 10px 3em;
     border-radius: none;
-  }
+}
