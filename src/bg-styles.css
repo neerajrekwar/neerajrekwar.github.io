@@ -53,4 +53,7 @@ div.five {
     background-size: cover 13rem;
     background-position: bottom 10px 3em;
     border-radius: none;
+    border-inline-end-color: #32a1ce;
+    border-inline-end-width: thick;
+    writing-mode: horizontal-tb;
 }
