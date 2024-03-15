@@ -10,7 +10,7 @@ div.two {
 
 div.three {
     /* background-color: #f9ffe0; */
-    background-color: #353535, rgb(255, 255, 255);
+    background-color: #353535;
     background-image: radial-gradient(circle at 100% 50%,
             transparent 1rem,
             #a1b1c156 1rem,
