@@ -3,41 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Number Counters</title>
+<title>Number Count Animation</title>
 <style>
-  /* Your CSS styles */
+  /* Style for demonstration purpose */
+  .section {
+    margin-bottom: 100px;
+  }
+  .number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+  }
 </style>
 </head>
 <body>
 
-<section id="projects">
-  <h2>Projects Completed</h2>
-  <div class="counter" data-target="100">0</div>
+<section class="section" id="projects">
+  <h2>Projects</h2>
+  <div class="number" data-count="50">0</div>
 </section>
 
-<section id="clients">
+<section class="section" id="happy-clients">
   <h2>Happy Clients</h2>
-  <div class="counter" data-target="50">0</div>
+  <div class="number" data-count="100">0</div>
 </section>
 
 <script>
-window.addEventListener('scroll', () => {
-  const counters = document.querySelectorAll('.counter');
-  
-  counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+  function animateNumbers() {
+    const counters = document.querySelectorAll('.number');
 
-    const increment = target / 200; // Adjust the speed of counting
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-count');
+      const duration = 2000; // Adjust duration as needed
 
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 10);
-    } else {
-      counter.innerText = target;
-    }
-  });
-});
+      const updateCount = () => {
+        const count = +counter.innerText;
+        const increment = target / duration * 10;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  }
+
+  function handleScroll() {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    document.querySelectorAll('.section').forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (scrollPosition + windowHeight >= sectionTop) {
+        animateNumbers();
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
 </script>
 
 </body>
