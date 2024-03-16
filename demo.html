@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Counters</title>
+<style>
+  /* Your CSS styles */
+</style>
+</head>
+<body>
+
+<section id="projects">
+  <h2>Projects Completed</h2>
+  <div class="counter" data-target="100">0</div>
+</section>
+
+<section id="clients">
+  <h2>Happy Clients</h2>
+  <div class="counter" data-target="50">0</div>
+</section>
+
+<script>
+window.addEventListener('scroll', () => {
+  const counters = document.querySelectorAll('.counter');
+  
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+
+    const increment = target / 200; // Adjust the speed of counting
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 10);
+    } else {
+      counter.innerText = target;
+    }
+  });
+});
+</script>
+
+</body>
+</html>
