@@ -18,8 +18,8 @@ window.addEventListener('scroll', function() {
     progressBar.style.width = progress + '%';
   }
 
-  // scroll for new 2/28/2024 11:42PM
-  const header =document.querySelector("header");
+  // scroll for updated on 2/28/2024 11:42PM
+  const header = document.querySelector("header");
   const sectionOne = document.querySelector(".home-intro");
 
   const faders = document.querySelectorAll("fade-in");
@@ -69,9 +69,6 @@ window.addEventListener('scroll', function() {
     appearOnScroll.observe(fader);
   });
 
-  function toggleTheme() {
-    if (document.body.classList.contains("dark"))
-        document.body.classList.remove("dark");
-    else
-        document.body.classList.add("dark");
-}
+  sliders.forEach(silder => {
+    appearOnScroll.observe(silder);
+  });

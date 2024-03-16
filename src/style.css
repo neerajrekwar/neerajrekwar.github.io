@@ -279,3 +279,31 @@ span.hello{
 #project{
   background-image: url(../assets/svg-images/bg-3-section.svg);
 }
+
+/* -------------Scroll Animations Start------------ */
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left{
+  transform: translateX(-50%);
+}
+.from-right{
+  transform: translateX(50%);
+}
+.from-left,
+.from-right{
+transition:opacity 250ms ease-in, transform 400ms ease-in;
+}
+.from-left.appear,
+.from-right.apprea{
+  transform: translateX(0);
+  opacity: 1;
+}
+/* -------------Scroll Animations End------------ */
