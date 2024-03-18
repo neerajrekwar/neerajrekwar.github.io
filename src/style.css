@@ -302,7 +302,7 @@ span.hello{
 transition:opacity 250ms ease-in, transform 400ms ease-in;
 }
 .from-left.appear,
-.from-right.apprea{
+.from-right.appear{
   transform: translateX(0);
   opacity: 1;
 }
