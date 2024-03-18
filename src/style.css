@@ -277,7 +277,7 @@ span.hello {
 
 
 .fade-in {
-  opacity: 0;
+  opacity: 0.3;
 }
 
 .fade-in.appear {
