@@ -282,28 +282,30 @@ span.hello{
 
 /* -------------Scroll Animations Start------------ */
 
+
 .fade-in {
   opacity: 0;
-  transition: opacity 250ms ease-in;
+  transform: translateX(-50%);
+  transition: opacity 1000ms ease-in, transform 500ms ease-in ;
 }
 
 .fade-in.appear {
   opacity: 1;
+  transform: translateX(0);
 }
 
-.from-left{
-  transform: translateX(-50%); 
- }
-.from-right{
+.from-left {
+  transform: translateX(-50%);
+}
+.from-right {
   transform: translateX(50%);
 }
 .from-left,
-.from-right{
-transition:opacity 250ms ease-in, transform 400ms ease-in;
+.from-right {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
 }
 .from-left.appear,
-.from-right.appear{
+.from-right.appear {
   transform: translateX(0);
   opacity: 1;
-}
 /* -------------Scroll Animations End------------ */
