@@ -285,7 +285,6 @@ span.hello{
 
 .fade-in {
   opacity: 0;
-  transform: translateX(-50%);
   transition: opacity 1000ms ease-in, transform 500ms ease-in ;
 }
 
