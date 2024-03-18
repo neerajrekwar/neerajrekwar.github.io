@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Number Count Animation</title>
+<title>Number Count Animation with Intersection Observer</title>
 <style>
   /* Style for demonstration purpose */
   .section {
@@ -18,11 +18,10 @@
 </style>
 </head>
 <body>
-  <section style="height: 100vh;"></section>
 
 <section class="section" id="projects">
   <h2>Projects</h2>
-  <div class="number" data-count="50">0&plus;</div>
+  <div class="number" data-count="50">0</div>
 </section>
 
 <section class="section" id="happy-clients">
@@ -31,43 +30,41 @@
 </section>
 
 <script>
-  function animateNumbers() {
-    const counters = document.querySelectorAll('.number');
+  const observerOptions = {
+    threshold: 0.2 // Trigger when 20% of the element is visible
+  };
 
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-count');
-      const duration = 2000; // Adjust duration as needed
+  function animateNumbers(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target.querySelector('.number');
+        const target = +counter.getAttribute('data-count');
+        const duration = 2000; // Animation duration in milliseconds
+        const updateSpeed = 120; // Update speed in milliseconds
 
-      const updateCount = () => {
-        const count = +counter.innerText;
-        const increment = target / duration * 10;
+        let count = 0;
+        const increment = target / (duration / updateSpeed);
 
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 10);
-        } else {
-          counter.innerText = target;
-        }
-      };
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCount, updateSpeed);
+          } else {
+            counter.innerText = target;
+            observer.unobserve(entry.target);
+          }
+        };
 
-      updateCount();
-    });
-  }
-
-  function handleScroll() {
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
-
-    document.querySelectorAll('.section').forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (scrollPosition + windowHeight >= sectionTop) {
-        animateNumbers();
+        updateCount();
       }
     });
   }
 
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('load', handleScroll);
+  const observer = new IntersectionObserver(animateNumbers, observerOptions);
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
 </script>
 
 </body>
