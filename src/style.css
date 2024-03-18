@@ -8,7 +8,8 @@
   font-family: "Alata", sans-serif;
   font-weight: 400;
 }
-body{
+
+body {
   font-family: "Alata", sans-serif;
   font-weight: 400;
 
@@ -121,7 +122,8 @@ main {
       'Six Six Six Six'
   }
 }
-span.hello{
+
+span.hello {
   background: linear-gradient(45deg, #cdff10, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -151,7 +153,8 @@ span.hello{
   border: 2px solid rgb(255, 83, 183);
 } */
 .scroll-container {
-  height: 200vh; /* Create enough scrollable height for demonstration */
+  height: 200vh;
+  /* Create enough scrollable height for demonstration */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,8 +173,8 @@ span.hello{
 
 @keyframes fade-in {
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -192,15 +195,17 @@ span.hello{
   transition: width 0.3s;
 }
 
-#form-container{
+#form-container {
   background-size: contain;
   background-image: url('https://images.unsplash.com/photo-1501673618753-48ce9418287b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-#form-container2{
+
+#form-container2 {
   background-size: contain;
   background-image: url('https://images.unsplash.com/photo-1706661849307-9f0ff8155bc9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-#form-container3{
+
+#form-container3 {
   background-size: contain;
   background-image: url('https://images.unsplash.com/photo-1709927988334-bfbcc99208ed?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
@@ -208,38 +213,33 @@ span.hello{
 
 @keyframes jumbo {
   from {
-      background-position: 50% 50%, 50% 50%;
+    background-position: 50% 50%, 50% 50%;
   }
+
   to {
-      background-position: 350% 50%, 350% 50%;
+    background-position: 350% 50%, 350% 50%;
   }
 }
 
 .jumbo {
-  --stripes: repeating-linear-gradient(
-      100deg,
+  --stripes: repeating-linear-gradient(100deg,
       #fff 0%,
       #fff 7%,
       transparent 10%,
       transparent 12%,
-      #fff 16%
-  );
-  --stripesDark: repeating-linear-gradient(
-      100deg,
+      #fff 16%);
+  --stripesDark: repeating-linear-gradient(100deg,
       #000 0%,
       #000 7%,
       transparent 10%,
       transparent 12%,
-      #000 16%
-  );
-  --rainbow: repeating-linear-gradient(
-      100deg,
+      #000 16%);
+  --rainbow: repeating-linear-gradient(100deg,
       #60a5fa 10%,
       #e879f9 15%,
       #60a5fa 20%,
       #5eead4 25%,
-      #60a5fa 30%
-  );
+      #60a5fa 30%);
   background-image: var(--stripes), var(--rainbow);
   background-size: 300%, 200%;
   background-position: 50% 50%, 50% 50%;
@@ -266,17 +266,20 @@ span.hello{
   background-image: var(--stripesDark), var(--rainbow);
   filter: blur(10px) opacity(50%) saturate(200%);
 }
+
 .dark .jumbo::after {
   background-image: var(--stripesDark), var(--rainbow);
 }
 
-#aboutme{
+#aboutme {
   background-image: url(../assets/svg-images/bg-1-section.svg);
 }
-#intro{
+
+#intro {
   background-image: url(../assets/svg-images/bg-2-section.svg);
 }
-#project{
+
+#project {
   background-image: url(../assets/svg-images/bg-3-section.svg);
 }
 
@@ -295,16 +298,22 @@ span.hello{
 .from-left {
   transform: translateX(-50%);
 }
+
 .from-right {
   transform: translateX(50%);
 }
+
 .from-left,
 .from-right {
-  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition:
+    opacity 250ms ease-in,
+    transform 400ms ease-in;
 }
+
 .from-left.appear,
 .from-right.appear {
   transform: translateX(0);
   opacity: 1;
 }
+
 /* -------------Scroll Animations End------------ */
