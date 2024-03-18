@@ -1,5 +1,7 @@
 // Jvascript
-/* const scrollTimeline = new ScrollTimeline({
+/* 
+
+const scrollTimeline = new ScrollTimeline({
     scrollSource: document.scrollingElement,
     orientation: 'block',
     timeRange: 1,
@@ -16,7 +18,9 @@ window.addEventListener('scroll', function() {
     var totalHeight = document.body.scrollHeight - window.innerHeight;
     var progress = (window.scrollY / totalHeight) * 100;
     progressBar.style.width = progress + '%';
-  } */
+  } 
+  
+  */
 
   // scroll for updated on 2/28/2024 11:42PM
   const header = document.querySelector("header");
