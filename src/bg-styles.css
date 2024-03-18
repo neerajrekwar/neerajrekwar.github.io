@@ -55,6 +55,17 @@ div.five {
     background-color: #353535;
     background-image: conic;
 }
+#aboutme {
+    background-image: url(../assets/svg-images/bg-1-section.svg);
+  }
+  
+  #intro {
+    background-image: url(../assets/svg-images/bg-2-section.svg);
+  }
+  
+  #project {
+    background-image: url(../assets/svg-images/bg-3-section.svg);
+  }
 
 #imagep {
     background-image: url(https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true);
