@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading...</title>
-    <style>
-        /* Preloader styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .loader {
-            border: 8px solid #f3f3f3; /* Light grey */
-            border-top: 8px solid #3498db; /* Blue */
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carousel with Arrows</title>
+<style>
+  .carousel {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-section {
+    flex: 0 0 300px;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+
+  .prev-arrow {
+    left: 0;
+  }
+
+  .next-arrow {
+    right: 0;
+  }
+</style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
+  <div class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-section">Section 1</div>
+      <div class="carousel-section">Section 2</div>
+      <div class="carousel-section">Section 3</div>
     </div>
+    <div class="carousel-arrow prev-arrow" onclick="moveSlide(-1)">&#10094;</div>
+    <div class="carousel-arrow next-arrow" onclick="moveSlide(1)">&#10095;</div>
+  </div>
 
-    <!-- Your main content will be displayed after loading -->
-    <div id="main-content" style="display: none;">
-        <!-- Replace this with your actual content -->
-        <h1>Welcome to My Website</h1>
-        <p>This is the main content of your website.</p>
-    </div>
+  <script>
+    let slideIndex = 0;
+    const totalSlides = document.querySelectorAll('.carousel-section').length;
 
-    <script>
-        // Function to hide preloader and display main content
-        function showMainContent() {
-            document.querySelector('.preloader').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
-        }
-
-        // Add event listener for when the window finishes loading
-        window.addEventListener('load', showMainContent);
-    </script>
+    function moveSlide(n) {
+      slideIndex += n;
+      if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
+      }
+      if (slideIndex >= totalSlides) {
+        slideIndex = 0;
+      }
+      const container = document.querySelector('.carousel-container');
+      container.style.transform = `translateX(-${slideIndex * 100}%)`; // Adjust 310 as per your section width
+    }
+  </script>
 </body>
 </html>
