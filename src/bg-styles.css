@@ -70,7 +70,7 @@ div.five {
 }
 
 #imagep {
-    background-image: url(https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true);
+    background-image: url('https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true');
     background-repeat: repeat-x;
     background-size: cover, 13rem;
     background-position: bottom 3em;
