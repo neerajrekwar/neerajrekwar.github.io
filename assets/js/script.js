@@ -112,6 +112,6 @@ window.addEventListener('scroll', function() {
   }
 
   const observer = new IntersectionObserver(animateNumbers, observerOptions);
-  document.querySelectorAll('.section').forEach(section => {
-    observer.observe(section);
+  document.querySelectorAll('.p-count').forEach(div => {
+    observer.observe(div);
   });
