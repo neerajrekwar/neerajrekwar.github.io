@@ -81,7 +81,7 @@ window.addEventListener('scroll', function() {
   // Projects counters 
 
   const observerOptions = {
-    threshold: 0.2 // Trigger when 20% of the element is visible
+    threshold: [0, 0.5, 1] // Trigger when 20% of the element is visible
   };
 
   function animateNumbers(entries, observer) {
@@ -115,3 +115,4 @@ window.addEventListener('scroll', function() {
   document.querySelectorAll('.p-count').forEach(div => {
     observer.observe(div);
   });
+
