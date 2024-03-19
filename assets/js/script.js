@@ -76,3 +76,42 @@ window.addEventListener('scroll', function() {
   sliders.forEach(silder => {
     appearOnScroll.observe(silder);
   });
+
+
+  // Projects counters 
+
+  const observerOptions = {
+    threshold: 0.2 // Trigger when 20% of the element is visible
+  };
+
+  function animateNumbers(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target.querySelector('.number');
+        const target = +counter.getAttribute('data-count');
+        const duration = 2000; // Animation duration in milliseconds
+        const updateSpeed = 120; // Update speed in milliseconds
+
+        let count = 0;
+        const increment = target / (duration / updateSpeed);
+
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCount, updateSpeed);
+          } else {
+            counter.innerText = target;
+            observer.unobserve(entry.target);
+          }
+        };
+
+        updateCount();
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(animateNumbers, observerOptions);
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
