@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Number Count Animation with Intersection Observer</title>
+<title>Number Count Animation</title>
 <style>
   /* Style for demonstration purpose */
   .section {
@@ -15,17 +15,13 @@
     color: #333;
     margin: 20px 0;
   }
-  .new{
-    height: 122vh;
-  }
 </style>
 </head>
 <body>
 
-<section class="new"></section>
 <section class="section" id="projects">
   <h2>Projects</h2>
-  <div class="number" data-count="4">0</div>
+  <div class="number" data-count="50">0</div>
 </section>
 
 <section class="section" id="happy-clients">
@@ -34,40 +30,52 @@
 </section>
 
 <script>
-  const observerOptions = {
-    threshold: 0.2 // Trigger when 20% of the element is visible
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Trigger when 50% of the element is visible
   };
 
-  function animateNumbers(entries, observer) {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const counter = entry.target.querySelector('.number');
-        const target = +counter.getAttribute('data-count');
-        const duration = 2000; // Animation duration in milliseconds
-        const updateSpeed = 120; // Update speed in milliseconds
-
-        let count = 0;
-        const increment = target / (duration / updateSpeed);
-
-        const updateCount = () => {
-          if (count < target) {
-            count += increment;
-            counter.innerText = Math.ceil(count);
-            setTimeout(updateCount, updateSpeed);
-          } else {
-            counter.innerText = target;
-            observer.unobserve(entry.target);
-          }
-        };
-
-        updateCount();
+        animateNumbers(entry.target);
       }
     });
-  }
+  }, options);
 
-  const observer = new IntersectionObserver(animateNumbers, observerOptions);
   document.querySelectorAll('.section').forEach(section => {
     observer.observe(section);
+  });
+
+  function animateNumbers(targetElement) {
+    const counter = targetElement.querySelector('.number');
+    const target = +counter.getAttribute('data-count');
+    const duration = 2000; // Total animation duration
+    const speed = 120; // Animation speed (milliseconds per frame)
+
+    let count = 0;
+    const increment = target / (duration / speed);
+
+    const updateCount = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.section').forEach(section => {
+      if (section.getBoundingClientRect().top < window.innerHeight) {
+        animateNumbers(section);
+      }
+    });
   });
 </script>
 
