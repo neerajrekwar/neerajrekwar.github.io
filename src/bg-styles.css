@@ -63,19 +63,17 @@ div.five {
 
 #intro {
     background-image: url('../assets/svg-images/bg-2-section.svg)';
-}
+    }
 
-#project {
-    background-image: url('../assets/svg-images/bg-3-section.svg');
-}
+    #project {}
 
-#imagep {
-    background-image: url('https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true');
-    background-repeat: repeat-x;
-    background-size: cover 13rem;
-    background-position: bottom 10px 3em;
-    border-radius: none;
-    border-inline-end-color: #32a1ce;
-    border-inline-end-width: thick;
-    writing-mode: horizontal-tb;
-}
+    #imagep {
+        background-image: url(https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true);
+        background-repeat: repeat-x;
+        background-size: cover 13rem;
+        background-position: bottom 10px 3em;
+        border-radius: none;
+        border-inline-end-color: #32a1ce;
+        border-inline-end-width: thick;
+        writing-mode: horizontal-tb;
+    }
