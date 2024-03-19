@@ -23,31 +23,31 @@ window.addEventListener('scroll', function() {
   */
 
   // scroll for updated on 2/28/2024 11:42PM
-  const header = document.querySelector("header");
-  const sectionOne = document.querySelector(".home-intro");
+  // const header = document.querySelector("header");
+  // const sectionOne = document.querySelector(".home-intro");
 
   const faders = document.querySelectorAll(".fade-in");
   const sliders = document.querySelectorAll(".slide-in");
 
-  const sectionOneOptions = {
-    rootMargin: "-200px 0px 0px 0px"
-  };
+  // const sectionOneOptions = {
+  //   rootMargin: "-200px 0px 0px 0px"
+  // };
 
-  const sectionOneObserver = new IntersectionObserver(function(
-    entries,
-    sectionOneObserver
-   ) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-       header.classList.add("nev-scrolled");
-      } else {
-        header.classList.remove("nav-scrolled")
-      }
-    });
-  },
-  sectionOneOptions);
+  // const sectionOneObserver = new IntersectionObserver(function(
+  //   entries,
+  //   sectionOneObserver
+  //  ) {
+  //   entries.forEach(entry => {
+  //     if (!entry.isIntersecting) {
+  //      header.classList.add("nev-scrolled");
+  //     } else {
+  //       header.classList.remove("nav-scrolled")
+  //     }
+  //   });
+  // },
+  // sectionOneOptions);
 
-  sectionOneObserver.observe(sectionOne);
+  // sectionOneObserver.observe(sectionOne);
 
   const appearOptions = {
    threshold: 0,
