@@ -80,39 +80,50 @@ window.addEventListener('scroll', function() {
 
   // Projects counters 
 
-  const observerOptions = {
-    threshold: [0, 0.5, 1] // Trigger when 20% of the element is visible
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Trigger when 50% of the element is visible
   };
 
-  function animateNumbers(entries, observer) {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        const counter = entry.target.querySelector('.number');
-        const target = +counter.getAttribute('data-count');
-        const duration = 2000; // Animation duration in milliseconds
-        const updateSpeed = 120; // Update speed in milliseconds
-
-        let count = 0;
-        const increment = target / (duration / updateSpeed);
-
-        const updateCount = () => {
-          if (count < target) {
-            count += increment;
-            counter.innerText = Math.ceil(count);
-            setTimeout(updateCount, updateSpeed);
-          } else {
-            counter.innerText = target;
-            observer.unobserve(entry.target);
-          }
-        };
-
-        updateCount();
+      if (entry.isIntersecting) {
+        animateNumbers(entry.target);
       }
     });
-  }
+  }, options);
 
-  const observer = new IntersectionObserver(animateNumbers, observerOptions);
-  document.querySelectorAll('.p-count').forEach(div => {
-    observer.observe(div);
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
   });
 
+  function animateNumbers(targetElement) {
+    const counter = targetElement.querySelector('.number');
+    const target = +counter.getAttribute('data-count');
+    const duration = 2000; // Total animation duration
+    const speed = 120; // Animation speed (milliseconds per frame)
+
+    let count = 0;
+    const increment = target / (duration / speed);
+
+    const updateCount = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.section').forEach(section => {
+      if (section.getBoundingClientRect().top < window.innerHeight) {
+        animateNumbers(section);
+      }
+    });
+  });
