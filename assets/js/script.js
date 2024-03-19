@@ -86,7 +86,7 @@ window.addEventListener('scroll', function() {
 
   function animateNumbers(entries, observer) {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (!entry.isIntersecting) {
         const counter = entry.target.querySelector('.number');
         const target = +counter.getAttribute('data-count');
         const duration = 2000; // Animation duration in milliseconds
