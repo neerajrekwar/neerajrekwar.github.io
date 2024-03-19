@@ -121,9 +121,9 @@ window.addEventListener('scroll', function() {
   }
 
   window.addEventListener('load', () => {
-    document.querySelectorAll('.section').forEach(section => {
-      if (section.getBoundingClientRect().top < window.innerHeight) {
-        animateNumbers(section);
+    document.querySelectorAll('.p-count').forEach(div => {
+      if (div.getBoundingClientRect().top < window.innerHeight) {
+        animateNumbers(div);
       }
     });
   });
