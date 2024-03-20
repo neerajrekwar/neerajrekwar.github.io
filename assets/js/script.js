@@ -94,8 +94,8 @@ window.addEventListener('scroll', function() {
     });
   }, options);
 
-  document.querySelectorAll('.section').forEach(section => {
-    observer.observe(section);
+  document.querySelectorAll('.p-count').forEach(div => {
+    observer.observe(div);
   });
 
   function animateNumbers(targetElement) {
