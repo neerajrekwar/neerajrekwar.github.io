@@ -271,6 +271,26 @@ span.hello {
   background-image: var(--stripesDark), var(--rainbow);
 }
 
+.contact-btn {
+  font-family: monospace;
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: 2px solid #5e761a;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: 0.3s;
+}
+.contact-btn:active,
+.contact-btn:focus {
+  border: none;
+
+}
+.contact-btn:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
 
 
 /* -------------Scroll Animations Start------------ */
