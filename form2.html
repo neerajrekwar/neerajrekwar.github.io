@@ -10,15 +10,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
+    <style>
+        
+    </style>
   
     <title>form2</title>
 </head>
 <body>
     <main>
-        <div id="form-container2" class="grid  sm:inline-flex m-5 h-[100vh]">
-            <div class="h-auto p-2 bg-slate-200" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores sed a consequuntur possimus, magnam tempore architecto vitae rem quas itaque qui voluptatem quisquam totam molestias! Odit reprehenderit excepturi corporis quas.</div>
-            <div class="h-auto p-2 bg-slate-600" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, nisi aspernatur sunt ex sint consequatur doloremque fuga dolor incidunt tenetur itaque suscipit quo inventore iusto, repellat, laborum porro doloribus? Adipisci.</div>
+        <div id="form-container2" class="border m-5 h-[90vh] flex-1 overflow-hidden rounded-lg">
+          <div id="show" class="h-auto bg-slate-200 p-2 saturate-100">
+            <h1 class="my-3 rounded-lg bg-[#eee7e742] p-1 px-3 text-5xl font-bold text-green-50 backdrop-blur">One spep of green earth</h1>
+            <p class="my-3 w-fit rounded-full bg-[#d8ffb442] p-1 px-3 font-bold text-rose-700 backdrop-blur-sm">Connect to Initiative</p>
           </div>
-    </main>
+          <div id="info" class="h-auto  bg-green-50 p-2 border-2 m-2 flex-1 border-green-300">
+            <h3 class="my-3 p-1 px-3 text-xl font-bold text-rose-500">Innovate. your workspace</h3>
+            <form action="" method="post" class="border border-emerald-300" >
+              <fieldset>
+                <legend>what is your field area</legend>
+                <label for="">choose area</label>
+                <select class="" name="" id="">
+                  <option class="" value="" disabled selected>select</option>
+                  <option value="agriculture">Agriculture</option>
+                  <option value="water">Water desalination</option>
+                  <option value="oil">Enhanced oil recovery</option>
+                  <option value="fodd">Food processing</option>
+                  <option value="chemical">Chemical production</option>
+                  <option value="mineral">Mineral processing</option>
+                  <option value="home">At home</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend></legend>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </main>
+      
 </body>
 </html>
