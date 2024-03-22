@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=7">
   <meta name="description" content="">
@@ -12,26 +13,58 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/output.css">
- <title>form3</title>
+  <title>form3</title>
+  <style>
+    #intro {
+      background-size: cover;
+      background-position: left 0, 0 4rem;
+      background-image: url('https://images.unsplash.com/photo-1650220224896-b15ef0b678a3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+
+    .input {
+      border: 2px solid transparent;
+      height: 2.5em;
+      padding-left: 0.8em;
+      outline: none;
+      overflow: hidden;
+      background-color: #f3f3f3;
+      transition: all 0.5s;
+    }
+
+    .input:hover,
+    .input:focus {
+      border: 2px solid #4a9dec;
+      box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+      background-color: white;
+    }
+  </style>
 </head>
+
 <body>
-    <main>
-        <div id="form-container3" class="grid m-auto h-[100vh]">
-            <div class="m-auto h-auto sm:w-[55vw]  w-[80%] bg-slate-200 rounded-md">
-              <h1 class="text-center font-bold text-[#353535] p-2">stay informed</h1>
-              <form action="" class=" p-3">
-                <label for="name" class="m-auto  pb-4"> full name <br>
-                  <input type="text" class="w-[100%]">
-                </label>
-                <label for="name" class="m-auto pb-4"> your email <br>
-                  <input type="text" class="w-[100%]">
-                </label><br>
-                <label for="name" class="m-auto pb-4"> message <br>
-                  <textarea name="" id="" class="w-[100%]" ></textarea>
-                </label>
-              </form>
-            </div>
-          </div>
-    </main>
+  <main class="h-max sm:h-[100vh] grid  border-pink-500">
+    <div id="form-container3" class="m-auto h-auto w-[95vw]  sm:w-[80vw] sm:flex gap-1 bg-yellow-4  ">
+      <div id="intro" class=" h-auto sm:w-[60%] rounded-l-xl p-2 ">Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Magni, sapiente earum accusamus perspiciatis iusto eum aliquam qui veniam ipsa quas ipsum obcaecati nisi
+        molestias. Error commodi consequatur voluptas quibusdam non.</div>
+      <div class="mt-2 sm:mt-0 sm:w-[40%]  h-auto border-2 border-red-500">
+        <h1 class="p-2 sm:text-5xl md:text-6xl text-4xl font-bold text-[#353535]">Sand Us A <br> Message <strong
+            class="text-red-500">.</strong></h1>
+        <form action="" class="p-3">
+          <label for="name" class="m-auto text-slate-50">
+            Full Name <br />
+            <input placeholder="Enter email" class="input rounded mt-2 w-[100%] mb-4 text-yellow-600" /> </label><br />
+          <label for="name" class="m-auto text-slate-50">
+            your email <br />
+            <input placeholder="Enter email" class="input rounded mt-2 w-[100%] mb-4 text-yellow-600" /> </label><br />
+          <label for="name" class="m-auto pb-4">
+            message <br />
+            <textarea name="" id="" class="w-[100%] input rounded mt-2 h-24 mb-4 text-yellow-600"></textarea>
+          </label>
+        </form>
+      </div>
+    </div>
+  </main>
+
 </body>
+
 </html>
