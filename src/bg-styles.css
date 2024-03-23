@@ -83,3 +83,10 @@ div.five {
     border-inline-end-width: thick;
     writing-mode: horizontal-tb;
 }
+
+#new {
+    background: hsla(63, 100%, 93%, 1);
+    background: linear-gradient(45deg, rgba(253, 255, 219, 0) 0%, hsla(62, 76%, 64%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FDFFDC", endColorstr="#E4E95D", GradientType=1 );
+  }
+  
