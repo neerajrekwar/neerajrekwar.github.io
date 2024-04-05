@@ -28,13 +28,18 @@
 
 <body>
   <main class="">
-    <a href="/" class="te absolute left-6 top-3 text-3xl font-bold text-[#f1ff31] opacity-30">nee.</a>
-    <div id="hello" class="m-auto h-auto bg-contain sm:flex">
-      <div class="m-auto h-screen sm:w-[44vw] lg:w-[66vw]">
+    <a href="/" class=" absolute left-6 top-3 text-3xl font-bold text-[#f1ff31] ">nee.</a>
+    <div id="hello" class="m-auto max-h-max border-fuchsia-400 bg-contain sm:flex ">
+      <div class="m-auto h-screen w-full   sm:border-orange-400  sm:w-[50vw] ">
         <div class="h-max border-rose-600 p-4 text-white">
-          <pre class="] mt-5 p-2 text-6xl font-bold">The Power<br>  at agro.</pre>
+          <h1 class="] mt-5 p-2 text-6xl font-bold">
+            The Power<br />
+            at agro.
+          </h1>
           <br />
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+          <br />
+          <span><svg class=" text-[#deec1a]" xmlns="http://www.w3.org/2000/svg" width="24" height="26"
+              viewBox="0 0 24 24" fill="currentColor"
               class="icon icon-tabler icons-tabler-filled icon-tabler-arrow-badge-down">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path
@@ -47,43 +52,44 @@
             </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sint corporis aspernatur.</p>
             <div class="mt-4 flex h-10 w-fit">
-              <a href="/" class="flex items-center bg-[#f1ff31] px-7 text-black hover:text-lime-900">Learn more</a>
+              <a href="/"
+                class="flex items-center bg-[#f1ff31] hover:bg-[#deec1a] px-7 text-black hover:underline">Learn more</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="m-auto w-full bg-[#f1ff31] p-12 sm:w-[56vw] lg:w-[44vw]">
-        <h2 class="my-4 pb-4 text-4xl font-black text-[#353535]">Contact Us<span class="text-rose-600">.</span></h2>
+      <div class="m-auto w-full   border-green-500 bg-[#f1ff31]  p-4 sm:w-[50vw] ">
+        <h2 class="my-4 pb-4 text-4xl font-black text-[#353535]">Contact Us.</h2>
         <p class="pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <form action="" class="font-semibold">
-          <fieldset class="w-[100%] gap-4 sm:flex">
+        <form action="" class="m-auto sm:w-[40vw]   border-red-300 p-2 font-semibold ">
+          <fieldset class="flex w-[100%] gap-4 sm:flex-1">
             <label for="" class="w-[100%]">Name
-              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm border-gray-800 p-2 outline-none" type="text"
-                name="" id="" />
+              <input class="bg-gray-00 my-2 mb-4 text-xs h-10 w-full rounded-sm border-gray-400 p-2 outline-none"
+                placeholder="Enter name" type="text" name="" id="" />
             </label>
             <label for="" class="w-[100%]">Conpany
-              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm border-gray-800 p-2 outline-none" type="text"
-                name="" id="" />
+              <input class="bg-gray-00 my-2 mb-4 h-10 w-full text-xs rounded-sm border-gray-800 p-2 outline-none"
+                placeholder="Enter company" type="text" name="" id="" />
             </label>
           </fieldset>
-          <fieldset class="flex w-[100%] gap-4">
+          <fieldset class="w-[100%] gap-4 sm:flex">
             <label for="" class="w-[100%]">Email
-              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm border-gray-800 p-2 outline-none" type="email"
-                name="" id="" />
+              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm text-xs border-gray-800 p-2 outline-none"
+                type="email" placeholder="Enter email" name="" id="" />
             </label>
             <label for="" class="w-[100%]">Subject
-              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm border-gray-800 p-2 outline-none" type="text"
-                name="" id="" />
+              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm text-xs border-gray-800 p-2 outline-none"
+                type="text" placeholder="Enter subject" name="" id="" />
             </label>
           </fieldset>
           <fieldset>
-            <label for="" class="w-[100%]">phone
-              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm border-gray-800 p-2 outline-none" type="tel"
-                name="" id="" />
+            <label for="" class="w-[100%]">Mobile
+              <input class="bg-gray-00 my-2 mb-4 h-10 w-full rounded-sm text-xs border-gray-800 p-2 outline-none"
+                placeholder="+000 (XXX) XXX-XXXX" type="tel" name="" id="" />
             </label>
             <label for="">Message
-              <textarea name="" id=""
-                class="bg-gray-00 h-45 my-2 mb-4 w-full rounded-sm border-gray-800 p-2 outline-none"></textarea>
+              <textarea name="" id="" placeholder="Enter message"
+                class="bg-gray-00 h-45 text-xs my-2 mb-4 w-full rounded-sm  p-2 outline-none"></textarea>
             </label>
           </fieldset>
           <button type="submit" class="h-9 w-full rounded-sm border-rose-700 bg-black text-slate-50">Submit</button>
@@ -91,7 +97,6 @@
       </div>
     </div>
   </main>
-
 </body>
 
 </html>
