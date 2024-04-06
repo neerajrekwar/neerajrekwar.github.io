@@ -10,41 +10,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <main class="source-code">
-      <div class="m-auto flex bg-orange-50">
-        <div class="m-auto h-screen w-screen items-center justify-center border border-red-600 sm:flex sm:w-[90vw] sm:border-green-300">
-          <div class="m-auto grid h-screen border border-black sm:h-[90vh] sm:w-[50vw]">
-            <div class="p-5">
-              <h1 class="py-5 text-2xl font-semibold text-gray-800 sm:text-3xl">let's scale your <br />brand, together</h1>
-              <p class="text-sm">Get a <a class="underline hover:decoration-blue-600" href="mailto:dev.neerajrekwar@gmail.com">start@example.com</a></p>
-            </div>
-          </div>
-          <div class="m-auto h-screen border border-black bg-orange-50 sm:h-[90vh] sm:w-[50vw]">
-            <div class="p-5">
-              <form action="" class="py-5">
-                <fieldset>
-                  <label for=""
-                    >Name<span class="relative bottom-1 text-xs text-red-800">*</span>
-                    <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b border-gray-800 bg-transparent p-2 text-sm outline-none focus:bg-slate-100" placeholder="Type name" type="text" name="" id="" />
-                  </label>
-                  <label for=""
-                    >company<span class="relative bottom-1 text-xs text-red-800">*</span>
-                    <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b border-gray-800 bg-transparent p-2 text-sm outline-none focus:bg-slate-100" placeholder="Type company" type="text" name="" id="" />
-                  </label>
-                  <label for=""
-                    >Phone<span class="relative bottom-1 text-xs text-red-800">*</span>
-                    <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b border-gray-800 bg-transparent p-2 text-sm outline-none focus:bg-slate-100" placeholder="Type company" type="tel" name="" id="" />
-                  </label>
-                  <label for=""
-                    >Email Address<span class="relative bottom-1 text-xs text-red-800">*</span>
-                    <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b border-gray-800 bg-transparent p-2 text-sm outline-none focus:bg-slate-100" placeholder="Type company" type="tel" name="" id="" />
-                  </label>
-                </fieldset>
-              </form>
-            </div>
-          </div>
+    <main class="source-code text-[#535353]">
+  <div class="m-auto flex max-h-full border-purple-500 bg-[#acd1c428] md:h-screen">
+    <div class="h- m-auto  w-screen items-center justify-center border-red-600 sm:flex sm:h-[90vh] sm:w-[87.77vw] sm:border-purple-600 md:w-[77.77vw] md:border-green-300 lg:w-[77.77vw]">
+      <div class="m-auto grid border-black sm:h-[90vh] sm:w-[50vw]">
+        <div class="p-5">
+          <h1 class="py-5 text-3xl font-semibold text-[#353535] sm:text-4xl">let's scale your <br />brand, together</h1>
+          <p class="transition-[underline bottom] hover: text-sm font-semibold underline-offset-2">Get a <a class="underline hover:decoration-blue-600" href="mailto:dev.neerajrekwar@gmail.com" data-abc="true">start@example.com</a></p>
         </div>
       </div>
-    </main>
+      <div class="m-auto border-black sm:h-[90vh] sm:w-[50vw]">
+        <div class="p-5">
+          <form action="" class="py-5 text-sm font-bold">
+            <fieldset class="">
+              <label for=""
+                >Name<span class="relative pl-1 text-base font-bold text-red-800">*</span>
+                <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b border-gray-600 bg-transparent py-2 text-sm font-semibold outline-none" placeholder="Type name" type="text" name="" id="" required />
+              </label>
+              <label for=""
+                >Company<span class="relative pl-1 text-base font-bold text-red-800">*</span>
+                <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b border-gray-600 bg-transparent py-2 text-sm font-semibold outline-none" placeholder="Type company name" type="text" name="" id="" required />
+              </label>
+              <label for=""
+                >Phone<span class="relative pl-1 text-base font-bold text-red-800"></span>
+                <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b border-gray-600 bg-transparent py-2 text-sm font-semibold outline-none" placeholder="+00 (XXX) XXX-XXXX" type="tel" name="" id="" />
+              </label>
+              <label for=""
+                >Email Address<span class="relative pl-1 text-base font-bold text-red-800">*</span>
+                <input class="bg-gray-00 my-2 mb-4 h-12 w-full border-b-[1px] border-b-gray-600 bg-transparent py-2 text-sm font-semibold outline-none" placeholder="Type email Address" type="tel" name="" id="" required />
+              </label>
+              <label for=""
+                >How can we help?<span class="relative pl-1 text-base font-bold text-red-800">*</span>
+                <textarea name="" id="" placeholder="A brief description here" class="bg-gray-00 my-2 mb-4 w-full border-b-[1px] border-b-gray-600 bg-transparent py-2 text-sm font-semibold outline-none"></textarea>
+              </label>
+            </fieldset>
+            <fieldset>
+              <label>Services<span class="relative pl-1 text-base font-bold text-red-800">*</span> </label>
+              <div class="grid grid-cols-2 gap-1">
+                <div class="bg-gray-00 my-2 mb-4 h-12 w-fit bg-transparent py-3 text-sm font-semibold outline-none">
+                  <label class="material-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Web Design & CRO
+                  </label>
+                </div>
+                <div class="bg-gray-00 my-2 mb-4 h-12 w-fit bg-transparent py-3 text-sm font-semibold outline-none">
+                  <label class="material-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Creative
+                  </label>
+                </div>
+                <div class="bg-gray-00 my-2 mb-4 h-12 w-fit bg-transparent py-3 text-sm font-semibold outline-none">
+                  <label class="material-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Paid Media
+                  </label>
+                </div>
+                <div class="bg-gray-00 my-2 mb-4 h-12 w-fit bg-transparent py-3 text-sm font-semibold outline-none">
+                  <label class="material-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Email & SMS
+                  </label>
+                </div>
+                <div class="bg-gray-00 my-2 mb-4 h-12 w-fit bg-transparent py-3 text-sm font-semibold outline-none">
+                  <label class="material-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Content & ads copy
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button type="submit" class="my-2 h-9 w-fit rounded border bg-orange-400 p-2 px-8 text-slate-100 transition-colors hover:bg-orange-600 hover:text-white">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
   </body>
 </html>
