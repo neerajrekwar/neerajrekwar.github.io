@@ -17,43 +17,90 @@
 </head>
 
 <body>
-  <main>
-    <div id="form-container3" class="grid h-[100vh]">
-      <div class="h-[10vh] sticky text-yellow-50 bg-slate-950 flex justify-between items-center p-4 backdrop-blur-sm">
-        <div class="flex items-center">
-          <img src="https://github.com/neerajrekwar/neerajrekwar.github.io/blob/ne/assets/images/IMG_20230329_105451_089.jpg?raw=true" alt="" class="w-[32px] h-[32px] rounded-full " />
-        <span class=" m-2">dev.neerajrekwar</span>
-        </div>
-        <div><select name="" id="" class="text-[#fff] w-[23vw] bg-transparent">
-          <option value="links">links</option>
-          </select></div>
+  <div class="sm:h-screen">
+    <header class="m-auto  md:w-[74vw]">
+      <nav class="flex justify-between">
+        <ul class="flex">
+          <li class="my-2 flex items-center pl-2 pr-1 text-lime-500"> <svg class="" xmlns="http://www.w3.org/2000/svg"
+              width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
+              cass="w-4 text-lime-600" idth="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-spy">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 11h18" />
+              <path d="M5 11v-4a3 3 0 0 1 3 -3h8a3 3 0 0 1 3 3v4" />
+              <path d="M7 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M10 17h4" />
+            </svg>
+          </li>
+          <li class="my-2 px-0 font-semibold">Neeraj R.</li>
+        </ul>
+        <ul class="flex">
+          <li class="m-2 px-0"><a href="#">About</a></li>
+          <li class="m-2 px-0"><a href="#">Works</a></li>
+          <li class="m-2 px-0"><a href="#">Servies</a></li>
+          <li class="m-2 px-0"><a href="#">Blog</a></li>
+        </ul>
+        <ul class="flex">
+          <li class="m-2 px-0 w-">
+            <a href="#"><svg class="w-4 text-lime-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+              </svg></a>
+          </li>
+          <li class="m-2 px-0 w-">
+            <a href="#"><svg class="w-4 text-lime-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M16.5 7.5l0 .01" />
+              </svg></a>
+          </li>
+          <li class="m-2 px-0 w-">
+            <a href="#"><svg class="w-4 text-lime-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+              </svg></a>
+          </li>
+          <li class="m-2 px-0 w-">
+            <a href="#"><svg class="w-4 text-lime-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-twitter">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+              </svg></a>
+          </li>
+          <li class="m-2 px-0 w-">
+            <a href="#"><svg class="w-4 text-lime-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M8 11l0 5" />
+                <path d="M8 8l0 .01" />
+                <path d="M12 16l0 -5" />
+                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+              </svg></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="md:w-[74vw] m-auto max-h-max border p-4 bg-lime-100 rounded-2xl">
+      <div class="h-auto sm:h-[44vh] md:h-screen fe border-2 border-red-500 sm:flex">
+        <div class="border-2 border-black  p-4 m-2 rounded h-[55vh] sm:w-[50vw]"></div>
+        <div class="border-2 border-black  p-4 m-2 rounded h-[55vh] sm:w-[50vw]"></div>
       </div>
-      <div class="m-auto h-auto w-[80%] rounded bg-slate-200 backdrop-blur-sm sm:w-[44vw]">
-        <h2 class="h-14 bg-yellow-300 px-2 pb-3 text-2xl font-bold text-[#353535]">Contact us /></h2>
-        <form class="p-4">
-          <fieldset class="w-[100%] flex-1 sm:flex">
-            <legend class="py-3 text-[3ff]">Got any questions or suggestions? Fill out this form to reach out</legend>
-            <label for="" class="w-[100%]  pr-1">
-              Your Name
-              <input type="text" placeholder="name" class="h-[6vh] mb-3  w-[100%] px-2 outline-blue-500" />
-            </label>
-            <label for="" class="w-[100%] ">
-              Your Email
-              <input type="text" placeholder="email" class="h-[6vh]  mb-3 w-[100%] px-2 outline-rose-400" />
-            </label>
-          </fieldset>
-          <fieldset>
-            <label for="" class=" "
-              >message
-              <textarea name="" id="" class="h-[24vh]  mb-3 w-[100%] p-2"></textarea>
-            </label>
-          </fieldset>
-          <button type="submit" class="bottom-[20px] h-9 rounded bg-slate-50 px-4 hover:bg-yellow-400">Send</button>
-        </form>
-      </div>
-    </div>
-    
-  </main>
+    </main>
+  </div>
 </body>
+
 
 </html>
