@@ -6,322 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="assets/js/script.js" defer></script>
     <link rel="stylesheet" href="/src/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+
     <link href="./output.css" rel="stylesheet">
-    <style>
-        #show {
-            background-position: left;
-            background-size: cover, 6rem;
-            object-fit: cover;
-            background-image: url("https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=1458&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        }
-
-        #info {}
-
-        .cl-checkbox {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Input */
-        .cl-checkbox>input {
-            appearance: none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            z-index: -1;
-            position: absolute;
-            left: -10px;
-            top: -8px;
-            display: block;
-            margin: 0;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 0, 0, 0.6);
-            box-shadow: none;
-            outline: none;
-            opacity: 0;
-            transform: scale(1);
-            pointer-events: none;
-            transition: opacity 0.3s, transform 0.2s;
-        }
-
-        /* Span */
-        .cl-checkbox>span {
-            display: inline-block;
-            width: 100%;
-            cursor: pointer;
-        }
-
-        /* Box */
-        .cl-checkbox>span::before {
-            content: "";
-            display: inline-block;
-            box-sizing: border-box;
-            margin: 3px 11px 3px 1px;
-            border: solid 2px;
-            /* Safari */
-            border-color: rgba(0, 0, 0, 0.6);
-            border-radius: 2px;
-            width: 18px;
-            height: 18px;
-            vertical-align: top;
-            transition: border-color 0.2s, background-color 0.2s;
-        }
-
-        /* Checkmark */
-        .cl-checkbox>span::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 3px;
-            left: 1px;
-            width: 10px;
-            height: 5px;
-            border: solid 2px transparent;
-            border-right: none;
-            border-top: none;
-            transform: translate(3px, 4px) rotate(-45deg);
-        }
-
-        /* Checked, Indeterminate */
-        .cl-checkbox>input:checked,
-        .cl-checkbox>input:indeterminate {
-            background-color: #018786;
-        }
-
-        .cl-checkbox>input:checked+span::before,
-        .cl-checkbox>input:indeterminate+span::before {
-            border-color: #018786;
-            background-color: #018786;
-        }
-
-        .cl-checkbox>input:checked+span::after,
-        .cl-checkbox>input:indeterminate+span::after {
-            border-color: #fff;
-        }
-
-        .cl-checkbox>input:indeterminate+span::after {
-            border-left: none;
-            transform: translate(4px, 3px);
-        }
-
-        /* Hover, Focus */
-        .cl-checkbox:hover>input {
-            opacity: 0.04;
-        }
-
-        .cl-checkbox>input:focus {
-            opacity: 0.12;
-        }
-
-        .cl-checkbox:hover>input:focus {
-            opacity: 0.16;
-        }
-
-        /* Active */
-        .cl-checkbox>input:active {
-            opacity: 1;
-            transform: scale(0);
-            transition: transform 0s, opacity 0s;
-        }
-
-        .cl-checkbox>input:active+span::before {
-            border-color: #85b8b7;
-        }
-
-        .cl-checkbox>input:checked:active+span::before {
-            border-color: transparent;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-
-        /* Disabled */
-        .cl-checkbox>input:disabled {
-            opacity: 0;
-        }
-
-        .cl-checkbox>input:disabled+span {
-            color: rgba(0, 0, 0, 0.38);
-            cursor: initial;
-        }
-
-        .cl-checkbox>input:disabled+span::before {
-            border-color: currentColor;
-        }
-
-        .cl-checkbox>input:checked:disabled+span::before,
-        .cl-checkbox>input:indeterminate:disabled+span::before {
-            border-color: transparent;
-            background-color: currentColor;
-        }
-
-
-
-        #heading-1 {
-            background: linear-gradient(145deg, rgb(247, 230, 0) 0%, hsla(331, 74%, 68%, 1) 100%);
-
-
-            /* background: linear-gradient(45deg, #cdff10, transparent); */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .custom-scrollbar {
-            /*width: 300px; Set your desired width */
-            /* height: 200px;  Set your desired height */
-            overflow-y: auto;
-            scrollbar-width: thin;
-            /* For Firefox */
-            scrollbar-color: #ccc #fff;
-            /* For Firefox */
-        }
-
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-            /* Set your desired scrollbar width */
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background-color: #f1f1f1;
-            /* Set track color */
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background-color: #facc15;
-            /* Set thumb color */
-            border-radius: 4px;
-            /* Round the corners */
-        }
-
-        .scroll-content {
-            padding: 10px;
-            /* Adjust padding as necessary */
-        }
-
-        /* Style for select wrapper */
-        .select {
-            position: relative;
-            width: 200px;
-            /* Adjust width as needed */
-        }
-
-        /* Style for select element */
-        .select select {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        /* Style for select arrow */
-        .select::after {
-            content: '\25BC';
-            /* Unicode for down arrow */
-            font-size: 16px;
-            color: #555;
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-        }
-
-        /* Style for options */
-        .select select option {
-            padding: 10px;
-        }
-
-        /* Style for selected option */
-        .select select:checked {
-            background-color: #f0f0f0;
-        }
-    </style>
 
     <title>form2</title>
+
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
 </head>
 
 <body>
-    <main class="flex h-max items-center justify-center md:h-[100vh] my-3">
-        <div
-            class="mt w-[90%] overflow-x-hidden rounded-lg border-[1px] border-[#facc15] font-semibold sm:w-[70%] md:flex md:w-[80%]">
-            <div id="show" class="flex-1 bg-slate-200 p-2 saturate-100 md:h-auto">
-                <div class="m-2 my-3 rounded-lg bg-[#eee7e742] p-1 px-3">
-                    <h1 class="my-3 text-5xl font-bold text-white backdrop-blur md:text-6xl lg:text-7xl">One step of
-                        green earth</h1>
-                    <p id="heading-1" class="text-xl text-[#363636]">renewable energy source that comes from the sun</p>
+    <main class="poppins-regular">
+        <div class="m-auto h-max w-full bg-purple-50 sm:h-[125vh] sm:w-[85vw] md:w-[90vw] lg:w-[95vw]">
+            <!-- <div class="h-11 bg-yellow-300">nee</div> -->
+            <div class="m-auto bg-[#eaf0f9] items-center justify-center border sm:flex sm:h-screen">
+                <div class="h-screen sm:px border-red-300 px-3 py-2 sm:h-[80vh] sm:w-[45vw] md:w-[50vw] lg:w-[35vw] ">
+                    <span class="font-semibold uppercase text-[#34bd8f]">contact</span>
+                    <h1 class="my-6 text-3xl font-bold text-[#242424] sm:text-4xl">Get in touch</h1>
+                    <p class="my-12 text-sm sm:my-4">Use my contact forms best ui/ux designs for all information
+                        requests or contact us directly this contact information below. All information is treated with
+                        complete confidentiality and in accrodence with our <a
+                            class="text-[#34bd8f] underline decoration-[#18e29f] decoration-2" href="/">data protection
+                            statement</a></p>
+                    <p class="my-4 text-xs text-slate-600">Feel free to get in touch with via email or phone</p>
+                    <div class="flex justify-evenly sm:justify-between text-xs">
+                        <a href="#" class="text-[#34bd8f] hover:underline decoration-[#18e29f]">info@example.com</a>
+                        <a href="#" class="text-[#34bd8f] hover:underline decoration-[#18e29f]">+91 (XXX) XXX-XXXX</a>
+                    </div>
                 </div>
-                <p class="my-3 w-fit rounded-full bg-[#deffbf46] p-1 px-3 font-bold text-[#e6d32a] backdrop-blur-sm">
-                    Connect to Initiative</p>
-            </div>
-            <div id="info"
-                class="custom-scrollbar m-1 flex-1 overflow-y-auto rounded-2xl border-green-200 p-2 md:h-[62vh]">
-                <h3 id="heading-1" class="my-3 p-1 px-3 text-2xl font-bold text-slate-600">Let's get started on your
-                    journey to solar power!</h3>
-                <form action="" method="post"
-                    class="bg-emev rald-100 m-auto my-3 w-[98%] md:w-[95%] rounded-2xl border-2 border-[#fce3086c] p-1 px-3 sm:w-[80%]">
-                    <fieldset class="mb-5">
-                        <legend class="">1. what is your field area?</legend>
-                        <label for="" class="text-slate-600">choose area</label>
-                        <select class="h-9 w-2/4 rounded-md bg-[#fce3086c] text-slate-600 outline-yellow-400" name=""
-                            id="">
-                            <option class="bg-green-300 text-slate-500" value="" disabled selected>select</option>
-                            <option class="h-5" value="agriculture">Agriculture</option>
-                            <option class="h-5" value=" water">Water desalination</option>
-                            <option class="h-5" value=" oil">Enhanced oil recovery</option>
-                            <option class="h-5" value=" fodd">Food processing</option>
-                            <option class="h-5" value=" chemical">Chemical production</option>
-                            <option class="h-5" value=" mineral">Mineral processing</option>
-                            <option class="h-5" value=" home">At home</option>
-                        </select>
-                    </fieldset>
-                    <fieldset class="mb-5">
-                        <legend class="">2. How's need of kiloWatts?</legend>
-                        <label for="kilowatts2" class="cl-checkbox m-3">
-                            <input class="" id="kilowatts2" name="kilowatts" value="kilowatts2" type="checkbox" />
-                            <span>Kilowatts 2 </span> </label><br />
-                        <label for="kilowatts3" class="cl-checkbox m-3">
-                            <input class="" id="kilowatts3" name="kilowatts" value="kilowatts3" type="checkbox" />
-                            <span>Kilowatts 3 </span> </label><br />
-                        <label for="kilowatts4" class="cl-checkbox m-3">
-                            <input class="" id="kilowatts4" name="kilowatts" value="kilowatts4" type="checkbox" />
-                            <span>Kilowatts 4 </span> </label><br />
-                        <label for="kilowatts5" class="cl-checkbox m-3">
-                            <input class="" id="kilowatts5" name="kilowatts" value="kilowatts5" type="checkbox" />
-                            <span>Kilowatts 5 </span> </label><br />
-                        <label for="kilowatts6" class="cl-checkbox m-3">
-                            <input class="" id="kilowatts6" name="kilowatts" value="kilowatts6" type="checkbox" />
-                            <span>Kilowatts 6 </span> </label><br />
-                    </fieldset>
-                    <fieldset>
-                        <label for="name">Name: <br />
-                            <input class="mb-4 h-10 w-[100%] rounded-md bg-slate-100 pl-4" type="text" name="" id=""
-                                required />
-                        </label>
-                        <br />
-                        <label for="name">Email: <br />
-                            <input class="mb-4 h-10 w-[100%] rounded-md bg-slate-100 pl-4" type="text" name="" id=""
-                                required />
-                        </label>
-                        <label for="name">Your phone: <br />
-                            <input class="mb-4 h-10 w-[100%] rounded-md bg-slate-100 pl-4" type="tel" name="" id=""
-                                required />
-                        </label>
-                        <label for="massege">A note</label>
-                        <textarea class="h-20 w-[100%] rounded-xl border" name="message" id=""></textarea>
-                    </fieldset>
-                    <button type="submit" class="bg-rose-500 text-white rounded-lg mb-2 mt-2 p-2 w-24">Submit</button>
-                    <button type="reset" class="bg-rose-500 text-white rounded-lg mb-2 mt-2 p-2 w-24">Reset</button>
-                </form>
+                <div class="h-screen sm:px border-blue-300 px-3 py-2 sm:h-[80vh] sm:w-[45vw] md:w-[50vw] lg:w-[35vw] ">
+                    <form action="" method="get">
+                        <fieldset class="flex gap-2">
+                            <label for="" class="w-full">
+                                <input
+                                    class="w-full outline-none focus-visible:ring-2 my-2 rounded-sm text-xs h-9 px-2 ring-[#5c5c5c]  border-slate-300"
+                                    type="text" name="" id="" placeholder="Your name">
+                            </label>
+                            <label for="" class="w-full">
+                                <input
+                                    class="w-full outline-none focus-visible:ring-2 my-2 rounded-sm text-xs h-9 px-2  ring-[#5c5c5c]"
+                                    type="text" name="" id="" placeholder="Your name">
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <label for="" class="w-full">
+                                <input
+                                    class="w-full outline-none focus-visible:ring-2 my-2 rounded-sm text-xs h-9 px-2  ring-[#5c5c5c]"
+                                    type="text" name="" id="" placeholder="Your name">
+                            </label>
+                        </fieldset>
+                        <fieldset class="flex gap-2">
+                            <label for="" class="w-full">
+                                <input
+                                    class="w-full outline-none focus-visible:ring-2 my-2 rounded-sm text-xs h-9 px-2 ring-[#5c5c5c]"
+                                    type="text" name="" id="" placeholder="Your name">
+                            </label>
+                            <label for="" class="w-full">
+                                <input
+                                    class="w-full outline-none focus-visible:ring-2 my-2 rounded-sm text-xs h-9 px-2 ring-[#5c5c5c]"
+                                    type="text" name="" id="" placeholder="Your name">
+                            </label>
+
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
+
 </body>
 
 </html>
