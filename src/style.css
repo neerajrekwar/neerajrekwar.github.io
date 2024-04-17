@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --heading-text: #353535;
+  --txt-color: #3C6E71;
+  --bdr-color: #284B63;
+  --bg: #D9D9D9;
+  --other: #FFFFFF;
+
+}
+
+
+.alata-regular {
+  --new-animation: hellos;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  font-size: 1.5em;
+  /* background-color: rgb(192, 238, 238); */
+}
+
+.grid-tamplate-area {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'One'
+    'Two'
+    'Three'
+    'Four'
+    'Five'
+    'Six';
+  gap: 1em;
+  /* border: 2px solid; */
+  margin: 0 auto;
+  height: auto;
+  padding: 2rem;
+}
+
+.grid-box:nth-child(1) {
+  grid-area: One;
+}
+
+.grid-box:nth-child(2) {
+  grid-area: Two;
+}
+
+.grid-box:nth-child(3) {
+  grid-area: Three;
+}
+
+.grid-box:nth-child(4) {
+  grid-area: Four;
+}
+
+.grid-box:nth-child(5) {
+  grid-area: Five;
+}
+
+.grid-box:nth-child(6) {
+  grid-area: Six;
+}
+
+
+@media (min-width: 30em) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  main {
+    /* background-color: rgb(189, 228, 153); */
+
+  }
+
+  .grid-tamplate-area {
+    grid-template-areas:
+      'One One'
+      'Two Five'
+      'Three Five'
+      'Four Six'
+      'Four Six';
+  }
+
+}
+
+@media (min-width: 50em) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  main {
+    /* background-color: rgb(78, 78, 129); */
+  }
+
+  .grid-tamplate-area {
+    height: auto;
+    grid-template-areas:
+      'One One Two Five'
+      'Three Four Four Five'
+      'Six Six Six Six'
+  }
+}
+
+span.hello {
+  background: linear-gradient(45deg, #cdff10, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .a {
+  border: 2px solid tomato;
+}
+
+.b {
+  border: 2px solid gold;
+}
+
+.c {
+  border: 2px solid gray;
+}
+
+.d {
+  border: 2px solid rgb(30, 158, 30);
+}
+
+.e {
+  border: 2px solid rgb(34, 121, 161);
+}
+
+.f {
+  border: 2px solid rgb(255, 83, 183);
+} */
+.scroll-container {
+  height: 200vh;
+  /* Create enough scrollable height for demonstration */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.scroll-text {
+  opacity: 0;
+  transform: translateX(-20px);
+  scroll-snap-align: start;
+  will-change: opacity, transform;
+  animation: fade-in .3s ease-out 0.5s forwards;
+  scroll-timeline: view();
+  animation-range: entry;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4caf50;
+  transition: width 0.3s;
+}
+
+#form-container {
+  background-size: contain;
+  background-image: url('https://images.unsplash.com/photo-1501673618753-48ce9418287b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+#form-container2 {
+  background-size: contain;
+  background-image: url('https://images.unsplash.com/photo-1706661849307-9f0ff8155bc9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+#form-container3 {
+  background-size: contain;
+  background-image: url('https://images.unsplash.com/photo-1709927988334-bfbcc99208ed?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+
+@keyframes jumbo {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.jumbo {
+  --stripes: repeating-linear-gradient(100deg,
+      #fff 0%,
+      #fff 7%,
+      transparent 10%,
+      transparent 12%,
+      #fff 16%);
+  --stripesDark: repeating-linear-gradient(100deg,
+      #000 0%,
+      #000 7%,
+      transparent 10%,
+      transparent 12%,
+      #000 16%);
+  --rainbow: repeating-linear-gradient(100deg,
+      #60a5fa 10%,
+      #e879f9 15%,
+      #60a5fa 20%,
+      #5eead4 25%,
+      #60a5fa 30%);
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+
+  filter: blur(10px) invert(100%);
+
+  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+
+  pointer-events: none;
+}
+
+.jumbo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 200%, 100%;
+  animation: jumbo 60s linear infinite;
+  background-attachment: fixed;
+  mix-blend-mode: difference;
+}
+
+.dark .jumbo {
+  background-image: var(--stripesDark), var(--rainbow);
+  filter: blur(10px) opacity(50%) saturate(200%);
+}
+
+.dark .jumbo::after {
+  background-image: var(--stripesDark), var(--rainbow);
+}
+
+.contact-btn {
+  font-family: monospace;
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: 2px solid #5e761a;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: 0.3s;
+}
+.contact-btn:active,
+.contact-btn:focus {
+  border: none;
+
+}
+.contact-btn:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+
+/* -------------Scroll Animations Start------------ */
+
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.from-left {
+  transform: translateX(-50%);
+}
+
+.from-right {
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition:
+    opacity 250ms ease-in,
+    transform 400ms ease-in;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* -------------Scroll Animations End------------ */

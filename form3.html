@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="description" content="">
+  <script type="module" src="assets/js/script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+  <title>form3</title>
+  <style>
+    #hello{
+      background-image: url(./assets/svg-images/blurry-gradient.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <main>
+    <div id="hello" class="m-auto overflow-hidden flex h-max  sm:h-[120vh] md:h-screen">
+      <div
+        class="m-auto h-max w-screen bg-[#242424] items-center justify-center rounded-sm border-red-500 shadow-2xl shadow-[] sm:flex sm:w-[85vw] md:h-[85vh]">
+        <div class="ha m-4 flex flex-col justify-center p-2 sm:w-[60vw] md:h-full">
+          <h1 class="text-3xl font-bold text-lime-600">Connect to initiate</h1>
+          <p class="my-4 font-semibold text-lime-700 sm:my-2">Tell us more about you and we will Contact you soon :)</p>
+          <form action="" method="get" class="flex flex-col justify-center">
+            <fieldset class="my-2 gap-2 text-lime-400 md:flex">
+              <label for="firstname" class="w-full">First name<span
+                  class="relative pl-1 text-base font-bold text-lime-800">*</span>
+                <input
+                  class="my-2 mb-4 h-5 w-full border-b border-lime-400 bg-transparent py-2 text-sm font-semibold capitalize text-lime-600 outline-none"
+                  placeholder="Enter first" type="text" name="firstname" id="" required="" />
+              </label>
+              <label for="lastname" class="w-full">Last name<span
+                  class="relative pl-1 text-base font-bold text-lime-800">*</span>
+                <input
+                  class="my-2 mb-4 h-5 w-full border-b border-lime-400 bg-transparent py-2 text-sm font-semibold capitalize text-lime-600 outline-none"
+                  placeholder="Enter last" type="text" name="lastname" id="" required="" />
+              </label>
+            </fieldset>
+            <fieldset class="my-2 gap-2 text-lime-400 md:flex">
+              <label for="email" class="w-full">Email<span
+                  class="relative pl-1 text-base font-bold text-lime-800">*</span>
+                <input
+                  class="my-2 mb-4 h-5 w-full border-b border-lime-400 bg-transparent py-2 text-sm font-semibold capitalize text-lime-600 outline-none"
+                  placeholder="Enter email" type="text" name="email" id="" required="" />
+              </label>
+              <label for="mobile" class="w-full">Mobile<span
+                  class="relative pl-1 text-base font-bold text-lime-800">*</span>
+                <input
+                  class="my-2 mb-4 h-5 w-full border-b border-lime-400 bg-transparent py-2 text-sm font-semibold capitalize text-lime-600 outline-none"
+                  placeholder="+00 (XXX) XXX-XXXX" type="text" name="mobile" id="" required="" />
+              </label>
+            </fieldset>
+            <fieldset class="my-2 gap-2 text-lime-400">
+              <label for="">Message
+                <textarea name="" id=""
+                  class="my-2 mb-4 h-full w-full border-b border-lime-400 bg-transparent py-2 text-sm font-semibold capitalize text-lime-600 outline-none">Hello, user.</textarea>
+              </label>
+            </fieldset>
+            <button type="submit"
+              class="self-end rounded-sm bg-lime-600 px-12 py-2 shadow-lg shadow-[#d6ff6769] transition-all active:-translate-x-1 active:translate-y-1 active:px-10">Submit</button>
+          </form>
+        </div>
+        <div class="flex h-screen flex-col bg-white text-black sm:h-full sm:w-[40vw]">
+          <div class="relative">
+            <ul class="flex shrink justify-around bg-[azure] py-3 text-sm font-semibold text-lime-800">
+              <li><a href="">About</a></li>
+              <li><a href="">Works</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="m-auto bg-slate-50 px-4">
+            <h2 class="py-2 text-xl font-bold">Contact information</h2>
+            <div class="py-2 text-sm font-semibold md:text-base">
+              <p class="text-lime-800">4252 Jefferson Street Lightfoot, VA 23090</p>
+              <br />
+              <p class="text-lime-800">+1 757-846-5499</p>
+              <p class="text-lime-800">We are open from monday - friday</p>
+              <p class="text-lime-800">09:00 AM - 06:00 PM</p>
+            </div>
+            <br />
+            <h3 class="text-xl font-bold">Follow us</h3>
+            <ul class="flex gap-4 py-2 text-lime-800">
+              <li>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                  </svg></a>
+              </li>
+              <li>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                    <path d="M8 11l0 5" />
+                    <path d="M8 8l0 .01" />
+                    <path d="M12 16l0 -5" />
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                  </svg></a>
+              </li>
+              <li>
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                  </svg></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
