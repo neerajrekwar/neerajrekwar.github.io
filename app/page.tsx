@@ -14,10 +14,10 @@ export default function Home() {
               alt="Picture of the author"
               className="text-center rounded shadow-2"
             />
-
-            {/* <figcaption>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos quidem suscipit a? Ad laudantium accusamus dolorem quae sed est, voluptatibus ipsam harum repudiandae, nam perferendis, at molestiae tempore. Provident!</figcaption> */}
+            <h2 className=" text-xl sm:text-4xl lg:text-5xl font-bold text-[#242424] mt-4 pb-2 ">Neeraj Rekwar</h2>
+            <figcaption>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos quidem suscipit a? Ad laudantium accusamus dolorem quae sed est, voluptatibus ipsam harum repudiandae, nam perferendis, at molestiae tempore. Provident!</figcaption>
           </figure>
-          <h2 className=" text-xl sm:text-4xl lg:text-5xl font-bold text-[#242424] ">Neeraj Rekwar</h2>
+
           <div className=" left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
 
           </div>
