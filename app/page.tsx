@@ -10,8 +10,8 @@ export default function Home() {
           <figure className="flex-col flex justify-center ">
             <Image
               src={profilePic}
-              width={300}
-              height={300}
+              width={500}
+              height={500}
               alt="Picture of the author"
               className="text-center rounded shadow-2"
             />
