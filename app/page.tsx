@@ -5,8 +5,8 @@ import profilePic from "../public/me.jpg";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between p-24">
-      <section className=" flex h-screen w-full text-sm antialiased ">
-        <div className="z-10   flex items-center justify-between font-mono text-sm lg:flex-col lg:border-blue-500">
+      <section className=" md:flex border-2 border-lime-500 justify-end place-items-start h-screen w-full text-sm antialiased ">
+        <div className="z-10 dark   flex items-center justify-between font-mono text-sm lg:flex-col lg:border-blue-500">
           <figure className="flex-col flex justify-center ">
             <Image
               src={profilePic}
@@ -15,7 +15,7 @@ export default function Home() {
               alt="Picture of the author"
               className="text-center rounded shadow-2"
             />
-            <h2 className=" text-xl sm:text-4xl lg:text-5xl font-bold text-[#242424] mt-4 pb-2 ">Neeraj Rekwar</h2>
+            <h2 className=" text-xl sm:text-4xl dark:black lg:text-5xl font-bold text-[#242424] mt-4 pb-2 ">Neeraj Rekwar</h2>
             <figcaption>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos quidem suscipit a? Ad laudantium accusamus dolorem quae sed est, voluptatibus ipsam harum repudiandae, nam perferendis, at molestiae tempore. Provident!</figcaption>
           </figure>
         </div>
