@@ -5,7 +5,7 @@ export default function Home() {
       <section className="h-[50vh] m-2">
         <div>
           <Image
-            src="/me.jpg"
+            src="/public/me.jpg"
             width={500}
             height={500}
             alt="Picture of the author"
