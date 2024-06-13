@@ -8,8 +8,8 @@ export default function Home() {
             <div className="m-2">
               <Image
                 src="/me.jpg"
-                width={200}
-                height={200}
+                width={350}
+                height={320}
                 alt="Picture of the author"
                 className="shadow-xl"
 
