@@ -13,7 +13,6 @@ export default function Home() {
                 height={350}
                 alt="Picture of the author"
               />
-
             </div>
             <div className="m-2 md:w-[70vw]">
               <h2 className="font-bold text-[#212121] text-3xl md:text-4xl lg:text-4xl">Neeraj Rekwar</h2>
