@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import FlipComponent from './components/TextFlip';
-
+import Image from "next/image";
+import FlipComponent from "./components/FlipComponent";
+import React from "react";
 
 export default function Home() {
   return (
@@ -18,25 +18,37 @@ export default function Home() {
               />
             </div>
             <div className="m-2 md:w-[70vw] self-end">
-              <h2 className="font-bold text-[#212121] text-3xl md:text-4xl lg:text-4xl">Neeraj Rekwar</h2>
-              <figcaption className="mb-4 md:pb-8 antialiased">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
+              <h2 className="font-bold text-[#212121] text-3xl md:text-4xl lg:text-4xl">
+                Neeraj Rekwar
+              </h2>
+              <figcaption className="mb-4 md:pb-8 antialiased">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+                illum architecto hic, dicta perferendis quo tenetur veniam magni
+                quis aliquam, culpa repellat consequatur temporibus voluptatum
+                fugiat voluptatibus doloribus rerum vitae?
+              </figcaption>
             </div>
           </figure>
         </div>
-        <div>
-
-        </div>
+        <div></div>
       </section>
       <section className="m-2 bg-black text-white">
-
-        <div className="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequatur repellendus saepe omnis amet pariatur sint debitis aut expedita perspiciatis quo nisi optio voluptatem necessitatibus, magni earum reprehenderit ipsum enim.</div>
+        <div className="p-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+          consequatur repellendus saepe omnis amet pariatur sint debitis aut
+          expedita perspiciatis quo nisi optio voluptatem necessitatibus, magni
+          earum reprehenderit ipsum enim.
+        </div>
       </section>
       <section className="h-[50vh] m-2 bg-white dark:bg-black dark:text-white">
         <div className="p-1">
-          <div>
-            <FlipComponent elementId="flipper" />
+          <div className="flex justify-center items-center min-h-screen bg-gray-100">
+            <FlipComponent />
           </div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem exercitationem quam ad reiciendis perspiciatis dignissimos ea assumenda ducimus quasi, non vel quidem, suscipit eius, illo voluptatibus eaque inventore. Veritatis.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem
+          exercitationem quam ad reiciendis perspiciatis dignissimos ea
+          assumenda ducimus quasi, non vel quidem, suscipit eius, illo
+          voluptatibus eaque inventore. Veritatis.
         </div>
       </section>
     </main>

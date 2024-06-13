@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.perspective {
+  perspective: 1000px;
+}
+
+.step {
+  display: none;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.step.flip-in {
+  display: block;
+  transform: rotateY(0deg);
+}
+
+.step.flip-out {
+  transform: rotateY(-180deg);
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
