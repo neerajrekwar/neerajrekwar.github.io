@@ -7,13 +7,7 @@ export default function Home() {
         <div className="m-2 p-1 border-2 border-gray-400 ">
           <figure className="flex-1 sm:flex border-2">
             <div className="m-2 lg:w-[50vw] md:w-[20vw]">
-              <Image
-                src="/me.jpg"
-                width="{350}"
-                height="{320}"
-                alt="Picture of the author"
-                
-              />
+              
               </div>
               <div className="m-2 md:w-[70vw]">
                 <h2 className="font-bold text-[#212121] text-3xl md:text-4xl lg:text-4xl">Neeraj Rekwar</h2>
