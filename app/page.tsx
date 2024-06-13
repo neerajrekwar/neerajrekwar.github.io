@@ -2,7 +2,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main className="antileased">
-      <section className="m-2 border-blue-500 border-2">
+      <section className="m-2 border-blue-500 border-2 bg-white">
         <div className="m-2 p-1 border-2 border-gray-400 ">
           <figure className="border-2 flex-1 flex-col">
             <div className="m-2">
@@ -26,8 +26,8 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius neque, atque similique veniam aperiam consequuntur placeat tempore, recusandae iusto quam omnis suscipit? Animi sed possimus repellat quo quae distinctio! Possimus!</section>
-      <section className="h-[50vh] m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius neque, atque similique veniam aperiam consequuntur placeat tempore, recusandae iusto quam omnis suscipit? Animi sed possimus repellat quo quae distinctio! Possimus!</section>
+      <section className="m-2 bg-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius neque, atque similique veniam aperiam consequuntur placeat tempore, recusandae iusto quam omnis suscipit? Animi sed possimus repellat quo quae distinctio! Possimus!</section>
+      <section className="h-[50vh] m-2 bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius neque, atque similique veniam aperiam consequuntur placeat tempore, recusandae iusto quam omnis suscipit? Animi sed possimus repellat quo quae distinctio! Possimus!</section>
     </main>
   );
 }
