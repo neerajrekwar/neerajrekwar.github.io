@@ -8,7 +8,7 @@ export default function Home() {
           <figure className="flex-1 sm:flex border-2">
             <div className="m-2 lg:w-[50vw] md:w-[20vw]">
               <Image
-                src="/me-jpg"
+                src="/me.jpg"
                 width={350}
                 height={350}
                 alt="Picture of the author"
