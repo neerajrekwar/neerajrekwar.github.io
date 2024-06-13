@@ -6,7 +6,7 @@ export default function Home() {
       <section className="m-2 bg-white">
         <div className="m-2 p-1">
           <figure className="flex-1 sm:flex ">
-            <div className="m-2 lg:w-[50vw] md:w-[20vw]">
+            <div className="m-2 lg:w-[50vw] grid grid-center md:w-[20vw]">
               <Image
                 src="/me.jpg"
                 width={350}
