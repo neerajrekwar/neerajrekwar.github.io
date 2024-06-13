@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const TextFlip = ({ elementId }) => {
+const FlipComponent = ({ elementId }) => {
   const el = useRef(null);
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -21,7 +21,7 @@ const TextFlip = ({ elementId }) => {
       }
       clearInterval(intervalId);
     };
-  }, []);
+  }, [currentStep]);
 
   const next = (event) => {
     if (event) {
@@ -35,15 +35,18 @@ const TextFlip = ({ elementId }) => {
     if (nextStepEl) {
       console.log('we found the next step', nextStepEl);
 
-      currentStepEl.previousElementSibling?.classList.remove('down');
-
-      currentStepEl.classList.remove('set');
-      currentStepEl.classList.add('down');
+      if (currentStepEl) {
+        currentStepEl.previousElementSibling?.classList.remove('down');
+        currentStepEl.classList.remove('set');
+        currentStepEl.classList.add('down');
+      }
 
       nextStepEl.classList.add('set');
       nextStepEl.classList.remove('down');
 
-      nextStepEl.nextElementSibling?.classList.remove('down');
+      if (nextStepEl.nextElementSibling) {
+        nextStepEl.nextElementSibling.classList.remove('down');
+      }
 
       setCurrentStep(currentStep + 1);
     } else {
@@ -57,21 +60,25 @@ const TextFlip = ({ elementId }) => {
     }
   };
 
-  return null; // This component does not render anything itself
-};
-
   return (
     <div>
-      <div id="flipper">
+      <div id={elementId}>
         <div className="step0 set">Step 0</div>
         <div className="step1">Step 1</div>
         <div className="step2">Step 2</div>
-        {/* Add more steps as needed */} 
+        {/* Add more steps as needed */}
       </div>
       <button className="next">Next</button>
-      <Flip elementId="flipper" />
     </div>
   );
+};
 
+const App = () => {
+  return (
+    <div>
+      <FlipComponent elementId="flipper" />
+    </div>
+  );
+};
 
-export default TextFlip;
+export default App;
