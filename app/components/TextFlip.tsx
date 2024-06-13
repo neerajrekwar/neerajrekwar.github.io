@@ -73,12 +73,4 @@ const FlipComponent = ({ elementId }) => {
   );
 };
 
-const App = () => {
-  return (
-    <div>
-      <FlipComponent elementId="flipper" />
-    </div>
-  );
-};
-
-export default App;
+export default FlipComponent;

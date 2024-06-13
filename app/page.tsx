@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import App from './components/TextFlip';
+import FlipComponent from './components/TextFlip';
 
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
       <section className="h-[50vh] m-2 bg-white dark:bg-black dark:text-white">
         <div className="p-1">
-         <App/>
+         <FlipComponent/>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem exercitationem quam ad reiciendis perspiciatis dignissimos ea assumenda ducimus quasi, non vel quidem, suscipit eius, illo voluptatibus eaque inventore. Veritatis.
         </div>
       </section>
