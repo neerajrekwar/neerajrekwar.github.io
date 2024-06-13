@@ -5,12 +5,14 @@ export default function Home() {
       <section className="m-2 border-blue-500 border-2">
         <div className="m-2 p-1 border-2 border-gray-400 ">
           <figure>
-            <div className="m-2 shadow">
+            <div className="m-2 ">
               <Image
                 src="/me.jpg"
                 width={200}
                 height={200}
                 alt="Picture of the author"
+                className="shadow-xl"
+                
               />
             </div>
             <h2 className="text-2xl">Neeraj Rekwar</h2>
