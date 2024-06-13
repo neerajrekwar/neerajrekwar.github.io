@@ -11,7 +11,7 @@ export default function Home() {
                 width={350}
                 height={320}
                 alt="Picture of the author"
-                className="shadow-xl"
+                className="shadow-[0px_20px_20px_10px_#cbd5e0]"
 
               />
             </div>
