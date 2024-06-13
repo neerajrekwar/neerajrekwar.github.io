@@ -10,7 +10,7 @@ export default function Home() {
             height={500}
             alt="Picture of the author"
           />
-          <h2>Neeraj Rekwar</h2>
+          <h2 className="text-2xl">Neeraj Rekwar</h2>
         </div>
         <div>
 
