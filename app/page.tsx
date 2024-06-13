@@ -4,13 +4,19 @@ export default function Home() {
     <main className="antileased">
       <section className="m-2 border-blue-500 border-2">
         <div className="m-2 p-1 border-2 border-gray-400 ">
-          <Image
-            src="/me.jpg"
-            width={500}
-            height={500}
-            alt="Picture of the author"
-          />
-          <h2 className="text-2xl">Neeraj Rekwar</h2>
+          <figure>
+            <div className="m-2 shadow">
+              <Image
+                src="/me.jpg"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
+            </div>
+            <h2 className="text-2xl">Neeraj Rekwar</h2>
+            <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
+
+          </figure>
         </div>
         <div>
 
