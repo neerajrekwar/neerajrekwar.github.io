@@ -13,7 +13,6 @@ export default function Home() {
               <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
             </div>
           </figure>
-
         </div>
         <div>
 
