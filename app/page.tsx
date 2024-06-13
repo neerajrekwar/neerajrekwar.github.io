@@ -2,7 +2,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
-      <section className="h-[50vh] m-2">
+      <section className=" m-2">
         <div>
           <Image
             src="/me.jpg"
