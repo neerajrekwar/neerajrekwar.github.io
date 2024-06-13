@@ -1,7 +1,7 @@
 import Image from 'next/image'
 export default function Home() {
   return (
-    <main>
+    <main className="antileased">
       <section className="m-2 border-blue-500 border-2">
         <div className="m-2 p-1 border-2 border-gray-400 ">
           <Image
