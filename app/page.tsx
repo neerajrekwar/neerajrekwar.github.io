@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="antileased">
+    <main className="antialiased">
       <section className="m-2 border-blue-500 border-2 bg-white">
         <div className="m-2 p-1 border-2 border-gray-400 ">
           <figure className="flex-1 sm:flex border-2">
@@ -17,7 +17,7 @@ export default function Home() {
             </div>
             <div className="m-2 md:w-[70vw]">
               <h2 className="font-bold text-[#212121] text-3xl md:text-4xl lg:text-4xl">Neeraj Rekwar</h2>
-              <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
+              <figcaption className="mb-4 md:pb-8 antialiased">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
             </div>
           </figure>
         </div>
@@ -30,6 +30,7 @@ export default function Home() {
       </section>
       <section className="h-[50vh] m-2 bg-white">
         <div className="p-1">
+          [![Deploy Next.js site to Pages](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml)
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem exercitationem quam ad reiciendis perspiciatis dignissimos ea assumenda ducimus quasi, non vel quidem, suscipit eius, illo voluptatibus eaque inventore. Veritatis.
         </div>
       </section>
