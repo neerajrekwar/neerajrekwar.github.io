@@ -4,7 +4,7 @@ export default function Home() {
     <main className="antileased">
       <section className="m-2 border-blue-500 border-2">
         <div className="m-2 p-1 border-2 border-gray-400 ">
-          <figure>
+          <figure className="border-2 flex-1">
             <div className="m-2">
               <Image
                 src="/me.jpg"
@@ -15,9 +15,12 @@ export default function Home() {
 
               />
             </div>
+            <div>
             <h2 className="text-2xl">Neeraj Rekwar</h2>
             <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
-          </figure>
+          
+            </div>
+            </figure>
         </div>
         <div>
 
