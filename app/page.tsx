@@ -4,7 +4,7 @@ export default function Home() {
     <main className="antileased">
       <section className="m-2 border-blue-500 border-2 bg-white">
         <div className="m-2 p-1 border-2 border-gray-400 ">
-          <figure className="border-2 flex-1 flex-col">
+          <figure className="border-2 flex">
             <div className="m-2">
               <Image
                 src="/me.jpg"
