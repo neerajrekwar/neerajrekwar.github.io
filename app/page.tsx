@@ -3,9 +3,9 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main className="antialiased">
-      <section className="m-2 border-blue-500 border-2 bg-white">
-        <div className="m-2 p-1 border-2 border-gray-400 ">
-          <figure className="flex-1 sm:flex border-2">
+      <section className="m-2 bg-white">
+        <div className="m-2 p-1">
+          <figure className="flex-1 sm:flex ">
             <div className="m-2 lg:w-[50vw] md:w-[20vw]">
               <Image
                 src="/me.jpg"
