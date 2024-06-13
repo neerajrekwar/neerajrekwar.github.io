@@ -16,11 +16,11 @@ export default function Home() {
               />
             </div>
             <div>
-            <h2 className="text-2xl">Neeraj Rekwar</h2>
-            <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
-          
+              <h2 className="text-2xl">Neeraj Rekwar</h2>
+              <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
+
             </div>
-            </figure>
+          </figure>
         </div>
         <div>
 
@@ -31,7 +31,7 @@ export default function Home() {
       </section>
       <section className="h-[50vh] m-2 bg-white">
         <div className="p-1">
-
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem exercitationem quam ad reiciendis perspiciatis dignissimos ea assumenda ducimus quasi, non vel quidem, suscipit eius, illo voluptatibus eaque inventore. Veritatis.
         </div>
       </section>
     </main>
