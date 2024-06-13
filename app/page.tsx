@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import TextFlip from './components/TextFlip';
 
 export default function Home() {
   return (
@@ -26,10 +27,12 @@ export default function Home() {
         </div>
       </section>
       <section className="m-2 bg-black text-white">
+        
         <div className="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequatur repellendus saepe omnis amet pariatur sint debitis aut expedita perspiciatis quo nisi optio voluptatem necessitatibus, magni earum reprehenderit ipsum enim.</div>
       </section>
       <section className="h-[50vh] m-2 bg-white dark:bg-black dark:text-white">
         <div className="p-1">
+          <TextFlip/>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem exercitationem quam ad reiciendis perspiciatis dignissimos ea assumenda ducimus quasi, non vel quidem, suscipit eius, illo voluptatibus eaque inventore. Veritatis.
         </div>
       </section>
