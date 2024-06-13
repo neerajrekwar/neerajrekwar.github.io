@@ -15,7 +15,6 @@ export default function Home() {
             </div>
             <h2 className="text-2xl">Neeraj Rekwar</h2>
             <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
-
           </figure>
         </div>
         <div>
