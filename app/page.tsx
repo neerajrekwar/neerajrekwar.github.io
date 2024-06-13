@@ -4,15 +4,16 @@ export default function Home() {
     <main className="antileased">
       <section className="m-2 border-blue-500 border-2 bg-white">
         <div className="m-2 p-1 border-2 border-gray-400 ">
-          <figure class="flex-1 md:flex border-2">
-            <div class="m-2 lg:w-[50vw] md:w-[20vw]">
-              <image src="/me.jpg" width="{350}" height="{320}" alt="Picture of the author" class="rounded shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]" />
+          <figure className="flex-1 sm:flex border-2">
+            <div className="m-2 lg:w-[50vw] md:w-[20vw]">
+              <image src="https://neerajrekwar.github.io/me.jpg" width="{350}" height="{320}" alt="Picture of the author" class="rounded shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]" />
             </div>
-            <div class="m-2 md:w-[70vw]">
-              <h2 class="text-2xl md:text-4xl lg:text-4xl">Neeraj Rekwar</h2>
+            <div className="m-2 md:w-[70vw]">
+              <h2 className="font-bold text-[#212121] text-3xl md:text-4xl lg:text-4xl">Neeraj Rekwar</h2>
               <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illum architecto hic, dicta perferendis quo tenetur veniam magni quis aliquam, culpa repellat consequatur temporibus voluptatum fugiat voluptatibus doloribus rerum vitae?</figcaption>
             </div>
           </figure>
+
         </div>
         <div>
 
