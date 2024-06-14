@@ -14,8 +14,8 @@ const FlipperComponent: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <h1 className="text-xl font-bold text-center mb-8">
+    <div className="border-2 flex justify-center items-center min-h-screen bg-gray-100">
+      <h1 className="font-bold text-center text-gray-900 mb-8">
         How much should I charge for my
       </h1>
       <div
