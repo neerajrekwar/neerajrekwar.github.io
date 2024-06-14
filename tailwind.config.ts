@@ -25,7 +25,6 @@ const config: Config = {
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
           },
-        },
         backgroundImage: {
           "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
           "gradient-conic":
@@ -36,6 +35,7 @@ const config: Config = {
     plugins: [nextui(), addVariablesForColors],
   },
 };
+}
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
