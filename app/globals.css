@@ -25,12 +25,13 @@
 }
 
 .step.down {
-  transform: rotateX(-90deg);
+  transform: rotateX(-190deg);
+
   opacity: 0;
 }
 
 .step.set {
-  transform: rotateX(0deg);
+  transform: rotateX(10deg);
   opacity: 1;
 }
 :root {
