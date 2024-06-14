@@ -6,7 +6,7 @@ import { FlipWordsDemo } from "./components/FlipWords";
 
 export default function Home() {
   return (
-    <main className="antialiased">
+    <main className="antialiased dark:bg-white">
       <AuroraBackgroundDemo />
       <FlipWordsDemo />
       <section className="m-2 bg-white">
