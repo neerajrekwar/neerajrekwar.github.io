@@ -3,6 +3,7 @@ import FlipComponent from "./components/FlipComponent";
 import React from "react";
 import { AuroraBackgroundDemo } from "./components/BackgroundAurra";
 import { FlipWordsDemo } from "./components/FlipWords";
+import { LampDemo } from "./components/lampBar";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="overflow-hidden">
         <FlipWordsDemo />
       </div>
+      <LampDemo />
       <section className="m-2 bg-white">
         <div className="m-2 p-1">
           <figure className="flex-1 sm:flex ">
