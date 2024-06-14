@@ -25,17 +25,17 @@ const config: Config = {
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
           },
-        backgroundImage: {
-          "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-          "gradient-conic":
-            "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          backgroundImage: {
+            "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+            "gradient-conic":
+              "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          },
         },
       },
+      plugins: [nextui(), addVariablesForColors],
     },
-    plugins: [nextui(), addVariablesForColors],
   },
 };
-}
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
