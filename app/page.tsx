@@ -12,8 +12,9 @@ export default function Home() {
       <div className="overflow-hidden">
         <FlipWordsDemo />
       </div>
-      <LampDemo />
+
       <section className="m-2 bg-white">
+        <LampDemo />
         <div className="m-2 p-1">
           <figure className="flex-1 sm:flex ">
             <div className="m-2 lg:w-[50vw] grid grid-center md:w-[20vw]">
