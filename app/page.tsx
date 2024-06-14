@@ -8,7 +8,9 @@ export default function Home() {
   return (
     <main className="antialiased dark:bg-white">
       <AuroraBackgroundDemo />
-      <FlipWordsDemo />
+      <div className="overflow-hidden">
+        <FlipWordsDemo />
+      </div>
       <section className="m-2 bg-white">
         <div className="m-2 p-1">
           <figure className="flex-1 sm:flex ">
