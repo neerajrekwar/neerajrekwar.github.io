@@ -1,10 +1,12 @@
 import Image from "next/image";
 import FlipComponent from "./components/FlipComponent";
 import React from "react";
+import { AuroraBackgroundDemo } from "./components/BackgroundAurra";
 
 export default function Home() {
   return (
     <main className="antialiased">
+      <AuroraBackgroundDemo />
       <section className="m-2 bg-white">
         <div className="m-2 p-1">
           <figure className="flex-1 sm:flex ">

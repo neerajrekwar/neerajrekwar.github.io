@@ -1,5 +1,4 @@
 "use client"; // components/FlipperComponent.tsx
-// components/FlipperComponent.tsx
 import React, { useRef, useEffect, useState } from "react";
 
 const FlipperComponent: React.FC = () => {
@@ -16,7 +15,7 @@ const FlipperComponent: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-center mb-8">
+      <h1 className="text-xl font-bold text-center mb-8">
         How much should I charge for my
       </h1>
       <div
@@ -24,25 +23,39 @@ const FlipperComponent: React.FC = () => {
         className="flipper relative w-40 h-10 perspective-500 transform-style-preserve"
         ref={flipperRef}
       >
-        <div className={`step step0 ${currentStep === 0 ? "set" : "down"}`}>
+        <div
+          className={`step step0 ${currentStep === 0 ? "set" : "down"}  text-gray-900`}
+        >
           template?
         </div>
-        <div className={`step step1 ${currentStep === 1 ? "set" : "down"}`}>
+        <div
+          className={`step step1 ${currentStep === 1 ? "set" : "down"}  text-gray-900`}
+        >
           eBook?
         </div>
-        <div className={`step step2 ${currentStep === 2 ? "set" : "down"}`}>
+        <div
+          className={`step step2 ${currentStep === 2 ? "set" : "down"}  text-gray-900`}
+        >
           web service?
         </div>
-        <div className={`step step3 ${currentStep === 3 ? "set" : "down"}`}>
+        <div
+          className={`step step3 ${currentStep === 3 ? "set" : "down"}  text-gray-900`}
+        >
           another?
         </div>
-        <div className={`step step4 ${currentStep === 4 ? "set" : "down"}`}>
+        <div
+          className={`step step4 ${currentStep === 4 ? "set" : "down"}  text-gray-900`}
+        >
           otro?
         </div>
-        <div className={`step step5 ${currentStep === 5 ? "set" : "down"}`}>
+        <div
+          className={`step step5 ${currentStep === 5 ? "set" : "down"} text-gray-900`}
+        >
           sick yet?
         </div>
-        <div className={`step step6 ${currentStep === 6 ? "set" : "down"}`}>
+        <div
+          className={`step step6 ${currentStep === 6 ? "set" : "down"}  text-gray-900`}
+        >
           continue?
         </div>
       </div>
