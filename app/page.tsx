@@ -1,18 +1,17 @@
 import Image from "next/image";
 import FlipComponent from "./components/FlipComponent";
 import React from "react";
-import { AuroraBackgroundDemo } from "./components/BackgroundAurra";
+
 import { FlipWordsDemo } from "./components/FlipWords";
 import { LampDemo } from "./components/lampBar";
 import HeroSection from "./components/heroSection";
+import { AuroraBackgroundHeroSection } from "./components/BackgroundAurra";
 
 export default function Home() {
   return (
     <main className="antialiased overflow-hidden">
-      <div className="">
-        <HeroSection />
-      </div>
-      <AuroraBackgroundDemo />
+      <div className=""></div>
+      <AuroraBackgroundHeroSection />
       <div className="overflow-hidden h-screen">
         <FlipWordsDemo />
         <LampDemo />
