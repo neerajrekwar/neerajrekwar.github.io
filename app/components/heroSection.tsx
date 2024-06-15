@@ -4,8 +4,8 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <>
-      <section className="m-2 bg-white">
-        <div className="p-1 border-2 border-black rounded">
+      <section className="m-2 bg-white ">
+        <div className="p-1">
           <figure className="flex-1 sm:flex ">
             <div className=" lg:w-[50vw] grid sm:justify-items-end justify-items-center  md:w-[20vw] gi">
               <Image

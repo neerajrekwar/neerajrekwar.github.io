@@ -4,10 +4,14 @@ import React from "react";
 import { AuroraBackgroundDemo } from "./components/BackgroundAurra";
 import { FlipWordsDemo } from "./components/FlipWords";
 import { LampDemo } from "./components/lampBar";
+import HeroSection from "./components/heroSection";
 
 export default function Home() {
   return (
     <main className="antialiased overflow-hidden">
+      <div className="">
+        <HeroSection />
+      </div>
       <AuroraBackgroundDemo />
       <div className="overflow-hidden h-screen">
         <FlipWordsDemo />
