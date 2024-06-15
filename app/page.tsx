@@ -7,9 +7,9 @@ import { LampDemo } from "./components/lampBar";
 
 export default function Home() {
   return (
-    <main className="antialiased dark:bg-white">
+    <main className="antialiased dark:bg-white overflow-hidden">
       <AuroraBackgroundDemo />
-      <div className="overflow-hidden">
+      <div className="overflow-hidden h-screen">
         <FlipWordsDemo />
       </div>
 
