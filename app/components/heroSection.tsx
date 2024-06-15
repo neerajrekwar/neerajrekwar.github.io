@@ -5,15 +5,15 @@ export function HeroSection() {
   return (
     <>
       <section className="bg-transparent ">
-        <div className="p-1">
-          <figure className="flex-1 sm:flex ">
-            <div className=" lg:w-[50vw]  h-[12rem] border-lime-600 grid items-center sm:justify-items-end justify-items-center  md:w-[20vw] gi">
+        <div className="p-1 ">
+          <figure className="w-auto flex-1 border-blue-500 sm:justify-between sm:flex ">
+            <div className="md:w-[25vw] h-[18rem] border-lime-600 grid items-center sm:justify-items-end justify-items-center">
               <Image
                 src="/me.jpg"
                 width={350}
                 height={350}
                 alt="Picture of the author"
-                className="rounded h-[8rem] w-[8rem] sm:w-auto sm:h-auto shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
+                className="rounded h-[8rem] w-[8rem] sm:w-[16rem] sm:h-[16rem]  shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
               />
             </div>
             <div className="m-2 md:w-[70vw] self-end">
