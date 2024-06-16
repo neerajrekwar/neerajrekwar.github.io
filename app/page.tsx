@@ -3,7 +3,7 @@ import FlipComponent from "./components/FlipComponent";
 import React from "react";
 
 import { FlipWordsDemo } from "./components/FlipWords";
-import { LampDemo } from "./components/lampBar";
+
 import HeroSection from "./components/heroSection";
 import { AuroraBackgroundHeroSection } from "./components/BackgroundAurra";
 
@@ -12,9 +12,8 @@ export default function Home() {
     <main className="antialiased overflow-hidden">
       <div className=""></div>
       <AuroraBackgroundHeroSection />
-      <div className="overflow-hidden h-screen">
+      <div className="">
         <FlipWordsDemo />
-        <LampDemo />
       </div>
       <section className="m-2 bg-black text-white">
         <div className="p-1">
@@ -24,7 +23,7 @@ export default function Home() {
           earum reprehenderit ipsum enim.
         </div>
       </section>
-      <section className="h-[50vh] m-2 bg-white dark:bg-black dark:text-white">
+      <section className=" m-2 bg-white dark:bg-black dark:text-white">
         <div className="p-1">
           <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <FlipComponent />
