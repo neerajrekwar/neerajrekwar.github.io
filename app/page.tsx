@@ -6,9 +6,9 @@ export default function Page() {
   return (
     <main className="h-[200vh] ">
       <header>
-        <div>
+        <h1>
           <LampDemo />
-        </div>
+        </h1>
       </header>
       <section className="dark:bg-black dark:text-white">
         <h1>new mode</h1>
