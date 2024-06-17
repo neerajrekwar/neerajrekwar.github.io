@@ -1,37 +1,24 @@
-import Image from "next/image";
-import FlipComponent from "./components/FlipComponent";
-import React from "react";
+import DarkModeToggle from "./components/DarkModeToggle";
+import { LampDemo } from "./components/ui/lamp";
 
-import { FlipWordsDemo } from "./components/FlipWords";
-
-import HeroSection from "./components/heroSection";
-import { AuroraBackgroundHeroSection } from "./components/BackgroundAurra";
-
-export default function Home() {
+// `app/page.tsx` is the UI for the `/` URL
+export default function Page() {
   return (
-    <main className="antialiased overflow-hidden">
-      <div className=""></div>
-      <AuroraBackgroundHeroSection />
-      <div className="">
-        <FlipWordsDemo />
-      </div>
-      <section className="m-2 bg-black text-white">
-        <div className="p-1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-          consequatur repellendus saepe omnis amet pariatur sint debitis aut
-          expedita perspiciatis quo nisi optio voluptatem necessitatibus, magni
-          earum reprehenderit ipsum enim.
+    <main className="h-[200vh] ">
+      <header>
+        <div>
+          <LampDemo />
         </div>
-      </section>
-      <section className=" m-2 bg-white dark:bg-black dark:text-white">
-        <div className="p-1">
-          <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <FlipComponent />
-          </div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem
-          exercitationem quam ad reiciendis perspiciatis dignissimos ea
-          assumenda ducimus quasi, non vel quidem, suscipit eius, illo
-          voluptatibus eaque inventore. Veritatis.
+      </header>
+      <section className="dark:bg-black dark:text-white">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+          modi.
+        </h1>
+        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+          <h1 className="text-4xl font-bold">Welcome to Next.js</h1>
+          <DarkModeToggle />
+          {/* Other components or content */}
         </div>
       </section>
     </main>

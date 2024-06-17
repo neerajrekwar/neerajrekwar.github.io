@@ -1,17 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-  swcMinify:true,
-  images:{
-    remotePatterns:[
-      {
-        hostname:'plus.unsplash.com'
-      },
-      {
-        hostname:'images.unsplash.com'
-      }
-    ]
-  }
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
 };
 
 export default nextConfig;

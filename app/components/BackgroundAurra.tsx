@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "./ui/aurora-background";
 import HeroSection from "./heroSection";
+import DarkModeToggle from "./DarkModeToggle";
 
 export function AuroraBackgroundHeroSection() {
   return (
@@ -21,6 +22,7 @@ export function AuroraBackgroundHeroSection() {
         <div>
           <HeroSection />
         </div>
+        <DarkModeToggle />
         {/* <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
           Background lights are cool you know.
         </div>

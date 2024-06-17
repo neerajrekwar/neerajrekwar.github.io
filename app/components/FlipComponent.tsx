@@ -14,19 +14,17 @@ const FlipperComponent: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex-col justify-center items-center min-h-screen bg-gray-100">
-      <h1 className="font-bold text-center text-gray-900 ">
-        How much should I charge for my
-      </h1>
+    <div className="flex-col justify-center items-center">
+      <h1>hi, I&apos;m</h1>
       <div
         id="flipper"
-        className="flipper relative w-40 h-8 perspective-500 flex-1 text-left transform-style-preserve font-bold  text-gray-900 "
+        className="flipper flex border-2 relative  bg-transparent h-8 perspective-500  text-left transform-style-preserve font-bold  text-gray-900 "
         ref={flipperRef}
       >
         <div
           className={`step step0 ${currentStep === 0 ? "set" : "down"}  text-gray-900`}
         >
-          template?
+          Neeraj
         </div>
         <div
           className={`step step1 ${currentStep === 1 ? "set" : "down"}  text-gray-900`}

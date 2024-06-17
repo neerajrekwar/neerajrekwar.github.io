@@ -5,7 +5,7 @@ export function FlipWordsDemo() {
   const words = ["best", "creative", "beautiful", "modern"];
 
   return (
-    <div className="h-[40rem] flex justify-center items-center bg-white dark:bg-slate-800  px-4">
+    <div className="h-[40rem] flex justify-center items-center sm:bg-white  dark:bg-slate-800  px-4">
       <div className="sm:text-4xl text-xl mx-auto font-normal text-neutral-600 dark:bg-white">
         Build
         <FlipWords words={words} /> <br />
