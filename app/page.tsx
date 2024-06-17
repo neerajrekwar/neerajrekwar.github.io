@@ -11,10 +11,7 @@ export default function Page() {
         </div>
       </header>
       <section className="dark:bg-black dark:text-white">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-          modi.
-        </h1>
+        <h1>new mode</h1>
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
           <h1 className="text-4xl font-bold">Welcome to Next.js</h1>
           <DarkModeToggle />
