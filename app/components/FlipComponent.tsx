@@ -18,11 +18,11 @@ const FlipperComponent: React.FC = () => {
       <h1>hi, I&apos;m</h1>
       <div
         id="flipper"
-        className="flipper flex border-2 relative  bg-transparent h-8 perspective-500  text-left transform-style-preserve font-bold  text-gray-900 "
+        className="flipper flex relative  bg-transparent h-8 perspective-500  text-left transform-style-preserve font-bold  dark:text-white text-gray-900 "
         ref={flipperRef}
       >
         <div
-          className={`step step0 ${currentStep === 0 ? "set" : "down"}  text-gray-900`}
+          className={`step step0 ${currentStep === 0 ? "set" : "down"}  dark:text-white text-gray-900`}
         >
           Neeraj
         </div>

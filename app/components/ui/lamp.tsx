@@ -16,7 +16,7 @@ export function LampDemo() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-left text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        hello, world <br /> I&apos;m Programmer <br /> in Delhi
+        hello, world <br /> I&apos;m Programmer <br/> in Delhi
       </motion.h1>
     </LampContainer>
   );
@@ -32,7 +32,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full z-0",
+        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
         className,
       )}
     >
