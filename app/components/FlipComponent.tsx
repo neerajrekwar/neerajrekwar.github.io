@@ -27,32 +27,32 @@ const FlipperComponent: React.FC = () => {
           Neeraj
         </div>
         <div
-          className={`step step1 ${currentStep === 1 ? "set" : "down"}  text-gray-900`}
+          className={`step step1 ${currentStep === 1 ? "set" : "down"} dark:text-white text-gray-900`}
         >
           eBook?
         </div>
         <div
-          className={`step step2 ${currentStep === 2 ? "set" : "down"}  text-gray-900`}
+          className={`step step2 ${currentStep === 2 ? "set" : "down"} dark:text-white text-gray-900`}
         >
           web service?
         </div>
         <div
-          className={`step step3 ${currentStep === 3 ? "set" : "down"}  text-gray-900`}
+          className={`step step3 ${currentStep === 3 ? "set" : "down"} dark:text-white text-gray-900`}
         >
           another?
         </div>
         <div
-          className={`step step4 ${currentStep === 4 ? "set" : "down"}  text-gray-900`}
+          className={`step step4 ${currentStep === 4 ? "set" : "down"} dark:text-white text-gray-900`}
         >
           otro?
         </div>
         <div
-          className={`step step5 ${currentStep === 5 ? "set" : "down"} text-gray-900`}
+          className={`step step5 ${currentStep === 5 ? "set" : "down"} dark:text-white text-gray-900`}
         >
           sick yet?
         </div>
         <div
-          className={`step step6 ${currentStep === 6 ? "set" : "down"}  text-gray-900`}
+          className={`step step6 ${currentStep === 6 ? "set" : "down"} dark:text-white text-gray-900`}
         >
           continue?
         </div>

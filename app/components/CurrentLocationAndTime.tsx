@@ -14,7 +14,7 @@ const CurrentLocationAndTime: React.FC = () => {
 
   return (
     <div>
-      <p>Current Date and Time: {dateTime.toLocaleString()}</p>
+      <p>{dateTime.toUTCString()}</p>
     </div>
   );
 };
