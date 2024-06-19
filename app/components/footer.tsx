@@ -1,5 +1,11 @@
 // `app/page.tsx` is the UI for the `/` URL
 export function Footer() {
-  return <h1>Hello, footer page!</h1>;
+  return (
+    <footer className="dark:bg-black h-[40vh] flex justify-center items-center dark:text-white">
+      
+      <h1>Hello, blog page!</h1>
+   
+    </footer>
+  );
 }
 export default Footer;
