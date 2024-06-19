@@ -18,7 +18,6 @@ export function LampDemo() {
       >
         hello, world <br /> I&apos;m Programmer in Delhi
       </motion.h1>
-      
     </LampContainer>
   );
 }

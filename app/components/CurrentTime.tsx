@@ -9,11 +9,11 @@ const CurrentTime: React.FC = () => {
       const now = new Date();
       const formattedTime = new Intl.DateTimeFormat('en-US', {
         dayPeriod: 'short',
-        weekday: 'narrow',
+        weekday: 'short',
         era: 'long',
-        day:'numeric',
-        month: 'short',
-        hour12: true
+        hour: 'numeric',
+        minute:"numeric",
+        hour12: true 
       }).format(now);
       setCurrentTime(formattedTime);
     };
