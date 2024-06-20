@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/app/utils/cn";
 import Link from "next/link";
+import AnimatedButton from "../AnimatedButton";
 
 export function LampDemo() {
   return (
@@ -29,9 +30,9 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="text-xs w-full bg-gradient-to-br from-[#5e716a] to-slate-100  bg-clip-text text-left text-4xl font-medium tracking-tight text-transparent"
+        className="text-xs w-full bg-gradient-to-br from-[#5e716a] to-slate-100  bg-clip-text text-left mt-4 mb-4 sm:text-2xl font-medium tracking-tight text-transparent"
       >
-        solve your bugs in your websites with amazing animations and animations.
+        Eliminate website bugs using impressive animations and graphics
       </motion.p>
       <motion.button
         initial={{ opacity: 0, y: 100 }}
@@ -43,8 +44,9 @@ export function LampDemo() {
         }}
         className="text-xs w-full m-4 text-left text-4xl font-medium tracking-tight text-transparent"
       ><motion.a>
-          <Link href={"/contact"} className="py-1 px-2 sm:py-2 sm:px-3 sm:text-sm  text-[#242424] text-xs rounded-full bg-gradient-to-br from-[#5e716a] to-[#D9D9D9] font-bold">
-            Reach me
+          <Link href={"/contact"} className="">
+            
+            <AnimatedButton/>
           </Link>
         </motion.a>
       </motion.button>
@@ -62,7 +64,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex h-[110vh] flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
+        "relative flex h-[120vh] flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
         className
       )}
     >

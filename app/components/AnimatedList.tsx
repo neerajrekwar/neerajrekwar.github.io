@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Item {
   id: number;
@@ -13,7 +13,7 @@ const AnimatedList = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('/data/items.json');
+      const res = await fetch("/data/items.json");
       const data: Item[] = await res.json();
       setItems(data);
     };
@@ -22,13 +22,13 @@ const AnimatedList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="border-2 border-lime-800 grid-flow-col-dense  p-4">
       {items.map((item) => (
-        <motion.div 
-          key={item.id} 
-          layoutId={item.id.toString()} 
+        <motion.div
+          key={item.id}
+          layoutId={item.id.toString()}
           onClick={() => setSelectedId(item.id)}
-          style={{ cursor: 'pointer', marginBottom: '10px', padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+          className="cursor-pointer mb-4 p-4 border border-gray-300 rounded-lg"
         >
           <motion.h5>{item.subtitle}</motion.h5>
           <motion.h2>{item.title}</motion.h2>
@@ -37,17 +37,29 @@ const AnimatedList = () => {
 
       <AnimatePresence>
         {selectedId && (
-          <motion.div 
-            layoutId={selectedId.toString()} 
-            style={{ position: 'fixed', top: '20%', left: '20%', right: '20%', padding: '20px', background: 'white', border: '1px solid #ccc', borderRadius: '4px' }}
+          <motion.div
+            layoutId={selectedId.toString()}
+            className="fixed top-[20%] left-[20%] right-[20%] p-5 bg-white bg-rose-100 row-span-5  rounded-md shadow-lg "
           >
-            <motion.h5>{items.find(item => item.id === selectedId)?.subtitle}</motion.h5>
-            <motion.h2>{items.find(item => item.id === selectedId)?.title}</motion.h2>
-            <motion.button 
+            <motion.h5>
+              {items.find((item) => item.id === selectedId)?.subtitle}
+            </motion.h5>
+            <motion.h2>
+              {items.find((item) => item.id === selectedId)?.title}
+            </motion.h2>
+            <motion.button
               onClick={() => setSelectedId(null)}
-              style={{ marginTop: '10px', padding: '10px', border: 'none', background: '#0070f3', color: 'white', borderRadius: '4px', cursor: 'pointer' }}
+              className="absolute right-2 border-2 top-2 aspact-sqaure p-2 border-none  text-white rounded-md cursor-pointer border-2"
             >
-              Close
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+              </svg>
             </motion.button>
           </motion.div>
         )}

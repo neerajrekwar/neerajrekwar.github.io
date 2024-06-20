@@ -3,6 +3,7 @@ import DarkModeToggle from "./components/DarkModeToggle";
 import HomeSectionHeader from "./components/homeSectionHeader";
 import { TypewriterEffectSmoothDemo } from "./components/typeWriter";
 import WorkSection from "./components/workSection";
+import AnimatedButton from "./components/AnimatedButton";
 
 export const metadata: Metadata = {
   title: "bug fixer programmer freelancer",
@@ -16,8 +17,11 @@ export default function Home() {
       <TypewriterEffectSmoothDemo />
       <section className="h-[100vh] flex justify-center items-center">
        <WorkSection/>
+      
       </section>
-      <section className="h-[100vh] flex justify-center items-center">Vision to learn</section>
+      <section className="h-[100vh] flex justify-center items-center">Vision to learn
+      <AnimatedButton />
+      </section>
     
 
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
