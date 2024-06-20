@@ -8,7 +8,7 @@ export function LampDemo() {
   return (
     <LampContainer>
       <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,
@@ -22,28 +22,28 @@ export function LampDemo() {
         <br /> in Delhi
       </motion.h1>
       <motion.p
-        initial={{ opacity: 0.5, y: 100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.5,
-          duration: 1,
+          delay: 0.3,
+          duration: 0.8,
           ease: "easeInOut",
         }}
-        className="text-xs w-full bg-gradient-to-br from-[#5e716a] to-slate-500  bg-clip-text text-left text-4xl font-medium tracking-tight text-transparent"
+        className="text-xs w-full bg-gradient-to-br from-[#5e716a] to-slate-100  bg-clip-text text-left text-4xl font-medium tracking-tight text-transparent"
       >
         solve your bugs in your websites with amazing animations and animations.
       </motion.p>
       <motion.button
-        initial={{ opacity: 0.5, y: 100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.7,
           duration: 1,
           ease: "easeInOut",
         }}
-        className="text-xs w-full my-4  text-left text-4xl font-medium tracking-tight text-transparent"
+        className="text-xs w-full m-4 text-left text-4xl font-medium tracking-tight text-transparent"
       ><motion.a>
-          <Link href={"/contact"} className=" border-2 py-1 px-2 rounded-full bg-gradient-to-br from-[#5e716a] to-slate-500 bg-clip-text font-bold">
+          <Link href={"/contact"} className="py-1 px-2 sm:py-2 sm:px-3 sm:text-sm  text-[#242424] text-xs rounded-full bg-gradient-to-br from-[#5e716a] to-[#D9D9D9] font-bold">
             Reach me
           </Link>
         </motion.a>
@@ -123,7 +123,7 @@ export const LampContainer = ({
           className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-cyan-400 "
         ></motion.div>
 
-        <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
+        <div className="absolute inset-auto z-40  h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
 
       <div className="relative z-50 text-left flex -translate-y-80 flex-col items-center px-5">

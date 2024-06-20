@@ -3,7 +3,7 @@ export function Footer() {
   return (
     <footer className="dark:bg-black h-[40vh] flex justify-center items-center dark:text-white">
       
-      <h1>Hello, blog page!</h1>
+      <h1>Hello, footer section!</h1>
    
     </footer>
   );
