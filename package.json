@@ -10,25 +10,27 @@
     "export": "next export"
   },
   "dependencies": {
-    "@next/font": "^14.2.4",
     "@nextui-org/navbar": "^2.0.30",
     "@nextui-org/react": "^2.3.6",
     "@nextui-org/system": "^2.1.2",
     "@nextui-org/theme": "^2.2.6",
     "@radix-ui/react-hover-card": "^1.0.7",
+    "@react-three/fiber": "^8.2.2",
     "@tabler/icons": "^3.6.0",
     "@tabler/icons-react": "^3.6.0",
     "@types/axios": "^0.14.0",
     "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
+    "framer-motion-3d": "^11.2.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^14.2.3",
     "qss": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hooks": "^1.0.1",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "three": "^0.137.0"
   },
   "devDependencies": {
     "@types/node": "^20",

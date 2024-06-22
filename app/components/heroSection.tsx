@@ -28,6 +28,7 @@ export function HeroSection() {
           </figure>
         </div>
         <div>
+          
         </div>
       </section>
     </>

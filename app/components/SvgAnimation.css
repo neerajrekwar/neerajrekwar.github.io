@@ -1,0 +1,13 @@
+body {
+  
+  min-height: auto;
+  background: #222222;
+}
+
+circle,
+rect,
+line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}

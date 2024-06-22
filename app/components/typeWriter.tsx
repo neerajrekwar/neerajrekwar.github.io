@@ -1,6 +1,5 @@
 "use client";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
-import { motion } from "framer-motion";
 
 export function TypewriterEffectSmoothDemo() {
   const words = [
@@ -18,13 +17,13 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "professional.",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-cyan-500 dark:text-cyan-500",
     },
   ];
   return (
     <div className="flex flex-col items-center bg-white  dark:bg-black justify-center h-[40rem] ">
       <div className="">
-        <h2 className="py-1 px-2 mt-4 sm:py-2 sm:px-3 sm:text-sm  text-sm rounded-full   text-[#353535] font-bold">Make it an idea</h2>
+        <h2 className="py-2 px-3 mt-4 sm:py-2 sm:px-3 sm:text-sm  text-xs rounded-full text-cyan-600 bg-cyan-50  text-[#353535] ">prologue</h2>
       </div>
       <div className="flex flex-col items-center bg-white dark:bg-black justify-center h-[40rem]   w-full">
         <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
