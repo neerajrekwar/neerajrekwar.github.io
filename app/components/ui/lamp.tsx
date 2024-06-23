@@ -47,7 +47,7 @@ export function LampDemo() {
         }}
         className="text-xs w-full m-4 text-left text-4xl font-medium tracking-tight text-transparent"
       ><motion.span>
-          <Link href={"/contact"} className="">
+          <Link href={"/https://e0f3ec46-bb91-44f3-a546-ee5ed4ce87b6-00-2mtzyz1hund5r.sisko.replit.dev/"} className="">
             <AnimatedButton/>
           </Link>
         </motion.span>
