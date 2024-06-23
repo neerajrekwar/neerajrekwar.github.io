@@ -21,12 +21,12 @@ export function TypewriterEffectSmoothDemo() {
     },
   ];
   return (
-    <div className="flex flex-col items-center bg-white  dark:bg-black justify-center h-[40rem] ">
-      <div className="">
+    <div className="flex flex-col items-center bg-white dark:bg-black justify-center h-[40rem]">
+      <div>
         <h2 className="py-2 px-3 mt-4 sm:py-2 sm:px-3 sm:text-sm  text-xs rounded-full text-cyan-600 bg-cyan-50  text-[#353535] ">prologue</h2>
       </div>
-      <div className="flex flex-col items-center bg-white dark:bg-black justify-center h-[40rem]   w-full">
-        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+      <div className="flex flex-col items-center bg-white dark:bg-black justify-center h-[40rem] w-full">
+        <p className="text-neutral-600 text- dark:text-neutral-200 text-sm sm:text-base  ">
           The road to make unique from here
         </p>
         <TypewriterEffectSmooth words={words} />

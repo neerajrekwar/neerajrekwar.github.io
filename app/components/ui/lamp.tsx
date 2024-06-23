@@ -9,7 +9,6 @@ export function LampDemo() {
   return (
     <LampContainer>
       <motion.h1
-        
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -20,8 +19,8 @@ export function LampDemo() {
         className="mt-8 w-full bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-left text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
         hello, world <br />
-        I&apos;m Programmer
-        <br /> in Delhi
+        I&apos;m  programmer <br />
+         in Delhi
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
