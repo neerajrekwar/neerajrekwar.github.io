@@ -3,8 +3,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/app/utils/cn";
 import Link from "next/link";
-import AnimatedButton from "../AnimatedButton";
+
 import TextFlipper from "../TextFlipper";
+import AnimatedButton from "../AnimatedButton";
+
+
+
 
 export function LampDemo() {
   return (
@@ -17,25 +21,24 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 w-full bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-left text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className="mt-8 w-full bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-left text-3xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        hello, world <br />
-        I&apos;m  <div className="">
-          <TextFlipper />
+        Build the right to way <br /><div>
+        with <span><TextFlipper /></span>
         </div>
-         in Delhi
+         from Delhi, India.
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: .5, y: 0 }}
         transition={{
           delay: 0.3,
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="text-xs w-full bg-gradient-to-br from-[#5e716a] to-slate-100  bg-clip-text text-left mt-4 mb-4 sm:text-base font-medium tracking-tight text-transparent"
+        className="text-sm max-w-3xl opacity-25 md:text-2xl w-full  text-left mb-1 sm:text-base bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-left font-medium tracking-tight text-transparent antialiased "
       >
-        Eliminate website bugs using impressive animations and graphics
+        Use impressive animations and graphics to eliminate website bugs.
       </motion.p>
       <motion.button
         initial={{ opacity: 0, y: 100 }}
@@ -66,7 +69,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex h-[120vh] sm:h-[100vh] md:h-[100vh] lg:h-[100vh]  overflow-hidden   flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
+        "relative flex h-[120vh]  flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
         className
       )}
     >

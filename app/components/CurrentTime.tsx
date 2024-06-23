@@ -24,7 +24,9 @@ const CurrentTime: React.FC = () => {
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
 
-  return <div>{currentTime}</div>;
+  return <div
+           className='font-bold'
+           >{currentTime}</div>;
 };
 
 export default CurrentTime;

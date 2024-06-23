@@ -3,8 +3,8 @@ import DarkModeToggle from "./components/DarkModeToggle";
 import HomeSectionHeader from "./components/homeSectionHeader";
 import { TypewriterEffectSmoothDemo } from "./components/typeWriter";
 import WorkSection from "./components/workSection";
-import AnimatedButton from "./components/AnimatedButton";
-import SvgAnimation from "./components/svgAnimation";
+import WeatherApp from "./components/WeatherApp";
+
 
 export const metadata: Metadata = {
   title: "bug fixer programmer freelancer",
@@ -19,13 +19,11 @@ export default function Home() {
       <section className="h-[100vh] flex justify-center items-center">
         <WorkSection />
       </section>
-      <section className="h-[100vh] flex flex-col justify-center items-center">Vision to learn
-        <AnimatedButton />
-      <div>
-       <SvgAnimation/>
-      </div>
+      <section className="h-[100vh] flex flex-col justify-center items-center">
+        Vision to learn
       </section>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
+        <WeatherApp />
         <DarkModeToggle />
         {/* Other components or content */}
       </div>

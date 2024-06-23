@@ -17,7 +17,7 @@ const AnimatedButton = () => {
       }}
       whileTap={{ scale: 0.9 }}
       
-      className='sm:py-[.8rem] sm:px-[1.2rem] py-2 px-3 sm:text-sm  text-[#242424] text-sm rounded-full bg-gradient-to-br from-[#5e716a] to-[#D9D9D9] font-bold'
+      className='py-2 px-3 border-2 text-sm rounded-full border-[#5e716a] text-yellow-400 opacity-75 font-bold'
     >
      Reach me
     </motion.button>
