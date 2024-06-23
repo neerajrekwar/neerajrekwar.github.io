@@ -47,7 +47,7 @@ export function LampDemo() {
         }}
         className="text-xs w-full m-4 text-left text-4xl font-medium tracking-tight text-transparent"
       ><motion.span>
-          <Link href={"/https://e0f3ec46-bb91-44f3-a546-ee5ed4ce87b6-00-2mtzyz1hund5r.sisko.replit.dev/"} className="">
+          <Link href={"https://e0f3ec46-bb91-44f3-a546-ee5ed4ce87b6-00-2mtzyz1hund5r.sisko.replit.dev/"} className="">
             <AnimatedButton/>
           </Link>
         </motion.span>
@@ -66,7 +66,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex h-[120vh] sm:h-[100vh] md:h-[100vh] lg:h-[100vh]  overflow-hidden   flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
+        "relative flex h-[100vh] sm:h-[100vh] md:h-[100vh] lg:h-[100vh]  overflow-hidden   flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
         className
       )}
     >
