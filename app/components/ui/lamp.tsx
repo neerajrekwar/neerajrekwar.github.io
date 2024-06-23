@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/app/utils/cn";
 import Link from "next/link";
 import AnimatedButton from "../AnimatedButton";
+import TextFlipper from "../TextFlipper";
 
 export function LampDemo() {
   return (
@@ -16,10 +17,12 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 w-full bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-left text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className="mt-8 w-full bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-left text-2xl font-medium tracking-tight text-transparent md:text-4xl"
       >
         hello, world <br />
-        I&apos;m  programmer <br />
+        I&apos;m  <div className="">
+          <TextFlipper />
+        </div>
          in Delhi
       </motion.h1>
       <motion.p
@@ -30,7 +33,7 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="text-xs w-full bg-gradient-to-br from-[#5e716a] to-slate-100  bg-clip-text text-left mt-4 mb-4 sm:text-3xl font-medium tracking-tight text-transparent"
+        className="text-xs w-full bg-gradient-to-br from-[#5e716a] to-slate-100  bg-clip-text text-left mt-4 mb-4 sm:text-base font-medium tracking-tight text-transparent"
       >
         Eliminate website bugs using impressive animations and graphics
       </motion.p>
@@ -63,7 +66,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex h-[120vh] flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
+        "relative flex h-[120vh] overflow-hidden border-2  flex-col items-center justify-center overflow-hidden bg-slate-950 w-full  z-0",
         className
       )}
     >
@@ -127,7 +130,7 @@ export const LampContainer = ({
         <div className="absolute inset-auto z-40  h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
 
-      <div className="relative z-50 text-left flex -translate-y-80 flex-col items-center px-5">
+      <div className="relative border-2 z-50 text-left flex -translate-y-80 flex-col items-center px-5">
         {children}
       </div>
     </div>
