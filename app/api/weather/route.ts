@@ -1,25 +1,30 @@
-// pages/api/weather.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
+// pages/api/weather/route.ts
+import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { city } = req.query;
+  if (req.method === 'GET') {
+    const { query } = req.query;
 
-  if (!city) {
-    return res.status(400).json({ error: 'City is required' });
-  }
-
-  try {
-    const response = await axios.get(`http://api.weatherapi.com/v1/current.json`, {
-      params: {
-        key: process.env.NEXT_PUBLIC_WEATHER_API_KEY,
-        q: city,
+    const options = {
+      method: 'GET',
+      url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+      params: { q: query },
+      headers: {
+        'x-rapidapi-key': 'fb4e3b3dd0mshddc389caebd5192p146dc6jsn1901b7092089',
+        'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
       },
-    });
+    };
 
-    res.status(200).json(response.data);
-  } catch (error) {
-    res.status(500).json({ error: 'Error fetching weather data' });
+    try {
+      const response = await axios.request(options);
+      res.status(200).json(response.data);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to fetch weather data' });
+    }
+  } else {
+    res.setHeader('Allow', ['GET']);
+    res.status(405).json({ message: `Method ${req.method} not allowed` });
   }
-  res.status(200).json({ message: 'Hello from the weather API!' });
 }
