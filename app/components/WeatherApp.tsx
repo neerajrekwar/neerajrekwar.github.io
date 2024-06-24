@@ -53,7 +53,7 @@ const Weather: React.FC = () => {
       {error ? (
         <p>{error}</p>
       ) : weather ? (
-      <div className='flex justify-center items-center'>
+      <div className=' flex justify-botton items-center'>
         <h2 className=''>{weather.location.region}, {weather.location.country}</h2>
         <p className='ml-1 font-bold'>{weather.current.temp_c}°C</p>
         <p className='ml-1'>{weather.current.condition.text}</p>

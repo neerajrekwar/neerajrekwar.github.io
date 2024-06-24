@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import TextFlipper from "../TextFlipper";
 import AnimatedButton from "../AnimatedButton";
+import AdminWeather from "../AdminWeather";
 
 
 
@@ -13,6 +14,7 @@ import AnimatedButton from "../AnimatedButton";
 export function LampDemo() {
   return (
     <LampContainer>
+      
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,10 +25,15 @@ export function LampDemo() {
         }}
         className="mt-8 w-full bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-left text-3xl font-medium tracking-tight text-transparent md:text-7xl"
       >
+        
         Build the right to way <br /><div>
         with <span><TextFlipper /></span>
         </div>
-         from Delhi, India.
+         <motion.div
+          className="flex w-full flex-col items-center justify-center"
+          >
+        <AdminWeather/>
+        </motion.div>
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
@@ -73,7 +80,7 @@ export const LampContainer = ({
         className
       )}
     >
-      <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
+      <div className="relative flex w-full flex-1 scale-y-150 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}

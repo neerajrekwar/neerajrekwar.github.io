@@ -38,16 +38,21 @@ const AdminWeather: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='w-full t'>
       {/* <form onSubmit={handleSearch}>
         <input type="text" name="location" placeholder="Enter location" />
         <button type="submit">Search</button>
       </form> */}
       {weather && (
-        <div>
-          <h2>{weather.location.name}</h2>
-          <p>{weather.current.condition.text}</p>
-          <p>{weather.current.temp_c}°C</p>
+        <div className='flex  text-left text-base text-yellow-600 font-medium tracking-tight md:text-7xl'>
+          <h2 className='mr-1'>
+            {weather.location.region},
+          </h2>
+          <h2 className=''>
+            {weather.location.country}
+          </h2>
+          <p className='ml-1'>{weather.current.temp_c}°C</p>
+          
         </div>
       )}
     </div>
