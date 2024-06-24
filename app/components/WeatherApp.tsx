@@ -57,8 +57,6 @@ const Weather: React.FC = () => {
         <h2 className=''>{weather.location.region}, {weather.location.country}</h2>
         <p className='ml-1 font-bold'>{weather.current.temp_c}°C</p>
         <p className='ml-1'>{weather.current.condition.text}</p>
-        <p className='ml-1'>{weather.location.lat}</p>
-        <p className='ml-1'>{weather.location.lon}</p>
         <img className='ml-1'
           src={weather.current.condition.icon}
           alt="Weather Icon"
