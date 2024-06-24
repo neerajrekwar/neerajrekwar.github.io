@@ -1,4 +1,4 @@
-// pages/api/weather.ts
+// app/api/weather.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 

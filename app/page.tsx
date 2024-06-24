@@ -3,7 +3,7 @@ import DarkModeToggle from "./components/DarkModeToggle";
 import HomeSectionHeader from "./components/homeSectionHeader";
 import { TypewriterEffectSmoothDemo } from "./components/typeWriter";
 import WorkSection from "./components/workSection";
-import WeatherApp from "./components/WeatherApp";
+import AdminWeather from "./components/AdminWeather";
 
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function Home() {
         Vision to learn
       </section>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <WeatherApp />
+        <AdminWeather />
         <DarkModeToggle />
         {/* Other components or content */}
       </div>
