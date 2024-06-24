@@ -16,10 +16,10 @@ export default function Home() {
     <main>
       <HomeSectionHeader />
       <TypewriterEffectSmoothDemo />
-      <section className="h-[100vh] flex justify-center items-center">
+      <section className="h-screen flex justify-center items-center">
         <WorkSection />
       </section>
-      <section className="h-[100vh] flex flex-col justify-center items-center">
+      <section className="h-screen flex flex-col justify-center items-center">
         Vision to learn
       </section>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
