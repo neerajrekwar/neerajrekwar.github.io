@@ -1,6 +1,7 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/footer";

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import DarkModeToggle from "./components/DarkModeToggle";
 import HomeSectionHeader from "./components/homeSectionHeader";
-import { TypewriterEffectSmoothDemo } from "./components/typeWriter";
 import WorkSection from "./components/workSection";
 import AdminWeather from "./components/AdminWeather";
+import IntroSection from "./components/introSection";
 
 
 export const metadata: Metadata = {
@@ -13,9 +13,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-white">
       <HomeSectionHeader />
-      <TypewriterEffectSmoothDemo />
+      <IntroSection/>
+      
       <section className="h-screen flex justify-center items-center">
         <WorkSection />
       </section>
