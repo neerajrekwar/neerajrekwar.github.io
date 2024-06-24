@@ -10,7 +10,7 @@ const TextFlipper: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000); // Change word every 2 seconds
+    }, 3000); // Change word every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
