@@ -1,55 +1,69 @@
-// pages/index.tsx
-"use client"
-import { useEffect, useState } from 'react';
+// components/Weather.tsx
+'use client';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-interface WeatherData {
-  location: {
-    name: string;
-    region: string;
-    country: string;
-  };
-  current: {
-    temp_c: number;
-    condition: {
-      text: string;
-      icon: string;
-    };
-  };
-}
-
-const WeatherApp = () => {
-  const [weather, setWeather] = useState<WeatherData | null>(null);
+const Weather: React.FC = () => {
+  const [weather, setWeather] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchWeatherByIp = async () => {
+    const fetchWeather = async (latitude: number, longitude: number) => {
+      const options = {
+        method: 'GET',
+        url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+        params: { q: `${latitude},${longitude}` },
+        headers: {
+          'x-rapidapi-key': 'fb4e3b3dd0mshddc389caebd5192p146dc6jsn1901b7092089',
+          'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
+        },
+      };
+
       try {
-        const response = await axios.get('/api/weather');
-        const data: WeatherData = response.data;
-        setWeather(data);
+        const response = await axios.request(options);
+        setWeather(response.data);
       } catch (error) {
-        console.error('Error fetching weather data:', error);
+        console.error(error);
+        setError('Failed to fetch weather data');
       }
     };
 
-    fetchWeatherByIp();
-  }, []);
+    const getLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            fetchWeather(latitude, longitude);
+          },
+          (error) => {
+            console.error(error);
+            setError('Failed to retrieve location');
+          }
+        );
+      } else {
+        setError('Geolocation is not supported by this browser');
+      }
+    };
+
+    getLocation();
+  }, []); // Empty dependency array ensures this effect runs only once on component mount
 
   return (
     <div>
-      <h1>Weather Information</h1>
-      {weather ? (
-        <div>
-          <h2>{weather.location.name}, {weather.location.region}, {weather.location.country}</h2>
-          <p>Temperature: {weather.current.temp_c}°C</p>
-          <p>Condition: {weather.current.condition.text}</p>
-          <img
-            src={weather.current.condition.icon}
-            alt="Weather Icon"
-            width={64}
-            height={64}
-          />
-        </div>
+      {error ? (
+        <p>{error}</p>
+      ) : weather ? (
+      <div className='flex justify-botton items-end'>
+        <h2 className=''>{weather.location.region}, {weather.location.country}</h2>
+        <p className='ml-1 font-bold'>{weather.current.temp_c}°C</p>
+        <p className='ml-1'>{weather.current.condition.text}</p>
+        <img className='ml-1'
+          src={weather.current.condition.icon}
+          alt="Weather Icon"
+          width={24}
+          height={24}
+        />
+      </div>
       ) : (
         <p>Loading...</p>
       )}
@@ -57,4 +71,4 @@ const WeatherApp = () => {
   );
 };
 
-export default WeatherApp;
+export default Weather;
