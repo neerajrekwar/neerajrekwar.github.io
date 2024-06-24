@@ -8,7 +8,7 @@ export default function IntroSection() {
           Craft & Code: Building the Future, One Line at a Time
         </h2>
         <p className="py-1 text-sm antialiased  bg-clip-text text-left text-3xl font-bold tracking-tight text-transparent bg-gradient-to-br from-slate-200  to-slate-500">
-          I'm not just a programmer, I'm a builder. I take your ideas and
+          I am not just a programmer, I am a builder. I take your ideas and
           translate them into powerful, innovative applications that solve
           real-world problems. 
         </p>
