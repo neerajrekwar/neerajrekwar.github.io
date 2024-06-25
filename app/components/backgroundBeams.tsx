@@ -17,18 +17,25 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold"
+          className="relative z-10 md:pb-4 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold"
         >
 
           Build the right to way <br /><div>
-          with <span className="font-bold"><TextFlipper /></span>
+          with <pre className="font-bold z-999 inline-flex "><TextFlipper /></pre>
           </div>
+        </motion.h1>
            <motion.div
+             initial={{ opacity: 0, y: 100 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{
+               delay: 0.3,
+               duration: 0.8,
+               ease: "easeInOut",
+             }}
             className="flex w-full flex-col items-center justify-center"
             >
           <AdminWeather/>
           </motion.div>
-        </motion.h1>
         <p></p>
         <motion.p
           initial={{ opacity: 0, y: 100 }}
