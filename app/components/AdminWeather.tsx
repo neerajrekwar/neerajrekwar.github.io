@@ -5,7 +5,7 @@ import axios from "axios";
 
 const AdminWeather: React.FC = () => {
   const [weather, setWeather] = useState<any>(null);
-  const [location, setLocation] = useState<string>("Delhi, India");
+  const [location, setLocation] = useState<string>("28.58, 77.07");
 
   const fetchWeather = async (query: string) => {
     const options = {

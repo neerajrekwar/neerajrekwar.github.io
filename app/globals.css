@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 
+:root {
+  --color-primary: #353535;
+  --color-secondary: #3c6e71;
+  --color-white: #ffffff;
+  --color-gray-light: #d9d9d9;
+  --color-dark: #ffdd00;
+}
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #3c6e71;
+    --color-secondary: #bda400;
+    --color-white: #353535;
+    --color-gray-light: #353535;
+    --color-dark: #d9d9d9;
+  }
+}
 
 /* Additional custom styles */
 .flipper {
