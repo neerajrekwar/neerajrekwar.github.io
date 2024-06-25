@@ -54,7 +54,15 @@ export function BackgroundBeamsDemo() {
          </motion.p>
         <motion.div>
           <motion.button
-          
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+
+            transition={{
+
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
             className="rounded-full border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
             >
           Get started

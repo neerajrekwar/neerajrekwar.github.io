@@ -17,9 +17,8 @@ const DotCircle: React.FC = () => {
         cy="50"
         r="10"
         fill="#3C6E71"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 2, loop: Infinity, ease: "easeInOut" }}
       />
     </motion.svg>
   );
