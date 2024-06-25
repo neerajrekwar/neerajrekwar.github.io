@@ -45,25 +45,39 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="text-neutral-500 max-w-3xl mx-auto my-2 text-sm text-left relative z-10">
+          className="text-neutral-500 max-w-4xl mx-auto my-2 text-sm text-left relative z-10">
           Welcome to MailJet, the best transactional email service on the web.
           We provide reliable, scalable, and customizable email solutions for
           your business. Whether you&apos;re sending order confirmations,
           password reset emails, or promotional campaigns, MailJet has got you
           covered.
          </motion.p>
-        <motion.button
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
-          >
-        Get started
-        </motion.button>
+        <motion.div>
+          <motion.button
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
+            >
+          Get started
+          </motion.button>
+          <motion.button
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="rounded-lg ml-2 bg-primary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4  text-neutral-950 "
+            >
+          Learn more
+          </motion.button>
+        </motion.div>
       </div>
       <BackgroundBeams />
     </div>
