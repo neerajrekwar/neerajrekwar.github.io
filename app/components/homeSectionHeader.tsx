@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { LampDemo } from "../components/ui/lamp";
+import Image from "next/image";
+
 import CurrentTime from "./CurrentTime";
 import Weather from "./WeatherApp";
 import { BackgroundBeamsDemo } from "./backgroundBeams";

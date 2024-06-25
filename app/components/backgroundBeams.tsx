@@ -17,7 +17,7 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative z-10 md:pb-4 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold"
+          className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold"
         >
 
           Build the right to way <br /><div>
@@ -61,19 +61,21 @@ export function BackgroundBeamsDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
+            className="rounded-full border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
             >
           Get started
           </motion.button>
           <motion.button
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
+            
             transition={{
+              
               delay: 0.3,
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="rounded-lg ml-2 bg-primary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4  text-neutral-950 "
+            className="rounded-full ml-2 bg-primary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4  text-neutral-950 "
             >
           Learn more
           </motion.button>

@@ -2,6 +2,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 
 const Weather: React.FC = () => {
   const [weather, setWeather] = useState<any>(null);
@@ -53,16 +54,25 @@ const Weather: React.FC = () => {
       {error ? (
         <p>{error}</p>
       ) : weather ? (
-      <div className=' flex justify-botton items-center'>
-        <h2 className=''>{weather.location.region}, {weather.location.country}</h2>
-        <p className='ml-1 font-bold'>{weather.current.temp_c}°C</p>
-        <p className='ml-1'>{weather.current.condition.text}</p>
-        <img className='mr-1'
-          src={weather.current.condition.icon}
-          alt="Weather Icon"
-          width={24}
-          height={24}
-        />
+      <div className=' justify-botton items-center'>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          >
+          <h2 className=''>{weather.location.region}, {weather.location.country}</h2>
+          <p className='ml-1 text-xl font-bold'>{weather.current.temp_c}°C</p>
+        </motion.div>
+        <motion.div
+           className='grid justify-items-end  border-neutral-800 w-fit h-fit'
+          >
+          <p className='ml-1 sm:text-sm'>{weather.current.condition.text}</p>
+          <img className='mr-1'
+            src={weather.current.condition.icon}
+            alt="Weather Icon"
+            width={44}
+            height={44}
+          />
+        </motion.div>
       </div>
       ) : (
         <p>Loading...</p>

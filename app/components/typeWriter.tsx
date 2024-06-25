@@ -16,8 +16,8 @@ export function TypewriterEffectSmoothDemo() {
       text: "with",
     },
     {
-      text: "professional.",
-      className: "text-cyan-500 dark:text-cyan-500",
+      text: "neeraj rekwar.",
+      className: "text-[#5e716a] dark:text-cyan-500",
     },
   ];
   return (

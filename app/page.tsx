@@ -18,7 +18,7 @@ export default function Home() {
       <IntroSection/>
       
       <section className="h-screen flex justify-center items-center">
-        <WorkSection />
+        
       </section>
       <section className="h-screen flex flex-col justify-center items-center">
         Vision to learn
