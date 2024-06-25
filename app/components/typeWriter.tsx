@@ -23,7 +23,7 @@ export function TypewriterEffectSmoothDemo() {
   return (
     <div className="flex flex-col items-center   justify-center h-[40rem]">
       <div className="flex flex-col items-center  justify-center h-[40rem] w-full">
-        <p className="text-neutral-600 text- dark:text-neutral-200 text-sm sm:text-base  ">
+        <p className="text-white dark:text-neutral-200 text-sm sm:text-base  ">
           The road to make unique from here
         </p>
         <TypewriterEffectSmooth words={words} />

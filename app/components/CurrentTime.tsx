@@ -8,12 +8,12 @@ const CurrentTime: React.FC = () => {
     const updateTime = () => {
       const now = new Date();
       const formattedTime = new Intl.DateTimeFormat('en-US', {
-        dayPeriod: 'short',
         weekday: 'short',
         era: 'long',
         hour: 'numeric',
         minute:"numeric",
-        hour12: true 
+        hour12: true ,
+        dayPeriod: 'short',
       }).format(now);
       setCurrentTime(formattedTime);
     };

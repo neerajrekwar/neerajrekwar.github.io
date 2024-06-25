@@ -36,7 +36,7 @@ module.exports = {
       },
     },
   },
-  plugins: [nextui(), addVariablesForColors],
+  plugins: [nextui(), addVariablesForColors,],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
