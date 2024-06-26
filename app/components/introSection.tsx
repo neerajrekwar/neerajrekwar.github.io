@@ -48,7 +48,7 @@ export default function IntroSection() {
                   alt="Description of the image"
                   width={500} // specify the width of the image
                   height={300} // specify the height of the image
-                  classNam="rounded-md"
+                  className="rounded-md"
                 />
               </div>
             </div>
