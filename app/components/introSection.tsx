@@ -29,17 +29,28 @@ export default function IntroSection() {
             </p>
           </div>
 
-          <div className="text-left w-full min-h-screen border">
+          <div className="text-left max-w-full min-h-screen border">
             <div className="px-3 ml-2 p-1 bg-[#e6e6e6]  rounded-full my-2 w-fit not-italic border">
               2021
             </div>
-            <div className="border-2 max-h-full border-black text-3xl py-6 p-1 font-bold text-[#2424">
+            <div className="border-2 rounded-md max-w-full max-h-screen border-black text-3xl py-6 p-1 font-bold text-[#2424">
+              <div className='border rounded-md overflow-hidden'>
               <Image
-                src="/profile.png"
-                width={500}
-                height={500}
-                alt="Picture of the author"
+                src="/projects/kukai-art-mmkzdAN_jzQ-unsplash.jpg"
+                alt="Artwork by Kukai"
+                width={500} // specify the width of the image
+                height={300} // specify the height of the image
+                layout="responsive" // makes the image responsive
+                className="rounded-md absolute"
               />
+                <Image
+                  src="/projects/Capturedsa.PNG"
+                  alt="Description of the image"
+                  width={500} // specify the width of the image
+                  height={300} // specify the height of the image
+                  classNam="rounded-md"
+                />
+              </div>
             </div>
           </div>
         </div>
