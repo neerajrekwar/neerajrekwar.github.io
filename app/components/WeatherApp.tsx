@@ -54,23 +54,23 @@ const Weather: React.FC = () => {
       {error ? (
         <p>{error}</p>
       ) : weather ? (
-      <div className=' justify-botton items-center'>
+      <div className=''>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           >
-          <h2 className=''>{weather.location.region}, {weather.location.country}</h2>
+          <h2 className='text-lg'>{weather.location.region}, {weather.location.country}</h2>
           <p className='ml-1 text-xl font-bold'>{weather.current.temp_c}°C</p>
         </motion.div>
         <motion.div
-           className='grid justify-items-end  border-neutral-800 w-fit h-fit'
+           className='flex justify-end items-center border-neutral-800 w-full h-fit'
           >
-          <p className='ml-1 sm:text-sm'>{weather.current.condition.text}</p>
-          <img className='mr-1'
+          <p className='mr-1 sm:text-sm'>{weather.current.condition.text}</p>
+          <img className='text-secondary '
             src={weather.current.condition.icon}
             alt="Weather Icon"
-            width={44}
-            height={44}
+            width={24}
+            height={24}
           />
         </motion.div>
       </div>

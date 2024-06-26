@@ -1,4 +1,5 @@
 "use client";
+import DarkModeToggle from "./DarkModeToggle";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
 export function TypewriterEffectSmoothDemo() {
@@ -17,16 +18,20 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "neeraj rekwar.",
-      className: "text-[#5e716a] dark:text-cyan-500",
+      className: "text-[#5e716a] dark:text-[#5e716a] ",
     },
   ];
   return (
-    <div className="flex flex-col items-center   justify-center h-[40rem]">
+    <div className="bg-[#0a0a0a] text-white flex flex-col items-center   justify-center h-[40rem]">
       <div className="flex flex-col items-center  justify-center h-[40rem] w-full">
-        <p className="text-white dark:text-neutral-200 text-sm sm:text-base  ">
+        <p className="text-white sm:text-base  ">
           The road to make unique from here
         </p>
+        
         <TypewriterEffectSmooth words={words} />
+      </div>
+      <div>
+      <DarkModeToggle/>
       </div>
       
       {/* <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">

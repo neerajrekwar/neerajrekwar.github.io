@@ -12,7 +12,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
   ],
-  darkMode: "class",
+  darkMode: ["class" , "selector"],
   theme: {
     extend: {
       colors: {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-white bg-primary">
+    <main className="">
       <HomeSectionHeader />
       <IntroSection/>
       

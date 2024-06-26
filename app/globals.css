@@ -2,22 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --color-primary: #ffffff;
-  --color-secondary: #3c6e71;
+  --color-primary: #0a0a0a;
+  --color-secondary: #3c6e713c;
   --color-white: #ffffff;
   --color-gray-light: #d9d9d9;
   --color-dark: #ffdd00;
 }
 
+
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #3c6e71;
+    --color-primary: #3c6e713c;
     --color-secondary: #bda400;
-    --color-white: #ffffff;
-    --color-gray-light: #242424;
+    --color-white: #353535;
+    --color-gray-light: #c2c2c2;
     --color-dark: #d9d9d9;
   }
 }
@@ -26,10 +26,8 @@
 .flipper {
   display: inline-block;
   position: relative;
-  width: 200px;
-  /* Adjust width as needed */
-  height: 40px;
-  /* Adjust height as needed */
+  width: 200px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
 }
 
 .step {
@@ -56,7 +54,6 @@
   transform: rotateX(10deg);
   opacity: 1;
 }
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -73,9 +70,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
