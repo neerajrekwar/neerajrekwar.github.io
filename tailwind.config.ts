@@ -8,6 +8,7 @@ const {
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./public/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
@@ -15,6 +16,9 @@ module.exports = {
   darkMode: ["class" , "selector"],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-image': "url('/projects/kukai-art-mmkzdAN_jzQ-unsplash.jpg')",
+      },
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",

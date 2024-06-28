@@ -1,3 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .workSecion{
   background-image: url(../public/workSection.svg);
+}
+.pjts-image{
+  background-image: url(../public/projects/Capturedsa.PNG);
 }

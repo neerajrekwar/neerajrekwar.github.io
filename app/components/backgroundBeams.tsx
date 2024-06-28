@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BackgroundBeams } from "./ui/background-beams";
 import TextFlipper from "./TextFlipper";
 import AdminWeather from "./AdminWeather";
+import Link from "next/link";
 
 export function BackgroundBeamsDemo() {
   return (
@@ -67,6 +68,7 @@ export function BackgroundBeamsDemo() {
             >
           Get started
           </motion.button>
+          <Link href={"https://e3d840fc-de16-4c0f-a2af-4bb02b48d797-00-1iz57nutmrl9d.sisko.replit.dev/"} className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold">
           <motion.button
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,10 +79,10 @@ export function BackgroundBeamsDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="rounded-full ml-2 bg-primary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4  text-neutral-950 "
+            className="rounded-full ml-2 text-secondary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4 "
             >
           Learn more
-          </motion.button>
+          </motion.button></Link>
         </motion.div>
       </div>
       <BackgroundBeams />
