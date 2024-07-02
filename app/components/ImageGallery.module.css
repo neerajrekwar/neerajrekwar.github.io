@@ -1,0 +1,21 @@
+.galleryContainer {
+  max-height: 400px; /* Adjust the height as needed */
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.galleryContainer::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Adjust as needed */
+}

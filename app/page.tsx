@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import DarkModeToggle from "./components/DarkModeToggle";
 import HomeSectionHeader from "./components/homeSectionHeader";
-import WorkSection from "./components/workSection";
 import AdminWeather from "./components/AdminWeather";
 import IntroSection from "./components/introSection";
+import ReviewSection from "./components/reviewSection";
+
 
 
 export const metadata: Metadata = {
@@ -13,12 +14,18 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <HomeSectionHeader />
       <IntroSection/>
-      
-      <section className="h-screen flex justify-center items-center">
-        
+      <section className="h-screen w-full flex justify-center items-center">         
+        <div className="border-2 w-full">
+          <div>
+           
+          </div>
+        </div>
+      </section>
+      <section className="h-screen mx-1">
+       <ReviewSection/>
       </section>
       <section className="h-screen flex flex-col justify-center items-center">
         Vision to learn

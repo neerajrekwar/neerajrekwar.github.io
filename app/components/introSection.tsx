@@ -1,98 +1,41 @@
-import DotCircle from "./acceries/DotCircle";
+"use client"
+import ImageGallery from "./ImageGallery";
 import { TypewriterEffectSmoothDemo } from "./typeWriter";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import DotCircle from "./acceries/DotCircle";
 
 export default function IntroSection() {
+
   return (
     <>
       <TypewriterEffectSmoothDemo />
-      <section className="antialiased p-2">
-        <div className="max-w-5xl m-auto text-[#242424]">
-          <i className="not-italic flex text-lg md:text-3xl  font-medium py-4 justify-start items-center">
-            <DotCircle />
-            Recent projects
-          </i>
-        </div>
-        <div className=" md:flex flex-row m-auto max-w-5xl ">
-          <div className="text-left w-full basis-1/2">
-            <div className="px-3 ml-2 p-1 bg-[#e6e6e6] rounded-full my-2 w-fit not-italic ">
-              2021
-            </div>
-            <h2 className="text-3xl py-6 p-1 font-bold text-[#242424] max-w-3xl  ">
-              Craft & Code: Building the Future, One Line at a Time
-            </h2>
-            <p className="p-2 font-medium max-w-4xl m-auto">
-              I am not just a programmer, I am a builder. I take your ideas and
-              translate them into powerful, innovative applications that solve
-              real-world problems.
-            </p>
+      <section className="antialiased p-2 text-[#242424]">
+          <div className="flex py-4 sm:py-16 sm:pt-10  max-w-6xl border-black m-auto justify-start items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <DotCircle/>Recent Projects
           </div>
-
-          <div className="text-left w-4xl  basis-1/2">
-            <div className="px-3 ml-2 p-1 bg-[#e6e6e6]  rounded-full my-2 w-fit not-italic border">
-              nee
-            </div>
-            <div className=" border-black border grid gap-4 h-[44vh] overflow-y-scroll  rounded-md min-w-2xl max-h-screen  text-3xl py-6 p-1 font-bold text-[#242424]">
-              <div className="rounded-lg">
-                <Image
-                  src="/projects/Capturedsa.PNG"
-                  alt="Description of the image"
-                  width={500} // specify the width of the image
-                  height={300} // specify the height of the image
-                  className="rounded-md shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
-                />
-              </div>
-              <div className="rounded-lg">
-                <Image
-                  src="/projects/Capturedsa.PNG"
-                  alt="Description of the image"
-                  width={500} // specify the width of the image
-                  height={300} // specify the height of the image
-                  className="rounded-md shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
-                />
-              </div>
-              <div className="rounded-lg">
-                <Image
-                  src="/projects/Capturedsa.PNG"
-                  alt="Description of the image"
-                  width={500} // specify the width of the image
-                  height={300} // specify the height of the image
-                  className="rounded-md shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
-                />
-              </div>
+        <div className=" border-orange-400 p-2 max-w-6xl m-auto md:flex justify-evenly items-start">
+          <div className="basis-1/2 pb-4 ">
+            <div className=" max-w-fit px-3 py-1 mb-4 rounded-full bg-primary text-secondary">2021</div>
+            <div className=" border-green-600 max-w-2xl">
+              <h2 className="text-2xl font-semibold">Craft & Code: Building the Future, One Line at a Time</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                quo natus accusantium eius molestiae expedita possimus accusamus,
+                aspernatur, quia quae asperiores inventore. Quod, officia vel
+                aliquam exercitationem est inventore porro?
+              </p>
             </div>
           </div>
-        </div>
-        <div className=" md:flex flex-row m-auto max-w-5xl ">
-          <div className="text-left w-full basis-1/2">
-            <div className="px-3 ml-2 p-1 bg-[#e6e6e6] rounded-full my-2 w-fit not-italic ">
-              2021
-            </div>
-            <h2 className="text-3xl py-6 p-1 font-bold text-[#242424] max-w-3xl  ">
-              Craft & Code: Building the Future, One Line at a Time
-            </h2>
-            <p className="p-2 font-medium max-w-4xl m-auto">
-              I am not just a programmer, I am a builder. I take your ideas and
-              translate them into powerful, innovative applications that solve
-              real-world problems.
-            </p>
-          </div>
-
-          <div className="text-left w-4xl  basis-1/2">
-            <div className="px-3 ml-2 p-1 bg-[#e6e6e6]  rounded-full my-2 w-fit not-italic border">
-              nee
-            </div>
-            <div className=" rounded-md min-w-2xl max-h-screen  text-3xl py-6 p-1 font-bold text-[#242424]">
-              <div className="rounded-lg">
-                <Image
-                  src="/projects/Capturedsa.PNG"
-                  alt="Description of the image"
-                  width={500} // specify the width of the image
-                  height={300} // specify the height of the image
-                  className="rounded-md shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
-                />
+          <div className="scroll-2 basis-1/2  justify-center">
+             <div className=" max-w-fit px-3 py-1 mb-4 rounded-full bg-primary text-secondary">2021</div>
+            <div className=" border-green-600 items-center ">
+              <div className="grid justify-items-stretch  gap-4 rounded-lg border-lime-600 items-center">
+               <Image src="/projects/mypro.png" width={400} height={800} alt="mypro" className="min-h-auto min-w-full rounded-lg" />
+               <Image src="/projects/mypro.png" width={400} height={800} alt="mypro" className="min-h-auto min-w-full rounded-lg" />
+               <Image src="/projects/mypro.png" width={400} height={800} alt="mypro" className="min-h-auto min-w-full rounded-lg" />
+               
               </div>
+              
             </div>
           </div>
         </div>
