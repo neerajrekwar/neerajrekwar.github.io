@@ -4,6 +4,8 @@ import HomeSectionHeader from "./components/homeSectionHeader";
 import AdminWeather from "./components/AdminWeather";
 import IntroSection from "./components/introSection";
 import ReviewSection from "./components/reviewSection";
+import StickyRelativeDemo from "./components/StickyRelativeDemo";
+
 
 
 
@@ -17,6 +19,7 @@ export default function Home() {
     <main>
       <HomeSectionHeader />
       <IntroSection/>
+      <StickyRelativeDemo />
       <section className="h-screen w-full flex justify-center items-center">         
         <div className="border-2 w-full">
           <div>
