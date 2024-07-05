@@ -16,7 +16,7 @@ const HomeTextFlip: React.FC = () => {
   return (
     <div className="">
      <div
-        id="flipper"
+        
         className="flipper text-white  relative  bg-transparent perspective-500 text-left transform-style-preserve w-full  dark:text-white text-gray-900 "
         ref={flipperRef}
       >

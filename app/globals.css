@@ -3,11 +3,11 @@
 @tailwind utilities;
 @import './add.css';
 :root {
-  --color-primary: #242424;
-  --color-secondary: #182e2f3c;
-  --color-white: #ffffff;
-  --color-gray-light: #d9d9d9;
-  --color-dark: #ffdd00;
+  --color-primary: #0B3948;
+  --color-secondary: #416165;
+  --color-white: #B3FFB3;
+  --color-gray-light: #D1FFD7;
+  --color-dark: #FFC800;
 }
 
 

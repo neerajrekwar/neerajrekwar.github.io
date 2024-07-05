@@ -1,11 +1,14 @@
 
-import { Inter } from "next/font/google";
+import { Alata } from "next/font/google";
 import "./globals.css";
 import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/footer";
-const inter = Inter({ subsets: ["latin"] });
+const alata = Alata({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 
 export default function RootLayout({
@@ -16,7 +19,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={alata.className}>
         <FloatingNavDemo />
         <ThemeProvider>{children}</ThemeProvider>
         
