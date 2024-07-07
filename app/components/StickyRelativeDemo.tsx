@@ -11,7 +11,7 @@ const StickyRelativeDemo: NextPage = () => {
         <DotCircle />
         Recent projects
       </div>
-      <div className="relative text-primary m-auto min-h-full max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
+      <div className="relative  m-auto min-h-full max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
@@ -48,7 +48,15 @@ const StickyRelativeDemo: NextPage = () => {
                 <ul className="font-semibold flex justify-between text-gray-light  py-6 border-b-2 border-dark">
                   <li>Visit Site</li>
                   <li>
-                   <Link href="https://veecrew.com"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg></Link>
+                    <Link href="https://veecrew.com">
+                      <Image
+                        src="/arr.svg"
+                        alt="Veecrew"
+                        width={20}
+                        height={20}
+                        className=""
+                      />
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -66,25 +74,25 @@ const StickyRelativeDemo: NextPage = () => {
               width={300}
               height={300}
               className="min-w-full min-h-full rounded-2xl "
-            /> 
+            />
             <Image
               src={"/projects/mypro.png"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
               className="min-w-full min-h-full rounded-2xl "
-            /> 
+            />
             <Image
               src={"/projects/mypro.png"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
               className="min-w-full min-h-full rounded-2xl "
-            /> 
+            />
           </div>
         </div>
       </div>
-      <div className="relative text-primary m-auto min-h-full max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
+      <div className="relative m-auto min-h-full max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
@@ -121,7 +129,25 @@ const StickyRelativeDemo: NextPage = () => {
                 <ul className="font-semibold flex justify-between text-gray-light  py-6 border-b-2 border-dark">
                   <li>Visit Site</li>
                   <li>
-                   <Link href="https://veecrew.com"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg></Link>
+                    <Link href="https://veecrew.com">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l14 0" />
+                        <path d="M13 18l6 -6" />
+                        <path d="M13 6l6 6" />
+                      </svg>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -139,21 +165,21 @@ const StickyRelativeDemo: NextPage = () => {
               width={300}
               height={300}
               className="min-w-full min-h-full rounded-2xl "
-            /> 
+            />
             <Image
               src={"/projects/mypro.png"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
               className="min-w-full min-h-full rounded-2xl "
-            /> 
+            />
             <Image
               src={"/projects/mypro.png"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
               className="min-w-full min-h-full rounded-2xl "
-            /> 
+            />
           </div>
         </div>
       </div>

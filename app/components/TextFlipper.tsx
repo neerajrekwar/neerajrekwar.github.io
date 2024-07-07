@@ -15,7 +15,7 @@ const TextFlipper: React.FC = () => {
   }, []);
 
   return (
-    <div className="inline-flex text-left md:h-20 lg:h-24 font-bold ">
+    <div className="inline-flex text-left md:h-20 lg:h-24 font-bold">
       <motion.div
         key={index}
         initial={{ opacity: 0, y: -20 }}

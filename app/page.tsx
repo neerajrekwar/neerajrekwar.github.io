@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import DarkModeToggle from "./components/DarkModeToggle";
 import HomeSectionHeader from "./components/homeSectionHeader";
 import AdminWeather from "./components/AdminWeather";
 import IntroSection from "./components/introSection";
 import ReviewSection from "./components/reviewSection";
-
+import DeviceAddress from "./components/DeviceAddress";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -15,23 +14,24 @@ export default function Home() {
   return (
     <main className="">
       <HomeSectionHeader />
-      <IntroSection/>
-      <section className="h-screen w-full flex justify-center items-center">         
+      <IntroSection />
+      <section className=" w-full flex justify-center items-center">
         <div className="w-full">
-          <div>
-           
-          </div>
+          <div></div>
         </div>
       </section>
-      <section className="h-screen mx-1">
-       <ReviewSection/>
+      <section className="border-2 border-secondary text-primary mx-1">
+        <ReviewSection />
+        <div>
+          <DeviceAddress />
+        </div>
       </section>
-      <section className="h-screen flex flex-col justify-center items-center">
+      <section className="h-screen  flex flex-col justify-center items-center">
         Vision to learn
       </section>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <div className="flex flex-col bg-primary items-center justify-center min-h-screen py-2">
         <AdminWeather />
-        <DarkModeToggle />
+
         {/* Other components or content */}
       </div>
     </main>

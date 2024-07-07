@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function BackgroundBeamsDemo() {
   return (
-    <div className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-start justify-center antialiased">
+    <div className="min-h-screen w-full   bg-[#0a0a0a] relative flex flex-col items-start justify-center antialiased">
       <div className="max-w-6xl text-left mx-auto p-4">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}

@@ -1,0 +1,59 @@
+// components/DeviceAddress.tsx
+'use client';
+import { useEffect, useState } from 'react';
+
+type DeviceAddress = {
+  ip: string;
+  city: string;
+  region: string;
+  country: string;
+};
+
+const DeviceAddress: React.FC = () => {
+  const [address, setAddress] = useState<DeviceAddress | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchDeviceAddress = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        if (!response.ok) {
+          throw new Error('Failed to fetch device address');
+        }
+        const data: DeviceAddress = await response.json();
+        setAddress(data);
+      } catch (err) {
+        setError("An unknown error occurred.");
+      }
+    };
+
+    fetchDeviceAddress();
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
+        {error ? (
+          <div className="text-red-500 text-center">
+            <p>Error: {error}</p>
+          </div>
+        ) : address ? (
+          <div>
+            <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2>
+            <p className="text-lg"><strong>IP:</strong> {address.ip}</p>
+            <p className="text-lg"><strong>City:</strong> {address.city}</p>
+            <p className="text-lg"><strong>Region:</strong> {address.region}</p>
+            <p className="text-lg"><strong>Country:</strong> {address.country}</p>
+            
+          </div>
+        ) : (
+          <div className="text-center">
+            <p>Loading...</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default DeviceAddress;
