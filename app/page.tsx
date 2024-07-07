@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import HomeSectionHeader from "./components/homeSectionHeader";
 import AdminWeather from "./components/AdminWeather";
 import IntroSection from "./components/introSection";
-import ReviewSection from "./components/reviewSection";
 import DeviceAddress from "./components/DeviceAddress";
+import { InfiniteMovingCardsDemo } from "./components/infiniteCard";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -12,21 +12,21 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="bg-white text-six">
       <HomeSectionHeader />
       <IntroSection />
-      <section className=" w-full flex justify-center items-center">
+      <section className="w-full flex justify-center items-center">
         <div className="w-full">
           <div></div>
         </div>
       </section>
-      <section className="border-2 border-secondary text-primary mx-1">
-        <ReviewSection />
+      <section className="text-primary mx-1">
+        <InfiniteMovingCardsDemo/>
         <div>
           <DeviceAddress />
         </div>
       </section>
-      <section className="h-screen  flex flex-col justify-center items-center">
+      <section className="h-screen flex flex-col justify-center items-center">
         Vision to learn
       </section>
       <div className="flex flex-col bg-primary items-center justify-center min-h-screen py-2">

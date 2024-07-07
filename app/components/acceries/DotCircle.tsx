@@ -16,7 +16,7 @@ const DotCircle: React.FC = () => {
         cx="50"
         cy="50"
         r="10"
-        fill="#3C6E71"
+        fill="#679436"
         animate={{ opacity: [1, 0, 1] }}
         transition={{ duration: 2, loop: Infinity, ease: "easeInOut" }}
       />

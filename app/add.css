@@ -2,7 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #416165;
+  --color-third: #B3FFB3;
+  --color-gray-light: #D1FFD7;
+  --color-dark: #FFC800;
+  --color-dark-light: #101010;
+}
 
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #0a0a0a;
+    --color-secondary: #3C6E71;
+    --color-white: #ffffff;
+    --color-gray-light: #D9D9D9;
+    --color-dark: #284B63;
+  }
+}
 
 .workSecion{
   background-image: url(../public/workSection.svg);

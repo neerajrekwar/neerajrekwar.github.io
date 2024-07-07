@@ -1,5 +1,5 @@
 
-import { Alata } from "next/font/google";
+import { Alata, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
@@ -10,6 +10,10 @@ const alata = Alata({
   subsets: ['latin'],
 });
 
+const source_Code_Pro = Source_Code_Pro({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export default function RootLayout({
   children,

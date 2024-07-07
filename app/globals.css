@@ -4,22 +4,38 @@
 @import './add.css';
 
 :root {
-  --color-primary: #ffffff;
-  --color-secondary: #416165;
-  --color-third: #B3FFB3;
-  --color-gray-light: #D1FFD7;
-  --color-dark: #FFC800;
-  --color-dark-light: #101010;
+  --color-primary: #EBF2FA;
+  /* bg */
+  --color-secondary: #427AA1;
+  /* */
+  --color-third: #dbd800;
+  /* */
+  --color-four: #5e705e;
+  /* */
+ --color-primary-text:  #242424;
+    /* */
+    --color-secondary-text: #323635;
+    /* */
+    --color-third-text: #0a0a0a;
+
 }
 
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #0a0a0a;
-    --color-secondary: #3C6E71;
-    --color-white: #ffffff;
-    --color-gray-light: #D9D9D9;
-    --color-dark: #284B63;
+    /*  */
+    --color-secondary: #4880a8;
+    /* */
+    --color-third: #05668D;
+    /* */
+    --color-four: #679436;
+    /* */
+    --color-primary-text:  #e7e7e7;
+    /* */
+    --color-secondary-text: #d2e0dd;
+    /* */
+    --color-third-text: #f8f8f8;
   }
 }
 

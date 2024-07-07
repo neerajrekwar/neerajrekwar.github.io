@@ -21,22 +21,25 @@ export function BackgroundBeamsDemo() {
           className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold"
         >
 
-          Build the right to way <br /><div>
-          with <pre className="font-bold z-999 inline-flex "><TextFlipper /></pre>
+          Build the right to way <br />
+          <div>
+            with <pre className="font-bold z-999 inline-flex ">
+              <TextFlipper />
+            </pre>
           </div>
         </motion.h1>
-           <motion.div
-             initial={{ opacity: 0, y: 100 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             transition={{
-               delay: 0.3,
-               duration: 0.8,
-               ease: "easeInOut",
-             }}
-            className="flex w-full flex-col items-center justify-center"
-            >
-          <AdminWeather/>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="flex w-full flex-col items-center justify-center"
+        >
+          <AdminWeather />
+        </motion.div>
         <p></p>
         <motion.p
           initial={{ opacity: 0, y: 100 }}
@@ -52,37 +55,40 @@ export function BackgroundBeamsDemo() {
           your business. Whether you&apos;re sending order confirmations,
           password reset emails, or promotional campaigns, MailJet has got you
           covered.
-         </motion.p>
+        </motion.p>
         <motion.div>
-          <motion.button
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <Link href={'blog'}>
+            <motion.button
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
 
-            transition={{
+              transition={{
 
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="rounded-full border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className="rounded-full border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
             >
-          Get started
-          </motion.button>
+              Get started
+            </motion.button>
+          </Link>
           <Link href={"https://e3d840fc-de16-4c0f-a2af-4bb02b48d797-00-1iz57nutmrl9d.sisko.replit.dev/"} className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold">
-          <motion.button
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            
-            transition={{
-              
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="rounded-full ml-2 text-secondary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4 "
+            <motion.button
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+              transition={{
+
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className="rounded-full ml-2 text-secondary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4 "
             >
-          Learn more
-          </motion.button></Link>
+              Learn more
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
       <BackgroundBeams />

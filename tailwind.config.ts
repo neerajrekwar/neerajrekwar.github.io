@@ -13,7 +13,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
   ],
-  darkMode: ["class" , "selector"],
+  darkMode:  "selector",
   theme: {
     extend: {
       backgroundImage: {
@@ -22,9 +22,13 @@ module.exports = {
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
-        white: "var(--color-white)",
-        grayLight: "var(--color-gray-light)",
-        dark: "var(--color-dark)",
+        third: "var(--color-third)",
+        four: "var(--color-four)",
+        five: "var(--color-five)",
+        six: "var(--color-six)",
+        primaryText: "var(--color-primary-text)",
+        thirdText: "var(--color-third-text)",
+        secondaryText: "var(--color-secondary-text)"
       },
       animation: {
         aurora: "aurora 60s linear infinite",
