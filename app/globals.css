@@ -7,7 +7,7 @@
 :root {
   --color-primary-bg: #FFFFFF;
   --color-secondary-bg: #D9D9D9;
-  --color-third-bg: #679436;
+  --color-third-bg: #5e716a;
   
   --color-primary-text: #242424;
   --color-secondary-text: #5e716a;
@@ -16,13 +16,14 @@
 
   --color-primary-border: #e7f5f3;
   --color-secondary-border: #3535359a;
+  --color-third-border: #3535359a;
 
 }
 
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary-bg: #ffffff;
+    --color-primary-bg: #100c13;
     --color-secondary-bg: #32243D;
     --color-third-bg: #472360;
 
@@ -32,6 +33,7 @@
 
     --color-primary-border: #705D97;
     --color-secondary-border: #47236067; 
+    --color-third-border: #47236067; 
  
 
   

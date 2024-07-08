@@ -61,9 +61,7 @@ export function BackgroundBeamsDemo() {
             <motion.button
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{
-
                 delay: 0.3,
                 duration: 0.8,
                 ease: "easeInOut",
@@ -73,13 +71,11 @@ export function BackgroundBeamsDemo() {
               Get started
             </motion.button>
           </Link>
-          <Link href={"https://e3d840fc-de16-4c0f-a2af-4bb02b48d797-00-1iz57nutmrl9d.sisko.replit.dev/"} className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold">
+          <Link href={"https://058d7161-3d82-455c-8a08-75929c749baa-00-33ncm1e7y6818.pike.replit.dev/"} className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold">
             <motion.button
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{
-
                 delay: 0.3,
                 duration: 0.8,
                 ease: "easeInOut",
