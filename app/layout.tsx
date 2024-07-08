@@ -1,11 +1,11 @@
 
-import { Alata, Source_Code_Pro } from "next/font/google";
+import { Alata, Source_Code_Pro, DM_Sans, } from "next/font/google";
 import "./globals.css";
 import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/footer";
-const alata = Alata({
+const dm_Sans = DM_Sans({
   weight: '400',
   subsets: ['latin'],
 });
@@ -23,7 +23,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={alata.className}>
+      <body className={dm_Sans.className}>
         <FloatingNavDemo />
         <ThemeProvider>{children}</ThemeProvider>
         

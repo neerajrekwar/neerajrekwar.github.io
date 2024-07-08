@@ -13,22 +13,22 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
   ],
-  darkMode:  "selector",
+  darkMode:  "class",
   theme: {
     extend: {
       backgroundImage: {
         'custom-image': "url('/projects/kukai-art-mmkzdAN_jzQ-unsplash.jpg')",
       },
       colors: {
-        primary: "var(--color-primary)",
-        secondary: "var(--color-secondary)",
-        third: "var(--color-third)",
-        four: "var(--color-four)",
-        five: "var(--color-five)",
-        six: "var(--color-six)",
+        primary: "var(--color-primary-bg)",
+        secondary: "var(--color-secondary-bg)",
+        third: "var(--color-third-text)",
         primaryText: "var(--color-primary-text)",
         thirdText: "var(--color-third-text)",
-        secondaryText: "var(--color-secondary-text)"
+        secondaryText: "var(--color-secondary-text)",
+        pBorder: "var(--color-primary-border)",
+        sBorder: "var(--color-secondary-border)",
+        tBorder: "var(--color-third-border)",
       },
       animation: {
         aurora: "aurora 60s linear infinite",

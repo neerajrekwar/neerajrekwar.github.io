@@ -3,39 +3,38 @@
 @tailwind utilities;
 @import './add.css';
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 :root {
-  --color-primary: #EBF2FA;
-  /* bg */
-  --color-secondary: #427AA1;
-  /* */
-  --color-third: #dbd800;
-  /* */
-  --color-four: #5e705e;
-  /* */
- --color-primary-text:  #242424;
-    /* */
-    --color-secondary-text: #323635;
-    /* */
-    --color-third-text: #0a0a0a;
+  --color-primary-bg: #FFFFFF;
+  --color-secondary-bg: #D9D9D9;
+  --color-third-bg: #679436;
+  
+  --color-primary-text: #242424;
+  --color-secondary-text: #5e716a;
+  --color-third-text: #709b8c;
+  --color-four-text: #0a0a0a;
+
+  --color-primary-border: #e7f5f3;
+  --color-secondary-border: #3535359a;
 
 }
 
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #0a0a0a;
-    /*  */
-    --color-secondary: #4880a8;
-    /* */
-    --color-third: #05668D;
-    /* */
-    --color-four: #679436;
-    /* */
-    --color-primary-text:  #e7e7e7;
-    /* */
-    --color-secondary-text: #d2e0dd;
-    /* */
-    --color-third-text: #f8f8f8;
+    --color-primary-bg: #ffffff;
+    --color-secondary-bg: #32243D;
+    --color-third-bg: #472360;
+
+    --color-primary-text: #2B2031;
+    --color-secondary-text: #472360;
+    --color-third-text: #A4ADD3;
+
+    --color-primary-border: #705D97;
+    --color-secondary-border: #47236067; 
+ 
+
+  
   }
 }
 

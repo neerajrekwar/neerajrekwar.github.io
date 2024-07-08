@@ -9,7 +9,6 @@ export default function IntroSection() {
   return (
     <>
       <TypewriterEffectSmoothDemo />
-    
       <StickyRelativeDemo />
     </>
   );

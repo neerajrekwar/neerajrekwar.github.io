@@ -31,19 +31,19 @@ const DeviceAddress: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
+    <div className="flex  items-center justify-center">
+      <div className="text-secondaryText  ">
         {error ? (
-          <div className="text-red-500 text-center">
+          <div className=" text-center">
             <p>Error: {error}</p>
           </div>
         ) : address ? (
           <div>
-            <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2>
-            <p className="text-lg"><strong>IP:</strong> {address.ip}</p>
-            <p className="text-lg"><strong>City:</strong> {address.city}</p>
-            <p className="text-lg"><strong>Region:</strong> {address.region}</p>
-            <p className="text-lg"><strong>Country:</strong> {address.country}</p>
+            {/* <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2> */}
+            {/* <p className="text-lg"><strong>IP:</strong> {address.ip}</p> */}
+            <p className=""> {address.city}</p>
+            <p className=""> {address.region}</p>
+            <p className=""> {address.country}</p>
             
           </div>
         ) : (
