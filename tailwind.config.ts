@@ -22,7 +22,7 @@ module.exports = {
       colors: {
         primary: "var(--color-primary-bg)",
         secondary: "var(--color-secondary-bg)",
-        third: "var(--color-third-text)",
+        third: "var(--color-third-bg)",
         primaryText: "var(--color-primary-text)",
         thirdText: "var(--color-third-text)",
         secondaryText: "var(--color-secondary-text)",

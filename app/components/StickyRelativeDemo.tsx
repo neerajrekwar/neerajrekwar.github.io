@@ -22,7 +22,7 @@ const StickyRelativeDemo: NextPage = () => {
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
-              <div className=" mb-4 max-w-fit rounded-full border-2 bg-secondary border-pBorder text-primaryText  px-3 py-1 text-sm">
+              <div className=" mb-4 max-w-fit rounded-full border-1 bg-secondary border-sBorder text-primaryText  px-3 py-1 text-sm">
                 2024
               </div>
             </div>

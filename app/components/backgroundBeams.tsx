@@ -20,10 +20,10 @@ export function BackgroundBeamsDemo() {
           }}
           className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold"
         >
-
           Build the right to way <br />
           <div>
-            with <pre className="font-bold z-999 inline-flex ">
+            with{" "}
+            <pre className="font-bold z-999 inline-flex ">
               <TextFlipper />
             </pre>
           </div>
@@ -34,7 +34,7 @@ export function BackgroundBeamsDemo() {
           transition={{
             delay: 0.3,
             duration: 0.8,
-            ease: "easeInOut",
+            ease: "backIn",
           }}
           className="flex w-full flex-col items-center justify-center"
         >
@@ -49,15 +49,18 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="text-neutral-500 max-w-4xl mx-auto my-2 text-sm text-left relative z-10">
+          className="text-neutral-500 max-w-4xl mx-auto my-2 text-sm text-left relative z-10"
+        >
           Welcome to MailJet, the best transactional email service on the web.
           We provide reliable, scalable, and customizable email solutions for
           your business. Whether you&apos;re sending order confirmations,
           password reset emails, or promotional campaigns, MailJet has got you
           covered.
         </motion.p>
-        <motion.div>
-          <Link href={'blog'}>
+        <motion.div 
+          className="text-secondaryText flex gap-2 pt-8 justify-center items-center max-w-fit"
+          >
+          <Link href={"blog"}>
             <motion.button
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -66,12 +69,18 @@ export function BackgroundBeamsDemo() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="rounded-full border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
+              className="bg-third border-2 border-tBorder rounded-full p-2"
             >
               Get started
             </motion.button>
           </Link>
-          <Link href={"https://058d7161-3d82-455c-8a08-75929c749baa-00-33ncm1e7y6818.pike.replit.dev/"} className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold">
+          <Link
+            href={
+              "https://058d7161-3d82-455c-8a08-75929c749baa-00-33ncm1e7y6818.pike.replit.dev/"
+            }
+            className=""
+          >
+            
             <motion.button
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +89,7 @@ export function BackgroundBeamsDemo() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="rounded-full ml-2 text-secondary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4 "
+              className="bg-primary border-2 border-tBorder rounded-full p-2 px-3"
             >
               Learn more
             </motion.button>
