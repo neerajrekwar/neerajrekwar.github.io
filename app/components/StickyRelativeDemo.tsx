@@ -19,13 +19,13 @@ const StickyRelativeDemo: NextPage = () => {
         </div>
         Recent projects
       </div>
-      <InfoLink/>
+      <InfoLink />
 
       <div className="relative m-auto min-h-screen max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
-              <div className=" mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-fourText  px-3 py-1 text-sm">
+              <div className=" mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-secondaryText  px-3 py-1 text-sm">
                 2024
               </div>
             </div>
@@ -81,7 +81,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
         <div className="relative basis-1/2 pt-10 overflow-hidden  border-rose-500">
-          <div className="mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-fourText  px-3 py-1 text-sm">
+          <div className=" mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-secondaryText  px-3 py-1 text-sm">
             Showcase
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">
@@ -113,7 +113,7 @@ const StickyRelativeDemo: NextPage = () => {
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
-              <div className=" mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-fourText  px-3 py-1 text-sm">
+              <div className=" mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-secondaryText  px-3 py-1 text-sm">
                 2024
               </div>
             </div>
@@ -123,7 +123,7 @@ const StickyRelativeDemo: NextPage = () => {
                   Craft &amp; Code: Building the Future, One Line at a Time
                 </h2>
                 <div>
-                  <p className="text-fourText text-base">
+                  <p className="text-secondaryText text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Repudiandae quo natus accusantium eius molestiae expedita
                     possimus accusamus, aspernatur, quia quae asperiores
@@ -169,7 +169,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
         <div className="relative basis-1/2 pt-10 overflow-hidden  border-rose-500">
-          <div className="mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-fourText  px-3 py-1 text-sm">
+          <div className=" mb-4 max-w-fit rounded-full border-1 bg-secondary border-tBorder font-semibold text-secondaryText  px-3 py-1 text-sm">
             Showcase
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">
@@ -197,9 +197,6 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
       </div>
-      
-      
-      
     </div>
   );
 };
