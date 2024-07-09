@@ -5,6 +5,7 @@ import IntroSection from "./components/introSection";
 import DeviceAddress from "./components/DeviceAddress";
 import { InfiniteMovingCardsDemo } from "./components/infiniteCard";
 import { ReviewSection } from "./components/reviewSection";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -25,6 +26,9 @@ export default function Home() {
        <ReviewSection/>
       </section>
       <section className="h-screen flex flex-col justify-center items-center">
+        <div>
+         <DarkModeToggle/>
+        </div>
         Vision to learn
       </section>
       <div className="flex flex-col bg-primary items-center justify-center min-h-screen py-2">

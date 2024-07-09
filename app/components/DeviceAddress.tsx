@@ -1,6 +1,6 @@
 // components/DeviceAddress.tsx
-'use client';
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 
 type DeviceAddress = {
   ip: string;
@@ -16,9 +16,9 @@ const DeviceAddress: React.FC = () => {
   useEffect(() => {
     const fetchDeviceAddress = async () => {
       try {
-        const response = await fetch('https://ipapi.co/json/');
+        const response = await fetch("https://ipapi.co/json/");
         if (!response.ok) {
-          throw new Error('Failed to fetch device address');
+          throw new Error("Failed to fetch device address");
         }
         const data: DeviceAddress = await response.json();
         setAddress(data);
@@ -38,13 +38,11 @@ const DeviceAddress: React.FC = () => {
             <p>Error: {error}</p>
           </div>
         ) : address ? (
-          <div>
+          <div className="flex gap-1 text-primaryText font-semibold">
             {/* <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2> */}
             {/* <p className="text-lg"><strong>IP:</strong> {address.ip}</p> */}
-            <p className=""> {address.city}</p>
-            <p className=""> {address.region}</p>
+            <p className=""> {address.city},</p>
             <p className=""> {address.country}</p>
-            
           </div>
         ) : (
           <div className="text-center">

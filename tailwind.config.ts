@@ -13,7 +13,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
   ],
-  darkMode:  "class",
+  darkMode: ["class","selector"],
   theme: {
     extend: {
       backgroundImage: {
@@ -26,9 +26,11 @@ module.exports = {
         primaryText: "var(--color-primary-text)",
         thirdText: "var(--color-third-text)",
         secondaryText: "var(--color-secondary-text)",
+        fourText: "var(--color-four-text)",
         pBorder: "var(--color-primary-border)",
         sBorder: "var(--color-secondary-border)",
         tBorder: "var(--color-third-border)",
+        fBorder: "var(--color-four-border)",
       },
       animation: {
         aurora: "aurora 60s linear infinite",
@@ -59,19 +61,33 @@ module.exports = {
     plugin(function ({ addBase, theme }) {
       addBase({
         ":root": {
-          "--color-primary": theme("colors.primary"),
-          "--color-secondary": theme("colors.secondary"),
-          "--color-white": theme("colors.white"),
-          "--color-gray-light": theme("colors.grayLight"),
-          "--color-dark": theme("colors.dark"),
+          "--color-primary-bg": theme("colors.primary"),
+          "--color-secondary-bg": theme("colors.secondary"),
+          "--color-third-bg": theme("colors.third"),
+          "--color-four-bg": theme("colors.four"),
+          "--color-primary-text": theme("colors.primaryText"),
+          "--color-secondary-text": theme("colors.seconadaryText"),
+          "--color-third-text": theme("colors.thirdText"),
+          "--color-four-text": theme("colors.fourText"),
+          "--color-primary-border": theme("colors.pBorder"),
+          "--color-secondary-border": theme("colors.sBorder"),
+          "--color-third-border": theme("colors.tBorder"),
+          "--color-four-border": theme("colors.fBorder"),
         },
         "@media (prefers-color-scheme: dark)": {
           ":root": {
-            "--color-primary": theme("colors.secondary"),
-            "--color-secondary": theme("colors.dark"),
-            "--color-white": theme("colors.primary"),
-            "--color-gray-light": theme("colors.primary"),
-            "--color-dark": theme("colors.grayLight"),
+            "--color-primary-bg": theme("colors.primary"),
+              "--color-secondary-bg": theme("colors.secondary"),
+              "--color-third-bg": theme("colors.third"),
+              "--color-four-bg": theme("colors.four"),
+              "--color-primary-text": theme("colors.primaryText"),
+              "--color-secondary-text": theme("colors.seconadaryText"),
+              "--color-third-text": theme("colors.thirdText"),
+              "--color-four-text": theme("colors.fourText"),
+              "--color-primary-border": theme("colors.pBorder"),
+              "--color-secondary-border": theme("colors.sBorder"),
+              "--color-third-border": theme("colors.tBorder"),
+              "--color-four-border": theme("colors.fBorder"),
           },
         },
       });
