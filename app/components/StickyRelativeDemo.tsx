@@ -92,6 +92,7 @@ const StickyRelativeDemo: NextPage = () => {
               height={300}
               className="min-w-full min-h-full rounded-2xl "
             />
+            
             <Image
               src={"/projects/mypro.png"}
               alt={"My Profile Picture"}
