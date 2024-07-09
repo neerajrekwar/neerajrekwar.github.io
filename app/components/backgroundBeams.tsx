@@ -58,7 +58,6 @@ export function BackgroundBeamsDemo() {
           }}
           className="flex w-full flex-col items-center justify-center"
         ></motion.div>
-        <p></p>
         <motion.p
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,47 +74,43 @@ export function BackgroundBeamsDemo() {
           password reset emails, or promotional campaigns, MailJet has got you
           covered.
         </motion.p>
-        <motion.div 
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.6,
-            ease: "easeInOut",
-          }}
-          className="flex mt-8 gap-2 max-w-fit text-secondaryText">
-          <motion.button
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="bg-third text-thirdText border-2 border-fBorderp-1 px-3 md:p-2 md:px-4 rounded-full text-secondaryText"
-          >
-            Get started
-          </motion.button>
-          <Link
-            href={
-              "https://058d7161-3d82-455c-8a08-75929c749baa-00-33ncm1e7y6818.pike.replit.dev/"
-            }
-            className=""
-          >
-            <motion.button
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="bg-secondary border-2 border-tBorder text-base p-1 px-3 md:p-2 md:px-4 rounded-full text-fourText"
-              > {/*  ▲ Next.js 14.2.3 */}
-              Let&apos;s talk
-            </motion.button>
-          </Link>
-        </motion.div>
+        <div>
+
+          <motion.div className="text-secondaryText">
+            <Link href={'blog'}>
+              <motion.button
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+
+                transition={{
+
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+                className="rounded-full border border-neutral-800 focus:ring-2 focus:ring-teal-500  text-white px-3 py-2 text-sm relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
+              >
+                Get started
+              </motion.button>
+            </Link>
+            <Link href={"https://e3d840fc-de16-4c0f-a2af-4bb02b48d797-00-1iz57nutmrl9d.sisko.replit.dev/"} className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold">
+              <motion.button
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+
+                transition={{
+
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+                className="rounded-full ml-2 text-secondary border border-neutral-800 focus:ring-2 font-medium focus:ring-teal-500  bg-white px-3 py-2 text-sm relative z-10 mt-4 "
+              >
+                Learn more
+              </motion.button>
+            </Link>
+          </motion.div>
+        </div>
       </div>
       <BackgroundBeams />
     </div>

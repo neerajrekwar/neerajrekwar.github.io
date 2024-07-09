@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Source_Code_Pro } from "next/font/google";
+import InfoLink from "./IfoLinks";
 
 const source_Code_Pro = Source_Code_Pro({
   weight: "400",
@@ -18,6 +19,7 @@ const StickyRelativeDemo: NextPage = () => {
         </div>
         Recent projects
       </div>
+      <InfoLink/>
 
       <div className="relative m-auto min-h-screen max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
