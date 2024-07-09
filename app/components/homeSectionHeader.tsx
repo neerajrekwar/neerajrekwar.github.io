@@ -19,13 +19,13 @@ export default function HomeSectionHeader() {
         <BackgroundBeamsDemo />
         <span className="absolute w-full opacity-75 flex justify-between text-[.6rem] md:text-[.5rem] lg:text-[.7rem] top-2 text-white z-999  text-right top-2 right-2">
           <div className={caveat.className}>
-            <Link href={"/"} className="sm:mx-8 mx-6 text-primaryText text-3xl sm:text-4xl md:text-5xl font-bold">
+            <Link href={"/"} className="sm:mx-8 mx-6 text-secondaryText text-3xl sm:text-4xl md:text-5xl font-bold">
               {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
               nee.
             </Link>
           </div>
           <div className="grid justify-items-end">
-            <nav>
+            {/*<nav>
               <ul className="text-base hidden md:flex gap-2">
                 <li>
                   <Link href={"/about"}>home</Link>
@@ -40,8 +40,8 @@ export default function HomeSectionHeader() {
                   <Link href={"/about"}>blog</Link>
                 </li>
               </ul>
-            </nav>
-            <div className="text-secondary">
+            </nav>*/}
+            <div className="text-secondaryText">
               <DeviceAddress/>
             </div>
           </div>
