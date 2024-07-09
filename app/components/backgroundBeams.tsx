@@ -112,7 +112,7 @@ export function BackgroundBeamsDemo() {
               }}
               className="bg-secondary border-2 border-tBorder text-base p-1 px-3 md:p-2 md:px-4 rounded-full text-fourText"
               > {/*  ▲ Next.js 14.2.3 */}
-              Let's talk
+              Let&apos;s talk
             </motion.button>
           </Link>
         </motion.div>
