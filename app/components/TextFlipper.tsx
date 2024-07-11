@@ -1,7 +1,13 @@
 // components/TextFlipper.tsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Caveat } from "next/font/google"
 
+
+const caveat = Caveat({
+  weight: '400',
+  subsets: ['latin'],
+});
 const words = ['Programmer', 'Creator', 'Artist', 'Photographer', 'Designer', 'Enthusiast'];
 const TextFlipper: React.FC = () => {
   const [index, setIndex] = useState(0);
@@ -15,16 +21,18 @@ const TextFlipper: React.FC = () => {
 
   return (
 <div className="inline-flex text-left md:h-20 lg:h-24 font-bold">
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 10 }}
-        transition={{ duration: 0.5 }}
-        className=" z-10 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold"
-      >
-        {words[index]}
-      </motion.div>
+     <div className={caveat.className}>
+       <motion.div
+         key={index}
+         initial={{ opacity: 0, y: -20 }}
+         animate={{ opacity: 1, y: 0 }}
+         exit={{ opacity: 0, y: 10 }}
+         transition={{ duration: 0.8, ease: "easeInOut" }}
+         className=" z-10 text-3xl sm:text-lg md:text-7xl text-thirdText font-bold"
+       >
+         {words[index]}
+       </motion.div>
+     </div>
     </div>
 
   );

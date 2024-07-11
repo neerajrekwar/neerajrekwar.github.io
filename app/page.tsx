@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-primary text-secondaryText">
+    <main className="bg-primary text-secondaryText scroll-smooth focus:scroll-auto">
       <HomeSectionHeader />
       <IntroSection />
       <section className="w-full flex justify-center items-center">
@@ -25,7 +25,7 @@ export default function Home() {
       <section className="border-2 border-pBorder">
        <ReviewSection/>
       </section>
-      <section className="h-screen flex flex-col justify-center items-center">
+      <section id="vision" className="h-screen flex flex-col justify-center items-center">
         <div>
          <DarkModeToggle/>
         </div>

@@ -6,10 +6,12 @@ import TextFlipper from "./TextFlipper";
 import Link from "next/link";
 import Image from "next/image";
 
+
 export function BackgroundBeamsDemo() {
   return (
     <div className="min-h-screen w-full bg-primary relative flex flex-col items-start justify-center antialiased">
       <div className="max-w-6xl text-left mx-auto p-4">
+        
         {/* <motion.div className="gap-2 flex  flex-row justify-start items-center  text-secondaryText text-semibold">
           <Image
             src={"/me.jpg"}
@@ -38,7 +40,7 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-left font-sans font-bold"
+          className="relative text-four font-bold z-10 md:pb-4 text-3xl sm:text-lg md:text-7xl  text-left "
         >
           Build the right to way <br />
           <div>
@@ -52,8 +54,8 @@ export function BackgroundBeamsDemo() {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
-            duration: 0.8,
+            delay: 0.1,
+            duration: 0.2,
             ease: "backIn",
           }}
           className="flex w-full flex-col items-center justify-center"
@@ -77,7 +79,8 @@ export function BackgroundBeamsDemo() {
           covered.
         </motion.p>
 
-        <motion.div className="text-secondaryText  gap-2 mt-10 max-w-fit flex justify-center items-cent">
+        <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">
+        
           <Link href={'blog'} 
           className="relative z-10 font-bold">
             <motion.button
@@ -90,28 +93,32 @@ export function BackgroundBeamsDemo() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="bg-third  text-fourText  font-normal border-1 border-sBorder p-1 px-3 rounded-full"
+              className="bg-secondary  justify-center items-center gap-2 text-Text  font-normal border-1 border-pBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
             >
+              
               Get started
             </motion.button>
-          </Link>
-          <Link href={"https://e3d840fc-de16-4c0f-a2af-4bb02b48d797-00-1iz57nutmrl9d.sisko.replit.dev/"} 
+          </Link> 
+          <Link href={'#vision'} 
+            
           className="relative z-10 font-bold">
             <motion.button
+              
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{
-
+                type: 'spring', stiffness: 300, damping: 30,
+                padding: "0.5rem",
                 delay: 0.3,
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="p-1 px-3 border-1 border-sBorder rounded-full text-secondaryText  font-semibold"
+              className=" bg-primary justify-center items-center gap-2 text-thirdText  font-normal border-2 border-tBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
             >
-              Learn more
+              
+              Explore more
             </motion.button>
-          </Link>
+          </Link> 
         </motion.div>
       </div>
       <BackgroundBeams />
