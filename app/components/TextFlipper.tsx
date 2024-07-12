@@ -27,8 +27,8 @@ const TextFlipper: React.FC = () => {
          initial={{ opacity: 0, y: -20 }}
          animate={{ opacity: 1, y: 0 }}
          exit={{ opacity: 0, y: 10 }}
-         transition={{ duration: 0.5}}
-         className=" z-10 text-3xl sm:text-lg md:text-7xl text-thirdText font-bold"
+         transition={{ duration: 0.5 }}
+         className=" z-10 text-3xl sm:text-lg md:text-7xl font-bold text-center"
        >
          {words[index]}
        </motion.div>

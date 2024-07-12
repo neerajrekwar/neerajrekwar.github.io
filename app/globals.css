@@ -4,13 +4,15 @@
 @import './add.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
 :root {
   --color-primary-bg: #FFFFFF;
   --color-secondary-bg: #0a0a0a;
   --color-third-bg: #5e716a;
   --color-four-bg: #4d5150;
   --color-five-bg: #eeeded;
-  
+
   --color-primary-text: #0a0a0a;
   --color-secondary-text: #d9d9d9;
   --color-third-text: #4d5150;
@@ -20,7 +22,8 @@
   --color-primary-border: #d1e5e0;
   --color-secondary-border: #d9d9d9;
   --color-third-border: #E2C044;
-  
+  --font-families-secondary: 'Caveat', cursive;
+
   /* --color-primary-bg: #FFFFFF;
   --color-secondary-bg: #cdf4e6;
   --color-third-bg: #0a0a0a;
@@ -44,7 +47,7 @@
     --color-primary-bg: #0a0a0a;
     --color-secondary-bg: #D9D9D9;
     --color-third-bg: #FFFFFF;
-     --color-four-bg: #709b8c;
+    --color-four-bg: #709b8c;
 
     --color-primary-text: #5e716a;
     --color-secondary-text: #709b8c;
@@ -55,7 +58,7 @@
     --color-secondary-border: #abd4c5;
     --color-primary-border: #3535359a;
     --color-four-border: #b7d2c7;
-    
+
     /* --color-primary-bg: #100c13;
     --color-secondary-bg: #7e6194;
     --color-third-bg: #d6b4ee;
@@ -69,17 +72,11 @@
     --color-third-border: #47236067; 
   */
 
-  
+
   }
 }
 
-.bg0jj{
-  background: url('/background/blurry-gradient-haikei.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-origin: ;
-}
+
 /* Additional custom styles */
 .flipper {
   display: inline-block;
