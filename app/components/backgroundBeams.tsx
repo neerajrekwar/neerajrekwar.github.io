@@ -40,7 +40,7 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative text-four font-bold z-10 md:pb-4 text-3xl sm:text-lg md:text-7xl  text-left "
+          className="relative text-secondary font-bold z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  text-left"
         >
           Build the right to way <br />
           <div>
@@ -62,7 +62,7 @@ export function BackgroundBeamsDemo() {
         >
 
         </motion.div>
-        <motion.p
+        <motion.p 
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -70,12 +70,10 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="text-thirdText font-semibold mx-auto my-2 text-sm text-left relative z-10"
+          className="text-four  mx-auto my-2 text-sm sm:text-base relative z-10"
         >
-          Welcome to MailJet, the best transactional email service on the web.
-          We provide reliable, scalable, and customizable email solutions for
-          your business. Whether you&apos;re sending order confirmations,
-          password reset emails, or promotional campaigns, MailJet has got you
+          We could be best on the web, We provide reliable, scalable, and customizable web solutions for
+          your business. Whether you&apos;re sending order any bug fix in your web, or tools, nee. has got you
           covered.
         </motion.p>
 
@@ -93,7 +91,7 @@ export function BackgroundBeamsDemo() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="bg-secondary  justify-center items-center gap-2 text-Text  font-normal border-1 border-pBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
+              className="bg-secondary justify-center items-center bg-four gap-2 text-sm font-normal border-1 border-pBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
             >
               
               Get started
@@ -112,7 +110,7 @@ export function BackgroundBeamsDemo() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className=" bg-primary justify-center items-center gap-2 text-thirdText  font-normal border-2 border-fBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
+              className=" bg-primary justify-center items-center gap-2 text-secondary text-capitlize font-semibold text-sm border-2 border-fBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
             >
               
               Explore more

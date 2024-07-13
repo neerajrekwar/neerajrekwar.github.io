@@ -12,9 +12,9 @@ const source_Code_Pro = Source_Code_Pro({
 
 const StickyRelativeDemo: NextPage = () => {
   return (
-    <div className="m-auto scroll-smooth  justify-between p-2 max-h-fit max-w-6xl">
-      <div className="justify-start text-semibold flex items-center gap-2 sm:gap-1 py-10 text-2xl text-secondaryText font-semibold visible sm:text-4xl">
-        <div className="text-thirdText text-4xl sm:text-6xl sm:mx-2">
+    <div className="m-auto scroll-smooth text-four justify-between p-2 max-h-fit max-w-6xl">
+      <div className="justify-start text-semibold flex items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
+        <div className="text-4xl text-third sm:text-5xl sm:mx-2">
           &#8226;
         </div>
         Recent projects
@@ -23,17 +23,17 @@ const StickyRelativeDemo: NextPage = () => {
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
-              <div className=" mb-4 max-w-fit rounded-full border bg-primary border-tBorder font-semibold text-thirdText  px-3 py-1 antialiased text-sm">
+              <div className=" mb-4 max-w-fit rounded-full border bg-five border-sBorder font-semibold   px-3 py-1 antialiased ">
                 2024
               </div>
             </div>
             <div className="border-yellow-400 sm:pr-10">
               <div className="max-w-2xl">
-                <h2 className="text-2xl py-2 pb-3 font-semibold text-thirdText">
+                <h2 className="text-2xl py-3 pb-3 font-semibold ">
                   Craft &amp; Code: Building the Future, One Line at a Time
                 </h2>
                 <div>
-                  <p className="text-thirdText text-base">
+                  <p className="text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Repudiandae quo natus accusantium eius molestiae expedita
                     possimus accusamus, aspernatur, quia quae asperiores
@@ -77,7 +77,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
         <div className="relative basis-1/2 pt-10 overflow-hidden  border-rose-500">
-          <div className="mb-4 max-w-fit rounded-full border bg-primary border-tBorder font-semibold text-thirdText  px-3 py-1 antialiased text-sm">
+          <div className="mb-4 max-w-fit rounded-full border bg-five border-tBorder font-semibold text-thirdText  px-3 py-1 antialiased text-sm">
             Showcase
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">

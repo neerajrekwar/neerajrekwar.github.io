@@ -15,12 +15,12 @@ const TextFlipper: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000); // Change word every 3 seconds
+    }, 4000); // Change word every 4 seconds
     return () => clearInterval(interval);
   }, []);
 
   return (
-<div className="inline-flex text-left md:h-20 lg:h-24 font-bold">
+<div className="inline-flex text-four text-left md:h-20 lg:h-24 font-bold">
      <div className={caveat.className}>
        <motion.div
          key={index}

@@ -1,27 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './add.css';
+@import 'add.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
-
 :root {
-  --color-primary-bg: #FFFFFF;
-  --color-secondary-bg: #0a0a0a;
-  --color-third-bg: #5e716a;
-  --color-four-bg: #4d5150;
-  --color-five-bg: #eeeded;
-
-  --color-primary-text: #0a0a0a;
-  --color-secondary-text: #d9d9d9;
-  --color-third-text: #4d5150;
-  --color-four-text: #E2C044;
-  --color-five-text: #79a091;
-
-  --color-primary-border: #d1e5e0;
-  --color-secondary-border: #d9d9d9;
-  --color-third-border: #E2C044;
+  --color-primary: #FFFFFF;
+  --color-secondary: #262626;
+  --color-third: #2cffbf;
+  --color-four: #4d5150;
+  --color-five: #79a091;
+  --color-six: #e6e6e6;
   --font-families-secondary: 'Caveat', cursive;
 
   /* --color-primary-bg: #FFFFFF;
@@ -75,7 +65,28 @@
 
   }
 }
+.button-three {
+  @apply border-none bg-transparent;
+  --button-color: #000;
+}
 
+.button-three .hamburger {
+  transition: translate 1s, rotate 1s;
+}
+
+.button-three[aria-expanded="true"] .hamburger {
+  translate: 0px 0px;
+}
+
+.button-three .line {
+  transition: 1s;
+  stroke-dasharray: 60 31 60 300;
+}
+
+.button-three[aria-expanded="true"] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
+}
 
 /* Additional custom styles */
 .flipper {
