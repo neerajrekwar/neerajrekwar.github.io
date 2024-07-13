@@ -70,7 +70,7 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="text-neutral-500 max-w-4xl mx-auto my-2 text-sm text-left relative z-10"
+          className="text-thirdText font-semibold mx-auto my-2 text-sm text-left relative z-10"
         >
           Welcome to MailJet, the best transactional email service on the web.
           We provide reliable, scalable, and customizable email solutions for
@@ -103,17 +103,16 @@ export function BackgroundBeamsDemo() {
             
           className="relative z-10 font-bold">
             <motion.button
-              
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{
-                type: 'spring', stiffness: 300, damping: 30,
-                padding: "0.5rem",
+
                 delay: 0.3,
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className=" bg-primary justify-center items-center gap-2 text-thirdText  font-normal border-2 border-tBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
+              className=" bg-primary justify-center items-center gap-2 text-thirdText  font-normal border-2 border-fBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
             >
               
               Explore more
