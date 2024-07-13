@@ -99,7 +99,7 @@ export function BackgroundBeamsDemo() {
               Get started
             </motion.button>
           </Link> 
-          <Link href={'#vision'} 
+          <Link href={'#vision'} scroll={true}
             
           className="relative z-10 font-bold">
             <motion.button
