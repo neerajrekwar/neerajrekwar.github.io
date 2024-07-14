@@ -12,7 +12,7 @@ export function BackgroundBeamsDemo() {
     <div className="min-h-screen w-full bg-primary relative flex flex-col items-start justify-center antialiased">
       <div className="max-w-6xl text-left mx-auto p-4">
         
-        {/* <motion.div className="gap-2 flex  flex-row justify-start items-center  text-secondaryText text-semibold">
+        <motion.div className="gap-2 flex mb-10 flex-row justify-start items-center  text-secondaryText text-semibold">
           <Image
             src={"/me.jpg"}
             width={24}
@@ -20,18 +20,18 @@ export function BackgroundBeamsDemo() {
             alt="Digital marketing for expert"
             className="aspact-square h-10 w-10 rounded-full"
           />
-          <div className="font-semibold text-secondaryText">
+          <div className="font-semibold text-four">
             <p>Neeraj Rekwar</p>
             <div className="flex gap-1 h-4">
-              <p className="text-thirdText flex flex-row justify-start items-center text-3xl">
+              <p className=" flex flex-row justify-start text-third items-center text-3xl">
                 &#8226;
               </p>
-              <p className="text-secondaryText flex flex-row justify-start items-center font-normal text-sm">
+              <p className="text-four flex flex-row justify-start items-center font-normal text-sm">
                 Available for freelance work
               </p>
             </div>
           </div>
-        </motion.div> */}
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}

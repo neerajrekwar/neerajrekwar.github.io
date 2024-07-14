@@ -22,7 +22,7 @@ export default function Home() {
           <div></div>
         </div>
       </section>
-      <section className="border-2 border-pBorder">
+      <section className="">
        <ReviewSection/>
       </section>
       <section id="vision" className="h-screen flex flex-col justify-center items-center">
