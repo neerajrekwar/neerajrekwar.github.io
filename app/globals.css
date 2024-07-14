@@ -12,6 +12,7 @@
   --color-four: #4d5150;
   --color-five: #79a091;
   --color-six: #e6e6e6;
+  --color-seven: #79a09140;
   --font-families-secondary: 'Caveat', cursive;
 
   /* --color-primary-bg: #FFFFFF;
@@ -40,6 +41,7 @@
     --color-four: #4d5150;
     --color-five: #79a091;
     --color-six: #e6e6e6;
+    --color-seven: #79a09187;
     /* --color-primary-bg: #100c13;
     --color-secondary-bg: #7e6194;
     --color-third-bg: #d6b4ee;

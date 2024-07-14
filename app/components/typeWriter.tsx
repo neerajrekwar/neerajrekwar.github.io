@@ -17,13 +17,13 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "neeraj rekwar.",
-      className: "text-fourText",
+      className: "text-five",
     },
   ];
   return (
     <div className="flex flex-col items-center justify-center h-[40rem] ">
       <div className="flex flex-col items-center justify-center h-[40rem] w-full">
-        <p className="text-thirdText sm:text-base  ">
+        <p className="text-four sm:text-base  ">
           The road to make unique from here
         </p>
         <TypewriterEffectSmooth words={words} />

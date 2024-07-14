@@ -23,7 +23,7 @@ const StickyRelativeDemo: NextPage = () => {
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
-              <div className=" mb-4 max-w-fit rounded-full border bg-five border-sBorder font-semibold   px-3 py-1 antialiased ">
+              <div className=" mb-4 max-w-fit rounded-full border bg-seven border-sBorder font-semibold   px-3 py-1 antialiased ">
                 2024
               </div>
             </div>
@@ -77,7 +77,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
         <div className="relative basis-1/2 pt-10 overflow-hidden  border-rose-500">
-          <div className="mb-4 max-w-fit rounded-full border bg-five border-tBorder font-semibold text-thirdText  px-3 py-1 antialiased text-sm">
+          <div className="mb-4 max-w-fit rounded-full border bg-seven border-tBorder font-semibold text-thirdText  px-3 py-1 antialiased text-sm">
             Showcase
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">

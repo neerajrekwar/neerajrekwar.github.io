@@ -26,6 +26,7 @@ module.exports = {
         four: "var(--color-four)",
         five: "var(--color-five)",
         six: "var(--color-six)",
+        seven: "var(--color-seven)",
         
       },
       animation: {
@@ -63,6 +64,7 @@ module.exports = {
           "--color-four": theme("colors.four"),
           "--color-five": theme("colors.five"),
           "--color-six": theme("colors.six"),
+          "--color-seven": theme("colors.seven"),
         },
         "@media (prefers-color-scheme: dark)": {
           ":root": {
@@ -72,6 +74,7 @@ module.exports = {
             "--color-four": theme("colors.four"),
             "--color-five": theme("colors.five"),
             "--color-six": theme("colors.six"),
+          "--color-seven": theme("colors.seven"),
           },
         },
       });
