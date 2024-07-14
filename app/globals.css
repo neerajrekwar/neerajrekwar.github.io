@@ -34,21 +34,12 @@
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary-bg: #0a0a0a;
-    --color-secondary-bg: #D9D9D9;
-    --color-third-bg: #FFFFFF;
-    --color-four-bg: #709b8c;
-
-    --color-primary-text: #5e716a;
-    --color-secondary-text: #709b8c;
-    --color-third-text: #5e716a;
-    --color-four-text: #2b312f;
-
-    --color-third-border: #e7f5f3;
-    --color-secondary-border: #abd4c5;
-    --color-primary-border: #3535359a;
-    --color-four-border: #b7d2c7;
-
+    --color-primary: #262626;
+    --color-secondary: #FFFFFF;
+    --color-third: #2cffbf;
+    --color-four: #4d5150;
+    --color-five: #79a091;
+    --color-six: #e6e6e6;
     /* --color-primary-bg: #100c13;
     --color-secondary-bg: #7e6194;
     --color-third-bg: #d6b4ee;

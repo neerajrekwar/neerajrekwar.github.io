@@ -91,7 +91,7 @@ export function BackgroundBeamsDemo() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="bg-secondary justify-center items-center bg-four gap-2 text-sm font-normal border-1 border-pBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
+              className="bg-secondary justify-center items-center bg-four gap-2 text-sm font-normal border-1 border-pBorder p-2 px-4 md:p-3 md:px-5 rounded-full transition-all hover:px-10 hover:bg-primary hover:text-third hover:pr-2 hover:mr-2 duration-1000  hover:bg-slate-800 hover:text-white "
             >
               
               Get started
