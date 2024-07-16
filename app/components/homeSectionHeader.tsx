@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Caveat } from "next/font/google";
-
 import CurrentTime from "./CurrentTime";
 import Weather from "./WeatherApp";
 import { BackgroundBeamsDemo } from "./backgroundBeams";
