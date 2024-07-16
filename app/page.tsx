@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import HomeSectionHeader from "./components/homeSectionHeader";
 import AdminWeather from "./components/AdminWeather";
 import IntroSection from "./components/introSection";
-import DeviceAddress from "./components/DeviceAddress";
-import { InfiniteMovingCardsDemo } from "./components/infiniteCard";
 import { ReviewSection } from "./components/reviewSection";
 import DarkModeToggle from "./components/DarkModeToggle";
+import VisionSection from "./components/visionSection";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -25,11 +24,8 @@ export default function Home() {
       <section className="">
        <ReviewSection/>
       </section>
-      <section id="vision" className="h-screen flex flex-col justify-center items-center">
-        <div>
-         <DarkModeToggle/>
-        </div>
-        Vision to learn
+      <section id="vision" className="mt-20"> 
+        <VisionSection/>
       </section>
       <div className="flex flex-col bg-primary items-center justify-center min-h-screen py-2">
         <AdminWeather />
