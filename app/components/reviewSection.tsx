@@ -11,7 +11,7 @@ export function ReviewSection() {
                     </div>
                     What others have to say
                 </div>
-                <div className="border-2 border-sBorder max-w-fit"></div>
+               
             </div>
             <InfiniteMovingCardsDemo />
         </>

@@ -17,7 +17,7 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "neeraj rekwar.",
-      className: "text-five",
+      className: "text-six",
     },
   ];
   return (

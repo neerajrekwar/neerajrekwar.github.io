@@ -19,13 +19,13 @@ export default function VisionSection() {
 
         <div>
           <div className="">
-           <div className="m-2 md:flex justify-between items-center border-b-1">
-             <h4 className="  text-four font-semibold md:text-2xl">Adminstrative Assistant</h4>
-            <ul className="flex py-2 gap-2 md:gap-4 text-xs md:text-1xl text-five text-center">
-             <li className="p-1 px-2 max-w-fit border-1 bg-seven rounded-full text-center">
+           <div className="m-2 md:flex justify-between items-center border-b-1 border-seven">
+             <h4 className="text-four font-semibold text-xl md:text-2xl">Adminstrative Assistant</h4>
+            <ul className="flex py-6 gap-2 md:gap-4 text-xs md:text-1xl text-six text-center">
+             <li className="p-1 px-2 max-w-fit rounded-full border bg-seven border-seven font-semibold  px-3 py-1 antialiased text-sm text-center">
               VMR Pvt. Ltd.
              </li>  
-             <li className="p-1 px-2 max-w-fit border-1 bg-seven rounded-full text-center">
+             <li className="p-1 px-2 max-w-fit rounded-full border bg-seven border-seven font-semibold  px-3 py-1 antialiased text-sm">
               2021 sep - 2022 fab
              </li>  
             </ul>
