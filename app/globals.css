@@ -10,8 +10,8 @@
   --color-secondary: #262626;
   --color-third: #2cffbf;
   --color-four: #4d5150;
-  --color-five: #79a091;
-  --color-six: #948a00;
+  --color-five: #948a00;
+  --color-six: #79a091;
   --color-seven: #47aa842c;
   --font-families-secondary: 'Caveat', cursive;
 
@@ -38,8 +38,8 @@
     --color-primary: #262626;
     --color-secondary: #FFFFFF;
     --color-third: #2cffbf;
-    --color-four: #79a091;
-    --color-five: #4d5150;
+    --color-four: #4d5150;
+    --color-five: #79a091;
     --color-six: #948a00b2;
     --color-seven: #e6e6e61a;
     /* --color-primary-bg: #100c13;
