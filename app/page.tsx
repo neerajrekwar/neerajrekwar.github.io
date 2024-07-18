@@ -3,8 +3,10 @@ import HomeSectionHeader from "./components/homeSectionHeader";
 import AdminWeather from "./components/AdminWeather";
 import IntroSection from "./components/introSection";
 import { ReviewSection } from "./components/reviewSection";
-import DarkModeToggle from "./components/DarkModeToggle";
-import VisionSection from "./components/visionSection";
+
+import ExpSection from "./components/ExpSection";
+import { VisionSection } from "./components/VisionSection";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -25,13 +27,11 @@ export default function Home() {
        <ReviewSection/>
       </section>
       <section id="vision" className="mt-20"> 
-        <VisionSection/>
+        <ExpSection/>
       </section>
-      <div className="flex flex-col bg-primary items-center justify-center min-h-screen py-2">
-        <AdminWeather />
-
-        {/* Other components or content */}
-      </div>
+      <section className="mt-20">
+        <VisionSection />
+      </section>
     </main>
   );
 }
