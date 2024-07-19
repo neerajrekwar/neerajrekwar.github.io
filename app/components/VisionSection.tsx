@@ -6,12 +6,12 @@ import React from "react";
 export const VisionSection: React.FC = () => {
   return (
     <>
-      <div className="max-w-6xl m-auto  min-h-screen ">
+      <div className="max-w-6xl m-auto ">
         <div className="p-2 justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
           <div className="text-4xl text-third sm:text-5xl sm:mx-2">&#8226;</div>
-          Vision to the Future
+          Envisioning the Future World
         </div>
-        <div className="text-five min-h-screen bg-gradient-to-r from-seven rounded-ss-2xl">
+        <div className="text-five  min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
           <div className="md:h-80  mb-20 md:flex-row md:flex gap-4  border-four">
             <div
               style={{
@@ -22,7 +22,7 @@ export const VisionSection: React.FC = () => {
               className="text-five basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
                 UI/UX Design
               </h2>
               <p>
@@ -44,7 +44,7 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="text-five">
+        <div className="text-five  min-h-screen md:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
           <div
             style={{}}
             className=" md:h-80 mb-20 md:flex-row-reverse md:flex gap-4  border-four"
@@ -59,13 +59,13 @@ export const VisionSection: React.FC = () => {
             >
             </div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
                 User-centric customization
               </h2>
               <p >
                 Websites have evolved to seamlessly adapt to various devices,
-                ensuring a uniform and exceptional user experience on desktops,
-                mobiles, and tablets.
+                ensuring a uniform and exceptional ,<strong className="text-yellow-600"> user experience on desktops,
+                  mobiles, and tablets.</strong>
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@ export const VisionSection: React.FC = () => {
               className="text-five basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
                 Web Bugs fixing
               </h2>
               <p>
@@ -97,11 +97,11 @@ export const VisionSection: React.FC = () => {
         <div className="text-five">
           <div
             style={{}}
-            className="md:h-80 mb-20 md:flex-row-reverse md:flex gap-4  border-four"
+            className="md:h-80  md:flex-row-reverse md:flex gap-4  border-four"
           >
             <div
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDl8fHxlbnwwfHx8fHw%3D')`,
+                backgroundImage: `url('https://plus.unsplash.com/premium_photo-1683133924436-a7afbdf8cd25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -109,7 +109,7 @@ export const VisionSection: React.FC = () => {
             >
             </div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
                 Small Business Helps
               </h2>
               <p >
