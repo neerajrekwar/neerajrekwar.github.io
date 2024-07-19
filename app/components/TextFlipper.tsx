@@ -8,7 +8,7 @@ const caveat = Caveat({
   weight: '400',
   subsets: ['latin'],
 });
-const words = ['Programmer', 'Creator', 'Artist', 'Photographer', 'Designer', 'Enthusiast'];
+const words = ['Programming', 'Creative', 'Awesome', 'Artistic', 'Photography', 'Designer', 'Enthusiast'];
 const TextFlipper: React.FC = () => {
   const [index, setIndex] = useState(0);
 

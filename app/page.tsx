@@ -26,10 +26,10 @@ export default function Home() {
       <section className="">
        <ReviewSection/>
       </section>
-      <section id="vision" className="mt-20"> 
+      <section id="vision" className=""> 
         <ExpSection/>
       </section>
-      <section className="mt-20">
+      <section className="mt-20 ">
         <VisionSection />
       </section>
     </main>

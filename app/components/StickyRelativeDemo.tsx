@@ -23,17 +23,17 @@ const StickyRelativeDemo: NextPage = () => {
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
-              <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven font-semibold antialiased text-sm text-center text-five">
+              <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm  text-five text-center text-secondary">
                 2024
               </div>
             </div>
             <div className="text-six sm:pr-10">
-              <div className="max-w-2xl">
+              <div className="max-w-2xl text-five">
                 <h2 className="text-2xl text-secondary py-3 pb-3 font-semibold ">
                   Craft &amp; Code: Building the Future, One Line at a Time
                 </h2>
                 <div>
-                  <p className="text-four text-base opacity-75">
+                  <p className="text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Repudiandae quo natus accusantium eius molestiae expedita
                     possimus accusamus, aspernatur, quia quae asperiores
@@ -44,19 +44,19 @@ const StickyRelativeDemo: NextPage = () => {
               </div>
               <div className="text-sm text-secondary pt-12 ">
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
-                  <li className="text-four font-normal">Role</li>
+                  <li className="font-normal">Role</li>
                   <li>Digital Marketing</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
-                  <li className="text-four font-normal">Deliverables</li>
+                  <li className="font-normal">Deliverables</li>
                   <li>Survey checks</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
-                  <li className="text-four  font-normal">Company</li>
+                  <li className="  font-normal">Company</li>
                   <li>VMR</li>
                 </ul>
-                <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven fill-secondary">
-                  <li className="text-four font-normal">Visit Site</li>
+                <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven fill-five">
+                  <li className="font-normal">Visit Site</li>
                   <li className="px-2">
                     <Link href="https://veecrew.com" className="">
                       <svg
@@ -77,7 +77,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
         <div className="relative basis-1/2 pt-10 overflow-hidden  border-rose-500">
-          <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven font-semibold antialiased text-sm text-center text-five">
+          <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm text-center text-secondary">
             Showcase
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">

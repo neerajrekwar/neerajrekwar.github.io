@@ -5,7 +5,12 @@ import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/footer";
+
 const dm_Sans = DM_Sans({
+  weight: '400',
+  subsets: ['latin'],
+});
+const source_code_pro = Source_Code_Pro({
   weight: '400',
   subsets: ['latin'],
 });
@@ -22,7 +27,7 @@ export default function RootLayout({
 }>) {
   
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth focus:scroll-auto">
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
         <ThemeProvider>{children}</ThemeProvider>

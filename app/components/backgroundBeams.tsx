@@ -12,7 +12,7 @@ export function BackgroundBeamsDemo() {
     <div className="min-h-screen w-full bg-primary relative flex flex-col items-start justify-center antialiased">
       <div className="max-w-6xl text-left mx-auto p-4">
         
-        <motion.div className="gap-2 flex mb-10 flex-row justify-start items-center  text-secondaryText text-semibold">
+        <motion.div className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold">
           <Image
             src={"/me.jpg"}
             width={24}
