@@ -89,7 +89,7 @@ export const VisionSection: React.FC = () => {
                 flaws in a computer program that cause it to produce incorrect
                 outputs or behave unexpectedly. These bugs can vary from minor
                 inconveniences to critical issues that crash the program
-                entirely. Rest assured, we'll solve your web programming bugs.
+                entirely. Rest assured, we&apos;ll solve your web programming bugs.
               </p>
             </div>
           </div>
