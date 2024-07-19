@@ -22,7 +22,7 @@ export const VisionSection: React.FC = () => {
               className="text-five basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
                 UI/UX Design
               </h2>
               <p>
@@ -59,7 +59,7 @@ export const VisionSection: React.FC = () => {
             >
             </div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-6xl font-bold pb-2 bg-gradient-to-r from-yellow-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
                 User-centric customization
               </h2>
               <p >
@@ -81,7 +81,7 @@ export const VisionSection: React.FC = () => {
               className="text-five basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
                 Web Bugs fixing
               </h2>
               <p>
@@ -97,7 +97,7 @@ export const VisionSection: React.FC = () => {
         <div className="text-five">
           <div
             style={{}}
-            className=" md:h-80 mb-20 md:flex-row-reverse md:flex gap-4  border-four"
+            className="md:h-80 mb-20 md:flex-row-reverse md:flex gap-4  border-four"
           >
             <div
               style={{
@@ -109,7 +109,7 @@ export const VisionSection: React.FC = () => {
             >
             </div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-6xl font-bold pb-2 bg-gradient-to-r from-green-900 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-6xl font-bold pb-2 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
                 Small Business Helps
               </h2>
               <p >
