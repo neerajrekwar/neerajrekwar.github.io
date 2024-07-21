@@ -9,7 +9,7 @@ export const VisionSection: React.FC = () => {
       <div className="max-w-6xl m-auto ">
         <div className="p-2 justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
           <div className="text-4xl text-third sm:text-5xl sm:mx-2">&#8226;</div>
-          Envisioning the Future World
+          Vision to the Future
         </div>
         <div className="text-five  min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
           <div className="md:h-80  mb-20 md:flex-row md:flex gap-4  border-four">
@@ -113,9 +113,7 @@ export const VisionSection: React.FC = () => {
                 Small Business Helps
               </h2>
               <p >
-                Websites have evolved to seamlessly adapt to various devices,
-                ensuring a uniform and exceptional user experience on desktops,
-                mobiles, and tablets.
+                Are you struggling to establish your online presence? Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we'll equip you with the tools to attract customers, boost sales, and achieve your online goals. Let Small Business Helps translate your vision into a website that works for you.
               </p>
             </div>
           </div>
