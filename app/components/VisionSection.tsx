@@ -28,7 +28,7 @@ export const VisionSection: React.FC = () => {
               <p>
                 Websites will{" "}
                 <a href="/" target="_blank" className="">
-                  <strong className=" text-four">
+                  <strong className="text-four">
                     customization in website & changes
                   </strong>
                 </a>{" "}
@@ -70,7 +70,7 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="text-five">
+        <div className="text-five  min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
           <div className="md:h-80  mb-20 md:flex-row md:flex gap-4  border-four">
             <div
               style={{
@@ -89,12 +89,12 @@ export const VisionSection: React.FC = () => {
                 flaws in a computer program that cause it to produce incorrect
                 outputs or behave unexpectedly. These bugs can vary from minor
                 inconveniences to critical issues that crash the program
-                entirely. Rest assured, we&apos;ll solve your web programming bugs.
+                entirely. Rest assured, <strong className="text-red-600">we&apos;ll solve your web programming bugs.</strong>
               </p>
             </div>
           </div>
         </div>
-        <div className="text-five">
+        <div className="text-five  min-h-screen md:h-auto sm:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
           <div
             style={{}}
             className="md:h-80  md:flex-row-reverse md:flex gap-4  border-four"
@@ -113,7 +113,7 @@ export const VisionSection: React.FC = () => {
                 Small Business Helps
               </h2>
               <p >
-                Are you struggling to establish your online presence? Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we'll equip you with the tools to attract customers, boost sales, and achieve your online goals. Let Small Business Helps translate your vision into a website that works for you.
+                <strong className="text-green-600">Are you struggling to establish your online presence?</strong> Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we'll equip you with the tools to attract customers, boost sales, and achieve your online goals. Let Small Business Helps translate your vision into a website that works for you.
               </p>
             </div>
           </div>
