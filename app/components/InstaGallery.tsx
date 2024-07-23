@@ -49,5 +49,4 @@ const InstaGallery: React.FC = () => {
     </>
   );
 };
-
 export default InstaGallery;
