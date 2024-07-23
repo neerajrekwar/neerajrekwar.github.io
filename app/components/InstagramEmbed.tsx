@@ -117,6 +117,3 @@ export default function InstagramEmbed() {
     </>
   );
 }
-
-// IGQWRNenRjUThBMG9nQ190TFpxaTBkM3o1VzNFME92RFl5T1dwZA1lpVGVsQmIwem1oZAWhkSUs2WHlWVVdFUm5kNDJqaHc5Sko5NGN5ZAXhXcWxyT2xwQUpoTzA2M3A2ZAklJaFhNWXhUT0ptX0hlcHMzWG1xbl9MclEZD
-// insta
