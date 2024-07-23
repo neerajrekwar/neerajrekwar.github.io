@@ -29,6 +29,7 @@ module.exports = {
         seven: "var(--color-seven)",
         
       },
+      
       animation: {
         aurora: "aurora 60s linear infinite",
         scroll:
@@ -65,6 +66,7 @@ module.exports = {
           "--color-five": theme("colors.five"),
           "--color-six": theme("colors.six"),
           "--color-seven": theme("colors.seven"),
+          
         },
         "@media (prefers-color-scheme: dark)": {
           ":root": {

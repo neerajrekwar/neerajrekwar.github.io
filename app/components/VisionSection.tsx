@@ -11,7 +11,7 @@ export const VisionSection: React.FC = () => {
           <div className="text-4xl text-third sm:text-5xl sm:mx-2">&#8226;</div>
           Vision to the Future
         </div>
-        <div className="text-five  min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
+        <div className="text-four  min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
           <div className="md:h-80  mb-20 md:flex-row md:flex gap-4  border-four">
             <div
               style={{
@@ -22,18 +22,18 @@ export const VisionSection: React.FC = () => {
               className="text-five basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
+              <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five">
                 UI/UX Design
               </h2>
               <p>
                 Websites will{" "}
                 <a href="/" target="_blank" className="">
-                  <strong className="text-four">
+                  <strong className="text-five font-normal">
                     customization in website & changes
                   </strong>
                 </a>{" "}
                 analyze user behavior and preferences,
-                <strong className="text-four ">
+                <strong className="text-five font-normal">
                   {" "}
                   dynamically tailoring layouts, content, and recommendations to
                   each visitor.
@@ -44,7 +44,7 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="text-five  min-h-screen md:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
+        <div className="text-four  min-h-screen md:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
           <div
             style={{}}
             className=" md:h-80 mb-20 md:flex-row-reverse md:flex gap-4  border-four"
@@ -64,13 +64,13 @@ export const VisionSection: React.FC = () => {
               </h2>
               <p >
                 Websites have evolved to seamlessly adapt to various devices,
-                ensuring a uniform and exceptional ,<strong className="text-yellow-600"> user experience on desktops,
+                ensuring a uniform and exceptional ,<strong className="text-five font-normal"> user experience on desktops,
                   mobiles, and tablets.</strong>
               </p>
             </div>
           </div>
         </div>
-        <div className="text-five  min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
+        <div className="text-four min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
           <div className="md:h-80  mb-20 md:flex-row md:flex gap-4  border-four">
             <div
               style={{
@@ -78,7 +78,7 @@ export const VisionSection: React.FC = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              className="text-five basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
+              className="text-four basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
               <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
@@ -89,12 +89,12 @@ export const VisionSection: React.FC = () => {
                 flaws in a computer program that cause it to produce incorrect
                 outputs or behave unexpectedly. These bugs can vary from minor
                 inconveniences to critical issues that crash the program
-                entirely. Rest assured, <strong className="text-red-600">we&apos;ll solve your web programming bugs.</strong>
+                entirely. Rest assured, <strong className="text-five font-normal">we&apos;ll solve your web programming bugs.</strong>
               </p>
             </div>
           </div>
         </div>
-        <div className="text-five  min-h-screen md:h-auto sm:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
+        <div className="text-four min-h-screen md:h-auto sm:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
           <div
             style={{}}
             className="md:h-80  md:flex-row-reverse md:flex gap-4  border-four"
@@ -113,7 +113,7 @@ export const VisionSection: React.FC = () => {
                 Small Business Helps
               </h2>
               <p >
-                <strong className="text-green-600">Are you struggling to establish your online presence?</strong> Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we&apos;ll equip you with the tools to attract customers, boost sales, and achieve your online goals. Let Small Business Helps translate your vision into a website that works for you.
+                <strong className="text-five font-normal">Are you struggling to establish your online presence?</strong> Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we&apos;ll equip you with the tools to attract customers, boost sales, and achieve your online goals. Let Small Business Helps translate your vision into a website that works for you.
               </p>
             </div>
           </div>
