@@ -32,7 +32,7 @@ export default function InstagramEmbed() {
 
   const fetchFeed = async (after: string | null = null) => {
     try {
-      let url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,timestamp,permalink&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN}`;
+      let url = `https://graph.instagram.com/me?fields=id,username&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN}`;
       if (after) {
         url += `&after=${after}`;
       }
@@ -117,3 +117,6 @@ export default function InstagramEmbed() {
     </>
   );
 }
+
+// IGQWRNenRjUThBMG9nQ190TFpxaTBkM3o1VzNFME92RFl5T1dwZA1lpVGVsQmIwem1oZAWhkSUs2WHlWVVdFUm5kNDJqaHc5Sko5NGN5ZAXhXcWxyT2xwQUpoTzA2M3A2ZAklJaFhNWXhUT0ptX0hlcHMzWG1xbl9MclEZD
+// insta
