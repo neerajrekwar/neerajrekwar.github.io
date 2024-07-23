@@ -5,6 +5,7 @@ import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/footer";
+import InstaGallery from "./components/InstaGallery";
 
 const dm_Sans = DM_Sans({
   weight: '400',
@@ -32,7 +33,7 @@ export default function RootLayout({
         <FloatingNavDemo />
         <ThemeProvider>{children}</ThemeProvider>
         
-       <Footer />
+       <Footer  />
       </body>
     </html>
   );

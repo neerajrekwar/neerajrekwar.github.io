@@ -1,9 +1,40 @@
 // `app/page.tsx` is the UI for the `/` URL
-import Image from "next/image";
-import InstagramEmbed from "./InstagramEmbed";
+"use client"
+import Image from 'next/image'
 
+import React, { useEffect, useState } from 'react';
+import InstaGallery from './InstaGallery';
+
+interface Image {
+  id: string;
+  media_url: string;
+  caption: string;
+}
+
+interface Feed {
+  data: Image[];
+}
+
+async function fetchInstagramFeed(): Promise<Feed> {
+  const url = `https://graph.instagram.com/v20.0/me/media?fields=id,username,media_url,caption,timestamp,media_type&access_token=${process.env.INSTAGRAM_TOKEN}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
 
 export default function Footer() {
+  const [images, setImages] = useState<Image[]>([]);
+
+  useEffect(() => {
+    const loadFeed = async () => {
+      const feed = await fetchInstagramFeed();
+      const latestPosts = feed.data.slice(0, 4); // Get the latest 4 posts
+      setImages(latestPosts);
+    };
+
+    loadFeed();
+  }, []);
+
   return (
     <>
       <footer className="bg-seven ">
@@ -296,7 +327,7 @@ export default function Footer() {
                   strokeWidth={2}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  
+
                   className="icon icon-tabler md:h-18 md:w-18  icons-tabler-outline icon-tabler-brand-instagram"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -308,18 +339,18 @@ export default function Footer() {
               <span>Instagram</span>
             </div>
             <ul className="">
-              <div className="container mx-auto py-8">
-                  <h1 className="text-xl font-bold mb-4">Latest Instagram Posts</h1>
-                  <InstagramEmbed />
+              <div className="mx-auto">
+                <div className="flex justify-center space-x-4">
+                  
+                  <InstaGallery />
+                </div>
               </div>
-              <li></li>
-              <li>dgfas</li>
-              <li>dgfas</li>
+              
             </ul>
           </div>
         </div>
-        <div className="border-t-[.2px] border-four mx-8 text-center text-xs p-4">
-          <span>Copyright ©2023 Neeraj Rekwar</span>
+        <div className="opacity-50 border-t-[.2px] border-four mx-8 text-center text-xs p-4">
+          <span >Copyright ©2023 Neeraj Rekwar</span>
         </div>
       </footer>
     </>
