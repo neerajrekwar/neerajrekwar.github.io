@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import React, { useEffect, useState } from 'react';
 import InstaGallery from './InstaGallery';
-
 interface Image {
   id: string;
   media_url: string;
@@ -336,21 +335,22 @@ export default function Footer() {
                   <path d="M16.5 7.5l0 .01" />
                 </svg>
               </span>
-              <span>Instagram</span>
+              <span className='text-xl'>Instagram</span>
             </div>
             <ul className="">
               <div className="mx-auto">
                 <div className="flex justify-center space-x-4">
-                  
                   <InstaGallery />
+                  
                 </div>
               </div>
-              
+
             </ul>
           </div>
         </div>
-        <div className="opacity-50 border-t-[.2px] border-four mx-8 text-center text-xs p-4">
+        <div className="opacity-50 border-t-[.2px] border-four mx-8 text-center flex flex-col text-xs p-4">
           <span >Copyright ©2023 Neeraj Rekwar</span>
+          <span >build by me</span>
         </div>
       </footer>
     </>

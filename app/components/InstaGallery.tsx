@@ -33,9 +33,9 @@ const InstaGallery: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-center space-x-1 bg-seven text-white p-2 rounded-md">
+      <div className="flex justify-center  space-x-1 bg-seven text-white p-2 rounded-md">
         {images.map((image) => (
-          <div key={image.id} className="relative overflow-hidden w-1/4">
+          <div key={image.id} className="relative overflow-hidden w-1/4 ">
             <div className='overflow-hidden rounded-sm'>
             <img
               src={image.media_url}

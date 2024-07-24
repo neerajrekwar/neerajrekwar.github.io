@@ -1,4 +1,4 @@
-# Sample workflow for building and deploying a Next.js site to GitHub Pages
+# Sample workflow for building and deploying a Next.js site to GitHub Pages with server rendering
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
@@ -78,7 +78,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: .next
 
   # Deployment job
   deploy:

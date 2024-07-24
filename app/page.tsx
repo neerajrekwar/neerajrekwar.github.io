@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-primary text-secondaryText scroll-smooth focus:scroll-auto">
+    <main className="bg-seven text-secondaryText scroll-smooth focus:scroll-auto">
       <HomeSectionHeader />
       <IntroSection />
       <section className="w-full flex justify-center items-center">
