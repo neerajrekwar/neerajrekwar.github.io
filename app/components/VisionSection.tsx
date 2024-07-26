@@ -178,7 +178,7 @@ export const VisionSection: React.FC = () => {
               <div className=" bg-seven p-4 h-fit rounded-3xl">
                 <Image
                   className=""
-                  src="/projects/home/Futuristic_interface.svg" width={300} height={300} alt="how's the Futuristic interface" />
+                  src="/projects/home/Futuristic_interface.svg" width={300} height={300} alt="how&apos;s the Futuristic interface" />
               </div>
             </div>
             <div className="md:flex-col gap-2 my-10 flex-row-reverse">
@@ -319,7 +319,7 @@ export const VisionSection: React.FC = () => {
                   <path d="M7 5l10 7l-10 7z" />
                 </svg>
                 <h6 className="text-2xl py-2">Logic errors</h6>
-                <p className="">These are errors in the program's logic, leading to incorrect results without causing the program to crash.</p>
+                <p className="">These are errors in the program&apos;s logic, leading to incorrect results without causing the program to crash.</p>
               </span>
               <span className="flex flex-col p-2 h-auto text-five  w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#E4F1E982] text-[#57A773] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
@@ -333,7 +333,7 @@ export const VisionSection: React.FC = () => {
                 <h6 className="text-2xl py-2">Poor testing</h6>
                 <p className=""> Inadequate testing can leave bugs undetected. Debugging is the process of identifying and removing errors from computer program code</p>
               </span>
-              <span className=" flex flex-col p-2 h-auto text-five  hover:bg-seven transition-all duration-1000 w-[340px] text-center rounded-2xl justify-center items-center">
+              <span className="flex flex-col p-2 h-auto text-five  hover:bg-seven transition-all duration-1000 w-[340px] text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#FBDEDA82] text-[#EE6352]  rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M9.884 5.873a3 3 0 0 1 5.116 2.127v1" />
@@ -355,7 +355,7 @@ export const VisionSection: React.FC = () => {
         <div className="text-four min-h-screen md:h-auto sm:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
           <div
 
-            className="md:h-80  md:flex-row-reverse md:flex gap-4  border-four"
+            className=" md:flex-row-reverse md:flex gap-4  border-four"
           >
             <div
               style={{
@@ -363,17 +363,30 @@ export const VisionSection: React.FC = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              className="text-4xl basis-1/2 font-bold  rounded-2xl mx-2 p-4 h-60 md:h-auto"
+              className="text-4xl basis-1/2 font-bold  rounded-2xl mx-2 p-4 md:h-80 "
             >
             </div>
             <div className="basis-1/2 text-base md:text-xl p-4">
-              <h2 className=" cbtn text-4xl md:text-6xl font-bold pb-2 text-five ">
-                Startups & Small Businesses
+              <h2 className=" text-4xl md:text-6xl font-bold pb-2 text-five ">
+                Small Initiative & Startups
               </h2>
-              <p >
+              <p>
                 <strong className="text-five font-normal">Are you struggling to establish your online presence?</strong> Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we&apos;ll equip you with the tools to attract customers, boost sales, and achieve your online goals. Let Small Business Helps translate your vision into a website that works for you.
               </p>
             </div>
+          </div>
+          <div className="border-2">
+            <div>
+
+            </div>
+            <div>
+              <div className="md:flex  text-five p-2">
+                <h2 className="text-3xl p-2">How to Building Your Online Business: A Step-by-Step Guide</h2>
+                <Image src={"/projects/home/Startup_life.svg"} width={300} height={300} alt="Startup life"/>
+              </div>
+            </div>
+            <div></div>
+
           </div>
         </div>
       </div>
