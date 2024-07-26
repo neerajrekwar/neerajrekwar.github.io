@@ -59,6 +59,31 @@
   }
 }
 
+.cbtn {
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cbtn::before {
+  margin-left: auto;
+}
+
+.cbtn::after {
+  content: '';
+  width: 0%;
+  height: 20px;
+  background: var(--color-secondary);
+  display: block;
+  transition: 0.5s;
+}
+
+.cbtn:hover::after, .cbtn:hover::before {
+  width: 100%;
+}
+
 .button-three {
   @apply border-none bg-transparent;
   --button-color: #000;
