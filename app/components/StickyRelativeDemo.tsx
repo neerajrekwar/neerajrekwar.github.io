@@ -12,7 +12,7 @@ const source_Code_Pro = Source_Code_Pro({
 
 const StickyRelativeDemo: NextPage = () => {
   return (
-    <div className="m-auto scroll-smooth text-secondary justify-between p-2 max-h-fit max-w-6xl">
+    <div className="m-auto scroll-smooth text-secondary justify-between p-2 max-h-fit max-w-6xl ">
       <div className="justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
         <div className="text-4xl text-third sm:text-5xl sm:mx-2">
           &#8226;
@@ -27,8 +27,8 @@ const StickyRelativeDemo: NextPage = () => {
                 2024
               </div>
             </div>
-            <div className="text-six sm:pr-10">
-              <div className="max-w-2xl text-five">
+            <div className="text-six sm:pr-10 backdrop-blur-sm">
+              <div className="max-w-2xl text-five ">
                 <h2 className="text-2xl text-secondary py-3 pb-3 font-semibold ">
                   Craft &amp; Code: Building the Future, One Line at a Time
                 </h2>

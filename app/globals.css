@@ -2,29 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 @import 'add.css';
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 :root {
   --color-primary: #FFFFFF;
-  --color-secondary: #262626;
+  --color-secondary: #000000;
   --color-third: #2cffbf;
-  --color-four: #5e716a;
-  --color-five: #22352d;
+  --color-four: #284b3d;
+  --color-five: #1d3838;
   --color-six: #948a00;
   --color-seven: #47aa841c;
   --font-families-secondary: 'Caveat', cursive;
 
-  /* --color-primary-bg: #FFFFFF;
-  --color-secondary-bg: #cdf4e6;
-  --color-third-bg: #0a0a0a;
-  --color-four-bg: #79a091;
-  
+  /* --color-primary: #FFFFFF;
+  --color-secondary: #cdf4e6;
+  --color-third: #0a0a0a;
+  --color-four: #79a091;
   --color-primary-text: #0a0a0a;
   --color-secondary-text: #4d5150;
   --color-third-text: #020101;
   --color-four-text: #79a091;
-
   --color-primary-border: #e7f5f3;
   --color-secondary-border: #abd4c5;
   --color-third-border: #79a091;
@@ -35,7 +32,7 @@
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #262626;
+    --color-primary: #000000;
     --color-secondary: #FFFFFF;
     --color-third: #2cffbf;
     --color-four: #79a091;
@@ -88,19 +85,62 @@
   @apply border-none bg-transparent;
   --button-color: #000;
 }
+section.one {
+  
+  background-image: linear-gradient(-45deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
+    linear-gradient(45deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
+    linear-gradient(-135deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
+    linear-gradient(135deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%);
+  background-size: 4rem 4rem;
+  background-position: 19rem 0, 19rem 0, 0 0, 0 0;
+}
+section.two {
+  background-color: hsl(177, 27%, 69%);
+  background-image: linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
+    linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
+    linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
+    linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%);
+  background-size: 2rem 2rem, 2rem 2rem;
+}
+section.three {
+  /* background-color: #f9ffe0; */
+  /* background-color: #353535; */
+  background-image: radial-gradient(
+      circle at 100% 50%,
+      transparent 1rem,
+      #a1b1c12c 1rem,
+      #a1b1c12c 1.5rem,
+      transparent 1.5rem
+    ),
+    radial-gradient(
+      circle at 0% 50%,
+      transparent 1rem,
+      #a1b1c12c 1rem,
+      #a1b1c12c 1.5rem,
+      transparent 1.5rem
+    );
+  background-size: 5rem 5rem;
+  background-position: 0 0, 0 2.5rem;
+}
+section.four {
+  background-image: url(), url(),
+    linear-gradient(to right, rgb(0, 0, 0), rgb(255 255 255 / 0%));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    bottom right,
+    left,
+    right;
 
-.button-three .hamburger {
-  transition: translate 1s, rotate 1s;
+}
+.textCllip {
+  background-image: linear-gradient(black , var(--color-third) 82%);
+  background-clip: text;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
-.button-three[aria-expanded="true"] .hamburger {
-  translate: 0px 0px;
-}
-
-.button-three .line {
-  transition: 1s;
-  stroke-dasharray: 60 31 60 300;
-}
 
 .button-three[aria-expanded="true"] .line {
   stroke-dasharray: 60 105 60 300;

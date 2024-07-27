@@ -8,7 +8,7 @@ export const VisionSection: React.FC = () => {
   return (
     <>
       <div className="max-w-6xl m-auto ">
-        <div className="p-2 justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
+        <div className="p-2 justify-start flex text-primary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
           <div className="text-4xl text-third sm:text-5xl sm:mx-2">&#8226;</div>
           Vision to the Future
         </div>
@@ -186,9 +186,9 @@ export const VisionSection: React.FC = () => {
 
                 <h3 className="md:text-5xl text-xl  text-five   font-semibold">Make a Innovative customization</h3>
               </div>
-              <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five md:bg-five bg-seven md:rounded-2xl h-auto">
+              <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five  h-auto">
 
-                <li className="col-span-2 flex items-center justify-center p-1 m-2 rounded-2xl hover:scale-95 duration-500 transition-all bg-seven  text-[#E5D352]">
+                <li className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl hover:scale-95 duration-500 transition-all bg-five text-[#E5D352]">
                   <p className="basis-2/2 md:basis-1/2  md:text-6xl p-2">online activity on smartphones 3hrs and 50min avg. </p>
                   <svg xmlns="http://www.w3.org/2000/svg"
 
@@ -199,7 +199,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M16 9h2" />
                   </svg>
                 </li>
-                <li className="flex flex-row-reverse items-center  p-1 m-2 rounded-2xl rounded-2xl hover:scale-95 duration-500 bg-seven   text-[#FF6B6B]">
+                <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl hover:scale-95 duration-500 bg-five   text-[#FF6B6B]">
                   <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">Earthweb reports that 67% of the global</p>
                   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="basis-1/2  icon icon-tabler icons-tabler-outline icon-tabler-device-laptop">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -207,7 +207,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
                   </svg>
                 </li>
-                <li className="flex items-center  p-1 m-2  rounded-2xl  bg-seven  rounded-2xl hover:scale-95 duration-500 text-[#759FBC]">
+                <li className="flex items-center  h-28 md:h-auto w-full md:w-auto p-1 m-2  rounded-2xl  bg-five rounded-2xl hover:scale-95 duration-500 text-[#759FBC]">
                   <p className="basis-2/2 md:basis-1/2  md:text-4xl p-2"> smart streaming devices will be $9.2 billion by 2024. </p>
                   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className=" basis-1/2 icon icon-tabler icons-tabler-outline icon-tabler-devices-2">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -219,7 +219,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M9 15l0 4" />
                   </svg>
                 </li>
-                <li className="flex col-span-2 flex-row-reverse  items-center rounded-2xl hover:scale-95 duration-500 p-1 m-2 rounded-2xl bg-seven  text-[#B9B8D3]">
+                <li className="flex col-span-2 flex-row-reverse  items-center rounded-2xl hover:scale-95 duration-500 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl bg-five  text-[#B9B8D3]">
                   <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2">2.16% tablet user in worldwide & digital landscape changing in web3 after </p>
                   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="basis-1/2  icon icon-tabler icons-tabler-outline icon-tabler-device-tablet">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -227,7 +227,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M11 17a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
                   </svg>
                 </li>
-                <li className="flex col-span-2 items-center  justify-center p-1 m-2 rounded-2xl hover:scale-95 duration-500 bg-seven rounded-2xl text-[#FF6F59]">
+                <li className="flex col-span-2 items-center  justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl hover:scale-95 duration-500 bg-five rounded-2xl text-[#FF6F59]">
                   <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2 ">mobiles  that users in use 37.23%</p>
                   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="basis-1/2  icon icon-tabler icons-tabler-outline icon-tabler-device-mobile">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -236,7 +236,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M12 17v.01" />
                   </svg>
                 </li>
-                <li className="flex flex-row-reverse items-center p-1 m-2 rounded-2xl hover:scale-95 duration-500 rounded-2xl bg-seven  text-[#F6F4F3]">
+                <li className="flex flex-row-reverse items-center p-1 m-2 h-28 md:h-auto w-full md:w-auto rounded-2xl hover:scale-95 duration-500 rounded-2xl bg-five text-[#F6F4F3]">
                   <p className="basis-2/2 md:basis-1/2  p-1">Desktops that users in use 60.61% </p>
                   <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="basis-1/2  icon icon-tabler icons-tabler-outline icon-tabler-device-desktop">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -264,10 +264,10 @@ export const VisionSection: React.FC = () => {
             <div className="basis-1/2 text-base md:text-xl p-4">
               <h2
 
-                className="cbtn  text-4xl md:text-6xl font-bold pb-2 text-five ">
+                className="  text-4xl md:text-6xl font-bold pb-2 text-five ">
                 Web Bugs fixing
               </h2>
-              <p>
+              <p className="text-four">
                 Web Programming bugs, also known as software bugs, are errors or
                 flaws in a computer program that cause it to produce incorrect
                 outputs or behave unexpectedly. These bugs can vary from minor
@@ -279,7 +279,7 @@ export const VisionSection: React.FC = () => {
           <div className=" flex gap-4 flex-col max-w-5xl m-auto mt-10 mb-20 py-20 justify-center items-center">
             <span className="bg-[#E4F1E6] text-[#595959] p-1 px-3 rounded-full">Find error</span>
 
-            <div className="md:flex justify-center items-center gap-4">
+            <div className="md:flex-wrap justify-center items-center gap-4">
               <span className="flex flex-col p-2 h-auto text-five w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#d8f5fe82] text-[#08B2E3] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -287,10 +287,10 @@ export const VisionSection: React.FC = () => {
                   <path d="M17 8l4 4l-4 4" />
                   <path d="M14 4l-4 16" />
                 </svg>
-                <h6 className="text-xl py-2">Syntax errors</h6>
-                <p className="">Mistakes in the programming language. over size usually caught by the compiler or interpreter.</p>
+                <h6 className="text-2xl py-2">Syntax errors</h6>
+                <p className="text-four">Mistakes in the programming language. over size usually caught by the compiler or interpreter.</p>
               </span>
-              <span className="flex flex-col p-2 h-auto text-five  w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
+              <span className="flex flex-col p-2 h-full  text-five  w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl  justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#e7e8ef82] text-[#484D6D] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-time-duration-15">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M12 15h2a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-2v-3h3" />
@@ -305,11 +305,11 @@ export const VisionSection: React.FC = () => {
                   <path d="M4.2 7.5v.01" />
                   <path d="M21 12a9 9 0 0 0 -9 -9" />
                 </svg>
-                <h6 className="text-xl py-2">Runtime errors</h6>
-                <p className="">These occur while the program is running. They can cause the program to crash or behave unexpectedly.</p>
+                <h6 className="text-2xl py-2">Runtime errors</h6>
+                <p className="text-four">These occur while the program is running. They can cause the program to crash or behave unexpectedly.</p>
               </span>
             </div>
-            <div className="flex-1 md:flex justify-center items-center gap-4">
+            <div className="sm:flex-wrap lg:flex justify-center items-center gap-4">
               <span className="flex flex-col p-2 h-auto text-five  w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#EAEBE2] text-[#565857] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -319,7 +319,7 @@ export const VisionSection: React.FC = () => {
                   <path d="M7 5l10 7l-10 7z" />
                 </svg>
                 <h6 className="text-2xl py-2">Logic errors</h6>
-                <p className="">These are errors in the program&apos;s logic, leading to incorrect results without causing the program to crash.</p>
+                <p className="text-four">These are errors in the program&apos;s logic, leading to incorrect results without causing the program to crash.</p>
               </span>
               <span className="flex flex-col p-2 h-auto text-five  w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#E4F1E982] text-[#57A773] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
@@ -331,7 +331,7 @@ export const VisionSection: React.FC = () => {
                   <path d="M8 7h-4" />
                 </svg>
                 <h6 className="text-2xl py-2">Poor testing</h6>
-                <p className=""> Inadequate testing can leave bugs undetected. Debugging is the process of identifying and removing errors from computer program code</p>
+                <p className="text-four"> Inadequate testing can leave bugs undetected. Debugging is the process of identifying and removing errors from computer program code</p>
               </span>
               <span className="flex flex-col p-2 h-auto text-five  hover:bg-seven transition-all duration-1000 w-[340px] text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#FBDEDA82] text-[#EE6352]  rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
@@ -347,7 +347,7 @@ export const VisionSection: React.FC = () => {
                   <path d="M3 3l18 18" />
                 </svg>
                 <h6 className="text-2xl py-2">Preventing Bugs</h6>
-                <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere quos maiores sed quae nobis similique cum accusamus, omnis error.</p>
+                <p className="text-four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere quos maiores sed quae nobis similique cum accusamus, omnis error.</p>
               </span>
             </div>
           </div>
@@ -363,26 +363,46 @@ export const VisionSection: React.FC = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              className="text-4xl basis-1/2 font-bold  rounded-2xl mx-2 p-4 md:h-80 "
+              className="text-four basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
             >
             </div>
             <div className="basis-1/2 text-base md:text-xl p-4">
               <h2 className=" text-4xl md:text-6xl font-bold pb-2 text-five ">
                 Small Initiative & Startups
               </h2>
-              <p>
-                <strong className="text-five font-normal">Are you struggling to establish your online presence?</strong> Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we&apos;ll equip you with the tools to attract customers, boost sales, and achieve your online goals. Let Small Business Helps translate your vision into a website that works for you.
+              <p >
+                <strong className="text-five font-normal">Are you struggling to establish your online presence?</strong>
+                Small Business Helps can be your one-stop shop for all your web development needs. We understand the unique challenges faced by small businesses, and our team of experts will craft a website that perfectly reflects your brand and resonates with your target audience. From user-friendly design and e-commerce functionality to powerful SEO optimization, we&apos;ll equip you with the tools to attract customers, boost sales, and achieve your online goals.
               </p>
             </div>
           </div>
-          <div className="border-2">
+          <div className="">
             <div>
 
             </div>
             <div>
-              <div className="md:flex  text-five p-2">
-                <h2 className="text-3xl p-2">How to Building Your Online Business: A Step-by-Step Guide</h2>
-                <Image src={"/projects/home/Startup_life.svg"} width={300} height={300} alt="Startup life"/>
+              <div className="md:flex flex-1 text-five p-2 justify-center items-center">
+                <div className="flex basis-1/2 justify-center items-center">
+                  <Image src={"/projects/home/Startup_life.svg"}
+                    className="  md:p-10 p-8  m-2  bg-seven rounded-2xl"
+                    width={300} height={300} alt="Startup life" />
+                </div>
+                <div className="flex basis-1/2 justify-center items-center flex-col p-2">
+                  <h2 className="md:text-6xl text-xl text-five  basis-1/2 font-semibold">How to Building Your Online Business: A Step-by-Step Guide</h2>
+                  <div className="flex items-start">
+                    <span className="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-alert-circle">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                        <path d="M12 8v4" />
+                        <path d="M12 16h.01" />
+                      </svg>
+                    </span>
+                  <p className="text-xl ">
+                    Let Small Business Helps translate your vision into a website that works for you.</p>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div></div>

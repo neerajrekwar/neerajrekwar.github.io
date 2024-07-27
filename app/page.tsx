@@ -7,6 +7,7 @@ import { ReviewSection } from "./components/reviewSection";
 import ExpSection from "./components/ExpSection";
 import { VisionSection } from "./components/VisionSection";
 import Footer from "./components/footer";
+import StickyRelativeDemo from "./components/StickyRelativeDemo";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -15,21 +16,23 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-primary text-secondaryText scroll-smooth focus:scroll-auto">
-      <HomeSectionHeader />
-      <IntroSection />
-      <section className="w-full flex justify-center items-center">
-        <div className="w-full">
-          <div></div>
-        </div>
+    <main className="bg-primary text-primary scroll-smooth focus:scroll-auto">
+      <section className="">
+        <HomeSectionHeader />
+      </section>
+      <section className=" md:h-screen">
+        <IntroSection />
       </section>
       <section className="">
-       <ReviewSection/>
+        <StickyRelativeDemo />
       </section>
-      <section id="vision" className=""> 
-        <ExpSection/>
+      <section className="">
+        <ReviewSection />
       </section>
-      <section className="mt-20 ">
+      <section id="vision" className="">
+        <ExpSection />
+      </section>
+      <section className=" ">
         <VisionSection />
       </section>
     </main>

@@ -1,9 +1,17 @@
-
 "use client"
-import Image from 'next/image'
-
+import Image from 'next/image';
+import Link from 'next/link';
+import { Caveat } from 'next/font/google';
 import React, { useEffect, useState } from 'react';
 import InstaGallery from './InstaGallery';
+
+
+const caveat = Caveat({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+
 interface Image {
   id: string;
   media_url: string;
@@ -20,6 +28,7 @@ async function fetchInstagramFeed(): Promise<Feed> {
   const data = await response.json();
   return data;
 }
+
 
 export default function Footer() {
   const [images, setImages] = useState<Image[]>([]);
@@ -39,8 +48,13 @@ export default function Footer() {
       <footer className="bg-seven ">
         <div className="p-4 text-five py-10 max-w-6xl m-auto">
           <ul className="flex gap-2 mb-8 items-start flex-col">
-            <li className="text-2xl  flex justify-start font-semibold  items-start">
-              nee
+            <li className="">
+            <div className={caveat.className}>
+            <Link href={"/"} className="text-5xl  flex justify-start font-semibold  items-start">
+              {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
+              nee.
+            </Link>
+          </div>
             </li>
             <li className="text-1xl flex mb-4 justify-start items-start">
               let&apos;s start creating something new, You & I at same
