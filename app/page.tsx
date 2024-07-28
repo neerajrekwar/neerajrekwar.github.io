@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="bg-primary text-primary scroll-smooth focus:scroll-auto">
-      <section className="">
+      <section className="three">
         <HomeSectionHeader />
       </section>
       <section className=" md:h-screen">
         <IntroSection />
       </section>
-      <section className="">
+      <section className="three">
         <StickyRelativeDemo />
       </section>
       <section className="">

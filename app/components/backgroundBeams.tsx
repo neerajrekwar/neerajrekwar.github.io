@@ -11,7 +11,7 @@ export function BackgroundBeamsDemo() {
   return (
     <div className="min-h-screen w-full relative flex flex-col items-start justify-center antialiased">
       <div className="max-w-5xl text-left mx-auto p-4">
-        
+
         <motion.div className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold">
           <Image
             src={"/me.jpg"}
@@ -62,7 +62,7 @@ export function BackgroundBeamsDemo() {
         >
 
         </motion.div>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -70,7 +70,7 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="text-four  mx-auto my-2 text-sm sm:text-base relative z-10"
+          className="text-four  mx-auto my-2 sm:text-xl text-base relative z-10"
         >
           We could be best on the web, We provide reliable, scalable, and customizable web solutions for
           your business. Whether you&apos;re sending order any bug fix in your web, or tools, nee. has got you
@@ -78,44 +78,45 @@ export function BackgroundBeamsDemo() {
         </motion.p>
 
         <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">
-        
-          <Link href={'blog'} 
-          className="relative z-10 font-bold">
+
+          <Link href={'/'}
+            className="relative z-10 ">
             <motion.button
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
               transition={{
-
-                delay: 0.3,
-                duration: 0.8,
+                type: "spring", stiffness: 400, damping: 17, delay: 1,
+                duration: 0.9,
                 ease: "easeInOut",
               }}
-              className="bg-secondary justify-center items-center bg-four gap-2 text-sm font-normal border-1 border-pBorder p-2 px-4 md:p-3 md:px-5 rounded-full transition-all hover:px-10 hover:bg-primary hover:text-third hover:pr-2 hover:mr-2 duration-800  hover:bg-[#262626d6] hover:text-white "
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="rounded-full p-2 px-4  bg-secondary"
             >
-              
+
               Get started
             </motion.button>
-          </Link> 
+          </Link>
           <Link href={'#vision'} scroll={true}
-            
-          className="relative z-10 font-bold">
+
+            className="relative z-10">
             <motion.button
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               transition={{
-
-                delay: 0.3,
-                duration: 0.8,
+                type: "spring", stiffness: 400, damping: 17, delay: 2,
+                duration: 0.5,
                 ease: "easeInOut",
               }}
-              className=" bg-primary justify-center items-center gap-2 text-secondary text-capitlize font-semibold text-sm border-2 border-fBorder p-2 px-4 md:p-3 md:px-5 rounded-full"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+  
+              className="rounded-full p-2 px-4 bg-secondary"
             >
-              
+
               Explore more
             </motion.button>
-          </Link> 
+          </Link>
         </motion.div>
       </div>
       <BackgroundBeams />

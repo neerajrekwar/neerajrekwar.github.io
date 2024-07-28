@@ -8,20 +8,15 @@ export const VisionSection: React.FC = () => {
   return (
     <>
       <div className="max-w-6xl m-auto ">
-        <div className="p-2 justify-start flex text-primary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
+        <div className="p-2 justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
           <div className="text-4xl text-third sm:text-5xl sm:mx-2">&#8226;</div>
           Vision to the Future
         </div>
-        <div className="text-four min-h-screen md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
+        <div className="text-four min-h-screen md:bg-gradient-to-r  md:rounded-ss-2xl">
           <div className="md:h-80 md:flex-row md:flex gap-4  border-four">
-            <div
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-              className="text-five basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
-            ></div>
+            <div className="text-five basis-1/2 font-bold flex justify-center items-center bg-seven rounded-2xl m-2 p-4 h-60 md:h-auto">
+              <Image src={"/projects/home/elements.svg"} height={500} width={500} alt="ui best in your we3b" />
+            </div>
             <div className="basis-1/2 text-base md:text-xl p-4">
               <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five  ">
                 UI/UX Design
@@ -49,7 +44,7 @@ export const VisionSection: React.FC = () => {
               <div className="flex items-end">
                 <h4 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-four  p-4 font-bold md:text-3xl lg:text-7xl">Change your old from new engaging user interface</h4>
               </div>
-              <div className="bg-seven p-4 rounded-3xl">
+              <div className="bg-seven flex justify-center items-center p-4 rounded-3xl">
                 <Image src="/projects/home/Programming.svg"
                   className=""
                   width={300} height={300} alt="best programing tech development" />
@@ -149,7 +144,7 @@ export const VisionSection: React.FC = () => {
         <div className="text-four  min-h-screen md:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
           <div
             style={{}}
-            className=" md:h-80 mb-20 md:flex-row-reverse md:flex gap-4  border-four"
+            className=" md:flex-row-reverse md:flex gap-4  border-four"
           >
             <div
               style={{
@@ -171,11 +166,11 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
           <div className="p-2">
-            <div className="flex md:h-80  items-center md:flex-row-reverse md:flex ">
-              <div className="flex items-end">
+            <div className="flex    items-center md:flex-row-reverse md:flex ">
+              <div className="flex  items-end">
                 <h4 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-four p-4 font-bold md:text-3xl lg:text-7xl">How to evolved a screen that effectiveness in browsing</h4>
               </div>
-              <div className=" bg-seven p-4 h-fit rounded-3xl">
+              <div className=" bg-seven  p-4 h-fit rounded-3xl">
                 <Image
                   className=""
                   src="/projects/home/Futuristic_interface.svg" width={300} height={300} alt="how&apos;s the Futuristic interface" />
@@ -252,7 +247,7 @@ export const VisionSection: React.FC = () => {
           </div>
         </div>
         <div className="text-four min-h-screen  md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
-          <div className="md:h-80  mb-20 md:flex-row md:flex gap-4 border-four">
+          <div className=" md:flex-row md:flex gap-4 border-four">
             <div
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1536859355448-76f92ebdc33d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8')`,
@@ -277,10 +272,10 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
           <div className=" flex gap-4 flex-col max-w-5xl m-auto mt-10 mb-20 py-20 justify-center items-center">
-            <span className="bg-[#E4F1E6] text-[#595959] p-1 px-3 rounded-full">Find error</span>
+            <span className="bg-[#e5d3523b] text-[#E5D352] p-1 px-3 rounded-full">Find error</span>
 
-            <div className="md:flex-wrap justify-center items-center gap-4">
-              <span className="flex flex-col p-2 h-auto text-five w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
+            <div className="md:flex-wrap lg:flex justify-center items-center gap-4">
+              <span className="flex flex-col p-2 h-auto text-five w-[340px]  transition-all duration-1000 text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#d8f5fe82] text-[#08B2E3] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M7 8l-4 4l4 4" />
@@ -309,7 +304,7 @@ export const VisionSection: React.FC = () => {
                 <p className="text-four">These occur while the program is running. They can cause the program to crash or behave unexpectedly.</p>
               </span>
             </div>
-            <div className="sm:flex-wrap lg:flex justify-center items-center gap-4">
+            <div className="dm:flex-wrap sm:flex justify-center items-center gap-4">
               <span className="flex flex-col p-2 h-auto text-five  w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-fit h-fit m-4 p-2 bg-[#EAEBE2] text-[#565857] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -390,16 +385,16 @@ export const VisionSection: React.FC = () => {
                 <div className="flex basis-1/2 justify-center items-center flex-col p-2">
                   <h2 className="md:text-6xl text-xl text-five  basis-1/2 font-semibold">How to Building Your Online Business: A Step-by-Step Guide</h2>
                   <div className="flex items-start">
-                    <span className="">
-                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-alert-circle">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                        <path d="M12 8v4" />
-                        <path d="M12 16h.01" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 9v4" />
+                        <path d="M12 16v.01" />
                       </svg>
                     </span>
-                  <p className="text-xl ">
-                    Let Small Business Helps translate your vision into a website that works for you.</p>
+                    <p className="text-xl ">
+                      Let Small Business Helps translate your vision into a website that works for you.</p>
                   </div>
                 </div>
 

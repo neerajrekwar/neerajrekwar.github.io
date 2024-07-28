@@ -13,7 +13,7 @@ const caveat = Caveat({
 
 export default function HomeSectionHeader() {
   return (
-    <header className="min-h-screen text-primary bg-primary overflow-hidden">
+    <header className="min-h-screen text-primary overflow-hidden">
       <div className="">
         <BackgroundBeamsDemo />
         <span className="absolute w-full opacity-75 flex justify-between  text-[.6rem] md:text-[.5rem] lg:text-[.7rem] top-2 text-four z-999  text-right top-2 right-2">

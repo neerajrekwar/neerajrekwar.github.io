@@ -8,7 +8,7 @@
   --color-primary: #FFFFFF;
   --color-secondary: #000000;
   --color-third: #2cffbf;
-  --color-four: #284b3d;
+  --color-four: #5e716a;
   --color-five: #1d3838;
   --color-six: #948a00;
   --color-seven: #47aa841c;
@@ -119,7 +119,7 @@ section.three {
       #a1b1c12c 1.5rem,
       transparent 1.5rem
     );
-  background-size: 5rem 5rem;
+  background-size: 20rem 5rem;
   background-position: 0 0, 0 2.5rem;
 }
 section.four {
