@@ -12,7 +12,12 @@ export function BackgroundBeamsDemo() {
     <div className="min-h-screen w-full relative flex flex-col items-start justify-center antialiased">
       <div className="max-w-5xl text-left mx-auto p-4">
 
-        <motion.div className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold">
+        <motion.div
+          initial={{opacity: 0, y: 100}}
+          whileInView={{ opacity: 1, y: 0 }}
+          
+
+          className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold">
           <Image
             src={"/me.jpg"}
             width={24}
@@ -20,7 +25,11 @@ export function BackgroundBeamsDemo() {
             alt="Digital marketing for expert"
             className="aspact-square h-10 w-10 rounded-full"
           />
-          <div className="font-semibold text-four">
+          <motion.div 
+            initial={{opacity: 0, y: 100}}
+            whileInView={{ opacity: 1, y: 0 }}
+            
+            className="font-semibold text-four">
             <p>Neeraj Rekwar</p>
             <div className="flex gap-1 h-4">
               <p className=" flex flex-row justify-start text-third items-center text-3xl">
@@ -30,7 +39,7 @@ export function BackgroundBeamsDemo() {
                 Available for freelance work
               </p>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
@@ -40,7 +49,7 @@ export function BackgroundBeamsDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative text-secondary font-bold z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  text-left"
+          className="relative text-secondary font-bold z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  text-left "
         >
           Build the right to way <br />
           <div>
@@ -82,16 +91,17 @@ export function BackgroundBeamsDemo() {
           <Link href={'/'}
             className="relative z-10 ">
             <motion.button
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{
-                type: "spring", stiffness: 400, damping: 17, delay: 1,
-                duration: 0.9,
+                type: "spring", stiffness: 400, damping: 17, delay: .3,
+                duration: 0.5,
                 ease: "easeInOut",
               }}
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="rounded-full p-2 px-4  bg-secondary"
+
+              className="rounded-full p-2 px-4  bg-five hover:bg-secondary  hover:text-primary hover:shadow-lg shadow-md  text-sm "
             >
 
               Get started
@@ -104,17 +114,17 @@ export function BackgroundBeamsDemo() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{
-                type: "spring", stiffness: 400, damping: 17, delay: 2,
+                type: "spring", stiffness: 400, damping: 17, delay: .6,
                 duration: 0.5,
                 ease: "easeInOut",
               }}
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
   
-              className="rounded-full p-2 px-4 bg-secondary"
+              className="rounded-full p-2 px-4  bg-five hover:bg-secondary   hover:text-primary hover:shadow-lg shadow-md  text-sm"
             >
 
-              Explore more
+              Explore
             </motion.button>
           </Link>
         </motion.div>

@@ -20,7 +20,7 @@ const TextFlipper: React.FC = () => {
   }, []);
 
   return (
-<div className="inline-flex text-four text-left md:h-20 lg:h-24 font-bold">
+<div className="inline-flex text-five text-left md:h-20 lg:h-24 font-bold">
      <div className={caveat.className}>
        <motion.div
          key={index}
