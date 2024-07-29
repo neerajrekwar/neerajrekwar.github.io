@@ -77,7 +77,8 @@
   transition: 0.5s;
 }
 
-.cbtn:hover::after, .cbtn:hover::before {
+.cbtn:hover::after,
+.cbtn:hover::before {
   width: 100%;
 }
 
@@ -85,8 +86,9 @@
   @apply border-none bg-transparent;
   --button-color: #000;
 }
+
 section.one {
-  
+
   background-image: linear-gradient(-45deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
     linear-gradient(45deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
     linear-gradient(-135deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
@@ -94,6 +96,7 @@ section.one {
   background-size: 4rem 4rem;
   background-position: 19rem 0, 19rem 0, 0 0, 0 0;
 }
+
 section.two {
   background-color: hsl(177, 27%, 69%);
   background-image: linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
@@ -102,26 +105,23 @@ section.two {
     linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%);
   background-size: 2rem 2rem, 2rem 2rem;
 }
+
 section.three {
-  /* background-color: #f9ffe0; */
-  /* background-color: #353535; */
-  background-image: radial-gradient(
-      circle at 100% 50%,
+  background-image: radial-gradient(circle at 100% 50%,
       transparent 1rem,
       #a1b1c12c 1rem,
       #a1b1c12c 1.5rem,
-      transparent 1.5rem
-    ),
-    radial-gradient(
-      circle at 0% 50%,
+      transparent 1.5rem),
+    radial-gradient(circle at 0% 50%,
       transparent 1rem,
       #a1b1c12c 1rem,
       #a1b1c12c 1.5rem,
-      transparent 1.5rem
-    );
+      transparent 1.5rem);
+
   background-size: 20rem 5rem;
   background-position: 0 0, 0 2.5rem;
 }
+
 section.four {
   background-image: url(), url(),
     linear-gradient(to right, rgb(0, 0, 0), rgb(255 255 255 / 0%));
@@ -132,12 +132,13 @@ section.four {
     right;
 
 }
+
 .textCllip {
-  background-image: linear-gradient(black , var(--color-third) 82%);
+  background-image: linear-gradient(black, var(--color-third) 82%);
   background-clip: text;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
 
@@ -152,9 +153,7 @@ section.four {
   display: inline-block;
   position: relative;
   width: 200px;
-  /* Adjust width as needed */
   height: 40px;
-  /* Adjust height as needed */
 }
 
 .step {

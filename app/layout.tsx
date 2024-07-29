@@ -1,5 +1,5 @@
 
-import { Alata, Source_Code_Pro, DM_Sans, } from "next/font/google";
+import { Alata, Source_Code_Pro, DM_Sans } from "next/font/google";
 import "./globals.css";
 import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";

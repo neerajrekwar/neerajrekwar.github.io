@@ -45,6 +45,7 @@ export default function Footer() {
 
   return (
     <>
+      <section className='three'>
       <footer className="bg-seven ">
         <div className="p-4 text-five py-10 max-w-6xl m-auto">
           <ul className="flex gap-2 mb-8 items-start flex-col">
@@ -134,9 +135,9 @@ export default function Footer() {
         <div className=" py-10  border-lime-400 max-w-6xl m-auto mx-auto grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-1.25 justify-center items-start h-auto">
           <div className="p-4 mb-10 text-five">
             <div className="flex gap-2 mb-8 items-center">
-              <span className="border-2 hover:bg-seven transition-all duration-10000 border-four rounded-full p-1">
+              <span className="bg-seven transition-all duration-10000 border-four rounded-full p-1">
                 <svg
-                  className="md:h-18 md:w-18 p-1"
+                  className="md:h-18 md:w-18 "
                   xmlns="http://www.w3.org/2000/svg"
                   height="28px"
                   viewBox="0 -960 960 960"
@@ -161,7 +162,7 @@ export default function Footer() {
                     <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z" />
                   </svg>
                 </span>
-                <span className="px-4 text-five ">
+                <span className="px-4 text-five  text-sm font-semibold sm:font-normal ">
                   Dwarka sec 7 New Delhi Delhi India 110075
                 </span>
               </li>
@@ -177,7 +178,7 @@ export default function Footer() {
                     <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z" />
                   </svg>
                 </span>
-                <span className="px-4 text-four text-sm">
+                <span className="px-4 text-four text-sm font-semibold sm:font-normal ">
                   {" "}
                   +91 704 214 9836
                 </span>
@@ -194,7 +195,7 @@ export default function Footer() {
                     <path d="M516-120 402-402 120-516v-56l720-268-268 720h-56Z" />
                   </svg>
                 </span>
-                <span className="px-4 text-four text-sm">
+                <span className="px-4 text-four text-sm font-semibold sm:font-normal ">
                   <a href="mailto:neerajrekwar817@gmail.com">
                     neerajrekwar817@gmail.com
                   </a>
@@ -204,9 +205,9 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-five">
             <div className="flex gap-2 mb-8 items-center">
-              <span className="border-2 hover:bg-seven transition-all duration-10000 border-four rounded-full p-1">
+            <span className="bg-seven transition-all duration-10000 border-four rounded-full p-1">
                 <svg
-                  className="md:h-18 md:w-18 p-1"
+                  className="md:h-18 md:w-18 "
                   xmlns="http://www.w3.org/2000/svg"
                   height="28px"
                   viewBox="0 -960 960 960"
@@ -220,10 +221,10 @@ export default function Footer() {
             </div>
             <ul className="">
               <a href="/" className="">
-                <li className="grid grid-flow-col gap-2 hover:bg-seven transition-all duration-1000  p-2 rounded-md justify-center border-black">
-                  <div className="aspact-square overflow-hidden  bg-cover bg-center">
+                <li className="grid grid-flow-col gap-2 hover:bg-seven transition-all duration-1000  p-2 rounded-md  justify-center border-black">
+                  <div className=" min-h-20 min-w-20  overflow-hidden  bg-cover bg-center">
                     <Image
-                      className="aspact-square  rounded-md"
+                      className="h-5f0 w-50  rounded-md"
                       src="https://images.unsplash.com/photo-1719937051058-63705ed35502?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Picture of the author"
                       width={100}
@@ -231,7 +232,7 @@ export default function Footer() {
                     />
                   </div>
                   <div className="flex-col flex justify-items-end justify-end p-1">
-                    <span className="md:text-1xl flex-wrap">
+                    <span className="md:text-1xl font-semibold flex-wrap">
                       enormous photography in nature
                     </span>
                     <span className="text-four text-xs ">
@@ -241,10 +242,10 @@ export default function Footer() {
                 </li>
               </a>
               <a href="/" className="">
-                <li className="grid grid-flow-col gap-2 hover:bg-seven transition-all duration-1000  p-2 rounded-md justify-center border-black">
-                  <div className="aspact-square overflow-hidden  bg-cover bg-center">
+                <li className="grid grid-flow-col gap-2 hover:bg-seven transition-all duration-1000  p-2 rounded-md  justify-center border-black">
+                  <div className=" min-h-20 min-w-20  overflow-hidden  bg-cover bg-center">
                     <Image
-                      className="aspact-square  rounded-md"
+                      className="h-5f0 w-50  rounded-md"
                       src="https://images.unsplash.com/photo-1719937051058-63705ed35502?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Picture of the author"
                       width={100}
@@ -252,8 +253,8 @@ export default function Footer() {
                     />
                   </div>
                   <div className="flex-col flex justify-items-end justify-end p-1">
-                    <span className="md:text-1xl flex-wrap">
-                      enormous photography in nature
+                    <span className="md:text-1xl font-semibold flex-wrap">
+                      enormous photography in nature 
                     </span>
                     <span className="text-four text-xs ">
                       07 jan, 2022 &#9679; Admin
@@ -261,13 +262,14 @@ export default function Footer() {
                   </div>
                 </li>
               </a>
+              
             </ul>
           </div>
           <div className="p-4 mb-10 text-five">
             <div className="flex gap-2 mb-8 items-center">
-              <span className="border-2 hover:bg-seven transition-all duration-10000 border-four rounded-full p-1">
+            <span className="bg-seven transition-all duration-10000 border-four rounded-full p-1">
                 <svg
-                  className="md:h-18 md:w-18 p-1"
+                  className="md:h-18 md:w-18 "
                   xmlns="http://www.w3.org/2000/svg"
                   height="28px"
                   viewBox="0 -960 960 960"
@@ -329,7 +331,7 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-five">
             <div className="flex gap-2 mb-8 items-center">
-              <span className="border-2 hover:bg-seven transition-all duration-10000 border-four rounded-full p-1">
+              <span className="bg-seven transition-all duration-10000 border-four rounded-full p-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
@@ -362,11 +364,12 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="opacity-50 border-t-[.2px] border-four mx-8 text-center flex flex-col text-xs p-4">
+        <div className="opacity-50  mx-4 text-center flex justify-between text-xs p-2">
           <span >Copyright ©2023 Neeraj Rekwar</span>
           <span >build by me</span>
         </div>
       </footer>
+      </section>
     </>
   );
 }
