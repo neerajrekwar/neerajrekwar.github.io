@@ -106,8 +106,8 @@ export function AuroraBackgroundDemo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
-                  type: "spring", stiffness: 400, damping: 17, delay: .3,
-                  duration: 0.5,
+                  type: "spring", stiffness: 400, damping: 17, delay: .1,
+                  duration: 0.2,
                   ease: "easeInOut",
                 }}
                 initial={{ opacity: 0, y: 10 }}
@@ -126,8 +126,8 @@ export function AuroraBackgroundDemo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
-                  type: "spring", stiffness: 400, damping: 17, delay: .6,
-                  duration: 0.5,
+                  type: "spring", stiffness: 400, damping: 17, delay: .1,
+                  duration: 0.2,
                   ease: "easeInOut",
                 }}
                 initial={{ opacity: 0, y: 10 }}

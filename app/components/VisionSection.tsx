@@ -257,7 +257,7 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="text-four  min-h-screen md:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
+        <div className="text-four  min-h-screen md:bg-gradient-to-l pt-2 from-seven  md:rounded-se-2xl">
           <div className="justify-center items-center flex my-10">
             <span className="text-five rounded-full bg-seven h-10 w-10 justify-center items-center flex p-4">
               2
@@ -289,7 +289,7 @@ export const VisionSection: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="p-2">
+          <div className="">
             <div className="flex    items-center md:flex-row-reverse md:flex ">
               <div className="flex  items-end">
                 <h4 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-four p-4 font-bold md:text-3xl lg:text-7xl">
@@ -312,8 +312,8 @@ export const VisionSection: React.FC = () => {
                   Make a Innovative customization
                 </h3>
               </div>
-              <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five  h-auto">
-                <li className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl hover:scale-95 duration-500 transition-all bg-secondary text-[#E5D352]">
+              <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five  bg-five h-auto">
+                <li className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl hover:scale-95 duration-500 transition-all  text-[#E5D352]">
                   <p className="basis-2/2 md:basis-1/2  md:text-6xl p-2">
                     online activity on smartphones 3hrs and 50min avg.{" "}
                   </p>
@@ -335,7 +335,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M16 9h2" />
                   </svg>
                 </li>
-                <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl hover:scale-95 duration-500 bg-secondary  text-[#FF6B6B]">
+                <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl hover:scale-95 duration-500   text-[#FF6B6B]">
                   <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                     Earthweb reports that 67% of the global
                   </p>
@@ -356,7 +356,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
                   </svg>
                 </li>
-                <li className="flex items-center  h-28 md:h-auto w-full md:w-auto p-1 m-2  rounded-2xl bg-secondary rounded-2xl hover:scale-95 duration-500 text-[#759FBC]">
+                <li className="flex items-center  h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl  rounded-2xl hover:scale-95 duration-500 text-[#759FBC]">
                   <p className="basis-2/2 md:basis-1/2  md:text-4xl p-2">
                     {" "}
                     smart streaming devices will be $9.2 billion by 2024.{" "}
@@ -382,7 +382,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M9 15l0 4" />
                   </svg>
                 </li>
-                <li className="flex col-span-2 flex-row-reverse  items-center rounded-2xl hover:scale-95 duration-500 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl bg-secondary text-[#B9B8D3]">
+                <li className="flex col-span-2 flex-row-reverse  items-center rounded-2xl hover:scale-95 duration-500 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
                   <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2">
                     2.16% tablet user in worldwide & digital landscape changing
                     in web3 after{" "}
@@ -404,7 +404,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M11 17a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
                   </svg>
                 </li>
-                <li className="flex col-span-2 items-center  justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl hover:scale-95 duration-500 bg-secondary rounded-2xl text-[#FF6F59]">
+                <li className="flex col-span-2 items-center  justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl hover:scale-95 duration-500 rounded-2xl text-[#FF6F59]">
                   <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2 ">
                     mobiles that users in use 37.23%
                   </p>
@@ -426,7 +426,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M12 17v.01" />
                   </svg>
                 </li>
-                <li className="flex flex-row-reverse items-center p-1 m-2 h-28 md:h-auto w-full md:w-auto rounded-2xl hover:scale-95 duration-500 rounded-2xl bg-secondary text-[#F6F4F3]">
+                <li className="flex flex-row-reverse items-center p-1 m-2 h-28 md:h-auto w-full md:w-auto rounded-2xl hover:scale-95 duration-500 rounded-2xl text-[#F6F4F3]">
                   <p className="basis-2/2 md:basis-1/2  p-1">
                     Desktops that users in use 60.61%{" "}
                   </p>
@@ -453,7 +453,7 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="text-four min-h-screen   md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
+        <div className="text-four min-h-screen py-4  md:bg-gradient-to-r from-seven md:rounded-ss-2xl">
           <div className="justify-center items-center flex my-10">
             <span className="text-five rounded-full bg-seven h-10 w-10 justify-center items-center flex p-4">
               3
@@ -466,7 +466,7 @@ export const VisionSection: React.FC = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              className="text-four basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 md:h-auto"
+              className="text-four basis-1/2 font-bold  rounded-2xl m-2 p-4 h-40 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
               <h2 className="  text-4xl md:text-6xl font-bold pb-2 text-five ">
