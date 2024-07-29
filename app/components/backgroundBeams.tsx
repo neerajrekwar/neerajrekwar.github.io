@@ -13,9 +13,9 @@ export function BackgroundBeamsDemo() {
       <div className="max-w-5xl text-left mx-auto p-4">
 
         <motion.div
-          initial={{opacity: 0, y: 100}}
+          initial={{opacity: 0, y: 10}}
           whileInView={{ opacity: 1, y: 0 }}
-          
+        
 
           className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold">
           <Image
@@ -101,7 +101,7 @@ export function BackgroundBeamsDemo() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-              className="rounded-full p-2 px-4  bg-five hover:bg-secondary  hover:text-primary hover:shadow-lg shadow-md  text-sm "
+              className="rounded-full p-2 px-4 p-2 px-4 md:p-3 md:px-6  bg-five hover:bg-secondary  hover:text-primary hover:shadow-lg shadow-md  "
             >
 
               Get started
@@ -121,7 +121,7 @@ export function BackgroundBeamsDemo() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
   
-              className="rounded-full p-2 px-4  bg-five hover:bg-secondary   hover:text-primary hover:shadow-lg shadow-md  text-sm"
+              className="rounded-full p-2 px-4 md:p-3 md:px-6  bg-five hover:bg-secondary hover:text-primary hover:shadow-lg shadow-md "
             >
 
               Explore

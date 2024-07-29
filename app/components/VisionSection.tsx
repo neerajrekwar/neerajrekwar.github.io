@@ -273,7 +273,7 @@ export const VisionSection: React.FC = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              className="text-4xl basis-1/2 font-bold rounded-2xl mx-2 p-4 h-60 md:h-auto"
+              className="text-4xl basis-1/2 font-bold rounded-2xl mx-2 p-4 h-40 md:h-auto"
             ></div>
             <div className="basis-1/2 text-base md:text-xl p-4">
               <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
@@ -547,7 +547,7 @@ export const VisionSection: React.FC = () => {
                 </p>
               </span>
             </div>
-            <div className="dm:flex-wrap sm:flex justify-center items-center gap-4">
+            <div className="lg:flex md:flex-wrap relative  justify-center items-center gap-4">
               <span className="flex flex-col p-2 h-auto text-five  w-[340px] hover:bg-seven transition-all duration-1000 text-center rounded-2xl justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -701,7 +701,7 @@ export const VisionSection: React.FC = () => {
                         <path d="M12 16v.01" />
                       </svg>
                     </span>
-                    <p className="text-xl ">
+                    <p className="text-xl">
                       Let Small Business Helps translate your vision into a
                       website that works for you.
                     </p>
