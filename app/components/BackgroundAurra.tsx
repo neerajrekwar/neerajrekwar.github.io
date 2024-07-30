@@ -87,7 +87,7 @@ export function AuroraBackgroundDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mx-auto my-2"
+            className="mx-auto my-2 text-xl"
           >
             We could be best on the web, We provide reliable, scalable, and
             customizable web solutions for your business.
@@ -103,7 +103,7 @@ export function AuroraBackgroundDemo() {
                   stiffness: 400,
                   damping: 17,
                   delay: 0.1,
-                  duration: 0.2,
+                  duration: 1,
                   ease: "easeInOut",
                 }}
                 initial={{ opacity: 0, y: 10 }}
@@ -122,7 +122,7 @@ export function AuroraBackgroundDemo() {
                   stiffness: 400,
                   damping: 17,
                   delay: 0.1,
-                  duration: 0.2,
+                  duration: 1,
                   ease: "easeInOut",
                 }}
                 initial={{ opacity: 0, y: 10 }}
