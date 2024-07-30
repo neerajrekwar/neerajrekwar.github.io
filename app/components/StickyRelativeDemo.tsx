@@ -73,7 +73,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
         <div className="relative basis-1/2 pt-10 overflow-hidden  border-rose-500">
-          <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm text-center text-secondary">
+          <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven backdrop-blur-sm antialiased text-sm text-center text-secondary">
             Showcase
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">
@@ -82,23 +82,27 @@ const StickyRelativeDemo: NextPage = () => {
               alt={"My Profile Picture"}
               width={300}
               height={300}
+              loading="lazy"
+              className="min-w-full min-h-full rounded-2xl "
+            />
+            <Image
+              src={"/projects/mypro.png"}
+              alt={"My Profile Picture"}
+              width={300}
+              height={300}
+              loading="lazy"
+              className="min-w-full min-h-full rounded-2xl "
+            />
+            <Image
+              src={"/projects/mypro.png"}
+              alt={"My Profile Picture"}
+              width={300}
+              height={300}
+              loading="lazy"
               className="min-w-full min-h-full rounded-2xl "
             />
 
-            <Image
-              src={"/projects/mypro.png"}
-              alt={"My Profile Picture"}
-              width={300}
-              height={300}
-              className="min-w-full min-h-full rounded-2xl "
-            />
-            <Image
-              src={"/projects/mypro.png"}
-              alt={"My Profile Picture"}
-              width={300}
-              height={300}
-              className="min-w-full min-h-full rounded-2xl "
-            />
+            
           </div>
         </div>
       </div>
