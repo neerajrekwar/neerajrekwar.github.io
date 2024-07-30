@@ -702,78 +702,152 @@ export const VisionSection: React.FC = () => {
                 </div>
               </div>
               <div className=" my-6  p-2">
-                <h1 className="text-4xl py-6 text-center m-auto max-w-3xl">
+                <h1 className="md:text-4xl text-2xl py-6 text-center m-auto max-w-3xl">
                   Maximized efficiency with fully automated best practices and
                   fully supported advanced tricks.
                 </h1>
-                    
-                     <div> SEO & Performance</div>
-                    
-                <div className=" md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3 flex-col sm:flex-shrink md:flex-col-2 gap-4">
-                  
-                  <div className="row-span-3 col-span-2 rounded-md p-2 bg-primary ">
-                    <h5 className="text-2xl  text-five  font-semibold">
+
+                <div>SEO & Performance</div>
+
+                <div className="flex flex-col md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 h-auto gap-4">
+                  <div className=" col-span-1 md:p-10 rounded-md my-4 p-2 bg-primary ">
+                    <h5 className="text-2xl text-five font-semibold">
                       Analytics
                     </h5>
-                    <p className="text-base text-secondary ">
-                      Effortlessly monitor all aspects of your performance with our robust, GDPR-compliant analytics, Google Analytics integration, and more.
+                    <p className="text-base py-2 text-secondary ">
+                      Effortlessly monitor all aspects of your performance with
+                      our robust, GDPR-compliant analytics, Google Analytics
+                      integration, and more.
                     </p>
+                    <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
+                      <Image
+                        src={"/projects/home/Analytics.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
-                  <div className="row-span-3 rounded-md p-2 bg-primary ">
+                  <div className="row-span-1 rounded-md  bg-primary md:p-10 my-4 p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Metadata
                     </h5>
-                    <p className="text-base text-secondary ">
-                      Ensure your page stands out with a compelling title and description, while our top-notch handles ensure search engine optimization.
+                    <p className="text-base py-2 text-secondary ">
+                      Ensure your page stands out with a compelling title and
+                      description, while our top-notch handles ensure search
+                      engine optimization.
                     </p>
+                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
+                      <Image
+                        src={"/projects/home/Dev_productivity.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
-                  <div className="row-span-3 rounded-md p-2 bg-primary ">
+                  <div className=" rounded-md  bg-primary md:p-10 my-4 p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Semantics
                     </h5>
                     <p className="text-base text-secondary ">
-                      Make sure to implement semantic tags on your websites to improve their structure.
+                      Make sure to implement semantic tags on your websites to
+                      improve their structure.
                     </p>
+                    <div className=" flex justify-center p-10 items-center m-2 p-2 bg-seven rounded-md">
+                      <Image
+                        src={"/projects/home/Semantics.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
-                  <div className="rounded-md p-2 bg-primary ">
+                  <div className=" rounded-md  bg-primary md:p-10 my-4 p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Accessibility
                     </h5>
                     <p className="text-base text-secondary ">
-                      Design inclusive and accessible websites by utilizing alt tags, Tab Index, element tags, and more.
+                      Design inclusive and accessible websites by utilizing alt
+                      tags, Tab Index, element tags, and more.
                     </p>
+                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
+                      <Image
+                        src={"/projects/home/Accessibility.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
-                  <div className="rounded-md p-2 bg-primary ">
+                  <div className="rounded-md  bg-primary md:p-10 my-4 p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Sitemap
                     </h5>
                     <p className="text-base text-secondary ">
-                      We understand the importance of generating a sitemap that reflects your site's structure for search bots.
+                      We understand the importance of generating a sitemap that
+                      reflects your site's structure for search bots.
                     </p>
+                    <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
+                      <Image
+                        src={"/projects/home/Sitemap.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
-                  <div className="row-span-2 rounded-md p-2 bg-primary ">
+                  <div className="rounded-md  bg-primary md:p-10 my-4 p-2 ">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Lighthouse Scores
                     </h5>
                     <p className="text-base text-secondary ">
-                      Ensure your page stands out with a compelling title and description, while our top-notch handles ensure search engine optimization.
+                      Ensure your page stands out with a compelling title and
+                      description, while our top-notch handles ensure search
+                      engine optimization.
                     </p>
+                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
+                      <Image
+                        src={"/projects/home/Dev_productivity.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
-                  <div className=" rounded-md p-2 bg-primary ">
+                  <div className="rounded-md  bg-primary md:p-10 my-4 p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Server Side Rendering
                     </h5>
-                    <p className="text-base text-secondary ">
-                      Boost your website speed with SSR: achieve faster load times and higher scores.
+                    <p className="text-base text-secondary">
+                      Boost your website speed with SSR: achieve faster load
+                      times and higher scores.
                     </p>
+                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
+                      <Image
+                        src={"/projects/home/Dev_productivity.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
-                  <div className="col-span-2 rounded-md p-2 bg-primary ">
+                  <div className="md:p-10 col-span-2 rounded-md  bg-primary md:p-10 my-4 p-2 ">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Hosting
                     </h5>
-                    <p className="text-base text-secondary ">
-                    Experience lightning-fast page loading, no matter where you are in the world.
+                    <p className="text-base text-secondary">
+                      Experience lightning-fast page loading, no matter where
+                      you are in the world.
                     </p>
+                    <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
+                      <Image
+                        src={"/projects/home/hosting.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
