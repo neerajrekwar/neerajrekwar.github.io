@@ -682,7 +682,7 @@ export const VisionSection: React.FC = () => {
             <div className="">
               <div></div>
               <div>
-                <div className="md:flex flex-1 text-five p-2 justify-center items-center">
+                <div className="md:flex  flex-1 text-five p-2 justify-center items-center">
                   <div className="flex basis-1/2 justify-center items-center">
                     <Image
                       src={"/projects/home/Startup_life.svg"}
@@ -709,18 +709,19 @@ export const VisionSection: React.FC = () => {
 
                 <div>SEO & Performance</div>
 
-                <div className="flex flex-col md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 h-auto gap-4">
-                  <div className=" col-span-1 md:p-10 rounded-md my-4 p-2 bg-primary ">
+                <div className="flex flex-col md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 max-h-fit gap-4">
+                  <div className=" col-span-2 rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
                     <h5 className="text-2xl text-five font-semibold">
                       Analytics
                     </h5>
-                    <p className="text-base py-2 text-secondary ">
+                    <p className="py-2 text-secondary ">
                       Effortlessly monitor all aspects of your performance with
                       our robust, GDPR-compliant analytics, Google Analytics
                       integration, and more.
                     </p>
                     <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                       <Image
+                        className="h-64 w-64"
                         src={"/projects/home/Analytics.svg"}
                         width={300}
                         height={200}
@@ -728,11 +729,11 @@ export const VisionSection: React.FC = () => {
                       />
                     </div>
                   </div>
-                  <div className="row-span-1 rounded-md  bg-primary md:p-10 my-4 p-2">
+                  <div className="row-span-1 rounded-md  bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2 ">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Metadata
                     </h5>
-                    <p className="text-base py-2 text-secondary ">
+                    <p className=" py-2 text-secondary ">
                       Ensure your page stands out with a compelling title and
                       description, while our top-notch handles ensure search
                       engine optimization.
@@ -746,11 +747,11 @@ export const VisionSection: React.FC = () => {
                       />
                     </div>
                   </div>
-                  <div className=" rounded-md  bg-primary md:p-10 my-4 p-2">
+                  <div className=" rounded-md  bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2 ">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Semantics
                     </h5>
-                    <p className="text-base text-secondary ">
+                    <p className=" text-secondary ">
                       Make sure to implement semantic tags on your websites to
                       improve their structure.
                     </p>
@@ -763,11 +764,11 @@ export const VisionSection: React.FC = () => {
                       />
                     </div>
                   </div>
-                  <div className=" rounded-md  bg-primary md:p-10 my-4 p-2">
+                  <div className="col-span-2 rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Accessibility
                     </h5>
-                    <p className="text-base text-secondary ">
+                    <p className=" text-secondary ">
                       Design inclusive and accessible websites by utilizing alt
                       tags, Tab Index, element tags, and more.
                     </p>
@@ -779,29 +780,12 @@ export const VisionSection: React.FC = () => {
                         alt="find best practice Analytice"
                       />
                     </div>
-                  </div>
-                  <div className="rounded-md  bg-primary md:p-10 my-4 p-2">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Sitemap
-                    </h5>
-                    <p className="text-base text-secondary ">
-                      We understand the importance of generating a sitemap that
-                      reflects your site&apos;s structure for search bots.
-                    </p>
-                    <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
-                      <Image
-                        src={"/projects/home/Sitemap.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
-                  </div>
-                  <div className="rounded-md  bg-primary md:p-10 my-4 p-2 ">
+                  </div>        
+                  <div className="col-span-2 rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start  md:text-xl  p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Lighthouse Scores
                     </h5>
-                    <p className="text-base text-secondary ">
+                    <p className=" text-secondary ">
                       Ensure your page stands out with a compelling title and
                       description, while our top-notch handles ensure search
                       engine optimization.
@@ -815,11 +799,28 @@ export const VisionSection: React.FC = () => {
                       />
                     </div>
                   </div>
-                  <div className="rounded-md  bg-primary md:p-10 my-4 p-2">
+                  <div className="rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
+                    <h5 className="text-2xl  text-five  font-semibold">
+                      Sitemap
+                    </h5>
+                    <p className=" text-secondary ">
+                      We understand the importance of generating a sitemap that
+                      reflects your site&apos;s structure for search bots.
+                    </p>
+                    <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
+                      <Image
+                        src={"/projects/home/Sitemap.svg"}
+                        width={300}
+                        height={200}
+                        alt="find best practice Analytice"
+                      />
+                    </div>
+                  </div>
+                  <div className="rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Server Side Rendering
                     </h5>
-                    <p className="text-base text-secondary">
+                    <p className=" text-secondary">
                       Boost your website speed with SSR: achieve faster load
                       times and higher scores.
                     </p>
@@ -832,16 +833,17 @@ export const VisionSection: React.FC = () => {
                       />
                     </div>
                   </div>
-                  <div className="md:p-10 col-span-2 rounded-md  bg-primary md:p-10 my-4 p-2 ">
+                  <div className="md:p-10 col-span-2 rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Hosting
                     </h5>
-                    <p className="text-base text-secondary">
+                    <p className="text-secondary">
                       Experience lightning-fast page loading, no matter where
                       you are in the world.
                     </p>
-                    <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
+                    <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md ">
                       <Image
+                        className=""
                         src={"/projects/home/hosting.svg"}
                         width={300}
                         height={200}
