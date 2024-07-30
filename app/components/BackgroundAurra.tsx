@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "./ui/aurora-background";
@@ -7,7 +7,6 @@ import { Caveat } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import TextFlipper from "./TextFlipper";
-
 
 export function AuroraBackgroundDemo() {
   return (
@@ -23,13 +22,11 @@ export function AuroraBackgroundDemo() {
         className="relative three flex flex-col gap-4 items-center justify-center px-4"
       >
         <div className="max-w-5xl text-left mx-auto p-4">
-
           <motion.div
-            initial={{opacity: 0, y: 10}}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
-            className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold">
+            className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold"
+          >
             <Image
               src={"/me.jpg"}
               width={24}
@@ -37,11 +34,11 @@ export function AuroraBackgroundDemo() {
               alt="Digital marketing for expert"
               className="aspact-square h-10 w-10 rounded-full"
             />
-            <motion.div 
-              initial={{opacity: 0, y: 100}}
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              className="font-semibold text-four">
+              className="font-semibold text-four"
+            >
               <p>Neeraj Rekwar</p>
               <div className="flex gap-1 h-4">
                 <p className=" flex flex-row justify-start text-third items-center text-3xl">
@@ -80,9 +77,7 @@ export function AuroraBackgroundDemo() {
               ease: "backIn",
             }}
             className="flex w-full flex-col items-center justify-center"
-          >
-
-          </motion.div>
+          ></motion.div>
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,64 +88,55 @@ export function AuroraBackgroundDemo() {
             }}
             className="text-four  mx-auto my-2 sm:text-xl text-base relative z-10"
           >
-            We could be best on the web, We provide reliable, scalable, and customizable web solutions for
-            your business. Whether you&apos;re sending order any bug fix in your web, or tools, nee. has got you
+            We could be best on the web, We provide reliable, scalable, and
+            customizable web solutions for your business. Whether you&apos;re
+            sending order any bug fix in your web, or tools, nee. has got you
             covered.
           </motion.p>
 
           <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">
-
-            <Link href={'/'}
-              className="relative z-10 ">
+            <Link href={"https://84243cc8-6929-4062-809e-d7d9dda777bf-00-2j91rfjnf9ve1.pike.replit.dev/"} className="relative z-10 ">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
-                  type: "spring", stiffness: 400, damping: 17, delay: .1,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                  delay: 0.1,
                   duration: 0.2,
                   ease: "easeInOut",
                 }}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
                 className="rounded-full p-2 px-4 p-2 px-4 md:p-3 md:px-6  bg-five text-primary text-base hover:bg-secondary hover:text-primary hover:shadow-lg shadow-md bg-clip"
               >
-
                 Get started
               </motion.button>
             </Link>
-            <Link href={'#vision'} scroll={true}
-
-              className="relative z-10">
+            <Link href={"#vision"} scroll={true} className="relative z-10">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
-                  type: "spring", stiffness: 400, damping: 17, delay: .1,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                  delay: 0.1,
                   duration: 0.2,
                   ease: "easeInOut",
                 }}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
                 className="rounded-full p-2 px-4 p-2 px-4 md:p-3 md:px-6  bg-five text-primary text-base hover:bg-secondary hover:text-primary hover:shadow-lg shadow-md "
               >
-
                 Explore
               </motion.button>
             </Link>
           </motion.div>
         </div>
+
         
-        {/* <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Background lights are cool you know.
-        </div>
-        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-          And this, is chemical burn.
-        </div>
-        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
-          Debug now
-        </button> */}
       </motion.div>
     </AuroraBackground>
   );

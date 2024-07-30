@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HomeSectionHeader from "./components/homeSectionHeader";
-import AdminWeather from "./components/AdminWeather";
 import IntroSection from "./components/introSection";
 import { ReviewSection } from "./components/reviewSection";
 
