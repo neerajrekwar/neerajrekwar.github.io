@@ -29,7 +29,7 @@ export default function HomeSectionHeader() {
               </Link>
             </div>
             <div className="grid justify-items-end">
-              <div className="text-five md:text-sm">
+              <div className=" text-secondary font-bold">
                 <DeviceAddress />
               </div>
             </div>
