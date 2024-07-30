@@ -59,7 +59,7 @@ export function AuroraBackgroundDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="relative text-five font-bold z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  text-left "
+            className="relative text-five font-bold z-10 md:pb-4 text-3xl sm:text-lg md:text-8xl  text-left "
           >
             Build the right to way <br />
             <div>
@@ -87,7 +87,7 @@ export function AuroraBackgroundDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mx-auto my-2 text-xl"
+            className="mx-auto my-2 sm:text-xl"
           >
             We could be best on the web, We provide reliable, scalable, and
             customizable web solutions for your business.
