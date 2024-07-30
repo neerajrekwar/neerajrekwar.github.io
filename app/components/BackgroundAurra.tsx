@@ -28,7 +28,7 @@ export function AuroraBackgroundDemo() {
             className="gap-2 flex mb-10 flex-row  justify-start items-center text-semibold"
           >
             <Image
-              src={"/me.jpg"}
+              src={"/me.webp"}
               width={24}
               height={24}
               loading="lazy"
