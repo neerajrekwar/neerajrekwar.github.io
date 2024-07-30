@@ -38,14 +38,14 @@ export function AuroraBackgroundDemo() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="font-semibold text-four"
+              className="font-semibold text-secondary"
             >
               <p>Neeraj Rekwar</p>
               <div className="flex gap-1 h-4">
                 <p className=" flex flex-row justify-start text-third items-center text-3xl">
                   &#8226;
                 </p>
-                <p className="text-four flex flex-row justify-start items-center font-normal text-sm">
+                <p className="text-five flex flex-row justify-start items-center font-normal text-sm">
                   Available for freelance work
                 </p>
               </div>
@@ -97,6 +97,7 @@ export function AuroraBackgroundDemo() {
             <Link href={"https://84243cc8-6929-4062-809e-d7d9dda777bf-00-2j91rfjnf9ve1.pike.replit.dev/"} rel="preload" className="relative z-10 ">
               <motion.button
                 whileHover={{ scale: 1.1 }}
+                whileFocus={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
                   type: "spring",
@@ -108,7 +109,7 @@ export function AuroraBackgroundDemo() {
                 }}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="rounded-full p-2 px-4 p-2 px-4 md:p-3 md:px-6  bg-five text-primary text-base hover:bg-secondary hover:text-primary hover:shadow-lg shadow-md bg-clip"
+                className="rounded-full p-2 px-4 p-2 px-4 md:p-3 md:px-6  bg-five text-primary text-base hover:bg-secondary hover:text-primary hover:shadow-lg shadow-md "
               >
                 Get started
               </motion.button>
@@ -116,11 +117,12 @@ export function AuroraBackgroundDemo() {
             <Link href={"#vision"} scroll={true} rel="preload" className="relative z-10">
               <motion.button
                 whileHover={{ scale: 1.1 }}
+                whileFocus={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
                   type: "spring",
                   stiffness: 400,
-                  damping: 17,
+                  damping: 70,
                   delay: 0.1,
                   duration: 1,
                   ease: "easeInOut",

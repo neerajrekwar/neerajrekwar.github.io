@@ -23,43 +23,43 @@ const StickyRelativeDemo: NextPage = () => {
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
-              <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm  text-five text-center text-secondary">
+              <div className="mb-4 p-2 px-3 max-w-fit rounded-full border bg-seven border-seven backdrop-blur-sm antialiased text-sm  text-five text-center text-secondary">
                 2024
               </div>
             </div>
-            <div className="text-six sm:pr-10 backdrop-blur-sm">
+            <div className="sm:pr-10 backdrop-blur-sm">
               <div className="max-w-2xl text-five ">
-                <h2 className="text-2xl text-secondary py-3 pb-3 font-semibold ">
+                <h2 className="text-3xl text-four py-3 pb-3 font-semibold ">
                   Craft &amp; Code: Building the Future, One Line at a Time
                 </h2>
                 <div>
-                  <p className="text-base">
+                  <p className="text-base ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repudiandae quo natus accusantium eius molestiae expedita
+                    Repudiandae quo natus accusantium eius molestiae expedita <br />
                     possimus accusamus, aspernatur, quia quae asperiores
                     inventore. Quod, officia vel aliquam exercitationem est
                     inventore porro?
                   </p>
                 </div>
               </div>
-              <div className="text-sm text-secondary pt-12 ">
+              <div className="text-sm text-five pt-10 ">
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="font-normal">Role</li>
-                  <li>Digital Marketing</li>
+                  <li className="text-four">Digital Marketing</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="font-normal">Deliverables</li>
-                  <li>Survey checks</li>
+                  <li className="text-four">Survey checks</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="  font-normal">Company</li>
-                  <li>VMR</li>
+                  <li className="text-four">VMR</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven fill-five">
                   <li className="font-normal">Visit Site</li>
-                  <li className="px-2">
-                    <Link href="https://veecrew.com" className="">
-                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
+                  <li className="px-2 text-five ">
+                    <Link href="https://veecrew.com" className="text-five">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="var(--four)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M5 12l14 0" />
                         <path d="M15 16l4 -4" />
