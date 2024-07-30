@@ -21,7 +21,7 @@ export function AuroraBackgroundDemo() {
         }}
         className="relative three flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="max-w-5xl text-left mx-auto p-4">
+        <div className="max-w-5xl text-left mx-auto ">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export function AuroraBackgroundDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="relative text-secondary font-bold z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  text-left "
+            className="relative text-five font-bold z-10 md:pb-4 text-2xl sm:text-lg md:text-7xl  text-left "
           >
             Build the right to way <br />
             <div>
