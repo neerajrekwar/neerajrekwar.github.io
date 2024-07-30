@@ -21,11 +21,11 @@ export function AuroraBackgroundDemo() {
         }}
         className="relative three flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="max-w-5xl text-left mx-auto ">
+        <div className="max-w-5xl text-left mx-auto text-four">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="gap-2 flex mb-10 flex-row justify-start items-center text-semibold"
+            className="gap-2 flex mb-10 flex-row  justify-start items-center text-semibold"
           >
             <Image
               src={"/me.jpg"}
@@ -86,7 +86,7 @@ export function AuroraBackgroundDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="text-four  mx-auto my-2 sm:text-xl text-base relative z-10"
+            className="mx-auto my-2"
           >
             We could be best on the web, We provide reliable, scalable, and
             customizable web solutions for your business. Whether you&apos;re
