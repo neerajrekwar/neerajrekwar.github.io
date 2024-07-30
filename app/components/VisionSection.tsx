@@ -24,6 +24,7 @@ export const VisionSection: React.FC = () => {
                 src={"/projects/home/elements.svg"}
                 height={500}
                 width={500}
+                loading="lazy"
                 alt="ui best in your we3b"
               />
             </div>
@@ -62,6 +63,7 @@ export const VisionSection: React.FC = () => {
                   className=""
                   width={300}
                   height={300}
+                  loading="lazy"
                   alt="best programing tech development"
                 />
               </div>
@@ -678,6 +680,7 @@ export const VisionSection: React.FC = () => {
                     className="  md:p-10 p-8  m-2  bg-seven rounded-2xl"
                     width={300}
                     height={300}
+                    loading="lazy"
                     alt="Startup life"
                   />
                 </div>

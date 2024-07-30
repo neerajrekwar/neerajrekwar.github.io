@@ -31,7 +31,7 @@ export function AuroraBackgroundDemo() {
               src={"/me.jpg"}
               width={24}
               height={24}
-              rel="preload"
+              loading="lazy"
               alt="Digital marketing for expert"
               className="aspact-square h-10 w-10 rounded-full"
             />
@@ -94,7 +94,7 @@ export function AuroraBackgroundDemo() {
           </motion.p>
 
           <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">
-            <Link href={"https://84243cc8-6929-4062-809e-d7d9dda777bf-00-2j91rfjnf9ve1.pike.replit.dev/"} className="relative z-10 ">
+            <Link href={"https://84243cc8-6929-4062-809e-d7d9dda777bf-00-2j91rfjnf9ve1.pike.replit.dev/"} rel="preload" className="relative z-10 ">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -113,7 +113,7 @@ export function AuroraBackgroundDemo() {
                 Get started
               </motion.button>
             </Link>
-            <Link href={"#vision"} scroll={true} className="relative z-10">
+            <Link href={"#vision"} scroll={true} rel="preload" className="relative z-10">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
