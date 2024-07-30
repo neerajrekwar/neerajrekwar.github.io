@@ -31,6 +31,7 @@ export function AuroraBackgroundDemo() {
               src={"/me.jpg"}
               width={24}
               height={24}
+              rel="preload"
               alt="Digital marketing for expert"
               className="aspact-square h-10 w-10 rounded-full"
             />
@@ -89,9 +90,7 @@ export function AuroraBackgroundDemo() {
             className="mx-auto my-2"
           >
             We could be best on the web, We provide reliable, scalable, and
-            customizable web solutions for your business. Whether you&apos;re
-            sending order any bug fix in your web, or tools, nee. has got you
-            covered.
+            customizable web solutions for your business.
           </motion.p>
 
           <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">

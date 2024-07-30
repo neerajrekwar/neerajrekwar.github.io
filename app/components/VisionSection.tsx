@@ -312,8 +312,11 @@ export const VisionSection: React.FC = () => {
                   Make a Innovative customization
                 </h3>
               </div>
-              <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five bg-seven rounded-lg m-2 h-auto">
-                <li className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl bg-gradient-to-t from-gray-800 to-gray-700 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
+              <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 h-auto">
+                <motion.li
+                  
+                  initial={{ }}
+                  className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl bg-gradient-to-t from-gray-800 to-gray-700 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
                   <p className="basis-2/2 md:basis-1/2  md:text-6xl p-2">
                     online activity on smartphones 3hrs and 50min avg.{" "}
                   </p>
@@ -334,7 +337,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M18 8v-3a1 1 0 0 0 -1 -1h-13a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1h9" />
                     <path d="M16 9h2" />
                   </svg>
-                </li>
+                </motion.li>
                 <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-800 to-gray-700 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
                   <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                     Earthweb reports that 67% of the global
@@ -427,7 +430,7 @@ export const VisionSection: React.FC = () => {
                     <path d="M12 17v.01" />
                   </svg>
                 </li>
-                <li className="flex col-span-2 items-center  justify-center h-28 md:h-auto w-full md:w-auto p-1 duration-500 m-2 bg-gradient-to-t from-gray-800 to-gray-700 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
+                <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-800 to-gray-700 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
                   <p className="basis-2/2 md:basis-1/2  p-1">
                     Desktops that users in use 60.61%{" "}
                   </p>
