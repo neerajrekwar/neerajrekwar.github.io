@@ -786,7 +786,7 @@ export const VisionSection: React.FC = () => {
                     </h5>
                     <p className="text-base text-secondary ">
                       We understand the importance of generating a sitemap that
-                      reflects your site's structure for search bots.
+                      reflects your site&apos;s structure for search bots.
                     </p>
                     <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
                       <Image
