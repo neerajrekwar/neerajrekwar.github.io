@@ -2,7 +2,7 @@ import { TextGenerateEffectDemo } from "./textGenerate";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Backgroundmax } from "./ui/backgroundBeams";
+
 import {Caveat} from "next/font/google"
 
 const caveat = Caveat({
