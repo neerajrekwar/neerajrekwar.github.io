@@ -297,7 +297,7 @@ export const VisionSection: React.FC = () => {
             <div className="">
               <div className="flex    items-center md:flex-row-reverse md:flex ">
                 <div className="flex  items-end">
-                  <h4 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-four p-4 font-bold md:text-3xl lg:text-7xl">
+                  <h4 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r  from-four p-4 font-bold md:text-3xl lg:text-7xl">
                     How to evolved a screen that effectiveness in browsing
                   </h4>
                 </div>
