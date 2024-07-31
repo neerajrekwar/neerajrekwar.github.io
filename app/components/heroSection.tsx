@@ -1,4 +1,3 @@
-import FlipperComponent from "./FlipComponent";
 import { TextGenerateEffectDemo } from "./textGenerate";
 import Image from "next/image";
 
@@ -10,7 +9,7 @@ export function HeroSection() {
           <figure className="w-auto flex-1 border-blue-500 sm:justify-between sm:flex sm:border-green-500 ">
             <div className="aspact-sqaure md:w-[40vw] h-[18rem] sm:h-[30rem]  grid items-center h-atuo border-lime-600 justify-items-center sm:justify-items-end md:justify-items-center">
               <Image
-                src="/me.jpg"
+                src="/me.webp"
                 width={350}
                 height={350}
                 alt="Picture of the author"
@@ -19,7 +18,7 @@ export function HeroSection() {
             </div>
             <div className="m-2 border-yellow-600  self-end">
               <h2 className="font-bold text-[#353535] text-xl pt-4 pb-2 md:text-4xl lg:text-4xl">
-                <FlipperComponent />
+                
               </h2>
               <figcaption className="mb-4 md:pb-8 antialiased">
                 <TextGenerateEffectDemo />

@@ -364,7 +364,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="opacity-50  mx-4 text-center flex justify-between text-xs p-2">
+        <div className="opacity-75 border-t-[.2px] border-four   mx-4 text-center flex justify-between text-xs text-five p-2">
           <span >Copyright ©2023 Neeraj Rekwar</span>
           <span >build by me</span>
         </div>

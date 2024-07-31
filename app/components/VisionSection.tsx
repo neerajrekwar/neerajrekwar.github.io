@@ -8,8 +8,8 @@ export const VisionSection: React.FC = () => {
   return (
     <>
       <div className=" ">
-        <div className="p-2 justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
-          <div className="text-4xl text-third sm:text-5xl sm:mx-2">&#8226;</div>
+        <div className="p-2 max-w-6xl m-auto justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
+          <div className="text-4xl  text-third sm:text-5xl sm:mx-2">&#8226;</div>
           Vision to the Future
         </div>
         <div className="justify-center items-center flex my-10">
@@ -295,13 +295,13 @@ export const VisionSection: React.FC = () => {
               </div>
             </div>
             <div className="">
-              <div className="flex    items-center md:flex-row-reverse md:flex ">
-                <div className="flex  items-end">
-                  <h4 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r  from-four p-4 font-bold md:text-3xl lg:text-7xl">
+              <div className="flex  justify-between border-rose-500 md:mt-20 items-center md:flex-row-reverse md:flex ">
+                <div className="flex basis-1/2 items-end">
+                  <h4 className="text-2xl m-2 md:text-6xl font-bold pb-2 text-four   ">
                     How to evolved a screen that effectiveness in browsing
                   </h4>
                 </div>
-                <div className=" bg-seven  p-4 h-fit rounded-3xl">
+                <div className=" m-4 bg-seven basis-1/2 flex justify-center p-4 w-fit rounded-3xl">
                   <Image
                     className=""
                     src="/projects/home/Futuristic_interface.svg"
@@ -313,9 +313,13 @@ export const VisionSection: React.FC = () => {
               </div>
               <div className="md:flex-col gap-2 my-10 flex-row-reverse">
                 <div className="flex items-center ">
-                  <h3 className="md:text-5xl text-3xl  px-4 text-five   font-semibold">
+                  <h3 className="md:text-4xl text-2xl py-6 text-center m-auto max-w-3xl">
                     Make a Innovative customization
                   </h3>
+                  
+                </div>
+                <div className="flex justify-center my-8">
+                  <span className="p-2 px-3 bg-seven rounded-full w-fit ">How &apos;s need it</span>
                 </div>
                 <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 h-auto text-four">
                   <motion.li
@@ -666,7 +670,7 @@ export const VisionSection: React.FC = () => {
                 </h2>
                 <p>
                   <strong className="text-five font-normal">
-                    Are you struggling to establish your online presence?
+                    Are you struggling to establish your online presence?{" "}
                   </strong>
                   Small Business Helps can be your one-stop shop for all your
                   web development needs. We understand the unique challenges
@@ -707,7 +711,9 @@ export const VisionSection: React.FC = () => {
                   fully supported advanced tricks.
                 </h1>
 
-                <div>SEO & Performance</div>
+                <div className="flex justify-center">
+                  <span className="p-2 px-3 bg-seven rounded-full w-fit ">SEO & Performance</span>
+                </div>
 
                 <div className="flex flex-col md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 max-h-fit gap-4">
                   <div className=" col-span-2 rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
