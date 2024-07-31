@@ -261,8 +261,8 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="border-third ">
-          <div className="text-four  max-w-6xl m-auto min-h-screen md:bg-gradient-to-l pt-2 from-seven  md:rounded-se-2xl">
+        <div className="border-third three ">
+          <div className="text-four  max-w-6xl m-auto min-h-screen pt-2 ">
             <div className="justify-center items-center flex my-10">
               <span className="text-five rounded-full bg-seven h-10 w-10 justify-center items-center flex p-4">
                 2
@@ -321,10 +321,10 @@ export const VisionSection: React.FC = () => {
                 <div className="flex justify-center my-8">
                   <span className="p-2 px-3 bg-seven rounded-full w-fit ">How &apos;s need it</span>
                 </div>
-                <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 h-auto text-four">
+                <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-four rounded-lg m-2 h-auto ">
                   <motion.li
                     initial={{}}
-                    className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl "
+                    className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2  "
                   >
                     <p className="basis-2/2 md:basis-1/2  md:text-6xl p-2">
                       online activity on smartphones 3hrs and 50min avg.{" "}
@@ -347,7 +347,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M16 9h2" />
                     </svg>
                   </motion.li>
-                  <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
+                  <li className="flex flex-row-reverse items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2  ">
                     <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       Earthweb reports that 67% of the global
                     </p>
@@ -369,8 +369,7 @@ export const VisionSection: React.FC = () => {
                     </svg>
                   </li>
                   <li
-                    className="flex items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl hover:scale-95 
-                  bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl "
+                    className="flex items-center items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 "
                   >
                     <p className="basis-2/2 md:basis-1/2  md:text-4xl p-2">
                       {" "}
@@ -397,7 +396,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M9 15l0 4" />
                     </svg>
                   </li>
-                  <li className="flex col-span-2 flex-row-reverse  items-center rounded-2xl hover:scale-95 duration-500 bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
+                  <li className="flex col-span-2 flex-row-reverse items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 ">
                     <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2">
                       2.16% tablet user in worldwide & digital landscape
                       changing in web3 after{" "}
@@ -419,7 +418,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M11 17a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
                     </svg>
                   </li>
-                  <li className="flex col-span-2 items-center  justify-center h-28 md:h-auto w-full md:w-auto p-1 duration-500 m-2 bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
+                  <li className="flex col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 ">
                     <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2 ">
                       mobiles that users in use 37.23%
                     </p>
@@ -441,7 +440,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M12 17v.01" />
                     </svg>
                   </li>
-                  <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
+                  <li className="flex flex-row-reverse items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 ">
                     <p className="basis-2/2 md:basis-1/2  p-1">
                       Desktops that users in use 60.61%{" "}
                     </p>

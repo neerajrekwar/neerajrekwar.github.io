@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 import { FlipWordsDemo } from "../components/FlipWords";
-import HeroSection from "./components/heroSection";
+import HeroSection from "../components/heroSection";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -11,21 +11,8 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="antialiased overflow-hidden">
+    <section className="">
       <HeroSection />
-      <div className="">
-      </div>
-      <section className=" m-2 bg-white dark:bg-black dark:text-white">
-        <div className="">
-          <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            
-          </div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorem
-          exercitationem quam ad reiciendis perspiciatis dignissimos ea
-          assumenda ducimus quasi, non vel quidem, suscipit eius, illo
-          voluptatibus eaque inventore. Veritatis.
-        </div>
-      </section>
-    </main>
+    </section>
   );
 }

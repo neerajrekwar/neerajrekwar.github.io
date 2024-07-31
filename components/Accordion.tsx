@@ -8,7 +8,7 @@ import {
 export function AccordionDemo() {
   return (
     <>
-      <div className="text-five text-left">
+      <div className="text-five min-h-screen pt-20  text-left">
         <div className="max-w-6xl p-2 m-auto">
           <div className="text-center text-2xl">FAQ</div>
           <Accordion type="single" collapsible className="w-full text-left">

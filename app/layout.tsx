@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   
   return (
-    <html lang="en" className="scroll-smooth focus:scroll-auto">
+    <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto">
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
         <ThemeProvider>{children}</ThemeProvider>
