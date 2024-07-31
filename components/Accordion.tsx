@@ -15,13 +15,13 @@ export function AccordionDemo() {
             <AccordionItem value="item-1">
               <AccordionTrigger>What web solutions do you offer?</AccordionTrigger>
               <AccordionContent>
-                We offer responsive web design services to improve user experience across different devices. Our solutions include successful implementation examples and can help boost user engagement and conversion rates for businesses. Let's discuss how we can tailor our web solutions to meet your needs.
+                We offer responsive web design services to improve user experience across different devices. Our solutions include successful implementation examples and can help boost user engagement and conversion rates for businesses. Let&apos;s discuss how we can tailor our web solutions to meet your needs.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger>How scalable are your web solutions?</AccordionTrigger>
               <AccordionContent>
-                I&apos;ve noted down your request to remember the text "How scalable are your web solutions?"
+                I&apos;ve noted down your request to remember the text How scalable are your web solutions?
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
