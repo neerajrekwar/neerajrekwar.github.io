@@ -317,10 +317,10 @@ export const VisionSection: React.FC = () => {
                     Make a Innovative customization
                   </h3>
                 </div>
-                <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 h-auto">
+                <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 h-auto text-four">
                   <motion.li
                     initial={{}}
-                    className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]"
+                    className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl "
                   >
                     <p className="basis-2/2 md:basis-1/2  md:text-6xl p-2">
                       online activity on smartphones 3hrs and 50min avg.{" "}
@@ -343,7 +343,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M16 9h2" />
                     </svg>
                   </motion.li>
-                  <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
+                  <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
                     <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       Earthweb reports that 67% of the global
                     </p>
@@ -366,7 +366,7 @@ export const VisionSection: React.FC = () => {
                   </li>
                   <li
                     className="flex items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl hover:scale-95 
-                  bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]"
+                  bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl "
                   >
                     <p className="basis-2/2 md:basis-1/2  md:text-4xl p-2">
                       {" "}
@@ -393,7 +393,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M9 15l0 4" />
                     </svg>
                   </li>
-                  <li className="flex col-span-2 flex-row-reverse  items-center rounded-2xl hover:scale-95 duration-500 bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
+                  <li className="flex col-span-2 flex-row-reverse  items-center rounded-2xl hover:scale-95 duration-500 bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
                     <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2">
                       2.16% tablet user in worldwide & digital landscape
                       changing in web3 after{" "}
@@ -415,7 +415,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M11 17a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
                     </svg>
                   </li>
-                  <li className="flex col-span-2 items-center  justify-center h-28 md:h-auto w-full md:w-auto p-1 duration-500 m-2 bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
+                  <li className="flex col-span-2 items-center  justify-center h-28 md:h-auto w-full md:w-auto p-1 duration-500 m-2 bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
                     <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2 ">
                       mobiles that users in use 37.23%
                     </p>
@@ -437,7 +437,7 @@ export const VisionSection: React.FC = () => {
                       <path d="M12 17v.01" />
                     </svg>
                   </li>
-                  <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl text-[#B9B8D3]">
+                  <li className="flex flex-row-reverse items-center h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl rounded-2xl bg-gradient-to-t from-gray-900 to-gray-800 h-28 md:h-auto w-full md:w-auto p-1 m-2 rounded-2xl ">
                     <p className="basis-2/2 md:basis-1/2  p-1">
                       Desktops that users in use 60.61%{" "}
                     </p>
@@ -498,7 +498,7 @@ export const VisionSection: React.FC = () => {
               </div>
             </div>
             <div className=" flex gap-4 flex-col max-w-5xl m-auto mt-10 mb-20 py-20 justify-center items-center">
-              <span className="bg-[#e5d3523b] text-[#E5D352] p-1 px-3 rounded-full">
+              <span className="bg-seven text-four p-1 px-3 rounded-full">
                 Find error
               </span>
 
@@ -514,7 +514,7 @@ export const VisionSection: React.FC = () => {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-fit h-fit m-4 p-2 bg-[#d8f5fe82] text-[#08B2E3] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
+                    className="w-fit h-fit m-4 p-2 bg-seven text-four rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M7 8l-4 4l4 4" />
@@ -538,7 +538,7 @@ export const VisionSection: React.FC = () => {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-fit h-fit m-4 p-2 bg-[#e7e8ef82] text-[#484D6D] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-time-duration-15"
+                    className="w-fit h-fit m-4 p-2 bg-seven text-four rounded-full icon icon-tabler icons-tabler-outline icon-tabler-time-duration-15"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M12 15h2a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-2v-3h3" />
@@ -572,7 +572,7 @@ export const VisionSection: React.FC = () => {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-fit h-fit m-4 p-2 bg-[#EAEBE2] text-[#565857] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
+                    className="w-fit h-fit m-4 p-2 bg-seven text-four rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M22 12h-5" />
@@ -597,7 +597,7 @@ export const VisionSection: React.FC = () => {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-fit h-fit m-4 p-2 bg-[#E4F1E982] text-[#57A773] rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
+                    className="w-fit h-fit m-4 p-2 bg-seven text-four rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M16 21h3c.81 0 1.48 -.67 1.48 -1.48l.02 -.02c0 -.82 -.69 -1.5 -1.5 -1.5h-3v3z" />
@@ -625,7 +625,7 @@ export const VisionSection: React.FC = () => {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-fit h-fit m-4 p-2 bg-[#FBDEDA82] text-[#EE6352]  rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
+                    className="w-fit h-fit m-4 p-2 bg-seven text-four  rounded-full icon icon-tabler icons-tabler-outline icon-tabler-bug"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M9.884 5.873a3 3 0 0 1 5.116 2.127v1" />

@@ -89,8 +89,7 @@ export function AuroraBackgroundDemo() {
             }}
             className="mx-auto my-2 sm:text-xl"
           >
-            We could be best on the web, We provide reliable, scalable, and
-            customizable web solutions for your business.
+            We offer reliable, scalable, and customizable web solutions to optimize your online presence.
           </motion.p>
 
           <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">

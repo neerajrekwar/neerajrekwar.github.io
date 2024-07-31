@@ -7,6 +7,7 @@ import ExpSection from "./components/ExpSection";
 import { VisionSection } from "./components/VisionSection";
 import Footer from "./components/footer";
 import StickyRelativeDemo from "./components/StickyRelativeDemo";
+import { AccordionDemo } from "@/components/Accordion";
 
 export const metadata: Metadata = {
   title: "nee. - Portfolio Framer Template For Freelancers",
@@ -33,6 +34,10 @@ export default function Home() {
       </section>
       <section className=" ">
         <VisionSection />
+      </section>
+      <section className="text-five">
+        
+       <AccordionDemo />
       </section>
     </main>
   );
