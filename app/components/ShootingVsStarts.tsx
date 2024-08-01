@@ -6,22 +6,23 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ShootingStars } from "./ui/shooting-stars";
 import { StarsBackground } from "./ui/stars-background";
+import AutoTyper from "./AutoTyper";
 
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
     <div className="bg-neutral-900 flex flex-col items-center justify-center relative w-full">
       <figure className="w-auto z-10  min-h-screen justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
         <div className=" md:flex md:flex-row-reverse max-w-6xl ">
-          <motion.div 
-            
+          <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 0.8,
               delay: 0.5,
-              ease: [0, 0.71, 0.2, 1.01]
+              ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="flex flex-col basis-1/2 justify-center h-60 md:h-auto  items-center">
+            className="flex flex-col basis-1/2 justify-center h-60 md:h-auto  items-center"
+          >
             <Image
               src="/me.webp"
               width={350}
@@ -32,13 +33,18 @@ export function ShootingStarsAndStarsBackgroundDemo() {
           </motion.div>
           <div className="flex text-five basis-1/2 flex-col m-auto justify-center">
             <h2 className="text-xl text-[#E0F2E9] m-2 mx-8  md:text-3xl">
-              Hello I&apos;m <br /> <strong>Neeraj Rekwar</strong>
+              <p className="font-normal">Hello, World!</p>
+              <div className="text-2xl flex">
+                <p className="pr-2">I am</p>
+                <AutoTyper
+                  texts={["Progammer", "Developer", "Designer", "Freelancer", "Digital marketing exp."]}
+                />
+              </div>
             </h2>
             <div className="text-base text-[#5e716a] md:text-xl m-2 mx-8 pb-6 ">
               <TextGenerateEffectDemo />
             </div>
             <div className="text-base text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
-             
               <motion.button
                 className="box"
                 whileHover={{ scale: 1.1 }}
