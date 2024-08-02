@@ -59,7 +59,7 @@ export function AuroraBackgroundDemo() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="relative text-five font-bold z-10 md:pb-4 text-3xl sm:text-lg md:text-8xl  text-left "
+            className="relative text-five font-bold z-10 md:pb-4 text-3xl sm:text-lg md:text-7xl  text-left "
           >
             Build the right to way <br />
             <div>

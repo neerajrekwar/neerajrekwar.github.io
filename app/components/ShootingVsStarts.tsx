@@ -14,8 +14,8 @@ export function ShootingStarsAndStarsBackgroundDemo() {
       <figure className="w-auto z-10  min-h-screen justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
         <div className=" md:flex md:flex-row-reverse max-w-6xl ">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
+            animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
             transition={{
               duration: 0.8,
               delay: 0.5,
@@ -32,7 +32,15 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             />
           </motion.div>
           <div className="flex text-five basis-1/2 flex-col m-auto justify-center">
-            <h2 className="text-xl text-[#E0F2E9] m-2 mx-8  md:text-3xl">
+            <motion.h2 
+              initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
+              animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className="text-xl text-[#E0F2E9] m-2 mx-8  md:text-3xl">
               <p className="font-normal">Hello, World!</p>
               <div className="text-2xl md:text-4xl lg:text-5xl flex">
                 <p className="pr-2">I am</p>
@@ -40,15 +48,23 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   texts={["Progammer", "Developer", "Environmentalist", "Freelancer", "Digital marketing"]}
                 />
               </div>
-            </h2>
+            </motion.h2>
             <div className="text-base text-[#5e716a] md:text-xl m-2 mx-8 pb-6 ">
               <TextGenerateEffectDemo />
             </div>
             <div className="text-base  text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
               <motion.button
                 className="box"
+                initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
+                animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.5,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  type: "spring", stiffness: 400
+                }}
                 whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                
               >
                 <Link
                   href="/contact"
@@ -60,8 +76,15 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               </motion.button>
               <motion.button
                 className="box"
+                initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
+                animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+                transition={{
+                  duration: 0.8,
+                  delay: 1,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  type: "spring", stiffness: 400
+                }}
                 whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400 }}
               >
                 <Link
                   href="/contact"
@@ -75,13 +98,14 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             <div className="text-base md:text-xl m-2 mx-8 ">
               <div className="flex text-four py-6">
                 <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ rotate: 360, scale: 1 }}
+                  initial={{ scale: 0.2, x: -200, y: -200  }}
+                  animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 260,
                     damping: 20,
-                    delay: 0.2,
+                    delay: 2,
+                    duration: 5,
                   }}
                   className="p-2 m-1 bg-seven  rounded-full flex justify-center items-center"
                 >
@@ -106,14 +130,16 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   </svg>
                 </motion.span>
                 <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ rotate: 360, scale: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20,
-                    delay: 0.4,
-                  }}
+                    initial={{ scale: 0.2,  x: -400, y: -200  }}
+                    animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                      delay: 3,
+                      duration: 5,
+                    }}
+                  
                   className="p-2 m-1 bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
@@ -136,13 +162,14 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   </svg>
                 </motion.span>
                 <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ rotate: 360, scale: 1 }}
+                  initial={{ scale: 0.2, x: -400, y: -200  }}
+                  animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 260,
                     damping: 20,
-                    delay: 0.6,
+                    delay: 4,
+                    duration: 5,
                   }}
                   className="p-2 m-1 bg-seven rounded-full flex justify-center items-center"
                 >
@@ -165,13 +192,14 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   </svg>
                 </motion.span>
                 <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ rotate: 360, scale: 1 }}
+                  initial={{ scale: 0.2, x: -400, y: -200  }}
+                  animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 260,
                     damping: 20,
-                    delay: 0.8,
+                    delay: 5,
+                    duration: 5,
                   }}
                   className="p-2 m-1 bg-seven rounded-full flex justify-center items-center"
                 >
