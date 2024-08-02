@@ -34,10 +34,10 @@ export function ShootingStarsAndStarsBackgroundDemo() {
           <div className="flex text-five basis-1/2 flex-col m-auto justify-center">
             <h2 className="text-xl text-[#E0F2E9] m-2 mx-8  md:text-3xl">
               <p className="font-normal">Hello, World!</p>
-              <div className="text-2xl flex">
+              <div className="text-2xl md:text-4xl lg:text-5xl flex">
                 <p className="pr-2">I am</p>
                 <AutoTyper
-                  texts={["Progammer", "Developer", "Designer", "Freelancer", "Digital marketing"]}
+                  texts={["Progammer", "Developer", "Environmentalist", "Freelancer", "Digital marketing"]}
                 />
               </div>
             </h2>

@@ -49,7 +49,7 @@ const AutoTyper: React.FC<AutoTyperProps> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="text-2xl"
+      className="text-2xl md:text-4xl lg:text-5xl"
     >
       {displayText}
       <span className="blinking-cursor ">|</span>
