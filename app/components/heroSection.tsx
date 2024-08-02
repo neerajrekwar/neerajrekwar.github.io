@@ -17,7 +17,7 @@ export function HeroSection() {
             <motion.h2
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{duration: 0.6, delay: 1.2}}
+              transition={{duration: 0.6, delay: .4}}
               animate={{}}
               className=" text-2xl p-4 w-fit overflow-hidden "
             >
