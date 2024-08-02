@@ -44,7 +44,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             <div className="text-base text-[#5e716a] md:text-xl m-2 mx-8 pb-6 ">
               <TextGenerateEffectDemo />
             </div>
-            <div className="text-base text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
+            <div className="text-base  text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
               <motion.button
                 className="box"
                 whileHover={{ scale: 1.1 }}
@@ -199,6 +199,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               </div>
             </div>
           </div>
+          
         </div>
       </figure>
       <ShootingStars />
