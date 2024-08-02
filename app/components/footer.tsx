@@ -45,8 +45,7 @@ export default function Footer() {
 
   return (
     <>
-      <section className='three'>
-      <footer className="bg-seven ">
+      <footer className="bgrid ">
         <div className="p-4 text-five py-10 max-w-6xl m-auto">
           <ul className="flex gap-2 mb-8 items-start flex-col">
             <li className="">
@@ -369,7 +368,7 @@ export default function Footer() {
           <span >build by me</span>
         </div>
       </footer>
-      </section>
+      
     </>
   );
 }

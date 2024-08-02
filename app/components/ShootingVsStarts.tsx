@@ -37,7 +37,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               <div className="text-2xl flex">
                 <p className="pr-2">I am</p>
                 <AutoTyper
-                  texts={["Progammer", "Developer", "Designer", "Freelancer", "Digital marketing exp."]}
+                  texts={["Progammer", "Developer", "Designer", "Freelancer", "Digital marketing"]}
                 />
               </div>
             </h2>
