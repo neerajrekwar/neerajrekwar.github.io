@@ -13,12 +13,13 @@ export function HeroSection() {
       <ShootingStarsAndStarsBackgroundDemo />
       <section className="bgrid2 bg-primary text-four  min-h-screen">
         <div className="  max-w-6xl m-auto">
-          <div className="bgrid2 z-10   md:text-3xl pt-16 font-bold p-4">
+          <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{duration: 0.6, delay: 1.2}}
               animate={{}}
-              className=" text-2xl w-fit overflow-hidden "
+              className=" text-2xl p-4 w-fit overflow-hidden "
             >
               About Me
             </motion.h2>
@@ -54,7 +55,7 @@ export function HeroSection() {
                 Expert.
               </motion.h2>
 
-              <div className="md:flex mt-10 ">
+              <div className="md:flex mt-10 md:pt-6 ">
                 <motion.ul
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -97,7 +98,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     animate={{}}
-                    transition={{ duration: 1.2, delay: 0.6 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex "
                   >
                     <span className="">From:</span>
@@ -109,7 +110,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     animate={{}}
-                    transition={{ duration: 1.4, delay: 0.8  }}
+                    transition={{ duration: 0.8, delay: 0.8  }}
                     className="flex "
                   >
                     <span className="">Email:</span>
