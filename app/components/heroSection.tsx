@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from 'next/link'
 
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { ShootingStarsAndStarsBackgroundDemo } from "./ShootingVsStarts";
@@ -123,8 +124,8 @@ export function HeroSection() {
             </div>
             <div className="grid justify-center items-center border-five h-max  m-2 rounded-lg basis-1/2">
               <motion.figure
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 40, x: -40 }}
+                whileInView={{ opacity: 1, y: 0, x: 0 }}
                 animate={{}}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="overflow-hidden z-20 md:h-[24rem] aspact-sqaure boreder-2 sm:w-[18rem] object-contain sm:h-[18rem] h-auto w-[20rem] "
@@ -156,17 +157,8 @@ export function HeroSection() {
             </motion.h2>
           </div>
           <div className="overflow-hidden min-h-screen  lg:flex-row gap-2 lg:flex">
-            {/* <motion.div
-              initial={{ opacity: 0, x: 200 , y: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              animate={{}}
-              className=" p-4 m-2  rounded-md bg-five  md:text-6xl  "
-            >
-              <p className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-five ">
-                Thinks create, develop, and grow-up tents{" "}
-              </p>
-            </motion.div> */}
-            <div className=" mx-2 p-2 z-10 pb-4 rounded-lg basis-1/2">
+            
+            <div className="border-five flex-col justify-between m-2 p-2 z-10 pb-4 rounded-lg basis-1/2">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -180,7 +172,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 animate={{}}
-                className="py-2  px-2 md:p-4  md:px-4 text-xl sm:text-2xl md:text-3xl"
+                className="py-8 my-6  px-2 md:p-4  md:px-4 text-xl sm:text-2xl md:text-3xl"
               >
                 <span className="text-third">&#9679;</span> Digital marketing
                 specialize
@@ -279,7 +271,18 @@ export function HeroSection() {
                         animate={{}}
                         transition={{ }}
                         className="pl-1 text-sm">
-                        Futurelearn
+                        Futurelearn <motion.span
+                                    
+                                      animate={{}}
+                                      transition={{ }}
+                                      className="overflow-hidden   border-five"
+                                      >
+                          <motion.a 
+                            initial={{ opacity: 0, x: 200 }}
+                            whileInView={{ opacity: 0, x: 200 }}
+                            whileHover={{ opacity: 1, x: 0 }}
+                            href="https://www.futurelearn.com/certificates/tgje1n2" >link
+                          </motion.a></motion.span>
                       </motion.p>
                       <motion.p className="pl-1 text-sm md:pr-6">
                          June 2021
@@ -290,10 +293,19 @@ export function HeroSection() {
               
               </div>
             </div>
-            <div className="bg-seven three border-five justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
+            <div className="border-five justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
               <div>
-                <motion.ul className="container p-2 flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-">
-                  <motion.li className="m-2 col-span-2 rounded-lg bg-six text-four">
+                <motion.ul
+                  initial={{opacity: 0, x: 40}}
+                  whileInView={{opacity: 1, x: 0}}
+                  transition={{duration: 1.2, delay: 0.4}}
+                  
+                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows ">
+                  <motion.li 
+                    initial={{opacity: 0, x: 40}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{ delay: 0.6}}
+                    className="m-2  rounded-lg text-six bg-four">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -319,7 +331,11 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li className="m-2  rounded-lg bg-six text-four">
+                  <motion.li 
+                    initial={{opacity: 0, x: 40}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{ delay: 0.8}}
+                    className="m-2  rounded-lg text-six bg-four">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -350,7 +366,11 @@ export function HeroSection() {
                     </p>
                   </motion.li>
 
-                  <motion.li className="m-2  rounded-lg bg-six text-four">
+                  <motion.li 
+                    initial={{opacity: 0, x: 40}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{ delay: 1}}
+                    className="m-2  rounded-lg text-six bg-four">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -383,7 +403,11 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li className="m-2 col-span-2 rounded-lg bg-six text-four">
+                  <motion.li 
+                    initial={{opacity: 0, x: 40}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{ delay: 1.2}}
+                    className="m-2  rounded-lg text-six bg-four">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -412,7 +436,11 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li className="m-2 col-span-2 rounded-lg bg-six text-four">
+                  <motion.li 
+                    initial={{opacity: 0, x: 40}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{ delay: 1.4}}
+                    className="m-2 rounded-lg text-six bg-four">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -439,7 +467,11 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li className="m-2 col-span-2 rounded-lg bg-six text-four">
+                  <motion.li 
+                    initial={{opacity: 0, x: 40}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{ delay: 1.6}}
+                    className="m-2  rounded-lg text-six bg-four">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -466,7 +498,11 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li className="m-2 row-span-2 rounded-lg bg-six text-four">
+                  <motion.li 
+                    initial={{opacity: 0, x: 40}}
+                    whileInView={{opacity: 1, x: 0}}
+                    transition={{ delay: 1.8}}
+                    className="m-2 rounded-lg text-six bg-four">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
