@@ -48,6 +48,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 animate={{}}
+                transition={{delay: 0.4}}
                 className="py-2  px-2 md:p-4  md:px-4 text-xl sm:text-2xl md:text-3xl"
               >
                 I&apos;m Neeraj Rekwar, with Programmer & Digital Marketing
@@ -125,7 +126,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 animate={{}}
-                transition={{ duration: 2 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 className="overflow-hidden z-20 md:h-[24rem] aspact-sqaure boreder-2 sm:w-[18rem] object-contain sm:h-[18rem] h-auto w-[20rem] "
               >
                 <Image
@@ -187,6 +188,106 @@ export function HeroSection() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Explicabo voluptates molestiae sequi.
               </p>
+              <div className="">
+                <h6 className="font-semibold mt-8 text-xl md:text-2xl">Certifications</h6>
+                <ul className="py-2 my-2 ">
+                  <motion.li
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="flex-col justify-start items-center"
+                  >
+                    
+                    <motion.p 
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                      className="pl-1 font-semibold">
+                      Fundamental of Digital Marketing
+                    </motion.p>
+                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
+                      <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{}}
+                        transition={{ }}
+                        className="pl-1 text-sm">
+                        Google Digital Unlocked
+                      </motion.p>
+                      <motion.p className="pl-1 text-sm md:pr-6">
+                        September 2020
+                      </motion.p>
+                    </div>
+                  </motion.li>
+                </ul>
+                <ul className="py-2 my-4 ">
+                  <motion.li
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="flex-col justify-start items-center"
+                  >
+                    
+                    <motion.p 
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                      className="pl-1 font-semibold">
+                     Email Marketing
+                    </motion.p>
+                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
+                      <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{}}
+                        transition={{ }}
+                        className="pl-1 text-sm">
+                        Hubspot Academy
+                      </motion.p>
+                      <motion.p className="pl-1 text-sm md:pr-6">
+                        October 2023
+                      </motion.p>
+                    </div>
+                  </motion.li>
+                </ul>
+                <ul className="py-2 my-4 ">
+                  <motion.li
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="flex-col justify-start items-center"
+                  >
+                    
+                    <motion.p 
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                      className="pl-1 font-semibold">
+                      Entrepreneurship: From Business Idea to Action
+                    </motion.p>
+                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
+                      <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{}}
+                        transition={{ }}
+                        className="pl-1 text-sm">
+                        Futurelearn
+                      </motion.p>
+                      <motion.p className="pl-1 text-sm md:pr-6">
+                         June 2021
+                      </motion.p>
+                    </div>
+                  </motion.li>
+                </ul>
+              
+              </div>
             </div>
             <div className="bg-seven three border-five justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
               <div>

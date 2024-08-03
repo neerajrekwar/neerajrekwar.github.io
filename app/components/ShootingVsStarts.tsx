@@ -18,7 +18,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
             transition={{
               duration: 0.8,
-              delay: 0.5,
+              delay: 1,
               ease: [0, 0.71, 0.2, 1.01],
             }}
             className="flex flex-col basis-1/2 justify-center h-60 md:h-auto  items-center"
