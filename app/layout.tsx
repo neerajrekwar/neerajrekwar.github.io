@@ -11,10 +11,7 @@ const dm_Sans = DM_Sans({
   weight: '400',
   subsets: ['latin'],
 });
-const source_code_pro = Source_Code_Pro({
-  weight: '400',
-  subsets: ['latin'],
-});
+
 
 const alata = Alata({
   weight: '400',

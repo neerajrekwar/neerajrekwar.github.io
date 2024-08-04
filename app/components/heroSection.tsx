@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from 'next/link'
+import Link from "next/link";
 
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { ShootingStarsAndStarsBackgroundDemo } from "./ShootingVsStarts";
@@ -49,7 +49,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 animate={{}}
-                transition={{delay: 0.4}}
+                transition={{ delay: 0.4 }}
                 className="py-2  px-2 md:p-4  md:px-4 text-xl sm:text-2xl md:text-3xl"
               >
                 I&apos;m Neeraj Rekwar, with Programmer & Digital Marketing
@@ -156,8 +156,7 @@ export function HeroSection() {
               My Skills
             </motion.h2>
           </div>
-          <div className="overflow-hidden min-h-screen mb-20 lg:flex-row gap-2 lg:flex">
-            
+          <div className="overflow-hidden min-h-screen pb-20 lg:flex-row gap-2 lg:flex">
             <div className="border-five flex-col justify-between m-2 p-2 z-10 pb-4 rounded-lg basis-1/2">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -166,7 +165,7 @@ export function HeroSection() {
                 transition={{ delay: 1 }}
                 className="w-fit overflow-x-hidden  z-9 py-2 font-semibold  px-2 md:p-4  md:px-4 text-2xl  md:text-6xl "
               >
-                Evolving digital landscape in my expertise below the showcase{" "}
+                Evolving digital landscape in my expertise below the showcase.{" "}
               </motion.p>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -182,7 +181,9 @@ export function HeroSection() {
                 Explicabo voluptates molestiae sequi.
               </p>
               <div className="">
-                <h6 className="font-semibold mt-8 text-xl md:text-2xl">Certifications</h6>
+                <h6 className="font-semibold mt-8 text-xl md:text-2xl">
+                  Certifications
+                </h6>
                 <ul className="py-2 my-2 ">
                   <motion.li
                     initial={{ opacity: 0, x: 20 }}
@@ -191,22 +192,23 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex-col justify-start items-center"
                   >
-                    
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold">
+                      className="pl-1 font-semibold"
+                    >
                       Fundamental of Digital Marketing
                     </motion.p>
                     <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p 
+                      <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         animate={{}}
-                        transition={{ }}
-                        className="pl-1 text-sm">
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
                         Google Digital Unlocked
                       </motion.p>
                       <motion.p className="pl-1 text-sm md:pr-6">
@@ -223,22 +225,23 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex-col justify-start items-center"
                   >
-                    
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold">
-                     Email Marketing
+                      className="pl-1 font-semibold"
+                    >
+                      Email Marketing
                     </motion.p>
                     <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p 
+                      <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         animate={{}}
-                        transition={{ }}
-                        className="pl-1 text-sm">
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
                         Hubspot Academy
                       </motion.p>
                       <motion.p className="pl-1 text-sm md:pr-6">
@@ -255,57 +258,61 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex-col justify-start items-center"
                   >
-                    
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold">
+                      className="pl-1 font-semibold"
+                    >
                       Entrepreneurship: From Business Idea to Action
                     </motion.p>
                     <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p 
+                      <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         animate={{}}
-                        transition={{ }}
-                        className="pl-1 text-sm">
-                        Futurelearn <motion.span
-                                    
-                                      animate={{}}
-                                      transition={{ }}
-                                      className="overflow-hidden   border-five"
-                                      >
-                          <motion.a 
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
+                        Futurelearn{" "}
+                        <motion.span
+                          animate={{}}
+                          transition={{}}
+                          className="overflow-hidden   border-five"
+                        >
+                          <motion.a
                             initial={{ opacity: 0, x: 200 }}
                             whileInView={{ opacity: 0, x: 200 }}
                             whileHover={{ opacity: 1, x: 0 }}
-                            href="https://www.futurelearn.com/certificates/tgje1n2" >link
-                          </motion.a></motion.span>
+                            href="https://www.futurelearn.com/certificates/tgje1n2"
+                          >
+                            link
+                          </motion.a>
+                        </motion.span>
                       </motion.p>
                       <motion.p className="pl-1 text-sm md:pr-6">
-                         June 2021
+                        June 2021
                       </motion.p>
                     </div>
                   </motion.li>
                 </ul>
-              
               </div>
             </div>
             <div className="border-five flex  justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
               <div>
                 <motion.ul
-                  initial={{opacity: 0, x: 40, y: 40}}
-                  animate={{opacity: 1, x: 0, y: 0}}
-                  transition={{duration: 1.2, delay: 0.4}}
-                  
-                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows ">
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 0.6}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  initial={{ opacity: 0, x: 40, y: 40 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{ duration: 1.2, delay: 0.4 }}
+                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows "
+                >
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -331,11 +338,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 0.8}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -357,7 +365,9 @@ export function HeroSection() {
                       <path d="M6.7 17.8l2.8 -2" />
                       <path d="M17.3 17.8l-2.8 -2" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">            Socail Media
+                    <h4 className="px-2 text-xl font-semibold">
+                      {" "}
+                      Socail Media
                     </h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -366,11 +376,12 @@ export function HeroSection() {
                     </p>
                   </motion.li>
 
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -403,11 +414,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.2}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.2 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -427,20 +439,19 @@ export function HeroSection() {
                       <path d="M19 21l0 -10.15" />
                       <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Localization
-                    </h4>
+                    <h4 className="px-2 text-xl font-semibold">Localization</h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.4}}
-                    className="m-2 rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.4 }}
+                    className="m-2 rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -467,11 +478,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.6}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.6 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -489,20 +501,19 @@ export function HeroSection() {
                       <path d="M12 11v-8h4l2 2l-2 2h-4" />
                       <path d="M6 15h1" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Ads Word
-                    </h4>
+                    <h4 className="px-2 text-xl font-semibold">Ads Word</h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.8}}
-                    className="m-2 rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.8 }}
+                    className="m-2 rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -533,8 +544,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden min-h-screen mb-20 lg:flex-row-reverse gap-2 lg:flex">
-            
+          <div className="overflow-hidden min-h-screen pb-20 lg:flex-row-reverse gap-2 lg:flex">
             <div className="border-five flex-col justify-between m-2 p-2 z-10 pb-4 rounded-lg basis-1/2">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -543,7 +553,7 @@ export function HeroSection() {
                 transition={{ delay: 1 }}
                 className="w-fit overflow-x-hidden  z-9 py-2 font-semibold  px-2 md:p-4  md:px-4 text-2xl  md:text-6xl "
               >
-                Latest Codes can change web app performance correctly{" "}
+                Latest codes can enhance web app performance effectively.{" "}
               </motion.p>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -551,16 +561,114 @@ export function HeroSection() {
                 animate={{}}
                 className="py-8 my-6  px-2 md:p-4  md:px-4 text-xl sm:text-2xl md:text-3xl"
               >
-                <span className="text-third">&#9679;</span> Passionate programmer
+                <span className="text-third">&#9679;</span> Passionate
+                programmer
               </motion.h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo voluptates molestiae sequi.
+                Absolutely, the quality and efficiency of your code directly
+                influence web application performance.
               </p>
               <div className="">
-                <h6 className="font-semibold mt-8 text-xl md:text-2xl">Certifications</h6>
-                
+                <h6 className="font-semibold mt-8 text-xl md:text-2xl">
+                  Certifications
+                </h6>
+
                 <ul className="py-2 my-4 ">
+                  <motion.li
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="flex-col justify-start items-center"
+                  >
+                    <motion.p
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                      className="pl-1 font-semibold"
+                    >
+                      Responsive web design
+                    </motion.p>
+                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{}}
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
+                        Freecodecamp{" "}
+                        <motion.span
+                          animate={{}}
+                          transition={{}}
+                          className="overflow-hidden   border-five"
+                        >
+                          <motion.a
+                            initial={{ opacity: 0, x: 200 }}
+                            whileInView={{ opacity: 0, x: 200 }}
+                            whileHover={{ opacity: 1, x: 0 }}
+                            href="https://www.freecodecamp.org/certification/fcc36ba76de-81ed-4109-bcf2-c5dcfb1fc22e/responsive-web-design"
+                          >
+                            link
+                          </motion.a>
+                        </motion.span>
+                      </motion.p>
+                      <motion.p className="pl-1 text-sm md:pr-6">
+                        April 21, 2022
+                      </motion.p>
+                    </div>
+                  </motion.li>
+                </ul>
+                <ul className="py-2 my-4 ">
+                  <motion.li
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="flex-col justify-start items-center"
+                  >
+                    <motion.p
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                      className="pl-1 font-semibold"
+                    >
+                      JavaScript Algorithms and Data Structures (Beta)
+                      Certification
+                    </motion.p>
+                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{}}
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
+                        Freecodecamp{" "}
+                        <motion.span
+                          animate={{}}
+                          transition={{}}
+                          className="overflow-hidden   border-five"
+                        >
+                          <motion.a
+                            initial={{ opacity: 0, x: 200 }}
+                            whileInView={{ opacity: 0, x: 200 }}
+                            whileHover={{ opacity: 1, x: 0 }}
+                            href="https://www.freecodecamp.org/certification/fcc36ba76de-81ed-4109-bcf2-c5dcfb1fc22e/responsive-web-design"
+                          >
+                            link
+                          </motion.a>
+                        </motion.span>
+                      </motion.p>
+                      <motion.p className="pl-1 text-sm md:pr-6">
+                        Pursuing
+                      </motion.p>
+                    </div>
+                  </motion.li>
+                </ul>
+                {/* <ul className="py-2 my-4 ">
                   <motion.li
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -575,7 +683,7 @@ export function HeroSection() {
                       animate={{}}
                       transition={{ duration: 0.8, delay: 0.6 }}
                       className="pl-1 font-semibold">
-                      Responsive web design
+                      Front End Development Libraries Certification
                     </motion.p>
                     <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
                       <motion.p 
@@ -602,53 +710,34 @@ export function HeroSection() {
                       </motion.p>
                     </div>
                   </motion.li>
-                </ul>
-              
+                </ul> */}
               </div>
             </div>
             <div className="border-five flex  justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
               <div>
                 <motion.ul
-                  initial={{opacity: 0, x: -40, y: -40}}
-                  animate={{opacity: 1, x: 0, y: 0}}
-                  transition={{duration: 1.2, delay: 0.4}}
-                  
-                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows ">
-                  <motion.li 
-                    initial={{opacity: 0, x: -40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 0.6}}
-                    className="m-2  rounded-lg text-six bg-four">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-search"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                      <path d="M21 21l-6 -6" />
-                    </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Search Engine Optimization
+                  initial={{ opacity: 0, x: -40, y: -40 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{ duration: 1.2, delay: 0.4 }}
+                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows "
+                >
+                  <motion.li
+                    initial={{ opacity: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
+                    <h4 className="px-2 text-4xl font-semibold">
+                      Optimized libraries and frameworks
                     </h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
+                    <div className="m-2"></div>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: -40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 0.8}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -670,7 +759,9 @@ export function HeroSection() {
                       <path d="M6.7 17.8l2.8 -2" />
                       <path d="M17.3 17.8l-2.8 -2" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">            Socail Media
+                    <h4 className="px-2 text-xl font-semibold">
+                      {" "}
+                      Socail Media
                     </h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -679,11 +770,12 @@ export function HeroSection() {
                     </p>
                   </motion.li>
 
-                  <motion.li 
-                    initial={{opacity: 0, x: -40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -716,11 +808,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: -40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.2}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.2 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -740,20 +833,19 @@ export function HeroSection() {
                       <path d="M19 21l0 -10.15" />
                       <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Localization
-                    </h4>
+                    <h4 className="px-2 text-xl font-semibold">Localization</h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: -40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.4}}
-                    className="m-2 rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.4 }}
+                    className="m-2 rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -780,11 +872,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: -40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.6}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.6 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -802,20 +895,19 @@ export function HeroSection() {
                       <path d="M12 11v-8h4l2 2l-2 2h-4" />
                       <path d="M6 15h1" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Ads Word
-                    </h4>
+                    <h4 className="px-2 text-xl font-semibold">Ads Word</h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: -40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.8}}
-                    className="m-2 rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.8 }}
+                    className="m-2 rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -846,11 +938,9 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-
-          
         </div>
       </section>
-      {/* <section className="bgrid2  text-four min-h-screen">
+      <section className="bgrid2  text-four min-h-screen">
         <div className=" max-w-6xl m-auto">
           <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
@@ -864,7 +954,6 @@ export function HeroSection() {
             </motion.h2>
           </div>
           <div className="overflow-hidden min-h-screen  lg:flex-row gap-2 lg:flex">
-            
             <div className="border-five flex-col justify-between m-2 p-2 z-10 pb-4 rounded-lg basis-1/2">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -889,7 +978,9 @@ export function HeroSection() {
                 Explicabo voluptates molestiae sequi.
               </p>
               <div className="">
-                <h6 className="font-semibold mt-8 text-xl md:text-2xl">Certifications</h6>
+                <h6 className="font-semibold mt-8 text-xl md:text-2xl">
+                  Certifications
+                </h6>
                 <ul className="py-2 my-2 ">
                   <motion.li
                     initial={{ opacity: 0, x: 20 }}
@@ -898,22 +989,23 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex-col justify-start items-center"
                   >
-                    
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold">
+                      className="pl-1 font-semibold"
+                    >
                       Fundamental of Digital Marketing
                     </motion.p>
                     <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p 
+                      <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         animate={{}}
-                        transition={{ }}
-                        className="pl-1 text-sm">
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
                         Google Digital Unlocked
                       </motion.p>
                       <motion.p className="pl-1 text-sm md:pr-6">
@@ -930,22 +1022,23 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex-col justify-start items-center"
                   >
-                    
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold">
-                     Email Marketing
+                      className="pl-1 font-semibold"
+                    >
+                      Email Marketing
                     </motion.p>
                     <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p 
+                      <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         animate={{}}
-                        transition={{ }}
-                        className="pl-1 text-sm">
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
                         Hubspot Academy
                       </motion.p>
                       <motion.p className="pl-1 text-sm md:pr-6">
@@ -962,57 +1055,61 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex-col justify-start items-center"
                   >
-                    
-                    <motion.p 
+                    <motion.p
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold">
+                      className="pl-1 font-semibold"
+                    >
                       Entrepreneurship: From Business Idea to Action
                     </motion.p>
                     <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p 
+                      <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         animate={{}}
-                        transition={{ }}
-                        className="pl-1 text-sm">
-                        Futurelearn <motion.span
-                                    
-                                      animate={{}}
-                                      transition={{ }}
-                                      className="overflow-hidden   border-five"
-                                      >
-                          <motion.a 
+                        transition={{}}
+                        className="pl-1 text-sm"
+                      >
+                        Futurelearn{" "}
+                        <motion.span
+                          animate={{}}
+                          transition={{}}
+                          className="overflow-hidden   border-five"
+                        >
+                          <motion.a
                             initial={{ opacity: 0, x: 200 }}
                             whileInView={{ opacity: 0, x: 200 }}
                             whileHover={{ opacity: 1, x: 0 }}
-                            href="https://www.futurelearn.com/certificates/tgje1n2" >link
-                          </motion.a></motion.span>
+                            href="https://www.futurelearn.com/certificates/tgje1n2"
+                          >
+                            link
+                          </motion.a>
+                        </motion.span>
                       </motion.p>
                       <motion.p className="pl-1 text-sm md:pr-6">
-                         June 2021
+                        June 2021
                       </motion.p>
                     </div>
                   </motion.li>
                 </ul>
-              
               </div>
             </div>
             <div className="border-five flex  justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
               <div>
                 <motion.ul
-                  initial={{opacity: 0, x: 40, y: 40}}
-                  animate={{opacity: 1, x: 0, y: 0}}
-                  transition={{duration: 1.2, delay: 0.4}}
-                  
-                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows ">
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 0.6}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  initial={{ opacity: 0, x: 40, y: 40 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{ duration: 1.2, delay: 0.4 }}
+                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows "
+                >
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -1038,11 +1135,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 0.8}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -1064,7 +1162,9 @@ export function HeroSection() {
                       <path d="M6.7 17.8l2.8 -2" />
                       <path d="M17.3 17.8l-2.8 -2" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">            Socail Media
+                    <h4 className="px-2 text-xl font-semibold">
+                      {" "}
+                      Socail Media
                     </h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -1073,11 +1173,12 @@ export function HeroSection() {
                     </p>
                   </motion.li>
 
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -1110,11 +1211,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.2}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.2 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -1134,20 +1236,19 @@ export function HeroSection() {
                       <path d="M19 21l0 -10.15" />
                       <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Localization
-                    </h4>
+                    <h4 className="px-2 text-xl font-semibold">Localization</h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.4}}
-                    className="m-2 rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.4 }}
+                    className="m-2 rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -1174,11 +1275,12 @@ export function HeroSection() {
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.6}}
-                    className="m-2  rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.6 }}
+                    className="m-2  rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -1196,20 +1298,19 @@ export function HeroSection() {
                       <path d="M12 11v-8h4l2 2l-2 2h-4" />
                       <path d="M6 15h1" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Ads Word
-                    </h4>
+                    <h4 className="px-2 text-xl font-semibold">Ads Word</h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>
-                  <motion.li 
-                    initial={{opacity: 0, x: 40, y: 40}}
-                    whileInView={{opacity: 1, x: 0, y: 0}}
-                    transition={{ delay: 1.8}}
-                    className="m-2 rounded-lg text-six bg-four">
+                  <motion.li
+                    initial={{ opacity: 0, x: 40, y: 40 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ delay: 1.8 }}
+                    className="m-2 rounded-lg text-six bg-four"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -1241,7 +1342,7 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
