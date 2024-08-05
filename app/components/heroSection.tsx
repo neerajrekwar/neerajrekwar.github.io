@@ -3,8 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { ShootingStarsAndStarsBackgroundDemo } from "./ShootingVsStarts";
 import AgeCalculator from "./AgeCalculator";
 
@@ -310,7 +308,7 @@ export function HeroSection() {
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 0.6 }}
+                    transition={{  delay: 0.6 }}
                     className="m-2  rounded-lg text-six bg-four"
                   >
                     <svg
