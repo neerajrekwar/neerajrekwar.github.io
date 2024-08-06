@@ -45,7 +45,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bgrid ">
+      <footer className="bgrid">
         <div className="p-4 text-five py-10 max-w-6xl m-auto">
           <ul className="flex gap-2 mb-8 items-start flex-col">
             <li className="">
@@ -146,7 +146,7 @@ export default function Footer() {
                   <path d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z" />
                 </svg>
               </span>
-              <span className=" text-xl">About</span>
+              <h6 className=" text-xl">About</h6>
             </div>
             <ul className=" text-sm ">
               <li className="  flex mb-4 justify-start items-center">
@@ -216,7 +216,7 @@ export default function Footer() {
                   <path d="m787-145 28-28-75-75v-112h-40v128l87 87Zm-587 25q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v268q-19-9-39-15.5t-41-9.5v-243H200v560h242q3 22 9.5 42t15.5 38H200Zm0-120v40-560 243-3 280Zm80-40h163q3-21 9.5-41t14.5-39H280v80Zm0-160h244q32-30 71.5-50t84.5-27v-3H280v80Zm0-160h400v-80H280v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Z" />
                 </svg>
               </span>
-              <span className="text-xl">Latest News</span>
+              <h6 className="text-xl">Latest News</h6>
             </div>
             <ul className="">
               <a href="/" className="">
@@ -278,7 +278,7 @@ export default function Footer() {
                   <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z" />
                 </svg>
               </span>
-              <span className="text-xl">Informartion</span>
+              <h6 className="text-xl">Informartion</h6>
             </div>
             <ul className=" text-four text-sm">
               <li className="p-1  ">
@@ -350,7 +350,7 @@ export default function Footer() {
                   <path d="M16.5 7.5l0 .01" />
                 </svg>
               </span>
-              <span className='text-xl'>Instagram</span>
+              <h6 className='text-xl'>Instagram</h6>
             </div>
             <ul className="">
               <div className="mx-auto">

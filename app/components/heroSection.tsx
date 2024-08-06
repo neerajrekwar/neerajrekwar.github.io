@@ -380,31 +380,9 @@ export function HeroSection() {
                     transition={{ delay: 1 }}
                     className="m-2  rounded-lg text-six bg-four"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-world-www"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
-                      <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
-                      <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
-                      <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
-                      <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
-                      <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
-                      <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
-                      <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
-                      <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
-                    </svg>
+                    
                     <h4 className="px-2 text-xl font-semibold">
-                      How to Grow Online
+                      Efficient algorithms and data structures
                     </h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -728,7 +706,17 @@ export function HeroSection() {
                     <h4 className="px-2 text-4xl font-semibold">
                       Optimized libraries and frameworks
                     </h4>
-                    <div className="m-2"></div>
+                    <div className="m-2">
+                      <motion.div
+                        drag
+                        dragConstraints={{
+                          top: -50,
+                          left: -50,
+                          right: 50,
+                          bottom: 50,
+                        }}
+                      />
+                    </div>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: -40, y: 40 }}
@@ -736,30 +724,10 @@ export function HeroSection() {
                     transition={{ delay: 0.8 }}
                     className="m-2  rounded-lg text-six bg-four"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-social"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                      <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                      <path d="M19 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                      <path d="M12 14m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                      <path d="M12 7l0 4" />
-                      <path d="M6.7 17.8l2.8 -2" />
-                      <path d="M17.3 17.8l-2.8 -2" />
-                    </svg>
+                   
                     <h4 className="px-2 text-xl font-semibold">
                       {" "}
-                      Socail Media
+                      Leveraging modern JavaScript features
                     </h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
