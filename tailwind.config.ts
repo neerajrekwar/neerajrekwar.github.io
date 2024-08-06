@@ -16,8 +16,11 @@ module.exports = {
   darkMode: ["class", "selector"],
   theme: {
     extend: {
+      
       backgroundImage: {
-        "custom-image": "url('/projects/kukai-art-mmkzdAN_jzQ-unsplash.jpg')",
+        'conic-gradient': 'conic-gradient(from 0deg, red, yellow, green, blue, purple)',
+        'conic-gradient-angles': 'conic-gradient(#8c56dc, #3f0093)',
+        'custom-radial': 'radial-gradient(50% 50% at 80% 50%, rgba(147, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%)',
       },
       colors: {
         primary: "var(--color-primary)",

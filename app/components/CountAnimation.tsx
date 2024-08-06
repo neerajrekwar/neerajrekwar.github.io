@@ -51,52 +51,76 @@ const CountAnimation = () => {
 
     return (
         <>
-            <div>
-                <div className={source_code_pro.className}>
-                    <div className="flex flex-row gap-2 border-2 rounded-lg border-four p-2">
-                        <div className="text-4xl font-bold text-five border-five border-2 w-10 flex justify-center overflow-hidden h-16 items-center rounded-lg">
-                            <AnimatePresence mode="wait">
+           <div>
+            <div className="p-40 bg-custom-radial">
+                <div className=" p-2   rounded-[28px] bg-[#b584ff2b]">
+                    <div className="relative flex  items-center overflow-hidden justify-center rounded-[28px] shadow-[inset_0px_1px_38px_28px_#e9d8fd]">
+                        
+                        <motion.div
+                            className="absolute w-80 h-80 bg-blue-500 bg-conic-gradient-angles rounded-full overflow-hidden "
+                            animate={{ rotate: 360 }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                duration: 60,
+                                ease: "linear",
+                            }}
+                        />
+                        <div className="z-10  relative p-4  rounded-[28px] shadow-[inset_0px_1px_10px_1px_#e8c8ff4a]">
+                            <div className={source_code_pro.className}>
                                 <motion.div
-                                    key={countF}
-                                    initial={{
-                                        opacity: 1,
-                                        y: directionF === 1 ? 20 : -10,
-                                    }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{
-                                        opacity: 1,
-                                        y: directionF === 1 ? -20 : 10,
-                                    }}
-                                    transition={{ restSpeed: 1000 }}
-                                >
-                                    {countF}
+                                    className="flex flex-row overflow-hidden gap-1 text-black justify-center items-center rounded-2xl text h-[60px] w-[60px] ">
+                                    <div className="text-3xl  border-2 font-bold shadow-custom bg-[#eddcfd] h-12 w-8 flex justify-center overflow-hidden shadow-lg items-center rounded-lg">
+                                        <AnimatePresence mode="wait">
+                                            <motion.div
+                                                key={countF}
+                                                initial={{
+                                                    opacity: 1,
+                                                    y: directionF === 1 ? 20 : -10,
+                                                }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{
+                                                    opacity: 1,
+                                                    y: directionF === 1 ? -20 : 10,
+                                                }}
+                                                transition={{ restSpeed: 1800 }}
+                                            >
+                                                {countF}
+                                            </motion.div>
+                                        </AnimatePresence>
+                                    </div>
+                                    <div className="text-3xl font-bold shadow-custom bg-[#eddcfd] h-12 w-8 flex justify-center overflow-hidden shadow-lg items-center rounded-lg">
+                                        <AnimatePresence mode="wait">
+                                            <motion.div
+                                                key={countS}
+                                                initial={{
+                                                    opacity: 1,
+                                                    y: directionS === 1 ? -20 : 10,
+                                                }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{
+                                                    opacity: 1,
+                                                    y: directionS === 1 ? 20 : -10,
+                                                }}
+                                                transition={{ restSpeed: 1000 }}
+                                            >
+                                                {countS}
+                                            </motion.div>
+                                        </AnimatePresence>
+                                    </div>
                                 </motion.div>
-                            </AnimatePresence>
-                        </div>
-                        <div className="text-4xl font-bold text-five border-five border-2 w-10 flex justify-center overflow-hidden h-16 items-center rounded-lg">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={countS}
-                                    initial={{
-                                        opacity: 1,
-                                        y: directionS === 1 ? -20 : 10,
-                                    }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{
-                                        opacity: 1,
-                                        y: directionS === 1 ? 20 : -10,
-                                    }}
-                                    transition={{ restSpeed: 1000 }}
-                                >
-                                    {countS}
-                                </motion.div>
-                            </AnimatePresence>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+           </div>
         </>
     );
 };
 
+
+
 export default CountAnimation;
+
