@@ -26,8 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto">
         
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string}
-          />
+        
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
         <GoogleAnalytics
@@ -37,7 +36,7 @@ export default function RootLayout({
 
         <Footer />
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
+      
     </html>
   );
 }
