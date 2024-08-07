@@ -24,10 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto">
       <GoogleAnalytics
-        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || 'G-0PCHHEHDFJ'}
+        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string}
       />
       <GoogleTagManager
-        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER || 'GT-57ZV3XX'}
+        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER as string}
       />
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
