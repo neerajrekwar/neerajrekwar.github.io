@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
         <GoogleAnalytics
-          gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string}
+          gaId={process.env.NEXT_PUBLIC_GA_ID as string}
         />
         <ThemeProvider>{children}</ThemeProvider>
 
