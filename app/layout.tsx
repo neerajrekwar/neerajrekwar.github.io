@@ -1,6 +1,6 @@
 
 import { Alata, Source_Code_Pro, DM_Sans } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
@@ -27,7 +27,8 @@ export default function RootLayout({
   
   return (
     <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto">
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER as string} />
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
         <ThemeProvider>{children}</ThemeProvider>
