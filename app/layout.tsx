@@ -23,14 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto">
-      <head>
+     
         <GoogleAnalytics
-          gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string}
+          gaId='G-0PCHHEHDFJ'
         />
         <GoogleTagManager
-          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER as string}
+          gtmId='GTM-MV76385'
         />
-      </head>
+      
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
         <ThemeProvider>{children}</ThemeProvider>
