@@ -40,5 +40,6 @@ export default function Home() {
        <AccordionDemo />
       </section>
     </main>
+    
   );
 }
