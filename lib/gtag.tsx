@@ -12,14 +12,17 @@ export type Event = (ClickEvent) & {
   value?: string
 }
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void; // Add this line
+  }
+}
 export const pageview = (path: string) => {
   if (!existsGaId) {
     return
   }
 
-  window.gtag('config', GA_ID, {
-    page_path: path,
-  })
+  (window as any).gtag('config', GA_ID, { page_path: path });
 }
 
 export const event = ({ action, category, label, value = '' }: Event) => {
@@ -27,7 +30,7 @@ export const event = ({ action, category, label, value = '' }: Event) => {
     return
   }
 
-  window.gtag('event', action, {
+  (window as any).gtag('event', action, {
     event_category: category,
     event_label: label ? JSON.stringify(label) : '',
     value,
