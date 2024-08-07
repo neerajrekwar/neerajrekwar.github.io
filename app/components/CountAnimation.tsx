@@ -52,9 +52,9 @@ const CountAnimation = () => {
     return (
         <>
            <div>
-            <div className="p-40 bg-custom-radial">
-                <div className=" p-2   rounded-[28px] bg-[#b584ff2b]">
-                    <div className="relative flex  items-center overflow-hidden justify-center rounded-[28px] shadow-[inset_0px_1px_38px_28px_#e9d8fd]">
+            <div className="h-80 w-80 bg-custom-radial">
+                <div className="h-[9rem] w-[9rem]  p-2 border-five rounded-[28px] bg-[#b584ff2b]">
+                    <div className="relative h-[8rem] w-[8rem] flex  items-center overflow-hidden justify-center rounded-[28px] shadow-[inset_0px_1px_38px_28px_#e9d8fd]">
                         
                         <motion.div
                             className="absolute w-80 h-80 bg-blue-500 bg-conic-gradient-angles rounded-full overflow-hidden "
@@ -66,7 +66,7 @@ const CountAnimation = () => {
                                 ease: "linear",
                             }}
                         />
-                        <div className="z-10  relative p-4  rounded-[28px] shadow-[inset_0px_1px_10px_1px_#e8c8ff4a]">
+                        <div className="z-10 relative flex justify-center items-center  h-[6rem] w-[6rem] rounded-[28px] shadow-[inset_0px_1px_10px_10px_#e8c8ff4a]">
                             <div className={source_code_pro.className}>
                                 <motion.div
                                     className="flex flex-row overflow-hidden gap-1 text-black justify-center items-center rounded-2xl text h-[60px] w-[60px] ">

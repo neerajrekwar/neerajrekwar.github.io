@@ -28,8 +28,8 @@ const StickyRelativeDemo: NextPage = () => {
               </div>
             </div>
             <div className="sm:pr-10 backdrop-blur-sm">
-              <div className="max-w-2xl text-five ">
-                <h2 className="text-3xl text-four py-3 pb-3 font-semibold ">
+              <div className="max-w-2xl text-four ">
+                <h2 className="text-3xl text-five py-3 pb-3 font-semibold ">
                   Craft &amp; Code: Building the Future, One Line at a Time
                 </h2>
                 <div>
@@ -42,24 +42,24 @@ const StickyRelativeDemo: NextPage = () => {
                   </p>
                 </div>
               </div>
-              <div className="text-sm text-five pt-10 ">
+              <div className="text-sm text-four pt-10 ">
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="font-normal">Role</li>
-                  <li className="text-four">Digital Marketing</li>
+                  <li className="text-five">Digital Marketing</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="font-normal">Deliverables</li>
-                  <li className="text-four">Survey checks</li>
+                  <li className="text-five">Survey checks</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="  font-normal">Company</li>
-                  <li className="text-four">VMR</li>
+                  <li className="text-five">VMR</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven fill-five">
                   <li className="font-normal">Visit Site</li>
                   <li className="px-2 text-five ">
                     <Link href="https://veecrew.com" className="text-five">
-                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="var(--four)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="var(--five)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M5 12l14 0" />
                         <path d="M15 16l4 -4" />
