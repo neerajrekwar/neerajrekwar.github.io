@@ -54,7 +54,7 @@ const CountAnimation = () => {
            <div>
             <div className="h-80 w-80 bg-custom-radial">
                 <div className="h-[9rem] w-[9rem]  p-2 border-five rounded-[28px] bg-[#b584ff2b]">
-                    <div className="relative h-[8rem] w-[8rem] flex  items-center overflow-hidden justify-center rounded-[28px] shadow-[inset_0px_1px_38px_28px_#e9d8fd]">
+                    <div className="relative h-[8rem] w-[6rem] flex  items-center overflow-hidden justify-center rounded-[28px] shadow-[inset_0px_1px_38px_28px_#e9d8fd]">
                         
                         <motion.div
                             className="absolute w-80 h-80 bg-blue-500 bg-conic-gradient-angles rounded-full overflow-hidden "
