@@ -762,7 +762,7 @@ export function HeroSection() {
                     <h4 className="px-2 text-xl font-semibold">
                       Efficient algorithms and data structures
                     </h4>
-                    <div className="">
+                    <div className="rounded-md m-2 overflow-hidden z-20">
                       <ImageSlides />
                     </div>
                   </motion.li>
