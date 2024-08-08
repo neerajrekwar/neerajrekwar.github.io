@@ -6,7 +6,7 @@ import {HeroSection} from "../components/heroSection";
 
 export const metadata: Metadata = {
   title: "nee - Portfolio passionate Programmer in Delhi",
-  description: "Our Delhi-based team specializes in creating custom web development solutions and bespoke web tools. We have expertise in multiple programming languages and ensure high-quality, reliable code delivered on time and within budget.",
+  description: "I'm an SEO freelancer based in Delhi, helping businesses achieve top search engine rankings by optimizing websites for organic traffic and conversions",
 };
 
 

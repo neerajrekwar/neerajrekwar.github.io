@@ -10,7 +10,7 @@ import { AccordionDemo } from "@/components/Accordion";
 
 export const metadata: Metadata = {
   title: "nee. - SEO Freelancer in delhi | Boost Your Online Visibility",
-  description: "I'm an SEO freelancer based in Delhi, helping businesses achieve top search engine rankings by optimizing websites for organic traffic and conversions",
+  description: "Our Delhi-based team specializes in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
 
   
 };
