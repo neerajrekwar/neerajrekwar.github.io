@@ -1,5 +1,5 @@
 import { Alata, Source_Code_Pro, DM_Sans } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
+
 import "./globals.css";
 import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
@@ -7,6 +7,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/footer";
 import Script from "next/script"
 import  GoogleAnalytics  from './components/GoogleAnalytics';
+import GoogleTagManager from './components/GoogleTagManager';
 
 const dm_Sans = DM_Sans({
   weight: "400",
@@ -25,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto">
-        
+            <GoogleTagManager containerId="GTM-MV3R5HQL"/>
         
       <body className={dm_Sans.className}>
         <FloatingNavDemo />
