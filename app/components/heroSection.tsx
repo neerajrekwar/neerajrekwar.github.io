@@ -7,6 +7,9 @@ import { ShootingStarsAndStarsBackgroundDemo } from "./ShootingVsStarts";
 import AgeCalculator from "./AgeCalculator";
 import CountAnimation from "./CountAnimation";
 import { ImageSlides } from "./ImageSlides";
+import Refresh from "./acceries/Refresh";
+import TextRotator from "./TextsRefresh";
+
 
 export function HeroSection() {
   return (
@@ -725,10 +728,10 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2  rounded-lg text-six bg-four"
+                    className="m-2 w-full rounded-lg text-right text-six bg-black"
                   >
                     <h4 className="px-2 text-3xl font-semibold">
-                      Optimized libraries and frameworks
+                    <TextRotator />
                     </h4>
                     <div className="m-2">
                      
