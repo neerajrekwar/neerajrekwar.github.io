@@ -70,7 +70,7 @@ const CountAnimation = () => {
                             <div className={robot_mono.className}>
                                 <motion.div
                                     className="flex flex-row overflow-hidden gap-1 text-black justify-center items-center rounded-2xl text h-[60px] w-[60px] ">
-                                    <div className="text-2xl  font-bold shadow-custom bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden shadow-lg items-center rounded-md">
+                                    <div className="text-2xl  font-bold  bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden  items-center rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
                                         <AnimatePresence mode="wait">
                                             <motion.div
                                                 key={countF}
@@ -89,7 +89,7 @@ const CountAnimation = () => {
                                             </motion.div>
                                         </AnimatePresence>
                                     </div>
-                                    <div className="text-2xl  font-bold shadow-custom bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden shadow-lg items-center rounded-md">
+                                    <div className="text-2xl  font-bold  bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden items-center rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
                                         <AnimatePresence mode="wait">
                                             <motion.div
                                                 key={countS}
