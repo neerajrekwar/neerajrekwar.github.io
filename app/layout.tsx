@@ -9,6 +9,7 @@ import Script from "next/script";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import GoogleTagManager from "./components/GoogleTagManager";
 
+
 const dm_Sans = DM_Sans({
   weight: "400",
   subsets: ["latin"],
@@ -20,6 +21,8 @@ const alata = Alata({
 });
 
 export const metadata: Metadata = {};
+
+
 
 export default function RootLayout({
   children,
@@ -37,7 +40,6 @@ export default function RootLayout({
         <FloatingNavDemo />
         <GoogleAnalytics gaId="G-0PCHHEHDFJ" />
         <ThemeProvider>{children}</ThemeProvider>
-
         <Footer />
       </body>
     </html>

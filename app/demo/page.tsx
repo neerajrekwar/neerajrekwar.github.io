@@ -4,10 +4,10 @@ import { ImageSlides } from "../components/ImageSlides";
 export default function Demo(){
     return(
         <>
-            <div className="example-container">
+            <div className="min-h-screen">
                 <ImageSlides />
               </div>
-            <section className="min-h-screen justify-center flex items-center text-white ">
+            <section className="min-h-screen bg-black justify-center flex items-center text-white ">
                 <CountAnimation />
             </section>
         </>

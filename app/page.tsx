@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 
   
 };
-
 export default function Home() {
   return (
     <main className="bg-primary text-primary scroll-smooth focus:scroll-auto">

@@ -9,6 +9,7 @@ import CountAnimation from "./CountAnimation";
 import { ImageSlides } from "./ImageSlides";
 import Refresh from "./acceries/Refresh";
 import TextRotator from "./TextsRefresh";
+import CoverDemo from "./CoverDemo";
 
 
 export function HeroSection() {
@@ -728,7 +729,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2 w-full rounded-lg text-right text-six bg-black"
+                    className="m-2 w-full sm:w-auto rounded-lg text-right text-six bg-black"
                   >
                     <h4 className="px-2 text-3xl font-semibold">
                     <TextRotator />
@@ -741,43 +742,41 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="m-2 col-span-2 rounded-lg text-six bg-four"
+                    className="m-2 flex  col-span-2 rounded-lg text-six bg-black"
                   >
                    
-                    <h4 className="px-2 text-4xl font-semibold">
+                    <h4 className="px-2 basis-1/2 text-2xl m-2 font-semibold">
                       {" "}
                       Leveraging modern JavaScript features
                     </h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
+                    <div className="basis-1/2 bg-custom-radial flex justify-center items-center">
+                      <CountAnimation />
+                    </div>
                   </motion.li>
 
                   <motion.li
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2 col-span-2 rounded-lg text-six bg-four"
+                    className="m-2 col-span-2 rounded-lg text-six bg-black"
                   >
                    
-                    <h4 className="px-2 text-xl font-semibold">
-                      Efficient algorithms and data structures
-                    </h4>
-                    <div className="rounded-md m-2 overflow-hidden z-20">
+                    <div className="rounded-md m-2 h-40 overflow-hidden z-20">
                       <ImageSlides />
                     </div>
+                    <h4 className="px-2 text-xl m-2 font-semibold">
+                      Efficient algorithms and data structures
+                    </h4>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.9 }}
-                    className="m-2  rounded-lg text-six bg-four"
+                    className="m-2  rounded-lg text-six bg-black"
                   >
                    
-                    <h4 className="px-2 text-xl font-semibold">Improved User Experience</h4>
-                    <p className="m-2">
+                    <h4 className="px-2 text-xl font-semibold p-2">Improved User Experience</h4>
+                    <p className="m-2 text-sm">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
@@ -787,7 +786,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="m-2 rounded-lg text-six bg-four"
+                    className="m-2 rounded-lg text-six bg-black"
                   >
                     
                     <h4 className="px-2 text-xl font-semibold">
@@ -803,21 +802,19 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.1 }}
-                    className="m-2 col-span-2 rounded-lg text-six bg-four"
+                    className="m-2 col-span-2 rounded-lg text-six bg-black"
                   >
                     
                     <h4 className="px-2 text-xl font-semibold">Balance innovation and stability</h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
+                    <div className="m-2">
+                      <CoverDemo />
+                    </div>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, scale: 0.5, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="m-2 col-span-3 rounded-lg text-six bg-four"
+                    className="m-2 col-span-3 rounded-lg text-six bg-black"
                   >
                     
                     <h4 className="px-2 text-xl font-semibold">
@@ -1026,7 +1023,6 @@ export function HeroSection() {
                     </h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>

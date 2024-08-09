@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Roboto_Mono, Source_Code_Pro } from "next/font/google";
 
-const source_code_pro = Source_Code_Pro({
+const robot_mono = Roboto_Mono({
     weight: "400",
     subsets: ["latin"],
 });
@@ -51,13 +51,13 @@ const CountAnimation = () => {
 
     return (
         <>
-           <div>
-            <div className="h-80 w-80 bg-custom-radial">
-                <div className="h-[9rem] w-[9rem]  p-2 border-five rounded-[28px] bg-[#b584ff2b]">
-                    <div className="relative h-[8rem] w-[6rem] flex  items-center overflow-hidden justify-center rounded-[28px] shadow-[inset_0px_1px_38px_28px_#e9d8fd]">
+           <div >
+            <div className="rounded-[28px] ">
+                <div className="h-[7rem] w-[7rem] p-2 border-five rounded-[28px] bg-[#b584ff2b]">
+                    <div className="relative h-[6rem] w-[6rem]  flex  items-center overflow-hidden justify-center rounded-[28px] ">
                         
                         <motion.div
-                            className="absolute w-80 h-80 bg-blue-500 bg-conic-gradient-angles rounded-full overflow-hidden "
+                            className="absolute w-40 h-40 bg-blue-500 bg-conic-gradient-angles rounded-full overflow-hidden "
                             animate={{ rotate: 360 }}
                             transition={{
                                 repeat: Infinity,
@@ -66,11 +66,11 @@ const CountAnimation = () => {
                                 ease: "linear",
                             }}
                         />
-                        <div className="z-10 relative flex justify-center items-center  h-[6rem] w-[6rem] rounded-[28px] shadow-[inset_0px_1px_10px_10px_#e8c8ff4a]">
-                            <div className={source_code_pro.className}>
+                        <div className="z-10 relative flex justify-center items-center  h-[6rem] w-[6rem] rounded-[28px] shadow-[inset_0px_1px_12px_3px_#e8c8ff4a]">
+                            <div className={robot_mono.className}>
                                 <motion.div
                                     className="flex flex-row overflow-hidden gap-1 text-black justify-center items-center rounded-2xl text h-[60px] w-[60px] ">
-                                    <div className="text-3xl  border-2 font-bold shadow-custom bg-[#eddcfd] h-12 w-8 flex justify-center overflow-hidden shadow-lg items-center rounded-lg">
+                                    <div className="text-2xl  font-bold shadow-custom bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden shadow-lg items-center rounded-md">
                                         <AnimatePresence mode="wait">
                                             <motion.div
                                                 key={countF}
@@ -89,7 +89,7 @@ const CountAnimation = () => {
                                             </motion.div>
                                         </AnimatePresence>
                                     </div>
-                                    <div className="text-3xl font-bold shadow-custom bg-[#eddcfd] h-12 w-8 flex justify-center overflow-hidden shadow-lg items-center rounded-lg">
+                                    <div className="text-2xl  font-bold shadow-custom bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden shadow-lg items-center rounded-md">
                                         <AnimatePresence mode="wait">
                                             <motion.div
                                                 key={countS}
@@ -102,7 +102,7 @@ const CountAnimation = () => {
                                                     opacity: 1,
                                                     y: directionS === 1 ? 20 : -10,
                                                 }}
-                                                transition={{ restSpeed: 1000 }}
+                                                transition={{ restSpeed: 500 }}
                                             >
                                                 {countS}
                                             </motion.div>
