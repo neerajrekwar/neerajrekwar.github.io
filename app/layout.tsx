@@ -15,14 +15,8 @@ const dm_Sans = DM_Sans({
   subsets: ["latin"],
 });
 
-const alata = Alata({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {};
-
-
 
 export default function RootLayout({
   children,

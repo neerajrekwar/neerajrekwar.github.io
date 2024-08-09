@@ -5,7 +5,7 @@ import { Cover } from "@/app/components/ui/cover";
 export function CoverDemo() {
   return (
     <div>
-      <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-four via-five to-six dark:from-neutral-800 dark:via-white dark:to-white">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-7xl mx-auto text-center  relative z-20  font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
         Balance innovation and stability<br /> at <Cover>warp speed</Cover>
       </h2>
     </div>

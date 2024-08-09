@@ -731,9 +731,9 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2 w-full sm:w-auto rounded-lg text-right text-six bg-black"
+                    className="m-2 w-full sm:w-auto rounded-lg text-right text-six bg-black aspect-square"
                   >
-                    <h4 className="px-2 text-4xl font-bold">
+                    <h4 className="px-2 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                     <TextRotator />
                     </h4>
                     <div className="m-2">
@@ -744,10 +744,10 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="m-2 flex  col-span-2 rounded-lg text-six bg-black"
+                    className="m-2 flex  col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
                    
-                    <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold">
+                    <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                       {" "}
                       Leveraging modern JavaScript features
                     </h4>
@@ -760,13 +760,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2 col-span-2 rounded-lg text-six bg-black"
+                    className="m-2 col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
                    
                     <div className="rounded-md m-2 h-40 overflow-hidden z-20">
                       <ImageSlides />
                     </div>
-                    <h4 className="px-2 text-4xl m-2 font-bold">
+                    <h4 className="px-2 text-4xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                       Efficient algorithms and data structures
                     </h4>
                   </motion.li>
@@ -774,20 +774,20 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.9 }}
-                    className="m-2  rounded-lg w-full sm:w-auto text-six bg-black"
+                    className="m-2  rounded-lg w-full sm:w-auto text-six bg-black aspect-square"
                   >
                    
-                    <h4 className="px-2 text-4xl md:text-2xl m-2 font-bold">Improved User Experience</h4>
+                    <h4 className="px-2 text-4xl md:text-2xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">Improved User Experience</h4>
                     <MultiStepLoader />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="m-2 rounded-lg text-six bg-black"
+                    className="m-2 rounded-lg text-six bg-black aspect-square"
                   >
                     
-                    <h4 className="px-2 text-xl font-semibold font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-yellow-400 to-blue-500">
+                    <h4 className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                       versions to access the latest performance optimizations
                     </h4>
                     <p className="m-2">
@@ -799,7 +799,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.1 }}
-                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-black"
+                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
                       <CoverDemo />
                   </motion.li>
