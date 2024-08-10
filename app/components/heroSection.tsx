@@ -97,10 +97,10 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="flex "
                   >
-                    <span className="">Current Age:</span>
-                    <motion.p className="pl-1 flex">
+                    <span className="pr-1 flex">Current Age:</span>
+                    
                       <AgeCalculator /> years
-                    </motion.p>
+                    
                   </motion.li>
                 </motion.ul>
                 <motion.ul
@@ -702,20 +702,43 @@ export function HeroSection() {
                 </ul>
 
                 <div className="border-five flex-col justify-between mt-10 p-2 z-10  border-third">
-                  <ul className="py-8 flex md:justify-between">
-                    <li className="py-4 basis-1/2">
+                  <motion.ul 
+                    initial={{ opacity: 0,  x: -20 }}
+                    whileInView={{ opacity: 1,  x: 0 }}
+                    transition={{duration: 0.4}}
+                    className="py-8 md:flex md:justify-between">
+                    <motion.li 
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.4, delay: 0.6 }}
+                      className="py-4 basis-1/2">
                       Version Control with Git{" "}
                       <span className={source_code_pro.className}>
                         <p className="text-4xl">v2.46.0</p>
                       </span>
-                    </li>
-                    <li className="py-4 basis-1/2">
+                    </motion.li>
+                    <motion.li 
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.4, delay: 0.8 }}
+                      className="py-4 basis-1/2">
                       <h1>Deployment Badge</h1>
                       <ReactMarkdown>{markdown}</ReactMarkdown>
-                    </li>
-                  </ul>
-                  <ul className="pb-8 flex md:justify-between ">
-                    <li className="py-4 basis-1/2">
+                    </motion.li>
+                  </motion.ul>
+                    <motion.ul 
+                      initial={{ opacity: 0,  x: -20 }}
+                      whileInView={{ opacity: 1,  x: 0 }}
+                      transition={{duration: 0.4}}
+                    className="pb-8 flex md:justify-between ">
+                      <motion.li 
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{}}
+                        transition={{ duration: 0.4, delay: 0.6 }}
+                      className="py-4 basis-1/2">
                       Front-end & UI{" "}
                       <div className="flex">
                         <svg
@@ -749,16 +772,30 @@ export function HeroSection() {
                           <path d="M6 15h12l-12 -12h12v6h-12v6l6 6v-6" />
                         </svg>
                       </div>
-                    </li>
-                    <li className="py-4 basis-1/2">
+                    </motion.li>
+                      <motion.li 
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{}}
+                        transition={{ duration: 0.4, delay: 0.6 }} 
+                      className="py-4 basis-1/2">
                       <h1>Current</h1>
                       <p className="font-bold text-[#8f5b84]">
                         ▲ Next.js 14.2.5
                       </p>
-                    </li>
-                  </ul>
-                  <ul className="pb-8 flex md:justify-between">
-                    <li className="py-4 flex items-start flex-col basis-1/2">
+                    </motion.li>
+                  </motion.ul>
+                    <motion.ul 
+                      initial={{ opacity: 0,  x: -20 }}
+                      whileInView={{ opacity: 1,  x: 0 }}
+                      transition={{duration: 0.4}} 
+                    className="pb-8 flex md:justify-between">
+                      <motion.li 
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{}}
+                        transition={{ duration: 0.4, delay: 0.6 }} 
+                      className="py-4 flex items-start flex-col basis-1/2">
                       Library & Frameworks{" "}
                       <div className="flex items-start flex-col">
                         <p className="font-bold  items-center  flex">
@@ -827,12 +864,12 @@ export function HeroSection() {
                           v18.3.1
                         </p>
                       </div>
-                    </li>
+                    </motion.li>
                     <li className="py-4 basis-1/2">
                       <h1>back-end with Database</h1>
                       
                     </li>
-                  </ul>
+                  </motion.ul>
                 </div>
               </div>
             </div>
