@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Refresh from "./acceries/Refresh"; // Assuming you have a Refresh component
+import { motion } from "framer-motion";
 
 const texts = [
-  "Optimized ",
-  "libraries ",
+  "Optimized",
+  "libraries",
   "and",
   "frameworks",
 ];
@@ -36,9 +37,11 @@ const TextRotator = () => {
       <div ref={refreshRef} className="animate-spin rounded-full">
         <Refresh />
       </div>
-      <div className="mb-4 text-2xl">
+      <motion.div 
+        
+        className="mb-4 text-2xl">
         {texts[currentTextIndex]}
-      </div>
+      </motion.div>
     </div>
   );
 };

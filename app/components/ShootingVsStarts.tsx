@@ -10,7 +10,7 @@ import AutoTyper from "./AutoTyper";
 
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
-    <div className="bg-neutral-900 flex flex-col items-center justify-center relative w-full">
+    <div className="bg-black flex flex-col items-center justify-center relative w-full">
       <figure className="w-auto z-10  min-h-screen justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
         <div className=" md:flex md:flex-row-reverse max-w-6xl ">
           <motion.div

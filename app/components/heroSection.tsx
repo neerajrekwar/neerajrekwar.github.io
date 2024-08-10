@@ -7,12 +7,9 @@ import { ShootingStarsAndStarsBackgroundDemo } from "./ShootingVsStarts";
 import AgeCalculator from "./AgeCalculator";
 import CountAnimation from "./CountAnimation";
 import { ImageSlides } from "./ImageSlides";
-import Refresh from "./acceries/Refresh";
 import TextRotator from "./TextsRefresh";
-import {CoverDemo} from './CoverDemo';
-import {MultiStepLoader} from "./MultiStepLoader"
-
-
+import { CoverDemo } from "./CoverDemo";
+import { MultiStepLoader } from "./MultiStepLoader";
 
 export function HeroSection() {
   return (
@@ -159,7 +156,7 @@ export function HeroSection() {
               animate={{}}
               className=" text-2xl p-4 w-fit overflow-hidden "
             >
-              My Skills
+              My Skill
             </motion.h2>
           </div>
           <div className="overflow-hidden min-h-screen pb-20 lg:flex-row gap-2 lg:flex">
@@ -317,8 +314,18 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2  rounded-lg text-six bg-four"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
                   >
+                    <div className="md:pb-4 text-six">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                        Search Engine Optimization
+                      </h4>
+
+                      <p className="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus error alias unde optio deleniti. 
+                      </p>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -329,27 +336,29 @@ export function HeroSection() {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-search"
+                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-search"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                       <path d="M21 21l-6 -6" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Search Engine Optimization
-                    </h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2  rounded-lg text-six bg-four"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
                   >
+                    <div className="md:pb-4 text-six">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                        Socail Media
+                      </h4>
+                      <p className="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus error alias unde optio deleniti. Deserunt
+                        vero, ad a.
+                      </p>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -360,7 +369,7 @@ export function HeroSection() {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-social"
+                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-social"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
@@ -371,23 +380,24 @@ export function HeroSection() {
                       <path d="M6.7 17.8l2.8 -2" />
                       <path d="M17.3 17.8l-2.8 -2" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      {" "}
-                      Socail Media
-                    </h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
                   </motion.li>
 
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="m-2  rounded-lg text-six bg-four"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
                   >
+                    <div className="md:pb-4 text-six">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                        How to Grow Online
+                      </h4>
+                      <p className="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus error alias unde optio deleniti. Deserunt
+                        vero, ad a.
+                      </p>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -398,7 +408,7 @@ export function HeroSection() {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-world-www"
+                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-world-www"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
@@ -411,21 +421,23 @@ export function HeroSection() {
                       <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
                       <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      How to Grow Online
-                    </h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="m-2  rounded-lg text-six bg-four"
-                  >
+                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                        >
+                          <div className="md:pb-4 text-six">
+                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                        Localization
+                      </h4>
+                      <p className="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus error alias unde optio deleniti. Deserunt
+                        vero, ad a.
+                      </p>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -436,7 +448,7 @@ export function HeroSection() {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-building-store"
+                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-building-store"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M3 21l18 0" />
@@ -445,19 +457,23 @@ export function HeroSection() {
                       <path d="M19 21l0 -10.15" />
                       <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">Localization</h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.4 }}
-                    className="m-2 rounded-lg text-six bg-four"
-                  >
+                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                        >
+                          <div className="md:pb-4 text-six">
+                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                        Google Analytics
+                      </h4>
+                      <p className="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus error alias unde optio deleniti. Deserunt vero,
+                        ad a.
+                      </p>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -468,28 +484,29 @@ export function HeroSection() {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="m-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-google-analytics"
+                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-brand-google-analytics"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M10 9m0 1.105a1.105 1.105 0 0 1 1.105 -1.105h1.79a1.105 1.105 0 0 1 1.105 1.105v9.79a1.105 1.105 0 0 1 -1.105 1.105h-1.79a1.105 1.105 0 0 1 -1.105 -1.105z" />
                       <path d="M17 3m0 1.105a1.105 1.105 0 0 1 1.105 -1.105h1.79a1.105 1.105 0 0 1 1.105 1.105v15.79a1.105 1.105 0 0 1 -1.105 1.105h-1.79a1.105 1.105 0 0 1 -1.105 -1.105z" />
                       <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Google Analytics
-                    </h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
+                    
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.6 }}
-                    className="m-2  rounded-lg text-six bg-four"
-                  >
+                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                        >
+                          <div className="md:pb-4 text-six">
+                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">Ads Word</h4>
+                      <p className="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus error alias unde optio deleniti. Deserunt vero,
+                        ad a.
+                      </p>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -500,26 +517,31 @@ export function HeroSection() {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="m-2 icon-tabler icons-tabler-outline icon-tabler-mailbox"
+                      className="m-2 text-white icon-tabler icons-tabler-outline icon-tabler-mailbox"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M10 21v-6.5a3.5 3.5 0 0 0 -7 0v6.5h18v-6a4 4 0 0 0 -4 -4h-10.5" />
                       <path d="M12 11v-8h4l2 2l-2 2h-4" />
                       <path d="M6 15h1" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">Ads Word</h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
+                    
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.8 }}
-                    className="m-2 rounded-lg text-six bg-four"
-                  >
+                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                        >
+                          <div className="md:pb-4 text-six">
+                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                        Email Marketing
+                      </h4>
+                      <p className="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus error alias unde optio deleniti. Deserunt vero,
+                        ad a.
+                      </p>
+                    </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={44}
@@ -530,21 +552,14 @@ export function HeroSection() {
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="m-2 icon-tabler icons-tabler-outline icon-tabler-mailbox"
+                      className="m-2 text-white icon-tabler icons-tabler-outline icon-tabler-mailbox"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M10 21v-6.5a3.5 3.5 0 0 0 -7 0v6.5h18v-6a4 4 0 0 0 -4 -4h-10.5" />
                       <path d="M12 11v-8h4l2 2l-2 2h-4" />
                       <path d="M6 15h1" />
                     </svg>
-                    <h4 className="px-2 text-xl font-semibold">
-                      Email Marketing
-                    </h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
-                    </p>
+                    
                   </motion.li>
                 </motion.ul>
               </div>
@@ -725,33 +740,39 @@ export function HeroSection() {
                   initial={{ opacity: 0, x: -40, y: -40 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.4 }}
-                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows "
+                  className=" rounded-md flex flex-col md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows 
+ "
                 >
                   <motion.li
-                    initial={{ opacity: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2 w-full sm:w-auto rounded-lg text-right text-six bg-black aspect-square"
+                    className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-six bg-black aspect-square"
                   >
-                    <h4 className="px-2 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
-                    <TextRotator />
-                    </h4>
-                    <div className="m-2">
-                     
+                    <motion.h4 className="px-2 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                      <TextRotator />
+                    </motion.h4>
+                    <div className="flex m-2 justify-center items-center aspect-[16/9]  rounded-md bg-custom-radial-s">
+                      <motion.p
+                        initial={{opacity: 0}}
+                        animate={{opacity: 0.5}}
+                        whileHover={{opacity: 1, scale: 1.2  }}
+                        whileInView={{opacity: 0.1, scale: 1.1}}
+                        transition={{duration: 1.2, delay: 0.4}}
+                        >apear soon</motion.p>
                     </div>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="m-2 flex  col-span-2 rounded-lg text-six bg-black aspect-square"
+                    className="m-2 flex border border-seven  col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
-                   
                     <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                       {" "}
                       Leveraging modern JavaScript features
                     </h4>
-                    <div className="basis-1/2 bg-custom-radial flex justify-center items-center">
+                    <div className="basis-1/2 pt-2 bg-custom-radial flex justify-center items-center">
                       <CountAnimation />
                     </div>
                   </motion.li>
@@ -760,59 +781,82 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2 col-span-2 rounded-lg text-six bg-black aspect-square"
+                    className="m-2 border border-seven col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
-                   
-                    <div className="rounded-md m-2 h-40 overflow-hidden z-20">
+                    <div className="rounded-md m-2 h-60 overflow-hidden  z-20">
                       <ImageSlides />
                     </div>
-                    <h4 className="px-2 text-4xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    <motion.h4
+                      initial={{ opacity: 0, y: 40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 2, duration: 1.2 }}
+                      className="px-2 text-4xl m-2 overflow-hidden font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                    >
                       Efficient algorithms and data structures
-                    </h4>
+                    </motion.h4>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.9 }}
-                    className="m-2  rounded-lg w-full sm:w-auto text-six bg-black aspect-square"
+                    className="m-2  rounded-lg  sm:w-auto text-six bg-black aspect-square"
                   >
-                   
-                    <h4 className="px-2 text-4xl md:text-2xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">Improved User Experience</h4>
+                    <motion.h4
+                      initial={{ opacity: 0, y: 40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 2, duration: 1.2 }}
+                      className="px-2 text-4xl md:text-2xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                    >
+                      Improved User Experience
+                    </motion.h4>
                     <MultiStepLoader />
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1 }}
+                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+          
+                    transition={{ delay: 1, duration: 0.8 }}
                     className="m-2 rounded-lg text-six bg-black aspect-square"
                   >
-                    
-                    <h4 className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    <motion.h4
+                      initial={{ opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 2, duration: 1.2 }}
+                      className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                    >
                       versions to access the latest performance optimizations
-                    </h4>
+                    </motion.h4>
                     <p className="m-2">
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.1 }}
                     className="m-2 p-2 col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
-                      <CoverDemo />
+                    <CoverDemo />
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, scale: 0.5, x: -40, y: 40 }}
+                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="m-2 col-span-3 rounded-lg text-six bg-black"
-                  >
-                    
-                    <h4 className="px-2 text-xl font-semibold">
+                      className="m-2 col-span-3 md:h-40 rounded-lg text-six bg-black aspect-square"
+                      >
+                        <motion.h4
+                          initial={{ opacity: 0, x: 40 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 2, duration: 1.2 }}
+                          className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                        >
                       Rigorously test your application
-                    </h4>
+                    </motion.h4>
                     <p className="m-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Accusamus error alias unde optio deleniti. Deserunt vero,

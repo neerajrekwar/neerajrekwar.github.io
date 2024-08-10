@@ -59,7 +59,7 @@ export const ImageSlides = () => {
     <>
       
         <AnimatePresence initial={false} custom={direction}>
-          <motion.div className=" relative justify-center text-four z-10 items-center flex  border-black overflow-x-hidden overflow-y-hidden">
+          <motion.div className=" relative justify-center text-four z-10 items-center flex  rounded-md overflow-x-hidden overflow-y-hidden">
             <motion.img
               
               key={page}
@@ -88,13 +88,13 @@ export const ImageSlides = () => {
             />
             <div
               className="next z-40 h-8 w-8   rounded-full text-four 
-              text-2xl absolute bg-seven justify-center items-center flex top-1/2 left-2"
+              text-2xl absolute bg-six justify-center items-center flex top-1/2 left-2"
               onClick={() => paginate(1)}
             >
               &#9666;
             </div>
             <div
-              className="prev z-40 h-8 w-8   text-four  text-2xl rounded-full absolute bg-seven justify-center items-center flex top-1/2 right-2 "
+              className="prev z-40 h-8 w-8   text-four  text-2xl rounded-full absolute bg-six  justify-center items-center flex top-1/2 right-2 "
               onClick={() => paginate(-1)}
             >
               &#9656;

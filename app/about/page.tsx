@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <section className="">
+    <main className="bg-transparent">
       <HeroSection />
-    </section>
+    </main>
   );
 }
