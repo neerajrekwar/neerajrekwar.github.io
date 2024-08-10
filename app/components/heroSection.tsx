@@ -10,14 +10,26 @@ import { ImageSlides } from "./ImageSlides";
 import TextRotator from "./TextsRefresh";
 import { CoverDemo } from "./CoverDemo";
 import { MultiStepLoader } from "./MultiStepLoader";
+import { Source_Code_Pro } from "next/font/google";
+import ReactMarkdown from "react-markdown";
+
+const markdown = `
+[![Deploy Next.js site to Pages](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml)
+`;
+
+const source_code_pro = Source_Code_Pro({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-family-source-code-pro",
+});
 
 export function HeroSection() {
   return (
     <>
       <ShootingStarsAndStarsBackgroundDemo />
-      <section className="bgrid2 bg-primary text-four  min-h-screen">
-        <div className="  max-w-6xl m-auto">
-          <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
+      <section className=" bgrid2 text-four  min-h-screen">
+        <div className=" max-w-6xl m-auto">
+          <div className=" bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -323,7 +335,7 @@ export function HeroSection() {
 
                       <p className="m-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. 
+                        Accusamus error alias unde optio deleniti.
                       </p>
                     </div>
                     <svg
@@ -426,10 +438,10 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
-                        >
-                          <div className="md:pb-4 text-six">
-                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                  >
+                    <div className="md:pb-4 text-six">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                         Localization
                       </h4>
                       <p className="m-2">
@@ -462,16 +474,16 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.4 }}
-                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
-                        >
-                          <div className="md:pb-4 text-six">
-                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                  >
+                    <div className="md:pb-4 text-six">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                         Google Analytics
                       </h4>
                       <p className="m-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt vero,
-                        ad a.
+                        Accusamus error alias unde optio deleniti. Deserunt
+                        vero, ad a.
                       </p>
                     </div>
                     <svg
@@ -491,20 +503,21 @@ export function HeroSection() {
                       <path d="M17 3m0 1.105a1.105 1.105 0 0 1 1.105 -1.105h1.79a1.105 1.105 0 0 1 1.105 1.105v15.79a1.105 1.105 0 0 1 -1.105 1.105h-1.79a1.105 1.105 0 0 1 -1.105 -1.105z" />
                       <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
                     </svg>
-                    
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.6 }}
-                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
-                        >
-                          <div className="md:pb-4 text-six">
-                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">Ads Word</h4>
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                  >
+                    <div className="md:pb-4 text-six">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                        Ads Word
+                      </h4>
                       <p className="m-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt vero,
-                        ad a.
+                        Accusamus error alias unde optio deleniti. Deserunt
+                        vero, ad a.
                       </p>
                     </div>
                     <svg
@@ -524,22 +537,21 @@ export function HeroSection() {
                       <path d="M12 11v-8h4l2 2l-2 2h-4" />
                       <path d="M6 15h1" />
                     </svg>
-                    
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.8 }}
-                        className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
-                        >
-                          <div className="md:pb-4 text-six">
-                            <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                  >
+                    <div className="md:pb-4 text-six">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                         Email Marketing
                       </h4>
                       <p className="m-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt vero,
-                        ad a.
+                        Accusamus error alias unde optio deleniti. Deserunt
+                        vero, ad a.
                       </p>
                     </div>
                     <svg
@@ -559,7 +571,6 @@ export function HeroSection() {
                       <path d="M12 11v-8h4l2 2l-2 2h-4" />
                       <path d="M6 15h1" />
                     </svg>
-                    
                   </motion.li>
                 </motion.ul>
               </div>
@@ -689,49 +700,140 @@ export function HeroSection() {
                     </div>
                   </motion.li>
                 </ul>
-                {/* <ul className="py-2 my-4 ">
-                  <motion.li
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    animate={{}}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex-col justify-start items-center"
-                  >
-                    
-                    <motion.p 
-                      initial={{ opacity: 0, x: 20, }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      animate={{}}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold">
-                      Front End Development Libraries Certification
-                    </motion.p>
-                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        animate={{}}
-                        transition={{ }}
-                        className="pl-1 text-sm">
-                        Freecodecamp <motion.span
-                                    
-                                      animate={{}}
-                                      transition={{ }}
-                                      className="overflow-hidden   border-five"
-                                      >
-                          <motion.a 
-                            initial={{ opacity: 0, x: 200 }}
-                            whileInView={{ opacity: 0, x: 200 }}
-                            whileHover={{ opacity: 1, x: 0 }}
-                            href="https://www.freecodecamp.org/certification/fcc36ba76de-81ed-4109-bcf2-c5dcfb1fc22e/responsive-web-design" >link
-                          </motion.a></motion.span>
-                      </motion.p>
-                      <motion.p className="pl-1 text-sm md:pr-6">
-                         April 21, 2022
-                      </motion.p>
-                    </div>
-                  </motion.li>
-                </ul> */}
+
+                <div className="border-five flex-col justify-between mt-10 p-2 z-10  border-third">
+                  <ul className="py-8 flex md:justify-between">
+                    <li className="py-4 basis-1/2">
+                      Version Control with Git{" "}
+                      <span className={source_code_pro.className}>
+                        <p className="text-4xl">v2.46.0</p>
+                      </span>
+                    </li>
+                    <li className="py-4 basis-1/2">
+                      <h1>Deployment Badge</h1>
+                      <ReactMarkdown>{markdown}</ReactMarkdown>
+                    </li>
+                  </ul>
+                  <ul className="pb-8 flex md:justify-between ">
+                    <li className="py-4 basis-1/2">
+                      Front-end & UI{" "}
+                      <div className="flex">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={44}
+                          height={44}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="icon icon-tabler icons-tabler-outline icon-tabler-brand-tailwind"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z" />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={44}
+                          height={44}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="icon icon-tabler icons-tabler-outline icon-tabler-brand-framer"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M6 15h12l-12 -12h12v6h-12v6l6 6v-6" />
+                        </svg>
+                      </div>
+                    </li>
+                    <li className="py-4 basis-1/2">
+                      <h1>Current</h1>
+                      <p className="font-bold text-[#8f5b84]">
+                        ▲ Next.js 14.2.5
+                      </p>
+                    </li>
+                  </ul>
+                  <ul className="pb-8 flex md:justify-between">
+                    <li className="py-4 flex items-start flex-col basis-1/2">
+                      Library & Frameworks{" "}
+                      <div className="flex items-start flex-col">
+                        <p className="font-bold  items-center  flex">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={44}
+                            height={44}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="mr-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-npm"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M1 8h22v7h-12v2h-4v-2h-6z" />
+                            <path d="M7 8v7" />
+                            <path d="M14 8v7" />
+                            <path d="M17 11v4" />
+                            <path d="M4 11v4" />
+                            <path d="M11 11v1" />
+                            <path d="M20 11v4" />
+                          </svg>{" "}
+                          v10.8.2
+                        </p>
+                        <p className="font-bold  items-center  flex">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={44}
+                            height={44}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          className="mr-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-nextjs">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993" />
+                            <path d="M15 12v-3" />
+                          </svg>{" "}
+                          v14.2.5
+                        </p>
+                        <p className="font-bold  items-center  flex">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={44}
+                            height={44}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          className="mr-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-react">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
+                            <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
+                            <path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2" />
+                            <path d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2" />
+                            <path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896" />
+                            <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897" />
+                            <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z" />
+                          </svg>{" "}
+                          v18.3.1
+                        </p>
+                      </div>
+                    </li>
+                    <li className="py-4 basis-1/2">
+                      <h1>back-end with Database</h1>
+                      
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="border-five flex  justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
@@ -740,8 +842,7 @@ export function HeroSection() {
                   initial={{ opacity: 0, x: -40, y: -40 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.4 }}
-                  className=" rounded-md flex flex-col md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows 
- "
+                  className=" rounded-md flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
                 >
                   <motion.li
                     initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
@@ -754,17 +855,19 @@ export function HeroSection() {
                     </motion.h4>
                     <div className="flex m-2 justify-center items-center aspect-[16/9]  rounded-md bg-custom-radial-s">
                       <motion.p
-                        initial={{opacity: 0}}
-                        animate={{opacity: 0.5}}
-                        whileHover={{opacity: 1, scale: 1.2  }}
-                        whileInView={{opacity: 0.1, scale: 1.1}}
-                        transition={{duration: 1.2, delay: 0.4}}
-                        >apear soon</motion.p>
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.5 }}
+                        whileHover={{ opacity: 1, scale: 1.2 }}
+                        whileInView={{ opacity: 0.1, scale: 1.1 }}
+                        transition={{ duration: 1.2, delay: 0.4 }}
+                      >
+                        apear soon
+                      </motion.p>
                     </div>
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.7 }}
                     className="m-2 flex border border-seven  col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
@@ -778,8 +881,8 @@ export function HeroSection() {
                   </motion.li>
 
                   <motion.li
-                    initial={{ opacity: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
                     className="m-2 border border-seven col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
@@ -797,8 +900,8 @@ export function HeroSection() {
                     </motion.h4>
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.9 }}
                     className="m-2  rounded-lg  sm:w-auto text-six bg-black aspect-square"
                   >
@@ -816,8 +919,7 @@ export function HeroSection() {
                   <motion.li
                     initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-          
-                    transition={{ delay: 1, duration: 0.8 }}
+                    transition={{ delay: 1 }}
                     className="m-2 rounded-lg text-six bg-black aspect-square"
                   >
                     <motion.h4
@@ -846,15 +948,15 @@ export function HeroSection() {
                     initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                      className="m-2 col-span-3 md:h-40 rounded-lg text-six bg-black aspect-square"
-                      >
-                        <motion.h4
-                          initial={{ opacity: 0, x: 40 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 2, duration: 1.2 }}
-                          className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
-                        >
+                    className="m-2 col-span-3 md:h-40 rounded-lg text-six bg-black aspect-square"
+                  >
+                    <motion.h4
+                      initial={{ opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 2, duration: 1.2 }}
+                      className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                    >
                       Rigorously test your application
                     </motion.h4>
                     <p className="m-2">
@@ -879,7 +981,7 @@ export function HeroSection() {
               animate={{}}
               className=" text-2xl p-4 w-fit overflow-hidden "
             >
-              My Skills
+              Hobbies
             </motion.h2>
           </div>
           <div className="overflow-hidden min-h-screen  lg:flex-row gap-2 lg:flex">

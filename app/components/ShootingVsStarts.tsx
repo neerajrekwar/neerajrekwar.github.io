@@ -97,7 +97,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               </motion.button>
             </div>
             <div className="text-base md:text-xl m-2 mx-8 ">
-              <div className="flex text-four py-6">
+              <div className="flex text-four py-6 ">
                 <motion.span
                   initial={{ scale: 0.2, x: -200, y: -200  }}
                   animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
@@ -108,7 +108,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 2,
                     duration: 5,
                   }}
-                  className="p-2 m-1 bg-seven  rounded-full flex justify-center items-center"
+                  className=" p-2 m-1 bg-seven  rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +120,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="hover:text-[#e7700d] active:text-[#e7700d ] transition-all duration-[1s] icon icon-tabler icons-tabler-outline icon-tabler-brand-stackoverflow"
+                    className=" hover:text-[#e7700d] active:text-[#e7700d ] transition-all duration-[1s] icon icon-tabler icons-tabler-outline icon-tabler-brand-stackoverflow"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />

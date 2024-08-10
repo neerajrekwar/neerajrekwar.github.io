@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="bg-transparent">
+    <main className="bgrid2">
       <HeroSection />
     </main>
   );
