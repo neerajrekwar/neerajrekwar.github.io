@@ -34,9 +34,7 @@ export function WobbleCardDemo() {
           The sound of music has the power to bring a sense of tranquility and harmony to our lives.
         </p>
         <div className="flex justify-center z-60 p-8">
-          <iframe 
-            className="z-50"
-            src="https://open.spotify.com/embed/playlist/6D6D1Cn3AaG1sqaxv2T69I?utm_source=generator" width="100%" height="152"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe  className="z-50" src="https://open.spotify.com/embed/playlist/6D6D1Cn3AaG1sqaxv2T69I?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
@@ -54,7 +52,7 @@ export function WobbleCardDemo() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-2 md:-right-[20%] lg:-right-[5%] -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-2 md:-right-[20%] lg:-right-[5%] -bottom-14 object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>

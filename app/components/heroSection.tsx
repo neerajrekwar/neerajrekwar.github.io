@@ -883,9 +883,10 @@ export function HeroSection() {
                   className=" rounded-md flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
                 >
                   <motion.li
-                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                    transition={{ delay: 0.6 }}
+                    initial={{ opacity: 0, y: 40, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.4, delay: 0.6 }}
                     className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-six bg-black aspect-square"
                   >
                     <motion.h4 className="px-2 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -897,16 +898,17 @@ export function HeroSection() {
                         animate={{ opacity: 0.5 }}
                         whileHover={{ opacity: 1, scale: 1.2 }}
                         whileInView={{ opacity: 0.1, scale: 1.1 }}
-                        transition={{ duration: 1.2, delay: 0.4 }}
+                        transition={{ duration: 1.2, delay: 0.8 }}
                       >
                         apear soon
                       </motion.p>
                     </div>
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                    transition={{ delay: 0.7 }}
+                    initial={{ opacity: 0, y: 40, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.5, delay: 0.6 }}
                     className="m-2 flex border border-seven  col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
                     <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -919,9 +921,10 @@ export function HeroSection() {
                   </motion.li>
 
                   <motion.li
-                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                    transition={{ delay: 0.8 }}
+                    initial={{ opacity: 0, y: 40, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.6, delay: 0.6 }}
                     className="m-2 border border-seven col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
                     <div className="rounded-md m-2 h-60 overflow-hidden  z-20">
@@ -938,9 +941,10 @@ export function HeroSection() {
                     </motion.h4>
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                    transition={{ delay: 0.9 }}
+                    initial={{ opacity: 0, y: 40, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.7, delay: 0.6 }}
                     className="m-2  rounded-lg  sm:w-auto text-six bg-black aspect-square"
                   >
                     <motion.h4
@@ -955,9 +959,10 @@ export function HeroSection() {
                     <MultiStepLoader />
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1 }}
+                    initial={{ opacity: 0, y: 40, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.8, delay: 0.6 }}
                     className="m-2 rounded-lg text-six bg-black aspect-square"
                   >
                     <motion.h4
@@ -975,17 +980,19 @@ export function HeroSection() {
                     </p>
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1.1 }}
+                    initial={{ opacity: 0, y: 40, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 0.9, delay: 0.6 }}
                     className="m-2 p-2 col-span-2 rounded-lg text-six bg-black aspect-square"
                   >
                     <CoverDemo />
                   </motion.li>
                   <motion.li
-                    initial={{ opacity: 0, scale: 0, x: -40, y: 40 }}
-                    whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1.2 }}
+                    initial={{ opacity: 0, y: 40, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    animate={{}}
+                    transition={{ duration: 1, delay: 0.6 }}
                     className="m-2 col-span-3 md:h-40 rounded-lg text-six bg-black aspect-square"
                   >
                     <motion.h4
