@@ -6,6 +6,8 @@ import Weather from "./WeatherApp";
 import { BackgroundBeamsDemo } from "./backgroundBeams";
 import DeviceAddress from "./DeviceAddress";
 import { AuroraBackgroundDemo } from "./BackgroundAurra";
+import { MyLogo } from "./Logo";
+
 
 const caveat = Caveat({
   weight: "400",

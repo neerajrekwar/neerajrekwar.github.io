@@ -13,7 +13,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
   return (
     <div className="bg-black min-h-screen flex flex-col items-center justify-center relative w-full">
       <figure className="w-auto z-10  lg:flex-col  justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
-        <div className=" md:flex md:flex-row-reverse max-w-6xl ">
+        <div className=" md:flex md:flex-row-reverse max-w-6xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
             animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
@@ -22,7 +22,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               delay: 1,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="flex flex-col basis-1/2 justify-center h-60 md:h-auto  items-center"
+            className="flex flex-col basis-1/2 justify-center h-60 md:h-auto items-center"
           >
             <Image
               src="/me.webp"
@@ -231,9 +231,9 @@ export function ShootingStarsAndStarsBackgroundDemo() {
           </div>
           
         </div>
-        <div className="border flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
           <BusinessCatalog />
-        </div>
+        </div> */}
       </figure>
       <ShootingStars />
       <StarsBackground />

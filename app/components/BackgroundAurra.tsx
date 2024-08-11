@@ -25,7 +25,7 @@ export function AuroraBackgroundDemo() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="gap-2 flex mb-10 flex-row  justify-start items-center text-semibold"
+            className="gap-2 flex mb-10 flex-row  w-fit p-1 pr-8 rounded-full bg-seven justify-start items-center text-semibold"
           >
             <Image
               src={"/me.webp"}
@@ -52,12 +52,12 @@ export function AuroraBackgroundDemo() {
             </motion.div>
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0,  x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
+              delay: 1,
+              duration: 0.6,
+              ease: "backIn",
             }}
             className="relative text-five font-bold z-10 md:pb-4 text-3xl sm:text-lg md:text-7xl  text-left "
           >
@@ -70,18 +70,18 @@ export function AuroraBackgroundDemo() {
             </div>
           </motion.h1>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0,  x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
-              delay: 0.1,
-              duration: 0.2,
+              delay: 1,
+              duration: 0.6,
               ease: "backIn",
             }}
             className="flex w-full flex-col items-center justify-center"
           ></motion.div>
           <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               delay: 0.3,
               duration: 0.8,
@@ -92,47 +92,49 @@ export function AuroraBackgroundDemo() {
             We offer reliable, scalable, and customizable web solutions to optimize your online presence.
           </motion.p>
 
-          <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">
-            <Link href={"https://9ee5869e-fad4-4ad2-964a-e146d6cf6d4d-00-26iczlozr3pya.sisko.replit.dev/about"} rel="preload" className="relative z-10 ">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileFocus={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                  delay: 0.1,
-                  duration: 1,
-                  ease: "easeInOut",
-                }}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="rounded-full p-2 px-4 p-2 px-4 md:p-3 md:px-6  bg-five text-primary text-base hover:bg-secondary hover:text-primary hover:shadow-lg shadow-md "
+          <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
+            <motion.button
+              className="border border-four  p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
+              initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
+              animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+              transition={{
+                duration: 0.8,
+                delay: 0.8,
+                ease: [0, 0.71, 0.2, 1.01],
+                type: "spring", stiffness: 400
+              }}
+              whileHover={{ scale: 1.1 }}
+
+            >
+              <Link
+                href="/contact"
+                className="p-2 px-4  rounded-full 
+                text-secondary text-semibold "
               >
-                Get started
-              </motion.button>
-            </Link>
-            <Link href={"#vision"} scroll={true} rel="preload" className="relative z-10">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileFocus={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 70,
-                  delay: 0.1,
-                  duration: 1,
-                  ease: "easeInOut",
-                }}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="rounded-full p-2 px-4 p-2 px-4 md:p-3 md:px-6  bg-five text-primary text-base hover:bg-secondary hover:text-primary hover:shadow-lg shadow-md "
+                Let&apos;s talk
+              </Link>
+            </motion.button>
+            <motion.button
+              className="border border-four  p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
+              initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
+              animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+                type: "spring", stiffness: 400
+              }}
+              whileHover={{ scale: 1.1 }}
+            >
+              <Link
+                href="/contact"
+                className=" rounded-full 
+                text-secondary text-semibold  "
               >
-                Explore
-              </motion.button>
-            </Link>
+                Cantact{" "}
+              </Link>
+            </motion.button>
+            
           </motion.div>
         </div>
 
