@@ -7,11 +7,12 @@ import Link from "next/link";
 import { ShootingStars } from "./ui/shooting-stars";
 import { StarsBackground } from "./ui/stars-background";
 import AutoTyper from "./AutoTyper";
+import BusinessCatalog from "./BusinessCatalog";
 
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
-    <div className="bg-black flex flex-col items-center justify-center relative w-full">
-      <figure className="w-auto z-10  min-h-screen justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
+    <div className="bg-black min-h-screen flex flex-col items-center justify-center relative w-full">
+      <figure className="w-auto z-10  lg:flex-col  justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
         <div className=" md:flex md:flex-row-reverse max-w-6xl ">
           <motion.div
             initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
@@ -41,7 +42,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
-              className="text-xl text-[#E0F2E9] m-2 mx-8  md:text-3xl">
+              className="text-xl bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%m-2 px-8 py-4  md:text-3xl">
               <p className="font-normal">Hello, World!</p>
               <div className="text-2xl md:text-4xl lg:text-5xl flex">
                 <p className="pr-2">I am</p>
@@ -55,7 +56,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             </div>
             <div className="text-base  text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
               <motion.button
-                className="box"
+                className="box p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
                 transition={{
@@ -69,14 +70,14 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               >
                 <Link
                   href="/contact"
-                  className="p-2 px-4 rounded-full 
-               bg-five text-primary"
+                  className="p-2 px-4  rounded-full 
+                  bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%   "
                 >
                   Let&apos;s talk
                 </Link>
               </motion.button>
               <motion.button
-                className="box"
+                className=" box p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
                 transition={{
@@ -89,8 +90,8 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               >
                 <Link
                   href="/contact"
-                  className="p-2 px-4 rounded-full 
-               bg-five text-primary"
+                  className=" rounded-full 
+                  bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%   "
                 >
                   Cantact{" "}
                 </Link>
@@ -108,7 +109,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 2,
                     duration: 5,
                   }}
-                  className=" p-2 m-1 bg-seven  rounded-full flex justify-center items-center"
+                  className=" p-2 m-1 shadow-[inset_1px_4px_7px_2px_var(--four)] bg-seven  rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +142,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                       duration: 5,
                     }}
                   
-                  className="p-2 m-1 bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_2px_4px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +173,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 4,
                     duration: 5,
                   }}
-                  className="p-2 m-1 bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_2px_4px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +203,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 5,
                     duration: 5,
                   }}
-                  className="p-2 m-1 bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_2px_4px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -229,6 +230,9 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             </div>
           </div>
           
+        </div>
+        <div className="border flex justify-center items-center">
+          <BusinessCatalog />
         </div>
       </figure>
       <ShootingStars />

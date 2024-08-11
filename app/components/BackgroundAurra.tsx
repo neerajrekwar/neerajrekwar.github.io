@@ -93,7 +93,7 @@ export function AuroraBackgroundDemo() {
           </motion.p>
 
           <motion.div className="text-secondaryText gap-2 mt-10 max-w-fit flex justify-center items-center">
-            <Link href={"https://30aa5c6f-6042-4c2c-81d7-31c35b2645cc-00-3ar3cv14cwkdk.pike.replit.dev/"} rel="preload" className="relative z-10 ">
+            <Link href={"https://9ee5869e-fad4-4ad2-964a-e146d6cf6d4d-00-26iczlozr3pya.sisko.replit.dev/about"} rel="preload" className="relative z-10 ">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileFocus={{ scale: 1.1 }}
