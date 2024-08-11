@@ -21,6 +21,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               duration: 0.8,
               delay: 1,
               ease: [0, 0.71, 0.2, 1.01],
+               type: "spring", stiffness: 400, damping: 20,
             }}
             className="flex flex-col basis-1/2 justify-center h-60 md:h-auto items-center"
           >

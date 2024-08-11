@@ -23,15 +23,25 @@ const TextFlipper: React.FC = () => {
   return (
 <div className="inline-flex text-five text-left md:h-20 lg:h-24 font-bold">
      <div className={caveat.className}>
-       <motion.div
-         key={index}
-         initial={{ opacity: 0, y: -20 }}
-         animate={{ opacity: 1, y: 0 }}
-         exit={{ opacity: 0, y: 10 }}
-         transition={{ duration: 0.5 }}
-         className=" z-10 text-3xl sm:text-lg md:text-7xl font-bold text-center"
-       >
-         {words[index]}
+       <motion.div 
+         className="py-1 border-black   pr-4"
+         >
+         <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 10  }}
+            
+            animate={{ opacity: 1, y: 0, x: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ 
+              duration: 0.8,
+                delay: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+              damping: 10,
+            }}
+            className=" z-10  font-bold text-center"
+          >
+            {words[index]}
+          </motion.div>
        </motion.div>
      </div>
     </div>
