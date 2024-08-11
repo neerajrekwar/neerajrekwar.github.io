@@ -19,8 +19,7 @@ const BusinessCatalog = () => {
       className="grid border grid-cols-2 sm:flew-wrap md:flex text-four justify-around items-center">
       {stats.map((stat) => (
         <motion.div
-          key={stat.label}
-          variants={item}
+         
           className="text-center m-4 p-4 shadow-md rounded-lg"
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
