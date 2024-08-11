@@ -24,7 +24,7 @@ export default function HomeSectionHeader() {
             <div className={caveat.className}>
               <Link
                 href={"/"}
-                className="sm:mx-8 mx-6 text-secondary text-3xl sm:text-4xl md:text-5xl font-bold"
+                className="sm:mx-6 mx-4 text-secondary text-3xl sm:text-4xl md:text-5xl font-bold"
               >
                 {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
                 nee.

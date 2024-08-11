@@ -23,13 +23,14 @@ export function AuroraBackgroundDemo() {
       >
         <div className="max-w-5xl text-left mx-auto text-four">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+        
             className="gap-2 flex mb-10 flex-row  w-fit p-1 pr-8 rounded-full bg-seven justify-start items-center text-semibold"
           >
             <motion.div 
-              initial={{ scale: 0.2, x: -200, y: -200  }}
-              animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+              whileDrag={{ }}
+              initial={{ rotate: 160, scale: 0.2, x: -200, y: -200  }}
+              animate={{ rotate: 360, scale: 1, x: 0, y2: 0, y: 0 }}
+              whileInView={{ rotate: 0, scale: 1, y2: 40, y: 0 }}
               transition={{
                 type: "spring",
                 stiffness: 260,
@@ -48,19 +49,46 @@ export function AuroraBackgroundDemo() {
             />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+                delay: 2,
+                duration: 1,
+              }}
               className="font-semibold text-secondary"
             >
-              <p>Neeraj Rekwar</p>
-              <div className="flex gap-1 h-4">
+              <motion.p 
+                initial={{ opacity: 0, x: 10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                  delay: 1,
+                  duration: 1,
+                }}
+                >Neeraj Rekwar</motion.p>
+              <motion.div 
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 60,
+                  delay: 3,
+                  duration: 3,
+                }}
+                className="flex gap-1 h-4">
                 <p className=" flex flex-row justify-start text-third items-center text-3xl">
                   &#8226;
                 </p>
                 <p className="text-five flex flex-row justify-start items-center font-normal text-sm">
                   Available for freelance work
                 </p>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
           <motion.h1

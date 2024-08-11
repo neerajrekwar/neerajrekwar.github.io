@@ -9,7 +9,7 @@ import StickyRelativeDemo from "./components/StickyRelativeDemo";
 import { AccordionDemo } from "@/components/Accordion";
 
 export const metadata: Metadata = {
-  title: "nee. - SEO Freelancer in delhi | Boost Your Online Visibility",
+  title: "nee. - Anonymous seo find at Delhi ",
   description: "Our Delhi-based team specializes in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
 
   
