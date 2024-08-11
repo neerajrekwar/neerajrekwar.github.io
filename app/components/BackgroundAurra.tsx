@@ -12,8 +12,8 @@ export function AuroraBackgroundDemo() {
   return (
     <AuroraBackground>
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,
           duration: 0.8,
@@ -27,6 +27,17 @@ export function AuroraBackgroundDemo() {
             whileInView={{ opacity: 1, y: 0 }}
             className="gap-2 flex mb-10 flex-row  w-fit p-1 pr-8 rounded-full bg-seven justify-start items-center text-semibold"
           >
+            <motion.div 
+              initial={{ scale: 0.2, x: -200, y: -200  }}
+              animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+                delay: 4,
+                duration: 1,
+              }}
+              >
             <Image
               src={"/me.webp"}
               width={24}
@@ -35,6 +46,7 @@ export function AuroraBackgroundDemo() {
               alt="Digital marketing for expert"
               className="aspact-square h-10 w-10 rounded-full"
             />
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -107,11 +119,11 @@ export function AuroraBackgroundDemo() {
 
             >
               <Link
-                href="/contact"
+                href="/https://1b7b70d3-f411-4cfb-9f19-e2cd3227a33d-00-1e36r1z5gi36g.pike.replit.dev/"
                 className=" rounded-full 
-                text-four font-semibold  p-2 px-4  text-center text-sm" 
+                text-four font-semibold uppercase  p-2 px-4  text-center text-sm" 
               >
-                Let&apos;s talk
+                get started
               </Link>
             </motion.button>
             <motion.button
@@ -131,7 +143,7 @@ export function AuroraBackgroundDemo() {
                 className="rounded-full 
                 text-four font-semibold p-2 px-4  text-center text-sm"
               >
-                Cantact{" "}
+                Explore{" "}
               </Link>
             </motion.button>
             
