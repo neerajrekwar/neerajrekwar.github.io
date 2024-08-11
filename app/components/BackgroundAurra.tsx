@@ -94,7 +94,7 @@ export function AuroraBackgroundDemo() {
 
           <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
             <motion.button
-              className="border border-four  p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
+              className="border border-four  p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-secondary"
               initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
               animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
               transition={{
@@ -109,13 +109,13 @@ export function AuroraBackgroundDemo() {
               <Link
                 href="/contact"
                 className="p-2 px-4  rounded-full 
-                text-secondary text-semibold "
+                text-primary text-semibold "
               >
                 Let&apos;s talk
               </Link>
             </motion.button>
             <motion.button
-              className="border border-four  p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
+              className="border border-four  p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-secondary"
               initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
               animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
               transition={{
@@ -128,8 +128,8 @@ export function AuroraBackgroundDemo() {
             >
               <Link
                 href="/contact"
-                className=" rounded-full 
-                text-secondary text-semibold  "
+                className="  rounded-full 
+                text-primary text-semibold"
               >
                 Cantact{" "}
               </Link>
