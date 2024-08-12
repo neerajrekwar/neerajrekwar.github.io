@@ -6,7 +6,7 @@
 
 :root {
   --color-primary: #FFFFFF;
-  --color-secondary: #000000;
+  --color-secondary: #242424;
   --color-third: #2cffbf;
   --color-four: #3A4F41;
   --color-five: #1d3838;
@@ -33,7 +33,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #000000;
-    --color-secondary: #FFFFFF;
+    --color-secondary: #e6e6e6;
     --color-third: #2cffbf;
     --color-four: #5e716a;
     --color-five: #E0F2E9;
