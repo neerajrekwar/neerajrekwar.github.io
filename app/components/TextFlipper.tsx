@@ -31,7 +31,7 @@ const TextFlipper: React.FC = () => {
             initial={{ opacity: 0, y: 10  }}
             
             animate={{ opacity: 1, y: 0, x: 0 }}
-            exit={{ opacity: 0, y: 10 }}
+            exit={{ opacity: 0, x2: 10 }}
             transition={{ 
               duration: 0.8,
                 delay: 1,

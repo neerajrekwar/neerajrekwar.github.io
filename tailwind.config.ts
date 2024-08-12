@@ -22,6 +22,7 @@ module.exports = {
         'conic-gradient-angles': 'conic-gradient(#8c56dc, #3f0093)',
         'custom-radial': 'radial-gradient(50% 50% at 80% 50%, rgba(147, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-radial-s': 'radial-gradient(70% 120% at 100% 50%, var(--four) 0%, rgba(0, 0, 0, 0) 100%)',
+        'custom-radial-sm': 'radial-gradient(90% 50% at 30% 50%, var(--gray-200) 0%, rgba(0, 0, 0, 0) 100%)',
       },
       colors: {
         primary: "var(--color-primary)",

@@ -875,12 +875,12 @@ export function HeroSection() {
               </div>
             </div>
             <div className="border-five flex  justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
-              <div>
+              <div className="three">
                 <motion.ul
                   initial={{ opacity: 0, x: -40, y: -40 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.4 }}
-                  className=" rounded-md flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
+                  className="three bg-seven rounded-md flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
                 >
                   <motion.li
                     initial={{ opacity: 0, y: 40, x: -40 }}
@@ -993,21 +993,19 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="m-2 col-span-3 md:h-40 rounded-lg text-six bg-black aspect-square"
+                    className="m-2  col-span-3 md:h-40 rounded-lg text-six bg-black aspect-square "
                   >
                     <motion.h4
-                      initial={{ opacity: 0, x: 40 }}
+                      initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                      className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
                     >
                       Rigorously test your application
                     </motion.h4>
                     <p className="m-2">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
+                      Lorem ipsum dolor sit amet 
                     </p>
                   </motion.li>
                 </motion.ul>
@@ -1016,7 +1014,7 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="bgrid2  text-four min-h-screen">
+      <section className="bgrid2 text-four min-h-screen">
         <div className=" ">
           <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
@@ -1029,10 +1027,38 @@ export function HeroSection() {
               Hobbies
             </motion.h2>
           </div>
-          <div className="overflow-hidden min-h-screen max-w-7xl m-auto md:p-8  lg:flex-row gap-2 lg:flex">
-            
+          <div className="overflow-hidden p-2 md:p-4 min-h-screen max-w-7xl m-auto md:p-8  lg:flex-row gap-2 ">
+            <motion.h1 
+              initial={{opacity: 0, x: 40}}
+              animate={{opacity: 0, x: 30}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 1, delay: 0.4}}
+              className="text-2xl md:text-4xl lg:text-6xl font-bold "
+              >
+            what I think and explore everything.
+            </motion.h1>
+            <motion.p 
+              initial={{opacity: 0, x: 60}}
+              animate={{opacity: 0, x: 40}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 1, delay: 0.4}}
+              className="py-4 max-w-2xl  md:text-xl lg:text-2xl font-semibold "
+              >
+            Today I make space for miracles. I recognize that it's not how big a miracle is that's important, but how we make it happen. but how much room I create for it.
+            </motion.p>
             <WobbleCardDemo />
-            
+            <div className="rounded-lg  my-10 border-five min-h-screen">
+              <motion.div
+                className="bg-custom-radial-sm rounded-lg flex flex-col justify-center items-center h-80">
+                <motion.h2>
+                 make it for beatiful
+                </motion.h2>
+                <motion.p>
+                  I recognize that it's not how big a miracle is that's important, but how we make it happen. but how much room I create for it.</motion.p>
+              </motion.div>
+              <motion.div></motion.div>
+              <motion.div></motion.div>
+            </div>
           </div>
         </div>
       </section>

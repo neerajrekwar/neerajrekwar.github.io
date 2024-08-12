@@ -57,7 +57,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             </div>
             <div className="text-base  text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
               <motion.button
-                className="box p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
+                className="box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_#e8c8ff4a]  bg-seven"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
                 transition={{
@@ -78,7 +78,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                 </Link>
               </motion.button>
               <motion.button
-                className=" box p-2 px-4 rounded-full shadow-[inset_4px_10px_7px_2px_#e8c8ff4a]  bg-seven"
+                className=" box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_#e8c8ff4a]  bg-seven"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
                 transition={{
@@ -110,7 +110,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 2,
                     duration: 5,
                   }}
-                  className=" p-2 m-1 shadow-[inset_1px_4px_7px_2px_var(--four)] bg-seven  rounded-full flex justify-center items-center"
+                  className=" p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven  rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +143,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                       duration: 5,
                     }}
                   
-                  className="p-2 m-1 shadow-[inset_2px_4px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -171,10 +171,10 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     type: "spring",
                     stiffness: 260,
                     damping: 20,
-                    delay: 4,
+                    delay: 12,
                     duration: 5,
                   }}
-                  className="p-2 m-1 shadow-[inset_2px_4px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +204,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 5,
                     duration: 5,
                   }}
-                  className="p-2 m-1 shadow-[inset_2px_4px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

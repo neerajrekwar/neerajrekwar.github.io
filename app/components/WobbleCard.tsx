@@ -7,7 +7,7 @@ export function WobbleCardDemo() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-five min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <div className="max-w-xs">
@@ -23,7 +23,7 @@ export function WobbleCardDemo() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[20%]  -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-6  lg:-right-[20%] lg:-bottom-12 md:-bottom-40  sm:-bottom-32 -bottom-20   object-contain rounded-2xl"
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
@@ -40,7 +40,7 @@ export function WobbleCardDemo() {
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Books think I&#apos;m a genius, wrapper today!
+            Books think I&apos;m a genius, wrapper today!
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
              Yet, today, he found himself amidst a sea of paper, scissors, and tape. His mission: to wrap a mountain of books for the upcoming annual book fair.
@@ -52,7 +52,7 @@ export function WobbleCardDemo() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-2 md:-right-[20%] lg:-right-[5%] -bottom-14 object-contain rounded-2xl"
+          className="absolute -right-8 md:-right-[30%] lg:-right-[5%] md:-bottom-60 sm:-bottom-32 -bottom-24   object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>
