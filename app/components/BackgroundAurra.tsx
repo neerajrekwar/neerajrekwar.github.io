@@ -119,7 +119,7 @@ export function AuroraBackgroundDemo() {
             transition={{
               delay: 1,
               duration: 0.6,
-              ease: "backIn",
+              ease: ["backIn"],
             }}
             className="flex w-full flex-col items-center justify-center"
           ></motion.div>
