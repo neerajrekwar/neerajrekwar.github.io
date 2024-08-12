@@ -1044,7 +1044,7 @@ export function HeroSection() {
               transition={{duration: 1, delay: 0.4}}
               className="py-4 max-w-2xl  md:text-xl lg:text-2xl font-semibold "
               >
-            Today I make space for miracles. I recognize that it's not how big a miracle is that's important, but how we make it happen. but how much room I create for it.
+            Today I make space for miracles. I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.
             </motion.p>
             <WobbleCardDemo />
             <div className="rounded-lg  my-10 border-five min-h-screen">
@@ -1054,7 +1054,7 @@ export function HeroSection() {
                  make it for beatiful
                 </motion.h2>
                 <motion.p>
-                  I recognize that it's not how big a miracle is that's important, but how we make it happen. but how much room I create for it.</motion.p>
+                  I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.</motion.p>
               </motion.div>
               <motion.div></motion.div>
               <motion.div></motion.div>
