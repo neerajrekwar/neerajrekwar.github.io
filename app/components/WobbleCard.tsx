@@ -7,7 +7,7 @@ export function WobbleCardDemo() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-five min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <div className="max-w-xs">
@@ -23,7 +23,7 @@ export function WobbleCardDemo() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-6  lg:-right-[20%] lg:-bottom-12 md:-bottom-40  sm:-bottom-32 -bottom-20   object-contain rounded-2xl"
+          className="absolute -right-6  lg:-right-[17%] lg:-bottom-4 md:-bottom-40  sm:-bottom-32 -bottom-20   object-contain rounded-2xl"
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">

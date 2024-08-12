@@ -327,7 +327,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
                   >
                     <div className="md:pb-4 text-six">
                       <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -360,7 +360,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
                   >
                     <div className="md:pb-4 text-six">
                       <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -399,7 +399,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
                   >
                     <div className="md:pb-4 text-six">
                       <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -439,7 +439,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
                   >
                     <div className="md:pb-4 text-six">
                       <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -475,7 +475,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.4 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
                   >
                     <div className="md:pb-4 text-six">
                       <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -509,7 +509,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
                   >
                     <div className="md:pb-4 text-six">
                       <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -543,7 +543,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-black border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
                   >
                     <div className="md:pb-4 text-six">
                       <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
@@ -887,7 +887,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.4, delay: 0.6 }}
-                    className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-six bg-black aspect-square"
+                    className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-six bg-[#242424] aspect-square"
                   >
                     <motion.h4 className="px-2 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                       <TextRotator />
@@ -909,7 +909,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.5, delay: 0.6 }}
-                    className="m-2 flex border border-seven  col-span-2 rounded-lg text-six bg-black aspect-square"
+                    className="m-2 flex border border-seven  col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
                   >
                     <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                       {" "}
@@ -925,7 +925,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.6, delay: 0.6 }}
-                    className="m-2 border border-seven col-span-2 rounded-lg text-six bg-black aspect-square"
+                    className="m-2 border border-seven col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
                   >
                     <div className="rounded-md m-2 h-60 overflow-hidden  z-20">
                       <ImageSlides />
@@ -945,7 +945,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="m-2  rounded-lg  sm:w-auto text-six bg-black aspect-square"
+                    className="m-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, y: 40 }}
@@ -963,7 +963,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="m-2 rounded-lg text-six bg-black aspect-square"
+                    className="m-2 rounded-lg text-six bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 40 }}
@@ -984,7 +984,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.9, delay: 0.6 }}
-                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-black aspect-square"
+                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
                   >
                     <CoverDemo />
                   </motion.li>
@@ -993,7 +993,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="m-2  col-span-3 md:h-40 rounded-lg text-six bg-black aspect-square "
+                    className="m-2  col-span-3 md:h-40 rounded-lg text-six bg-[#242424] aspect-square "
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 20 }}
