@@ -1032,8 +1032,8 @@ export function HeroSection() {
               initial={{opacity: 0, x: 40}}
               animate={{opacity: 0, x: 30}}
               whileInView={{opacity: 1, x: 0}}
-              transition={{duration: 1, delay: 0.4}}
-              className="text-2xl md:text-4xl lg:text-6xl font-bold "
+              transition={{duration: 1, delay: 1.2}}
+              className="text-4xl md:text-4xl lg:text-6xl font-bold "
               >
             what I think and explore everything.
             </motion.h1>
@@ -1047,10 +1047,17 @@ export function HeroSection() {
             Today I make space for miracles. I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.
             </motion.p>
             <WobbleCardDemo />
-            <div className="rounded-lg  my-10 border-five min-h-screen">
+            <div className="rounded-lg border-2 py-16 px-2 my-10 border-secondary min-h-screen"> 
+              <motion.h3 
+                className="text-4xl font-bold "
+                >
+               hello to everyone
+              </motion.h3>
               <motion.div
-                className="bg-custom-radial-sm rounded-lg flex flex-col justify-center items-center h-80">
-                <motion.h2>
+                className="bg-custom-radial-sm border border-third rounded-lg flex flex-col justify-center  h-80">
+                <motion.h2 
+                 className="text-2xl font-bold "
+                  >
                  make it for beatiful
                 </motion.h2>
                 <motion.p>

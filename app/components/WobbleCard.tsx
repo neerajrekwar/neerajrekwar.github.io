@@ -14,7 +14,7 @@ export function WobbleCardDemo() {
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             A photo-holistic person involves considering the entirety of the universe in photography
           </h2>
-          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+          <p className="mt-4 text-left z-50 text-base/6 text-neutral-200">
             It can be a great way to express yourself capture moments, and make beautiful memories. you can create stunning images that can last a lifetime.
           </p>
         </div>
@@ -23,7 +23,7 @@ export function WobbleCardDemo() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-6  lg:-right-[17%] lg:-bottom-4 md:-bottom-40  sm:-bottom-32 -bottom-20   object-contain rounded-2xl"
+          className="absolute -right-6 -z-40  lg:-right-[17%] lg:-bottom-4 md:-bottom-40  sm:-bottom-32 -bottom-22   object-contain rounded-2xl"
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
@@ -52,7 +52,7 @@ export function WobbleCardDemo() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-8 md:-right-[30%] lg:-right-[5%] md:-bottom-60 sm:-bottom-32 -bottom-24   object-contain rounded-2xl"
+          className="absolute -z-40 -right-8 md:-right-[30%] lg:-right-[5%] md:-bottom-60 sm:-bottom-32 -bottom-24   object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>

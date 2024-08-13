@@ -57,7 +57,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             </div>
             <div className="text-base  text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
               <motion.button
-                className="box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_#e8c8ff4a]  bg-seven"
+                className="box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_var(--seven)]  bg-seven"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
                 transition={{
@@ -71,14 +71,14 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               >
                 <Link
                   href="/contact"
-                  className="p-2 px-4  rounded-full 
+                  className="p-2 px-4  text-secondary rounded-full 
                   bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%   "
                 >
                   Let&apos;s talk
                 </Link>
               </motion.button>
               <motion.button
-                className=" box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_#e8c8ff4a]  bg-seven"
+                className=" box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_var(--seven)]  bg-seven"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
                 transition={{
@@ -99,7 +99,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               </motion.button>
             </div>
             <div className="text-base md:text-xl m-2 mx-8 ">
-              <div className="flex text-four py-6 ">
+              <div className="flex text-four py-6">
                 <motion.span
                   initial={{ scale: 0.2, x: -200, y: -200  }}
                   animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
@@ -110,7 +110,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 2,
                     duration: 5,
                   }}
-                  className=" p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven  rounded-full flex justify-center items-center"
+                  className=" p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--seven)] bg-seven  rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +143,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                       duration: 5,
                     }}
                   
-                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--seven)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +174,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 12,
                     duration: 5,
                   }}
-                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--seven)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +204,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                     delay: 5,
                     duration: 5,
                   }}
-                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--four)] bg-seven rounded-full flex justify-center items-center"
+                  className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--seven)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

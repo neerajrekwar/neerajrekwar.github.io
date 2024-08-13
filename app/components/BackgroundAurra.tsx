@@ -30,7 +30,7 @@ export function AuroraBackgroundDemo() {
             <motion.div 
               whileDrag={{ }}
               initial={{ rotate: 160, scale: 0.2, x: -200, x2: 0, y: -200 }}
-              animate={{ rotate: 360, scale: 0.1, x: 400, x2: 45, y: 80 }}
+              animate={{ rotate: 360, scale: 0.1, x: 400, x2: 0, y: 200}}
               whileInView={{ rotate: 0, scale: 1, x2: -1040, x: 0, y: 0 }}
               transition={{
                 type: "spring",
@@ -38,7 +38,7 @@ export function AuroraBackgroundDemo() {
                 damping: 40,
                 delay: 4,
                 duration: 1,
-                ease:[0.6, 0.05, -0.01, 0.9],
+                ease:[0.6, 0.05, -0.01, 0.],
                 
               }}
               >
@@ -100,8 +100,8 @@ export function AuroraBackgroundDemo() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
               delay: 1,
-              duration: 0.6,
-              ease: "backIn",
+              duration: 0.8,
+              ease: [0.68, -0.55, 0.27, 1.55],
             }}
             className="relative text-secondary font-bold z-10 md:pb-4 text-3xl  md:text-7xl   sm:text-4xl text-left "
           >
@@ -113,16 +113,7 @@ export function AuroraBackgroundDemo() {
               </pre>
             </div>
           </motion.h1>
-          <motion.div
-            initial={{ opacity: 0,  x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              delay: 1,
-              duration: 0.6,
-              ease: ["backIn"],
-            }}
-            className="flex w-full flex-col items-center justify-center"
-          ></motion.div>
+          
           <motion.p
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -153,7 +144,7 @@ export function AuroraBackgroundDemo() {
               <Link
                 href="https://1b7b70d3-f411-4cfb-9f19-e2cd3227a33d-00-1e36r1z5gi36g.pike.replit.dev/"
                 className=" rounded-full 
-                 uppercase  p-2 px-4  text-center text-sm bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%" 
+                 uppercase  p-2 px-4  text-center text-sm" 
               >
                 get started
               </Link>
