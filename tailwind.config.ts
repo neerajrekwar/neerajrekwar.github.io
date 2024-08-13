@@ -22,7 +22,7 @@ module.exports = {
         'conic-gradient-angles': 'conic-gradient(#8c56dc, #3f0093)',
         'custom-radial': 'radial-gradient(50% 50% at 80% 50%, rgba(147, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-radial-s': 'radial-gradient(70% 120% at 100% 50%, var(--four) 0%, rgba(0, 0, 0, 0) 100%)',
-        'custom-radial-sm': 'radial-gradient(90% 50% at 30% 50%, var(--gray-200) 0%, rgba(0, 0, 0, 0) 100%)',
+        'custom-radial-sm': 'radial-gradient(33% 69% at 26% 0%, var(--blue-400) 0%, rgba(0, 0, 0, 0) 100%)',
       },
       colors: {
         primary: "var(--color-primary)",
@@ -36,6 +36,7 @@ module.exports = {
       },
       
       animation: {
+        "meteor-effect": "meteor 5s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
           "accordion-up": "accordion-up 0.2s ease-out",
         aurora: "aurora 60s linear infinite",
@@ -43,6 +44,14 @@ module.exports = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },

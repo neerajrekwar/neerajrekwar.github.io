@@ -13,6 +13,9 @@ import { CoverDemo } from "./CoverDemo";
 import { MultiStepLoader } from "./MultiStepLoader";
 import { Source_Code_Pro } from "next/font/google";
 import ReactMarkdown from "react-markdown";
+import {MeteorsDemo} from "./meteorsCard"
+import { Meteors } from "./ui/meteors";
+import { IconCircleArrowUpRightFilled } from "@tabler/icons-react";
 
 const markdown = `
 [![Deploy Next.js site to Pages](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml)
@@ -46,7 +49,7 @@ export function HeroSection() {
               initial={{ opacity: 0, x: 200 }}
               whileInView={{ opacity: 1, x: 0 }}
               animate={{}}
-              className=" p-4 m-2  rounded-md bg-five  md:text-6xl  "
+              className=" p-4 m-2  rounded-lg bg-five  md:text-6xl  "
             >
               <p className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-five ">
                 Thinks create, develop, and grow-up tents{" "}
@@ -880,7 +883,7 @@ export function HeroSection() {
                   initial={{ opacity: 0, x: -40, y: -40 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.4 }}
-                  className="three bg-seven rounded-md flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
+                  className="three bg-seven rounded-lg flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
                 >
                   <motion.li
                     initial={{ opacity: 0, y: 40, x: -40 }}
@@ -892,7 +895,7 @@ export function HeroSection() {
                     <motion.h4 className="px-2 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
                       <TextRotator />
                     </motion.h4>
-                    <div className="flex m-2 justify-center items-center aspect-[16/9]  rounded-md bg-custom-radial-s">
+                    <div className="flex m-2 justify-center items-center aspect-[16/9]  rounded-lg bg-custom-radial-s">
                       <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 0.5 }}
@@ -927,7 +930,7 @@ export function HeroSection() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="m-2 border border-seven col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
                   >
-                    <div className="rounded-md m-2 h-60 overflow-hidden  z-20">
+                    <div className="rounded-lg m-2 h-60 overflow-hidden  z-20">
                       <ImageSlides />
                     </div>
                     <motion.h4
@@ -1047,24 +1050,99 @@ export function HeroSection() {
             Today I make space for miracles. I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.
             </motion.p>
             <WobbleCardDemo />
-            <div className="rounded-lg border-2 py-16 px-2 my-10 border-secondary min-h-screen"> 
+            <div className="rounded-2xl flex flex-col gap-2 py-16 px-2 my-10  min-h-screen"> 
               <motion.h3 
-                className="text-4xl font-bold "
+
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 0, y: 3 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="text-4xl text-secondary relative z-40 max-w-2xl font-bold  "
                 >
                hello to everyone
+                 <span className="absolute bottom-2 p-1 -z-50 left-0  h-2 w-[100%]  bg-custom-radial-sm"></span>
               </motion.h3>
-              <motion.div
-                className="bg-custom-radial-sm border border-third rounded-lg flex flex-col justify-center  h-80">
-                <motion.h2 
-                 className="text-2xl font-bold "
-                  >
-                 make it for beatiful
-                </motion.h2>
-                <motion.p>
-                  I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.</motion.p>
-              </motion.div>
-              <motion.div></motion.div>
-              <motion.div></motion.div>
+              <div className=" border-third">
+                
+                <motion.div
+                  className="text-four flex-row-reverse my-8 bg-secondary border-third rounded-lg md:flex justify-center  h-shv ">
+                  <motion.div 
+                    className="basis-1/2 text-primary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg "
+                    >
+                    <motion.h2 
+                      initial={{ opacity: 0,  x: 30, }}
+                      animate={{ opacity: 1,  x: 0, }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                        type: "spring", stiffness: 400
+                      }}
+                       className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
+                        >
+                       Make it for beatiful
+                      </motion.h2>
+                      <motion.p 
+                        initial={{ opacity: 0,  x: 30, }}
+                        animate={{ opacity: 1,  x: 0, }}
+                        whileInView={{ opacity: 1,  x: 0, }}
+                        transition={{
+                          duration: 0.8,
+                          delay: 0.5,
+                          ease: [0, 0.71, 0.2, 1.01],
+                        }}
+                        className="px-2  md:text-md py-2  "
+                        >
+                        I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.</motion.p>
+                    <motion.a 
+                      initial={{ opacity: 0,  x: 30, }}
+                      animate={{ opacity: 1,  x: 0, }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                        type: "spring", stiffness: 400
+                      }}
+                      whileHover={{ scale: 1.1 }}
+
+                      href="/contact"
+                      className=" mt-4 border-1 border-primary rounded-full flex justify-center items-center gap-2 text-lg relative py-1  px-3 mx-2 z-40  w-fit">
+                     learn more <IconCircleArrowUpRightFilled />  
+                      <span className="absolute bottom-2 p-1  -z-50 left-2  h-[1%] w-20  bg-custom-radial-sm"></span>
+                    </motion.a>
+                  </motion.div>
+                  <motion.div 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 0.5 }}
+                      whileHover={{ opacity: 1, scale: 1 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1.2, delay: 0.8 }}
+                      exit={{}}
+                    className="lg:basis-1/2 text-primary overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
+                    >
+                    <motion.h2
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 0.5 }}
+                      whileHover={{ opacity: 1, scale: 1.2 }}
+                      whileInView={{ opacity: 0.1, scale: 1.1 }}
+                      transition={{ duration: 4, delay: 0.8 }}
+                      className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"> video will be soon</motion.h2>
+                    {/* <iframe
+                      className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
+                      src="https://www.youtube.com/embed/l8knG0BPr-o"
+
+
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe> */}
+                    {/* <video controls preload="none" aria-label="Video player">
+                      <source src={'https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT'} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video> */}
+                  </motion.div>
+                </motion.div>
+                
+              </div>  
             </div>
           </div>
         </div>

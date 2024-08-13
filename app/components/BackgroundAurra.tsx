@@ -30,15 +30,15 @@ export function AuroraBackgroundDemo() {
             <motion.div 
               whileDrag={{ }}
               initial={{ rotate: 160, scale: 0.2, x: -200, x2: 0, y: -200 }}
-              animate={{ rotate: 360, scale: 0.1, x: 400, x2: 0, y: 200}}
+              animate={{ rotate: 360, scale: 0.1, x: 400, x2: 0, y: 100}}
               whileInView={{ rotate: 0, scale: 1, x2: -1040, x: 0, y: 0 }}
               transition={{
                 type: "spring",
                 stiffness: 260,
-                damping: 40,
+                damping: 20,
                 delay: 4,
                 duration: 1,
-                ease:[0.6, 0.05, -0.01, 0.],
+                ease:[0.6, 0.05, -0.01, 0.14],
                 
               }}
               >
