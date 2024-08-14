@@ -35,7 +35,7 @@ export function AuroraBackgroundDemo() {
               transition={{
                 type: "spring",
                 stiffness: 260,
-                damping: 20,
+                damping: 30,
                 delay: 4,
                 duration: 1,
                 ease:[0.6, 0.05, -0.01, 0.14],
