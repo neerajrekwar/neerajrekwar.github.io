@@ -79,14 +79,14 @@ export const InfiniteImageScroller = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full bg-custom-gradient-bgl shrink-0 gap-4 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll",
           
         )}
       >
         {images.map((image, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl flex-shrink-0"
+            className="w-[12rem] md:w-[350px] max-w-full relative rounded-2xl flex-shrink-0"
             key={idx}
           >
             <Image src={image.src} alt={image.alt} width={350} height={350} className="rounded-2xl object-cover" />

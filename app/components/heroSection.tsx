@@ -1319,7 +1319,7 @@ export function HeroSection() {
                     whileHover={{ opacity: 1, scale: 1 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     whileTap={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2, delay: 0.8 }}
+                    transition={{ duration: 5.2 }}
                     exit={{}}
                     className="lg:basis-1/2  overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
                   >
@@ -1360,28 +1360,30 @@ export function HeroSection() {
       </section>
       <section className="bgrid2  min-h-screen">
         
-        <div className="border-five relative   ">
-          <div className="bg-[#ffffffba]  m-auto flex max-w-6xl flex-col">
-            <div className=" text-four border-third relative z-40  min-h-screen m-auto flex max-w-6xl flex-col items-center justify-center overflow-hidden rounded">
-              <InfiniteImageScroller images={images} speed="normal" />
+        <div className="border-five relative overflow-hidden  ">
+          <div className="bg-[#ffffffde]  overflow-hidden m-auto flex max-w-6xl flex-col">
+            <div className="relative bg-[#ffffffde] overflow-hidden text-four border-third relative z-40  min-h-screen m-auto flex max-w-6xl z-50 flex-col items-center justify-center overflow-hidden rounded">
+              <InfiniteImageScroller className="z-40" images={images} speed="normal" />
               <InfiniteImageScroller
+                className="z-40"
                 images={images}
                 speed="slow"
                 direction="right"
               />
               <InfiniteImageScroller
-                className="hidden md:block"
+                className="hidden  md:block"
                 images={images}
                 speed="fast"
                 direction="left"
               />
-              <div className="absolute w-full bg-custom-gradient-bgl  h-full m-auto top-0 z-50 m-auto flex max-w-6xl flex-col items-start justify-center">
-                <motion.h1 className=" md:text-6xl font-semibold">
+              <div className="absolute h-full  bg-gradient-to-r from-[#ffffffde] md:from-80%    m-auto left-0 top-0 z-50 m-auto flex max-w-6xl flex-col items-start justify-center">
+                <motion.h1 className="px-2 text-4xl md:text-6xl font-semibold">
                   Have a project in mind.
                 </motion.h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum odit dignissimos unde esse eligendi aspernatur explicabo ad numquam itaque cupiditate corporis distinctio, ea earum illo ipsam repellat, ratione iste.
+                <p className="px-2">
+                  Lorem ipsum dolor sit amet 
                 </p>
+                <Link href={'/'} className="px-4 m-2 py-2 text-primary rounded-full bg-secondary ">Book.  </Link>
               </div>
             </div>
           </div>
