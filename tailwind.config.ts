@@ -22,7 +22,9 @@ module.exports = {
         'conic-gradient-angles': 'conic-gradient(#8c56dc, #3f0093)',
         'custom-radial': 'radial-gradient(50% 50% at 80% 50%, rgba(147, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-radial-s': 'radial-gradient(70% 120% at 100% 50%, var(--four) 0%, rgba(0, 0, 0, 0) 100%)',
-        'custom-radial-sm': 'radial-gradient(33% 69% at 26% 0%, var(--blue-400) 0%, rgba(0, 0, 0, 0) 100%)',
+        'custom-radial-sm': 'radial-gradient(33% 69% at 26% 0%, #5e716a8a 0%, rgba(0, 0, 0, 0) 100%)',
+        'custom-gradient-bgl': 'linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%,  hsla(0, 0%, 10%, 0) 50%, hsla(0, 0%, 100%, 1) 100%)',
+        'custom-gradient-bgl0': 'linear-gradient(180deg, hsla(0, 0%, 100%, 1)10%, hsla(180, 2%, 57%, 0) 50%, hsla(0, 0%, 100%, 0.5) 64%)',
       },
       colors: {
         primary: "var(--color-primary)",
@@ -36,6 +38,7 @@ module.exports = {
       },
       
       animation: {
+          'scroll-vertical': 'scrollVertical var(--animation-duration) linear infinite',
         "meteor-effect": "meteor 5s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
           "accordion-up": "accordion-up 0.2s ease-out",
@@ -44,6 +47,10 @@ module.exports = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
+        scrollVertical: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
           "70%": { opacity: "1" },
@@ -77,8 +84,10 @@ module.exports = {
     },
   },
   plugins: [
+    
     nextui(),
     addVariablesForColors,
+    require('tailwind-scrollbar')({ nocompatible: true }),
     require("@tailwindcss/forms"),
     plugin(function ({ addBase, theme }) {
       addBase({
@@ -105,7 +114,9 @@ module.exports = {
         },
       });
     }),
+    
   ],
+  
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

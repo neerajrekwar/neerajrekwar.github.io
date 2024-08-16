@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto">
+    <html lang="en" className="scroll-smooth bg-primary focus:scroll-auto scrollbar-thumb-rounded-full scrollbar-thin scrollbar-thumb-four scrollbar-track-seven">
       <GoogleTagManager containerId="GTM-MV3R5HQL" />
       <meta
         name="google-site-verification"

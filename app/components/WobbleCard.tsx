@@ -3,10 +3,13 @@ import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "./ui/wobble-card";
 
+
 export function WobbleCardDemo() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
-      <WobbleCard
+    
+      <WobbleCard 
+        
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
         className=""
       >
@@ -26,6 +29,7 @@ export function WobbleCardDemo() {
           className="absolute -right-6 -z-40  lg:-right-[17%] lg:-bottom-4 md:-bottom-40  sm:-bottom-32 -bottom-22   object-contain rounded-2xl"
         />
       </WobbleCard>
+  
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
         <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
           Sounds of Serenity at my way
@@ -37,7 +41,9 @@ export function WobbleCardDemo() {
           <iframe  className="z-50" src="https://open.spotify.com/embed/playlist/6D6D1Cn3AaG1sqaxv2T69I?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+      
+      
+      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-[#5e716a] min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             Books think I&apos;m a genius, wrapper today!
@@ -55,6 +61,7 @@ export function WobbleCardDemo() {
           className="absolute -z-40 -right-8 md:-right-[30%] lg:-right-[5%] md:-bottom-60 sm:-bottom-32 -bottom-24   object-contain rounded-2xl"
         />
       </WobbleCard>
+      
     </div>
   );
 }

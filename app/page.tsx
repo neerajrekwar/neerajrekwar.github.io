@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <main className="bg-primary text-primary scroll-smooth focus:scroll-auto">
+    <main className="scroll-smooth bg-primary focus:scroll-auto scrollbar-thumb-rounded-full scrollbar-thin scrollbar-thumb-four scrollbar-track-seven">
       <section className="">
         <HomeSectionHeader />
       </section>

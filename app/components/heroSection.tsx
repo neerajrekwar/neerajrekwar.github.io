@@ -13,13 +13,21 @@ import { CoverDemo } from "./CoverDemo";
 import { MultiStepLoader } from "./MultiStepLoader";
 import { Source_Code_Pro } from "next/font/google";
 import ReactMarkdown from "react-markdown";
-import {MeteorsDemo} from "./meteorsCard"
-import { Meteors } from "./ui/meteors";
 import { IconCircleArrowUpRightFilled } from "@tabler/icons-react";
+import { ParallaxScrollDemo } from "./ParallaxScrollImages";
+import { InfiniteImageScroller } from "./InfiniteImageScroller";
 
 const markdown = `
 [![Deploy Next.js site to Pages](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml)
 `;
+
+const images = [
+  { src: "/projects/mypro.png", alt: "Project 1" },
+  { src: "/projects/mypro.png", alt: "Project 2" },
+  { src: "/projects/mypro.png", alt: "Project 3" },
+
+  // Add more image paths here
+];
 
 const source_code_pro = Source_Code_Pro({
   weight: ["400"],
@@ -102,9 +110,7 @@ export function HeroSection() {
                     className="flex "
                   >
                     <span className="pr-1 flex">Current Age:</span>
-                    
-                      <AgeCalculator /> years
-                    
+                    <AgeCalculator /> years
                   </motion.li>
                 </motion.ul>
                 <motion.ul
@@ -706,43 +712,48 @@ export function HeroSection() {
                 </ul>
 
                 <div className="border-five flex-col justify-between mt-10 p-2 z-10  border-third">
-                  <motion.ul 
-                    initial={{ opacity: 0,  x: -20 }}
-                    whileInView={{ opacity: 1,  x: 0 }}
-                    transition={{duration: 0.4}}
-                    className="py-8 md:flex md:justify-between">
-                    <motion.li 
+                  <motion.ul
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="py-8 md:flex md:justify-between"
+                  >
+                    <motion.li
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.4, delay: 0.6 }}
-                      className="py-4 basis-1/2">
+                      className="py-4 basis-1/2"
+                    >
                       Version Control with Git{" "}
                       <span className={source_code_pro.className}>
                         <p className="text-4xl">v2.46.0</p>
                       </span>
                     </motion.li>
-                    <motion.li 
+                    <motion.li
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       animate={{}}
                       transition={{ duration: 0.4, delay: 0.8 }}
-                      className="py-4 basis-1/2">
+                      className="py-4 basis-1/2"
+                    >
                       <h1>Deployment Badge</h1>
                       <ReactMarkdown>{markdown}</ReactMarkdown>
                     </motion.li>
                   </motion.ul>
-                    <motion.ul 
-                      initial={{ opacity: 0,  x: -20 }}
-                      whileInView={{ opacity: 1,  x: 0 }}
-                      transition={{duration: 0.4}}
-                    className="pb-8 flex md:justify-between ">
-                      <motion.li 
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        animate={{}}
-                        transition={{ duration: 0.4, delay: 0.6 }}
-                      className="py-4 basis-1/2">
+                  <motion.ul
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="pb-8 flex md:justify-between "
+                  >
+                    <motion.li
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.4, delay: 0.6 }}
+                      className="py-4 basis-1/2"
+                    >
                       Front-end & UI{" "}
                       <div className="flex">
                         <svg
@@ -777,29 +788,32 @@ export function HeroSection() {
                         </svg>
                       </div>
                     </motion.li>
-                      <motion.li 
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        animate={{}}
-                        transition={{ duration: 0.4, delay: 0.6 }} 
-                      className="py-4 basis-1/2">
+                    <motion.li
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.4, delay: 0.6 }}
+                      className="py-4 basis-1/2"
+                    >
                       <h1>Current</h1>
                       <p className="font-bold text-[#8f5b84]">
                         ▲ Next.js 14.2.5
                       </p>
                     </motion.li>
                   </motion.ul>
-                    <motion.ul 
-                      initial={{ opacity: 0,  x: -20 }}
-                      whileInView={{ opacity: 1,  x: 0 }}
-                      transition={{duration: 0.4}} 
-                    className="pb-8 flex md:justify-between">
-                      <motion.li 
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        animate={{}}
-                        transition={{ duration: 0.4, delay: 0.6 }} 
-                      className="py-4 flex items-start flex-col basis-1/2">
+                  <motion.ul
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="pb-8 flex md:justify-between"
+                  >
+                    <motion.li
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      animate={{}}
+                      transition={{ duration: 0.4, delay: 0.6 }}
+                      className="py-4 flex items-start flex-col basis-1/2"
+                    >
                       Library & Frameworks{" "}
                       <div className="flex items-start flex-col">
                         <p className="font-bold  items-center  flex">
@@ -837,7 +851,8 @@ export function HeroSection() {
                             strokeWidth={2}
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                          className="mr-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-nextjs">
+                            className="mr-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-nextjs"
+                          >
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993" />
                             <path d="M15 12v-3" />
@@ -855,7 +870,8 @@ export function HeroSection() {
                             strokeWidth={2}
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                          className="mr-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-react">
+                            className="mr-2 icon icon-tabler icons-tabler-outline icon-tabler-brand-react"
+                          >
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
                             <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
@@ -871,7 +887,6 @@ export function HeroSection() {
                     </motion.li>
                     <li className="py-4 basis-1/2">
                       <h1>back-end with Database</h1>
-                      
                     </li>
                   </motion.ul>
                 </div>
@@ -883,7 +898,7 @@ export function HeroSection() {
                   initial={{ opacity: 0, x: -40, y: -40 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.4 }}
-                  className="three bg-seven rounded-lg flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
+                  className="three  rounded-lg flex flex-col md:grid sm:grid-flow-row-dense sm:grid-rows-2 md:grid-cols-3 "
                 >
                   <motion.li
                     initial={{ opacity: 0, y: 40, x: -40 }}
@@ -1007,9 +1022,7 @@ export function HeroSection() {
                     >
                       Rigorously test your application
                     </motion.h4>
-                    <p className="m-2">
-                      Lorem ipsum dolor sit amet 
-                    </p>
+                    <p className="m-2">Lorem ipsum dolor sit amet</p>
                   </motion.li>
                 </motion.ul>
               </div>
@@ -1031,102 +1044,116 @@ export function HeroSection() {
             </motion.h2>
           </div>
           <div className="overflow-hidden p-2 md:p-4 min-h-screen max-w-7xl m-auto md:p-8  lg:flex-row gap-2 ">
-            <motion.h1 
-              initial={{opacity: 0, x: 40}}
-              animate={{opacity: 0, x: 30}}
-              whileInView={{opacity: 1, x: 0}}
-              transition={{duration: 1, delay: 1.2}}
+            <motion.h1
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
               className="text-4xl md:text-4xl lg:text-6xl font-bold "
-              >
-            what I think and explore everything.
+            >
+              what I think and explore everything.
             </motion.h1>
-            <motion.p 
-              initial={{opacity: 0, x: 60}}
-              animate={{opacity: 0, x: 40}}
-              whileInView={{opacity: 1, x: 0}}
-              transition={{duration: 1, delay: 0.4}}
+            <motion.p
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.2, delay: 0.4 }}
               className="py-4 max-w-2xl  md:text-xl lg:text-2xl font-semibold "
-              >
-            Today I make space for miracles. I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.
+            >
+              Today I make space for miracles. I recognize that it&apos;s not
+              how big a miracle is that&apos;s important, but how we make it
+              happen. but how much room I create for it.
             </motion.p>
             <WobbleCardDemo />
-            <div className="rounded-2xl flex flex-col gap-2 py-16 px-2 my-10  min-h-screen"> 
-              <motion.h3 
-
+            <div className="rounded-2xl flex flex-col gap-2 py-16 px-2 my-10  min-h-screen">
+              <motion.h3
                 initial={{ opacity: 0, y: 4 }}
                 animate={{ opacity: 0, y: 3 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="text-4xl text-secondary relative z-40 max-w-2xl font-bold  "
-                >
-               hello to everyone
-                 <span className="absolute bottom-2 p-1 -z-50 left-0  h-2 w-[100%]  bg-custom-radial-sm"></span>
+              >
+                hello to everyone
+                <span className="absolute bottom-2 p-1 -z-50 left-0  h-2 w-[100%]  bg-custom-radial-sm"></span>
               </motion.h3>
               <div className=" border-third">
-                
                 <motion.div
-                  className="text-four flex-row-reverse my-8 bg-secondary border-third rounded-lg md:flex justify-center  h-shv ">
-                  <motion.div 
-                    className="basis-1/2 text-primary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg "
-                    >
-                    <motion.h2 
-                      initial={{ opacity: 0,  x: 30, }}
-                      animate={{ opacity: 1,  x: 0, }}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.7 }}
+                  className="text-four flex-row-reverse my-8 bg-secondary border-third rounded-lg md:flex justify-center  h-shv "
+                >
+                  <motion.div className="basis-1/2 text-primary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg ">
+                    <motion.h2
+                      initial={{ opacity: 0, x: 5 }}
+                      animate={{ opacity: 0, x: 3 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       transition={{
-                        duration: 0.8,
+                        duration: 2,
                         delay: 0.5,
-                        ease: [0, 0.71, 0.2, 1.01],
-                        type: "spring", stiffness: 400
+                        ease: "easeIn",
+                        type: "spring",
+                        stiffness: 400,
                       }}
-                       className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
-                        >
-                       Make it for beatiful
-                      </motion.h2>
-                      <motion.p 
-                        initial={{ opacity: 0,  x: 30, }}
-                        animate={{ opacity: 1,  x: 0, }}
-                        whileInView={{ opacity: 1,  x: 0, }}
-                        transition={{
-                          duration: 0.8,
-                          delay: 0.5,
-                          ease: [0, 0.71, 0.2, 1.01],
-                        }}
-                        className="px-2  md:text-md py-2  "
-                        >
-                        I recognize that it&apos;s not how big a miracle is that&apos;s important, but how we make it happen. but how much room I create for it.</motion.p>
-                    <motion.a 
-                      initial={{ opacity: 0,  x: 30, }}
-                      animate={{ opacity: 1,  x: 0, }}
+                      className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
+                    >
+                      Make it for beatiful
+                    </motion.h2>
+                    <motion.p
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 0, x: 10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 1.4,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                      }}
+                      className="px-2  md:text-md py-2  "
+                    >
+                      I recognize that it&apos;s not how big a miracle is
+                      that&apos;s important, but how we make it happen. but how
+                      much room I create for it.
+                    </motion.p>
+                    <motion.a
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
                       transition={{
                         duration: 0.8,
                         delay: 0.5,
                         ease: [0, 0.71, 0.2, 1.01],
-                        type: "spring", stiffness: 400
+                        type: "spring",
+                        stiffness: 400,
                       }}
                       whileHover={{ scale: 1.1 }}
-
+                      whileFocus={{ scale: 1.1 }}
                       href="/contact"
-                      className=" mt-4 border-1 border-primary rounded-full flex justify-center items-center gap-2 text-lg relative py-1  px-3 mx-2 z-40  w-fit">
-                     learn more <IconCircleArrowUpRightFilled />  
+                      className=" mt-4 border-1 border-primary rounded-full flex justify-center items-center gap-2 text-lg relative py-1  px-3 mx-2 z-40  w-fit"
+                    >
+                      learn more <IconCircleArrowUpRightFilled />
                       <span className="absolute bottom-2 p-1  -z-50 left-2  h-[1%] w-20  bg-custom-radial-sm"></span>
                     </motion.a>
                   </motion.div>
-                  <motion.div 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 0.5 }}
-                      whileHover={{ opacity: 1, scale: 1 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 1.2, delay: 0.8 }}
-                      exit={{}}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
+                    whileHover={{ opacity: 1, scale: 1 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.2, delay: 0.8 }}
+                    exit={{}}
                     className="lg:basis-1/2 text-primary overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
-                    >
+                  >
                     <motion.h2
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 0.5 }}
                       whileHover={{ opacity: 1, scale: 1.2 }}
                       whileInView={{ opacity: 0.1, scale: 1.1 }}
                       transition={{ duration: 4, delay: 0.8 }}
-                      className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"> video will be soon</motion.h2>
+                      className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
+                    >
+                      {" "}
+                      video will be soon
+                    </motion.h2>
                     {/* <iframe
                       className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
                       src="https://www.youtube.com/embed/l8knG0BPr-o"
@@ -1141,8 +1168,221 @@ export function HeroSection() {
                     </video> */}
                   </motion.div>
                 </motion.div>
-                
-              </div>  
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.7 }}
+                  className="text-four  my-8 bg-primary border-third rounded-lg md:flex justify-center  h-shv "
+                >
+                  <motion.div className="basis-1/2 text-secondary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg">
+                    <motion.h2
+                      initial={{ opacity: 0, x: 5 }}
+                      animate={{ opacity: 0, x: 3 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 2,
+                        delay: 0.5,
+                        ease: "easeIn",
+                        type: "spring",
+                        stiffness: 400,
+                      }}
+                      className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
+                    >
+                      Make it for beatiful
+                    </motion.h2>
+                    <motion.p
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 0, x: 10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 1.4,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                      }}
+                      className="px-2  md:text-md py-2  "
+                    >
+                      I recognize that it&apos;s not how big a miracle is
+                      that&apos;s important, but how we make it happen. but how
+                      much room I create for it.
+                    </motion.p>
+                    <motion.a
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                        type: "spring",
+                        stiffness: 400,
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      whileFocus={{ scale: 1.1 }}
+                      href="/contact"
+                      className=" mt-4 border-1  border-secondary rounded-full flex justify-center items-center gap-2 text-lg relative py-1  px-3 mx-2 z-40  w-fit"
+                    >
+                      find more <IconCircleArrowUpRightFilled />
+                      <span className="absolute bottom-2 p-1  -z-50 left-2  h-[1%] w-20  bg-custom-radial-sm"></span>
+                    </motion.a>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
+                    whileHover={{ opacity: 1, scale: 1 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.2, delay: 0.8 }}
+                    exit={{}}
+                    className="lg:basis-2/2 overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
+                  >
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 4, delay: 0.8 }}
+                      className="aspect-video   flex justify-center items-center rounded-lg"
+                    >
+                      <ParallaxScrollDemo />
+                    </motion.div>
+                    {/* <iframe
+                      className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
+                      src="https://www.youtube.com/embed/l8knG0BPr-o"
+
+
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe> */}
+                    {/* <video controls preload="none" aria-label="Video player">
+                      <source src={'https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT'} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video> */}
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.7 }}
+                  className="text-four flex-row-reverse my-8 bg-primary border-third rounded-lg md:flex justify-center  h-shv "
+                >
+                  <motion.div className="basis-1/2 text-secondary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg ">
+                    <motion.h2
+                      initial={{ opacity: 0, x: 5 }}
+                      animate={{ opacity: 0, x: 3 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 2,
+                        delay: 0.5,
+                        ease: "easeIn",
+                        type: "spring",
+                        stiffness: 400,
+                      }}
+                      className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
+                    >
+                      Make it for beatiful
+                    </motion.h2>
+                    <motion.p
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 0, x: 10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 1.4,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                      }}
+                      className="px-2  md:text-md py-2  "
+                    >
+                      I recognize that it&apos;s not how big a miracle is
+                      that&apos;s important, but how we make it happen. but how
+                      much room I create for it.
+                    </motion.p>
+                    <motion.a
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                        type: "spring",
+                        stiffness: 400,
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      whileFocus={{ scale: 1.1 }}
+                      href="/contact"
+                      className=" mt-4 border-1 border-secondary rounded-full flex justify-center items-center gap-2 text-lg relative py-1  px-3 mx-2 z-40  w-fit"
+                    >
+                      read more <IconCircleArrowUpRightFilled />
+                      <span className="absolute bottom-2 p-1  -z-50 left-2  h-[1%] w-20  bg-custom-radial-sm"></span>
+                    </motion.a>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
+                    whileHover={{ opacity: 1, scale: 1 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    whileTap={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.2, delay: 0.8 }}
+                    exit={{}}
+                    className="lg:basis-1/2  overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
+                  >
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 4, delay: 0.8 }}
+                      className="aspect-video  flex justify-center items-center rounded-lg"
+                    >
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.5 }}
+                        whileHover={{ opacity: 1, scale: 1.2 }}
+                        whileInView={{ opacity: 0.1, scale: 1.1 }}
+                        transition={{ duration: 4, delay: 0.8 }}
+                        className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
+                        src="https://images.unsplash.com/photo-1723142481057-49e9a440c014?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      />
+                    </motion.div>
+                    {/* <iframe
+                      className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
+                      src="https://www.youtube.com/embed/l8knG0BPr-o"
+
+
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe> */}
+                    {/* <video controls preload="none" aria-label="Video player">
+                      <source src={'https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT'} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video> */}
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bgrid2  min-h-screen">
+        
+        <div className="border-five relative   ">
+          <div className="bg-[#ffffffba]  m-auto flex max-w-6xl flex-col">
+            <div className=" text-four border-third relative z-40  min-h-screen m-auto flex max-w-6xl flex-col items-center justify-center overflow-hidden rounded">
+              <InfiniteImageScroller images={images} speed="normal" />
+              <InfiniteImageScroller
+                images={images}
+                speed="slow"
+                direction="right"
+              />
+              <InfiniteImageScroller
+                className="hidden md:block"
+                images={images}
+                speed="fast"
+                direction="left"
+              />
+              <div className="absolute w-full bg-custom-gradient-bgl  h-full m-auto top-0 z-50 m-auto flex max-w-6xl flex-col items-start justify-center">
+                <motion.h1 className=" md:text-6xl font-semibold">
+                  Have a project in mind.
+                </motion.h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum odit dignissimos unde esse eligendi aspernatur explicabo ad numquam itaque cupiditate corporis distinctio, ea earum illo ipsam repellat, ratione iste.
+                </p>
+              </div>
             </div>
           </div>
         </div>
