@@ -24,7 +24,7 @@ module.exports = {
         'custom-radial-s': 'radial-gradient(70% 120% at 100% 50%, var(--four) 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-radial-sm': 'radial-gradient(33% 69% at 26% 0%, #5e716a8a 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-gradient-bgl': 'linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%,  hsla(0, 0%, 10%, 0) 50%, hsla(0, 0%, 100%, 1) 100%)',
-        'custom-gradient-bgl0': 'linear-gradient(180deg, hsla(0, 0%, 100%, 1)10%, hsla(180, 2%, 57%, 0) 50%, hsla(0, 0%, 100%, 0.5) 64%)',
+        'custom-gradient-bgl0': 'radial-gradient(33% 69% at 26% 0%, #5e716a8a 0%, rgba(0, 0, 0, 0) 100%)',
       },
       colors: {
         primary: "var(--color-primary)",

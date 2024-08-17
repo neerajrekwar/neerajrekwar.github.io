@@ -1358,34 +1358,34 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="bgrid2  min-h-screen">
-        
-        <div className="border-five relative overflow-hidden  ">
-          <div className="bg-[#ffffffde]  overflow-hidden m-auto flex max-w-6xl flex-col">
-            <div className="relative bg-[#ffffffde] overflow-hidden text-four border-third relative z-40  min-h-screen m-auto flex max-w-6xl z-50 flex-col items-center justify-center overflow-hidden rounded">
-              <InfiniteImageScroller className="z-40" images={images} speed="normal" />
-              <InfiniteImageScroller
-                className="z-40"
-                images={images}
-                speed="slow"
-                direction="right"
-              />
-              <InfiniteImageScroller
-                className="hidden  md:block"
-                images={images}
-                speed="fast"
-                direction="left"
-              />
-              <div className="absolute h-full  bg-gradient-to-r from-[#ffffffde] md:from-80%    m-auto left-0 top-0 z-50 m-auto flex max-w-6xl flex-col items-start justify-center">
-                <motion.h1 className="px-2 text-4xl md:text-6xl font-semibold">
-                  Have a project in mind.
+      <section className="bgrid2 relative min-h-screen">
+        <div className="border-five relative overflow-hidden   rounded-2xl m-auto broder-2 max-w-6xl min-h-screen ">
+          <div className="absolute z-40 rounded-2xl">
+            <div className=" h-full rounded-2xl flex flex-col border-third bg-gradient-to-r  from-white from-10% via-transparent items-start justify-center md:justify-end  min-h-screen ">
+              <div className="bg-gradient-to-r  from-white from-10% via-transparent flex flex-col items-start justify-center md:justify-end">
+                <motion.h1 className="px-2  text-3xl sm:text-5xl md:text-6xl font-bold">
+                  Have a project in mind?
                 </motion.h1>
-                <p className="px-2">
-                  Lorem ipsum dolor sit amet 
+                <p className="px-2 flex flex-wrap max-w-xl md:max-w-3xl">
+                  I&apos;d love to hear from you! Whether you&apos;re ready to kickstart a
+                  new website or revamp an existing one, I&apos;m here to help turn
+                  your ideas into reality.
                 </p>
-                <Link href={'/'} className="px-4 m-2 py-2 text-primary rounded-full bg-secondary ">Book.  </Link>
+                <Link
+                  href={"/"}
+                  className="px-4 m-2 py-2 text-primary rounded-full bg-secondary w-fit "
+                >
+                  Book.{" "}
+                </Link>
               </div>
             </div>
+          </div>
+          <div className="relative ">
+           <div className="bg-gradient-to-r from-white via-tranparent to-white">
+             <InfiniteImageScroller speed="normal" direction="left" images={images} />
+             <InfiniteImageScroller speed="fast" direction="right" images={images} />
+             <InfiniteImageScroller speed="slow" direction="left" images={images} />
+           </div>
           </div>
         </div>
       </section>

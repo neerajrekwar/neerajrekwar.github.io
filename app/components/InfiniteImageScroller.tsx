@@ -72,7 +72,7 @@ export const InfiniteImageScroller = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden   [mask-image:linear-gradient(180deg,transparent,white_80%,white_20%)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden  bg-gradient-to-t from-transparent via-white [mask-image:linear-gradient(180deg,transparent,white_80%,white_20%)]",
         className,
       )}
     >
