@@ -13,7 +13,7 @@ import { CoverDemo } from "./CoverDemo";
 import { MultiStepLoader } from "./MultiStepLoader";
 import { Source_Code_Pro } from "next/font/google";
 import ReactMarkdown from "react-markdown";
-import { IconCircleArrowUpRightFilled } from "@tabler/icons-react";
+import { IconAdFilled, IconBrandGoogleAnalytics, IconBuildingStore, IconCalendarClock, IconCircleArrowUpRightFilled, IconMail, IconMailbox, IconSearch, IconSocial, IconSortAscendingSmallBig, IconWorldWww } from "@tabler/icons-react";
 import { ParallaxScrollDemo } from "./ParallaxScrollImages";
 import { InfiniteImageScroller } from "./InfiniteImageScroller";
 
@@ -336,82 +336,50 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
                   >
-                    <div className="md:pb-4 text-six">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    <div className="md:pb-4 text-five">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Search Engine Optimization
                       </h4>
 
-                      <p className="m-2">
+                      <p className="m-2 text-four">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusamus error alias unde optio deleniti.
                       </p>
                     </div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-search"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                      <path d="M21 21l-6 -6" />
-                    </svg>
+                    <IconSearch width={44}
+                      height={44} />
+                    
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
-                  >
-                    <div className="md:pb-4 text-six">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    >
+                      <div className="md:pb-4 text-five">
+                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Socail Media
                       </h4>
-                      <p className="m-2">
+                      <p className="m-2 text-four">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusamus error alias unde optio deleniti. Deserunt
                         vero, ad a.
                       </p>
                     </div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-social"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                      <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                      <path d="M19 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                      <path d="M12 14m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                      <path d="M12 7l0 4" />
-                      <path d="M6.7 17.8l2.8 -2" />
-                      <path d="M17.3 17.8l-2.8 -2" />
-                    </svg>
+                    <IconSocial  width={44}
+                      height={44}  />
                   </motion.li>
 
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
-                  >
-                    <div className="md:pb-4 text-six">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    >
+                      <div className="md:pb-4 text-five">
+                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         How to Grow Online
                       </h4>
                       <p className="m-2">
@@ -420,167 +388,85 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-world-www"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
-                      <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
-                      <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
-                      <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
-                      <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
-                      <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
-                      <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
-                      <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
-                      <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
-                    </svg>
+                    <IconWorldWww  width={44}
+                      height={44}  />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
-                  >
-                    <div className="md:pb-4 text-six">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    >
+                      <div className="md:pb-4 text-five">
+                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Localization
                       </h4>
-                      <p className="m-2">
+                      <p className="m-2 text-four">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusamus error alias unde optio deleniti. Deserunt
                         vero, ad a.
                       </p>
                     </div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-building-store"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M3 21l18 0" />
-                      <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
-                      <path d="M5 21l0 -10.15" />
-                      <path d="M19 21l0 -10.15" />
-                      <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
-                    </svg>
+                    <IconBuildingStore  width={44}
+                      height={44}  />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.4 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
-                  >
-                    <div className="md:pb-4 text-six">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    >
+                      <div className="md:pb-4 text-five">
+                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Google Analytics
                       </h4>
-                      <p className="m-2">
+                      <p className="m-2 text-four">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusamus error alias unde optio deleniti. Deserunt
                         vero, ad a.
                       </p>
                     </div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 text-white icon icon-tabler icons-tabler-outline icon-tabler-brand-google-analytics"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M10 9m0 1.105a1.105 1.105 0 0 1 1.105 -1.105h1.79a1.105 1.105 0 0 1 1.105 1.105v9.79a1.105 1.105 0 0 1 -1.105 1.105h-1.79a1.105 1.105 0 0 1 -1.105 -1.105z" />
-                      <path d="M17 3m0 1.105a1.105 1.105 0 0 1 1.105 -1.105h1.79a1.105 1.105 0 0 1 1.105 1.105v15.79a1.105 1.105 0 0 1 -1.105 1.105h-1.79a1.105 1.105 0 0 1 -1.105 -1.105z" />
-                      <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                    </svg>
+                    <IconBrandGoogleAnalytics width={44}
+                      height={44}  />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
-                  >
-                    <div className="md:pb-4 text-six">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    >
+                      <div className="md:pb-4 text-five">
+                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Ads Word
                       </h4>
-                      <p className="m-2">
+                      <p className="m-2 text-four">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusamus error alias unde optio deleniti. Deserunt
                         vero, ad a.
                       </p>
                     </div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 text-white icon-tabler icons-tabler-outline icon-tabler-mailbox"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M10 21v-6.5a3.5 3.5 0 0 0 -7 0v6.5h18v-6a4 4 0 0 0 -4 -4h-10.5" />
-                      <path d="M12 11v-8h4l2 2l-2 2h-4" />
-                      <path d="M6 15h1" />
-                    </svg>
+                    <IconAdFilled width={44}
+                      height={44}  />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-primary bg-[#242424] border-seven border"
-                  >
-                    <div className="md:pb-4 text-six">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    >
+                      <div className="md:pb-4 text-five">
+                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Email Marketing
                       </h4>
-                      <p className="m-2">
+                      <p className="m-2 text-four">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusamus error alias unde optio deleniti. Deserunt
                         vero, ad a.
                       </p>
                     </div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="m-2 text-white icon-tabler icons-tabler-outline icon-tabler-mailbox"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M10 21v-6.5a3.5 3.5 0 0 0 -7 0v6.5h18v-6a4 4 0 0 0 -4 -4h-10.5" />
-                      <path d="M12 11v-8h4l2 2l-2 2h-4" />
-                      <path d="M6 15h1" />
-                    </svg>
+                    <IconMailbox width={44}
+                      height={44}  />
+                    
                   </motion.li>
                 </motion.ul>
               </div>
@@ -907,7 +793,7 @@ export function HeroSection() {
                     transition={{ duration: 0.4, delay: 0.6 }}
                     className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-six bg-[#242424] aspect-square"
                   >
-                    <motion.h4 className="px-2 text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    <motion.h4 className="px-2 text-4xl font-bold text-six">
                       <TextRotator />
                     </motion.h4>
                     <div className="flex m-2 justify-center items-center aspect-[16/9]  rounded-lg bg-custom-radial-s">
@@ -929,7 +815,7 @@ export function HeroSection() {
                     transition={{ duration: 0.5, delay: 0.6 }}
                     className="m-2 flex border border-seven  col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
                   >
-                    <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%">
+                    <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold text-six">
                       {" "}
                       Leveraging modern JavaScript features
                     </h4>
@@ -953,7 +839,7 @@ export function HeroSection() {
                       animate={{ opacity: 1, y: 0 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-4xl m-2 overflow-hidden font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                      className="px-2 text-4xl m-2 overflow-hidden font-bold text-six "
                     >
                       Efficient algorithms and data structures
                     </motion.h4>
@@ -970,7 +856,7 @@ export function HeroSection() {
                       animate={{ opacity: 1, y: 0 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-4xl md:text-2xl m-2 font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                      className="px-2 text-4xl md:text-2xl m-2 font-bold text-six  "
                     >
                       Improved User Experience
                     </motion.h4>
@@ -981,18 +867,18 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="m-2 rounded-lg text-six bg-[#242424] aspect-square"
+                    className="m-2 rounded-lg text-six bg-secondary aspect-square flex-col flex justify-center items-center"
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                      className="px-2 text-2xl font-bold text-six overflow-hidden"
                     >
                       versions to access the latest performance optimizations
                     </motion.h4>
-                    <p className="m-2">
+                    <p className="m-2 text-four">
                       Accusamus error alias unde optio deleniti. Deserunt vero,
                       ad a.
                     </p>
@@ -1002,7 +888,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.9, delay: 0.6 }}
-                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
+                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-secondary aspect-square"
                   >
                     <CoverDemo />
                   </motion.li>
@@ -1011,18 +897,18 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="m-2  col-span-3 md:h-40 rounded-lg text-six bg-[#242424] aspect-square "
+                    className="m-2  col-span-3 md:h-40 rounded-lg text-six bg-secondary aspect-square "
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+                      className="px-2 text-2xl font-bold  text-six"
                     >
                       Rigorously test your application
                     </motion.h4>
-                    <p className="m-2">Lorem ipsum dolor sit amet</p>
+                    <p className="m-2 text-four">Lorem ipsum dolor sit amet</p>
                   </motion.li>
                 </motion.ul>
               </div>
@@ -1163,7 +1049,7 @@ export function HeroSection() {
                       allowFullScreen
                     ></iframe> */}
                     {/* <video controls preload="none" aria-label="Video player">
-                      <source src={'https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT'} type="video/mp4" />
+                      <source src={&apos;https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT&apos;} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video> */}
                   </motion.div>
@@ -1251,7 +1137,7 @@ export function HeroSection() {
                       allowFullScreen
                     ></iframe> */}
                     {/* <video controls preload="none" aria-label="Video player">
-                      <source src={'https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT'} type="video/mp4" />
+                      <source src={&apos;https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT&apos;} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video> */}
                   </motion.div>
@@ -1348,7 +1234,7 @@ export function HeroSection() {
                       allowFullScreen
                     ></iframe> */}
                     {/* <video controls preload="none" aria-label="Video player">
-                      <source src={'https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT'} type="video/mp4" />
+                      <source src={&apos;https://youtu.be/l8knG0BPr-o?si=ZQjdIFcD7im_WwiT&apos;} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video> */}
                   </motion.div>
@@ -1358,37 +1244,48 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="bgrid2 relative min-h-screen">
-        <div className="border-five relative overflow-hidden   rounded-2xl m-auto broder-2 max-w-6xl min-h-screen ">
-          <div className="absolute z-40 rounded-2xl">
-            <div className=" h-full rounded-2xl flex flex-col border-third bg-gradient-to-r  from-white from-10% via-transparent items-start justify-center md:justify-end  min-h-screen ">
-              <div className="bg-gradient-to-r  from-white from-10% via-transparent flex flex-col items-start justify-center md:justify-end">
-                <motion.h1 className="px-2  text-3xl sm:text-5xl md:text-6xl font-bold">
-                  Have a project in mind?
-                </motion.h1>
-                <p className="px-2 flex flex-wrap max-w-xl md:max-w-3xl">
-                  I&apos;d love to hear from you! Whether you&apos;re ready to kickstart a
-                  new website or revamp an existing one, I&apos;m here to help turn
-                  your ideas into reality.
-                </p>
-                <Link
-                  href={"/"}
-                  className="px-4 m-2 py-2 text-primary rounded-full bg-secondary w-fit "
-                >
-                  Book.{" "}
-                </Link>
-              </div>
+      <section className="bgrid2  min-h-screen">
+        
+        <div className="flex overflow-hidden justify-center min-h-screen items-center rounded-2xl">
+          
+          <div className="text-4xl font-bold overflow-hidden">
+            <InfiniteImageScroller
+              direction="left"
+              speed="normal"
+              images={images}
+            />
+            <InfiniteImageScroller
+              className="block md:hidden"
+              direction="right"
+              speed="fast"
+              images={images}
+            />
+            <InfiniteImageScroller
+              direction="right"
+              speed="slow"
+              images={images}
+            />
+          </div>
+          <div className="absolute  bg-gradient-to-l from-primary   to-transparent  h-full w-full   font-bold"></div>
+          <div className="absolute bg-gradient-to-r from-primary from-2% to-transparent  h-full w-full  font-bold"></div>
+          <div className="absolute text-five flex flex-col bg-gradient-to-r 
+ from-primary    justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
+            <div className="absolute max-w-3xl m-auto ">
+              <motion.h2 className="mx-4 text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl">
+                Have a Project in Mind?
+              </motion.h2>
+              <motion.p className="text-base text-four mx-4 md:mx-10  my-4 max-w-2xl font-normal">
+                I&apos;m excited to be in touch with you! Whether you&apos;re prepared to launch a brand new website or give an existing one a fresh look, I&apos;m available to assist in transforming your concepts into tangible results.
+              </motion.p>
+              <motion.a className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 bg-primary gap-2 border border-secondary text-four rounded-full">
+                 <IconCalendarClock /> book now
+              </motion.a>
             </div>
           </div>
-          <div className="relative ">
-           <div className="bg-gradient-to-r from-white via-tranparent to-white">
-             <InfiniteImageScroller speed="normal" direction="left" images={images} />
-             <InfiniteImageScroller speed="fast" direction="right" images={images} />
-             <InfiniteImageScroller speed="slow" direction="left" images={images} />
-           </div>
-          </div>
         </div>
+        
       </section>
+      
     </>
   );
 }

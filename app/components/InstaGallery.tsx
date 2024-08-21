@@ -24,7 +24,7 @@ const InstaGallery: React.FC = () => {
   useEffect(() => {
     const loadFeed = async () => {
       const feed = await fetchInstagramFeed();
-      const latestPosts = feed.data.slice(0, 4); // Get the latest 4 posts
+      const latestPosts = feed.data.slice(0, 3); // Get the latest 4 posts
       setImages(latestPosts);
     };
 

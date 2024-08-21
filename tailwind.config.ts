@@ -19,12 +19,12 @@ module.exports = {
       
       backgroundImage: {
         'conic-gradient': 'conic-gradient(from 0deg, red, yellow, green, blue, purple)',
-        'conic-gradient-angles': 'conic-gradient(#8c56dc, #3f0093)',
-        'custom-radial': 'radial-gradient(50% 50% at 80% 50%, rgba(147, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%)',
+        'conic-gradient-angles': 'conic-gradient(var(--four), var(--six))',
+        'custom-radial': 'radial-gradient(50% 50% at 80% 50%, var(--four) 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-radial-s': 'radial-gradient(70% 120% at 100% 50%, var(--four) 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-radial-sm': 'radial-gradient(33% 69% at 26% 0%, #5e716a8a 0%, rgba(0, 0, 0, 0) 100%)',
         'custom-gradient-bgl': 'linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%,  hsla(0, 0%, 10%, 0) 50%, hsla(0, 0%, 100%, 1) 100%)',
-        'custom-gradient-bgl0': 'radial-gradient(33% 69% at 26% 0%, #5e716a8a 0%, rgba(0, 0, 0, 0) 100%)',
+        'custom-gradient-bgl0': 'linear-gradient(180deg, hsla(0, 0%, 100%, 1)10%, hsla(180, 2%, 57%, 0) 50%, hsla(0, 0%, 100%, 0.5) 64%)',
       },
       colors: {
         primary: "var(--color-primary)",

@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 
@@ -45,21 +45,24 @@ const swipePower = (offset: number, velocity: number) => {
 export const ImageSlides = () => {
   const [[page, direction], setPage] = useState([0, 0]);
 
-  // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
-  // then wrap that within 0-2 to find our image ID in the array below. By passing an
-  // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
-  // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
-  const imageIndex = wrap(0, images.length, page);
+  const imageIndex = (page + images.length) % images.length;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPage([page + 1, 1]);
+    }, 5000); // Auto-slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [page]);
 
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
   };
-
   return (
     <>
       
         <AnimatePresence initial={false} custom={direction}>
-          <motion.div className=" relative justify-center text-four z-10 items-center flex  rounded-md overflow-x-hidden overflow-y-hidden">
+          <motion.div className=" relative justify-center text-four z-10 items-center flex grayscale  rounded-md overflow-x-hidden overflow-y-hidden">
             <motion.img
               
               key={page}
@@ -89,13 +92,13 @@ export const ImageSlides = () => {
             <div
               className="next z-40 h-8 w-8   rounded-full text-four 
               text-2xl absolute bg-six justify-center items-center flex top-1/2 left-2"
-              onClick={() => paginate(1)}
+              onClick={() => paginate(-1)}
             >
               &#9666;
             </div>
             <div
               className="prev z-40 h-8 w-8   text-four  text-2xl rounded-full absolute bg-six  justify-center items-center flex top-1/2 right-2 "
-              onClick={() => paginate(-1)}
+              onClick={() => paginate(1)}
             >
               &#9656;
             </div>

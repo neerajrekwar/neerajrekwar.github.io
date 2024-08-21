@@ -53,7 +53,7 @@ const CountAnimation = () => {
         <>
            <div >
             <div className="rounded-[28px] ">
-                <div className="h-[7rem] w-[7rem] p-2 border-five rounded-[28px] bg-[#b584ff2b]">
+                <div className="h-[7rem] w-[7rem] p-2 border-five rounded-[28px] bg-[#5e716a30]">
                     <div className="relative h-[6rem] w-[6rem]  flex  items-center overflow-hidden justify-center rounded-[28px] ">
                         
                         <motion.div
@@ -70,9 +70,10 @@ const CountAnimation = () => {
                             <div className={robot_mono.className}>
                                 <motion.div
                                     className="flex flex-row overflow-hidden gap-1 text-black justify-center items-center rounded-2xl text h-[60px] w-[60px] ">
-                                    <div className="text-2xl  font-bold  bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden  items-center rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+                                    <div className="text-2xl  font-bold  bg-[#e4fef4] h-10 w-6 flex justify-center overflow-hidden  items-center rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
                                         <AnimatePresence mode="wait">
                                             <motion.div
+                                                className="text-four"
                                                 key={countF}
                                                 initial={{
                                                     opacity: 1,
@@ -89,9 +90,10 @@ const CountAnimation = () => {
                                             </motion.div>
                                         </AnimatePresence>
                                     </div>
-                                    <div className="text-2xl  font-bold  bg-[#eddcfd] h-10 w-6 flex justify-center overflow-hidden items-center rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]o">
+                                    <div className="text-2xl  font-bold  bg-[#e4fef4] h-10 w-6 flex justify-center overflow-hidden  items-center rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
                                         <AnimatePresence mode="wait">
                                             <motion.div
+                                                className="text-four"
                                                 key={countS}
                                                 initial={{
                                                     opacity: 1,

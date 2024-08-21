@@ -40,10 +40,10 @@ export function MultiStepLoader() {
       {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
       <button
         onClick={() => setLoading(true)}
-        className="bg-custom-radial-s hover:bg-seven mx-auto text-sm md:text-base transition font-medium duration-200 h-10 rounded-lg px-8 flex items-center justify-center bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%"
+        className="bg-custom-radial-s hover:bg-seven mx-auto text-sm md:text-base transition font-medium duration-200 h-10 rounded-lg px-8 flex items-center justify-center text-primary"
         style={{
           boxShadow:
-            "0px -1px 0px 0px #ffffff40 inset, 0px 1px 0px 0px #ffffff40 inset",
+            "0px -1px 0px 0px var(--four) inset, 0px 1px 0px 0px var(--four) inset",
         }}
       >
         Click to load
