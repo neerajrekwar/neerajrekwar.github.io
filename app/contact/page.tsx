@@ -59,18 +59,19 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <main className="p-8 bgrid2 bg-primary min-h-screen ">
-     <section className="max-w-6xl  mx-auto m-auto rounded  sm:flex sm:border-rose-600 md:border-blue-400 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
-       <h6 className="mb-2 p-2 text-center text-3xl font-bold text-[#353535]">Reach at me</h6>
-       <p className="m-2 text-base">Numquam ab temporibus aut nulla doloremque suscipit, ex facere.</p>
-       <div>
-         <div className="basis-1/2 p-2 aspect-square bg-six rounded-xl m-2">
+    <main className="md:p-8 p-2  bg-primary min-h-screen ">
+     <section className="max-w-6xl bg-secondary m-auto m-auto rounded-xl py-1 border-rose-600 flex-col sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
+       
+       
+         <div className="basis-1/2 border-2 border-four md:w-[40%] p-2 aspect-square bg-six rounded-xl m-2">
             <h1 className="text-3xl text-four font-bold mb-6">
             Facilis blanditiis impedit atque.</h1>
-            <p className="m-3 text-xl">let&#39;s talk about something amazing!</p>
+            <p className=" text-primary">let&#39;s talk about something amazing!</p>
           </div>
 
-          <div className="basis-1/2 aspect-square rounded-xl m-2  bg-secondary p-2 font-semibold  sm:w-[60%]">
+          <div className="basis-2/2 border-2 border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2  bg-secondary p-2 font-semibold  sm:w-[60%]">
+            <h6 className="mb-2 p-2 text-center text-3xl font-bold text-four">Reach at me</h6>
+             <p className="m-2 text-base text-four bg-gradient-to-r bg-clip-text text-transparent from-four to-primary">Numquam ab temporibus aut nulla doloremque suscipit, ex facere.</p>
             <form
               action="https://formspree.io/f/mnqebqjq"
               method="POST"
@@ -78,7 +79,7 @@ const ContactPage: React.FC = () => {
               className="space-y-4  bg-custom-radial m-auto max-w-4xl"
             >
               <div className="p-2">
-                <label htmlFor="name" className="block text-sm font-semibold  text-six">
+                <label htmlFor="name" className="block text-sm font-semibold  text-four">
                   Name
                 </label>
                 <input
@@ -87,13 +88,14 @@ const ContactPage: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  placeholder="Enter your name"
                   required
-                  className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none bg-primary px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
+                  className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
                 />
               </div>
 
               <div className="p-2">
-                <label htmlFor="email"  className="block text-sm font-semibold  text-six">
+                <label htmlFor="email"  className="block text-sm font-semibold  text-four">
                   Email
                 </label>
                 <input
@@ -102,13 +104,14 @@ const ContactPage: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  placeholder="Enter your email"
                   required
-                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none bg-primary px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
+                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
                 />
               </div>
 
               <div className="p-2">
-                <label htmlFor="subject"  className="block text-sm font-semibold  text-six">
+                <label htmlFor="subject"  className="block text-sm font-semibold  text-four">
                   Subject
                 </label>
                 <input
@@ -117,13 +120,14 @@ const ContactPage: React.FC = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
+                  placeholder="Enter your subject"
                   required
-                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none bg-primary px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
+                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
                 />
               </div>
 
               <div className="p-2">
-                <label htmlFor="message"  className="block text-sm font-semibold  text-six">
+                <label htmlFor="message"  className="block text-sm font-semibold  text-four">
                   Message
                 </label>
                 <textarea
@@ -131,9 +135,10 @@ const ContactPage: React.FC = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  placeholder="Enter your message"
                   required
                   rows={4}
-                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring-2 focus-visible:ring-2 flex h-22 w-full rounded border-none bg-primary px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four focus:border-four"
+                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring-2 focus-visible:ring-2 flex h-22 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four focus:border-four"
                 />
               </div>
 
@@ -147,7 +152,7 @@ const ContactPage: React.FC = () => {
               </div>
             </form>
           </div>
-       </div>
+       
      </section>
     </main>
   );
