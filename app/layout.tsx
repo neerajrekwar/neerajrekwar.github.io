@@ -8,7 +8,7 @@ import Footer from "./components/footer";
 import Script from "next/script";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import GoogleTagManager from "./components/GoogleTagManager";
-
+import { Toaster } from "@/components/ui/toaster"
 
 const dm_Sans = DM_Sans({
   weight: "400",
@@ -39,6 +39,7 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-0PCHHEHDFJ" />
         <ThemeProvider>{children}</ThemeProvider>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

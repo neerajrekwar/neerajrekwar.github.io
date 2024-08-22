@@ -1,77 +1,52 @@
-// app/components/InstaGallery.tsx
-"use client";
+"use client"
+import React, { useEffect, useState } from 'react';
 
-import React, { useEffect, useState } from "react";
-
-interface InstagramPost {
+interface Image {
   id: string;
   media_url: string;
-  caption?: string;
-  permalink: string;
-  media_type: string;
+  caption: string;
+}
+
+interface Feed {
+  data: Image[];
+}
+
+async function fetchInstagramFeed(): Promise<Feed> {
+  const url = `https://graph.instagram.com/v20.0/me/media?fields=id,username,media_url,caption,timestamp,media_type&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 }
 
 const InstaGallery: React.FC = () => {
-  const [posts, setPosts] = useState<InstagramPost[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [images, setImages] = useState<Image[]>([]);
 
   useEffect(() => {
-    const fetchInstagramPosts = async () => {
-      try {
-        const response = await fetch("/api/instagram");
-        const result = await response.json();
-
-        if (!response.ok) {
-          throw new Error(result.error || "Failed to fetch Instagram posts.");
-        }
-
-        setPosts(result.data);
-      } catch (err: any) {
-        setError(err.message || "An unexpected error occurred.");
-      } finally {
-        setLoading(false);
-      }
+    const loadFeed = async () => {
+      const feed = await fetchInstagramFeed();
+      const latestPosts = feed.data.slice(0, 4); // Get the latest 4 posts
+      setImages(latestPosts);
     };
 
-    fetchInstagramPosts();
+    loadFeed();
   }, []);
 
-  if (loading) {
-    return <div>Loading Instagram posts...</div>;
-  }
-
-  if (error) {
-    return <div>Error loading Instagram posts: {error}</div>;
-  }
-
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {posts.map((post) => (
-        <a
-          key={post.id}
-          href={post.permalink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block overflow-hidden rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
-        >
-          {post.media_type === "VIDEO" ? (
-            <video
-              src={post.media_url}
-              controls
-              className="w-full h-full object-cover"
-            />
-          ) : (
+    <>
+      <div className="flex justify-center  space-x-1 bg-seven text-white p-2 rounded-md">
+        {images.map((image) => (
+          <div key={image.id} className="relative overflow-hidden w-1/4 ">
+            <div className='overflow-hidden rounded-sm'>
             <img
-              src={post.media_url}
-              alt={post.caption || "Instagram post"}
-              className="w-full h-full object-cover"
+              src={image.media_url}
+              alt={image.caption}
+              className="w-full h-auto object-cover"
             />
-          )}
-        </a>
-      ))}
-    </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
-
 export default InstaGallery;
