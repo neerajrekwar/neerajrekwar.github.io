@@ -59,7 +59,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <main className="md:p-8 p-2  bg-custom-radial-md bg-primary min-h-screen ">
+    <main className="md:p-8 p-2  bg-custom-radial-md bg-primary min-h-screen">
      <section className="max-w-6xl m-auto m-auto rounded-xl py-1 border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
        
        
