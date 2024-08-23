@@ -60,17 +60,17 @@ const ContactPage: React.FC = () => {
 
   return (
     <main className="md:p-8 p-2  bg-primary min-h-screen ">
-     <section className="max-w-6xl bg-secondary m-auto m-auto rounded-xl py-1 border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
+     <section className="max-w-6xl md:bg-secondary m-auto m-auto rounded-xl py-1 border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
        
        
-         <div className="basis-1/2 border-2 border-four md:w-[40%] p-2 aspect-square bg-six rounded-xl m-2">
+         <div className="basis-1/2  border-four md:w-[40%] p-2 aspect-square bg-six rounded-xl m-2">
             <h1 className="text-3xl text-four font-bold mb-6">
             Facilis blanditiis impedit atque.</h1>
-            <p className=" text-primary">let&#39;s talk about something amazing!</p>
+            <p className=" text-four">let&#39;s talk about something amazing!</p>
           </div>
 
-          <div className="basis-2/2 border-2 border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2  bg-secondary p-2 font-semibold  sm:w-[60%]">
-            <h6 className="mb-2 p-2 text-center text-3xl font-bold text-four">Reach at me</h6>
+          <div className="basis-2/2  text-blue-200 border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2  bg-secondary p-2   sm:w-[60%]">
+            <h6 className="mb-2 p-2 text-center text-3xl font-bold text-primary">Reach at me</h6>
              <p className="m-2 text-base text-four bg-gradient-to-r bg-clip-text text-transparent from-four to-primary">Numquam ab temporibus aut nulla doloremque suscipit, ex facere.</p>
             <form
               action="https://formspree.io/f/mnqebqjq"
@@ -93,6 +93,21 @@ const ContactPage: React.FC = () => {
                   className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
                 />
               </div>
+              {/* <div className="p-2">
+                <label htmlFor="phone" className="block text-sm font-semibold  text-four">
+                  Phone
+                </label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Enter your phone number"
+                  required
+                  className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
+                />
+              </div> */}
 
               <div className="p-2">
                 <label htmlFor="email"  className="block text-sm font-semibold  text-four">
