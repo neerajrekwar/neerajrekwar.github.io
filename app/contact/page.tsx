@@ -7,6 +7,7 @@ import { useToast } from "@/components/ui/use-toast";
 import CurrentTime from "../components/CurrentTime";
 import AdminWeather from "../components/AdminWeather";
 import AdminLocation from "../components/AdminLocation";
+import QuotesSlider from "../components/QuotesSlider";
 
 const ContactPage: React.FC = () => {
   const { toast } = useToast();
@@ -74,24 +75,24 @@ const ContactPage: React.FC = () => {
             {" "}
             {/* <CurrentTime />{" "} */}
           </li>
-          admin  &#9679; <CurrentTime/>
+          Reach at me  &#9679; <CurrentTime/>
       
         </ul>
       </div>
       <section className="">
         <div className="max-w-6xl justify-center lg:h-[87vh]  m-auto rounded-xl  border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
           <div className="basis-1/2 backdrop-blur-sm flex flex-col justify-between  border-four md:w-[40%] p-2 aspect-square bg-seven rounded-xl m-2">
-            <h1 className="md:text-3xl text-4xl font-medium tracking-tight md:text-7xl text-secondary font-bold mb-6">
+            <h1 className="md:text-3xl text-4xl font-medium tracking-tight md:text-7xl text-five font-bold mb-6">
               Facilis blanditiis impedit atque.
             </h1>
             <div className="rounded-xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1724373506008-ab646f67067c?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  relative h-44 w-full bg-cover bg-no-repeat bg-bottom   ">
-              <p className="z-10 text-sm  text-five p-2  bg-seven backdrop-blur-sm">
-                Nothing could be awesome until you think an idea, sustaiable
+              <p className="z-10 relative h-14 text-sm  text-five  p-2  bg-[#ffffff69] backdrop-blur-sm">
+               <QuotesSlider />
               </p>
             </div>
-            <div className="text-four p-1 justify-between flex-col flex ">
-              <h4 className="font-semibold">admin Info</h4>
-             <div className="flex text-five text-xs justify-between">
+            <div className="text-four p-1 mt-4  justify-between flex-col flex ">
+              <h4 className="font-semibold text-xl">admin Info</h4>
+             <div className="flex text-five text-xs my-2 font-medium justify-between">
                <p className="  border-five">New Delhi & Dwarka.</p>
                 <p>Hin &#9679; Eng &#9679; Sanskrit  </p>
                  <AdminWeather />
@@ -101,8 +102,8 @@ const ContactPage: React.FC = () => {
           </div>
 
           <div className="basis-2/2 text-primary  bg-secondary border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2   p-2   sm:w-[60%]">
-            <h6 className="mb-2 p-2 text-four  text-xl font-semibold md:text-4xl md:font-medium tracking-tight ">
-             &#9679; Reach at me
+            <h6 className="mb-1 p-2 text-four  text-xl font-semibold md:text-4xl md:font-medium tracking-tight ">
+             &#9679; 
             </h6>
 
             <form
