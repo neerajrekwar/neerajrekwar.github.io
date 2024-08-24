@@ -27,8 +27,7 @@ const CurrentTime: React.FC = () => {
       const now = new Date();
       const formattedDay = new Intl.DateTimeFormat("en-US", {
         weekday: 'short',
-        hour: "2-digit",
-        minute: '2-digit',
+        
       }).format(now);
       setCurDay(formattedDay);
     };
@@ -38,9 +37,9 @@ const CurrentTime: React.FC = () => {
   }, []);
   return (
     <>
-     <div className="">
-       <div className="font-bold  sm:text-2xl">{curDay}</div>
-       <div className="font-bold  ">{currentTime}</div>
+     <div className="flex gap-1">
+       <div>{curDay}</div>
+       <div>{currentTime}</div>
      </div>
     </>
   );

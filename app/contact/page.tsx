@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/components/ui/use-toast";
+import CurrentTime from "../components/CurrentTime";
+import AdminWeather from "../components/AdminWeather";
+import AdminLocation from "../components/AdminLocation";
 
 const ContactPage: React.FC = () => {
   const { toast } = useToast();
@@ -14,7 +17,9 @@ const ContactPage: React.FC = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -60,18 +65,46 @@ const ContactPage: React.FC = () => {
 
   return (
     <main className="md:p-8 p-2  bg-custom-radial-md bg-primary min-h-screen">
-     <section className="max-w-6xl m-auto m-auto rounded-xl py-1 border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
-       
-       
-         <div className="basis-1/2  border-four md:w-[40%] p-2 aspect-square bg-seven rounded-xl m-2">
-            <h1 className="text-3xl  bg-gradient-to-br from-five to-four py-4 bg-clip-text text-4xl font-medium tracking-tight text-transparent md:text-7xl text-four font-bold mb-6">
-            Facilis blanditiis impedit atque.</h1>
-            <p className=" text-four">let&#39;s talk about something amazing!</p>
+      <div className="flex justify-between px-2 rounded-full bg-seven items-center text-four text-xs h-[3vh] mb-8">
+        <ul className="flex font-semibold text-five sm:text-xl">
+          <li> nee </li>
+        </ul>
+        <ul className="flex gap-1  text-five">
+          <li className="">
+            {" "}
+            {/* <CurrentTime />{" "} */}
+          </li>
+          admin  &#9679; <CurrentTime/>
+        </ul>
+      </div>
+      <section className="">
+        <div className="max-w-6xl justify-center lg:h-[87vh]  m-auto rounded-xl  border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
+          <div className="basis-1/2 backdrop-filter-sm flex flex-col justify-between  border-four md:w-[40%] p-2 aspect-square bg-[#242424] rounded-xl m-2">
+            <h1 className="md:text-3xl text-4xl font-medium tracking-tight md:text-7xl text-four font-bold mb-6">
+              Facilis blanditiis impedit atque.
+            </h1>
+            <div className="rounded-xl bg-seven p-2 ">
+              <p className=" bg-gradient-to-br from-five via-four to-four py-4 bg-clip-text text-transparent">
+                Nothing could be awesome until you think an idea for talk about
+                something amazing!
+              </p>
+            </div>
+            <div className="text-four p-1 justify-between flex-col flex ">
+              <h4 className="font-semibold">admin Info</h4>
+             <div className="flex text-yellow-600 text-xs justify-between">
+               <p className="  border-five">New Delhi & Dwarka.</p>
+                <p>Hin &#9679; Eng &#9679; Sanskrit  </p>
+                 <AdminWeather />
+             </div>
+            </div>
+            
           </div>
 
           <div className="basis-2/2  text-blue-200 border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2  bg-secondary p-2   sm:w-[60%]">
-            <h6 className="mb-2 p-2  bg-gradient-to-br from-six to-seven py-4 bg-clip-text text-4xl font-medium tracking-tight text-transparent">Reach at me</h6>
-             
+            <h6 className="mb-2 p-2  bg-gradient-to-br from-five via-four to-four py-4 bg-clip-text text-xl font-semibold md:text-4xl md:font-medium tracking-tight text-transparent">
+             &#9679; Reach at me
+            </h6>
+
             <form
               action="https://formspree.io/f/mnqebqjq"
               method="POST"
@@ -79,7 +112,10 @@ const ContactPage: React.FC = () => {
               className="space-y-4  bg-custom-radial m-auto max-w-4xl"
             >
               <div className="p-2">
-                <label htmlFor="name" className="block text-sm font-semibold  text-four">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold  text-four"
+                >
                   Name
                 </label>
                 <input
@@ -93,24 +129,27 @@ const ContactPage: React.FC = () => {
                   className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
                 />
               </div>
-              {/* <div className="p-2">
-                <label htmlFor="phone" className="block text-sm font-semibold  text-four">
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Enter your phone number"
-                  required
-                  className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
-                />
-              </div> */}
+              <div className="p-2">
+               <label htmlFor="moblie" className="block text-sm font-semibold  text-four">
+                 Moblie
+               </label>
+               <input
+                 type="text"
+                 id="moblie"
+                 name="moblie"
+                 value={formData.name}
+                 onChange={handleChange}
+                 placeholder="Enter your moblie number"
+                 required
+                 className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
+               />
+             </div>
 
               <div className="p-2">
-                <label htmlFor="email"  className="block text-sm font-semibold  text-four">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold  text-four"
+                >
                   Email
                 </label>
                 <input
@@ -125,8 +164,11 @@ const ContactPage: React.FC = () => {
                 />
               </div>
 
-              <div className="p-2">
-                <label htmlFor="subject"  className="block text-sm font-semibold  text-four">
+              {/* <div className="p-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-semibold  text-four"
+                >
                   Subject
                 </label>
                 <input
@@ -139,10 +181,13 @@ const ContactPage: React.FC = () => {
                   required
                   className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
                 />
-              </div>
+              </div> */}
 
               <div className="p-2">
-                <label htmlFor="message"  className="block text-sm font-semibold  text-four">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold  text-four"
+                >
                   Message
                 </label>
                 <textarea
@@ -167,8 +212,8 @@ const ContactPage: React.FC = () => {
               </div>
             </form>
           </div>
-       
-     </section>
+        </div>
+      </section>
     </main>
   );
 };

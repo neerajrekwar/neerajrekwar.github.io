@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Alata, Caveat } from "next/font/google";
 import DeviceAddress from "./DeviceAddress";
 import { AuroraBackgroundDemo } from "./BackgroundAurra";
+import Weather from "./WeatherApp";
 
 
 
@@ -34,6 +35,7 @@ export default function HomeSectionHeader() {
             <div className="">
               <div className=" text-secondary  font-bold">
                 <DeviceAddress />
+                <Weather/>
               </div>
             </div>
           </div>

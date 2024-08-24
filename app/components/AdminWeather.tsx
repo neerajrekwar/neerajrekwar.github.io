@@ -1,57 +1,70 @@
-// components/AdminWeather.tsx
-"use client";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from 'react';
 
-const AdminWeather: React.FC = () => {
-  const [weather, setWeather] = useState<any>(null);
-  const [location, setLocation] = useState<string>("28.58, 77.07");
+interface WeatherData {
+  temperature: number;
+  time: string;
+}
 
-  const fetchWeather = async (query: string) => {
-    const options = {
-      method: "GET",
-      url: "https://weatherapi-com.p.rapidapi.com/current.json",
-      params: { q: query },
-      headers: {
-        "x-rapidapi-key": "fb4e3b3dd0mshddc389caebd5192p146dc6jsn1901b7092089",
-        "x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
-      },
-    };
+const fetchWeatherApi = async (url: string, params: Record<string, any>) => {
+  const query = new URLSearchParams(params).toString();
+  const response = await fetch(`${url}?${query}`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch weather data');
+  }
+  return response.json();
+};
 
-    try {
-      const response = await axios.request(options);
-      setWeather(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+const WeatherComponent = () => {
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchWeather(location);
-  }, [location]);
+    const fetchData = async () => {
+      try {
+        const params = {
+          latitude: 28.59,
+          longitude: 77.04,
+          hourly: 'temperature_2m',
+          current_weather: true,
+          temperature_unit: 'celsius', // Change to 'fahrenheit' if needed
+          timezone: 'auto',
+        };
+        const url = 'https://api.open-meteo.com/v1/forecast';
+        const response = await fetchWeatherApi(url, params);
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const query = formData.get("location") as string;
-    setLocation(query);
-  };
+        const weatherData = {
+          temperature: response.current_weather.temperature,
+          time: response.current_weather.time,
+        };
+
+        setWeatherData(weatherData);
+      } catch (err) {
+        setError('Failed to fetch weather data');
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
-    <div className="w-full t">
-      {/* <form onSubmit={handleSearch}>
-        <input type="text" name="location" placeholder="Enter location" />
-        <button type="submit">Search</button>
-      </form> */}
-      {weather && (
-        <div className="flex  text-left text-base text-yellow-600 font-medium tracking-tight md:text-3xl">
-          <h2 className="mr-1">{weather.location.region},</h2>
-          <h2 className="">{weather.location.country}</h2>
-          <p className="ml-1">{weather.current.temp_c}°C</p>
-        </div>
+    <div>
+      {weatherData ? (
+      <p>
+        {weatherData.temperature}°C at {new Date(weatherData.time).toLocaleDateString("us", {
+        weekday: 'short',
+          hour: "2-digit",
+          minute: '2-digit',
+        })}
+      </p>
+      ) : (
+        <p>Loading...</p>
       )}
     </div>
   );
 };
 
-export default AdminWeather;
+export default WeatherComponent;
