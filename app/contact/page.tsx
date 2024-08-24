@@ -92,9 +92,9 @@ const ContactPage: React.FC = () => {
             </div>
             <div className="text-four p-1 mt-2  justify-between flex-col flex ">
               <h4 className="font-semibold text-xl">admin Info</h4>
-             <div className="flex text-five text-xs my-1 font-medium justify-between">
-               <p className="  border-five">New Delhi & Dwarka.</p>
-                <p>Hin &#9679; Eng &#9679; Sanskrit  </p>
+             <div className="flex text-five  text-xs my-1 font-bold justify-between">
+               <p className="  border-five">Delhi, Dwarka.</p>
+                <p>Hin &#9679; Eng &#9679; Sans</p>
                  <AdminWeather />
              </div>
             </div>
