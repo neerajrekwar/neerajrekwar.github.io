@@ -6,7 +6,6 @@ import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/components/ui/use-toast";
 import CurrentTime from "../components/CurrentTime";
 import AdminWeather from "../components/AdminWeather";
-import AdminLocation from "../components/AdminLocation";
 import QuotesSlider from "../components/QuotesSlider";
 
 const ContactPage: React.FC = () => {
@@ -82,17 +81,18 @@ const ContactPage: React.FC = () => {
       <section className="">
         <div className="max-w-6xl justify-center lg:h-[87vh]  m-auto rounded-xl  border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
           <div className="basis-1/2 backdrop-blur-sm flex flex-col justify-between  border-four md:w-[40%] p-2 aspect-square bg-seven rounded-xl m-2">
-            <h1 className="md:text-3xl text-4xl font-medium tracking-tight md:text-7xl text-five font-bold mb-6">
-              Facilis blanditiis impedit atque.
+            <h1 className="md:text-3xl text-2xl font-medium tracking-tight lg:text-5xl text-five font-bold mb-6">
+              Connecting You with Us – Reach Out Anytime, Anywhere.
+              {/* Facilis blanditiis impedit atque. */}
             </h1>
-            <div className="rounded-xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1724373506008-ab646f67067c?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  relative h-44 w-full bg-cover bg-no-repeat bg-bottom   ">
-              <p className="z-10 relative h-14 text-sm  text-five  p-2  bg-[#ffffff69] backdrop-blur-sm">
+            <div className="rounded-xl backdrop-brightness-150 overflow-hidden bg-[url('https://images.unsplash.com/photo-1724373506008-ab646f67067c?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  relative h-44 w-full bg-cover bg-no-repeat bg-bottom   ">
+              <p className="z-10 relative rounded-t-xl h-14 text-sm text-four p-2 bg-[#ffffff69] backdrop-blur-sm">
                <QuotesSlider />
               </p>
             </div>
-            <div className="text-four p-1 mt-4  justify-between flex-col flex ">
+            <div className="text-four p-1 mt-2  justify-between flex-col flex ">
               <h4 className="font-semibold text-xl">admin Info</h4>
-             <div className="flex text-five text-xs my-2 font-medium justify-between">
+             <div className="flex text-five text-xs my-1 font-medium justify-between">
                <p className="  border-five">New Delhi & Dwarka.</p>
                 <p>Hin &#9679; Eng &#9679; Sanskrit  </p>
                  <AdminWeather />
@@ -199,7 +199,7 @@ const ContactPage: React.FC = () => {
                   placeholder="Enter your message"
                   required
                   rows={4}
-                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring-2 focus-visible:ring-2 flex h-16 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four focus:border-four"
+                  className="mt-1 border-input bg-[#ffffff0a] ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring-2 focus-visible:ring-2 flex h-20 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four focus:border-four"
                 />
               </div>
 

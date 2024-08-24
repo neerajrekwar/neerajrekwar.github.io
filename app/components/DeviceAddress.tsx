@@ -49,7 +49,7 @@ const DeviceAddress: React.FC = () => {
           </div>
         ) : (
           <div className="text-center  p-2">
-            <p>Loading...</p>
+            <p>wait a minute...</p>
           </div>
         )}
       </div>

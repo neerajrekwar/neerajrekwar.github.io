@@ -36,9 +36,9 @@ export function AuroraBackgroundDemo() {
                 type: "spring",
                 stiffness: 260,
                 damping: 25,
-                delay: 4,
+                delay: 2,
                 duration: 1,
-                ease:[0.6, 0.05, -0.01, 0.14],
+                ease: "easeInOut",
                 
               }}
               >

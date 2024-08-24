@@ -66,7 +66,7 @@ const Weather: React.FC = () => {
           
         </div>
       ) : (
-        <p>Loading...</p>
+        <p></p>
       )}
     </div>
   );

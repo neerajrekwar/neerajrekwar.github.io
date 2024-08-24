@@ -33,7 +33,7 @@ export default function HomeSectionHeader() {
               </Link>
             </div>
             <div className="">
-              <div className=" text-secondary  font-bold">
+              <div className=" text-secondary pt-2 font-bold">
                 <DeviceAddress />
                 <Weather/>
               </div>
