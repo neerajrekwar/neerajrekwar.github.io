@@ -75,23 +75,23 @@ const ContactPage: React.FC = () => {
             {/* <CurrentTime />{" "} */}
           </li>
           admin  &#9679; <CurrentTime/>
+      
         </ul>
       </div>
       <section className="">
         <div className="max-w-6xl justify-center lg:h-[87vh]  m-auto rounded-xl  border-rose-600  sm:flex sm:border-rose-600 md:border-blue-400 gap-2 lg:w-[70%] lg:flex-1 lg:border-yellow-500">
-          <div className="basis-1/2 backdrop-filter-sm flex flex-col justify-between  border-four md:w-[40%] p-2 aspect-square bg-[#242424] rounded-xl m-2">
-            <h1 className="md:text-3xl text-4xl font-medium tracking-tight md:text-7xl text-four font-bold mb-6">
+          <div className="basis-1/2 backdrop-blur-sm flex flex-col justify-between  border-four md:w-[40%] p-2 aspect-square bg-seven rounded-xl m-2">
+            <h1 className="md:text-3xl text-4xl font-medium tracking-tight md:text-7xl text-secondary font-bold mb-6">
               Facilis blanditiis impedit atque.
             </h1>
-            <div className="rounded-xl bg-seven p-2 ">
-              <p className=" bg-gradient-to-br from-five via-four to-four py-4 bg-clip-text text-transparent">
-                Nothing could be awesome until you think an idea for talk about
-                something amazing!
+            <div className="rounded-xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1724373506008-ab646f67067c?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  relative h-44 w-full bg-cover bg-no-repeat bg-bottom   ">
+              <p className="z-10 text-sm  text-five p-2  bg-seven backdrop-blur-sm">
+                Nothing could be awesome until you think an idea, sustaiable
               </p>
             </div>
             <div className="text-four p-1 justify-between flex-col flex ">
               <h4 className="font-semibold">admin Info</h4>
-             <div className="flex text-yellow-600 text-xs justify-between">
+             <div className="flex text-five text-xs justify-between">
                <p className="  border-five">New Delhi & Dwarka.</p>
                 <p>Hin &#9679; Eng &#9679; Sanskrit  </p>
                  <AdminWeather />
@@ -100,8 +100,8 @@ const ContactPage: React.FC = () => {
             
           </div>
 
-          <div className="basis-2/2  text-blue-200 border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2  bg-secondary p-2   sm:w-[60%]">
-            <h6 className="mb-2 p-2  bg-gradient-to-br from-five via-four to-four py-4 bg-clip-text text-xl font-semibold md:text-4xl md:font-medium tracking-tight text-transparent">
+          <div className="basis-2/2 text-primary  bg-secondary border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2   p-2   sm:w-[60%]">
+            <h6 className="mb-2 p-2 text-four  text-xl font-semibold md:text-4xl md:font-medium tracking-tight ">
              &#9679; Reach at me
             </h6>
 
@@ -126,7 +126,7 @@ const ContactPage: React.FC = () => {
                   onChange={handleChange}
                   placeholder="Enter your name"
                   required
-                  className="mt-1 border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
+                  className="mt-1 border border-input bg-[#ffffff0a]  ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-2 flex h-10 w-full rounded border-none  px-3 py-2 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium focus:bg-seven disabled:cursor-not-allowed disabled:opacity-50 focus:ring-four  focus:border-four"
                 />
               </div>
               <div className="p-2">

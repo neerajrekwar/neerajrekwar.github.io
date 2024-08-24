@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-interface Location {
+interface LocationData {
   city: string;
   region: string;
   country: string;
@@ -12,7 +12,7 @@ interface Location {
 }
 
 const AdminLocation: React.FC = () => {
-  const [location, setLocation] = useState<Location | null>(null);
+  const [location, setLocation] = useState<LocationData | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const adminLocation = {
@@ -24,24 +24,40 @@ const AdminLocation: React.FC = () => {
     const fetchLocation = async () => {
       try {
         const response = await axios.get("https://ipapi.co/json/");
-        const { latitude, longitude, city, region, country_name: country } = response.data;
+        console.log("Response data:", response.data);
+
+        const {
+          latitude,
+          longitude,
+          city,
+          region,
+          country_name: country,
+        } = response.data;
+
+        const userLatitude = parseFloat(latitude);
+        const userLongitude = parseFloat(longitude);
+
+        console.log("User Latitude:", userLatitude);
+        console.log("User Longitude:", userLongitude);
 
         if (
-          parseFloat(latitude) === adminLocation.latitude &&
-          parseFloat(longitude) === adminLocation.longitude
+          userLatitude.toFixed(2) === adminLocation.latitude.toFixed(2) &&
+          userLongitude.toFixed(2) === adminLocation.longitude.toFixed(2)
         ) {
           setLocation({
             city,
             region,
             country,
-            latitude: parseFloat(latitude),
-            longitude: parseFloat(longitude),
+            latitude: userLatitude,
+            longitude: userLongitude,
           });
+          console.log("Admin location matched!");
         } else {
-          setLocation(null); // Set to null if location doesn't match
+          setLocation(null);
+          console.log("Location does not match admin location.");
         }
       } catch (error) {
-        console.error(error);
+        console.error("Error fetching location:", error);
         setError("Failed to fetch location data");
       }
     };
@@ -56,15 +72,15 @@ const AdminLocation: React.FC = () => {
       ) : location ? (
         <div>
           <h2 className="text-lg">Admin Location</h2>
-          <p className="ml-1">
+          <p>
             {location.city}, {location.region}, {location.country}
           </p>
-          <p className="ml-1">
+          <p>
             Latitude: {location.latitude}, Longitude: {location.longitude}
           </p>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>Loading or not an admin location...</p>
       )}
     </div>
   );
