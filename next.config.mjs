@@ -1,16 +1,14 @@
 /** @type {import('next').NextConfig} */
 
-
 const nextConfig = {
-  output: 'export',
+  output: 'export',  // Ensures static export
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ['images.unsplash.com'],  // Allow images from specific domains
   },
   webpack: (config) => {
-    config.cache = false;
+    config.cache = false;  // Disable cache for webpack builds
     return config;
   },
-   
 };
 
 export default nextConfig;
