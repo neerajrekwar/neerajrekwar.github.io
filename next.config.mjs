@@ -2,6 +2,7 @@
 
 
 const nextConfig = {
+  output: 'export',
   images: {
     domains: ['images.unsplash.com'],
   },
@@ -9,6 +10,7 @@ const nextConfig = {
     config.cache = false;
     return config;
   },
+   
 };
 
 export default nextConfig;
