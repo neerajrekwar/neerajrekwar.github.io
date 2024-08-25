@@ -102,8 +102,8 @@ const ContactPage: React.FC = () => {
           </div>
 
           <div className="basis-2/2 text-primary  bg-secondary border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2   p-2   sm:w-[60%]">
-            <h6 className="mb-1 p-2 text-four  text-xl font-semibold md:text-4xl md:font-medium tracking-tight ">
-             &#9679; 
+            <h6 className="mb-1 p-2 text-four  text-xl font-semibold md:text-2xl md:font-medium tracking-tight ">
+             &#9679; Your Matters – Drop Me a Line.
             </h6>
 
             <form
