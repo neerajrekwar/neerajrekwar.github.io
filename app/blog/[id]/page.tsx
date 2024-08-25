@@ -5,12 +5,13 @@ import { notFound } from 'next/navigation';
 
 interface BlogPostPageProps {
   params: {
+    id: string;
     slug: string;
   };
 }
 
 const BlogPostPage = ({ params }: BlogPostPageProps) => {
-  const post: BlogPost | undefined = posts.find((p) => p.slug === params.slug);
+  const post: BlogPost | undefined = posts.find((p) => p.id === params.id);
 
   if (!post) {
     notFound();
@@ -21,7 +22,7 @@ const BlogPostPage = ({ params }: BlogPostPageProps) => {
   });
 
   return (
-    <div className="prose border-blue-600 border mx-auto p-8">
+    <article className="prose min-h-screen border-blue-600 border mx-auto p-8">
       <h1>{post?.title}</h1>
       <p><em>{post?.author} - {formattedDate}</em></p>
       <div className=''>
@@ -29,7 +30,7 @@ const BlogPostPage = ({ params }: BlogPostPageProps) => {
           src={post?.imageUrl}/>
       </div>
       <div>{post?.content}</div>
-    </div>
+    </article>
   );
 };
 
