@@ -5,12 +5,12 @@ import { notFound } from 'next/navigation';
 
 interface BlogPostPageProps {
   params: {
-    id: string;
+    slug: string;
   };
 }
 
 const BlogPostPage = ({ params }: BlogPostPageProps) => {
-  const post: BlogPost | undefined = posts.find((p) => p.id === params.id);
+  const post: BlogPost | undefined = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
     notFound();
