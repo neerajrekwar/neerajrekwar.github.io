@@ -5,10 +5,3 @@ export async function generateStaticParams() {
     slug: post.slug,  // Generate paths based on the `slug`
   })); 
 }
-export default function Page({ params }) {
-  const { slug } = params
-
-  return (
- <div>{slug}</div>
-)
-}
