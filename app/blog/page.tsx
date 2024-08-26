@@ -34,9 +34,9 @@ const BlogPage = () => {
       <ul className='basis-2/3  flex flex-col gap-16 border-yellow-600 '>
         {displayedPosts.map((post) => (
           <li className='flex border-lime-500 bg-seven bg rounded flex-col sm:flex-row  ' 
-            key={post.id}> 
+            key={post.slug}> 
             <Link className='md:basis-1/3 p-1 h-[14vh] md:h-full overflow-hidden  md:aspect-video  rounded border-blue-600  ' 
-              href={`/blog/${post.title.toLowerCase().replace(/ /g, '-')}/${post.id}`}>
+              href={`/blog/${post.slug}`}>
               <img className='w-full h-full rounded  transition-all duration-1000 hover:scale-105 object-cover'
                 src={post.imageUrl}/>
             </Link>
@@ -53,7 +53,7 @@ const BlogPage = () => {
                                <h2 className='my-2 sm:my-6 font-semibold text-2xl lg:text-4xl  text-five'>
                                  {post.title}
                                </h2>
-                             <Link className='flex my-4 p-1 w-fit text-sm bg-five text-primary rounded-full px-3'  href={`/blog/${post.id}`}> Discover <IconCornerDownRight 
+                             <Link className='flex my-4 p-1 w-fit text-sm bg-five text-primary rounded-full px-3'  href={`/blog/${post.slug}`}> Discover <IconCornerDownRight 
                width={20} height={20} /> </Link>
              </div>
               <i className='text-four text-xs md:text-sm'>{post.description}</i>

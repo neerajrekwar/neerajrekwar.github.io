@@ -5,16 +5,15 @@ import { notFound } from 'next/navigation';
 
 interface BlogPostPageProps {
   params: {
-    id: string;
-    
+    slug: string;  // The `slug` will be used to identify the post
   };
 }
 
 const BlogPostPage = ({ params }: BlogPostPageProps) => {
-  const post: BlogPost | undefined = posts.find((p) => p.id === params.id);
+  const post: BlogPost | undefined = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
-    notFound();
+    notFound();  // Return 404 if the post is not found
   }
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric',
