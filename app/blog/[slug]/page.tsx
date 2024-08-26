@@ -9,11 +9,11 @@ interface BlogPostPageProps {
   };
 }
 
-const BlogPostPage = ({ params }: { params: { slug: string } }) => {
-  const post = posts.find((p) => p.slug === params.slug);
+const BlogPostPage = ({ params }: BlogPostPageProps) => {
+  const post: BlogPost | undefined = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
-    notFound(); // Return 404 if the post is not found
+    notFound();  // Return 404 if the post is not found
   }
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric',
