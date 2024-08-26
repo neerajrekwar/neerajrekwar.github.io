@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
-
 const nextConfig = {
-  
+ 
   images: {
-    domains: ['images.unsplash.com'],  // Allow images from specific domains
+    domains: ['images.unsplash.com'],
   },
   webpack: (config) => {
-    config.cache = false;  // Disable cache for webpack builds
+    config.cache = false;
     return config;
   },
 };

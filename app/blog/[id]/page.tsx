@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 interface BlogPostPageProps {
   params: {
     id: string;
-    slug: string;
+    
   };
 }
 
