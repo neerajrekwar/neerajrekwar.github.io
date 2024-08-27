@@ -3,9 +3,9 @@
 
   export default function BlogIndexPage() {
     return (
-      <div>
+      <section className='prose mx-auto p-8'>
         <h1>Blog</h1>
-        <ul>
+        <ul >
           {posts.map((post) => (
             <li key={post.slug}>
               <Link href={`/blog/${post.slug}`}>
@@ -14,6 +14,6 @@
             </li>
           ))}
         </ul>
-      </div>
+      </section>
     );
   }
