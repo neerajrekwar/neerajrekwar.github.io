@@ -1,17 +1,22 @@
 [
   {
     "slug": "first-post",
-    "title": "First Post",
+    "title": "First Post, In every new lession in ship late",
+    "imageUrl": "https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sequi, sit obcaecati quia suscipit provident dignissimos optio error Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sequi, sit obcaecati quia suscipit provident dignissimos optio error",
+    "date": "2024-08-28",
     "content": "This is the content of the first post."
   },
   {
     "slug": "second-post",
     "title": "Second Post",
+    "date": "2024-08-29",
     "content": "This is the content of the second post."
   },
   {
     "slug": "third-post",
     "title": "third Post",
+    "date": "2024-08-30",
     "content": "This is the content of the third post."
   }
 ]
