@@ -3,13 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import BlogExcerpt from "../components/BlogExcerpt";
 
+import { IconHeart, IconLink, IconPointFilled, IconShare } from "@tabler/icons-react";
+import LikeButton from "../components/LikeButton";
+
 export default function BlogIndexPage() {
   return (
-    <section className="prose ">
-      <div className="basis-1/3 max-w-5xl m-auto h-64 sm:h-auto three"><h1 className=" text-6xl">Blog Posts</h1><p>Latest News and <br /> update</p></div>
-
-      <ul className="basis-2/2 max-w-5xl m-auto flex-col flex gap-16">
-        <p className=" ">Recent post</p>
+    <section className="prose  border-five">
+      <div className="max-w-5xl  m-auto">
+        <p className="px-2 mx-1 text-four max-w-5xl mt-4 m-auto text-xl">Recent posts</p>
+      </div>
+      <ul className="basis-2/2 max-w-5xl  m-auto flex-col flex gap-6">
         {posts.map((post) => (
           <li
             key={post.slug}
@@ -35,22 +38,36 @@ export default function BlogIndexPage() {
               >
                 {post.title}
               </Link>
-              <p className="text-gray-400 pb-3">
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p>
+              <div className="flex items-center gap-1 text-gray-400">
+                <p className="text-gray-400  pb-2">
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </p>
+                <IconPointFilled className="mb-2 text-gray-500" width={15} height={15}/>
+                <p className="pb-2 text-gray-400">{post.author}</p>
+              </div>
               <BlogExcerpt
                 key={post.slug}
-                decription={post.description || 'De'} 
+                decription={post.description || "No description available"}
                 slug={post.slug}
               />
-              {/* <div className="flex text-gray-400 justify-between">
-                <span>post a comment</span>
-                <span>Read more</span>
-              </div> */}
+              <div className="flex text-gray-400 justify-between">
+                <IconShare className="text-four hover:text-five" />
+                <IconLink className="text-four hover:text-five" />
+                <LikeButton />
+                <span className="p-1 px-2 text-four hover:text-five hover:bg-gray-100">
+                  
+                  <Link
+                    
+                    href={`/blog/${post.slug}`}
+                  >
+                    Read post
+                  </Link>
+                </span>
+              </div>
             </div>
           </li>
         ))}

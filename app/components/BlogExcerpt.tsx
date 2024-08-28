@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link';
+import { IconArrowNarrowRight } from '@tabler/icons-react';
 
 interface BlogExcerptProps {
   
@@ -16,26 +17,27 @@ export default function BlogExcerpt({  decription, slug }: BlogExcerptProps) {
   };
 
   return (
-    <div className=" pb-4 mb-4">
+    <div className="border-rose-200 pb-4 mb-4">
       
-      <p className="mb-4 opacity-75">
-        {isExpanded ? decription : `${decription.slice(0, 1000)}...`}
+      <p className="mb-4  text-four italic">
+        {isExpanded ? decription : `${decription.slice(0, 200)}...`}
       </p>
-      <div className="text-right">
+      <div className="text-right flex">
         <button
           onClick={handleReadMore}
-          className="text-blue-600 hover:underline focus:outline-none"
+          className="text-five  border-green-200 hover:underline focus:outline-none"
         >
           {isExpanded ? 'Show Less' : 'Read More'}
         </button>
       </div>
       {isExpanded && (
-        <div className="text-right mt-2">
+        <div className=" flex text-right mt-2">
           <Link href={`/blog/${slug}`}>
-            <button className="text-blue-600 hover:underline">Go to Full Post →</button>
+            <button className="text-five flex gap-2 hover:underline">Go to Full Post <IconArrowNarrowRight/></button>
           </Link>
         </div>
       )}
+      
     </div>
   );
 }
