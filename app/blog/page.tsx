@@ -10,13 +10,13 @@ export default function BlogIndexPage() {
   return (
     <section className="prose  border-five">
       <div className="max-w-5xl  m-auto">
-        <p className="px-2 mx-1 text-four max-w-5xl mt-4 m-auto text-xl">Recent posts</p>
+        <p className="px-4 mx-1 text-four max-w-5xl mt-4 m-auto text-xl">Recent posts</p>
       </div>
-      <ul className="basis-2/2 max-w-5xl  m-auto flex-col flex gap-6">
+      <ul className="basis-2/2  max-w-5xl  m-auto flex-col flex gap-6">
         {posts.map((post) => (
           <li
             key={post.slug}
-            className="border-b p-2 sm:flex gap-10 flex-row-reverse  m-1 p-1 "
+            className=" p-4 sm:flex gap-10  flex-row-reverse  m-2 "
           >
             <div className="basis-1/4 aspect-video   border-red-400">
               {post.imageUrl ? (
@@ -38,16 +38,16 @@ export default function BlogIndexPage() {
               >
                 {post.title}
               </Link>
-              <div className="flex items-center gap-1 text-gray-400">
-                <p className="text-gray-400  pb-2">
+              <div className="flex items-center opacity-50 text-five gap-1 ">
+                <p className=" pb-2">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
                   })}
                 </p>
-                <IconPointFilled className="mb-2 text-gray-500" width={15} height={15}/>
-                <p className="pb-2 text-gray-400">{post.author}</p>
+                <IconPointFilled className="mb-2 " width={15} height={15}/>
+                <p className="pb-2 ">{post.author}</p>
               </div>
               <BlogExcerpt
                 key={post.slug}
@@ -58,7 +58,7 @@ export default function BlogIndexPage() {
                 <IconShare className="text-four hover:text-five" />
                 <IconLink className="text-four hover:text-five" />
                 <LikeButton />
-                <span className="p-1 px-2 text-four hover:text-five hover:bg-gray-100">
+                <span className="p-1 px-2 border-four border-2 font-semibold flex justify-center  items-center text-four p-1 rounded-full px-3">
                   
                   <Link
                     
