@@ -16,12 +16,12 @@ export default function BlogIndexPage() {
         {posts.map((post) => (
           <li
             key={post.slug}
-            className=" p-4 sm:flex gap-10  flex-row-reverse  m-2 "
+            className=" p-2 sm:flex gap-10  flex-row-reverse  m-2 "
           >
-            <div className="basis-1/4 aspect-video   border-red-400">
+            <div className="basis-1/4 flex justify-center items-center aspect-video overflow-hidden  border-red-400">
               {post.imageUrl ? (
                 <Image
-                  className="h-full w-full object-cover"
+                  className="w-full aspect-square object-cover"
                   src={post.imageUrl}
                   width={200}
                   height={200}
@@ -33,12 +33,12 @@ export default function BlogIndexPage() {
             </div>
             <div className="basis-3/4 flex-col flex justify-start   border-red-400">
               <Link
-                className="text-xl md:text-2xl lg:text-4xl font-bold text-four py-4"
+                className="text-xl md:text-2xl lg:text-3xl font-bold text-four py-2"
                 href={`/blog/${post.slug}`}
               >
                 {post.title}
               </Link>
-              <div className="flex items-center opacity-50 text-five gap-1 ">
+              <div className="flex text-sm items-center opacity-75 text-five gap-1 ">
                 <p className=" pb-2">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
@@ -54,11 +54,11 @@ export default function BlogIndexPage() {
                 decription={post.description || "No description available"}
                 slug={post.slug}
               />
-              <div className="flex text-gray-400 justify-between">
+              <div className="flex items-center rounded-full text-gray-400 justify-between">
                 <IconShare className="text-four hover:text-five" />
                 <IconLink className="text-four hover:text-five" />
                 <LikeButton />
-                <span className="p-1 px-2 border-four border-2 font-semibold flex justify-center  items-center text-four p-1 rounded-full px-3">
+                <span className=" border-four border-2 font-semibold flex justify-center  items-center text-four p-1 rounded-full px-3">
                   
                   <Link
                     
