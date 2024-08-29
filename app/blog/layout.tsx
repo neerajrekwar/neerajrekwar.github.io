@@ -13,7 +13,7 @@ export default function RootLayout({
           <div className="basis-1/3  sm:h-auto p-4 ">
             <h1 className="text-3xl text-">Blog about something</h1>
 
-            <p>problems are create by itself it&#apos;s not heppen </p>
+            <p>problems are create by itself it&apos;s not heppen </p>
           </div>
           <div className="basis-1/3 mx-2 sm:h-auto p-4">
             <ul className="text-four flex justify-center items-center font-semibold flex-row gap-2">
