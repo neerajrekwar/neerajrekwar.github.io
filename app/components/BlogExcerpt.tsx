@@ -5,11 +5,11 @@ import { IconArrowNarrowRight } from '@tabler/icons-react';
 
 interface BlogExcerptProps {
   
-  decription: string;
+  description: string;
   slug: string;
 }
 
-export default function BlogExcerpt({  decription, slug }: BlogExcerptProps) {
+export default function BlogExcerpt({  description, slug }: BlogExcerptProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleReadMore = () => {
@@ -19,8 +19,8 @@ export default function BlogExcerpt({  decription, slug }: BlogExcerptProps) {
   return (
     <div className="border-rose-200 pb-4 mb-4">
       
-      <p className="mb-4  text-four italic">
-        {isExpanded ? decription : `${decription.slice(0, 200)}...`}
+      <p className="mb-4 text-sm text-four italic">
+        {isExpanded ? description  : `${description.slice(0, 100)}...`}
       </p>
       <div className="text-right flex">
         <button
