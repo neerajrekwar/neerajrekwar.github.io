@@ -1,3 +1,4 @@
+import { FloatingNavDemo } from "../components/floatingNavBar";
 import Footer from "../components/footer";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -9,6 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-primary min-h-screen">
+        <FloatingNavDemo/>
         <header className="h-44  bg-custom-radial-md md:flex justify-between text-five ">
           <div className="basis-1/3  sm:h-auto p-4 ">
             <h1 className="text-3xl text-">Blog about something</h1>
