@@ -12,7 +12,10 @@ export default function FirstPostPage() {
       
       </div>
       <article className="prose max-w-none p-4">
-        <span>{post?.date}</span>
+        <span>{new Date(post?.date).toLocaleTimeString("en-US",{
+          day:'2-digit',
+          month: 'narrow'
+        })}</span>
         <h1 className="text-3xl md:text-4xl font-bold mb-4">{post?.title}</h1>
         <p className='first-letter:text-2xl first-letter:font-bold first-letter:ml-1 '>
           This is an introductory paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
