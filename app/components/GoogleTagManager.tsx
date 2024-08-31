@@ -4,6 +4,6 @@ interface GoogleTagManagerProps {
   containerId: string;
 }
 
-export default function MyGoogleTagManager({ containerId }: GoogleTagManagerProps) {         
-  return <GoogleTagManager gtmId={containerId} dataLayer={[`containerId: ${containerId}`]} />;
+export default function MyGoogleTagManager({ containerId }: GoogleTagManagerProps) {
+  return <GoogleTagManager gtmId={containerId} dataLayer={{ containerId }} />;
 }

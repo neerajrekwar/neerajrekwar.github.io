@@ -11,14 +11,7 @@ import {
     IconBrandFacebookFilled,
     IconBrandXFilled,
 } from "@tabler/icons-react";
-import {
-    FacebookShareButton,
-    FacebookIcon,
-    GithubIcon,
-    TwitterShareButton,
-    TwitterIcon
 
-  } from 'next-share'
 import { LinkIcon } from "@nextui-org/react";
 import { text } from "stream/consumers";
 

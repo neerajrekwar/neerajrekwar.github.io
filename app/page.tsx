@@ -7,6 +7,9 @@ import ExpSection from "./components/ExpSection";
 import { VisionSection } from "./components/VisionSection";
 import StickyRelativeDemo from "./components/StickyRelativeDemo";
 import { Accordion } from "@/components/ui/accordion";
+import { AccordionDemo } from "@/components/Accordion";
+
+
 
 
 export const metadata: Metadata = {
@@ -38,7 +41,7 @@ export default function Home() {
       </section>
       <section className="text-five">
         
-       <Accordion />
+     <AccordionDemo/>
       </section>
     </main>
     
