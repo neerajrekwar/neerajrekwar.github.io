@@ -1,60 +1,101 @@
-import { IconShare, IconLink } from '@tabler/icons-react';
+import { IconShare, IconLink, IconHeartFilled } from '@tabler/icons-react';
 import posts from '../data/posts.json';
 import LikeButton from '@/app/components/LikeButton';
+import Image from "next/image"
 
 const post = posts.find(p => p.slug === 'first-post');
 
 export default function FirstPostPage() {
   return (
-    <main className="prose min-h-screen max-w-6xl m-auto text-four mx-auto p-2">
+    <main className="prose min-h-screen max-w-6xl bg-primary m-auto text-four mx-auto p-2">
       <section className='gap-2 flex justify-center items-center mt-16'>
         <p className=' p-[4px] font-semibold text-secondary border-2 border-secondary bg-primary px-2 uppercase text-sm'>motivation</p>
         {/* <IconShare/>
       <IconLink /> */}
 
       </section>
-      <article className="prose max-w-none p-4">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">{post?.title}</h1>
-        <div className='flex gap-2 md:gap-4  tracking-wide text-xs md:text-sm font-semibold uppercase py-4 justify-center'>
+      <section>
+        <article className="prose max-w-none p-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">{post?.title}</h1>
+          <div className='flex gap-2 md:gap-4  tracking-wide text-xs md:text-sm font-semibold uppercase py-4 justify-center'>
 
-          <span className='opacity-50'>by</span>
-          <span className='text-secondary'>
-            {post?.author}
-          </span>
-          <span>/</span>
-          <span className='opacity-50'>{new Date(post?.date as string).toLocaleString("en-US", {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
+            <span className='opacity-50'>by</span>
+            <span className='text-secondary'>
+              {post?.author}
+            </span>
+            <span>/</span>
+            <span className='opacity-50'>{new Date(post?.date as string).toLocaleString("en-US", {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric'
 
-          })}</span>
-          <span>/</span>
-          <span className='opacity-50'>
-            {post?.duration}
-          </span>
+            })}</span>
+            <span>/</span>
+            <span className='opacity-50'>
+              {post?.duration}
+            </span>
+          </div>
+          <p className='first-letter:text-2xl first-letter:font-bold first-letter:ml-1 '>
+            This is an introductory paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <img
+              src={post?.imageUrl}
+              alt={post?.title}
+              className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
+            />
+            Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
+            Phasellus porttitor at massa in vestibulum. Suspendisse potenti. Integer in sapien
+            a velit aliquam viverra. Fusce elementum turpis sed urna tincidunt, nec luctus nisi
+            consectetur.
+
+          </p>
+
+          <p>
+            Continuation of the paragraph. Duis vel libero at quam laoreet blandit.
+            Nullam luctus nisl ut magna scelerisque, a convallis erat scelerisque.
+            Sed fringilla nulla id enim faucibus, vel ullamcorper magna pulvinar.
+          </p>
+          {/* Additional post content */}
+        </article>
+
+      </section>
+      <section className='min-h-screen border-third uppercase tracking-wide text-four'>
+        <div className='flex items-center  py-4 justify-center  '>
+          <span className='flex items-center bg-secondary rounded-full gap-2 text-primary p-2 px-3'><IconHeartFilled /> like this</span>
         </div>
-        <p className='first-letter:text-2xl first-letter:font-bold first-letter:ml-1 '>
-          This is an introductory paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <img
-            src={post?.imageUrl}
-            alt={post?.title}
-            className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
-          />
-          Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
-          Phasellus porttitor at massa in vestibulum. Suspendisse potenti. Integer in sapien
-          a velit aliquam viverra. Fusce elementum turpis sed urna tincidunt, nec luctus nisi
-          consectetur.
-          
-        </p>
-        
-        <p>
-          Continuation of the paragraph. Duis vel libero at quam laoreet blandit.
-          Nullam luctus nisl ut magna scelerisque, a convallis erat scelerisque.
-          Sed fringilla nulla id enim faucibus, vel ullamcorper magna pulvinar.
-        </p>
-        {/* Additional post content */}
-      </article>
-      
+        <div className='flex gap-4 text-sm py-2  items-center font-semibold justify-center  '>
+
+          <span className="font-bold">Himanshu</span> <span className="opacity-50">and</span><span className="font-bold">12</span>
+          <p className="opacity-50">others love this</p>
+        </div>
+        <div className="">
+          <div className="relative ">
+            <div className="absolute h-44 w-full flex  justify-center items-center  w-full ">
+              <div className="h-[0.3px] bg-seven w-full "></div>
+            </div>
+            <div className="absolute h-44   w-full absolute h-20 w-full flex flex-col justify-center items-center">
+              <Image
+                className="rounded-full"
+                src={'/me.webp'}
+                width={40}
+                height={40}
+                alt="neel"
+              />
+              <div className="absolute  bottom-0 text-center ">
+                <h6 className="font-bold py-2 text-sm">neeraj rekwar</h6>
+                <p className="text-xs opacity-50 tracking-widest">Artist way show realism</p>
+                <div className="absolute w-full text-center -bottom-24 ">
+                  <a href="/" target="_blank" className="flex justify-center items-center bg-secondary rounded-full gap-2 text-primary p-2 px-3">suggest an idea</a>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+      </section>
     </main>
   );
 }

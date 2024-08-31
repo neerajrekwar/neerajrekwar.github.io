@@ -32,15 +32,7 @@ async function fetchInstagramFeed(): Promise<Feed> {
 
 
 export default function Footer() {
-  const [isHydrated, setIsHydrated] = useState(false);
-
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []);
-
-  if (!isHydrated) {
-    return null;
-  }
+  
   const [images, setImages] = useState<Image[]>([]);
 
   useEffect(() => {
