@@ -57,7 +57,19 @@
 }
 
 
+**,html::-webkit-scrollbar {
+ scrollbar-width: thin;
+  background-color: var(--four); /* Use CSS variable */
+}
 
+**,html::-webkit-scrollbar-track {
+ scrollbar-color: var(--five) ;
+   /* Use CSS variable */
+}
+
+html {
+  scroll-behavior: smooth; /* Temporarily disable smooth scrolling */
+}
 section.bgrid{
   background-color: var(--color-primary);
   
