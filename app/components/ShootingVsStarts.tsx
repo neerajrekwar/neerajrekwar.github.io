@@ -43,12 +43,12 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
-              className="text-xl bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%m-2 px-8 py-4  md:text-3xl">
+              className="text-xl text-four m-2 px-8 py-4  md:text-3xl">
               <p className="font-normal">Hello, World!</p>
               <div className="text-2xl md:text-4xl lg:text-5xl flex">
                 <p className="pr-2">I am</p>
                 <AutoTyper
-                  texts={["Progammer", "Developer", "Environmentalist", "Freelancer", "Digital marketing"]}
+                  texts={["Progammer", "Environmentalist", "Freelancer", "Digital marketer"]}
                 />
               </div>
             </motion.h2>
@@ -71,8 +71,8 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               >
                 <Link
                   href="/contact"
-                  className="p-2 px-4  text-secondary rounded-full 
-                  bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%   "
+                  className="p-2 px-4  text-four rounded-full 
+                     "
                 >
                   Let&apos;s talk
                 </Link>
@@ -91,8 +91,8 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               >
                 <Link
                   href="/contact"
-                  className=" rounded-full 
-                  bg-clip-text text-transparent bg-gradient-to-br  from-pink-200 from-10% via-purple-300 from-10% to-blue-500 from-10%   "
+                  className="p-2 px-4  text-four rounded-full 
+                     "
                 >
                   Cantact{" "}
                 </Link>
