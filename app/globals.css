@@ -57,12 +57,14 @@
 }
 
 
-body::-webkit-scrollbar {
- scrollbar-width: thin; /* Use CSS variable */
+**,html::-webkit-scrollbar {
+ scrollbar-width: thin;
+scrollbar-track-color: var(--color-four);
+ /* Use CSS variable */
 }
 
-body::-webkit-scrollbar-track {
- scrollbar-color: var(--five) ;
+**,html::-webkit-scrollbar-track {
+ scrollbar-color: var(--color-five) ;
    /* Use CSS variable */
 }
 
