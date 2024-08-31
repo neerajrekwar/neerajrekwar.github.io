@@ -53,7 +53,7 @@ export default function BlogIndexPage() {
               >
                 {post.title}
               </Link>
-              <div className="flex my-2 text-xs sm:text-sm items-center opacity-75 text-five gap-1">
+              <div className="flex my-2  text-xs sm:text-sm items-center opacity-50 text-five gap-1">
                 <p>
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",

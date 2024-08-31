@@ -6,7 +6,8 @@ import { ReviewSection } from "./components/reviewSection";
 import ExpSection from "./components/ExpSection";
 import { VisionSection } from "./components/VisionSection";
 import StickyRelativeDemo from "./components/StickyRelativeDemo";
-import { AccordionDemo } from "@/components/Accordion";
+import { Accordion } from "@/components/ui/accordion";
+
 
 export const metadata: Metadata = {
   title: "nee. - Anonymous seo find at Delhi ",
@@ -37,7 +38,7 @@ export default function Home() {
       </section>
       <section className="text-five">
         
-       <AccordionDemo />
+       <Accordion />
       </section>
     </main>
     

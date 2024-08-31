@@ -1,5 +1,6 @@
 import { nextui } from "@nextui-org/theme";
 import plugin from "tailwindcss/plugin";
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -89,7 +90,7 @@ module.exports = {
     
     nextui(),
     addVariablesForColors,
-    require('tailwind-scrollbar')({ nocompatible: true }),
+    require('tailwind-scrollbar'),
     require("@tailwindcss/forms"),
     plugin(function ({ addBase, theme }) {
       addBase({
