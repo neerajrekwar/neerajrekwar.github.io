@@ -5,7 +5,6 @@ import { Caveat } from 'next/font/google';
 import React, { useEffect, useState } from 'react';
 import InstaGallery from './InstaGallery';
 import { IconBrandXFilled, IconBrandLinkedin, IconBrandGithubFilled, IconBrandDiscordFilled, } from '@tabler/icons-react';
-import { postcss } from 'tailwindcss';
 import posts from "../blog/data/posts.json"
 
 const caveat = Caveat({
@@ -33,6 +32,15 @@ async function fetchInstagramFeed(): Promise<Feed> {
 
 
 export default function Footer() {
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  if (!isHydrated) {
+    return null;
+  }
   const [images, setImages] = useState<Image[]>([]);
 
   useEffect(() => {
