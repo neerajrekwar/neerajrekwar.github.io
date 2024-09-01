@@ -250,8 +250,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="text-xs  max-w-7xl  m-auto">
-          <div className='my-1 flex justify-between items-center'>
+        <div className="text-xs mx-2 px-2 max-w-7xl  m-auto">
+          <div className='py-1 flex justify-between items-center'>
             <span >Copyright ©2023 Neeraj</span>
             <span >build by me</span>
           </div>

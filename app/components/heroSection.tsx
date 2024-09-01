@@ -350,16 +350,16 @@ export function HeroSection() {
                     </div>
                     <IconSearch width={44}
                       height={44} />
-                    
+
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
                     className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
-                    >
-                      <div className="md:pb-4 text-five">
-                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                  >
+                    <div className="md:pb-4 text-five">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Socail Media
                       </h4>
                       <p className="m-2 text-four">
@@ -368,8 +368,8 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconSocial  width={44}
-                      height={44}  />
+                    <IconSocial width={44}
+                      height={44} />
                   </motion.li>
 
                   <motion.li
@@ -377,9 +377,9 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
                     className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
-                    >
-                      <div className="md:pb-4 text-five">
-                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                  >
+                    <div className="md:pb-4 text-five">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         How to Grow Online
                       </h4>
                       <p className="m-2">
@@ -388,17 +388,17 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconWorldWww  width={44}
-                      height={44}  />
+                    <IconWorldWww width={44}
+                      height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
                     className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
-                    >
-                      <div className="md:pb-4 text-five">
-                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                  >
+                    <div className="md:pb-4 text-five">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Localization
                       </h4>
                       <p className="m-2 text-four">
@@ -407,17 +407,17 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconBuildingStore  width={44}
-                      height={44}  />
+                    <IconBuildingStore width={44}
+                      height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.4 }}
                     className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
-                    >
-                      <div className="md:pb-4 text-five">
-                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                  >
+                    <div className="md:pb-4 text-five">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Google Analytics
                       </h4>
                       <p className="m-2 text-four">
@@ -427,16 +427,16 @@ export function HeroSection() {
                       </p>
                     </div>
                     <IconBrandGoogleAnalytics width={44}
-                      height={44}  />
+                      height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.6 }}
                     className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
-                    >
-                      <div className="md:pb-4 text-five">
-                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                  >
+                    <div className="md:pb-4 text-five">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Ads Word
                       </h4>
                       <p className="m-2 text-four">
@@ -446,16 +446,16 @@ export function HeroSection() {
                       </p>
                     </div>
                     <IconAdFilled width={44}
-                      height={44}  />
+                      height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.8 }}
                     className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
-                    >
-                      <div className="md:pb-4 text-five">
-                        <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                  >
+                    <div className="md:pb-4 text-five">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         Email Marketing
                       </h4>
                       <p className="m-2 text-four">
@@ -465,8 +465,8 @@ export function HeroSection() {
                       </p>
                     </div>
                     <IconMailbox width={44}
-                      height={44}  />
-                    
+                      height={44} />
+
                   </motion.li>
                 </motion.ul>
               </div>
@@ -1244,11 +1244,11 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="bgrid2  min-h-screen">
-        
-        <div className="flex overflow-hidden justify-center min-h-screen items-center rounded-2xl">
-          
-          <div className="text-4xl font-bold overflow-hidden">
+      <section className="bgrid2  border-five ">
+
+        <div className="flex relative min-h-screen  justify-center border-five  items-center rounded-2xl">
+
+          <div className="text-4xl font-bold overflow-x-hidden max-screen">
             <InfiniteImageScroller
               direction="left"
               speed="normal"
@@ -1266,26 +1266,26 @@ export function HeroSection() {
               images={images}
             />
           </div>
-          <div className="absolute  bg-gradient-to-l from-primary   to-transparent  h-full w-full   font-bold"></div>
-          <div className="absolute bg-gradient-to-r from-primary from-2% to-transparent  h-full w-full  font-bold"></div>
-          <div className="absolute text-five flex flex-col bg-gradient-to-r 
+          <div className="absolute border-five bg-gradient-to-l from-primary to-transparent  h-full w-full   font-bold"></div>
+          <div className="absolute border-five bg-gradient-to-r from-primary from-2% to-transparent  h-full w-full  font-bold"></div>
+          <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r 
  from-primary    justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
             <div className="absolute max-w-3xl m-auto ">
-              <motion.h2 className="mx-4 text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl">
+              <motion.h2 className="mx-4 text-five md:mx-10 text-4xl md:text-5xl lg:text-6xl">
                 Have a Project in Mind?
               </motion.h2>
-              <motion.p className="text-base text-four mx-4 md:mx-10  my-4 max-w-2xl font-normal">
+              <motion.p className="text-base text-four mx-4 md:mx-10 opacity-75  my-4 max-w-2xl font-normal">
                 I&apos;m excited to be in touch with you! Whether you&apos;re prepared to launch a brand new website or give an existing one a fresh look, I&apos;m available to assist in transforming your concepts into tangible results.
               </motion.p>
-              <motion.a className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 bg-primary gap-2 border border-secondary text-four rounded-full">
-                 <IconCalendarClock /> book now
+              <motion.a className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 bg-primary gap-2 border border-secondary text-secondary rounded-full">
+                <IconCalendarClock /> book now
               </motion.a>
             </div>
           </div>
         </div>
-        
+
       </section>
-      
+
     </>
   );
 }
