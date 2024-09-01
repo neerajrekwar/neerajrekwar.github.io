@@ -47,18 +47,18 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bgrid">
-        <div className="p-4 text-five flex flex-col md:flex-row justify-between py-10 max-w-6xl m-auto">
+      <footer className="bg-primary">
+        <div className="p-4 text-four flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
           <ul className="flex  gap-2 mb-8 items-start flex-col">
             <li className="">
               <div className={caveat.className}>
-                <Link href={"/"} className="text-5xl  flex justify-start font-semibold  items-start">
+                <Link href={"/"} className="text-5xl   text-four  font-bold">
                   {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
                   nee.
                 </Link>
               </div>
             </li>
-            <li className="text-1xl flex mb-4 justify-start items-start">
+            <li className="text-1xl flex mb-4 justify-start opacity-60 items-start">
               let&apos;s start creating something new, You & I at same
             </li>
           </ul>
@@ -87,30 +87,30 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className=" py-10  border-lime-400 max-w-6xl m-auto mx-auto grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-1.25 justify-center items-start h-auto">
-          <div className="p-4 mb-10 text-five">
+        <div className=" py-10  border-lime-400 max-w-7xl m-auto mx-auto grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-1.25 justify-center items-start h-auto">
+          <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
               
-              <h6 className=" text-xl">About</h6>
+              <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">About</h6>
             </div>
             <ul className=" text-sm ">
-              <li className="  flex mb-4 justify-start items-center">
+              <li className="flex mb-4 justify-start items-center">
                 <span className="  ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="18px"
                     viewBox="0 -960 960 960"
                     width="18px"
-                    fill="var(--five)"
+                    fill="var(--four)"
                   >
                     <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z" />
                   </svg>
                 </span>
-                <span className="px-4 text-five  text-sm font-semibold sm:font-normal ">
+                <span className="px-4 text-four  text-sm font-semibold sm:font-normal ">
                   Dwarka sec 7 New Delhi Delhi India 110075
                 </span>
               </li>
-              <li className=" flex mb-4 justify-start items-center">
+              <li className="flex mb-4 justify-start items-center">
                 <span className=" ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@ export default function Footer() {
                   +91 704 214 9836
                 </span>
               </li>
-              <li className=" flex mb-4 justify-start items-center">
+              <li className="  flex mb-4 justify-start items-center">
                 <span className=" pt-2 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -147,15 +147,15 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="p-4 mb-10 text-five">
+          <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
               
-              <h6 className="text-xl">Latest News</h6>
+              <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">Latest News</h6>
             </div>
             <ul>
               {posts.map((post) => (
-                <li key={post.slug} className='flex'>
-                  <div className='basis-1/4 m-2 aspect-square'>
+                <li key={post.slug} className='flex gap-2  justify-start items-start'>
+                  <div className='basis-1/4 m-2 aspect-square mb-6 '>
                     {post.imageUrl ? (
                       <Image
                         className="w-full  aspect-square object-cover"
@@ -168,9 +168,9 @@ export default function Footer() {
                       <div>No image available</div>
                     )}
                   </div>
-                  <div className='basis-3/4 p-2'>
+                  <div className='basis-3/4  flex justify-start items-start flex-col'>
                     <Link
-                      className="md:text-sm text-four py-2"
+                      className="md:text-sm  text-four "
                       href={`/blog/${post.slug}`}
                     >
                       {post.title}
@@ -181,21 +181,10 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div className="p-4 mb-10 text-five">
+          <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-              <span className="bg-seven transition-all duration-10000 border-four rounded-full p-1">
-                <svg
-                  className="md:h-18 md:w-18 "
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="28px"
-                  viewBox="0 -960 960 960"
-                  width="28px"
-                  fill="var(--five)"
-                >
-                  <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z" />
-                </svg>
-              </span>
-              <h6 className="text-xl">Informartion</h6>
+              
+              <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">Informartion</h6>
             </div>
             <ul className=" text-four text-sm">
               <li className="p-1  ">
@@ -229,7 +218,7 @@ export default function Footer() {
                 {" "}
                 <a
                   href="/about"
-                  className="hover:pl-1 hover:text-five hover:translate-x-1 transition-all"
+                  className="hover:pl-1 hover:text-four hover:translate-x-1 transition-all"
                 >
                   contact
                 </a>
@@ -245,29 +234,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="p-4 mb-10 text-five">
+          <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-              <span className="bg-seven transition-all duration-10000 border-four rounded-full p-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={24}
-                  height={24}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--five)"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-
-                  className="icon icon-tabler md:h-18 md:w-18  icons-tabler-outline icon-tabler-brand-instagram"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-                  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                  <path d="M16.5 7.5l0 .01" />
-                </svg>
-              </span>
-              <h6 className='text-xl'>Instagram</h6>
+              
+              <h6 className=' text-xl text-four  opacity-50 md:opacity-100 md:font-semibold'>Instagram</h6>
             </div>
             <ul className="">
               <div className="mx-auto">
@@ -280,8 +250,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="opacity-75 border-t-[.2px] border-four   mx-4 text-center flex justify-between text-xs text-five p-2">
-          <span >Copyright ©2023 Neeraj Rekwar</span>
+        <div className="text-xs text-center flex gap-2 justify-between max-w-6xl my-3 m-auto">
+          <span >Copyright ©2023 Neeraj</span>
           <span >build by me</span>
         </div>
       </footer>

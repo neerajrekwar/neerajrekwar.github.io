@@ -17,15 +17,15 @@ export default function BlogExcerpt({  description, slug }: BlogExcerptProps) {
   };
 
   return (
-    <div className="border-rose-200 pb-4 mb-4">
+    <div className="border-rose-200 pb-4 mb-4 ">
       
-      <p className="mb-4 text-sm text-four italic">
+      <p className="mb-2 text-sm text-four  italic">
         {isExpanded ? description  : `${description.slice(0, 100)}...`}
       </p>
       <div className="text-right flex">
         <button
           onClick={handleReadMore}
-          className="text-five  border-green-200 hover:underline focus:outline-none"
+          className="text-four text-sm   hover:underline focus:outline-none"
         >
           {isExpanded ? 'Show Less' : 'Read More'}
         </button>

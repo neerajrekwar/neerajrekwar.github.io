@@ -12,12 +12,12 @@ const LikeButton = () => {
   return (
     <button
       onClick={toggleLike}
-      className="focus:outline-none transition-colors duration-200 ease-in-out"
+      className="focus:outline-none  transition-colors duration-200 ease-in-out"
     >
       {liked ? (
         <IconHeartFilled size={24} className="text-red-500" />
       ) : (
-        <IconHeart size={24} className="text-gray-500 hover:text-red-500" />
+        <IconHeart size={24} className="text-four hover:text-red-500" />
       )}
     </button>
   );
