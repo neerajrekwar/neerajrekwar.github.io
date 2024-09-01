@@ -32,7 +32,7 @@ async function fetchInstagramFeed(): Promise<Feed> {
 
 
 export default function Footer() {
-  
+
   const [images, setImages] = useState<Image[]>([]);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-primary">
+      <footer className="bg-primary text-secondary">
         <div className="p-4 text-four flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
           <ul className="flex  gap-2 mb-8 items-start flex-col">
             <li className="">
@@ -90,7 +90,7 @@ export default function Footer() {
         <div className=" py-10  border-lime-400 max-w-7xl m-auto mx-auto grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-1.25 justify-center items-start h-auto">
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-              
+
               <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">About</h6>
             </div>
             <ul className=" text-sm ">
@@ -149,7 +149,7 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-              
+
               <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">Latest News</h6>
             </div>
             <ul>
@@ -183,7 +183,7 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-              
+
               <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">Informartion</h6>
             </div>
             <ul className=" text-four text-sm">
@@ -236,7 +236,7 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-              
+
               <h6 className=' text-xl text-four  opacity-50 md:opacity-100 md:font-semibold'>Instagram</h6>
             </div>
             <ul className="">
@@ -250,9 +250,11 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="text-xs text-center flex gap-2 justify-between max-w-6xl my-3 m-auto">
-          <span >Copyright ©2023 Neeraj</span>
-          <span >build by me</span>
+        <div className="text-xs  max-w-7xl  m-auto">
+          <div className='my-1 flex justify-between items-center'>
+            <span >Copyright ©2023 Neeraj</span>
+            <span >build by me</span>
+          </div>
         </div>
       </footer>
 

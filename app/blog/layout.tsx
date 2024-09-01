@@ -18,11 +18,11 @@ export default function BlogLayout({
       <body className="bg-primary  min-h-screen">
         <FloatingNavDemo />
         <header className=" border-b border-seven h-28  bg-custom-radial-lg justify-between items-center  text-five ">
-          <div className="flex basis-1/2 justify-between items-start p-2 max-w-7xl m-auto">
-            <div className="h-22 basis-1/2 font-bold text-4xl rounded-full">
-              <p className={caveat.className}>nee.</p>
+          <div className="flex h-22  basis-1/2 justify-between items-start  max-w-7xl m-auto">
+            <div className={caveat.className}>
+              <p className= 'text-four text-4xl font-semibold' >nee.</p>
             </div>
-            <div className="h-22 ">
+            <div className=" border">
               <ul className="text-four justify-center text-end font-semibold flex-row gap-2">
                 <li className="text-sm md:text-base ">
                   {new Date().toLocaleDateString("en-US", {

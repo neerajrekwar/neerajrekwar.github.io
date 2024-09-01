@@ -82,7 +82,7 @@ section.bgrid{
   background-size: 40px 40px, 20px 20px, 10px 10px, 4px 4px;
   background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px, -0.4px -0.4px;
 }
- section .bgrid2{
+ section.bgrid2{
   background-color: transparent;
   
   background-image:  linear-gradient(#3a4f411a 0.8px, transparent 0.8px), linear-gradient(90deg, #3a4f411a 0.8px, transparent 0.8px), linear-gradient(#3a4f411a 0.4px, transparent 0.4px), linear-gradient(90deg, #3a4f411a 0.4px, transparent 0.4px);
