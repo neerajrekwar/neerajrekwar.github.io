@@ -21,7 +21,7 @@ export default function RootLayout({
         <header className=" border-b border-seven h-28  bg-custom-radial-lg justify-between items-center  text-five ">
           <div className="flex h-22  basis-1/2 justify-between items-start  max-w-7xl m-auto">
             <div className={caveat.className}>
-              <p className= 'text-four text-4xl font-semibold' >nee.</p>
+              <p className= 'text-four pl-2 text-2xl md:text-3xl font-semibold' >nee</p>
             </div>
             <div className="">
               <ul className="text-four justify-center text-end font-semibold flex-row gap-2">

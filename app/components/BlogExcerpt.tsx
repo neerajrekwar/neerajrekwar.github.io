@@ -19,7 +19,7 @@ export default function BlogExcerpt({  description, slug }: BlogExcerptProps) {
   return (
     <div className="border-rose-200 pb-4 mb-4 ">
       
-      <p className="mb-2 text-sm text-four  italic">
+      <p className="mb-2 text-sm text-four  opacity-75">
         {isExpanded ? description  : `${description.slice(0, 100)}...`}
       </p>
       <div className="text-right flex">

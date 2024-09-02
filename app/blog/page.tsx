@@ -32,11 +32,11 @@ export default function BlogIndexPage() {
         </div>
         <ul className="basis-2/2 max-w-5xl m-auto flex-col flex gap-6">
           {posts.map((post) => (
-            <li key={post.slug} className="p-2 sm:flex gap-10 flex-row-reverse m-2">
-              <div className="basis-1/4 flex justify-center items-center aspect-video overflow-hidden border-red-400">
+            <li key={post.slug} className="p-2 border-b-2 border-seven  sm:flex gap-10 flex-row-reverse m-2">
+              <div className="basis-1/4  flex justify-center items-center aspect-video overflow-hidden border-red-400">
                 {post.imageUrl ? (
                   <Image
-                    className="w-full aspect-square object-cover"
+                    className="w-full  aspect-square object-cover"
                     src={post.imageUrl}
                     width={200}
                     height={200}
