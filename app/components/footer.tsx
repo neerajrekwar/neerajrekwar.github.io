@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import InstaGallery from './InstaGallery';
 import { IconBrandXFilled, IconBrandLinkedin, IconBrandGithubFilled, IconBrandDiscordFilled, } from '@tabler/icons-react';
 import posts from "../blog/data/posts.json"
+import DataSet from './DataSet';
 
 const caveat = Caveat({
   weight: "400",
@@ -158,7 +159,7 @@ export default function Footer() {
                   <div className='basis-1/4 m-2 aspect-square mb-6 '>
                     {post.imageUrl ? (
                       <Image
-                        className="w-full  aspect-square object-cover"
+                        className="w-full rounded  aspect-square object-cover"
                         src={post.imageUrl}
                         width={300}
                         height={300}
@@ -242,7 +243,8 @@ export default function Footer() {
             <ul className="">
               <div className="mx-auto">
                 <div className="flex justify-center space-x-4">
-                  <InstaGallery />
+                  {/* <InstaGallery /> */}
+                  <DataSet/>
 
                 </div>
               </div>
