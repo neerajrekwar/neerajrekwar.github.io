@@ -47,7 +47,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-primary border-b border-seven text-secondary">
+      <footer className="bg-primary  border-t-2 m-auto border-seven text-secondary">
         <div className="p-4 text-four  flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
           <ul className="flex  gap-2 mb-8 items-start flex-col">
             <li className="">
@@ -250,8 +250,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="text-xs mx-2 px-2 max-w-7xl  m-auto">
-          <div className='py-1 flex justify-between items-center'>
+        <div className="text-xs  max-w-7xl   m-auto">
+          <div className='py-1 flex justify-between max-w-7xl  m-auto  items-center'>
             <span >Copyright ©2023 Neeraj</span>
             <span >build by me</span>
           </div>
