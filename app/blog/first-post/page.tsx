@@ -7,10 +7,10 @@ const post = posts.find(p => p.slug === 'first-post');
 
 export default function FirstPostPage() {
   return (
-    
+
     <main className="prose min-h-screen max-w-6xl  bg-primary m-auto text-four mx-auto p-2">
-     <section className='mb-44'>
-      <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
+      <section className='mb-44'>
+        <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
         <article className="prose max-w-none min-h-screen p-4">
           <h1 className="text-3xl text-five md:text-center md:text-4xl font-bold mb-4">{post?.title}</h1>
           <div className='flex gap-2 md:gap-4  md:pb-4 tracking-wide text-xs md:text-sm font-semibold uppercase py-4 justify-center'>

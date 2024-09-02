@@ -24,13 +24,16 @@ export default function RootLayout({
               <p className= 'text-four pl-2 text-2xl md:text-3xl font-semibold' >nee</p>
             </div>
             <div className="">
-              <ul className="text-four justify-center text-end font-semibold flex-row gap-2">
-                <li className="text-sm md:text-base ">
+              <ul className="text-four flex flex-col justify-end items-end font-semibold ">
+                <li className="text-sm md:text-base p-1">
                   <CurrentTime />
                 </li>
-                <li className="text-sm md:text-base font-semibold text-secondary ">
+                <li className="text-sm md:text-base px-1 text-right font-semibold text-secondary ">
                   <p className="text-xs md:text-sm">
-                    a mistake should be <br /> improved, not retention.
+                     a mistake should be
+                  </p>
+                  <p className="text-xs md:text-sm">
+                     improved, not retention.
                   </p>
                 </li>
               </ul>
