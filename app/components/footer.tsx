@@ -47,22 +47,22 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-primary  border-t-2 m-auto border-seven text-secondary">
+      <footer className="bg-primary bg-custom-radial-sm m-auto border-seven text-secondary">
         <div className="p-4 text-four  flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
           <ul className="flex  gap-2 mb-8 items-start flex-col">
             <li className="">
               <div className={caveat.className}>
-                <Link href={"/"} className="text-5xl   text-four  font-bold">
+                <Link href={"/"} className="text-5xl text-five  font-bold">
                   {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
                   nee.
                 </Link>
               </div>
             </li>
-            <li className="text-1xl flex mb-4 justify-start opacity-60 items-start">
+            <li className="text-1xl flex mb-4 justify-start text-five items-start">
               let&apos;s start creating something new, You & I at same
             </li>
           </ul>
-          <ul className="flex gap-2 h-fit">
+          <ul className="flex gap-2 text-five h-fit">
             <li className='aspect-square flex justify-center items-center  '>
               <a href="https://x.com/neerajrekwar" target="_blank" className='aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four '>
                 <IconBrandXFilled />
@@ -91,7 +91,7 @@ export default function Footer() {
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
 
-              <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">About</h6>
+              <h6 className="text-xl text-five">About</h6>
             </div>
             <ul className=" text-sm ">
               <li className="flex mb-4 justify-start items-center">
@@ -150,7 +150,7 @@ export default function Footer() {
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
 
-              <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">Latest News</h6>
+              <h6 className="text-xl text-five">Latest News</h6>
             </div>
             <ul>
               {posts.map((post) => (
@@ -184,7 +184,7 @@ export default function Footer() {
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
 
-              <h6 className="  text-xl text-four  opacity-50 md:opacity-100 md:font-semibold">Informartion</h6>
+              <h6 className="text-xl text-five">Informartion</h6>
             </div>
             <ul className=" text-four text-sm">
               <li className="p-1  ">
@@ -237,7 +237,7 @@ export default function Footer() {
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
 
-              <h6 className=' text-xl text-four  opacity-50 md:opacity-100 md:font-semibold'>Instagram</h6>
+              <h6 className='text-xl text-five'>Instagram</h6>
             </div>
             <ul className="">
               <div className="mx-auto">
@@ -250,8 +250,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="text-xs  max-w-7xl   m-auto">
-          <div className='py-1 flex justify-between max-w-7xl  m-auto  items-center'>
+        <div className="text-xs px-4 max-w-7xl   m-auto">
+          <div className='py-1 opacity-50 flex justify-between max-w-7xl  m-auto  items-center'>
             <span >Copyright ©2023 Neeraj</span>
             <span >build by me</span>
           </div>
