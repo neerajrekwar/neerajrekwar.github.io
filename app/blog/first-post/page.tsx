@@ -8,7 +8,7 @@ const post = posts.find(p => p.slug === 'first-post');
 export default function FirstPostPage() {
   return (
 
-    <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto p-2">
+    <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto py-2">
       <section className='mb-44'>
         <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
         <article className="prose max-w-none min-h-screen p-4">
@@ -48,7 +48,7 @@ export default function FirstPostPage() {
                 {typeof post.content === 'object' && 'data-ctn' in post.content && post.content["data-ctn"].map((contentItem) => (
                   <div key={contentItem.id}>
                     {contentItem.heading3 && (
-                      <h3 className='text-xl text-five pt-2'>{contentItem.heading3}</h3>
+                      <h3 className='text-xl opacity-75 text-five pt-2'>{contentItem.heading3}</h3>
                     )}
                     {contentItem.paraChildPara && (
                       <p className='pb-4'>{contentItem.paraChildPara}</p>
