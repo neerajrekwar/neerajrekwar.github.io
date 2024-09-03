@@ -8,7 +8,7 @@ const post = posts.find(p => p.slug === 'first-post');
 export default function FirstPostPage() {
   return (
 
-    <main className="prose min-h-screen max-w-6xl  bg-primary m-auto text-four mx-auto p-2">
+    <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto p-2">
       <section className='mb-44'>
         <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
         <article className="prose max-w-none min-h-screen p-4">
@@ -32,24 +32,33 @@ export default function FirstPostPage() {
             </span>
           </div>
           <p className='first-letter:text-2xl first-letter:font-bold first-letter:ml-1 '>
-            This is an introductory paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            <img
-              src={post?.imageUrl}
-              alt={post?.title}
-              className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
-            />
-            Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
-            Phasellus porttitor at massa in vestibulum. Suspendisse potenti. Integer in sapien
-            a velit aliquam viverra. Fusce elementum turpis sed urna tincidunt, nec luctus nisi
-            consectetur.
+            {post?.description}
 
           </p>
+          {post && (
+            <div>
 
-          <p>
-            Continuation of the paragraph. Duis vel libero at quam laoreet blandit.
-            Nullam luctus nisl ut magna scelerisque, a convallis erat scelerisque.
-            Sed fringilla nulla id enim faucibus, vel ullamcorper magna pulvinar.
-          </p>
+              <img
+                src={post?.imageUrl}
+                alt={post?.title}
+                className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
+              />
+              <div>
+                {/* Check if post.content is an object and has the "data-ctn" property */}
+                {typeof post.content === 'object' && 'data-ctn' in post.content && post.content["data-ctn"].map((contentItem) => (
+                  <div key={contentItem.id}>
+                    {contentItem.heading3 && (
+                      <h3 className='text-xl text-five pt-2'>{contentItem.heading3}</h3>
+                    )}
+                    {contentItem.paraChildPara && (
+                      <p className='pb-4'>{contentItem.paraChildPara}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Additional post content */}
         </article>
 

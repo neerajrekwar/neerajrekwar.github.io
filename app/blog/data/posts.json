@@ -7,7 +7,24 @@
     "date": "2024-08-28",
     "author": "admin",
     "duration": "2 min read",
-    "content": "This is the content of the third post."
+    "content": {
+      "data-ctn": [
+        {"id": "subh1", "heading3": "A Stormy Sea"},
+        {"id": "p1", "paraChildPara": "Life is a tempestuous sea, filled with calm waters and raging storms. As we navigate its currents, we often find ourselves at the mercy of unexpected tides, swept away from familiar shores. It was in the midst of one such storm, at the tender age of 22, that I found myself adrift, my world turned upside down."},
+        {"id": "subh2", "heading3": "Stoicism as a Compass"},
+        {"id": "p2", "paraChildPara": "The tempest that struck me was a personal one, a downfall that shook the very foundation of my existence. The loss of direction, the shattered dreams, and the gnawing uncertainty left me feeling lost and alone. It was a dark time, filled with self-doubt and despair. But as the storm raged on, I realized that I had a choice. I could let the tempest consume me, or I could choose to weather it, to emerge stronger and more resilient. It was at that moment that I decided to set sail, to embark on a journey of self-discovery and renewal."},
+        {"id": "subh3", "heading3": "Embracing Uncertainty"},
+        {"id": "p3", "paraChildPara": "Another key Stoic principle is the acceptance of uncertainty. Life is unpredictable, and things don't always go according to plan. By embracing this uncertainty, we can free ourselves from the grip of fear and anxiety. It is in the unknown that we often find the greatest opportunities for growth and fulfilment."},
+        {"id": "p4", "paraChildPara": "When I was at my lowest point, I clung to the hope that things would get better. But as time went on, I realized that I couldn't rely on hope alone. I had to take action, to create my own opportunities. I started by setting small, achievable goals. I focused on one day at a time, and gradually, I began to rebuild my life."},
+        {"id": "subh4", "heading3": "A New Beginning"},
+        {"id": "p5", "paraChildPara": "As I continued my journey, I discovered that the storm had actually been a blessing in disguise. It had forced me to confront my fears and weaknesses, and it had given me the opportunity to rebuild myself from the ground up."},
+        {"id": "p6", "paraChildPara": "Today, I am a stronger, more resilient person than I was before. I have learned to embrace uncertainty, to cultivate a positive mindset, and to find meaning in the challenges of life. I have also discovered the power of human connection. The support of friends and family has been invaluable in helping me through this difficult time."},
+        {"id": "subh5", "heading3": "A Message of Hope"},
+        {"id": "p7", "paraChildPara": "If you are going through a difficult time, I want you to know that you are not alone. There is hope, and there is a way forward. Remember, it is in the darkest moments that we often find the brightest light. Embrace uncertainty, cultivate a positive mindset, and never give up on your dreams. With perseverance and resilience, you can overcome any challenge."},
+        {"id": "subh6", "heading3": "A Final Thought"},
+        {"id": "p8", "paraChildPara": "Life is a journey, not a destination. There will be ups and downs, twists and turns. But it is through these experiences that we grow and become who we are meant to be. So, set sail, embrace the unknown, and let the winds of life carry you to new and exciting shores."} 
+      ] 
+    }
     
   },
   {
