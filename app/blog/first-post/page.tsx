@@ -1,4 +1,4 @@
-import { IconShare, IconLink, IconHeartFilled } from '@tabler/icons-react';
+import { IconShare, IconLink, IconHeartFilled, IconQuote } from '@tabler/icons-react';
 import posts from '../data/posts.json';
 import LikeButton from '@/app/components/LikeButton';
 import Image from "next/image"
@@ -8,7 +8,7 @@ const post = posts.find(p => p.slug === 'first-post');
 export default function FirstPostPage() {
   return (
 
-    <main className="prose min-h-screen max-w-5xl  m-auto text-four mx-auto p-2">
+    <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto p-2">
       <section className='mb-44'>
         <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
         <article className="prose max-w-none min-h-screen p-4">
@@ -31,7 +31,7 @@ export default function FirstPostPage() {
               {post?.duration}
             </span>
           </div>
-          <p className='first-letter:text-2xl first-letter:font-bold first-letter:ml-1 '>
+          <p className='first-letter:text-xl text-sm p-2  rounded-sm my-2 first-letter:font-bold first-letter:ml-1 '>
             {post?.description}
 
           </p>
@@ -60,6 +60,11 @@ export default function FirstPostPage() {
           )}
 
           {/* Additional post content */}
+          <div className='max-w-6xl m-auto'>
+
+            <IconQuote className='skew-x-12 rotate-120'/>
+            <IconQuote className=''/>
+          </div>
         </article>
 
       </section>
