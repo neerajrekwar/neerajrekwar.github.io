@@ -22,7 +22,7 @@ export default function BlogIndexPage() {
   };
 
   return (
-    <main>
+    <main className="bg-primary">
       <section className="prose border-five">
         <div className="m-auto  max-w-5xl">
           <div className="max-w-5xl  py-6 md:py-8 mx-2  flex justify-between  rounded-full items-center">

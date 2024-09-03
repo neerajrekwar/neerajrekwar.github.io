@@ -36,15 +36,15 @@ export default function Footer() {
 
   const [images, setImages] = useState<Image[]>([]);
 
-  useEffect(() => {
-    const loadFeed = async () => {
-      const feed = await fetchInstagramFeed();
-      const latestPosts = feed.data.slice(0, 3); // Get the latest 4 posts
-      setImages(latestPosts);
-    };
+  // useEffect(() => {
+  //   const loadFeed = async () => {
+  //     const feed = await fetchInstagramFeed();
+  //     const latestPosts = feed.data.slice(0, 3); // Get the latest 4 posts
+  //     setImages(latestPosts);
+  //   };
 
-    loadFeed();
-  }, []);
+  //   loadFeed();
+  // }, []);
 
   return (
     <>
