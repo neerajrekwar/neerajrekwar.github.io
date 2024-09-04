@@ -1,4 +1,4 @@
-import { IconHeartFilled, IconLink, IconShare } from '@tabler/icons-react';
+import { IconHeartFilled, IconLink, IconQuestionMark, IconQuote, IconShare } from '@tabler/icons-react';
 import posts from '../data/posts.json';
 import Image from 'next/image'
 
@@ -6,12 +6,12 @@ const post = posts.find(p => p.slug === 'second-post');
 
 export default function SecondPostPage() {
   return (
-    <main className="prose min-h-screen max-w-6xl  m-auto text-four mx-auto p-2">
-     <section className='mb-44'>
-      <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four  px-2 uppercase text-sm'>think it</p>
+    <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto py-2">
+      <section className='mb-44'>
+        <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
         <article className="prose max-w-none min-h-screen p-4">
           <h1 className="text-3xl text-five md:text-center md:text-4xl font-bold mb-4">{post?.title}</h1>
-          <div className='flex gap-2 md:gap-4  md:pb-2 tracking-wide text-xs md:text-sm font-semibold uppercase py-4 justify-center'>
+          <div className='flex gap-2 md:gap-4  md:pb-4 tracking-wide text-xs md:text-sm font-semibold uppercase py-4 justify-center'>
 
             <span className='opacity-50'>by</span>
             <span className='text-four'>
@@ -29,26 +29,40 @@ export default function SecondPostPage() {
               {post?.duration}
             </span>
           </div>
-          <p className='first-letter:text-2xl first-letter:font-bold first-letter:ml-1 '>
-            This is an introductory paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            <img
-              src={post?.imageUrl}
-              alt={post?.title}
-              className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
-            />
-            Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
-            Phasellus porttitor at massa in vestibulum. Suspendisse potenti. Integer in sapien
-            a velit aliquam viverra. Fusce elementum turpis sed urna tincidunt, nec luctus nisi
-            consectetur.
+          <p className='first-letter:text-xl text-sm p-2 opacity-75  rounded-sm my-2 first-letter:font-bold first-letter:ml-1 '>
+            {post?.description}
 
           </p>
+          {post && (
+            <div>
 
-          <p>
-            Continuation of the paragraph. Duis vel libero at quam laoreet blandit.
-            Nullam luctus nisl ut magna scelerisque, a convallis erat scelerisque.
-            Sed fringilla nulla id enim faucibus, vel ullamcorper magna pulvinar.
-          </p>
+              <img
+                src={post?.imageUrl}
+                alt={post?.title}
+                className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
+              />
+              <div>
+                {/* Check if post.content is an object and has the "data-ctn" property */}
+                {typeof post.content === 'object' && 'data-ctn' in post.content && post.content["data-ctn"].map((contentItem) => (
+                  <div key={contentItem.id}>
+                    {contentItem.heading3 && (
+                      <h3 className='text-xl opacity-75 md:font-medium md:text-2xl text-five pt-2'>{contentItem.heading3}</h3>
+                    )}
+                    {contentItem.paraChildPara && (
+                      <p className='pb-4'>{contentItem.paraChildPara}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Additional post content */}
+          {/* <div className='max-w-6xl m-auto'>
+
+            <IconQuote className='skew-x-12 rotate-120'/>
+            <IconQuote className=''/>
+          </div> */}
         </article>
 
       </section>
@@ -64,7 +78,7 @@ export default function SecondPostPage() {
         <div className="">
           <div className="relative ">
             <div className="absolute h-44 w-full flex  justify-center items-center  w-full ">
-              <div className="h-[0.3px] bg-seven w-full "></div>
+              <div className="h-[0.5px] md:h-[1px]  bg-custom-radial-lg w-full "></div>
             </div>
             <div className="absolute h-44   w-full absolute h-20 w-full flex flex-col justify-center items-center">
               <Image

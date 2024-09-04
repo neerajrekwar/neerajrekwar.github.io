@@ -53,7 +53,7 @@ export default function BlogIndexPage() {
                 >
                   {post.title}
                 </Link>
-                <div className="flex gap-1 md:gap-2 opacity-50  text-four md:pb-4 tracking-wide text-xs md:text-sm font-semibold  py-2 justify-start">
+                <div className="flex gap-1 md:gap-2 opacity-50  text-four md:pb-4 tracking-wide text-xs md:text-sm font-medium  py-2 justify-start">
                   <p>
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",

@@ -31,7 +31,7 @@ export default function FirstPostPage() {
               {post?.duration}
             </span>
           </div>
-          <p className='first-letter:text-xl text-sm p-2  rounded-sm my-2 first-letter:font-bold first-letter:ml-1 '>
+          <p className='first-letter:text-xl text-sm p-2 opacity-75  rounded-sm my-2 first-letter:font-bold first-letter:ml-1 '>
             {post?.description}
 
           </p>
@@ -48,7 +48,7 @@ export default function FirstPostPage() {
                 {typeof post.content === 'object' && 'data-ctn' in post.content && post.content["data-ctn"].map((contentItem) => (
                   <div key={contentItem.id}>
                     {contentItem.heading3 && (
-                      <h3 className='text-xl opacity-75 text-five pt-2'>{contentItem.heading3}</h3>
+                      <h3 className='text-xl opacity-75 md:font-medium md:text-2xl text-five pt-2'>{contentItem.heading3}</h3>
                     )}
                     {contentItem.paraChildPara && (
                       <p className='pb-4'>{contentItem.paraChildPara}</p>
@@ -80,7 +80,7 @@ export default function FirstPostPage() {
         <div className="">
           <div className="relative ">
             <div className="absolute h-44 w-full flex  justify-center items-center  w-full ">
-              <div className="h-[0.3px] bg-seven w-full "></div>
+              <div className="h-[0.5px] md:h-[1px]  bg-custom-radial-lg w-full "></div>
             </div>
             <div className="absolute h-44   w-full absolute h-20 w-full flex flex-col justify-center items-center">
               <Image
