@@ -336,7 +336,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
@@ -356,7 +356,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
@@ -376,13 +376,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         How to Grow Online
                       </h4>
-                      <p className="m-2">
+                      <p className="m-2 text-four">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Accusamus error alias unde optio deleniti. Deserunt
                         vero, ad a.
@@ -395,7 +395,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
@@ -414,7 +414,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.4 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
@@ -433,7 +433,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-four bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
@@ -452,7 +452,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-square rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-four bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
@@ -867,14 +867,14 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="m-2 rounded-lg text-six bg-secondary aspect-square flex-col flex justify-center items-center"
+                    className="m-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-2xl font-bold text-six overflow-hidden"
+                      className="px-2 basis-1/2 text-4xl m-2 font-bold text-six"
                     >
                       versions to access the latest performance optimizations
                     </motion.h4>
@@ -897,14 +897,14 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="m-2  col-span-3 md:h-40 rounded-lg text-six bg-secondary aspect-square "
+                    className="m-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-2xl font-bold  text-six"
+                      className="px-2 basis-1/2 text-4xl m-2 font-bold text-six"
                     >
                       Rigorously test your application
                     </motion.h4>
