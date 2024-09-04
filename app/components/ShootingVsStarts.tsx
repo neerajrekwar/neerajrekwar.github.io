@@ -8,20 +8,25 @@ import { ShootingStars } from "./ui/shooting-stars";
 import { StarsBackground } from "./ui/stars-background";
 import AutoTyper from "./AutoTyper";
 import BusinessCatalog from "./BusinessCatalog";
+import CurrentTime from "./CurrentTime";
 
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
-    <div className="bg-black min-h-screen flex flex-col items-center justify-center relative w-full">
-      <figure className="w-auto z-10  lg:flex-col  justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
-        <div className=" md:flex md:flex-row-reverse max-w-6xl">
+    <div className="bg-black min-h-screen flex flex-col items-start justify-start  w-full">
+      <div className="font-semibold flex justify-between w-full max-w-7xl m-auto border-five text-four">
+        <p>nee</p>
+        <CurrentTime />
+      </div>
+      <figure className="w-auto z-10 m-auto max-w-7xl lg:flex-col  justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
+        <div className="md:flex md:flex-row-reverse max-w-7xl">
           <motion.div
-            initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
-            animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+            initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+            animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
             transition={{
               duration: 0.8,
               delay: 1,
               ease: [0, 0.71, 0.2, 1.01],
-               type: "spring", stiffness: 400, damping: 20,
+              type: "spring", stiffness: 400, damping: 20,
             }}
             className="flex flex-col basis-1/2 justify-center h-60 md:h-auto items-center"
           >
@@ -35,16 +40,16 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             />
           </motion.div>
           <div className="flex text-five basis-1/2 flex-col m-auto justify-center">
-            <motion.h2 
-              initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
-              animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+              animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
               transition={{
                 duration: 0.8,
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
               className="text-xl text-four m-2 px-8 py-4  md:text-3xl">
-              <p className="font-normal">Hello, World!</p>
+              <p className="font-normal text-md opacity-75">Hello, World! </p>
               <div className="text-2xl md:text-4xl lg:text-5xl flex">
                 <p className="pr-2">I am</p>
                 <AutoTyper
@@ -58,8 +63,8 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             <div className="text-base  text-[#E0F2E9] md:mt-10 flex gap-2 md:text-xl m-2 mx-8 ">
               <motion.button
                 className="box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_var(--seven)]  bg-seven"
-                initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
-                animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+                initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+                animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 transition={{
                   duration: 0.8,
                   delay: 0.5,
@@ -67,7 +72,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   type: "spring", stiffness: 400
                 }}
                 whileHover={{ scale: 1.1 }}
-                
+
               >
                 <Link
                   href="/contact"
@@ -79,8 +84,8 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               </motion.button>
               <motion.button
                 className=" box p-2 px-4 rounded-full shadow-[inset_4px_7px_7px_2px_var(--seven)]  bg-seven"
-                initial={{ opacity: 0, scale: 0.2, x: -200, y: -200  }}
-                animate={{ opacity: 1, scale: 1, x: 0, y: 0  }}
+                initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+                animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 transition={{
                   duration: 0.8,
                   delay: 1,
@@ -101,7 +106,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             <div className="text-base md:text-xl m-2 mx-8 ">
               <div className="flex text-four py-6">
                 <motion.span
-                  initial={{ scale: 0.2, x: -200, y: -200  }}
+                  initial={{ scale: 0.2, x: -200, y: -200 }}
                   animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
                   transition={{
                     type: "spring",
@@ -133,16 +138,16 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   </svg>
                 </motion.span>
                 <motion.span
-                    initial={{ scale: 0.2,  x: -400, y: -200  }}
-                    animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 260,
-                      damping: 20,
-                      delay: 3,
-                      duration: 5,
-                    }}
-                  
+                  initial={{ scale: 0.2, x: -400, y: -200 }}
+                  animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    delay: 3,
+                    duration: 5,
+                  }}
+
                   className="p-2 m-1 shadow-[inset_4px_2px_7px_2px_var(--seven)] bg-seven rounded-full flex justify-center items-center"
                 >
                   <svg
@@ -165,7 +170,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   </svg>
                 </motion.span>
                 <motion.span
-                  initial={{ scale: 0.2, x: -400, y: -200  }}
+                  initial={{ scale: 0.2, x: -400, y: -200 }}
                   animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
                   transition={{
                     type: "spring",
@@ -195,7 +200,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
                   </svg>
                 </motion.span>
                 <motion.span
-                  initial={{ scale: 0.2, x: -400, y: -200  }}
+                  initial={{ scale: 0.2, x: -400, y: -200 }}
                   animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
                   transition={{
                     type: "spring",
@@ -230,7 +235,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
               </div>
             </div>
           </div>
-          
+
         </div>
         {/* <div className="flex justify-center items-center">
           <BusinessCatalog />

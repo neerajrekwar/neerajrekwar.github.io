@@ -186,20 +186,20 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="min-h-screen max-w-6xl m-auto">
+      <section className="min-h-44 max-w-6xl m-auto">
         <div className="basis-1/2 p-1 max-w-4xl m-auto justify-between my-16 ">
-          <h4 className="font-semibold text-five text-xl">Admin Info</h4>
+          <h4 className="font-semibold text-five text-2xl">Admin Info</h4>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, tempore.</p>
-          <div className="flex gap-4 my-1 text-four bg-seven rounded-md border-five p-4 items-end justify-evenly font-bold j">
-            <p className="border-five md:text-2xl">Delhi, Dwarka.</p>
+          <div className="flex gap-4 my-1 text-four bg-seven rounded-md border-five p-4 items-end justify-evenly font-bold">
+            <p className="border-five md:text-2xl">● Delhi, Dwarka.</p>
             {/* <p>Hin &#9679; Eng &#9679; Sans</p> */}
             <div>
-            <p>Hindi</p>
-            <p>English</p>
-            <p>sankrit</p>
+            <p>● Hindi</p>
+            <p>● English</p>
+            <p>● sankrit</p>
             </div>
             <div className="md:text-2xl">
-            <AdminWeather  />
+            ● <AdminWeather  />
             </div>
           </div>
         </div>

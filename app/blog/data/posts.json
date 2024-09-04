@@ -29,16 +29,16 @@
   },
   {
     "slug": "second-post",
-    "title": "The Art of Patience: Learning from Delays and Setbacks",
+    "title": "The Art of Patience Learning from Delays and Setbacks",
     "imageUrl": "https://images.unsplash.com/photo-1724830909783-b50ab4e263ec?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "date": "2024-08-29",
+    "date": "",
     "content": "This is the content of the second post."
   },
   {
     "slug": "third-post",
     "title": "",
     "imageUrl": "https://images.unsplash.com/photo-1724870069803-ee8d7119d608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D",
-    "date": "2024-08-30",
+    "date": "",
     "content": "This is the content of the third post."
   }
 ]

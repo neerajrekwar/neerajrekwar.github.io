@@ -178,7 +178,14 @@ export default function Footer() {
                       {post.title}
                     </Link>
                     ):(<div className='md:text-sm  text-four '>title in processing</div>)}
-                    <p className='text-sm opacity-50'>{post.author}</p>
+                    <div className='flex gap-1'>
+                    {post.author ? (
+                      <p className='text-sm opacity-50'>{post.author}</p>
+                    ) : (<p className='text-sm opacity-50'>unknown</p>)} -
+                    {post.date ? (
+                      <p className='text-sm opacity-50'>{post.date}</p>
+                    ) : (<p className='text-sm opacity-50'>unknown</p>)}
+                    </div>
                   </div>
                 </li>
               ))}

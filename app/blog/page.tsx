@@ -33,7 +33,7 @@ export default function BlogIndexPage() {
         <ul className="basis-2/2 max-w-5xl m-auto flex-col flex gap-6">
           {posts.map((post) => (
             <li key={post.slug} className="p-2 border-b-2 bg-custom-radial-sm md:bg-none rounded border-seven  sm:flex gap-10 flex-row-reverse m-2">
-              <div className="basis-1/4  rounded flex justify-center items-center aspect-video overflow-hidden border-red-400">
+              <div className="basis-1/4  rounded md:rounded-none flex justify-center items-center md:aspect-square  aspect-video overflow-hidden border-red-400">
                 {post.imageUrl ? (
                   <Image
                     className="w-full  aspect-square object-cover"
@@ -47,28 +47,32 @@ export default function BlogIndexPage() {
                 )}
               </div>
               <h2 className="basis-3/4 flex-col flex justify-start border-red-400">
-              {post.title ? (
-                      <Link
-                      className="text-2xl md:text-4xl text-five font-semibold"
-                      href={`/blog/${post.slug}`}
-                    >
-                      {post.title}
-                    </Link>
-                    ):(<div className=''>title in processing</div>)}
+                {post.title ? (
+                  <Link
+                    className="text-2xl md:text-4xl text-five "
+                    href={`/blog/${post.slug}`}
+                  >
+                    {post.title}
+                  </Link>
+                ) : (<div className=''>title in processing</div>)}
                 <div className="flex gap-1 md:gap-2 opacity-50  text-four md:pb-4 tracking-wide text-xs md:text-sm font-medium  py-2 justify-start">
-                  <p>
+                  {post?.date ? (<p>
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",
                     })}
-                  </p>
+                  </p>) : (<p>none of print</p>)}
                   ●
-                  <p>{post.author}</p>
+                  {post?.author ? (<p>
+                    {post.author}
+                  </p>) : (<p>unknown</p>)}
+                  
+              
                 </div>
                 <BlogExcerpt
                   key={post.slug}
-                  
+
                   description={post.description || "No description available"}
                   slug={post.slug}
                 />
@@ -89,9 +93,12 @@ export default function BlogIndexPage() {
         </ul>
         <ShareDialog url={shareUrl} isOpen={isDialogOpen} onClose={closeShareDialog} />
       </section>
-      <section className="min-h-[50vh]">
-
-      </section>
+      <section className="min-h-96 ">
+       <div className="m-auto  max-w-5xl py-16 px-2">
+       <h4 className="text-center text-4xl">Change thinking, your life Change automatically </h4>
+        <p className="text-center p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quibusdam culpa eveniet sed commodi beatae, quam nemo, iure, necessitatibus repellendus earum distinctio veritatis ab! Corporis minus dolore dolorem ullam voluptates.</p>
+       </div>
+       </section>
     </main>
 
   );

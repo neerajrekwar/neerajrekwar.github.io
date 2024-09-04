@@ -56,7 +56,7 @@ export default function FirstPostPage() {
                   {typeof post.content === 'object' && 'data-ctn' in post.content && post.content["data-ctn"].map((contentItem) => (
                     <div key={contentItem.id}>
                       {contentItem.heading3 && (
-                        <h3 className='text-xl md:opacity-95 md:font-semibold font-medium md:text-2xl text-five pt-2'>{contentItem.heading3}</h3>
+                        <h3 className='text-xl md:opacity-95 font-medium md:text-2xl text-five pt-2'>{contentItem.heading3}</h3>
                       )}
                       {contentItem.paraChildPara && (
                         <p className='pb-4'>{contentItem.paraChildPara}</p>
@@ -69,9 +69,9 @@ export default function FirstPostPage() {
 
             {/* Additional post content */}
             <div className='max-w-6xl m-auto'>
-
+{/* 
               <IconQuote className='skew-x-12 rotate-120' />
-              <IconQuote className='' />
+              <IconQuote className='' /> */}
             </div>
           </article>
 
