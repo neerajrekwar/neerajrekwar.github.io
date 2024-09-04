@@ -7,12 +7,12 @@ const post = posts.find(p => p.slug === 'third-post');
 export default function ThirdPostPage() {
   return (
     <body className='bg-primary'>
-      <main className="prose min-h-screen max-w-5xl  m-auto text-four mx-auto py-2">
+    <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto py-2">
       <section className='mb-44'>
         <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
         <article className="prose max-w-none min-h-screen p-4">
           <h1 className="text-3xl text-five md:text-center md:text-4xl font-bold mb-4">{post?.title}</h1>
-          <div className='flex gap-2 md:gap-4  md:pb-4 tracking-wide text-xs md:text-sm font-medium uppercase py-4 justify-center'>
+          <div className='flex gap-2 md:gap-4  md:pb-4 tracking-wide text-xs md:text-sm  uppercase py-4 justify-center'>
 
             <span className='opacity-50'>by</span>
             <span className='text-four'>
@@ -47,7 +47,7 @@ export default function ThirdPostPage() {
                 {typeof post.content === 'object' && 'data-ctn' in post.content && post.content["data-ctn"].map((contentItem) => (
                   <div key={contentItem.id}>
                     {contentItem.heading3 && (
-                      <h3 className='text-xl opacity-75 md:font-medium md:text-2xl text-five pt-2'>{contentItem.heading3}</h3>
+                      <h3 className='text-xl md:opacity-96 md:font-semibold font-medium md:text-2xl text-five pt-2'>{contentItem.heading3}</h3>
                     )}
                     {contentItem.paraChildPara && (
                       <p className='pb-4'>{contentItem.paraChildPara}</p>
@@ -106,6 +106,6 @@ export default function ThirdPostPage() {
         </div>
       </section>
     </main>
-    </body>
+  </body>
   );
 }
