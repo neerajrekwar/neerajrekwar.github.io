@@ -88,7 +88,7 @@ export default function FirstPostPage() {
           <div className="">
             <div className="relative ">
               <div className="absolute h-44 w-full flex  justify-center items-center  w-full ">
-                <div className="h-[0.5px] md:h-[1px]  bg-custom-radial-lg w-full "></div>
+                <div className="h-[1px]   bg-custom-radial-lg w-full "></div>
               </div>
               <div className="absolute h-44   w-full absolute h-20 w-full flex flex-col justify-center items-center">
                 <Image
