@@ -2,6 +2,7 @@ import { IconShare, IconLink, IconHeartFilled, IconQuote } from '@tabler/icons-r
 import posts from '../data/posts.json';
 import LikeButton from '@/app/components/LikeButton';
 import Image from "next/image"
+import Link from 'next/link';
 
 const post = posts.find(p => p.slug === 'first-post');
 
@@ -12,22 +13,29 @@ export default function FirstPostPage() {
         <section className='mb-44'>
           <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
           <article className="prose max-w-none min-h-screen p-4">
-            <h1 className="text-3xl text-five md:text-center md:text-4xl font-bold mb-4">{post?.title}</h1>
-            <div className='flex gap-2 md:gap-4  md:pb-4 tracking-wide text-xs md:text-sm  uppercase py-4 justify-center'>
+            <h1 className="text-3xl text-five md:text-center md:text-4xl font-bold mb-4">{post?.title ? (
+                      <Link
+                      className=""
+                      href={`/blog/${post?.slug}`}
+                    >
+                      {post?.title}
+                    </Link>
+                    ):(<div className=''>title in processing</div>)}</h1>
+            <div className='flex gap-2 md:gap-4  md:pb-4 tracking-wide text-xs  uppercase py-4 justify-center'>
 
-              <span className='opacity-50'>by</span>
+              <span className='opacity-75'>by</span>
               <span className='text-four'>
                 {post?.author}
               </span>
               <span>/</span>
-              <span className='opacity-50'>{new Date(post?.date as string).toLocaleString("en-US", {
+              <span className='opacity-75'>{new Date(post?.date as string).toLocaleString("en-US", {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric'
 
               })}</span>
               <span>/</span>
-              <span className='opacity-50'>
+              <span className='opacity-75'>
                 {post?.duration}
               </span>
             </div>

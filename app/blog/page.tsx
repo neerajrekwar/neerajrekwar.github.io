@@ -46,13 +46,15 @@ export default function BlogIndexPage() {
                   <div>No image available</div>
                 )}
               </div>
-              <div className="basis-3/4 flex-col flex justify-start border-red-400">
-                <Link
-                  className="text-xl md:text-2xl lg:text-3xl font-bold text-four py-2"
-                  href={`/blog/${post.slug}`}
-                >
-                  {post.title}
-                </Link>
+              <h2 className="basis-3/4 flex-col flex justify-start border-red-400">
+              {post.title ? (
+                      <Link
+                      className="text-2xl md:text-4xl text-five font-semibold"
+                      href={`/blog/${post.slug}`}
+                    >
+                      {post.title}
+                    </Link>
+                    ):(<div className=''>title in processing</div>)}
                 <div className="flex gap-1 md:gap-2 opacity-50  text-four md:pb-4 tracking-wide text-xs md:text-sm font-medium  py-2 justify-start">
                   <p>
                     {new Date(post.date).toLocaleDateString("en-US", {
@@ -61,7 +63,7 @@ export default function BlogIndexPage() {
                       day: "numeric",
                     })}
                   </p>
-                  <IconPointFilled width={12} height={16} />
+                  ●
                   <p>{post.author}</p>
                 </div>
                 <BlogExcerpt
@@ -81,7 +83,7 @@ export default function BlogIndexPage() {
                     <Link href={`/blog/${post.slug}`}>Read post</Link>
                   </span>
                 </div>
-              </div>
+              </h2>
             </li>
           ))}
         </ul>

@@ -48,7 +48,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-primary bg-custom-radial-sm m-auto border-seven text-secondary">
+      <footer className="bg-primary border-t-2  bg-custom-radial-sm m-auto border-seven text-secondary">
         <div className="p-4 text-four  flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
           <ul className="flex  gap-2 mb-8 items-start flex-col">
             <li className="">
@@ -155,8 +155,8 @@ export default function Footer() {
             </div>
             <ul>
               {posts.map((post) => (
-                <li key={post.slug} className='flex gap-2  justify-start items-start'>
-                  <div className='basis-1/4 m-2 aspect-square mb-6 '>
+                <li key={post.slug} className='flex gap-1 m justify-start items-start'>
+                  <div className='basis-1/4 m-1 aspect-square'>
                     {post.imageUrl ? (
                       <Image
                         className="w-full rounded  aspect-square object-cover"
@@ -169,13 +169,15 @@ export default function Footer() {
                       <div>No image available</div>
                     )}
                   </div>
-                  <div className='basis-3/4  flex justify-start items-start flex-col'>
-                    <Link
+                  <div className='basis-3/4 m-1 flex justify-start items-start flex-col'>
+                    {post.title ? (
+                      <Link
                       className="md:text-sm  text-four "
                       href={`/blog/${post.slug}`}
                     >
                       {post.title}
                     </Link>
+                    ):(<div className='md:text-sm  text-four '>title in processing</div>)}
                     <p className='text-sm opacity-50'>{post.author}</p>
                   </div>
                 </li>
