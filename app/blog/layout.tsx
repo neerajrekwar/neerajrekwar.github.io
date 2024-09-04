@@ -15,7 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+
+    <body className="bg-primary">
       <header className=" border-b border-seven h-28 bg-primary  bg-custom-radial-lg justify-between items-center  text-five ">
         <div className="flex bg-transparent  basis-1/2 justify-between items-start  max-w-7xl m-auto">
           <div className={caveat.className}>
@@ -39,6 +40,7 @@ export default function RootLayout({
         </div>
       </header>
       {children}
-    </>
+    </body>
+
   );
 }

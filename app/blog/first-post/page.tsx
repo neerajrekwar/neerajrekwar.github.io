@@ -7,7 +7,7 @@ const post = posts.find(p => p.slug === 'first-post');
 
 export default function FirstPostPage() {
   return (
-    <body className='bg-primary'>
+    
       <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto py-2">
         <section className='mb-44'>
           <p className='p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm'>think it</p>
@@ -107,6 +107,6 @@ export default function FirstPostPage() {
           </div>
         </section>
       </main>
-    </body>
+  
   );
 }
