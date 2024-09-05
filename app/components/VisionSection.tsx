@@ -710,7 +710,7 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
           <div className="border-third">
-            <div className=" my-6 border-yellow-500 bg-secondary p-2">
+            <div className=" py-6 border-yellow-500 bg-secondary p-2">
               <h1 className="md:text-2xl text-xl text-primary py-6 text-center m-auto max-w-3xl">
                 Maximized efficiency with fully automated best practices and
                 fully supported advanced tricks.

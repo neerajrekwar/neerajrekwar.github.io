@@ -15,7 +15,7 @@ export function WobbleCardDemo() {
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            A photo-holistic person involves considering the entirety of the universe in photography
+            A photo-holistic person involves considering the entirety of the universe in photograph
           </h2>
           <p className="mt-4 text-left z-50 text-base/6 text-neutral-200">
             It can be a great way to express yourself capture moments, and make beautiful memories. you can create stunning images that can last a lifetime.

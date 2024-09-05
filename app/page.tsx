@@ -42,6 +42,7 @@ export default function Home() {
       <section className="text-five">
         
      <AccordionDemo/>
+     
       </section>
     </main>
     

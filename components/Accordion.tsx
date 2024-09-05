@@ -1,3 +1,5 @@
+import { AnimatedTooltipPreview } from "@/app/components/AnimatedToolstips";
+import { AnimatedTooltip,  } from "@/app/components/ui/animated-tooltip";
 import {
   Accordion,
   AccordionContent,
@@ -8,9 +10,11 @@ import {
 export function AccordionDemo() {
   return (
     <>
-      <div className="text-five min-h-screen pt-20  text-left">
-        <div className="max-w-6xl p-2 m-auto">
-          <div className="text-center text-2xl">FAQ</div>
+      <div className="text-four min-h-screen flex flex-col justify-start items-start pt-20 bg-custom-radial-lg ">
+        <div className="max-w-6xl text-center md:text-xl p-2 m-auto">
+          
+          <div className="text-center text-2xl font-semibold">Frequently Asked Questions</div>
+          <p className="text-center text-base py-2 mb-8">Feel free to ask me anything. I'm here to help!</p>
           <Accordion type="single" collapsible className="w-full text-left">
             <AccordionItem value="item-1">
               <AccordionTrigger>What web solutions do you offer?</AccordionTrigger>
@@ -44,6 +48,11 @@ export function AccordionDemo() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+          <div className="py-12 my-2">
+            <h6 className="py-3 text-xl md:text-4xl">Didn&apos;t find an answer?</h6>
+            <p className="py-2 mb-16">My team is just an email away and ready to answer your questions</p>
+          <AnimatedTooltipPreview />
+          </div>
         </div>
       </div>
     </>
