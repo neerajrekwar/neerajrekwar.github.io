@@ -760,7 +760,7 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Semantics</h5>
                   <p className="py-2 font-normal">
                     Make sure to implement semantic tags on your websites to
-                    improve their structure.
+                    improve their <strong className="text-four">structure.</strong>
                   </p>
                   <div className=" flex justify-center p-10 items-center m-2 p-2 bg-seven rounded-md">
                     <Image
@@ -774,7 +774,7 @@ export const VisionSection: React.FC = () => {
                 <div className="col-span-2 md:p-10  flex flex-col justify-start p-2">
                   <h5 className="text-2xl text-four">Accessibility</h5>
                   <p className="py-2 font-normal">
-                    Design inclusive and accessible websites by utilizing alt
+                    Design inclusive and <strong className="text-four">accessible websites</strong> by utilizing alt
                     tags, Tab Index, element tags, and more.
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
@@ -790,7 +790,7 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Lighthouse Scores</h5>
                   <p className="py-2 font-normal">
                     Ensure your page stands out with a compelling title and
-                    description, while our top-notch handles ensure search
+                    description, <strong className="text-four">while our top-notch handles ensure search</strong>
                     engine optimization.
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
@@ -806,7 +806,7 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Sitemap</h5>
                   <p className="py-2 font-normal">
                     We understand the importance of generating a sitemap that
-                    reflects your site&apos;s structure for search bots.
+                    reflects your site&apos;s <strong className="text-four">structure for search bots.</strong> 
                   </p>
                   <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
                     <Image
@@ -818,9 +818,9 @@ export const VisionSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-2 rounded-md rounded-md md:p-10  flex flex-col justify-start p-2">
-                  <h5 className="text-2xl text-four">Server Side Rendering</h5>
+                  <h5 className="text-2xl text-four"> SSR</h5>
                   <p className="py-2 font-normal">
-                    Boost your website speed with SSR: achieve faster load times
+                    Boost your website speed with <strong className="text-four">Server Side Rendering</strong> achieve faster load times
                     and higher scores.
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">

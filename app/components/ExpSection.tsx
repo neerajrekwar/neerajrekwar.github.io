@@ -37,7 +37,7 @@ export default function ExpSection() {
               <h4 className="  text-xl md:text-2xl">Self Employed</h4>
               <ul className="flex flex-wrap items-start justify-start py-6 gap-2  md:gap-4 text-xs md:text-1xl text-five border-secondary text-center">
                 <li className="p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm text-center">
-                  VMR Pvt. Ltd.
+                  Field work
                 </li>
                 <li className="p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm text-center">
                   Contract
@@ -49,7 +49,7 @@ export default function ExpSection() {
               </ul>
             </div>
             <div className="m-2 md:flex text-four justify-between items-center border-b-1 border-seven md:hover:pl-1 md:hover:translate-x-1 md:transition-all">
-              <h4 className="text-xl md:text-2xl">SEO Intern.</h4>
+              <h4 className="text-xl md:text-2xl">Search Engine Markeing Intern.</h4>
               <ul className="flex flex-wrap items-start justify-start py-6 gap-2 md:gap-4 text-xs md:text-1xl text-five border-secondary text-center">
                 <li className="p-2 px-3 max-w-fit rounded-full border bg-seven border-seven   antialiased text-sm text-center">
                   Web Infomatrix Pvt. Ltd.
@@ -59,6 +59,20 @@ export default function ExpSection() {
                 </li>
                 <li className="p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm text-center">
                   2022 Sep - 2022 Dec
+                </li>
+              </ul>
+            </div>
+            <div className="m-2 md:flex text-four justify-between items-center border-b-1 border-seven md:hover:pl-1 md:hover:translate-x-1 md:transition-all">
+              <h4 className="text-xl md:text-2xl">Freelancer</h4>
+              <ul className="flex flex-wrap items-start justify-start py-6 gap-2 md:gap-4 text-xs md:text-1xl text-five border-secondary text-center">
+                <li className="p-2 px-3 max-w-fit rounded-full border bg-seven border-seven   antialiased text-sm text-center">
+                  Online
+                </li>
+                <li className="p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm text-center">
+                Contract
+                </li>
+                <li className="p-2 px-3 max-w-fit rounded-full border bg-seven border-seven  antialiased text-sm text-center">
+                  2024 Aug - Present
                 </li>
               </ul>
             </div>

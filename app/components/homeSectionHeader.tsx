@@ -22,7 +22,7 @@ export default function HomeSectionHeader() {
       <header className="min-h-screen text-primary overflow-hidden">
         <div className=" ">
           <AuroraBackgroundDemo />
-          <div className="absolute flex justify-center items-center px-2   w-full opacity-75 flex justify-between  text-[.6rem] md:text-[.5rem] lg:text-[.7rem] top-0 text-four z-999  text-right ">
+          <div className="absolute flex justify-center items-start px-2 w-full opacity-75 flex justify-between  text-[.6rem] md:text-[.5rem] lg:text-[.7rem] top-0 text-four z-999  text-right ">
             <div className={caveat.className}>
               <Link
                 href={"/"}
@@ -33,7 +33,7 @@ export default function HomeSectionHeader() {
               </Link>
             </div>
             <div className="">
-              <div className="text-secondary pt-1 md:pt-2 font-bold">
+              <div className="text-secondary pt-1  font-bold">
                 <DeviceAddress />
                 <Weather/>
               </div>

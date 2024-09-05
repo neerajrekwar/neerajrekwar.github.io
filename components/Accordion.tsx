@@ -50,8 +50,11 @@ export function AccordionDemo() {
           </Accordion>
           <div className="py-12 my-2">
             <h6 className="py-3 text-xl md:text-4xl">Didn&apos;t find an answer?</h6>
-            <p className="py-2 mb-16">My team is just an email away and ready to answer your questions</p>
+            <p className="py-2 mb-16 text-base">My team is just an email away and ready to answer your questions</p>
           <AnimatedTooltipPreview />
+            <a href="/contact"
+             className="p-2 mt-12 rounded-lg text-sm px-3 bg-secondary text-primary"
+            > Contact team </a>
           </div>
         </div>
       </div>

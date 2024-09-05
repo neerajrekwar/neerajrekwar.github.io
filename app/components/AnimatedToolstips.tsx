@@ -11,14 +11,14 @@ const people = [
   },
   {
     id: 2,
-    name: "Robert Johnson",
+    name: "",
     designation: "Product Manager",
     image:
       "",
   },
   {
     id: 3,
-    name: "Jane Smith",
+    name: "",
     designation: "Data Scientist",
     image:
       "",
