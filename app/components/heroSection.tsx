@@ -1266,19 +1266,19 @@ export function HeroSection() {
               images={images}
             />
           </div>
-          <div className="absolute border-five bg-gradient-to-l from-primary to-transparent  h-full w-full   font-bold"></div>
+              
+          <div className="absolute border-five bg-gradient-to-l from-[#ffffff] to-transparent  h-full w-full   font-bold"></div>
           <div className="absolute border-five bg-gradient-to-r from-primary from-2% to-transparent  h-full w-full  font-bold"></div>
-          <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r 
- from-primary    justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
-            <div className="absolute max-w-3xl m-auto ">
-              <motion.h2 className="mx-4 text-five md:mx-10 text-4xl md:text-5xl lg:text-6xl">
+          <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r from-[#ffffff]  justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
+            <div className="absolute max-w-3xl m-auto">
+              <motion.h2 className="mx-4 text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl">
                 Have a Project in Mind?
               </motion.h2>
-              <motion.p className="text-base text-four mx-4 md:mx-10 opacity-75  my-4 max-w-2xl font-normal">
+              <motion.p className="text-base text-four mx-4 md:mx-10  my-4 max-w-2xl font-normal">
                 I&apos;m excited to be in touch with you! Whether you&apos;re prepared to launch a brand new website or give an existing one a fresh look, I&apos;m available to assist in transforming your concepts into tangible results.
               </motion.p>
-              <motion.a className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 bg-primary gap-2 border border-secondary text-secondary rounded-full">
-                <IconCalendarClock /> book now
+              <motion.a className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 bg-four text-five gap-2 rounded-full">
+                <IconCalendarClock /> Let&apos;s talk
               </motion.a>
             </div>
           </div>

@@ -17,20 +17,22 @@ export const VisionSection: React.FC = () => {
             1
           </span>
         </div>
-        <div className="border-third ">
+        <div className="border-third">
           <div className="text-four  max-w-6xl m-auto min-h-screen md:bg-gradient-to-r  md:rounded-ss-2xl">
-            <div className="md:h-80 md:flex-row md:flex gap-4  border-four">
-              <div className="text-five basis-1/2 font-bold flex justify-center items-center bg-seven rounded-2xl m-2 p-4 h-60 md:h-auto">
+            <div className="basis-1/2 border-yellow-500 md:flex-row md:flex gap-4  border-four">
+            {/* fds */}
+              <div className="text-five  p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
                 <Image
+                  className="bg-transparent"
                   src={"/projects/home/elements.svg"}
-                  height={500}
-                  width={500}
+                  height={300}
+                  width={300}
                   loading="lazy"
                   alt="ui best in your we3b"
                 />
               </div>
-              <div className="basis-1/2 text-base md:text-xl p-4">
-                <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five  ">
+              <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                <h2 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
                   UI/UX Design
                 </h2>
                 <p>
@@ -46,22 +48,23 @@ export const VisionSection: React.FC = () => {
                     dynamically tailoring layouts, content, and recommendations
                     to each visitor.
                   </strong>{" "}
-                  Imagine a shopping site that curates a personalized product
-                  selection based on your browsing history and past purchases.
+                  
                 </p>
               </div>
             </div>
-            <div className=" p-2 border-four  md:flex flex-col justify-between">
-              <div className=" flex justify-between">
-                <div className="flex items-end">
-                  <h4 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-four  p-4 font-bold md:text-3xl lg:text-7xl">
+            <div className="basis-1/2 p-2  border-yellow-500  md:flex flex-col justify-between">
+              <div className="basis-1/2  border-yellow-500 md:flex-row md:flex gap-4  border-four">
+                <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                  <h4 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
                     Change your old from new engaging user interface
                   </h4>
+                  <p>Imagine a shopping site that curates a personalized product
+                  selection based on your browsing history and past purchases.</p>
                 </div>
-                <div className="bg-seven flex justify-center items-center p-4 rounded-3xl">
+                <div className="text-five p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
                   <Image
                     src="/projects/home/Programming.svg"
-                    className=""
+                    className="aspect-square"
                     width={300}
                     height={300}
                     loading="lazy"
@@ -69,8 +72,8 @@ export const VisionSection: React.FC = () => {
                   />
                 </div>
               </div>
-              <div className=" md:flex gap-4 border-five">
-                <div className="flex md:flex-col gap-2 my-10 flex-row-reverse">
+              <div className=" bgrid2 mn-h-screen p-2 md:flex gap-4 border-five">
+                <div className="flex  md:flex-col gap-2 my-10 flex-row-reverse">
                   <h3 className="md:text-base text-five font-semibold">
                     Ours technology to use improving web appearance.
                   </h3>
@@ -131,7 +134,6 @@ export const VisionSection: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 <div className="border-four flex md:flex-col gap-2 my-10 justify-between flex-row">
                   <h5 className="text-4xl md:text-base text-five font-semibold">
                     use library
@@ -261,27 +263,26 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="border-third three ">
+        <div className="border-third border three ">
           <div className="text-four  max-w-6xl m-auto min-h-screen pt-2 ">
             <div className="justify-center items-center flex my-10">
               <span className="text-five rounded-full bg-seven h-10 w-10 justify-center items-center flex p-4">
                 2
               </span>
             </div>
-            <div
-              style={{}}
-              className=" md:flex-row-reverse md:flex gap-4  border-four"
+            <div className=" flex  border border-yellow-500 md:flex  jusitfy-center  md:flex gap-4  border-four"
             >
-              <div
-                style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDl8fHxlbnwwfHx8fHw%3D')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-                className="text-4xl basis-1/2 font-bold rounded-2xl mx-2 p-4 h-40 md:h-auto"
-              ></div>
-              <div className="basis-1/2 text-base md:text-xl p-4">
-                <h2 className="text-4xl md:text-6xl font-bold pb-2 text-five ">
+              <div className="text-five border p-2 flex aspect-square md:aspect-video font-bold  justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+               <Image
+                src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDl8fHxlbnwwfHx8fHw%3D"
+                width={500}
+                height={500}
+                alt="dsa"
+                className="bg-coverrounded-md overflew-hidden  bg-center"
+               />
+              </div>
+              <div className="basis-1/2 border aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                <h2 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
                   User-centric customization
                 </h2>
                 <p>
@@ -294,14 +295,15 @@ export const VisionSection: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="">
-              <div className="flex  justify-between border-rose-500 md:mt-20 items-center md:flex-row-reverse md:flex ">
-                <div className="flex basis-1/2 items-end">
+            {/* here */}
+            <div className=" border border-yellow-500">
+              <div className="border border-rose-500 md:flex justify-center  md:mt-20 items-center md:flex-row-reverse md:flex ">
+                <div className="md:basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center items-center  text-base md:text-base p-4 ">
                   <h4 className="text-2xl m-2 md:text-6xl font-bold pb-2 text-four   ">
                     How to evolved a screen that effectiveness in browsing
                   </h4>
                 </div>
-                <div className=" m-4 bg-seven basis-1/2 flex justify-center p-4 w-fit rounded-3xl">
+                <div className="text-five border border-orange-500  p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
                   <Image
                     className=""
                     src="/projects/home/Futuristic_interface.svg"
@@ -316,7 +318,7 @@ export const VisionSection: React.FC = () => {
                   <h3 className="md:text-4xl text-2xl py-6 text-center m-auto max-w-3xl">
                     Make a Innovative customization
                   </h3>
-                  
+
                 </div>
                 <div className="flex justify-center my-8">
                   <span className="p-2 px-3 bg-seven rounded-full w-fit ">How &apos;s need it</span>
@@ -654,16 +656,17 @@ export const VisionSection: React.FC = () => {
         </div>
         <div className="border-third ">
           <div className="text-four  max-w-6xl m-auto min-h-screen md:h-auto sm:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
-            <div className=" md:flex-row-reverse md:flex gap-4 items-center border-four">
-              <div
-                style={{
-                  backgroundImage: `url('https://plus.unsplash.com/premium_photo-1683133924436-a7afbdf8cd25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-                className="text-four basis-1/2 font-bold  rounded-2xl m-2 p-4 h-60 "
-              ></div>
-              <div className="basis-1/2 text-base md:text-xl p-4">
+            <div className="basis-1/2  border-yellow-500 md:flex-row md:flex gap-4  border-four">
+              <div className="text-five p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+                <Image 
+                height={300}
+                width={300}
+                alt="fd"
+                src={"https://plus.unsplash.com/premium_photo-1683133924436-a7afbdf8cd25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                
+                />
+              </div>
+              <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
                 <h2 className=" text-4xl md:text-6xl font-bold pb-2 text-five ">
                   Small Initiative & Startups
                 </h2>
@@ -696,7 +699,7 @@ export const VisionSection: React.FC = () => {
                       alt="Startup life"
                     />
                   </div>
-                  <div className="flex basis-1/2 justify-center items-center flex-col p-2">
+                  <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col border border flex justify-center  text-base md:text-base p-4">
                     <h2 className="md:text-6xl text-2xl text-five  basis-1/2 font-semibold">
                       How to Building Your Online Business: A Step-by-Step Guide
                     </h2>
@@ -785,7 +788,7 @@ export const VisionSection: React.FC = () => {
                         alt="find best practice Analytice"
                       />
                     </div>
-                  </div>        
+                  </div>
                   <div className="col-span-2 rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start  md:text-xl  p-2">
                     <h5 className="text-2xl  text-five  font-semibold">
                       Lighthouse Scores
