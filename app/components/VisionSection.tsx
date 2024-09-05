@@ -9,7 +9,9 @@ export const VisionSection: React.FC = () => {
     <>
       <div className=" ">
         <div className="p-2 max-w-6xl m-auto justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl  font-semibold visible sm:text-4xl">
-          <div className="text-4xl  text-third sm:text-5xl sm:mx-2">&#8226;</div>
+          <div className="text-4xl  text-third sm:text-5xl sm:mx-2">
+            &#8226;
+          </div>
           Vision to the Future
         </div>
         <div className="justify-center items-center flex my-10">
@@ -19,9 +21,9 @@ export const VisionSection: React.FC = () => {
         </div>
         <div className="border-third">
           <div className="text-four  max-w-6xl m-auto min-h-screen md:bg-gradient-to-r  md:rounded-ss-2xl">
-            <div className="basis-1/2 border-yellow-500 md:flex-row md:flex gap-4  border-four">
-            {/* fds */}
-              <div className="text-five  p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+            <div className="basis-1/2 p-2 border-yellow-500 md:flex-row md:flex gap-4  border-four">
+              {/* fds */}
+              <div className="text-five bg-seven   p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
                 <Image
                   className="bg-transparent"
                   src={"/projects/home/elements.svg"}
@@ -31,7 +33,7 @@ export const VisionSection: React.FC = () => {
                   alt="ui best in your we3b"
                 />
               </div>
-              <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+              <div className="basis-1/2 rounded-lg aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
                 <h2 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
                   UI/UX Design
                 </h2>
@@ -48,20 +50,21 @@ export const VisionSection: React.FC = () => {
                     dynamically tailoring layouts, content, and recommendations
                     to each visitor.
                   </strong>{" "}
-                  
                 </p>
               </div>
             </div>
             <div className="basis-1/2 p-2  border-yellow-500  md:flex flex-col justify-between">
               <div className="basis-1/2  border-yellow-500 md:flex-row md:flex gap-4  border-four">
-                <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
-                  <h4 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
+                <div className="basis-1/2  rounded-lg md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                  <h2 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
                     Change your old from new engaging user interface
-                  </h4>
-                  <p>Imagine a shopping site that curates a personalized product
-                  selection based on your browsing history and past purchases.</p>
+                  </h2>
+                  <p>
+                    Imagine a shopping site that curates a personalized product
+                    selection based on your browsing history and past purchases.
+                  </p>
                 </div>
-                <div className="text-five p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+                <div className="text-five  p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
                   <Image
                     src="/projects/home/Programming.svg"
                     className="aspect-square"
@@ -263,25 +266,24 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="border-third border three ">
+        <div className="border-third  three ">
           <div className="text-four  max-w-6xl m-auto min-h-screen pt-2 ">
             <div className="justify-center items-center flex my-10">
               <span className="text-five rounded-full bg-seven h-10 w-10 justify-center items-center flex p-4">
                 2
               </span>
             </div>
-            <div className=" flex  border border-yellow-500 md:flex  jusitfy-center  md:flex gap-4  border-four"
-            >
-              <div className="text-five border p-2 flex aspect-square md:aspect-video font-bold  justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
-               <Image
-                src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDl8fHxlbnwwfHx8fHw%3D"
-                width={500}
-                height={500}
-                alt="dsa"
-                className="bg-coverrounded-md overflew-hidden  bg-center"
-               />
+            <div className="border-yellow-500  md:flex py-8 jusitfy-center  md:flex gap-2 border-four">
+              <div className="text-five bg-primary p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+                <Image
+                  src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDl8fHxlbnwwfHx8fHw%3D"
+                  width={500}
+                  height={500}
+                  alt="dsa"
+                  className="bg-cover rounded-md h-full md:aspect-video bg-center"
+                />
               </div>
-              <div className="basis-1/2 border aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+              <div className="basis-1/2 rounded-lg  aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
                 <h2 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
                   User-centric customization
                 </h2>
@@ -295,40 +297,49 @@ export const VisionSection: React.FC = () => {
                 </p>
               </div>
             </div>
-            {/* here */}
-            <div className=" border border-yellow-500">
-              <div className="border border-rose-500 md:flex justify-center  md:mt-20 items-center md:flex-row-reverse md:flex ">
-                <div className="md:basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center items-center  text-base md:text-base p-4 ">
-                  <h4 className="text-2xl m-2 md:text-6xl font-bold pb-2 text-four   ">
-                    How to evolved a screen that effectiveness in browsing
-                  </h4>
-                </div>
-                <div className="text-five border border-orange-500  p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
-                  <Image
-                    className=""
-                    src="/projects/home/Futuristic_interface.svg"
-                    width={300}
-                    height={300}
-                    alt="how's the Futuristic interface"
-                  />
-                </div>
+
+            <div className="border-seven md:flex justify-center  items-center md:flex-row-reverse md:flex ">
+              <div className="text-five    p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+                <Image
+                  className="bg-seven h-full rounded-lg p-2 w-fit"
+                  src="/projects/home/Futuristic_interface.svg"
+                  width={300}
+                  height={300}
+                  alt="how's the Futuristic interface"
+                />
               </div>
-              <div className="md:flex-col gap-2 my-10 flex-row-reverse">
+              <div className="basis-1/2 rounded-lg aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                <h4 className="text-2xl md:text-4xl font-bold pb-2  text-four   ">
+                  How to evolved a screen that effectiveness in browsing
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Expedita eos ex atque tempore? Repellendus vitae nihil esse
+                </p>
+              </div>
+            </div>
+            {/* here */}
+          </div>
+
+          <div className="border-yellow-500">
+            <div className="bg-secondary my-12">
+              <div className="md:flex-col text-primary max-w-6xl m-auto gap-2 py-4  flex-row-reverse">
                 <div className="flex items-center ">
                   <h3 className="md:text-4xl text-2xl py-6 text-center m-auto max-w-3xl">
                     Make a Innovative customization
                   </h3>
-
                 </div>
                 <div className="flex justify-center my-8">
-                  <span className="p-2 px-3 bg-seven rounded-full w-fit ">How &apos;s need it</span>
+                  <span className="p-2 px-3 bg-seven  border-seven border rounded-full w-fit ">
+                    How &apos;s need it
+                  </span>
                 </div>
                 <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-four rounded-lg m-2 h-auto ">
                   <motion.li
                     initial={{}}
                     className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2  "
                   >
-                    <p className="basis-2/2 md:basis-1/2  md:text-6xl p-2">
+                    <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       online activity on smartphones 3hrs and 50min avg.{" "}
                     </p>
                     <svg
@@ -370,10 +381,8 @@ export const VisionSection: React.FC = () => {
                       <path d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
                     </svg>
                   </li>
-                  <li
-                    className="flex items-center items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 "
-                  >
-                    <p className="basis-2/2 md:basis-1/2  md:text-4xl p-2">
+                  <li className="flex items-center items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 ">
+                    <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       {" "}
                       smart streaming devices will be $9.2 billion by 2024.{" "}
                     </p>
@@ -399,7 +408,7 @@ export const VisionSection: React.FC = () => {
                     </svg>
                   </li>
                   <li className="flex col-span-2 flex-row-reverse items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 ">
-                    <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2">
+                    <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       2.16% tablet user in worldwide & digital landscape
                       changing in web3 after{" "}
                     </p>
@@ -421,7 +430,7 @@ export const VisionSection: React.FC = () => {
                     </svg>
                   </li>
                   <li className="flex col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 ">
-                    <p className="basis-2/2 md:basis-1/2 md:text-4xl p-2 ">
+                    <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       mobiles that users in use 37.23%
                     </p>
                     <svg
@@ -443,7 +452,7 @@ export const VisionSection: React.FC = () => {
                     </svg>
                   </li>
                   <li className="flex flex-row-reverse items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2 ">
-                    <p className="basis-2/2 md:basis-1/2  p-1">
+                    <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       Desktops that users in use 60.61%{" "}
                     </p>
                     <svg
@@ -486,8 +495,8 @@ export const VisionSection: React.FC = () => {
                 }}
                 className="text-four basis-1/2 font-bold  rounded-2xl m-2 p-4 h-40 md:h-auto"
               ></div>
-              <div className="basis-1/2 text-base md:text-xl p-4">
-                <h2 className="  text-4xl md:text-6xl font-bold pb-2 text-five ">
+              <div className="basis-1/2 rounded-lg aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                <h2 className="text-2xl md:text-4xl font-bold pb-2  text-four   ">
                   Web Bugs fixing
                 </h2>
                 <p className="text-four">
@@ -657,207 +666,186 @@ export const VisionSection: React.FC = () => {
         <div className="border-third ">
           <div className="text-four  max-w-6xl m-auto min-h-screen md:h-auto sm:bg-gradient-to-l pt-2 from-seven md:rounded-se-2xl">
             <div className="basis-1/2  border-yellow-500 md:flex-row md:flex gap-4  border-four">
-              <div className="text-five p-2 basis-1/2 aspect-square md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
-                <Image 
-                height={300}
-                width={300}
-                alt="fd"
-                src={"https://plus.unsplash.com/premium_photo-1683133924436-a7afbdf8cd25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-                
+              <div className="text-five  p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+                <Image
+                  className="rounded-lg"
+                  height={500}
+                  width={500}
+                  alt="fd"
+                  src={
+                    "https://plus.unsplash.com/premium_photo-1683133924436-a7afbdf8cd25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  }
                 />
               </div>
-              <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
-                <h2 className=" text-4xl md:text-6xl font-bold pb-2 text-five ">
+              <div className="basis-1/2 rounded-lg aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                <h2 className="text-2xl md:text-4xl font-bold pb-2  text-five  ">
                   Small Initiative & Startups
                 </h2>
                 <p>
-                  <strong className="text-five font-normal">
+                  <strong className="text-four font-semibold">
                     Are you struggling to establish your online presence?{" "}
                   </strong>
-                  Small Business Helps can be your one-stop shop for all your
-                  web development needs. We understand the unique challenges
-                  faced by small businesses, and our team of experts will craft
-                  a website that perfectly reflects your brand and resonates
-                  with your target audience. From user-friendly design and
-                  e-commerce functionality to powerful SEO optimization,
-                  we&apos;ll equip you with the tools to attract customers,
-                  boost sales, and achieve your online goals.
+                  Small Business Helps is your one-stop shop for web
+                  development.
                 </p>
               </div>
             </div>
-            <div className="">
-              <div></div>
-              <div>
-                <div className="md:flex  flex-1 text-five p-2 justify-center items-center">
-                  <div className="flex basis-1/2 justify-center items-center">
+            <div className="basis-1/2  border-yellow-500 md:flex-row md:flex gap-4  border-four">
+              <div className="basis-1/2 rounded-lg aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+                <h2 className="text-2xl md:text-4xl font-bold pb-2  text-five  ">
+                  How to Building Your Online Business: A Step-by-Step Guide
+                </h2>
+                <div className="flex items-start"></div>
+              </div>
+              <div className="text-five  p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+                <Image
+                  src={"/projects/home/Startup_life.svg"}
+                  className="  md:p-10 p-8  m-2  bg-seven rounded-2xl"
+                  width={300}
+                  height={300}
+                  loading="lazy"
+                  alt="Startup life"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="border-third">
+            <div className=" my-6 border border-yellow-500 bg-secondary p-2">
+              <h1 className="md:text-2xl text-xl text-primary py-6 text-center m-auto max-w-3xl">
+                Maximized efficiency with fully automated best practices and
+                fully supported advanced tricks.
+              </h1>
+
+              <div className="flex justify-center ">
+                <span className="p-2 px-3  bg-seven border-seven border rounded-full w-fit ">
+                  SEO & Performance
+                </span>
+              </div>
+
+              <div className="flex flex-col text-primary  md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 max-h-fit gap-4">
+                <div className=" col-span-2 rounded-md bg-seven md:p-10  flex flex-col justify-start   p-2">
+                  <h5 className="text-2xl text-four">Analytics</h5>
+                  <p className="py-2 font-normal">
+                    Effortlessly monitor all aspects of your performance with
+                    our robust, GDPR-compliant analytics, Google Analytics
+                    integration, and more.
+                  </p>
+                  <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
-                      src={"/projects/home/Startup_life.svg"}
-                      className="  md:p-10 p-8  m-2  bg-seven rounded-2xl"
+                      className="h-64 w-64"
+                      src={"/projects/home/Analytics.svg"}
                       width={300}
-                      height={300}
-                      loading="lazy"
-                      alt="Startup life"
+                      height={200}
+                      alt="find best practice Analytice"
                     />
                   </div>
-                  <div className="basis-1/2 aspect-square md:aspect-video m-3 flex-col border border flex justify-center  text-base md:text-base p-4">
-                    <h2 className="md:text-6xl text-2xl text-five  basis-1/2 font-semibold">
-                      How to Building Your Online Business: A Step-by-Step Guide
-                    </h2>
-                    <div className="flex items-start"></div>
+                </div>
+                <div className="row-span-1 rounded-md   md:p-10  flex flex-col justify-start p-2 ">
+                  <h5 className="text-2xl text-four">Metadata</h5>
+                  <p className="py-2 font-normal">
+                    Ensure your page stands out with a compelling title and
+                    description, while our top-notch handles ensure search
+                    engine optimization.
+                  </p>
+                  <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
+                    <Image
+                      src={"/projects/home/Dev_productivity.svg"}
+                      width={300}
+                      height={200}
+                      alt="find best practice Analytice"
+                    />
                   </div>
                 </div>
-              </div>
-              <div className=" my-6  p-2">
-                <h1 className="md:text-4xl text-2xl py-6 text-center m-auto max-w-3xl">
-                  Maximized efficiency with fully automated best practices and
-                  fully supported advanced tricks.
-                </h1>
-
-                <div className="flex justify-center">
-                  <span className="p-2 px-3 bg-seven rounded-full w-fit ">SEO & Performance</span>
+                <div className=" rounded-md  md:p-10  flex flex-col justify-start p-2 ">
+                  <h5 className="text-2xl text-four">Semantics</h5>
+                  <p className="py-2 font-normal">
+                    Make sure to implement semantic tags on your websites to
+                    improve their structure.
+                  </p>
+                  <div className=" flex justify-center p-10 items-center m-2 p-2 bg-seven rounded-md">
+                    <Image
+                      src={"/projects/home/Semantics.svg"}
+                      width={300}
+                      height={200}
+                      alt="find best practice Analytice"
+                    />
+                  </div>
                 </div>
-
-                <div className="flex flex-col md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 max-h-fit gap-4">
-                  <div className=" col-span-2 rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
-                    <h5 className="text-2xl text-five font-semibold">
-                      Analytics
-                    </h5>
-                    <p className="py-2 text-secondary ">
-                      Effortlessly monitor all aspects of your performance with
-                      our robust, GDPR-compliant analytics, Google Analytics
-                      integration, and more.
-                    </p>
-                    <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
-                      <Image
-                        className="h-64 w-64"
-                        src={"/projects/home/Analytics.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
+                <div className="col-span-2 rounded-md md:p-10  flex flex-col justify-start p-2">
+                  <h5 className="text-2xl text-four">Accessibility</h5>
+                  <p className="py-2 font-normal">
+                    Design inclusive and accessible websites by utilizing alt
+                    tags, Tab Index, element tags, and more.
+                  </p>
+                  <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
+                    <Image
+                      src={"/projects/home/Accessibility.svg"}
+                      width={300}
+                      height={200}
+                      alt="find best practice Analytice"
+                    />
                   </div>
-                  <div className="row-span-1 rounded-md  bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2 ">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Metadata
-                    </h5>
-                    <p className=" py-2 text-secondary ">
-                      Ensure your page stands out with a compelling title and
-                      description, while our top-notch handles ensure search
-                      engine optimization.
-                    </p>
-                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
-                      <Image
-                        src={"/projects/home/Dev_productivity.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
+                </div>
+                <div className="col-span-2 rounded-md  md:p-10  flex flex-col justify-start p-2">
+                  <h5 className="text-2xl text-four">Lighthouse Scores</h5>
+                  <p className="py-2 font-normal">
+                    Ensure your page stands out with a compelling title and
+                    description, while our top-notch handles ensure search
+                    engine optimization.
+                  </p>
+                  <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
+                    <Image
+                      src={"/projects/home/Dev_productivity.svg"}
+                      width={300}
+                      height={200}
+                      alt="find best practice Analytice"
+                    />
                   </div>
-                  <div className=" rounded-md  bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2 ">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Semantics
-                    </h5>
-                    <p className=" text-secondary ">
-                      Make sure to implement semantic tags on your websites to
-                      improve their structure.
-                    </p>
-                    <div className=" flex justify-center p-10 items-center m-2 p-2 bg-seven rounded-md">
-                      <Image
-                        src={"/projects/home/Semantics.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
+                </div>
+                <div className="rounded-md rounded-md  md:p-10  flex flex-col justify-start p-2">
+                  <h5 className="text-2xl text-four">Sitemap</h5>
+                  <p className="py-2 font-normal">
+                    We understand the importance of generating a sitemap that
+                    reflects your site&apos;s structure for search bots.
+                  </p>
+                  <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
+                    <Image
+                      src={"/projects/home/Sitemap.svg"}
+                      width={300}
+                      height={200}
+                      alt="find best practice Analytice"
+                    />
                   </div>
-                  <div className="col-span-2 rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Accessibility
-                    </h5>
-                    <p className=" text-secondary ">
-                      Design inclusive and accessible websites by utilizing alt
-                      tags, Tab Index, element tags, and more.
-                    </p>
-                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
-                      <Image
-                        src={"/projects/home/Accessibility.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
+                </div>
+                <div className="rounded-md rounded-md md:p-10  flex flex-col justify-start p-2">
+                  <h5 className="text-2xl text-four">Server Side Rendering</h5>
+                  <p className="py-2 font-normal">
+                    Boost your website speed with SSR: achieve faster load times
+                    and higher scores.
+                  </p>
+                  <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
+                    <Image
+                      src={"/projects/home/Dev_productivity.svg"}
+                      width={300}
+                      height={200}
+                      alt="find best practice Analytice"
+                    />
                   </div>
-                  <div className="col-span-2 rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start  md:text-xl  p-2">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Lighthouse Scores
-                    </h5>
-                    <p className=" text-secondary ">
-                      Ensure your page stands out with a compelling title and
-                      description, while our top-notch handles ensure search
-                      engine optimization.
-                    </p>
-                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
-                      <Image
-                        src={"/projects/home/Dev_productivity.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
-                  </div>
-                  <div className="rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Sitemap
-                    </h5>
-                    <p className=" text-secondary ">
-                      We understand the importance of generating a sitemap that
-                      reflects your site&apos;s structure for search bots.
-                    </p>
-                    <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
-                      <Image
-                        src={"/projects/home/Sitemap.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
-                  </div>
-                  <div className="rounded-md rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Server Side Rendering
-                    </h5>
-                    <p className=" text-secondary">
-                      Boost your website speed with SSR: achieve faster load
-                      times and higher scores.
-                    </p>
-                    <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
-                      <Image
-                        src={"/projects/home/Dev_productivity.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
-                  </div>
-                  <div className="md:p-10 col-span-2 rounded-md bg-primary md:p-10  flex flex-col justify-start md:text-xl  p-2">
-                    <h5 className="text-2xl  text-five  font-semibold">
-                      Hosting
-                    </h5>
-                    <p className="text-secondary">
-                      Experience lightning-fast page loading, no matter where
-                      you are in the world.
-                    </p>
-                    <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md ">
-                      <Image
-                        className=""
-                        src={"/projects/home/hosting.svg"}
-                        width={300}
-                        height={200}
-                        alt="find best practice Analytice"
-                      />
-                    </div>
+                </div>
+                <div className="md:p-10 col-span-2 rounded-md  md:p-10  flex flex-col justify-start  p-2">
+                  <h5 className="text-2xl text-four">Hosting</h5>
+                  <p className="py-2 font-normal">
+                    Experience lightning-fast page loading, no matter where you
+                    are in the world.
+                  </p>
+                  <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md ">
+                    <Image
+                      className=""
+                      src={"/projects/home/hosting.svg"}
+                      width={300}
+                      height={200}
+                      alt="find best practice Analytice"
+                    />
                   </div>
                 </div>
               </div>

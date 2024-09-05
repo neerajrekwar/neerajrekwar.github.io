@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 :root {
   --color-primary: #ffffff;
-  --color-secondary: #242424;
+  --color-secondary: #000000;
   --color-third: #2cffbf;
   --color-four: #5e716a;
   --color-five: #1d3838;
-  --color-six: #E0F2E9;
+  --color-six: #e0f2e9;
   --color-seven: #5e716a10;
-  --font-families-secondary: 'Caveat', cursive;
+  --font-families-secondary: "Caveat", cursive;
 
   /* --color-primary: #FFFFFF;
   --color-secondary: #cdf4e6;
@@ -26,7 +26,6 @@
   --color-secondary-border: #abd4c5;
   --color-third-border: #79a091;
   --color-four-border: #cdf4e6; */
-
 }
 
 /* Dark mode variables */
@@ -36,8 +35,8 @@
     --color-secondary: #e6e6e6;
     --color-third: #2cffbf;
     --color-four: #5e716a;
-    --color-five: #E0F2E9;
-    --color-six: #E0F2E9;
+    --color-five: #e0f2e9;
+    --color-six: #e0f2e9;
     --color-seven: #5e716a18;
     /* --color-primary-bg: #100c13;
     --color-secondary-bg: #7e6194;
@@ -51,55 +50,63 @@
     --color-secondary-border: #47236067; 
     --color-third-border: #47236067; 
   */
-
-
   }
 }
 
-
 ::-webkit-scrollbar {
- scrollbar-width: thin;
-scrollbar-track-color: var(--color-four);
- /* Use CSS variable */
+  scrollbar-width: thin;
+  scrollbar-track-color: var(--color-four);
+  /* Use CSS variable */
 }
 
 ::-webkit-scrollbar-track {
- scrollbar-color: var(--color-five) ;
-   /* Use CSS variable */
+  scrollbar-color: var(--color-five);
+  /* Use CSS variable */
 }
 
 html {
   scroll-behavior: smooth; /* Temporarily disable smooth scrolling */
 }
-section.bgrid{
+section.bgrid {
   background-color: var(--color-primary);
-  
-  background-image:  
-    linear-gradient(#3a4f413b 0.8px, transparent 0.8px), 
-    linear-gradient(90deg, #3a4f413b 0.8px, transparent 0.8px), 
-    linear-gradient(#3a4f413b 1px, transparent 1px), 
+
+  background-image: linear-gradient(#3a4f413b 0.8px, transparent 0.8px),
+    linear-gradient(90deg, #3a4f413b 0.8px, transparent 0.8px),
+    linear-gradient(#3a4f413b 1px, transparent 1px),
     linear-gradient(90deg, #3a4f413b 0.4px, var(--color-primary) 0.4px);
   background-size: 40px 40px, 20px 20px, 10px 10px, 4px 4px;
-  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px, -0.4px -0.4px;
+  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px,
+    -0.4px -0.4px;
 }
- section.bgrid2{
+section.bgrid2 {
   background-color: transparent;
-  
-  background-image:  linear-gradient(#3a4f411a 0.8px, transparent 0.8px), linear-gradient(90deg, #3a4f411a 0.8px, transparent 0.8px), linear-gradient(#3a4f411a 0.4px, transparent 0.4px), linear-gradient(90deg, #3a4f411a 0.4px, transparent 0.4px);
+
+  background-image: linear-gradient(#3a4f411a 0.8px, transparent 0.8px),
+    linear-gradient(90deg, #3a4f411a 0.8px, transparent 0.8px),
+    linear-gradient(#3a4f411a 0.4px, transparent 0.4px),
+    linear-gradient(90deg, #3a4f411a 0.4px, transparent 0.4px);
   background-size: 20px 20px, 20px 20px, 4px 4px, 4px 4px;
-  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px, -0.4px -0.4px;
-} 
-div.bgrid2{
+  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px,
+    -0.4px -0.4px;
+}
+div.bgrid2 {
   background-color: transparent;
-  
-  background-image:  linear-gradient(#3a4f411a 0.8px, transparent 0.8px), linear-gradient(90deg, #3a4f411a 0.8px, transparent 0.8px), linear-gradient(#3a4f411a 0.4px, transparent 0.4px), linear-gradient(90deg, #3a4f411a 0.4px, transparent 0.4px);
+
+  background-image: linear-gradient(#3a4f411a 0.8px, transparent 0.8px),
+    linear-gradient(90deg, #3a4f411a 0.8px, transparent 0.8px),
+    linear-gradient(#3a4f411a 0.4px, transparent 0.4px),
+    linear-gradient(90deg, #3a4f411a 0.4px, transparent 0.4px);
   background-size: 20px 20px, 20px 20px, 4px 4px, 4px 4px;
-  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px, -0.4px -0.4px;
-} 
+  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px,
+    -0.4px -0.4px;
+}
 
 section.one {
-
-  background-image: linear-gradient(-45deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
+  background-image: linear-gradient(
+      -45deg,
+      transparent 75%,
+      hsla(145, 95%, 24%, 0.082) 75%
+    ),
     linear-gradient(45deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
     linear-gradient(-135deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%),
     linear-gradient(135deg, transparent 75%, hsla(145, 95%, 24%, 0.082) 75%);
@@ -109,7 +116,11 @@ section.one {
 
 section.two {
   background-color: hsl(177, 27%, 69%);
-  background-image: linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
+  background-image: linear-gradient(
+      -45deg,
+      transparent 50%,
+      hsl(49, 71%, 63%) 50%
+    ),
     linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
     linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%),
     linear-gradient(-45deg, transparent 50%, hsl(49, 71%, 63%) 50%);
@@ -117,31 +128,39 @@ section.two {
 }
 
 section.three {
-  background-image: radial-gradient(circle at 100% 50%,
+  background-image: radial-gradient(
+      circle at 100% 50%,
       transparent 1rem,
       #a1b1c12c 1rem,
       #a1b1c12c 1.5rem,
-      transparent 1.5rem),
-    radial-gradient(circle at 0% 50%,
+      transparent 1.5rem
+    ),
+    radial-gradient(
+      circle at 0% 50%,
       transparent 1rem,
       #a1b1c12c 1rem,
       #a1b1c12c 1.5rem,
-      transparent 1.5rem);
+      transparent 1.5rem
+    );
 
   background-size: 20rem 5rem;
   background-position: 0 0, 0 2.5rem;
 }
 div.three {
-  background-image: radial-gradient(circle at 100% 50%,
+  background-image: radial-gradient(
+      circle at 100% 50%,
       transparent 1rem,
       #a1b1c12c 1rem,
       #a1b1c12c 1.5rem,
-      transparent 1.5rem),
-    radial-gradient(circle at 0% 50%,
+      transparent 1.5rem
+    ),
+    radial-gradient(
+      circle at 0% 50%,
       transparent 1rem,
       #a1b1c12c 1rem,
       #a1b1c12c 1.5rem,
-      transparent 1.5rem);
+      transparent 1.5rem
+    );
 
   background-size: 20rem 5rem;
   background-position: 0 0, 0 2.5rem;
@@ -151,11 +170,7 @@ section.four {
   background-image: url(), url(),
     linear-gradient(to right, rgb(0, 0, 0), rgb(255 255 255 / 0%));
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position:
-    bottom right,
-    left,
-    right;
-
+  background-position: bottom right, left, right;
 }
 
 .textCllip {
@@ -164,9 +179,7 @@ section.four {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
-
 
 .button-three[aria-expanded="true"] .line {
   stroke-dasharray: 60 105 60 300;
@@ -205,7 +218,7 @@ section.four {
   transform: rotateX(10deg);
   opacity: 1;
 }
-main{
+main {
   scroll-behavior: smooth;
 }
 
@@ -256,7 +269,6 @@ main{
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-
   }
   .dark {
     --background: 224 71.4% 4.1%;
@@ -283,8 +295,5 @@ main{
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-
   }
-
 }
-
