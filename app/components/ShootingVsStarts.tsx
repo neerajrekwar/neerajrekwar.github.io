@@ -13,10 +13,10 @@ import CurrentTime from "./CurrentTime";
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
     <div className="bg-black min-h-screen flex flex-col items-start justify-start  w-full">
-      <div className="font-semibold flex justify-between w-full max-w-7xl m-auto border-five text-four">
+      {/* <div className="font-semibold flex justify-between w-full max-w-7xl m-auto border-five p-2 text-xs text-four">
         <p>nee</p>
         <CurrentTime />
-      </div>
+      </div> */}
       <figure className="w-auto z-10 m-auto max-w-7xl lg:flex-col  justify-center border-blue-500 sm:justify-evenly  items-center sm:flex md:flex-row-reverse sm:border-green-500">
         <div className="md:flex md:flex-row-reverse max-w-7xl">
           <motion.div

@@ -874,7 +874,7 @@ export function HeroSection() {
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 basis-1/2 text-4xl m-2 font-bold text-six"
+                      className="px-2 basis-1/2 text-4xl md:text-2xl m-2 font-bold text-six"
                     >
                       versions to access the latest performance optimizations
                     </motion.h4>
@@ -904,7 +904,7 @@ export function HeroSection() {
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 basis-1/2 text-4xl m-2 font-bold text-six"
+                      className="px-2 basis-1/2 text-4xl md:text-2xl m-2 font-bold text-six"
                     >
                       Rigorously test your application
                     </motion.h4>
@@ -957,9 +957,9 @@ export function HeroSection() {
                 animate={{ opacity: 0, y: 3 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="text-4xl text-secondary relative z-40 max-w-2xl font-bold  "
+                className="text-4xl text-four relative z-40 max-w-2xl font-bold  "
               >
-                hello to everyone
+                See my interest
                 <span className="absolute bottom-2 p-1 -z-50 left-0  h-2 w-[100%]  bg-custom-radial-sm"></span>
               </motion.h3>
               <div className=" border-third">
@@ -984,7 +984,7 @@ export function HeroSection() {
                       }}
                       className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
                     >
-                      Make it for beatiful
+                     The Amazonian Treasure Expedition
                     </motion.h2>
                     <motion.p
                       initial={{ opacity: 0, x: 30 }}
@@ -997,9 +997,7 @@ export function HeroSection() {
                       }}
                       className="px-2  md:text-md py-2  "
                     >
-                      I recognize that it&apos;s not how big a miracle is
-                      that&apos;s important, but how we make it happen. but how
-                      much room I create for it.
+                      A group of treasure hunters discover a hidden map leading to a lost Inca city filled with priceless artifacts.
                     </motion.p>
                     <motion.a
                       initial={{ opacity: 0, x: 30 }}
@@ -1075,7 +1073,7 @@ export function HeroSection() {
                       }}
                       className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
                     >
-                      Make it for beatiful
+                      Capturing new art of nature
                     </motion.h2>
                     <motion.p
                       initial={{ opacity: 0, x: 30 }}
@@ -1088,9 +1086,7 @@ export function HeroSection() {
                       }}
                       className="px-2  md:text-md py-2  "
                     >
-                      I recognize that it&apos;s not how big a miracle is
-                      that&apos;s important, but how we make it happen. but how
-                      much room I create for it.
+                      It can be a great way to express yourself capture moments, and make beautiful memories. you can create stunning images that can last a lifetime.
                     </motion.p>
                     <motion.a
                       initial={{ opacity: 0, x: 30 }}
@@ -1163,7 +1159,7 @@ export function HeroSection() {
                       }}
                       className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
                     >
-                      Make it for beatiful
+                      Search a path
                     </motion.h2>
                     <motion.p
                       initial={{ opacity: 0, x: 30 }}
@@ -1266,19 +1262,22 @@ export function HeroSection() {
               images={images}
             />
           </div>
-              
-          <div className="absolute border-five bg-gradient-to-l from-[#ffffff] to-transparent  h-full w-full   font-bold"></div>
-          <div className="absolute border-five bg-gradient-to-r from-primary from-2% to-transparent  h-full w-full  font-bold"></div>
+
+          <div className="absolute border-five bg-gradient-to-l from-[#ffffffde] from-1% to-transparent  h-full w-full   font-bold"></div>
+          <div className="absolute border-five bg-gradient-to-r from-[#ffffffde] from-1% to-transparent  h-full w-full  font-bold"></div>
+          <div className="absolute border-five bg-gradient-to-t from-[#ffffffde] from-1% to-transparent  h-full w-full  font-bold"></div>
           <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r from-[#ffffff]  justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
             <div className="absolute max-w-3xl m-auto">
-              <motion.h2 className="mx-4 text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl">
+              <motion.h2 className="mx-4 font-bold text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl">
                 Have a Project in Mind?
               </motion.h2>
-              <motion.p className="text-base text-four mx-4 md:mx-10  my-4 max-w-2xl font-normal">
+              <motion.p className="text-four mx-4 md:mx-10  my-4 max-w-2xl ">
                 I&apos;m excited to be in touch with you! Whether you&apos;re prepared to launch a brand new website or give an existing one a fresh look, I&apos;m available to assist in transforming your concepts into tangible results.
               </motion.p>
-              <motion.a className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 bg-four text-five gap-2 rounded-full">
-                <IconCalendarClock /> Let&apos;s talk
+              <motion.a className="bg-secondary ">
+                <div className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 text-four bg-seven  gap-2 rounded-full">
+                  <IconCalendarClock /> Let&apos;s talk
+                </div>
               </motion.a>
             </div>
           </div>

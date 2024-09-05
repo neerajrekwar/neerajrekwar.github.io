@@ -710,29 +710,29 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
           <div className="border-third">
-            <div className=" my-6 border border-yellow-500 bg-secondary p-2">
+            <div className=" my-6 border-yellow-500 bg-secondary p-2">
               <h1 className="md:text-2xl text-xl text-primary py-6 text-center m-auto max-w-3xl">
                 Maximized efficiency with fully automated best practices and
                 fully supported advanced tricks.
               </h1>
 
               <div className="flex justify-center ">
-                <span className="p-2 px-3  bg-seven border-seven border rounded-full w-fit ">
+                <span className="p-2 px-3 text-four bg-seven border-seven border rounded-full w-fit ">
                   SEO & Performance
                 </span>
               </div>
 
-              <div className="flex flex-col text-primary  md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-five rounded-lg m-2 max-h-fit gap-4">
-                <div className=" col-span-2 rounded-md bg-seven md:p-10  flex flex-col justify-start   p-2">
+              <div className="flex flex-col max-w-6xl m-auto text-primary  md:grid md:grid-flow-row-dense md:grid-cols-4 md:grid-rows-2  text-five rounded-lg m-2 max-h-fit gap-4">
+                <div className="col-span-2   md:p-10  flex flex-col justify-start   p-2">
                   <h5 className="text-2xl text-four">Analytics</h5>
                   <p className="py-2 font-normal">
                     Effortlessly monitor all aspects of your performance with
-                    our robust, GDPR-compliant analytics, Google Analytics
+                    our robust, GDPR-compliant <strong className="text-four">Analysis and Data insight,</strong> Google Analytics
                     integration, and more.
                   </p>
                   <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
-                      className="h-64 w-64"
+                      className="h-64  w-64"
                       src={"/projects/home/Analytics.svg"}
                       width={300}
                       height={200}
@@ -740,12 +740,12 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="row-span-1 rounded-md   md:p-10  flex flex-col justify-start p-2 ">
+                <div className="col-span-2   md:p-10  flex flex-col justify-start p-2 ">
                   <h5 className="text-2xl text-four">Metadata</h5>
                   <p className="py-2 font-normal">
                     Ensure your page stands out with a compelling title and
-                    description, while our top-notch handles ensure search
-                    engine optimization.
+                    description, while our top-notch handles ensure <strong className="text-four"> search
+                      engine optimization.</strong>
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
@@ -756,7 +756,7 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className=" rounded-md  md:p-10  flex flex-col justify-start p-2 ">
+                <div className="col-span-2 md:p-10  flex flex-col justify-start p-2 ">
                   <h5 className="text-2xl text-four">Semantics</h5>
                   <p className="py-2 font-normal">
                     Make sure to implement semantic tags on your websites to
@@ -771,7 +771,7 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="col-span-2 rounded-md md:p-10  flex flex-col justify-start p-2">
+                <div className="col-span-2 md:p-10  flex flex-col justify-start p-2">
                   <h5 className="text-2xl text-four">Accessibility</h5>
                   <p className="py-2 font-normal">
                     Design inclusive and accessible websites by utilizing alt
@@ -786,7 +786,7 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="col-span-2 rounded-md  md:p-10  flex flex-col justify-start p-2">
+                <div className="col-span-2  md:p-10  flex flex-col justify-start p-2">
                   <h5 className="text-2xl text-four">Lighthouse Scores</h5>
                   <p className="py-2 font-normal">
                     Ensure your page stands out with a compelling title and
@@ -802,7 +802,7 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="rounded-md rounded-md  md:p-10  flex flex-col justify-start p-2">
+                <div className="col-span-2 md:p-10  flex flex-col justify-start p-2">
                   <h5 className="text-2xl text-four">Sitemap</h5>
                   <p className="py-2 font-normal">
                     We understand the importance of generating a sitemap that
@@ -817,7 +817,7 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="rounded-md rounded-md md:p-10  flex flex-col justify-start p-2">
+                <div className="col-span-2 rounded-md rounded-md md:p-10  flex flex-col justify-start p-2">
                   <h5 className="text-2xl text-four">Server Side Rendering</h5>
                   <p className="py-2 font-normal">
                     Boost your website speed with SSR: achieve faster load times
@@ -832,7 +832,7 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="md:p-10 col-span-2 rounded-md  md:p-10  flex flex-col justify-start  p-2">
+                <div className="col-span-2  md:p-10 rounded-md  md:p-10  flex flex-col justify-start  p-2">
                   <h5 className="text-2xl text-four">Hosting</h5>
                   <p className="py-2 font-normal">
                     Experience lightning-fast page loading, no matter where you
