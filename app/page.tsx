@@ -9,14 +9,10 @@ import StickyRelativeDemo from "./components/StickyRelativeDemo";
 import { Accordion } from "@/components/ui/accordion";
 import { AccordionDemo } from "@/components/Accordion";
 
-
-
-
 export const metadata: Metadata = {
   title: "nee. - Anonymous seo find at Delhi ",
-  description: "Our Delhi-based team specializes in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
-
-  
+  description:
+    "Our Delhi-based team specializes in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
 };
 export default function Home() {
   return (
@@ -40,11 +36,8 @@ export default function Home() {
         <VisionSection />
       </section>
       <section className="text-five">
-        
-     <AccordionDemo/>
-     
+        <AccordionDemo />
       </section>
     </main>
-    
   );
 }

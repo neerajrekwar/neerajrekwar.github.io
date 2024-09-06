@@ -5,25 +5,21 @@ const people = [
   {
     id: 1,
     name: "Neeraj Rekwar",
-    designation: "Passionate programmer",
-    image:
-      "/me.webp",
+    designation: "Front-end Developer",
+    image: "/me.webp",
   },
   {
     id: 2,
     name: "",
     designation: "Product Manager",
-    image:
-      "",
+    image: "",
   },
   {
     id: 3,
     name: "",
     designation: "Data Scientist",
-    image:
-      "",
-  }
- 
+    image: "",
+  },
 ];
 
 export function AnimatedTooltipPreview() {
