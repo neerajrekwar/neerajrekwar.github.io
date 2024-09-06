@@ -78,7 +78,7 @@ export const VisionSection: React.FC = () => {
               <div className=" bgrid2 mn-h-screen p-2 md:flex gap-4 border-five">
                 <div className="flex  md:flex-col gap-2 my-10 flex-row-reverse">
                   <h3 className="md:text-base text-five font-semibold">
-                    Ours technology to use improving web appearance.
+                    My learnt tech to use improving web appearance.
                   </h3>
                   <div className="flex ">
                     <span className="p-1 m-2 bg-seven rounded-lg fill-five">
@@ -143,9 +143,8 @@ export const VisionSection: React.FC = () => {
                   </h5>
                   <div>
                     <p className="bg-seven p-3 rounded-2xl">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatibus corporis tempora commodi minima blanditiis
-                      ipsum esse ab nobis repellat repudiandae.
+                      Avoids redundant code, reducing development time and
+                      effort.
                     </p>
                     <div className="flex  justify-start">
                       <span className="p-1 m-2 bg-seven rounded-lg fill-five">
@@ -220,8 +219,8 @@ export const VisionSection: React.FC = () => {
                   </h5>
                   <div>
                     <p className="bg-seven p-3 rounded-2xl">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Ex qui quisquam velit?
+                      Would you like to learn more about a specific framework or
+                      discuss your project's requirements?
                     </p>
                     <div className="flex  justify-start">
                       <span className="p-1 m-2 bg-seven rounded-lg fill-five">
@@ -313,8 +312,8 @@ export const VisionSection: React.FC = () => {
                   How to evolved a screen that effectiveness in browsing
                 </h4>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Expedita eos ex atque tempore? Repellendus vitae nihil esse
+                  Maintain a consistent layout throughout the screen to create a
+                  familiar and intuitive experience.
                 </p>
               </div>
             </div>
@@ -654,9 +653,7 @@ export const VisionSection: React.FC = () => {
                   </svg>
                   <h6 className="text-2xl py-2">Preventing Bugs</h6>
                   <p className="text-four">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Debitis facere quos maiores sed quae nobis similique cum
-                    accusamus, omnis error.
+                    Test the application from the end-user's perspective.
                   </p>
                 </span>
               </div>

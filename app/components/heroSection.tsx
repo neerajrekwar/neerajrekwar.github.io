@@ -356,8 +356,9 @@ export function HeroSection() {
                       </h4>
 
                       <p className="m-2 text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti.
+                        SEO is the practice of optimizing a website to improve
+                        its visibility and ranking in search engine results
+                        pages (SERPs) like Google, bing, DuckDuckGo, yahoo!{" "}
                       </p>
                     </div>
                     <IconSearch width={44} height={44} />
@@ -370,12 +371,12 @@ export function HeroSection() {
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
-                        Socail Media
+                        Socail Media Optimization
                       </h4>
                       <p className="m-2 text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt
-                        vero, ad a.
+                        Define clear objectives for your social media presence,
+                        such as increasing brand awareness, generating leads, or
+                        driving sales.
                       </p>
                     </div>
                     <IconSocial width={44} height={44} />
@@ -392,9 +393,8 @@ export function HeroSection() {
                         How to Grow Online
                       </h4>
                       <p className="m-2 text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt
-                        vero, ad a.
+                        Understand your ideal customer&apos;s needs,
+                        preferences, and online behavior.
                       </p>
                     </div>
                     <IconWorldWww width={44} height={44} />
@@ -410,9 +410,10 @@ export function HeroSection() {
                         Localization
                       </h4>
                       <p className="m-2 text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt
-                        vero, ad a.
+                        Creating and optimizing your Google My Business profile
+                        to provide accurate and up-to-date information about
+                        your business, including location, hours of operation,
+                        and contact details.
                       </p>
                     </div>
                     <IconBuildingStore width={44} height={44} />
@@ -428,9 +429,11 @@ export function HeroSection() {
                         Google Analytics
                       </h4>
                       <p className="m-2 text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt
-                        vero, ad a.
+                        Web analytics service provides insights into website
+                        traffic, user behavior, and marketing performance. It
+                        helps businesses understand their audience, measure
+                        online marketing effectiveness, and make data-driven
+                        decisions.
                       </p>
                     </div>
                     <IconBrandGoogleAnalytics width={44} height={44} />
@@ -443,12 +446,11 @@ export function HeroSection() {
                   >
                     <div className="md:pb-4 text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
-                        Ads Word
+                        Google Ads
                       </h4>
                       <p className="m-2 text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt
-                        vero, ad a.
+                        It provides a powerful tool for reaching potential
+                        customers and driving traffic to your website.
                       </p>
                     </div>
                     <IconAdFilled width={44} height={44} />
@@ -464,9 +466,9 @@ export function HeroSection() {
                         Email Marketing
                       </h4>
                       <p className="m-2 text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusamus error alias unde optio deleniti. Deserunt
-                        vero, ad a.
+                        Boost your sales, build customer loyalty, and increase
+                        brand awareness with effective email marketing
+                        strategies.
                       </p>
                     </div>
                     <IconMailbox width={44} height={44} />
