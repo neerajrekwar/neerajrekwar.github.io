@@ -114,7 +114,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="relative  m-auto min-h-screen max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
+      {/* <div className="relative  m-auto min-h-screen max-w-7xl flex-col justify-evenly border-blue-400 sm:flex sm:flex-row">
         <div className="relative visible  top-0 flex min-h-full basis-1/2 flex-col justify-between  border-rose-500 sm:gap-10">
           <div className="sticky top-0 will-change-transform overflow-hidden z-10 pt-10 items-center justify-center  border-green-500">
             <div className="flex flex-wrap border-yellow-400">
@@ -125,7 +125,7 @@ const StickyRelativeDemo: NextPage = () => {
             <div className="sm:pr-10 backdrop-blur-sm">
               <div className="max-w-2xl text-four ">
                 <h2 className="text-3xl text-five py-3 pb-3 font-semibold ">
-                  Well Is - Secure Password Generator
+                  EscapeStron - Secure Password Generator
                 </h2>
                 <div>
                   <p className="text-base ">
@@ -210,7 +210,7 @@ const StickyRelativeDemo: NextPage = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

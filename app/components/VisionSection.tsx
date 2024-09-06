@@ -334,10 +334,7 @@ export const VisionSection: React.FC = () => {
                   </span>
                 </div>
                 <ul className="flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-3 md:grid-rows-3  text-four rounded-lg m-2 h-auto ">
-                  <motion.li
-                    initial={{}}
-                    className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2  "
-                  >
+                  <motion.li className="col-span-2 flex items-center justify-center h-28 md:h-auto w-full md:w-auto p-1 m-2 bg-seven rounded-2xl bg-sevenh-28 md:h-auto w-full md:w-auto p-1 m-2  ">
                     <p className="basis-2/2 md:basis-1/2 md:text-3xl p-2">
                       online activity on smartphones 3hrs and 50min avg.{" "}
                     </p>
