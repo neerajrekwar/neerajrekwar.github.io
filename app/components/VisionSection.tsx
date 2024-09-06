@@ -729,10 +729,10 @@ export const VisionSection: React.FC = () => {
                   </p>
                   <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
-                      className="h-64  w-64"
+                      className="h-44  w-44"
                       src={"/projects/home/Analytics.svg"}
-                      width={300}
-                      height={200}
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>
@@ -750,8 +750,9 @@ export const VisionSection: React.FC = () => {
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
                       src={"/projects/home/Dev_productivity.svg"}
-                      width={300}
-                      height={200}
+                      className="h-44  w-44"
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>
@@ -766,8 +767,9 @@ export const VisionSection: React.FC = () => {
                   <div className=" flex justify-center p-10 items-center m-2 p-2 bg-seven rounded-md">
                     <Image
                       src={"/projects/home/Semantics.svg"}
-                      width={300}
-                      height={200}
+                      className="h-44  w-44"
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>
@@ -782,8 +784,9 @@ export const VisionSection: React.FC = () => {
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
                     <Image
                       src={"/projects/home/Accessibility.svg"}
-                      width={300}
-                      height={200}
+                      className="h-44  w-44"
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>
@@ -801,8 +804,9 @@ export const VisionSection: React.FC = () => {
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
                     <Image
                       src={"/projects/home/Dev_productivity.svg"}
-                      width={300}
-                      height={200}
+                      className="h-44  w-44"
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>
@@ -819,8 +823,9 @@ export const VisionSection: React.FC = () => {
                   <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
                     <Image
                       src={"/projects/home/Sitemap.svg"}
-                      width={300}
-                      height={200}
+                      className="h-44  w-44"
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>
@@ -835,8 +840,9 @@ export const VisionSection: React.FC = () => {
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
                       src={"/projects/home/Dev_productivity.svg"}
-                      width={300}
-                      height={200}
+                      className="h-44  w-44"
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>
@@ -849,10 +855,10 @@ export const VisionSection: React.FC = () => {
                   </p>
                   <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md ">
                     <Image
-                      className=""
                       src={"/projects/home/hosting.svg"}
-                      width={300}
-                      height={200}
+                      className="h-44  w-44"
+                      width={150}
+                      height={150}
                       alt="find best practice Analytice"
                     />
                   </div>

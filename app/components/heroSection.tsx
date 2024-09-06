@@ -1273,11 +1273,11 @@ export function HeroSection() {
           </div>
 
           <div className="absolute border-five bg-gradient-to-l from-primary from-1% to-transparent  h-full w-full   font-bold"></div>
-          <div className="absolute border-five bg-gradient-to-r from-primary from-1% to-transparent  h-full w-full  font-bold"></div>
+          <div className="absolute border-five bg-gradient-to-r from-primary from-0% to-transparent  h-full w-full  font-bold"></div>
           <div className="absolute border-five bg-gradient-to-t from-primary from-1% to-transparent  h-full w-full  font-bold"></div>
           <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r from-primary  justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
             <div className="absolute max-w-3xl m-auto">
-              <motion.h2 className="mx-4 font-bold text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl">
+              <motion.h2 className="mx-4  font-bold text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl ">
                 Have a Project in Mind?
               </motion.h2>
               <motion.p className="text-four font-normal mx-4 md:mx-10  my-4 max-w-2xl ">
@@ -1287,7 +1287,7 @@ export function HeroSection() {
                 concepts into tangible results.
               </motion.p>
               <div className="mx-4 md:mx-10">
-                <button className="inline-flex text-four h-10 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50">
+                <button className="inline-flex text-four h-10 items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50">
                   <a
                     href="/contact"
                     className="flex items-center font-medium  gap-4"

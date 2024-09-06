@@ -46,7 +46,13 @@ const ContactPage: React.FC = () => {
           title: "Message sent!",
           description: "Your message has been successfully sent.",
         });
-        setFormData({ name: "", mobile: "", email: "", subject: "", message: "" });
+        setFormData({
+          name: "",
+          mobile: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
       } else {
         toast({
           variant: "destructive",
@@ -72,7 +78,9 @@ const ContactPage: React.FC = () => {
           <li>nee</li>
         </ul>
         <ul className=" text-five">
-          <li className="flex flex-row gap-1">Reach at me &#9679; <CurrentTime /></li>
+          <li className="flex flex-row gap-1">
+            Reach at me &#9679; <CurrentTime />
+          </li>
         </ul>
       </div>
       <section>
@@ -81,12 +89,10 @@ const ContactPage: React.FC = () => {
             <h1 className="md:text-3xl text-2xl font-medium tracking-tight lg:text-5xl text-five font-bold mb-6">
               Connecting You with Us – Reach Out Anytime, Anywhere.
             </h1>
-            <div className="rounded-xl backdrop-brightness-150 overflow-hidden bg-[url('https://images.unsplash.com/photo-1724373506008-ab646f67067c?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] relative h-full w-full bg-cover bg-no-repeat bg-bottom">
-              <p className="z-10 relative rounded-t-xl h-14 text-sm text-four p-2 bg-[#ffffff69] backdrop-blur-sm">
-                <QuotesSlider />
-              </p>
-            </div>
-
+            <p className="z-10 rounded-xl h-14 text-sm text-four p-2 backdrop-blur-sm">
+              <QuotesSlider />
+            </p>
+            <div className="rounded-xl backdrop-brightness-150 overflow-hidden bg-[url('https://images.unsplash.com/photo-1724373506008-ab646f67067c?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  h-64 w-full bg-cover bg-no-repeat bg-bottom"></div>
           </div>
 
           <div className="basis-2/2 text-primary bg-secondary border-four md:w-[60%] aspect-square bg-gradient-to-r from-seven rounded-xl m-2 p-2 sm:w-[60%]">
@@ -177,7 +183,7 @@ const ContactPage: React.FC = () => {
               <div className="p-2">
                 <Button
                   type="submit"
-                  className="w-fit inline-flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-four hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-fit inline-flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-primary bg-four hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-five"
                 >
                   Send Message
                 </Button>
@@ -187,19 +193,21 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
       <section className="min-h-44 max-w-6xl m-auto">
-        <div className="basis-1/2 p-1 max-w-4xl m-auto justify-between my-16 ">
-          <h4 className="font-semibold text-five text-2xl">Admin Info</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, tempore.</p>
-          <div className="flex gap-4 my-1 text-four bg-seven rounded-md border-five p-4 items-end justify-evenly font-bold">
-            <p className="border-five md:text-2xl">● Delhi, Dwarka.</p>
+        <div className="basis-1/2 text-five p-1 max-w-4xl m-auto justify-between my-16 ">
+          <h4 className=" text-2xl">Admin Info</h4>
+          <p className="py-2 italic text-four">
+            Please feel free to contact me with any questions or concerns.
+          </p>
+          <div className="md:flex flex-col flex gap-4 my-1 text-four bg-seven rounded-md border-five p-4 items-start justify-evenly ">
+            <p className="border-five md:text-2xl">Delhi, Dwarka</p>
             {/* <p>Hin &#9679; Eng &#9679; Sans</p> */}
             <div>
-            <p>● Hindi</p>
-            <p>● English</p>
-            <p>● sankrit</p>
+              <p>Hindi</p>
+              <p>English</p>
+              <p>sankrit</p>
             </div>
             <div className="md:text-2xl">
-            ● <AdminWeather  />
+              <AdminWeather />
             </div>
           </div>
         </div>

@@ -20,9 +20,9 @@ export function AuroraBackgroundDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative flex flex-col gap-4 items-center justify-center px-4"
+          className="relative w-full  flex flex-col gap-4 items-center justify-center px-4 md:px-[14%]"
         >
-          <div className="max-w-8xl  text-left m-auto text-four">
+          <div className="w-full text-left m-auto text-four">
             <motion.div className="gap-2 flex mb-10 flex-row  w-fit p-1 pr-8 rounded-full bg-seven justify-start items-center text-semibold">
               <motion.div
                 whileDrag={{}}
@@ -57,7 +57,7 @@ export function AuroraBackgroundDemo() {
                   delay: 2,
                   duration: 1,
                 }}
-                className="font-semibold text-secondary"
+                className="font-semibold text-sm text-secondary"
               >
                 <motion.p
                   initial={{ opacity: 0, x: 10 }}
@@ -85,10 +85,10 @@ export function AuroraBackgroundDemo() {
                   }}
                   className="flex gap-1 h-4"
                 >
-                  <p className=" flex flex-row justify-start text-third items-center text-3xl">
+                  <p className=" flex flex-row justify-start text-third items-center text-xl">
                     &#8226;
                   </p>
-                  <p className="text-four flex flex-row justify-start items-center font-normal text-sm">
+                  <p className="text-four text-xs flex flex-row font-semibold justify-start items-center font-normal text-sm">
                     Available for freelance work
                   </p>
                 </motion.div>
@@ -126,7 +126,7 @@ export function AuroraBackgroundDemo() {
 
             <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
               <motion.button
-                className=" bg-secondary text-primary p-2 px-4 rounded-full   "
+                className="inline-flex text-four h-10 items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 transition={{
