@@ -220,7 +220,7 @@ export const VisionSection: React.FC = () => {
                   <div>
                     <p className="bg-seven p-3 rounded-2xl">
                       Would you like to learn more about a specific framework or
-                      discuss your project's requirements?
+                      discuss your project&apos;s requirements?
                     </p>
                     <div className="flex  justify-start">
                       <span className="p-1 m-2 bg-seven rounded-lg fill-five">
@@ -653,7 +653,7 @@ export const VisionSection: React.FC = () => {
                   </svg>
                   <h6 className="text-2xl py-2">Preventing Bugs</h6>
                   <p className="text-four">
-                    Test the application from the end-user's perspective.
+                    Test the application from the end-user&apos;s perspective.
                   </p>
                 </span>
               </div>
