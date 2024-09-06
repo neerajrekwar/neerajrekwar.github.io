@@ -12,10 +12,10 @@ export function AccordionDemo() {
     <>
       <div className="text-four min-h-screen flex flex-col justify-start items-start pt-20 ">
         <div className="w-full text-center md:text-xl p-2 m-auto">
-          <div className="py-3 text-2xl text-five md:text-4xl text-center">
+          <div className="pt-3 text-xl font-semibold sm:font-normal sm:text-2xl text-five md:text-4xl text-center">
             Frequently Asked Questions
           </div>
-          <p className="text-center text-base py-2 mb-8">
+          <p className="text-center text-base pb-2 mb-8">
             Feel free to ask me anything. I&apos;m here to help!
           </p>
           <Accordion
@@ -76,7 +76,7 @@ export function AccordionDemo() {
           </Accordion>
         </div>
       </div>
-      <div className="py-12 md:min-h-screen m-auto bg-custom-radial-md text-five border-seven flex flex-col justify-center items-center">
+      <div className="py-12  md:min-h-screen m-auto bg-primary bg-custom-radial-md text-five border-seven flex flex-col justify-center items-center">
         <h6 className="py-3 text-2xl  md:text-4xl text-center">
           Didn&apos;t find an answer?
         </h6>

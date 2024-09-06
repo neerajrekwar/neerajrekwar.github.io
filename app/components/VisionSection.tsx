@@ -325,7 +325,7 @@ export const VisionSection: React.FC = () => {
             <div className="bg-secondary my-12">
               <div className="md:flex-col text-primary max-w-6xl m-auto gap-2 py-4  flex-row-reverse">
                 <div className="flex items-center ">
-                  <h3 className="md:text-4xl text-2xl py-6 text-center m-auto max-w-3xl">
+                  <h3 className="md:text-4xl text-2xl py-6 text-center m-auto px-3 max-w-3xl">
                     Make a Innovative customization
                   </h3>
                 </div>
@@ -727,8 +727,11 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Analytics</h5>
                   <p className="py-2 font-normal">
                     Effortlessly monitor all aspects of your performance with
-                    our robust, GDPR-compliant <strong className="text-four">Analysis and Data insight,</strong> Google Analytics
-                    integration, and more.
+                    our robust, GDPR-compliant{" "}
+                    <strong className="text-four">
+                      Analysis and Data insight,
+                    </strong>{" "}
+                    Google Analytics integration, and more.
                   </p>
                   <div className="flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
@@ -744,8 +747,11 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Metadata</h5>
                   <p className="py-2 font-normal">
                     Ensure your page stands out with a compelling title and
-                    description, while our top-notch handles ensure <strong className="text-four"> search
-                      engine optimization.</strong>
+                    description, while our top-notch handles ensure{" "}
+                    <strong className="text-four">
+                      {" "}
+                      search engine optimization.
+                    </strong>
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
@@ -760,7 +766,8 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Semantics</h5>
                   <p className="py-2 font-normal">
                     Make sure to implement semantic tags on your websites to
-                    improve their <strong className="text-four">structure.</strong>
+                    improve their{" "}
+                    <strong className="text-four">structure.</strong>
                   </p>
                   <div className=" flex justify-center p-10 items-center m-2 p-2 bg-seven rounded-md">
                     <Image
@@ -774,8 +781,9 @@ export const VisionSection: React.FC = () => {
                 <div className="col-span-2 md:p-10  flex flex-col justify-start p-2">
                   <h5 className="text-2xl text-four">Accessibility</h5>
                   <p className="py-2 font-normal">
-                    Design inclusive and <strong className="text-four">accessible websites</strong> by utilizing alt
-                    tags, Tab Index, element tags, and more.
+                    Design inclusive and{" "}
+                    <strong className="text-four">accessible websites</strong>{" "}
+                    by utilizing alt tags, Tab Index, element tags, and more.
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
                     <Image
@@ -790,7 +798,10 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Lighthouse Scores</h5>
                   <p className="py-2 font-normal">
                     Ensure your page stands out with a compelling title and
-                    description, <strong className="text-four">while our top-notch handles ensure search</strong>
+                    description,{" "}
+                    <strong className="text-four">
+                      while our top-notch handles ensure search
+                    </strong>
                     engine optimization.
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md p-10">
@@ -806,7 +817,10 @@ export const VisionSection: React.FC = () => {
                   <h5 className="text-2xl text-four">Sitemap</h5>
                   <p className="py-2 font-normal">
                     We understand the importance of generating a sitemap that
-                    reflects your site&apos;s <strong className="text-four">structure for search bots.</strong> 
+                    reflects your site&apos;s{" "}
+                    <strong className="text-four">
+                      structure for search bots.
+                    </strong>
                   </p>
                   <div className=" flex justify-center items-center p-10 m-2 p-2 bg-seven rounded-md">
                     <Image
@@ -820,8 +834,9 @@ export const VisionSection: React.FC = () => {
                 <div className="col-span-2 rounded-md rounded-md md:p-10  flex flex-col justify-start p-2">
                   <h5 className="text-2xl text-four"> SSR</h5>
                   <p className="py-2 font-normal">
-                    Boost your website speed with <strong className="text-four">Server Side Rendering</strong> achieve faster load times
-                    and higher scores.
+                    Boost your website speed with{" "}
+                    <strong className="text-four">Server Side Rendering</strong>{" "}
+                    achieve faster load times and higher scores.
                   </p>
                   <div className=" flex justify-center items-center m-2 p-2 bg-seven rounded-md">
                     <Image
