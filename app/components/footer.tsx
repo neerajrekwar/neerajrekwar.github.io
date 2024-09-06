@@ -1,18 +1,22 @@
-"use client"
-import Image from 'next/image';
-import Link from 'next/link';
-import { Caveat } from 'next/font/google';
-import React, { useEffect, useState } from 'react';
-import InstaGallery from './InstaGallery';
-import { IconBrandXFilled, IconBrandLinkedin, IconBrandGithubFilled, IconBrandDiscordFilled, } from '@tabler/icons-react';
-import posts from "../blog/data/posts.json"
-import DataSet from './DataSet';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Caveat } from "next/font/google";
+import React, { useEffect, useState } from "react";
+import InstaGallery from "./InstaGallery";
+import {
+  IconBrandXFilled,
+  IconBrandLinkedin,
+  IconBrandGithubFilled,
+  IconBrandDiscordFilled,
+} from "@tabler/icons-react";
+import posts from "../blog/data/posts.json";
+import DataSet from "./DataSet";
 
 const caveat = Caveat({
   weight: "400",
   subsets: ["latin"],
 });
-
 
 interface Image {
   id: string;
@@ -31,9 +35,7 @@ async function fetchInstagramFeed(): Promise<Feed> {
   return data;
 }
 
-
 export default function Footer() {
-
   const [images, setImages] = useState<Image[]>([]);
 
   // useEffect(() => {
@@ -48,7 +50,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-primary border-t-2  bg-custom-radial-sm m-auto border-seven text-secondary">
+      <footer className="bg-primary bg-custom-radial-sm m-auto border-seven text-secondary">
         <div className="p-4 text-four  flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
           <ul className="flex  gap-2 mb-8 items-start flex-col">
             <li className="">
@@ -64,25 +66,39 @@ export default function Footer() {
             </li>
           </ul>
           <ul className="flex gap-2 text-five h-fit">
-            <li className='aspect-square flex justify-center items-center  '>
-              <a href="https://x.com/neerajrekwar" target="_blank" className='aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four '>
+            <li className="aspect-square flex justify-center items-center  ">
+              <a
+                href="https://x.com/neerajrekwar"
+                target="_blank"
+                className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four "
+              >
                 <IconBrandXFilled />
-
               </a>
             </li>
-            <li className='aspect-square flex justify-center items-center  '>
-              <a href="https://" target="_blank" className='aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four '>
-
+            <li className="aspect-square flex justify-center items-center  ">
+              <a
+                href="https://"
+                target="_blank"
+                className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four "
+              >
                 <IconBrandLinkedin />
               </a>
             </li>
-            <li className='aspect-square flex justify-center items-center  '>
-              <a href="https://" target="_blank" className='aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four '>
+            <li className="aspect-square flex justify-center items-center  ">
+              <a
+                href="https://"
+                target="_blank"
+                className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four "
+              >
                 <IconBrandGithubFilled />
               </a>
             </li>
-            <li className='aspect-square flex justify-center items-center  '>
-              <a href="https://" target="_blank" className='aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four '>
+            <li className="aspect-square flex justify-center items-center  ">
+              <a
+                href="https://"
+                target="_blank"
+                className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four "
+              >
                 <IconBrandDiscordFilled />
               </a>
             </li>
@@ -91,7 +107,6 @@ export default function Footer() {
         <div className=" py-10  border-lime-400 max-w-7xl m-auto mx-auto grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-1.25 justify-center items-start h-auto">
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-
               <h6 className="text-xl text-five">About</h6>
             </div>
             <ul className=" text-sm ">
@@ -150,13 +165,15 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-
               <h6 className="text-xl text-five">Latest News</h6>
             </div>
             <ul>
               {posts.map((post) => (
-                <li key={post.slug} className='flex gap-1 m justify-start items-start'>
-                  <div className='basis-1/4 m-1 aspect-square'>
+                <li
+                  key={post.slug}
+                  className="flex gap-1 m justify-start items-start"
+                >
+                  <div className="basis-1/4 m-1 aspect-square">
                     {post.imageUrl ? (
                       <Image
                         className="w-full rounded  aspect-square object-cover"
@@ -169,22 +186,31 @@ export default function Footer() {
                       <div>No image available</div>
                     )}
                   </div>
-                  <div className='basis-3/4 m-1 flex justify-start items-start flex-col'>
+                  <div className="basis-3/4 m-1 flex justify-start items-start flex-col">
                     {post.title ? (
                       <Link
-                      className="md:text-sm  text-four "
-                      href={`/blog/${post.slug}`}
-                    >
-                      {post.title}
-                    </Link>
-                    ):(<div className='md:text-sm  text-four '>title in processing</div>)}
-                    <div className='flex gap-1'>
-                    {post.author ? (
-                      <p className='text-sm opacity-50'>{post.author}</p>
-                    ) : (<p className='text-sm opacity-50'>unknown</p>)} -
-                    {post.date ? (
-                      <p className='text-sm opacity-50'>{post.date}</p>
-                    ) : (<p className='text-sm opacity-50'>unknown</p>)}
+                        className="md:text-sm  text-four "
+                        href={`/blog/${post.slug}`}
+                      >
+                        {post.title}
+                      </Link>
+                    ) : (
+                      <div className="md:text-sm  text-four ">
+                        title in processing
+                      </div>
+                    )}
+                    <div className="flex gap-1">
+                      {post.author ? (
+                        <p className="text-sm opacity-50">{post.author}</p>
+                      ) : (
+                        <p className="text-sm opacity-50">unknown</p>
+                      )}{" "}
+                      -
+                      {post.date ? (
+                        <p className="text-sm opacity-50">{post.date}</p>
+                      ) : (
+                        <p className="text-sm opacity-50">unknown</p>
+                      )}
                     </div>
                   </div>
                 </li>
@@ -193,7 +219,6 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-
               <h6 className="text-xl text-five">Informartion</h6>
             </div>
             <ul className=" text-four text-sm">
@@ -246,29 +271,25 @@ export default function Footer() {
           </div>
           <div className="p-4 mb-10 text-four">
             <div className="flex gap-2 mb-8 items-center">
-
-              <h6 className='text-xl text-five'>Instagram</h6>
+              <h6 className="text-xl text-five">Instagram</h6>
             </div>
             <ul className="">
               <div className="mx-auto">
                 <div className="flex justify-center space-x-4">
                   {/* <InstaGallery /> */}
-                  <DataSet/>
-
+                  <DataSet />
                 </div>
               </div>
-
             </ul>
           </div>
         </div>
         <div className="text-xs px-4 max-w-7xl   m-auto">
-          <div className='py-1 opacity-50 flex justify-between max-w-7xl  m-auto  items-center'>
-            <span >Copyright ©2023 Neeraj</span>
-            <span >build by me</span>
+          <div className="py-1 opacity-50 flex justify-between max-w-7xl  m-auto  items-center">
+            <span>Copyright ©2023 Neeraj</span>
+            <span>build by me</span>
           </div>
         </div>
       </footer>
-
     </>
   );
 }

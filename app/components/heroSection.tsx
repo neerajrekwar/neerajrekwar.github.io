@@ -13,7 +13,19 @@ import { CoverDemo } from "./CoverDemo";
 import { MultiStepLoader } from "./MultiStepLoader";
 import { Source_Code_Pro } from "next/font/google";
 import ReactMarkdown from "react-markdown";
-import { IconAdFilled, IconBrandGoogleAnalytics, IconBuildingStore, IconCalendarClock, IconCircleArrowUpRightFilled, IconMail, IconMailbox, IconSearch, IconSocial, IconSortAscendingSmallBig, IconWorldWww } from "@tabler/icons-react";
+import {
+  IconAdFilled,
+  IconBrandGoogleAnalytics,
+  IconBuildingStore,
+  IconCalendarClock,
+  IconCircleArrowUpRightFilled,
+  IconMail,
+  IconMailbox,
+  IconSearch,
+  IconSocial,
+  IconSortAscendingSmallBig,
+  IconWorldWww,
+} from "@tabler/icons-react";
 import { ParallaxScrollDemo } from "./ParallaxScrollImages";
 import { InfiniteImageScroller } from "./InfiniteImageScroller";
 
@@ -348,9 +360,7 @@ export function HeroSection() {
                         Accusamus error alias unde optio deleniti.
                       </p>
                     </div>
-                    <IconSearch width={44}
-                      height={44} />
-
+                    <IconSearch width={44} height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
@@ -368,8 +378,7 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconSocial width={44}
-                      height={44} />
+                    <IconSocial width={44} height={44} />
                   </motion.li>
 
                   <motion.li
@@ -388,8 +397,7 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconWorldWww width={44}
-                      height={44} />
+                    <IconWorldWww width={44} height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
@@ -407,8 +415,7 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconBuildingStore width={44}
-                      height={44} />
+                    <IconBuildingStore width={44} height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
@@ -426,8 +433,7 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconBrandGoogleAnalytics width={44}
-                      height={44} />
+                    <IconBrandGoogleAnalytics width={44} height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
@@ -445,8 +451,7 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconAdFilled width={44}
-                      height={44} />
+                    <IconAdFilled width={44} height={44} />
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, x: 40, y: 40 }}
@@ -464,9 +469,7 @@ export function HeroSection() {
                         vero, ad a.
                       </p>
                     </div>
-                    <IconMailbox width={44}
-                      height={44} />
-
+                    <IconMailbox width={44} height={44} />
                   </motion.li>
                 </motion.ul>
               </div>
@@ -867,20 +870,20 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="m-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
+                    className="m-2 col-span-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 basis-1/2 text-4xl md:text-2xl m-2 font-bold text-six"
+                      className="px-2 basis-1/2 text-4xl md:text-5xl m-2 font-bold text-six"
                     >
                       versions to access the latest performance optimizations
                     </motion.h4>
-                    <p className="m-2 text-four">
-                      Accusamus error alias unde optio deleniti. Deserunt vero,
-                      ad a.
+                    <p className="m-2 text-four px-2">
+                      The best way to access the latest performance
+                      optimizations is to stay informed about updates.
                     </p>
                   </motion.li>
                   <motion.li
@@ -888,7 +891,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.9, delay: 0.6 }}
-                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-secondary aspect-square"
+                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
                   >
                     <CoverDemo />
                   </motion.li>
@@ -908,7 +911,10 @@ export function HeroSection() {
                     >
                       Rigorously test your application
                     </motion.h4>
-                    <p className="m-2 text-four">Lorem ipsum dolor sit amet</p>
+                    <p className="m-2 text-four px-2">
+                      {" "}
+                      satisfaction, minimize risks, and improve
+                    </p>
                   </motion.li>
                 </motion.ul>
               </div>
@@ -984,7 +990,7 @@ export function HeroSection() {
                       }}
                       className="text-2xl  font-semibold md:text-3xl lg:text-4xl pt-4 px-2 font-bold  "
                     >
-                     The Amazonian Treasure Expedition
+                      The Amazonian Treasure Expedition
                     </motion.h2>
                     <motion.p
                       initial={{ opacity: 0, x: 30 }}
@@ -997,7 +1003,8 @@ export function HeroSection() {
                       }}
                       className="px-2  md:text-md py-2  "
                     >
-                      A group of treasure hunters discover a hidden map leading to a lost Inca city filled with priceless artifacts.
+                      A group of treasure hunters discover a hidden map leading
+                      to a lost Inca city filled with priceless artifacts.
                     </motion.p>
                     <motion.a
                       initial={{ opacity: 0, x: 30 }}
@@ -1086,7 +1093,9 @@ export function HeroSection() {
                       }}
                       className="px-2  md:text-md py-2  "
                     >
-                      It can be a great way to express yourself capture moments, and make beautiful memories. you can create stunning images that can last a lifetime.
+                      It can be a great way to express yourself capture moments,
+                      and make beautiful memories. you can create stunning
+                      images that can last a lifetime.
                     </motion.p>
                     <motion.a
                       initial={{ opacity: 0, x: 30 }}
@@ -1241,9 +1250,7 @@ export function HeroSection() {
         </div>
       </section>
       <section className="bgrid2  border-five ">
-
         <div className="flex relative min-h-screen  justify-center border-five  items-center rounded-2xl">
-
           <div className="text-4xl font-bold overflow-x-hidden max-screen">
             <InfiniteImageScroller
               direction="left"
@@ -1263,28 +1270,35 @@ export function HeroSection() {
             />
           </div>
 
-          <div className="absolute border-five bg-gradient-to-l from-[#ffffffde] from-1% to-transparent  h-full w-full   font-bold"></div>
-          <div className="absolute border-five bg-gradient-to-r from-[#ffffffde] from-1% to-transparent  h-full w-full  font-bold"></div>
-          <div className="absolute border-five bg-gradient-to-t from-[#ffffffde] from-1% to-transparent  h-full w-full  font-bold"></div>
-          <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r from-[#ffffff]  justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
+          <div className="absolute border-five bg-gradient-to-l from-primary from-1% to-transparent  h-full w-full   font-bold"></div>
+          <div className="absolute border-five bg-gradient-to-r from-primary from-1% to-transparent  h-full w-full  font-bold"></div>
+          <div className="absolute border-five bg-gradient-to-t from-primary from-1% to-transparent  h-full w-full  font-bold"></div>
+          <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r from-primary  justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
             <div className="absolute max-w-3xl m-auto">
               <motion.h2 className="mx-4 font-bold text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl">
                 Have a Project in Mind?
               </motion.h2>
-              <motion.p className="text-four mx-4 md:mx-10  my-4 max-w-2xl ">
-                I&apos;m excited to be in touch with you! Whether you&apos;re prepared to launch a brand new website or give an existing one a fresh look, I&apos;m available to assist in transforming your concepts into tangible results.
+              <motion.p className="text-four font-normal mx-4 md:mx-10  my-4 max-w-2xl ">
+                I&apos;m excited to be in touch with you! Whether you&apos;re
+                prepared to launch a brand new website or give an existing one a
+                fresh look, I&apos;m available to assist in transforming your
+                concepts into tangible results.
               </motion.p>
-              <motion.a className="bg-secondary ">
-                <div className="text-base flex w-fit md:mx-10 mx-4 my-6 p-2 px-4 text-four bg-seven  gap-2 rounded-full">
-                  <IconCalendarClock /> Let&apos;s talk
-                </div>
-              </motion.a>
+              <div className="mx-4 md:mx-10">
+                <button className="inline-flex text-four h-10 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50">
+                  <a
+                    href="/contact"
+                    className="flex items-center font-medium  gap-4"
+                  >
+                    <IconCalendarClock />
+                    Let&apos;s talk
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-
       </section>
-
     </>
   );
 }
