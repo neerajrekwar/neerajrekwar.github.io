@@ -76,7 +76,7 @@ export function AccordionDemo() {
           </Accordion>
         </div>
       </div>
-      <div className="py-12  md:min-h-screen m-auto bg-primary bg-custom-radial-md text-five border-seven flex flex-col justify-center items-center">
+      <div className="py-12  md:min-h-screen m-auto bg-primary bg-custom-radial-lg text-five border-seven flex flex-col justify-center items-center">
         <h6 className="py-3 text-2xl  md:text-4xl text-center">
           Didn&apos;t find an answer?
         </h6>
