@@ -34,7 +34,7 @@ export function AuroraBackgroundDemo() {
                   stiffness: 260,
                   damping: 25,
                   delay: 4,
-                  duration: 2,
+                  duration: 4,
                   ease: [0.6, 0.05, -0.01, 0.14],
                 }}
               >
