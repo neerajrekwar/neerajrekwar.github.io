@@ -43,7 +43,7 @@ const DeviceAddress: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 4, duration: 2 }}
+            transition={{ delay: 4 }}
             className="flex text-xs overflow-y-hidden sm:text-sm gap-1 text-secondary justify-center items-center"
           >
             {/* <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2> */}
@@ -54,11 +54,7 @@ const DeviceAddress: React.FC = () => {
           </motion.div>
         ) : (
           <div className="text-center  p-2">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1, duration: 0.2 }}
-            >
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               just a moment...
             </motion.p>
           </div>

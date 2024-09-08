@@ -18,7 +18,8 @@ const Weather: React.FC = () => {
           longitude: longitude,
           current_weather: true,
           temperature_unit: "celsius", // or "fahrenheit" if preferred
-          cloud_cover: "pecent",
+          hourly: "cloudcover,diffuse_radiation,rain,wind_speed_10m", // Adding hourly wind speed data
+          wind_speed_unit: "kmh", // or "mph", "ms", "knots"
           timezone: "auto",
         },
       };
@@ -55,17 +56,35 @@ const Weather: React.FC = () => {
   return (
     <div>
       {error ? (
-        <motion.p
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 4, duration: 2 }}
-        >
-          {error}
-        </motion.p>
+        <motion.p>{error}</motion.p>
       ) : weather ? (
         <div className="sm:text-sm">
           <motion.div>
-            <p className="">{weather.current_weather.temperature}°C</p>
+            <motion.p
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 4 }}
+            >
+              {weather.current_weather.temperature}°C
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 6 }}
+            >
+              Cloud {weather.hourly.cloudcover[0]}%
+            </motion.p>
+            {/* <p>Diffuse Radiation: {weather.hourly.diffuse_radiation[0]} W/m²</p> */}
+            {/* <p>Rain: {weather.hourly.rain[0]} mm</p>{" "} */}
+            {/* Display hourly rain data */}
+            <motion.p
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 8 }}
+            >
+              Wind {weather.hourly.wind_speed_10m[0]} km/h
+            </motion.p>{" "}
+            {/* Display hourly wind speed */}
           </motion.div>
         </div>
       ) : (

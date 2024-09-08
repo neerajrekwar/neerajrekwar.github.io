@@ -5,8 +5,6 @@ import DeviceAddress from "./DeviceAddress";
 import { AuroraBackgroundDemo } from "./BackgroundAurra";
 import Weather from "./WeatherApp";
 
-
-
 const alata = Alata({
   weight: "400",
   subsets: ["latin"],
@@ -29,13 +27,13 @@ export default function HomeSectionHeader() {
                 className=" text-secondary text-3xl sm:text-4xl md:text-5xl font-bold"
               >
                 {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
-                nee.
+                nee
               </Link>
             </div>
             <div className="">
               <div className="text-secondary pt-1  font-bold">
                 <DeviceAddress />
-                <Weather/>
+                <Weather />
               </div>
             </div>
           </div>
