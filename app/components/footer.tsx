@@ -277,7 +277,7 @@ export default function Footer() {
               <div className="mx-auto">
                 <div className="flex justify-center space-x-4">
                   {/* <InstaGallery /> */}
-                  <DataSet />
+                  {/* <DataSet /> */}
                 </div>
               </div>
             </ul>

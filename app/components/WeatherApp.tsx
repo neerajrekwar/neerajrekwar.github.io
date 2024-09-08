@@ -18,6 +18,7 @@ const Weather: React.FC = () => {
           longitude: longitude,
           current_weather: true,
           temperature_unit: "celsius", // or "fahrenheit" if preferred
+          cloud_cover: "pecent",
           timezone: "auto",
         },
       };
@@ -54,16 +55,18 @@ const Weather: React.FC = () => {
   return (
     <div>
       {error ? (
-        <p>{error}</p>
+        <motion.p
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 4, duration: 2 }}
+        >
+          {error}
+        </motion.p>
       ) : weather ? (
         <div className="sm:text-sm">
           <motion.div>
-            <p className="">
-              {weather.current_weather.temperature}°C
-            </p>
-            <p className="">Clear Sky</p>
+            <p className="">{weather.current_weather.temperature}°C</p>
           </motion.div>
-          
         </div>
       ) : (
         <p></p>

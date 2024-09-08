@@ -324,12 +324,12 @@ export const VisionSection: React.FC = () => {
             <div className="bg-secondary my-12">
               <div className="md:flex-col text-primary max-w-6xl m-auto gap-2 py-4  flex-row-reverse">
                 <div className="flex items-center ">
-                  <h3 className="md:text-4xl text-2xl py-6 text-center m-auto px-3 max-w-3xl">
+                  <h3 className="md:text-4xl text-2xl opacity-50 py-6 text-center m-auto px-3 max-w-3xl">
                     Make a Innovative customization
                   </h3>
                 </div>
                 <div className="flex justify-center my-8">
-                  <span className="p-2 px-3 bg-seven  border-seven border rounded-full w-fit ">
+                  <span className="p-2 px-3 text-four bg-seven border-seven border rounded-full w-fit ">
                     How &apos;s need it
                   </span>
                 </div>
@@ -705,12 +705,11 @@ export const VisionSection: React.FC = () => {
           </div>
           <div className="border-third">
             <div className=" py-6 border-yellow-500 bg-secondary p-2">
-              <h1 className="md:text-2xl text-xl text-primary py-6 text-center m-auto max-w-3xl">
-                Maximized efficiency with fully automated best practices and
-                fully supported advanced tricks.
+              <h1 className="md:text-2xl text-xl opacity-50 text-primary py-6 text-center m-auto max-w-3xl">
+                Services and compitable web3 websites
               </h1>
 
-              <div className="flex justify-center ">
+              <div className="flex py-16  justify-center ">
                 <span className="p-2 px-3 text-four bg-seven border-seven border rounded-full w-fit ">
                   SEO & Performance
                 </span>
@@ -718,8 +717,10 @@ export const VisionSection: React.FC = () => {
 
               <div className="flex flex-col max-w-6xl m-auto text-primary  md:grid md:grid-flow-row-dense md:grid-cols-4 md:grid-rows-2  text-five rounded-lg m-2 max-h-fit gap-4">
                 <div className="col-span-2   md:p-10  flex flex-col justify-start   p-2">
-                  <h5 className="text-2xl text-four">Analytics</h5>
-                  <p className="py-2 font-normal">
+                  <h5 className="text-xl text-four">
+                    Analytics & data insight
+                  </h5>
+                  <p className="py-2 text-sm font-normal">
                     Effortlessly monitor all aspects of your performance with
                     our robust, GDPR-compliant{" "}
                     <strong className="text-four">
@@ -738,8 +739,8 @@ export const VisionSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-2   md:p-10  flex flex-col justify-start p-2 ">
-                  <h5 className="text-2xl text-four">Metadata</h5>
-                  <p className="py-2 font-normal">
+                  <h5 className="text-xl text-four">Metadata Google works</h5>
+                  <p className="py-2 text-sm font-normal">
                     Ensure your page stands out with a compelling title and
                     description, while our top-notch handles ensure{" "}
                     <strong className="text-four">
@@ -758,8 +759,8 @@ export const VisionSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-2 md:p-10  flex flex-col justify-start p-2 ">
-                  <h5 className="text-2xl text-four">Semantics</h5>
-                  <p className="py-2 font-normal">
+                  <h5 className="text-xl text-four">Semantic structure</h5>
+                  <p className="py-2 text-sm font-normal">
                     Make sure to implement semantic tags on your websites to
                     improve their{" "}
                     <strong className="text-four">structure.</strong>
@@ -775,8 +776,10 @@ export const VisionSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-2 md:p-10  flex flex-col justify-start p-2">
-                  <h5 className="text-2xl text-four">Accessibility</h5>
-                  <p className="py-2 font-normal">
+                  <h5 className="text-xl text-four">
+                    Accessibility in devices
+                  </h5>
+                  <p className="py-2 text-sm font-normal">
                     Design inclusive and{" "}
                     <strong className="text-four">accessible websites</strong>{" "}
                     by utilizing alt tags, Tab Index, element tags, and more.
@@ -791,9 +794,9 @@ export const VisionSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="col-span-2  md:p-10  flex flex-col justify-start p-2">
-                  <h5 className="text-2xl text-four">Lighthouse Scores</h5>
-                  <p className="py-2 font-normal">
+                <div className="col-span-2   md:p-10  flex flex-col justify-start p-2">
+                  <h5 className="text-xl text-four">Lighthouse Scores</h5>
+                  <p className="py-2 text-sm font-normal">
                     Ensure your page stands out with a compelling title and
                     description,{" "}
                     <strong className="text-four">
@@ -812,8 +815,8 @@ export const VisionSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-2 md:p-10  flex flex-col justify-start p-2">
-                  <h5 className="text-2xl text-four">Sitemap</h5>
-                  <p className="py-2 font-normal">
+                  <h5 className="text-xl text-four">Sitemap browsing</h5>
+                  <p className="py-2 text-sm font-normal">
                     We understand the importance of generating a sitemap that
                     reflects your site&apos;s{" "}
                     <strong className="text-four">
@@ -831,8 +834,8 @@ export const VisionSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-2 rounded-md rounded-md md:p-10  flex flex-col justify-start p-2">
-                  <h5 className="text-2xl text-four"> SSR</h5>
-                  <p className="py-2 font-normal">
+                  <h5 className="text-xl text-four"> SSR fast accessible</h5>
+                  <p className="py-2 text-sm font-normal">
                     Boost your website speed with{" "}
                     <strong className="text-four">Server Side Rendering</strong>{" "}
                     achieve faster load times and higher scores.
@@ -848,8 +851,8 @@ export const VisionSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-2  md:p-10 rounded-md  md:p-10  flex flex-col justify-start  p-2">
-                  <h5 className="text-2xl text-four">Hosting</h5>
-                  <p className="py-2 font-normal">
+                  <h5 className="text-xl text-four">Hosting matters</h5>
+                  <p className="py-2 text-sm font-normal">
                     Experience lightning-fast page loading, no matter where you
                     are in the world.
                   </p>

@@ -24,7 +24,7 @@ export function TypewriterEffectSmoothDemo() {
     <div className="flex  flex-col items-center justify-center  md:h-screen">
       <div className="flex flex-col items-center justify-center h-[40rem] w-full">
         <p className="text-four text-xs sm:text-base text-five">
-          Embrace the new, seek innovation, and discover possibilities.
+          embrace the new, seek innovation, and discover possibilities.
         </p>
         <TypewriterEffectSmooth words={words} />
       </div>
