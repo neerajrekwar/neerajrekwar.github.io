@@ -44,7 +44,7 @@ const DeviceAddress: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 4 }}
-            className="flex text-xs overflow-y-hidden sm:text-sm gap-1 text-secondary justify-center items-center"
+            className="flex text-sm text-five  md:text-md overflow-y-hidden sm:text-sm gap-1 text-secondary justify-center items-center"
           >
             {/* <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2> */}
             {/* <p className="text-lg"><strong>IP:</strong> {address.ip}</p> */}
@@ -55,9 +55,7 @@ const DeviceAddress: React.FC = () => {
           </motion.div>
         ) : (
           <div className="text-center  p-2">
-            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              just a moment...
-            </motion.p>
+            <motion.p>just a moment...</motion.p>
           </div>
         )}
       </div>

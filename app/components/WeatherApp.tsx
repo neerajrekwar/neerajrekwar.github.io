@@ -1,10 +1,13 @@
 // components/Weather.tsx
 "use client";
-import { IconCloudFilled, IconTemperature, IconWind } from "@tabler/icons-react";
+import {
+  IconCloudFilled,
+  IconTemperature,
+  IconWind,
+} from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-
 
 const Weather: React.FC = () => {
   const [weather, setWeather] = useState<any>(null);
@@ -64,31 +67,30 @@ const Weather: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 6, duration: 2 }}
-        >{error}</motion.p>
+        >
+          {error}
+        </motion.p>
       ) : weather ? (
-        <div className="sm:text-sm ">
+        <div className="text-sm text-five  md:text-md">
           <motion.div
             initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: .7, x: 0 }}
-            transition={{ delay: 4,
-              ease: "easeInOut",
-              
-              }}
-              
-            
-            className=" flex flex-col opacity-75 sm:flex-row md:gap-2  md:p-2   rounded-md items-end">
+            animate={{ opacity: 0.7, x: 0 }}
+            transition={{ delay: 4, ease: "easeInOut" }}
+            className=" flex flex-col opacity-75 sm:flex-row md:gap-2  md:p-2   rounded-md items-end"
+          >
             <motion.p
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 4,  ease: "easeInOut", }}
-              className="flex w-fit gap-2 md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
+              transition={{ delay: 4, ease: "easeInOut" }}
+              className="flex w-fit  md:bg-seven md:p-1  rounded-full md:px-2 items-center justify-center"
             >
-              <IconTemperature />{weather.current_weather.temperature}°C
+              <IconTemperature />
+              {weather.current_weather.temperature}°C
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 6 ,  ease: "easeInOut",}}
+              transition={{ delay: 6, ease: "easeInOut" }}
               className=" flex w-fit gap-2 md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
             >
               <IconCloudFilled /> {weather.hourly.cloudcover[0]}%
@@ -99,7 +101,7 @@ const Weather: React.FC = () => {
             <motion.p
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 8 ,  ease: "easeInOut",}}
+              transition={{ delay: 8, ease: "easeInOut" }}
               className=" flex w-fit gap-2 md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
             >
               <IconWind /> {weather.hourly.wind_speed_10m[0]} km/h

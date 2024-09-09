@@ -23,7 +23,12 @@ export function AuroraBackgroundDemo() {
           className="relative w-full  flex flex-col gap-4 items-center justify-center px-4 md:px-[14%]"
         >
           <div className="w-full text-left m-auto text-four">
-            <motion.div className="gap-2 flex mb-10 flex-row  w-fit p-1 pr-8 rounded-full bg-seven justify-start items-center text-semibold">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 3, delay: 2 }}
+              className="gap-2 backdrop-blur-sm flex mb-10 flex-row  w-fit p-1 pr-8 rounded-full bg-seven justify-start items-center text-semibold"
+            >
               <motion.div
                 whileDrag={{}}
                 initial={{ rotate: 160, scale: 0.2, x: -200, x2: 0, y: -200 }}
@@ -57,12 +62,12 @@ export function AuroraBackgroundDemo() {
                   delay: 2,
                   duration: 1,
                 }}
-                className="font-semibold text-sm text-secondary"
+                className="font-semibold opacity-75 text-sm text-five"
               >
                 <motion.p
                   initial={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 0.7, x: 0 }}
+                  animate={{ opacity: 0.7, x: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 260,
@@ -102,7 +107,7 @@ export function AuroraBackgroundDemo() {
                 duration: 0.8,
                 ease: [0.68, -0.55, 0.27, 1.55],
               }}
-              className="relative text-secondary font-bold z-10 md:pb-4 text-3xl  md:text-7xl   sm:text-4xl text-left "
+              className="relative text-four font-bold z-10 md:pb-4 text-3xl  md:text-7xl   sm:text-4xl text-left "
             >
               Build the right to way <br />
               <div>
@@ -126,7 +131,7 @@ export function AuroraBackgroundDemo() {
 
             <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
               <motion.button
-                className="inline-flex text-four h-10 items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50"
+                className="inline-flex text-four  items-center justify-center rounded-full border border-seven bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,var(--five))] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 transition={{
@@ -139,7 +144,7 @@ export function AuroraBackgroundDemo() {
                 whileHover={{ scale: 1.1 }}
               >
                 <Link
-                  href="https://1b7b70d3-f411-4cfb-9f19-e2cd3227a33d-00-1e36r1z5gi36g.pike.replit.dev/"
+                  href="/"
                   className=" rounded-full 
                  uppercase  p-2 px-4  text-center text-sm"
                 >
