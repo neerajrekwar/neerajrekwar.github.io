@@ -123,7 +123,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <span className="px-4 text-four  text-sm font-semibold sm:font-normal ">
-                  Dwarka sec 7 New Delhi Delhi India 110075
+                Sec 7 Dwarka New Delhi, Delhi, India 110075
                 </span>
               </li>
               <li className="flex mb-4 justify-start items-center">

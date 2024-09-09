@@ -388,7 +388,7 @@ export function HeroSection() {
                     transition={{ delay: 1 }}
                     className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
                   >
-                    <div className="md:pb-4 text-five">
+                    <div className="md:pb-4  text-five">
                       <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
                         How to Grow Online
                       </h4>

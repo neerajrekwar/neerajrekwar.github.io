@@ -50,6 +50,7 @@ const DeviceAddress: React.FC = () => {
             {/* <p className="text-lg"><strong>IP:</strong> {address.ip}</p> */}
             <IconLocationFilled className="h-4 sm:h-10 " />
             <p className=""> {address.city},</p>
+            {/* <p className=""> {address.region},</p> */}
             <p className=""> {address.country}</p>
           </motion.div>
         ) : (

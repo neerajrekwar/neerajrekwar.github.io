@@ -198,19 +198,29 @@ const ContactPage: React.FC = () => {
           <p className="py-2 italic text-four">
             Please feel free to contact me with any questions or concerns.
           </p>
-          <div className="md:flex flex-col flex gap-4 my-1 text-four bg-seven rounded-md border-five p-4 items-start justify-evenly ">
-            <p className="border-five md:text-2xl">Delhi, Dwarka</p>
+          
+            <div className="flex flex-col gap-8">
+            <div >
+              <h5>Lives at:</h5>
+              <ul className=" md:text-xl md:flex gap-2">
+                <li>New Delhi, Dwarka</li>
+                
+              </ul>
+            </div>
             {/* <p>Hin &#9679; Eng &#9679; Sans</p> */}
             <div>
-              <p>Hindi</p>
-              <p>English</p>
-              <p>sankrit</p>
+              <h5>Languages:</h5>
+              <ul className=" md:text-xl md:flex gap-2">
+                <li>Hindi</li>
+                <li>Sanskrit</li>
+                <li>English</li>
+              </ul>
             </div>
-            <div className="md:text-2xl">
+            <div className="md:text-xl">
               <AdminWeather />
             </div>
+            </div>
           </div>
-        </div>
       </section>
     </main>
   );

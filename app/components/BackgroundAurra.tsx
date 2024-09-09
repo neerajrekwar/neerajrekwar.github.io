@@ -88,7 +88,7 @@ export function AuroraBackgroundDemo() {
                   <p className=" flex flex-row justify-start text-third items-center text-xl">
                     &#8226;
                   </p>
-                  <p className="text-four text-xs flex flex-row font-semibold justify-start items-center font-normal text-sm">
+                  <p className="text-four text-xs flex flex-row justify-start items-center font-normal text-sm">
                     Available for freelance work
                   </p>
                 </motion.div>
