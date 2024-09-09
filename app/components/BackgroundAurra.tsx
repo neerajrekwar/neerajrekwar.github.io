@@ -31,13 +31,19 @@ export function AuroraBackgroundDemo() {
             >
               <motion.div
                 whileDrag={{}}
-                initial={{ rotate: 160, scale: 0.2, x: -200, x2: 0, y: -200 }}
-                animate={{ rotate: 360, scale: 0.1, x: 400, x2: 0, y: 200 }}
+                initial={{
+                  rotate: 160,
+                  scale: 0.2,
+                  x: -200,
+                  x2: 0,
+                  y: -200,
+                }}
+                animate={{ rotate: 360, scale: 0.1, x: 400, x2: 400, y: 200 }}
                 whileInView={{ rotate: 0, scale: 1, x2: -1040, x: 0, y: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 260,
-                  damping: 25,
+                  damping: 18,
                   delay: 4,
                   duration: 4,
                   ease: [0.6, 0.05, -0.01, 0.14],
@@ -131,7 +137,7 @@ export function AuroraBackgroundDemo() {
 
             <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
               <motion.button
-                className="inline-flex text-four  items-center justify-center rounded-full border border-seven bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,var(--five))] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50"
+                className="inline-flex text-four  items-center justify-center rounded-full border border-four bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,var(--five))] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 transition={{
