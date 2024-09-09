@@ -31,7 +31,7 @@ export default function HomeSectionHeader() {
               </Link>
             </div>
             <div className="">
-              <div className="text-secondary pt-1 md:flex justify-center items-center gap-4 font-bold">
+              <div className="text-secondary pt-1 md:flex justify-center overflow-hidden items-center gap-4 font-bold">
                 <DeviceAddress />
                 <Weather />
               </div>
