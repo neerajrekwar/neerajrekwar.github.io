@@ -72,7 +72,7 @@ export function AuroraBackgroundDemo() {
               >
                 <motion.p
                   initial={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 0.7, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   animate={{ opacity: 0.7, x: 0 }}
                   transition={{
                     type: "spring",
