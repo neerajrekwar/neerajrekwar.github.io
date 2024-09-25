@@ -73,7 +73,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <main className="md:p-8 p-2 bg-custom-radial-md bg-primary min-h-screen">
-      <div className="flex justify-between px-2 rounded-full bg-seven items-center text-four text-xs h-[3vh] mb-8">
+      <div className="flex justify-between px-2 rounded-full items-center text-four text-xs h-[3vh] mb-8">
         <ul className="flex font-semibold text-five sm:text-xl">
           <li>nee</li>
         </ul>
@@ -89,7 +89,7 @@ const ContactPage: React.FC = () => {
             <h1 className="md:text-3xl text-2xl font-medium tracking-tight lg:text-5xl text-five font-bold mb-6">
               Connecting You with Us – Reach Out Anytime, Anywhere.
             </h1>
-            <p className="z-10 rounded-xl h-14 text-sm text-four p-2 backdrop-blur-sm">
+            <p className="z-10 rounded-xl h-14 text-sm text-five p-2 backdrop-blur-sm">
               <QuotesSlider />
             </p>
             <div className="rounded-xl backdrop-brightness-150 overflow-hidden bg-[url('https://images.unsplash.com/photo-1724373506008-ab646f67067c?q=80&w=1563&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]  h-64 w-full bg-cover bg-no-repeat bg-bottom"></div>

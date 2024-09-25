@@ -321,8 +321,8 @@ export const VisionSection: React.FC = () => {
           </div>
 
           <div className="border-yellow-500">
-            <div className="bg-secondary my-12">
-              <div className="md:flex-col text-primary max-w-6xl m-auto gap-2 py-4  flex-row-reverse">
+            <div className="bg-primary my-12">
+              <div className="md:flex-col text-secondary max-w-6xl m-auto gap-2 py-4  flex-row-reverse">
                 <div className="flex items-center ">
                   <h3 className="md:text-4xl text-2xl opacity-50 py-6 text-center m-auto px-3 max-w-3xl">
                     Make a Innovative customization
@@ -513,7 +513,7 @@ export const VisionSection: React.FC = () => {
               </span>
 
               <div className="md:flex-wrap lg:flex justify-center items-center gap-4">
-                <span className="flex flex-col p-2 h-auto text-five w-[340px]  transition-all duration-1000 text-center rounded-2xl justify-center items-center">
+                <span className="flex flex-col p-2 h-auto text-five w-[340px]  hover:bg-seven transition-all duration-1000 text-center rounded-2xl  justify-center items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={24}
@@ -704,8 +704,8 @@ export const VisionSection: React.FC = () => {
             </div>
           </div>
           <div className="border-third">
-            <div className=" py-6 border-yellow-500 bg-secondary p-2">
-              <h1 className="md:text-2xl text-xl opacity-50 text-primary py-6 text-center m-auto max-w-3xl">
+            <div className=" py-6 border-yellow-500 bg-primary p-2">
+              <h1 className="md:text-2xl text-xl opacity-50 text-secondary py-6 text-center m-auto max-w-3xl">
                 Services and compitable web3 websites
               </h1>
 
@@ -715,7 +715,7 @@ export const VisionSection: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col max-w-6xl m-auto text-primary  md:grid md:grid-flow-row-dense md:grid-cols-4 md:grid-rows-2  text-five rounded-lg m-2 max-h-fit gap-4">
+              <div className="flex flex-col max-w-6xl m-auto text-five  md:grid md:grid-flow-row-dense md:grid-cols-4 md:grid-rows-2  text-five rounded-lg m-2 max-h-fit gap-4">
                 <div className="col-span-2   md:p-10  flex flex-col justify-start   p-2">
                   <h5 className="text-xl text-four">
                     Analytics & data insight

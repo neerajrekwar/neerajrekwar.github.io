@@ -23,8 +23,8 @@ const Weather: React.FC = () => {
           longitude: longitude,
           current_weather: true,
           temperature_unit: "celsius", // or "fahrenheit" if preferred
-          hourly: "cloudcover,diffuse_radiation,rain,wind_speed_10m", // Adding hourly wind speed data
           wind_speed_unit: "kmh", // or "mph", "ms", "knots"
+          hourly: "cloudcover,diffuse_radiation,wind_speed_10m,rain", // Comma-separated list of weather variables for hourly data
           timezone: "auto",
         },
       };

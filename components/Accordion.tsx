@@ -12,7 +12,7 @@ export function AccordionDemo() {
     <>
       <div className="text-four min-h-screen flex flex-col justify-start items-start pt-20 ">
         <div className="w-full text-center md:text-xl p-2 m-auto">
-          <div className="pt-3 text-center text-xl pb-2 py-3 text-2xl  md:text-4xl lg:text-5xl font-bold text-center">
+          <div className="pt-3 text-center text-xl pb-2 py-3 text-2xl  md:text-3xl lg:text-4xl font-bold text-center">
             Frequently Asked Questions
           </div>
           <p className="text-center  md:text-base pb-2 mb-8">
@@ -77,7 +77,7 @@ export function AccordionDemo() {
         </div>
       </div>
       <div className="py-12  md:min-h-screen bg-primary bg-custom-radial-sm m-auto border-seven text-secondary">
-        <h6 className="py-3 text-2xl text-four md:text-4xl lg:text-5xl font-bold text-center">
+        <h6 className="py-3  text-four text-2xl  md:text-3xl lg:text-4xl font-bold text-center">
           Didn&apos;t find an answer?
         </h6>
         <div className="flex flex-col justify-center items-center">
