@@ -137,7 +137,7 @@ export function AuroraBackgroundDemo() {
 
             <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
               <motion.button
-                className="inline-flex text-four  items-center justify-center rounded-full border border-four bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,var(--five))] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50"
+                className=" bg-seven  px-4 rounded-full border-secondary  flex items-center justify-between text-secondary"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 transition={{
@@ -152,13 +152,13 @@ export function AuroraBackgroundDemo() {
                 <Link
                   href="/"
                   className=" rounded-full 
-                 uppercase  p-2 px-4  text-center text-sm"
+                 uppercase  p-3 px-4  text-center text-sm"
                 >
                   get started
                 </Link>
               </motion.button>
               <motion.button
-                className=" bg-seven  p-2 px-4 rounded-full border-secondary flex items-center justify-between text-secondary"
+                className=" bg-seven  px-4 rounded-full border-secondary flex items-center justify-between text-secondary"
                 initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 transition={{
@@ -174,7 +174,7 @@ export function AuroraBackgroundDemo() {
                 <Link
                   href="/contact"
                   className="rounded-full 
-                 font-semibold  px-4   text-center text-sm"
+                 font-semibold p-3 px-4   text-center text-sm"
                 >
                   Explore{" "}
                 </Link>

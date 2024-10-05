@@ -36,7 +36,7 @@ export default function RootLayout({
         name="google-site-verification"
         content="pevPfl5iK_JHKnEwB5u-hZs9u54tVHi3UJkbJ9k2eWg"
       />
-      <body className={alata.className}>
+      <body className={`${alata.className} bg-primary`}>
         <FloatingNavDemo />
         <GoogleAnalytics gaId="G-0PCHHEHDFJ" />
         <ThemeProvider>{children}</ThemeProvider>

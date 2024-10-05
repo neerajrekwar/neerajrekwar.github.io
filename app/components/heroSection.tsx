@@ -356,8 +356,7 @@ export function HeroSection() {
                       </h4>
 
                       <p className="m-2 text-four">
-                        SEO is the practice of optimizing a website to improve
-                        its visibility and ranking in search engine results
+                        SEO is search engine results
                         pages (SERPs) like Google, bing, DuckDuckGo, yahoo!{" "}
                       </p>
                     </div>
@@ -374,8 +373,8 @@ export function HeroSection() {
                         Socail Media Optimization
                       </h4>
                       <p className="m-2 text-four">
-                        Define clear objectives for your social media presence,
-                        such as increasing brand awareness, generating leads, or
+                        Define clear objectives for,
+                        brand awareness, generating leads, or
                         driving sales.
                       </p>
                     </div>
@@ -410,9 +409,8 @@ export function HeroSection() {
                         Localization
                       </h4>
                       <p className="m-2 text-four">
-                        Creating and optimizing your Google My Business profile
-                        to provide accurate and up-to-date information about
-                        your business, including location, hours of operation,
+                        
+                        Your business, including location, hours of operation,
                         and contact details.
                       </p>
                     </div>
@@ -429,9 +427,7 @@ export function HeroSection() {
                         Google Analytics
                       </h4>
                       <p className="m-2 text-four">
-                        Web analytics service provides insights into website
-                        traffic, user behavior, and marketing performance. It
-                        helps businesses understand their audience, measure
+                        It helps businesses understand their audience, measure
                         online marketing effectiveness, and make data-driven
                         decisions.
                       </p>

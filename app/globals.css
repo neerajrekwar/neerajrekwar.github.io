@@ -53,15 +53,8 @@
   }
 }
 
-::-webkit-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-track-color: var(--color-four);
-  /* Use CSS variable */
-}
-
-::-webkit-scrollbar-track {
-  scrollbar-color: var(--color-five);
-  /* Use CSS variable */
+body, main{
+  background-color: var(--primary);
 }
 
 html {
