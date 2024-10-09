@@ -10,7 +10,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { AccordionDemo } from "@/components/Accordion";
 
 export const metadata: Metadata = {
-  title: "nee - Creative Programmer & SEO Expert find at Delhi ",
+  title: "nee - Creative Programmer | SEO Expert find at Delhi ",
   description:
     "Our services packages affordable in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
 };
