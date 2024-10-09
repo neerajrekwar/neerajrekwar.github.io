@@ -10,9 +10,9 @@ import { Accordion } from "@/components/ui/accordion";
 import { AccordionDemo } from "@/components/Accordion";
 
 export const metadata: Metadata = {
-  title: "nee. - Anonymous seo find at Delhi ",
+  title: "nee - Creative Programmer & SEO Expert find at Delhi ",
   description:
-    "Our Delhi-based team specializes in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
+    "Our services packages affordable in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
 };
 export default function Home() {
   return (
