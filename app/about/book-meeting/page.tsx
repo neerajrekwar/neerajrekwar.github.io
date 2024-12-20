@@ -1,6 +1,11 @@
 "use client";
+import { Metadata } from "next";
 import { useEffect } from "react";
-
+export const metadata: Metadata = {
+  title: "Book meeting",
+  description:
+    "Let's make together.",
+};
 
 const CalendlyWidget = () => {
   useEffect(() => {

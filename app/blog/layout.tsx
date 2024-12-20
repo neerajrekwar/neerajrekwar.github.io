@@ -3,6 +3,12 @@ import { FloatingNavDemo } from "../components/floatingNavBar";
 import { Toaster } from "@/components/ui/toaster";
 import { Caveat } from "next/font/google";
 import CurrentTime from "../components/CurrentTime";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Never give up on your dreams. With perseverance and resilience, you can overcome any challenge.",
+};
 
 const caveat = Caveat({
   weight: "400",

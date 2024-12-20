@@ -2,8 +2,15 @@ import { IconHeartFilled, IconLink, IconQuestionMark, IconQuote, IconShare } fro
 import posts from '../data/posts.json';
 import Image from 'next/image'
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 const post = posts.find(p => p.slug === 'second-post');
+
+export const metadata: Metadata = {
+  title: post?.title || "Blog Post",
+  description:
+  post?.description || "Blog Description",
+};
 
 export default function SecondPostPage() {
   return (

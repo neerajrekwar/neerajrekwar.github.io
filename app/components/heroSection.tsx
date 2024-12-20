@@ -409,7 +409,7 @@ export function HeroSection() {
                         Localization
                       </h4>
                       <p className="m-2 text-four">
-                        
+
                         Your business, including location, hours of operation,
                         and contact details.
                       </p>
@@ -1283,14 +1283,27 @@ export function HeroSection() {
                 concepts into tangible results.
               </motion.p>
               <div className="mx-4 md:mx-10">
-                <button className="inline-flex text-four h-10 items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-four focus:ring-offset-2 focus:ring-offset-slate-50">
-                  <a
-                    href="/contact"
-                    className="flex items-center font-medium  gap-4"
+                <button >
+
+                  <motion.a
+                    initial={{ opacity: 0, x: 30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.5,
+                      ease: [0, 0.71, 0.2, 1.01],
+                      type: "spring",
+                      stiffness: 400,
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileFocus={{ scale: 1.1 }}
+                    href="/about/book-meeting"
+                    className=" mt-4 border-1 border-secondary rounded-full flex justify-center items-center gap-2 text-lg relative py-1  px-3 mx-2 z-40  w-fit"
                   >
                     <IconCalendarClock />
                     Let&apos;s talk
-                  </a>
+                    <span className="absolute bottom-2 p-1  -z-50 left-2  h-[1%] w-20  bg-custom-radial-sm"></span>
+                  </motion.a>
                 </button>
               </div>
             </div>
