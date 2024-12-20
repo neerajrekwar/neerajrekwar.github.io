@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 interface Image {
@@ -37,7 +38,7 @@ const InstaGallery: React.FC = () => {
         {images.map((image) => (
           <div key={image.id} className="relative overflow-hidden w-1/4 ">
             <div className='overflow-hidden rounded-sm'>
-            <img
+            <Image
               src={image.media_url}
               alt={image.caption}
               className="w-full h-auto object-cover"

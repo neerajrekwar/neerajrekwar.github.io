@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React from 'react';
 
 interface Image {
@@ -21,7 +22,7 @@ const Gallery: React.FC<GalleryProps> = ({ feed }) => {
       {images &&
         images.map((image) => (
           <div key={image.id} className="relative overflow-hidden">
-            <img
+            <Image
               src={image.media_url}
               alt={image.caption}
               className="w-full h-auto object-cover"

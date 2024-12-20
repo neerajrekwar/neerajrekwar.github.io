@@ -1,11 +1,8 @@
 import { AnimatedTooltipPreview } from "@/components/AnimatedToolstips";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent} from "../accordion";
+
+
 
 export function AccordionDemo() {
   return (

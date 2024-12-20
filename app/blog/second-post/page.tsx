@@ -53,7 +53,7 @@ export default function SecondPostPage() {
           </p>
           {post && (
             <div>
-              <img
+              <Image
                 src={post?.imageUrl}
                 alt={post?.title}
                 className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
