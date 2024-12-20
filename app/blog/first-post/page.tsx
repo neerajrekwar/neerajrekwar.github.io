@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 // Find the post after declaring metadata to avoid the block-scoped variable issue
-const post = posts.find(p => p.slug === 'second-post');
+const post = posts.find(p => p.slug === 'first-post');
 
 export const metadata: Metadata = {
   title: post?.title || "Blog Post",
