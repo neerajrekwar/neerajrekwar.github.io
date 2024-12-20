@@ -5,8 +5,9 @@ import { ReviewSection } from "../components/reviewSection";
 import ExpSection from "../components/ExpSection";
 import { VisionSection } from "../components/VisionSection";
 import StickyRelativeDemo from "../components/StickyRelativeDemo";
-import { Accordion } from "@/components/ui/accordion";
 import { AccordionDemo } from "@/components/ui/Accordion";
+
+
 
 export const metadata: Metadata = {
   title: "nee - portfolio SEO Expert freelancer in delhi",
