@@ -1,6 +1,6 @@
 
 import { Caveat } from "next/font/google";
-import CurrentTime from "../components/CurrentTime";
+import CurrentTime from "../../components/CurrentTime";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog - create & think innovations",

@@ -1,5 +1,5 @@
-import { AnimatedTooltipPreview } from "@/app/components/AnimatedToolstips";
-import { AnimatedTooltip } from "@/app/components/ui/animated-tooltip";
+import { AnimatedTooltipPreview } from "@/components/AnimatedToolstips";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import {
   Accordion,
   AccordionContent,

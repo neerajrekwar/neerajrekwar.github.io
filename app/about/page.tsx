@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
-import { HeroSection } from "../components/heroSection";
+import { HeroSection } from "../../components/heroSection";
 
 export const metadata: Metadata = {
   title: "About - Front-End Web Developer Delhi | UI/UX Design",

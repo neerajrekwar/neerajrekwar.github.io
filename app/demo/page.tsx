@@ -1,5 +1,5 @@
-import CountAnimation from "../components/CountAnimation";
-import { ImageSlides } from "../components/ImageSlides";
+import CountAnimation from "../../components/CountAnimation";
+import { ImageSlides } from "../../components/ImageSlides";
 
 export default function Demo(){
     return(

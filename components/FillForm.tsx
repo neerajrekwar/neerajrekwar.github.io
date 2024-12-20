@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ToastAction } from "@/components/ui/toast";
 
-import AdminWeather from "@/app/components/AdminWeather";
-import QuotesSlider from "@/app//components/QuotesSlider";
-import { useToast } from "@/hooks/use-toast";
-import CurrentTime from "@/app/components/CurrentTime";
+import AdminWeather from "@/components/AdminWeather";
+import QuotesSlider from "@/components/QuotesSlider";
+import { useToast } from "@/components/hooks/use-toast";
+import CurrentTime from "@/components/CurrentTime";
 
 
 

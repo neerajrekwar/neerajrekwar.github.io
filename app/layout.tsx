@@ -2,12 +2,12 @@ import { Alata, Source_Code_Pro, DM_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import "./add.css";
-import { FloatingNavDemo } from "./components/floatingNavBar";
-import { ThemeProvider } from "../hooks/context/ThemeContext";
-import Footer from "./components/footer";
+import { FloatingNavDemo } from "../components/floatingNavBar";
+import { ThemeProvider } from "../components/context/ThemeContext";
+import Footer from "../components/footer";
 import Script from "next/script";
-import GoogleAnalytics from "./components/GoogleAnalytics";
-import GoogleTagManager from "./components/GoogleTagManager";
+import GoogleAnalytics from "../components/GoogleAnalytics";
+import GoogleTagManager from "../components/GoogleTagManager";
 import { Toaster } from "@/components/ui/toaster";
 
 const dm_Sans = DM_Sans({

@@ -10,7 +10,7 @@ import {
   IconBrandGithubFilled,
   IconBrandDiscordFilled,
 } from "@tabler/icons-react";
-import posts from "../blog/data/posts.json";
+import posts from "../app/blog/data/posts.json";
 import DataSet from "./DataSet";
 
 const caveat = Caveat({

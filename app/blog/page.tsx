@@ -2,15 +2,15 @@
 import posts from "./data/posts.json";
 import Link from "next/link";
 import Image from "next/image";
-import BlogExcerpt from "../components/BlogExcerpt";
+import BlogExcerpt from "../../components/BlogExcerpt";
 import {
   IconLink,
   IconPointFilled,
   IconShare,
   IconSparkles,
 } from "@tabler/icons-react";
-import LikeButton from "../components/LikeButton";
-import ShareDialog from "../components/ShareDialog"; // Import the ShareDialog component
+import LikeButton from "../../components/LikeButton";
+import ShareDialog from "../../components/ShareDialog"; // Import the ShareDialog component
 import { useState } from "react";
 
 export default function BlogIndexPage() {

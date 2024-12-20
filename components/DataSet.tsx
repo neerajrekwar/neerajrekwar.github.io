@@ -1,6 +1,6 @@
 // app/components/DataSet.tsx
 import React from 'react';
-import data from '../blog/data/dataset.json';
+import data from '../app/blog/data/dataset.json';
 
 interface DataItem {
     id: string;

@@ -1,6 +1,6 @@
 import { IconShare, IconLink, IconHeartFilled, IconQuote } from '@tabler/icons-react';
 import posts from '../data/posts.json';
-import LikeButton from '@/app/components/LikeButton';
+import LikeButton from '@/components/LikeButton';
 import Image from "next/image"
 import Link from 'next/link';
 
