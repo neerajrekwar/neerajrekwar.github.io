@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./add.css";
 import { FloatingNavDemo } from "./components/floatingNavBar";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider } from "../hooks/context/ThemeContext";
 import Footer from "./components/footer";
 import Script from "next/script";
 import GoogleAnalytics from "./components/GoogleAnalytics";

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import HomeSectionHeader from "./components/homeSectionHeader";
 import IntroSection from "./components/introSection";
 import { ReviewSection } from "./components/reviewSection";
-
 import ExpSection from "./components/ExpSection";
 import { VisionSection } from "./components/VisionSection";
 import StickyRelativeDemo from "./components/StickyRelativeDemo";
@@ -10,9 +9,9 @@ import { Accordion } from "@/components/ui/accordion";
 import { AccordionDemo } from "@/components/Accordion";
 
 export const metadata: Metadata = {
-  title: "nee - Creative Programmer | SEO Expert find at Delhi ",
+  title: "nee - portfolio SEO Expert freelancer in delhi",
   description:
-    "Our services packages affordable in creating custom web development solutions and bespoke web tools. We have expertise in Nexjs and ensure high-quality, reliable code delivered on time and within budget.",
+    "Struggling to rank higher on Google? Let Nee's SEO solutions help. I provide effective SEO services to help you outrank competitors and dominate search results.",
 };
 export default function Home() {
   return (

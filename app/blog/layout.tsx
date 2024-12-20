@@ -1,6 +1,4 @@
-import { IconHeartFilled } from "@tabler/icons-react";
-import { FloatingNavDemo } from "../components/floatingNavBar";
-import { Toaster } from "@/components/ui/toaster";
+
 import { Caveat } from "next/font/google";
 import CurrentTime from "../components/CurrentTime";
 import { Metadata } from "next";

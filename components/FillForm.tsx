@@ -74,7 +74,7 @@ const FillForm: React.FC = () => {
   };
 
   return (
-    <main className="md:p-8 p-2 bg-custom-radial-md bg-primary min-h-screen">
+    <>
       <div className="flex justify-between px-2 rounded-full items-center text-four text-xs h-[3vh] mb-8">
         <ul className="flex font-semibold text-five sm:text-xl">
           <li>nee</li>
@@ -224,7 +224,7 @@ const FillForm: React.FC = () => {
             </div>
           </div>
       </section>
-    </main>
+    </>
   );
 };
 

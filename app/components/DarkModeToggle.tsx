@@ -1,6 +1,6 @@
 // components/DarkModeToggle.tsx
 "use client";
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../../hooks/context/ThemeContext";
 
 const DarkModeToggle = () => {
   const { theme, toggleTheme } = useTheme();
