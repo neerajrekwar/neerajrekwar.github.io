@@ -74,7 +74,7 @@ const Weather: React.FC = () => {
         <div className="text-sm text-five  md:text-md">
           <motion.div
             initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: 0.7, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 4, ease: "easeInOut" }}
             className=" flex flex-col opacity-75 sm:flex-row md:gap-2  md:p-2   rounded-md items-end"
           >
