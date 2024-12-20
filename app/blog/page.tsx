@@ -65,7 +65,7 @@ export default function BlogIndexPage() {
                     {post.title}
                   </Link>
                 ) : (
-                  <div className="">title in processing</div>
+                  <div className="">Title in available</div>
                 )}
                 <div className="flex gap-1 md:gap-2 opacity-50  text-four md:pb-4 tracking-wide text-xs md:text-sm font-medium  py-2 justify-start">
                   {post?.date ? (

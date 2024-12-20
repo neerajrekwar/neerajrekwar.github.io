@@ -205,7 +205,7 @@ export default function Footer() {
                       ) : (
                         <p className="text-sm opacity-50">unknown</p>
                       )}{" "}
-                      -
+                      
                       {post.date ? (
                         <p className="text-sm opacity-50">{post.date}</p>
                       ) : (

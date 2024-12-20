@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import React from "react";
-import { FlipWordsDemo } from "../components/FlipWords";
 import { HeroSection } from "../components/heroSection";
 
 export const metadata: Metadata = {

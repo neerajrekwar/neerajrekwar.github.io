@@ -3,7 +3,7 @@ import { Caveat } from "next/font/google";
 import CurrentTime from "../components/CurrentTime";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog - create & think innovations",
   description:
     "Never give up on your dreams. With perseverance and resilience, you can overcome any challenge.",
 };
