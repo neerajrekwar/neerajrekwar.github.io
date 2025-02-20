@@ -10,8 +10,8 @@ import {
     IconXboxXFilled,
     IconBrandFacebookFilled,
     IconBrandXFilled,
-    IconBrandLinkedinFilled,
-    IconBrandInstagramFilled,
+    IconBrandLinkedin,
+    IconBrandInstagram,
 } from "@tabler/icons-react";
 
 import { LinkIcon } from "@nextui-org/react";
@@ -35,10 +35,10 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ url, isOpen, onClose }) => {
                         <IconBrandXFilled size={32} />
                     </a>
                     <a href={`https://www.linkedin.com/shareArticle?url=${url}`} target="_blank" rel="noopener noreferrer">
-                        <IconBrandLinkedinFilled />
+                        <IconBrandLinkedin />
                     </a>
                     <a href={`https://www.instagram.com/create/story?text=${url}`} target="_blank" rel="noopener noreferrer">
-                        <IconBrandInstagramFilled  />
+                        <IconBrandInstagram  />
                     </a>
                     <a href={`https://github.com/orgs/community/discussions/new?category=sponsors`} title="ned" target="_blank" rel="noopener noreferrer">
                         <IconBrandGithub  size={32} />
