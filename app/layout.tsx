@@ -19,7 +19,11 @@ const alata = Alata({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {};
+export const metadata: Metadata = {
+  other: {
+    "p:domain_verify": "9915feac8ce474656e7a8a1fa91b7593",
+  },
+};
 
 export default function RootLayout({
   children,
