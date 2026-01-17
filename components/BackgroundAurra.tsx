@@ -12,10 +12,10 @@ export const AuroraBackgroundDemo = ({
     <>
       <Lightning
         hue={190}
-        xOffset={0.7}
-        speed={0.8}
-        intensity={1.2}
-        size={0.7}
+        xOffset={0}
+        speed={0}
+        intensity={0}
+        size={0}
         />
         {children}
     </>
