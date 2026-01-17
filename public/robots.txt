@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /Search
+Sitemap: https://neerajrekwar.github.io/sitemap.xml
