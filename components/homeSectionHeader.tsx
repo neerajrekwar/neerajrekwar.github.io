@@ -163,7 +163,7 @@ export default function HomeSectionHeader() {
                     ease: "easeInOut",
                   }}
                   className="mx-auto my-2 text-four text-base  sm:text-lg "
-                ></motion.p>
+                >Build the right way with programmers who turn ideas into scalable, secure, and high-performance solutions—crafted with precision, collaboration, and future-ready technology to help your business grow confidently.</motion.p>
 
                 <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
                   <motion.button
