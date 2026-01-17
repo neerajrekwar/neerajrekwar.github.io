@@ -1,7 +1,6 @@
 import { Alata, Source_Code_Pro, DM_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
-import "./add.css";
 import { FloatingNavDemo } from "../components/floatingNavBar";
 import { ThemeProvider } from "../components/context/ThemeContext";
 import Footer from "../components/footer";
@@ -40,13 +39,15 @@ export default function RootLayout({
         name="google-site-verification"
         content="pevPfl5iK_JHKnEwB5u-hZs9u54tVHi3UJkbJ9k2eWg"
       />
-      <body className={`${alata.className} bg-primary`}>
-        <FloatingNavDemo />
-        <GoogleAnalytics gaId="G-0PCHHEHDFJ" />
-        <ThemeProvider>{children}</ThemeProvider>
-        <Footer />
-        <Toaster />
-      </body>
+      <ThemeProvider>
+        <body className={`${alata.className} bg-primary`}>
+          <FloatingNavDemo />
+          <GoogleAnalytics gaId="G-0PCHHEHDFJ" />
+          {children}
+          <Footer />
+          <Toaster />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

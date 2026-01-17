@@ -1,5 +1,5 @@
 'use client'
-import { GetStaticProps } from 'next';
+import { useState, useEffect } from 'react';
 import Gallery from './Gallery';
 
 interface Image {
@@ -12,24 +12,39 @@ interface Feed {
   data: Image[];
 }
 
-interface Props {
-  feed: Feed;
-}
+export default function InstaEmbed() {
+  const [feed, setFeed] = useState<Feed | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-export async function getStaticProps(): Promise<{ props: Props }> {
-  const url = `https://graph.instagram.com/v20.0/me/media?fields=id,username,media_url,caption,timestamp,media_type&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN}`;
+  useEffect(() => {
+    const fetchInstagramData = async () => {
+      try {
+        const response = await fetch('/api/instagram');
+        if (!response.ok) {
+          throw new Error('Failed to fetch Instagram feed');
+        }
+        const data = await response.json();
+        setFeed(data);
+      } catch (err) {
+        if (err instanceof Error) {
+            setError(err.message);
+        } else {
+            setError('An unknown error occurred');
+        }
+      }
+    };
 
-  const response = await fetch(url);
-  const data = await response.json();
+    fetchInstagramData();
+  }, []);
 
-  return {
-    props: {
-      feed: data,
-    },
-  };
-}
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-export default function InstaEmbed({ feed }: Props) {
+  if (!feed) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
       <Gallery feed={feed} />

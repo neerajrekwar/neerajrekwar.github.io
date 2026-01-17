@@ -14,7 +14,7 @@ import {
     IconBrandInstagram,
 } from "@tabler/icons-react";
 
-import { LinkIcon } from "@nextui-org/react";
+import { LinkIcon } from "@heroui/react";
 import { text } from "stream/consumers";
 
 type ShareDialogProps = {

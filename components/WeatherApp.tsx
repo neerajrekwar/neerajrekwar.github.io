@@ -22,9 +22,9 @@ const Weather: React.FC = () => {
           latitude: latitude,
           longitude: longitude,
           current_weather: true,
-          temperature_unit: "celsius", // or "fahrenheit" if preferred
-          wind_speed_unit: "kmh", // or "mph", "ms", "knots"
-          hourly: "cloudcover,diffuse_radiation,wind_speed_10m,rain", // Comma-separated list of weather variables for hourly data
+          temperature_unit: "celsius",
+          wind_speed_unit: "kmh",
+          hourly: "cloudcover,diffuse_radiation,wind_speed_10m,rain",
           timezone: "auto",
         },
       };
@@ -39,6 +39,23 @@ const Weather: React.FC = () => {
     };
 
     const getLocation = () => {
+      const fallbackToIp = () => {
+        // Fallback to IP-based location
+        axios.get("https://ip-api.com/json")
+          .then((response) => {
+            const data = response.data;
+            if (data.lat && data.lon) {
+              fetchWeather(data.lat, data.lon);
+            } else {
+              setError("Failed to retrieve location from IP.");
+            }
+          })
+          .catch((ipError) => {
+            console.error("IP location error:", ipError);
+            setError("Geolocation and IP lookup failed.");
+          });
+      };
+
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
@@ -46,17 +63,17 @@ const Weather: React.FC = () => {
             fetchWeather(latitude, longitude);
           },
           (error) => {
-            console.error(error);
-            setError("Failed to retrieve location");
+            console.error("Geolocation error:", error);
+            fallbackToIp();
           }
         );
       } else {
-        setError("Geolocation is not supported by this browser");
+        fallbackToIp();
       }
     };
 
     getLocation();
-  }, []); // Empty dependency array ensures this effect runs only once on component mount
+  }, []);
 
   return (
     <div>
@@ -95,9 +112,6 @@ const Weather: React.FC = () => {
             >
               <IconCloudFilled /> {weather.hourly.cloudcover[0]}%
             </motion.p>
-            {/* <p>Diffuse Radiation: {weather.hourly.diffuse_radiation[0]} W/m²</p> */}
-            {/* <p>Rain: {weather.hourly.rain[0]} mm</p>{" "} */}
-            {/* Display hourly rain data */}
             <motion.p
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -106,7 +120,6 @@ const Weather: React.FC = () => {
             >
               <IconWind /> {weather.hourly.wind_speed_10m[0]} km/h
             </motion.p>{" "}
-            {/* Display hourly wind speed */}
           </motion.div>
         </div>
       ) : (

@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
@@ -12,12 +13,18 @@ const nextConfig = {
           hostname: 'plus.unsplash.com',
           pathname: '**',
         },
+        {
+          protocol: 'https',
+          hostname: '3000-firebase-neerajrekwar-1765735531609.cluster-htdgsbmflbdmov5xrjithceibm.cloudworkstations.dev',
+          pathname: '**',
+        },
       ],
     },
     webpack: (config) => {
       config.cache = false;
       return config;
     },
+    turbopack: {},
   };
   
   export default nextConfig;
