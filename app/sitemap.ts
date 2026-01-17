@@ -1,39 +1,43 @@
-import { MetadataRoute } from 'next';
-import posts from '@/app/blog/data/posts.json'; // Example JSON data file with dynamic routes
+import { MetadataRoute } from "next";
+import posts from "@/app/blog/data/posts.json";
+
+const BASE_URL = "https://neerajrekwar.github.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: 'https://neerajrekwar.github.io',
+      url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: 'yearly', // Typed correctly
+      changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: 'https://neerajrekwar.github.io/about',
+      url: `${BASE_URL}/about`,
       lastModified: new Date(),
-      changeFrequency: 'monthly', // Typed correctly
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: 'https://neerajrekwar.github.io/blog',
+      url: `${BASE_URL}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'weekly', // Typed correctly
+      changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: 'https://neerajrekwar.github.io/contact',
+      url: `${BASE_URL}/contact`,
       lastModified: new Date(),
-      changeFrequency: 'weekly', // Typed correctly
+      changeFrequency: "weekly",
       priority: 0.5,
     },
   ];
 
-  // Generate dynamic routes for blog posts
-  const dynamicRoutes: MetadataRoute.Sitemap = posts.map(post => ({
-    url: `https://neerajrekwar.github.io/blog/${post.slug}`,
+  const dynamicRoutes: MetadataRoute.Sitemap = posts.map((post: {
+    slug: string;
+    date?: string;
+  }) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : new Date(),
-    changeFrequency: 'weekly', // Typed correctly
+    changeFrequency: "weekly",
     priority: 0.7,
   }));
 
