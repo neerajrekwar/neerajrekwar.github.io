@@ -11,8 +11,8 @@ import { AccordionDemo } from "@/components/ui/Accordion";
 
 export const metadata: Metadata = {
   title: "nee - freelancer SEO Services in Delhi | Rank #1 & Boost Sales – Get 40% Off Today",
-  description: "Looking budget-friendly SEO services in Delhi? Get real results, higher Google rankings, and more leads — all at up to 40% OFF this month. Let your business dominate search results.";
-}
+  description: "Looking budget-friendly SEO services in Delhi? Get real results, higher Google rankings, and more leads — all at up to 40% OFF this month. Let your business dominate search results."
+};
 export default function Home() {
   return (
     <main className="scroll-smooth bg-primary focus:scroll-auto scrollbar-thumb-rounded-full scrollbar-thin scrollbar-thumb-four scrollbar-track-seven">
