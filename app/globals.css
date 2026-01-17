@@ -1,1 +1,156 @@
 @import "tailwindcss";
+
+/* ======================================================
+   Theme Tokens
+====================================================== */
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-third: #2cffbf;
+  --color-four: #5e716a;
+  --color-five: #1d3838;
+  --color-six: #e0f2e9;
+  --color-seven: #5e716a10;
+
+  --font-secondary: "Caveat", cursive;
+}
+
+/* ---------------- Dark Mode ---------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #0a0f0f;
+    --color-secondary: #e6f2ee;
+    --color-third: #2cffbf;
+    --color-four: #8fa9a0;
+    --color-five: #d6efe6;
+    --color-six: #132222;
+    --color-seven: #2cffbf1a;
+  }
+}
+
+/* ======================================================
+   Tailwind Theme Mapping (v4)
+====================================================== */
+@theme {
+  /* Colors */
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-third: var(--color-third);
+  --color-four: var(--color-four);
+  --color-five: var(--color-five);
+  --color-six: var(--color-six);
+  --color-seven: var(--color-seven);
+
+  /* Font */
+  --font-secondary: var(--font-secondary);
+
+  /* Animations */
+  --animation-shimmer: shimmer 2s linear infinite;
+  --animation-scroll-vertical: scrollVertical var(--animation-duration) linear infinite;
+  --animation-meteor-effect: meteor 5s linear infinite;
+  --animation-accordion-down: accordion-down 0.2s ease-out;
+  --animation-accordion-up: accordion-up 0.2s ease-out;
+  --animation-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+  --animation-aurora: aurora 60s linear infinite;
+}
+
+/* ======================================================
+   Keyframes
+====================================================== */
+@keyframes shimmer {
+  from { background-position: 0 0; }
+  to { background-position: -200% 0; }
+}
+
+@keyframes scrollVertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+  70% { opacity: 1; }
+  100% {
+    transform: rotate(215deg) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+@keyframes scroll {
+  to { transform: translate(calc(-50% - 0.5rem)); }
+}
+
+@keyframes aurora {
+  from { background-position: 50% 50%, 50% 50%; }
+  to { background-position: 350% 50%, 350% 50%; }
+}
+
+/* ======================================================
+   Background Images (replaces theme.extend.backgroundImage)
+====================================================== */
+@layer utilities {
+  .bg-conic-gradient {
+    background-image: conic-gradient(from 0deg, red, yellow, green, blue, purple);
+  }
+
+  .bg-conic-gradient-angles {
+    background-image: conic-gradient(var(--color-four), var(--color-six));
+  }
+
+  .bg-custom-radial {
+    background-image: radial-gradient(
+      50% 50% at 80% 50%,
+      var(--color-four) 0%,
+      transparent 100%
+    );
+  }
+
+  .bg-custom-radial-s {
+    background-image: radial-gradient(
+      70% 120% at 100% 50%,
+      var(--color-four) 0%,
+      transparent 100%
+    );
+  }
+
+  .bg-custom-radial-sm {
+    background-image: radial-gradient(
+      33% 69% at 26% 0%,
+      #5e716a8a 0%,
+      transparent 100%
+    );
+  }
+
+  .bg-custom-gradient-bgl {
+    background-image: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      hsla(0, 0%, 10%, 0) 50%,
+      #ffffff 100%
+    );
+  }
+}
+
+/* ======================================================
+   Base Styles
+====================================================== */
+@layer base {
+  body {
+    @apply bg-primary text-secondary;
+    font-family: system-ui, sans-serif;
+  }
+}
