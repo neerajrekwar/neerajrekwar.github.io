@@ -51,7 +51,7 @@ export function HeroSection() {
   return (
     <>
       <ShootingStarsAndStarsBackgroundDemo />
-      <section className="bg-primary bgrid2 text-four  min-h-screen">
+      <section className="bg-primary bgrid2 text-five  min-h-screen">
         <div className=" max-w-6xl m-auto">
           <div className=" bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
@@ -180,7 +180,7 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="bgrid2  text-four min-h-screen">
+      <section className="bgrid2  text-five min-h-screen">
         <div className=" max-w-6xl m-auto">
           <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
@@ -348,14 +348,14 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
                         Search Engine Optimization
                       </h4>
 
-                      <p className="m-2 text-four">
+                      <p className="m-2 text-five">
                         SEO is search engine results
                         pages (SERPs) like Google, bing, DuckDuckGo, yahoo!{" "}
                       </p>
@@ -366,13 +366,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
                         Socail Media Optimization
                       </h4>
-                      <p className="m-2 text-four">
+                      <p className="m-2 text-five">
                         Define clear objectives for,
                         brand awareness, generating leads, or
                         driving sales.
@@ -385,13 +385,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
                   >
                     <div className="md:pb-4  text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
                         How to Grow Online
                       </h4>
-                      <p className="m-2 text-four">
+                      <p className="m-2 text-five">
                         Understand your ideal customer&apos;s needs,
                         preferences, and online behavior.
                       </p>
@@ -402,13 +402,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
                         Localization
                       </h4>
-                      <p className="m-2 text-four">
+                      <p className="m-2 text-five">
 
                         Your business, including location, hours of operation,
                         and contact details.
@@ -420,13 +420,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.4 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
                         Google Analytics
                       </h4>
-                      <p className="m-2 text-four">
+                      <p className="m-2 text-five">
                         It helps businesses understand their audience, measure
                         online marketing effectiveness, and make data-driven
                         decisions.
@@ -438,13 +438,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-five bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
                         Google Ads
                       </h4>
-                      <p className="m-2 text-four">
+                      <p className="m-2 text-five">
                         It provides a powerful tool for reaching potential
                         customers and driving traffic to your website.
                       </p>
@@ -455,13 +455,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, x: 40, y: 40 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ delay: 1.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-four bg-six border-seven border"
+                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-five bg-six border-seven border"
                   >
                     <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-four">
+                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
                         Email Marketing
                       </h4>
-                      <p className="m-2 text-four">
+                      <p className="m-2 text-five">
                         Boost your sales, build customer loyalty, and increase
                         brand awareness with effective email marketing
                         strategies.
@@ -792,9 +792,9 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.4, delay: 0.6 }}
-                    className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-six bg-[#242424] aspect-square"
+                    className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-five/60 bg-[#242424] aspect-square"
                   >
-                    <motion.h4 className="px-2 text-4xl font-bold text-six">
+                    <motion.h4 className="px-2 text-4xl font-bold text-five/60">
                       <TextRotator />
                     </motion.h4>
                     <div className="flex m-2 justify-center items-center aspect-[16/9]  rounded-lg bg-custom-radial-s">
@@ -814,9 +814,9 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.5, delay: 0.6 }}
-                    className="m-2 flex border border-seven  col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
+                    className="m-2 flex border border-seven  col-span-2 rounded-lg text-five/60 bg-[#242424] aspect-square"
                   >
-                    <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold text-six">
+                    <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold text-five/60">
                       {" "}
                       Leveraging modern JavaScript features
                     </h4>
@@ -830,7 +830,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.6, delay: 0.6 }}
-                    className="m-2 border border-seven col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
+                    className="m-2 border border-seven col-span-2 rounded-lg text-five/60 bg-[#242424] aspect-square"
                   >
                     <div className="rounded-lg m-2 h-60 overflow-hidden  z-20">
                       <ImageSlides />
@@ -840,7 +840,7 @@ export function HeroSection() {
                       animate={{ opacity: 1, y: 0 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-4xl m-2 overflow-hidden font-bold text-six "
+                      className="px-2 text-4xl m-2 overflow-hidden font-bold text-five/60 "
                     >
                       Efficient algorithms and data structures
                     </motion.h4>
@@ -850,14 +850,14 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="m-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
+                    className="m-2  rounded-lg  sm:w-auto text-five/60 bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 text-4xl md:text-2xl m-2 font-bold text-six  "
+                      className="px-2 text-4xl md:text-2xl m-2 font-bold text-five/60  "
                     >
                       Improved User Experience
                     </motion.h4>
@@ -868,18 +868,18 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="m-2 col-span-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
+                    className="m-2 col-span-2  rounded-lg  sm:w-auto text-five/60 bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 basis-1/2 text-4xl md:text-5xl m-2 font-bold text-six"
+                      className="px-2 basis-1/2 text-4xl md:text-5xl m-2 font-bold text-five/60"
                     >
                       versions to access the latest performance optimizations
                     </motion.h4>
-                    <p className="m-2 text-four px-2">
+                    <p className="m-2 text-five px-2">
                       The best way to access the latest performance
                       optimizations is to stay informed about updates.
                     </p>
@@ -889,7 +889,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 0.9, delay: 0.6 }}
-                    className="m-2 p-2 col-span-2 rounded-lg text-six bg-[#242424] aspect-square"
+                    className="m-2 p-2 col-span-2 rounded-lg text-five/60 bg-[#242424] aspect-square"
                   >
                     <CoverDemo />
                   </motion.li>
@@ -898,18 +898,18 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     animate={{}}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="m-2  rounded-lg  sm:w-auto text-six bg-[#242424] aspect-square"
+                    className="m-2  rounded-lg  sm:w-auto text-five/60 bg-[#242424] aspect-square"
                   >
                     <motion.h4
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 2, duration: 1.2 }}
-                      className="px-2 basis-1/2 text-4xl md:text-2xl m-2 font-bold text-six"
+                      className="px-2 basis-1/2 text-4xl md:text-2xl m-2 font-bold text-five/60"
                     >
                       Rigorously test your application
                     </motion.h4>
-                    <p className="m-2 text-four px-2">
+                    <p className="m-2 text-five px-2">
                       {" "}
                       satisfaction, minimize risks, and improve
                     </p>
@@ -920,7 +920,7 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="bgrid2 text-four min-h-screen">
+      <section className="bgrid2 text-five min-h-screen">
         <div className=" ">
           <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
@@ -961,7 +961,7 @@ export function HeroSection() {
                 animate={{ opacity: 0, y: 3 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="text-4xl text-four relative z-40 max-w-2xl font-bold  "
+                className="text-4xl text-five relative z-40 max-w-2xl font-bold  "
               >
                 See my interest
                 <span className="absolute bottom-2 p-1 -z-50 left-0  h-2 w-[100%]  bg-custom-radial-sm"></span>
@@ -972,9 +972,9 @@ export function HeroSection() {
                   animate={{ opacity: 1, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.7 }}
-                  className="text-four flex-row-reverse my-8 bg-secondary border-third rounded-lg md:flex justify-center  h-shv "
+                  className="text-five flex-row-reverse my-8 bg-secondary border-third rounded-lg md:flex justify-center  h-shv "
                 >
-                  <motion.div className="basis-1/2 text-primary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg ">
+                  <motion.div className="basis-1/2 text-five bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg ">
                     <motion.h2
                       initial={{ opacity: 0, x: 5 }}
                       animate={{ opacity: 0, x: 3 }}
@@ -1030,7 +1030,7 @@ export function HeroSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.2, delay: 0.8 }}
                     exit={{}}
-                    className="lg:basis-1/2 text-primary overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
+                    className="lg:basis-1/2 text-five overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
                   >
                     <motion.h2
                       initial={{ opacity: 0 }}
@@ -1062,7 +1062,7 @@ export function HeroSection() {
                   animate={{ opacity: 1, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.7 }}
-                  className="text-four  my-8 bg-primary border-third rounded-lg md:flex justify-center  h-shv "
+                  className="text-five  my-8 bg-primary border-third rounded-lg md:flex justify-center  h-shv "
                 >
                   <motion.div className="basis-1/2 text-secondary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg">
                     <motion.h2
@@ -1150,7 +1150,7 @@ export function HeroSection() {
                   animate={{ opacity: 1, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.7 }}
-                  className="text-four flex-row-reverse my-8 bg-primary border-third rounded-lg md:flex justify-center  h-shv "
+                  className="text-five flex-row-reverse my-8 bg-primary border-third rounded-lg md:flex justify-center  h-shv "
                 >
                   <motion.div className="basis-1/2 text-secondary bg-custom-radial-sm flex flex-col  justify-center p-4 md:p-6 lg:p-8 sm:min-h-shv md:m-12 rounded-lg ">
                     <motion.h2
@@ -1273,10 +1273,10 @@ export function HeroSection() {
           <div className="absolute border-five bg-gradient-to-t from-primary from-1% to-transparent  h-full w-full  font-bold"></div>
           <div className="absolute border-b-2 border-seven border-five text-five flex flex-col bg-gradient-to-r from-primary  justify-center items-center  md:text-left  md:justify-center md:items-start h-full w-full   font-bold ">
             <div className="absolute text-center sm:text-left max-w-3xl m-auto">
-              <motion.h2 className="mx-4 font-bold text-four md:mx-10 text-4xl md:text-5xl lg:text-6xl ">
+              <motion.h2 className="mx-4 font-bold text-five md:mx-10 text-4xl md:text-5xl lg:text-6xl ">
                 Have a Project in Mind?
               </motion.h2>
-              <motion.p className="text-four font-normal mx-4 md:mx-10  my-4 max-w-2xl ">
+              <motion.p className="text-five font-normal mx-4 md:mx-10  my-4 max-w-2xl ">
                 I&apos;m excited to be in touch with you! Whether you&apos;re
                 prepared to launch a brand new website or give an existing one a
                 fresh look, I&apos;m available to assist in transforming your
