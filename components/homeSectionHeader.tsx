@@ -23,7 +23,7 @@ export default function HomeSectionHeader() {
   return (
     <>
       <header className="min-h-screen text-primary overflow-hidden">
-        <div className=" ">
+        <div className=" border">
           <BackgroundAurra>
             <div className="absolute flex justify-between items-start px-2 w-full opacity-75 flex justify-between  text-[.6rem] md:text-[.5rem] lg:text-[.7rem] top-0 text-four z-999  text-right ">
               <div className={caveat.className}>
@@ -50,7 +50,7 @@ export default function HomeSectionHeader() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="absolute top-40 w-full  flex flex-col gap-4 items-center justify-center px-4 md:px-[14%]"
+              className="absolute top-40 w-full overflow-y-hidden flex flex-col gap-4 items-center justify-center px-4 md:px-[14%]"
             >
               <div className="w-full text-left m-auto text-four">
                 <motion.div
