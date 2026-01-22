@@ -28,36 +28,33 @@ const StickyRelativeDemo: NextPage = () => {
             <div className="sm:pr-10 backdrop-blur-sm">
               <div className="max-w-2xl text-four ">
                 <h2 className="text-3xl text-five py-3 pb-3 font-semibold ">
-                  Well Is - BMI it, check your underweight
+                  Walktrip - Discover Delhi's Hidden Gems
                 </h2>
                 <div>
                   <p className="text-base ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repudiandae quo natus accusantium eius molestiae expedita{" "}
-                    <br />
-                    possimus accusamus, aspernatur, quia quae asperiores
-                    inventore. Quod, officia vel aliquam exercitationem est
-                    inventore porro?
+                    Join our expert local guides for immersive walking tours
+                    through Delhi's rich history, vibrant culture, and authentic
+                    experiences.
                   </p>
                 </div>
               </div>
               <div className="text-sm text-four pt-10 ">
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="font-normal">Role</li>
-                  <li className="text-five">Digital Marketing</li>
+                  <li className="text-five">Web Design & Development</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="font-normal">Deliverables</li>
-                  <li className="text-five">Survey checks</li>
+                  <li className="text-five">Website</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven">
                   <li className="  font-normal">Company</li>
-                  <li className="text-five">VMR</li>
+                  <li className="text-five">Walktrip</li>
                 </ul>
                 <ul className="flex justify-between font-semibold py-6 border-b-1 border-seven fill-five">
-                  <li className="font-normal">Visit Site</li>
+                  <li className="font-normal">Explore Tours </li>
                   <li className="px-2 text-five ">
-                    <Link href="https://veecrew.com" className="text-five">
+                    <Link href="https://walktrip.com" className="text-five">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={24}
@@ -88,7 +85,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">
             <Image
-              src={"/projects/mypro.png"}
+              src={"/screen.jpg"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
@@ -96,7 +93,7 @@ const StickyRelativeDemo: NextPage = () => {
               className="min-w-full min-h-full rounded-2xl "
             />
             <Image
-              src={"/projects/mypro.png"}
+              src={"/screen.jpg"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
@@ -104,7 +101,7 @@ const StickyRelativeDemo: NextPage = () => {
               className="min-w-full min-h-full rounded-2xl "
             />
             <Image
-              src={"/projects/mypro.png"}
+              src={"/screen.jpg"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
@@ -185,7 +182,7 @@ const StickyRelativeDemo: NextPage = () => {
           </div>
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">
             <Image
-              src={"/projects/mypro.png"}
+              src={"/screen.jpg"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
@@ -193,7 +190,7 @@ const StickyRelativeDemo: NextPage = () => {
               className="min-w-full min-h-full rounded-2xl "
             />
             <Image
-              src={"/projects/mypro.png"}
+              src={"/screen.jpg"}
               alt={"My Profile Picture"}
               width={300}
               height={300}
@@ -201,7 +198,7 @@ const StickyRelativeDemo: NextPage = () => {
               className="min-w-full min-h-full rounded-2xl "
             />
             <Image
-              src={"/projects/mypro.png"}
+              src={"/screen.jpg"}
               alt={"My Profile Picture"}
               width={300}
               height={300}

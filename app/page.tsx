@@ -10,8 +10,58 @@ import { AccordionDemo } from "@/components/ui/Accordion";
 
 
 export const metadata: Metadata = {
-  title: "nee - freelancer SEO Services in Delhi | Rank #1 & Boost Sales – Get 40% Off Today",
-  description: "Looking budget-friendly SEO services in Delhi? Get real results, higher Google rankings, and more leads — all at up to 40% OFF this month. Let your business dominate search results."
+  title: {
+    default: "Neeraj Rekwar| Full Stack Developer & Creator",
+    template: "%s | neerajrekwar"
+  },
+  description: "Portfolio of neerajrekwar, a passionate Programmer and Entrepreneur specializing in Next.js, Tailwind CSS, and modern web development. Turning complex problems into elegant solutions.",
+  keywords: [
+    "Next.js Developer",
+    "React",
+    "Tailwind CSS",
+    "Full Stack Developer",
+    "Programmer",
+    "Software Engineer",
+    "Portfolio",
+    "Web Development",
+    "Creative Developer",
+  ],
+  authors: [{ name: "neerajrekwar", url: "https://neerajrekwar.github.io" }],
+  creator: "neerajrekwar",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://neerajrekwar.github.io",
+    title: "Neeraj Rekwar | Full Stack Developer",
+    description: "Building modern web experiences with Next.js and Tailwind CSS. Check out my latest projects and articles.",
+    siteName: "Neeraj RekwarPortfolio",
+    images: [
+      {
+        url: "/me_profile.webp", // You should create an image file in your public folder
+        width: 1200,
+        height: 630,
+        alt: "Neeraj Rekwar- Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neeraj Rekwar| Full Stack Developer",
+    description: "Building modern web experiences with Next.js and Tailwind CSS.",
+    images: ["/me_profile.webp"],
+    creator: "@neerajrekwar", // Optional
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 export default function Home() {
   return (

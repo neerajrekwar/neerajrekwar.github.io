@@ -29,14 +29,14 @@ export default function HomeSectionHeader() {
               <div className={caveat.className}>
                 <Link
                   href={"/"}
-                  className=" text-primary text-3xl sm:text-4xl md:text-5xl font-bold"
+                  className=" text-five/70 text-3xl sm:text-4xl md:text-5xl font-bold"
                 >
                   {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
                   nee
                 </Link>
               </div>
               <div className="">
-                <div className="text-primary pt-1 md:flex justify-center overflow-hidden items-center gap-4 font-bold">
+                <div className="text-five/70  pt-1 md:flex justify-center overflow-hidden items-center gap-4 font-bold">
                   <DeviceAddress />
                   <Weather />
                 </div>
@@ -98,7 +98,7 @@ export default function HomeSectionHeader() {
                       delay: 2,
                       duration: 1,
                     }}
-                    className="font-semibold opacity-75 text-sm text-primary"
+                    className="font-semibold opacity-75 text-sm text-five"
                   >
                     <motion.p
                       initial={{ opacity: 0, x: 10 }}
@@ -126,11 +126,11 @@ export default function HomeSectionHeader() {
                       }}
                       className="flex gap-1 h-4"
                     >
-                      <p className=" flex flex-row justify-start text-third items-center text-xl">
+                      <p className=" flex flex-row justify-start text-red-400 items-center text-2xl">
                         &#8226;
                       </p>
                       <p className="text-four text-xs flex flex-row justify-start items-center font-normal text-sm">
-                        Available for freelance work
+                      Soon available for freelance
                       </p>
                     </motion.div>
                   </motion.div>
@@ -143,7 +143,7 @@ export default function HomeSectionHeader() {
                     duration: 0.8,
                     ease: [0.68, -0.55, 0.27, 1.55],
                   }}
-                  className="relative text-primary font-bold z-10 md:pb-4 text-3xl  md:text-7xl   sm:text-4xl text-left "
+                  className="relative text-five font-bold z-10  text-3xl  md:text-6xl   sm:text-4xl text-left "
                 >
                   Build the right to way <br />
                   <div>
@@ -162,7 +162,7 @@ export default function HomeSectionHeader() {
                     duration: 0.8,
                     ease: "easeInOut",
                   }}
-                  className="mx-auto my-2 text-four text-base  sm:text-lg "
+                  className="mx-auto my-2 text-four/70 text-sm  sm:text-base "
                 >Build the right way with programmers who turn ideas into scalable, secure, and high-performance solutions—crafted with precision, collaboration, and future-ready technology to help your business grow confidently.</motion.p>
 
                 <motion.div className=" gap-2 mt-10 max-w-fit flex justify-center items-center">
@@ -182,7 +182,7 @@ export default function HomeSectionHeader() {
                     <Link
                       href="/"
                       className=" rounded-full 
-                 uppercase  p-3 px-4  text-center text-sm"
+                 uppercase text-five/70 p-3 px-4  text-center text-sm"
                     >
                       get started
                     </Link>
@@ -200,11 +200,11 @@ export default function HomeSectionHeader() {
                     }}
                     whileHover={{ scale: 1.1 }}
                   >
-                    <IconBrandYoutubeFilled />
+                    <IconBrandYoutubeFilled  className="text-five/70 "/>
                     <Link
                       href="/contact"
                       className="rounded-full 
-                 font-semibold p-3 px-4   text-center text-sm"
+                 font-semibold p-3 px-4 text-five/70  text-center text-sm"
                     >
                       Explore{" "}
                     </Link>

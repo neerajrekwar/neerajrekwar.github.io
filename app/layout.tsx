@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { FloatingNavDemo } from "../components/floatingNavBar";
 import { ThemeProvider } from "../components/context/ThemeContext";
-import Footer from "../components/footer";
 import Script from "next/script";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 import GoogleTagManager from "../components/GoogleTagManager";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/footer";
 
 const dm_Sans = DM_Sans({
   weight: "400",
