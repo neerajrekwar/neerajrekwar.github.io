@@ -50,7 +50,7 @@ export default function HomeSectionHeader() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="absolute top-40 w-full overflow-y-hidden flex flex-col gap-4 items-center justify-center px-4 md:px-[14%]"
+              className="absolute top-40 overflow-y-hidden flex flex-col gap-4 items-center justify-center px-4 md:px-[14%]"
             >
               <div className="w-full text-left m-auto text-four">
                 <motion.div

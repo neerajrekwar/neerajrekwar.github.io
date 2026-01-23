@@ -7,11 +7,11 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent} from "../
 export function AccordionDemo() {
   return (
     <>
-      <div className="text-four min-h-screen flex flex-col justify-start items-start pt-20 ">
+      <section className="text-four min-h-screen flex flex-col justify-start items-start pt-20 ">
         <div className="w-full text-center md:text-xl p-2 m-auto">
-          <div className="pt-3 text-center text-xl pb-2 py-3 text-2xl  md:text-3xl lg:text-4xl font-bold text-center">
-            Frequently Asked Questions
-          </div>
+          <header className="pt-3 text-center text-xl pb-2 py-3 text-2xl  md:text-3xl lg:text-4xl font-bold text-center">
+            <h2>Frequently Asked Questions</h2>
+          </header>
           <p className="text-center  md:text-base pb-2 mb-8">
             Feel free to ask me anything. I&apos;m here to help!
           </p>
@@ -20,60 +20,82 @@ export function AccordionDemo() {
             collapsible
             className="max-w-5xl m-auto text-left"
           >
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                What web solutions do you offer?
-              </AccordionTrigger>
-              <AccordionContent>
-                We offer responsive web design services to improve user
-                experience across different devices. Our solutions include
-                successful implementation examples and can help boost user
-                engagement and conversion rates for businesses. Let&apos;s
-                discuss how we can tailor our web solutions to meet your needs.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-                How scalable are your web solutions?
-              </AccordionTrigger>
-              <AccordionContent>
-                I&apos;ve noted down your request to remember the text How
-                scalable are your web solutions?
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>
-                Are your web solutions customizable to fit specific business
-                needs?
-              </AccordionTrigger>
-              <AccordionContent>
-                Absolutely, our web solutions can be tailored to meet specific
-                business requirements.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger>
-                What makes your web solutions reliable?
-              </AccordionTrigger>
-              <AccordionContent>
-                Our web solutions are built on a foundation of robust technology
-                and rigorous testing, ensuring reliability at every step.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-5">
-              <AccordionTrigger>
-                How can we get in touch to discuss our business needs?
-              </AccordionTrigger>
-              <AccordionContent>
-                You can reach out to discuss our business needs via email at
-                [email address] or by phone at [phone number]. Looking forward
-                to connecting with you.
-              </AccordionContent>
-            </AccordionItem>
+            <dl>
+              <AccordionItem value="item-1">
+                <dt>
+                  <AccordionTrigger>
+                    What web solutions do you offer?
+                  </AccordionTrigger>
+                </dt>
+                <dd>
+                  <AccordionContent>
+                    We offer responsive web design services to improve user
+                    experience across different devices. Our solutions include
+                    successful implementation examples and can help boost user
+                    engagement and conversion rates for businesses. Let&apos;s
+                    discuss how we can tailor our web solutions to meet your needs.
+                  </AccordionContent>
+                </dd>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <dt>
+                  <AccordionTrigger>
+                    How scalable are your web solutions?
+                  </AccordionTrigger>
+                </dt>
+                <dd>
+                  <AccordionContent>
+                    I&apos;ve noted down your request to remember the text How
+                    scalable are your web solutions?
+                  </AccordionContent>
+                </dd>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <dt>
+                  <AccordionTrigger>
+                    Are your web solutions customizable to fit specific business
+                    needs?
+                  </AccordionTrigger>
+                </dt>
+                <dd>
+                  <AccordionContent>
+                    Absolutely, our web solutions can be tailored to meet specific
+                    business requirements.
+                  </AccordionContent>
+                </dd>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <dt>
+                  <AccordionTrigger>
+                    What makes your web solutions reliable?
+                  </AccordionTrigger>
+                </dt>
+                <dd>
+                  <AccordionContent>
+                    Our web solutions are built on a foundation of robust technology
+                    and rigorous testing, ensuring reliability at every step.
+                  </AccordionContent>
+                </dd>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <dt>
+                  <AccordionTrigger>
+                    How can we get in touch to discuss our business needs?
+                  </AccordionTrigger>
+                </dt>
+                <dd>
+                  <AccordionContent>
+                    You can reach out to discuss our business needs via email at
+                    [email address] or by phone at [phone number]. Looking forward
+                    to connecting with you.
+                  </AccordionContent>
+                </dd>
+              </AccordionItem>
+            </dl>
           </Accordion>
         </div>
-      </div>
-      <div className="py-12  md:min-h-screen bg-primary bg-custom-radial-sm m-auto border-seven text-secondary">
+      </section>
+      <section className="py-12  md:min-h-screen bg-primary bg-custom-radial-sm m-auto border-seven text-secondary">
         <h6 className="py-3  text-four text-2xl  md:text-3xl lg:text-4xl font-bold text-center">
           Didn&apos;t find an answer?
         </h6>
@@ -111,7 +133,7 @@ export function AccordionDemo() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

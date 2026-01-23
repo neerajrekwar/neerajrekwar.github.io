@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { JSX, useState } from "react";
 import {
   motion,
@@ -43,7 +43,7 @@ export const FloatingNav = ({
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
+      <motion.nav
         initial={{
           opacity: 1,
           y: -100,
@@ -56,29 +56,35 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-four dark:border-white/[0.2] rounded-full dark:bg-black bg-primary shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
-          className,
+          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-four dark:border-white/[0.2] rounded-full dark:bg-black bg-primary shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-center",
+          className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-four dark:hover:text-neutral-300 hover:text-five",
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
-        ))}
-        <button className="border text-sm font-medium relative border-four dark:border-white/[0.2] text-four dark:text-white px-4 py-2 rounded-full">
-          <span>
-            <Link href="/blog">blog</Link>
-          </span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button>
-      </motion.div>
+        <ul className="flex items-center justify-center space-x-4">
+          {navItems.map((navItem: any, idx: number) => (
+            <li key={`link=${idx}`}>
+              <Link
+                href={navItem.link}
+                className={cn(
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-four dark:hover:text-neutral-300 hover:text-five"
+                )}
+              >
+                <span className="block sm:hidden">{navItem.icon}</span>
+                <span className="hidden sm:block text-sm">{navItem.name}</span>
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link
+              href="/blog"
+              className="border text-sm font-medium relative border-four dark:border-white/[0.2] text-four dark:text-white px-4 py-2 rounded-full"
+            >
+              Blog
+              <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+            </Link>
+          </li>
+        </ul>
+      </motion.nav>
     </AnimatePresence>
   );
 };
