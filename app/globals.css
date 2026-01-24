@@ -151,7 +151,8 @@
   }
 }
 
-html {
+html, * {
+  /* border: 0.4px solid orange; */
   scroll-behavior: smooth; /* Temporarily disable smooth scrolling */
 }
 section.bgrid {

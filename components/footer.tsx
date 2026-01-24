@@ -20,7 +20,7 @@ export default function Footer() {
   const latestPosts = posts.slice(0, 2);
 
   return (
-    <footer className="bg-primary bg-custom-radial-sm border-seven text-secondary">
+    <footer className="bg-primary border border-2 border-red-500 bg-custom-radial-sm border-seven text-secondary">
       <div className="p-4 text-four flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
         <div className="flex gap-2 mb-8 items-start flex-col">
           <div className={caveat.className}>
