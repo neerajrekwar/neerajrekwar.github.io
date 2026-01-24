@@ -194,7 +194,7 @@ export const VisionSection: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="basis-1/2 p-2 md:flex flex-col justify-between">
+            <div className="basis-1/2 p-2 lg:flex flex-col justify-between">
               <div className="basis-1/2 md:flex-row md:flex gap-4">
                 <div className="basis-1/2  rounded-lg md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
                   <h3 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
@@ -216,34 +216,25 @@ export const VisionSection: React.FC = () => {
                   />
                 </figure>
               </div>
-              <div className="p-2 md:flex gap-4">
-                <div className="flex  md:flex-col gap-2 my-10 flex-row-reverse">
-                  <h4 className="md:text-base text-five font-semibold">
-                    My learnt tech to use improving web appearance.
-                  </h4>
-                  {/* ... icons ... */}
-                </div>
-                {/* ... other content ... */}
-              </div>
             </div>
           </div>
         </div>
       </article>
 
-      <article>
-        {/* ... content for section 2 ... */}
+      {/* <article>
+        ... content for section 2 ...
       </article>
 
       <article>
-        {/* ... content for section 3 ... */}
-      </article>
+        ... content for section 3 ...
+      </article> */}
 
       <section aria-labelledby="services-heading" className="py-16">
         <header className="text-center mb-12">
-          <h2 id="services-heading" className="md:text-2xl text-xl opacity-50 text-secondary py-6 m-auto max-w-3xl">
+          <h2 id="services-heading" className="md:text-2xl  opacity-50 text-secondary py-3 m-auto max-w-3xl">
             Services and compitable web3 websites
           </h2>
-          <div className="flex justify-center my-8">
+          <div className="flex justify-center mb-8">
             <span className="p-2 px-3 text-four bg-seven border-seven border rounded-full w-fit">
               SEO & Performance
             </span>
