@@ -4,6 +4,7 @@
    Theme Tokens
 ====================================================== */
 :root {
+  --font-sans: var(--font-sans);
   --color-primary: #ffffff;
   --color-secondary: #000000;
   --color-third: #2cffbf;
@@ -18,6 +19,7 @@
 /* ---------------- Dark Mode ---------------- */
 @media (prefers-color-scheme: dark) {
   :root {
+    --font-sans: var(--font-sans);
     --color-primary: #141d1d;
     --color-secondary: #e6f2ee;
     --color-third: #2cffbf;
@@ -38,7 +40,7 @@
   --color-seven: var(--color-seven);
 
   /* Font */
-  --font-secondary: var(--font-secondary);
+  --font-secondary: var(--font-sans);
 
   /* Animations */
   --animation-shimmer: shimmer 2s linear infinite;

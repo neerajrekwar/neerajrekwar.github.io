@@ -8,6 +8,10 @@ import {
   IconBrandLinkedin,
   IconBrandGithubFilled,
   IconBrandDiscordFilled,
+  IconLocation,
+  IconDeviceMobile,
+  IconAt,
+  IconExternalLink,
 } from "@tabler/icons-react";
 import posts from "@/app/blog/data/posts.json";
 
@@ -79,56 +83,42 @@ export default function Footer() {
         <aside className="p-4 mb-10 text-four">
           <h2 className="text-xl text-five mb-8">About</h2>
           <address className="not-italic">
-            <ul className="text-sm">
-              <li className="flex mb-4 justify-start items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="18px"
-                  viewBox="0 -960 960 960"
-                  width="18px"
-                  fill="var(--four)"
-                  aria-hidden="true"
-                >
-                  <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z" />
-                </svg>
-                <span className="px-4 text-four text-sm font-semibold sm:font-normal">
-                  Sec 7 Dwarka New Delhi, Delhi, India 110075
+            <ul className="space-y-4 text-sm text-four">
+              {/* Location */}
+              <li className="group flex items-start gap-4">
+                <div className="mt-0.5 flex-shrink-0 text-five transition-transform group-hover:scale-110">
+                  <IconLocation size={20} />
+                </div>
+                <span className="leading-relaxed">
+                  Sec 7 Dwarka, New Delhi,<br />
+                  Delhi, India 110075
                 </span>
               </li>
-              <li className="flex mb-4 justify-start items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="18px"
-                  viewBox="0 -960 960 960"
-                  width="18px"
-                  fill="var(--four)"
-                  aria-hidden="true"
-                >
-                  <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z" />
-                </svg>
+
+              {/* Phone */}
+              <li className="group flex items-center gap-4">
+                <div className="flex-shrink-0 text-five transition-transform group-hover:scale-110">
+                  <IconDeviceMobile size={20} />
+                </div>
                 <a
                   href="tel:+917042149836"
-                  className="px-4 text-four text-sm font-semibold sm:font-normal"
+                  className="transition-colors hover:text-five hover:underline underline-offset-4"
                 >
                   +91 704 214 9836
                 </a>
               </li>
-              <li className="flex mb-4 justify-start items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="18px"
-                  viewBox="0 -960 960 960"
-                  width="18px"
-                  fill="var(--four)"
-                  aria-hidden="true"
-                >
-                  <path d="M516-120 402-402 120-516v-56l720-268-268 720h-56Z" />
-                </svg>
+
+              {/* Email */}
+              <li className="group flex items-center gap-4">
+                <div className="flex-shrink-0 text-five transition-transform group-hover:scale-110">
+                  <IconAt size={20} />
+                </div>
                 <a
-                  href="mailto:neerajrekwar817@gmail.com"
-                  className="px-4 text-four text-sm font-semibold sm:font-normal"
+                  href="mailto:dev.neerajrekwar@gmail.com"
+                  className="flex items-center gap-1 transition-colors hover:text-five hover:underline underline-offset-4"
                 >
-                  neerajrekwar817@gmail.com
+                  dev.neerajrekwar@gmail.com
+                  <IconExternalLink size={14} className="opacity-0 transition-opacity group-hover:opacity-100" />
                 </a>
               </li>
             </ul>
@@ -188,10 +178,10 @@ export default function Footer() {
             </li>
             <li className="p-1">
               <a
-                href="/products"
+                href="/pricing"
                 className="hover:pl-1 hover:translate-x-1 transition-all"
               >
-                Products
+                Pricing
               </a>
             </li>
             <li className="p-1">
@@ -228,10 +218,15 @@ export default function Footer() {
           </div>
         </figure>
       </div>
-      <div className="text-xs px-4 max-w-7xl m-auto" role="contentinfo">
-        <div className="py-1 opacity-50 flex justify-between max-w-7xl m-auto items-center">
-          <span>Copyright ©{new Date().getFullYear()} Neeraj</span>
-          <span>Built by me</span>
+      <div className="text-xs px-4 max-w-7xl mx-auto w-full" role="contentinfo">
+        <div className="py-6 opacity-50 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <span>
+            &copy; {new Date().getFullYear()} All rights reserved neerajrekwar
+          </span>
+
+          <span className="flex items-center gap-1">
+            Built by <a href="https://github.com/neerajrekwar" target="_blank" rel="noopener noreferrer" className="hover:underline hover:opacity-100 transition-opacity">neerajrekwar</a>
+          </span>
         </div>
       </div>
     </footer>

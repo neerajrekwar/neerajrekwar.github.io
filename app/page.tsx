@@ -69,7 +69,7 @@ export default function Home() {
       <section className="">
         <HomeSectionHeader />
       </section>
-      <section className=" md:h-screen">
+      <section className="md:min-h-screen">
         <IntroSection />
       </section>
       <section className="three">
@@ -81,7 +81,7 @@ export default function Home() {
       <section id="vision" className="">
         <ExpSection />
       </section>
-      <section className=" ">
+      <section className="">
         <VisionSection />
       </section>
       <section className="text-five">

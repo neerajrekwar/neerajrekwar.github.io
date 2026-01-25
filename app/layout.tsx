@@ -14,6 +14,7 @@ const dm_Sans = DM_Sans({
   subsets: ["latin"],
 });
 const alata = Alata({
+  variable: "--font-sans",
   weight: "400",
   subsets: ["latin"],
 });
