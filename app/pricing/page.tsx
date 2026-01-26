@@ -33,41 +33,7 @@ export default function ServicePricingPage() {
   return (
     <div className="min-h-screen bg-[#FDFCF5] font-sans text-slate-800 p-4 md:p-8 flex flex-col items-center">
       
-      {/* Navigation */}
-      <nav className="w-full max-w-7xl flex items-center justify-between mb-12">
-        <div className="flex items-center gap-2">
-          {/* Logo */}
-          <div className="flex items-center font-sans gap-2 font-bold text-xl">
-            <div className="w-8 h-8 bg-slate-900 rounded-md flex items-center justify-center text-white">
-              <Terminal className="w-5 h-5" />
-            </div>
-            nee
-          </div>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
-          <a href="#" className="hover:text-slate-900">Dashboard</a>
-          <a href="#" className="hover:text-slate-900">Projects</a>
-          <a href="#" className="hover:text-slate-900">Maintenance</a>
-          <a href="#" className="hover:text-slate-900">SEO Reports</a>
-          <a href="#" className="hover:text-slate-900">Deployments</a>
-        </div>
-
-        {/* Right Actions */}
-        <div className="flex items-center gap-3">
-          <button className="flex items-center gap-1 px-3 py-1.5 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 hover:bg-slate-50">
-            <Settings className="w-4 h-4" />
-            <span>Config</span>
-          </button>
-          <button className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50">
-            <Bell className="w-4 h-4" />
-          </button>
-          <button className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600">
-            <User className="w-4 h-4" />
-          </button>
-        </div>
-      </nav>
+     
 
       {/* Main Content */}
       <div className="w-full max-w-7xl">
