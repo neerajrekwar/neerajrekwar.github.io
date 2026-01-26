@@ -31,7 +31,7 @@ export default function ServicePricingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FDFCF5] font-sans text-slate-800 p-4 md:p-8 flex flex-col items-center">
+    <div className="min-h-screen bg-primary font-sans text-slate-800 p-4 md:p-8 flex flex-col items-center">
       
      
 

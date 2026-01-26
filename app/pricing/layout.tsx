@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 import { Terminal, Settings, Bell, User } from 'lucide-react';
 import '../globals.css';
-import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,39 +19,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen bg-[#FDFCF5] text-slate-800`}>
-        
-        {/* Main Layout Container */}
         <div className="flex flex-col items-center p-4 md:p-8">
           
-          {/* Navigation (Persists on all pages) */}
+          {/* Navigation */}
           <nav className="w-full max-w-7xl flex items-center justify-between mb-12">
             <div className="flex items-center gap-2">
-              {/* Logo */}
-              <div className="flex items-center font-sans gap-2 font-bold text-xl">
+              <Link href="/" className="flex items-center font-sans gap-2 font-bold text-xl hover:opacity-80 transition-opacity">
                 <div className="w-8 h-8 bg-slate-900 rounded-md flex items-center justify-center text-white">
                   <Terminal className="w-5 h-5" />
                 </div>
                 nee
-              </div>
+              </Link>
             </div>
 
-            {/* Desktop Menu */}
+            {/* Desktop Menu - Updated Paths */}
             <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
-              <Link href="/dashboard" className="hover:text-slate-900 transition-colors">
-                Dashboard
-              </Link>
-              <Link href="/projects" className="hover:text-slate-900 transition-colors">
-                Projects
-              </Link>
-              <Link href="/services" className="hover:text-slate-900 transition-colors">
-                Maintenance
-              </Link>
-              <Link href="/packages" className="hover:text-slate-900 transition-colors">
-                Packages
-              </Link>
-              <Link href="/deployments" className="hover:text-slate-900 transition-colors">
-                Deployments
-              </Link>
+              <Link href="/dashboard" className="hover:text-slate-900 transition-colors">Dashboard</Link>
+              <Link href="/projects" className="hover:text-slate-900 transition-colors">Projects</Link>
+              
+              {/* Updated Links */}
+              <Link href="/pricing/maintenance" className="hover:text-slate-900 transition-colors">Maintenance</Link>
+              <Link href="/pricing/packages" className="hover:text-slate-900 transition-colors">Packages</Link>
+              
+              <Link href="/deployments" className="hover:text-slate-900 transition-colors">Deployments</Link>
             </div>
 
             {/* Right Actions */}
@@ -69,7 +59,6 @@ export default function RootLayout({
             </div>
           </nav>
 
-          {/* Page Content Renders Here */}
           <main className="w-full max-w-7xl">
             {children}
           </main>
