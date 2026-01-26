@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/app/utils/cn";
+import { cn } from "@/utils/cn";
 import Link from "next/link";
 import TextFlipper from "../TextFlipper";
 import AnimatedButton from "../AnimatedButton";

@@ -1,6 +1,6 @@
 // components/DeviceAddress.tsx
 "use client";
-import { IconLocationFilled } from "@tabler/icons-react";
+import { IconLoader, IconLocationFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -33,7 +33,7 @@ const DeviceAddress: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-baseline justify-end">
       <div className=" ">
         {error ? (
           <div className=" text-center">
@@ -44,7 +44,7 @@ const DeviceAddress: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 4 }}
-            className="flex text-sm  md:text-md overflow-y-hidden sm:text-sm gap-1 text-five/70 justify-center items-center"
+            className="flex text-sm  md:text-md overflow-y-hidden sm:text-sm gap-1 text-five justify-center items-center"
           >
             {/* <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2> */}
             {/* <p className="text-lg"><strong>IP:</strong> {address.ip}</p> */}
@@ -54,8 +54,8 @@ const DeviceAddress: React.FC = () => {
             <p className=""> {address.country}</p>
           </motion.div>
         ) : (
-          <div className="text-center  p-2">
-            <motion.p>just a moment...</motion.p>
+          <div className="text-center p-2">
+            <IconLoader className="animate-spin h-5 w-5" />
           </div>
         )}
       </div>

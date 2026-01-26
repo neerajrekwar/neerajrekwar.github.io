@@ -79,7 +79,7 @@ const Weather: React.FC = () => {
     <div>
       {error ? (
         <motion.p
-          className="text-five/70 text-sm"
+          className="text-five text-sm"
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           whileInView={{ opacity: 1, x: 0 }}

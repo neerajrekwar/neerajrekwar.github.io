@@ -24,18 +24,18 @@ export default function HomeSectionHeader() {
     <>
       <header className="min-h-screen text-primary overflow-hidden">
         <div className="mx-auto">
-          <div className="absolute max-w-[99.3%] mx-auto flex justify-between items-start px-2 w-full opacity-75 flex justify-between  text-[.6rem] md:text-[.5rem] lg:text-[.7rem] top-0 text-four z-999  text-right ">
+          <div className="absolute max-w-[99.7%] mx-auto flex justify-between items-start px-2 w-full opacity-75 flex justify-between  text-[.6rem] md:text-[.5rem] lg:text-[.7rem] top-0 text-four z-999  text-right ">
             <div className={`${alata.className} ${caveat.className} `}>
               <Link
                 href={"/"}
-                className=" text-five/70 text-3xl sm:text-4xl md:text-5xl font-bold"
+                className=" text-five text-3xl sm:text-4xl md:text-5xl font-bold"
               >
                 {/* <i className="bg-white px-[.2rem] my-1 h-[3rem] rounded  border text-black not-italic"></i> */}
-                nee
+                nee.
               </Link>
             </div>
             <div className="">
-              <div className="text-five/70  pt-1 md:flex justify-center overflow-hidden items-center gap-4 font-bold">
+              <div className="text-five  pt-1 md:flex justify-end items-center overflow-hidden items-center gap-4 font-bold">
                 <DeviceAddress />
                 <Weather />
               </div>
