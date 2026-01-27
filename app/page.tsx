@@ -11,7 +11,7 @@ import { AccordionDemo } from "@/components/ui/Accordion";
 
 export const metadata: Metadata = {
   title: {
-    default: "Neeraj Rekwar| Full Stack Developer & Creator",
+    default: "Neeraj Rekwar | Full Stack Developer & Creator",
     template: "%s | neerajrekwar"
   },
   description: "Portfolio of neerajrekwar, a passionate Programmer and Entrepreneur specializing in Next.js, Tailwind CSS, and modern web development. Turning complex problems into elegant solutions.",

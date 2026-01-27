@@ -16,7 +16,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: 'NEE - Developer Services',
+  title: 'nee - Developer Services',
   description: 'Professional Web3 and Software Development Services',
 };
 
