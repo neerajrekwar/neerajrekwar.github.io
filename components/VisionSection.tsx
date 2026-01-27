@@ -469,7 +469,7 @@ export const VisionSection: React.FC = () => {
             <div className="bg-primary my-12">
               <div className="md:flex-col text-secondary max-w-6xl m-auto gap-2 py-4  flex-row-reverse">
                 <div className="flex items-center ">
-                  <h3 className="md:text-4xl text-2xl opacity-50 py-6 text-center m-auto px-3 max-w-3xl">
+                  <h3 className="md:text-4xl text-2xl opacity-50 pt-6 text-center m-auto px-3 max-w-3xl">
                     Make a Innovative customization
                   </h3>
                 </div>

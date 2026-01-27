@@ -1,67 +1,75 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Terminal, Layers, ArrowRight } from 'lucide-react';
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Terminal, Layers, ArrowRight } from "lucide-react";
 
 export default function PricingHubPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh]">
+    <section className="flex flex-col items-center justify-center min-h-[80vh] py-20">
       
-      {/* Header Section */}
-      <div className="text-center mb-16 max-w-2xl">
-        <h1 className="text-5xl font-bold text-slate-900 mb-6">Choose Your Path</h1>
-        <p className="text-lg text-slate-500">
+      {/* Header */}
+      <header className="text-center mb-16 max-w-2xl px-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-four mb-4">
+          Choose Your Path
+        </h1>
+        <p className="text-base md:text-lg text-secondary">
           Are you building something new from scratch, or scaling a platform that already exists?
         </p>
-      </div>
+      </header>
 
-      {/* Selection Cards */}
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl w-full px-4">
+      {/* Cards */}
+      <div className="grid w-full max-w-5xl grid-cols-1 md:grid-cols-2 gap-8 px-4">
         
-        {/* Option 1: Project Build (Links to /pricing/packages) */}
+        {/* Project Build */}
         <Link href="/pricing/packages" className="group">
-          <motion.div 
-            whileHover={{ y: -8 }}
-            className="h-full p-10 rounded-3xl bg-white border border-slate-200 shadow-xl hover:shadow-2xl hover:border-slate-300 transition-all flex flex-col items-start"
+          <motion.div
+            whileHover={{ y: -6 }}
+            className="flex h-full flex-col p-8 rounded-3xl border shadow-lg bg-primary border-ui-3 hover:shadow-xl transition-all"
           >
-            <div className="w-14 h-14 bg-[#FFFBEB] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Layers className="w-7 h-7 text-yellow-600" />
+            <div className="w-14 h-14 rounded-2xl bg-ui-4  bg-seven flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Layers className="w-7 h-7 text-accent" />
             </div>
-            
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">Project Build</h2>
-            <p className="text-slate-500 mb-8 leading-relaxed">
+
+            <h2 className="text-2xl md:text-3xl font-semibold text-four mb-2">
+              Project Build
+            </h2>
+
+            <p className="text-ui-3/80 leading-relaxed mb-8">
               For startups and founders. Get a fixed-price package to architect and build your Web2 or Web3 product from zero to launch.
             </p>
 
-            <div className="mt-auto flex items-center text-sm font-bold text-slate-900 group-hover:gap-2 transition-all">
+            <div className="mt-auto flex items-center font-semibold text-four text-sm group-hover:gap-2 transition-all">
               View Build Packages <ArrowRight className="w-4 h-4 ml-1" />
             </div>
           </motion.div>
         </Link>
 
-        {/* Option 2: Monthly Service (Links to /pricing/maintenance) */}
+        {/* Monthly Service */}
         <Link href="/pricing/maintenance" className="group">
-          <motion.div 
-            whileHover={{ y: -8 }}
-            className="h-full p-10 rounded-3xl bg-[#2A2A2A] text-white shadow-xl hover:shadow-2xl hover:shadow-slate-900/20 transition-all flex flex-col items-start"
+          <motion.div
+            whileHover={{ y: -6 }}
+            className="flex h-full flex-col p-8 rounded-3xl shadow-lg bg-four/20 text-secondary hover:shadow-xl transition-all"
           >
-            <div className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Terminal className="w-7 h-7 text-white" />
+            <div className="w-14 h-14 rounded-2xl bg-ui-1 flex bg-seven items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Terminal className="w-7 h-7 text-secondary" />
             </div>
-            
-            <h2 className="text-3xl font-bold text-white mb-3">Monthly Service</h2>
-            <p className="text-slate-400 mb-8 leading-relaxed">
+
+            <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+              Monthly Service
+            </h2>
+
+            <p className="text-ui-3 leading-relaxed mb-8">
               For existing businesses. Ongoing support, bug fixes, security patching, and SEO optimization on a monthly retainer.
             </p>
 
-            <div className="mt-auto flex items-center text-sm font-bold text-white group-hover:gap-2 transition-all">
+            <div className="mt-auto flex items-center font-semibold text-secondary text-sm group-hover:gap-2 transition-all">
               View Service Plans <ArrowRight className="w-4 h-4 ml-1" />
             </div>
           </motion.div>
         </Link>
 
       </div>
-    </div>
+    </section>
   );
 }
