@@ -16,8 +16,35 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: 'nee - Developer Services',
-  description: 'Professional Web3 and Software Development Services',
+  title: 'Pricing | Developer Services - Neeraj Rekwar',
+  description: 'Professional Web3 and Software Development Services. Choose a development package or monthly maintenance plan.',
+  alternates: {
+    canonical: "/pricing",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/pricing",
+    title: "Pricing | Developer Services - Neeraj Rekwar",
+    description: "Professional Web3 and Software Development Services. Choose a development package or monthly maintenance plan.",
+    siteName: "Neeraj Rekwar Portfolio",
+    images: [
+      {
+        url: "/me_profile.webp",
+        width: 1200,
+        height: 630,
+        alt: "Developer Services Pricing - Neeraj Rekwar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@neerajrekwar",
+    title: "Pricing | Developer Services - Neeraj Rekwar",
+    description: "Professional Web3 and Software Development Services.",
+    images: ["/me_profile.webp"],
+    creator: "@neerajrekwar",
+  },
 };
 
 export default function PricingLayout({

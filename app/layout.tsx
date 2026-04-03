@@ -20,6 +20,7 @@ const alata = Alata({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://neerajrekwar.github.io"),
   other: {
     "p:domain_verify": "9915feac8ce474656e7a8a1fa91b7593",
   },

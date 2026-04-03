@@ -12,9 +12,9 @@ import { AccordionDemo } from "@/components/ui/Accordion";
 export const metadata: Metadata = {
   title: {
     default: "Neeraj Rekwar | Full Stack Developer & Creator",
-    template: "%s | neerajrekwar"
+    template: "%s | Neeraj Rekwar"
   },
-  description: "Portfolio of neerajrekwar, a passionate Programmer and Entrepreneur specializing in Next.js, Tailwind CSS, and modern web development. Turning complex problems into elegant solutions.",
+  description: "Portfolio of Neeraj Rekwar, a passionate Programmer and Entrepreneur specializing in Next.js, Tailwind CSS, and modern web development. Turning complex problems into elegant solutions.",
   keywords: [
     "Next.js Developer",
     "React",
@@ -26,15 +26,18 @@ export const metadata: Metadata = {
     "Web Development",
     "Creative Developer",
   ],
-  authors: [{ name: "neerajrekwar", url: "https://neerajrekwar.github.io" }],
-  creator: "neerajrekwar",
+  authors: [{ name: "Neeraj Rekwar", url: "https://neerajrekwar.github.io" }],
+  creator: "Neeraj Rekwar",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://neerajrekwar.github.io",
-    title: "Neeraj Rekwar | Full Stack Developer",
+    url: "/",
+    title: "Neeraj Rekwar | Full Stack Developer & Creator",
     description: "Building modern web experiences with Next.js and Tailwind CSS. Check out my latest projects and articles.",
-    siteName: "Neeraj RekwarPortfolio",
+    siteName: "Neeraj Rekwar Portfolio",
     images: [
       {
         url: "/me_profile.webp", // You should create an image file in your public folder
@@ -46,10 +49,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neeraj Rekwar| Full Stack Developer",
+    site: "@neerajrekwar",
+    title: "Neeraj Rekwar | Full Stack Developer & Creator",
     description: "Building modern web experiences with Next.js and Tailwind CSS.",
     images: ["/me_profile.webp"],
-    creator: "@neerajrekwar", // Optional
+    creator: "@neerajrekwar",
   },
   robots: {
     index: true,

@@ -1,0 +1,15 @@
+# Neeraj Rekwar - Portfolio & Blog
+
+Neeraj Rekwar is a Full Stack Developer & Creator specializing in Next.js, Tailwind CSS, and modern web development.
+This website serves as his personal portfolio, blog, and contact portal.
+
+## Key Pages
+- Home: https://neerajrekwar.github.io/
+- About: https://neerajrekwar.github.io/about
+- Contact: https://neerajrekwar.github.io/contact
+- Blog: https://neerajrekwar.github.io/blog
+- Pricing: https://neerajrekwar.github.io/pricing
+
+## Profile & Vision
+Neeraj turns complex problems into elegant solutions. He is a passionate Programmer and Entrepreneur.
+He focuses on building modern web experiences with high performance and accessibility in mind.
