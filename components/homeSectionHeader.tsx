@@ -126,11 +126,11 @@ export default function HomeSectionHeader() {
                       }}
                       className="flex gap-1 h-4"
                     >
-                      <p className=" flex flex-row justify-start text-red-400 items-center text-2xl">
+                      <p className=" flex flex-row justify-start text-green-400 items-center text-2xl">
                         &#8226;
                       </p>
                       <p className="text-four text-xs flex flex-row justify-start items-center font-normal text-sm">
-                        Soon available for freelance
+                       Available for freelance
                       </p>
                     </motion.div>
                   </motion.div>

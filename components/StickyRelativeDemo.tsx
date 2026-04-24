@@ -73,30 +73,30 @@ const StickyRelativeDemo: NextPage = () => {
               <Image
                 src={"/screen.jpg"}
                 alt={"My Profile Picture"}
-                width={300}
-                height={300}
+                width={552}
+                height={310}
                 loading="lazy"
-                className="min-w-full min-h-full rounded-2xl"
+                className="w-full h-auto object-cover rounded-2xl"
               />
             </figure>
             <figure>
               <Image
                 src={"/screen.jpg"}
                 alt={"My Profile Picture"}
-                width={300}
-                height={300}
+                width={552}
+                height={310}
                 loading="lazy"
-                className="min-w-full min-h-full rounded-2xl"
+                className="w-full h-auto object-cover rounded-2xl"
               />
             </figure>
             <figure>
               <Image
                 src={"/screen.jpg"}
                 alt={"My Profile Picture"}
-                width={300}
-                height={300}
+                width={552}
+                height={310}
                 loading="lazy"
-                className="min-w-full min-h-full rounded-2xl"
+                className="w-full h-auto object-cover rounded-2xl"
               />
             </figure>
           </div>
