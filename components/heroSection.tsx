@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import TextType from "./TextType";
+import TextType from "./TextType.js";
 import dynamic from "next/dynamic";
 import { Source_Code_Pro } from "next/font/google";
 import {
@@ -26,18 +26,18 @@ const LoadingFallback = () => (
   </div>
 );
 
-const LiquidChrome = dynamic(() => import("./LiquidChrome"), { ssr: false, loading: () => <LoadingFallback /> });
-const TextGenerateEffectDemo = dynamic(() => import("./textGenerate").then((mod) => mod.TextGenerateEffectDemo), { loading: () => <LoadingFallback /> });
-const WobbleCardDemo = dynamic(() => import("./WobbleCard").then((mod) => mod.WobbleCardDemo), { loading: () => <LoadingFallback /> });
-const AgeCalculator = dynamic(() => import("./AgeCalculator"), { loading: () => <LoadingFallback /> });
-const CountAnimation = dynamic(() => import("./CountAnimation"), { loading: () => <LoadingFallback /> });
-const ImageSlides = dynamic(() => import("./ImageSlides").then((mod) => mod.ImageSlides), { loading: () => <LoadingFallback /> });
-const TextRotator = dynamic(() => import("./TextsRefresh"), { loading: () => <LoadingFallback /> });
-const CoverDemo = dynamic(() => import("./CoverDemo").then((mod) => mod.CoverDemo), { loading: () => <LoadingFallback /> });
-const MultiStepLoader = dynamic(() => import("./MultiStepLoader").then((mod) => mod.MultiStepLoader), { loading: () => <LoadingFallback /> });
-const ParallaxScrollDemo = dynamic(() => import("./ParallaxScrollImages").then((mod) => mod.ParallaxScrollDemo), { loading: () => <LoadingFallback /> });
-const InfiniteImageScroller = dynamic(() => import("./InfiniteImageScroller").then((mod) => mod.InfiniteImageScroller), { loading: () => <LoadingFallback /> });
-const ReactMarkdown = dynamic(() => import("react-markdown"), { loading: () => <LoadingFallback /> });
+const LiquidChrome = dynamic(() => import("./LiquidChrome.js").then((mod) => mod.LiquidChrome), { ssr: false, loading: () => <LoadingFallback /> });
+const TextGenerateEffectDemo = dynamic(() => import("./textGenerate.js").then((mod) => mod.TextGenerateEffectDemo), { loading: () => <LoadingFallback /> });
+const WobbleCardDemo = dynamic(() => import("./WobbleCard.js").then((mod) => mod.WobbleCardDemo), { loading: () => <LoadingFallback /> });
+const AgeCalculator = dynamic(() => import("./AgeCalculator.js").then((mod) => mod.default as any), { loading: () => <LoadingFallback /> });
+const CountAnimation = dynamic(() => import("./CountAnimation.js").then((mod) => mod.default as any), { loading: () => <LoadingFallback /> });
+const ImageSlides = dynamic(() => import("./ImageSlides.js").then((mod) => mod.ImageSlides), { loading: () => <LoadingFallback /> });
+const TextRotator = dynamic(() => import("./TextsRefresh.js").then((mod) => mod.default as any), { loading: () => <LoadingFallback /> });
+const CoverDemo = dynamic(() => import("./CoverDemo.js").then((mod) => mod.CoverDemo), { loading: () => <LoadingFallback /> });
+const MultiStepLoader = dynamic(() => import("./MultiStepLoader.js").then((mod) => mod.MultiStepLoader), { loading: () => <LoadingFallback /> });
+const ParallaxScrollDemo = dynamic(() => import("./ParallaxScrollImages.js").then((mod) => mod.ParallaxScrollDemo), { loading: () => <LoadingFallback /> });
+const InfiniteImageScroller = dynamic(() => import("./InfiniteImageScroller.js").then((mod) => mod.InfiniteImageScroller), { loading: () => <LoadingFallback /> });
+const ReactMarkdown = dynamic(() => import("react-markdown").then((mod) => mod.default), { loading: () => <LoadingFallback /> });
 
 const markdown = `
 [![Deploy Next.js site to Pages](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml)
