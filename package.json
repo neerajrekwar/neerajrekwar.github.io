@@ -36,7 +36,8 @@
     "shelljs": "^0.10.0",
     "tailwind-merge": "^3.4.0",
     "tailwind-scrollbar": "^4.0.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",

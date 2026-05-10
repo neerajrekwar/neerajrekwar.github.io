@@ -14,6 +14,7 @@ import {
   IconExternalLink,
 } from "@tabler/icons-react";
 import posts from "@/app/blog/data/posts.json";
+import DarkModebtn from "./theme/DarkModebtn";
 
 const caveat = Caveat({
   weight: "400",
@@ -76,6 +77,9 @@ export default function Footer() {
             >
               <IconBrandDiscordFilled />
             </a>
+          </li>
+          <li>
+            <DarkModebtn />
           </li>
         </ul>
       </div>
@@ -176,14 +180,7 @@ export default function Footer() {
                 About
               </a>
             </li>
-            <li className="p-1">
-              <a
-                href="/pricing"
-                className="hover:pl-1 hover:translate-x-1 transition-all"
-              >
-                Pricing
-              </a>
-            </li>
+            
             <li className="p-1">
               <a
                 href="/blog"
@@ -202,10 +199,10 @@ export default function Footer() {
             </li>
             <li className="p-1">
               <a
-                href="/support"
+                href="/freelance"
                 className="hover:pl-1 hover:translate-x-1 transition-all"
               >
-                Help & support
+                freelance
               </a>
             </li>
           </ul>

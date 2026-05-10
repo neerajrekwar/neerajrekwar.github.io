@@ -22,20 +22,20 @@ export default function PricingHubPage() {
       <div className="grid w-full max-w-5xl grid-cols-1 md:grid-cols-2 gap-8 px-4">
         
         {/* Project Build */}
-        <Link href="/pricing/packages" className="group">
+        <Link href="/freelance/packages" className="group">
           <motion.div
             whileHover={{ y: -6 }}
-            className="flex h-full flex-col p-8 rounded-3xl border shadow-lg bg-primary border-ui-3 hover:shadow-xl transition-all"
+          className="flex h-full flex-col p-8 rounded-3xl border shadow-lg bg-primary border-seven hover:shadow-xl transition-all"
           >
-            <div className="w-14 h-14 rounded-2xl bg-ui-4  bg-seven flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Layers className="w-7 h-7 text-accent" />
+          <div className="w-14 h-14 rounded-2xl bg-seven flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <Layers className="w-7 h-7 text-third" />
             </div>
 
             <h2 className="text-2xl md:text-3xl font-semibold text-four mb-2">
               Project Build
             </h2>
 
-            <p className="text-ui-3/80 leading-relaxed mb-8">
+          <p className="text-five leading-relaxed mb-8">
               For startups and founders. Get a fixed-price package to architect and build your Web2 or Web3 product from zero to launch.
             </p>
 
@@ -46,20 +46,20 @@ export default function PricingHubPage() {
         </Link>
 
         {/* Monthly Service */}
-        <Link href="/pricing/maintenance" className="group">
+        <Link href="/freelance/maintenance" className="group">
           <motion.div
             whileHover={{ y: -6 }}
-            className="flex h-full flex-col p-8 rounded-3xl shadow-lg bg-four/20 text-secondary hover:shadow-xl transition-all"
+          className="flex h-full flex-col p-8 rounded-3xl shadow-lg border border-seven bg-six text-secondary hover:shadow-xl transition-all"
           >
-            <div className="w-14 h-14 rounded-2xl bg-ui-1 flex bg-seven items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <Terminal className="w-7 h-7 text-secondary" />
+          <div className="w-14 h-14 rounded-2xl flex bg-seven items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <Terminal className="w-7 h-7 text-third" />
             </div>
 
             <h2 className="text-2xl md:text-3xl font-semibold mb-2">
               Monthly Service
             </h2>
 
-            <p className="text-ui-3 leading-relaxed mb-8">
+          <p className="text-five leading-relaxed mb-8">
               For existing businesses. Ongoing support, bug fixes, security patching, and SEO optimization on a monthly retainer.
             </p>
 

@@ -35,9 +35,9 @@ export default function CombinedPricingPage() {
         "No New Development",
       ],
       limitIndex: 4,
-      icon: <Terminal className="w-6 h-6 text-slate-700" />,
+      icon: <Terminal className="w-6 h-6 text-four" />,
       highlight: false,
-      color: "bg-[#EAE8DE]" // Added to match shape
+      color: "bg-six border-seven text-secondary" // Added to match shape
     },
     {
       title: "Growth & Rank",
@@ -52,9 +52,9 @@ export default function CombinedPricingPage() {
         "Content Updates",
       ],
       limitIndex: 5,
-      icon: <Layout className="w-6 h-6 text-yellow-400" />,
+      icon: <Layout className="w-6 h-6 text-third" />,
       highlight: true,
-      color: "bg-[#2A2A2A]" // Added to match shape
+      color: "bg-four border-third text-primary" // Added to match shape
     }
   ];
 
@@ -75,9 +75,9 @@ export default function CombinedPricingPage() {
         "No Auth System"
       ],
       limitIndex: 5,
-      icon: <Layout className="w-6 h-6 text-slate-700" />,
+      icon: <Layout className="w-6 h-6 text-four" />,
       highlight: false,
-      color: "bg-[#EAE8DE]"
+      color: "bg-six border-seven text-secondary"
     },
     {
       title: "Functional Web2",
@@ -94,9 +94,9 @@ export default function CombinedPricingPage() {
         "No Blockchain"
       ],
       limitIndex: 6,
-      icon: <Database className="w-6 h-6 text-white" />,
+      icon: <Database className="w-6 h-6 text-primary" />,
       highlight: true,
-      color: "bg-[#2A2A2A]"
+      color: "bg-four border-third text-primary"
     },
     {
       title: "Dynamic Web3/4",
@@ -113,9 +113,9 @@ export default function CombinedPricingPage() {
         "Delivery: 6+ Weeks"
       ],
       limitIndex: 7,
-      icon: <Cpu className="w-6 h-6 text-slate-700" />,
+      icon: <Cpu className="w-6 h-6 text-four" />,
       highlight: false,
-      color: "bg-[#FFFBEB]"
+      color: "bg-seven border-seven text-secondary"
     }
   ];
 
@@ -127,7 +127,7 @@ export default function CombinedPricingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-primary font-sans text-slate-800 p-4 md:p-8 flex flex-col items-center">
+    <div className="min-h-screen bg-primary font-sans text-secondary p-4 md:p-8 flex flex-col items-center">
       
 
       {/* Main Content */}
@@ -136,10 +136,10 @@ export default function CombinedPricingPage() {
         {/* Controls Section */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-6">
           <div>
-            <h1 className="text-4xl font-normal text-slate-800">
+            <h1 className="text-4xl font-normal text-secondary">
               {serviceType === 'retainer' ? 'Maintenance Plans' : 'Development Packages'}
             </h1>
-            <p className="text-slate-500 mt-2">
+            <p className="text-five mt-2">
               {serviceType === 'retainer' 
                 ? 'Keep your software running securely.' 
                 : 'Build your next big idea from scratch.'}
@@ -148,16 +148,16 @@ export default function CombinedPricingPage() {
           
           <div className="flex gap-4">
             {/* Main Service Type Toggle */}
-            <div className="bg-slate-200 p-1 rounded-full flex">
+            <div className="bg-seven p-1 rounded-full flex">
               <button 
                 onClick={() => setServiceType('retainer')}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${serviceType === 'retainer' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500'}`}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${serviceType === 'retainer' ? 'bg-primary shadow-sm text-secondary' : 'text-four hover:text-secondary'}`}
               >
                 Monthly Service
               </button>
               <button 
                 onClick={() => setServiceType('build')}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${serviceType === 'build' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500'}`}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${serviceType === 'build' ? 'bg-primary shadow-sm text-secondary' : 'text-four hover:text-secondary'}`}
               >
                 Project Build
               </button>
@@ -165,16 +165,16 @@ export default function CombinedPricingPage() {
 
             {/* Billing Cycle (Only shows for Retainer) */}
             {serviceType === 'retainer' && (
-              <div className="bg-white border border-slate-200 p-1 rounded-full flex">
+              <div className="bg-seven border border-seven p-1 rounded-full flex">
                 <button 
                   onClick={() => setBillingCycle('annual')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${billingCycle === 'annual' ? 'bg-slate-900 text-white' : 'text-slate-500'}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${billingCycle === 'annual' ? 'bg-primary text-secondary shadow-sm' : 'text-four hover:text-secondary'}`}
                 >
                   Yearly
                 </button>
                 <button 
                   onClick={() => setBillingCycle('monthly')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${billingCycle === 'monthly' ? 'bg-slate-900 text-white' : 'text-slate-500'}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${billingCycle === 'monthly' ? 'bg-primary text-secondary shadow-sm' : 'text-four hover:text-secondary'}`}
                 >
                   Monthly
                 </button>
@@ -190,14 +190,10 @@ export default function CombinedPricingPage() {
             <div 
               key={index}
               // We use plan.color to determine background
-              className={`relative rounded-3xl p-8 border flex flex-col transition-all duration-300 ${plan.color} ${
-                plan.highlight 
-                  ? 'text-white border-yellow-400 border-dashed shadow-xl transform md:-translate-y-2' 
-                  : 'text-slate-800 border-transparent'
-              }`}
+              className={`relative rounded-3xl p-8 border flex flex-col transition-all duration-300 ${plan.color} ${plan.highlight ? 'border-dashed shadow-xl transform md:-translate-y-2' : ''}`}
             >
               {plan.highlight && (
-                <div className="absolute -top-3 right-8 bg-yellow-300 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
+                <div className="absolute -top-3 right-8 bg-third text-primary text-xs font-bold px-3 py-1 rounded-full">
                   Best Value ●
                 </div>
               )}
@@ -207,15 +203,15 @@ export default function CombinedPricingPage() {
                 <div className="flex justify-center mb-4">{plan.icon}</div>
                 <h3 className="text-lg font-medium mb-2">{plan.title}</h3>
                 <div className="flex items-center justify-center gap-1 mb-1">
-                  <span className={`text-4xl font-normal ${plan.highlight ? 'text-yellow-400' : 'text-slate-800'}`}>
+                  <span className={`text-4xl font-normal ${plan.highlight ? 'text-third' : 'inherit'}`}>
                     ${getDisplayPrice(plan)}
                   </span>
-                  <span className={`text-xs flex flex-col items-start leading-tight ${plan.highlight ? 'text-slate-400' : 'text-slate-500'}`}>
+                  <span className={`text-xs flex flex-col items-start leading-tight ${plan.highlight ? 'text-primary/70' : 'text-five'}`}>
                     <span>{plan.period}</span>
                     <span>(USD)</span>
                   </span>
                 </div>
-                <p className={`text-xs mt-4 px-4 leading-relaxed h-10 ${plan.highlight ? 'text-slate-400' : 'text-slate-500'}`}>
+                <p className={`text-xs mt-4 px-4 leading-relaxed h-10 ${plan.highlight ? 'text-primary/70' : 'text-five'}`}>
                   {plan.desc}
                 </p>
               </div>
@@ -225,17 +221,13 @@ export default function CombinedPricingPage() {
                 {plan.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     {idx < plan.limitIndex ? (
-                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#8BC34A] flex items-center justify-center">
-                        <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-third flex items-center justify-center">
+                        <Check className={`w-3 h-3 ${plan.highlight ? 'text-four' : 'text-secondary'}`} strokeWidth={3} />
                       </div>
                     ) : (
-                      <X className={`flex-shrink-0 w-5 h-5 p-0.5 ${plan.highlight ? 'text-slate-600' : 'text-slate-400'}`} />
+                      <X className={`flex-shrink-0 w-5 h-5 p-0.5 ${plan.highlight ? 'text-primary/50' : 'text-five/50'}`} />
                     )}
-                    <span className={`text-xs ${
-                      idx < plan.limitIndex 
-                        ? (plan.highlight ? 'text-slate-200' : 'text-slate-700') 
-                        : (plan.highlight ? 'text-slate-600' : 'text-slate-400')
-                    }`}>
+                    <span className={`text-xs ${idx < plan.limitIndex ? (plan.highlight ? 'text-primary' : 'text-four') : (plan.highlight ? 'text-primary/50' : 'text-five/50')}`}>
                       {feature}
                     </span>
                   </div>
@@ -244,11 +236,7 @@ export default function CombinedPricingPage() {
 
               {/* Action Button */}
               <div className="text-center mt-auto">
-                 <button className={`w-full px-8 py-3 rounded-full text-sm font-medium shadow-sm transition-all ${
-                   plan.highlight 
-                    ? 'bg-yellow-400 text-slate-900 hover:bg-yellow-300' 
-                    : 'bg-white text-slate-900 hover:shadow-md'
-                 }`}>
+                 <button className={`w-full px-8 py-3 rounded-full text-sm font-bold shadow-sm transition-all border ${plan.highlight ? 'bg-third text-four border-transparent hover:opacity-90' : 'bg-primary text-secondary border-seven hover:bg-seven hover:shadow-md'}`}>
                    {serviceType === 'build' ? 'Book Project' : 'Subscribe'}
                  </button>
               </div>

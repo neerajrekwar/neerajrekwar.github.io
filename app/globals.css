@@ -17,17 +17,15 @@
 }
 
 /* ---------------- Dark Mode ---------------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --font-sans: var(--font-sans);
-    --color-primary: #141d1d;
-    --color-secondary: #e6f2ee;
-    --color-third: #2cffbf;
-    --color-four: #75968b;
-    --color-five: #d6efe6;
-    --color-six: #1a2929;
-    --color-seven: #445e561a;
-  }
+.dark {
+  --font-sans: var(--font-sans);
+  --color-primary: #141d1d;
+  --color-secondary: #e6f2ee;
+  --color-third: #2cffbf;
+  --color-four: #75968b;
+  --color-five: #d6efe6;
+  --color-six: #1a2929;
+  --color-seven: #445e561a;
 }
 @theme {
   /* Colors */

@@ -16,8 +16,15 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: 'Pricing | Developer Services - Neeraj Rekwar',
-  description: 'Professional Web3 and Software Development Services. Choose a development package or monthly maintenance plan.',
+  title: 'Hire Freelance Web Developer | Developer Services - Neeraj Rekwar',
+  description: 'Hire a freelance full stack developer for custom website development services. Remote Next.js expert available for startups, business websites, SEO redesigns, and performance fixes.',
+  keywords: [
+    "hire freelance web developer",
+    "hire Next.js developer",
+    "freelance full stack developer for hire",
+    "remote web developer for startup",
+    
+  ],
   alternates: {
     canonical: "/pricing",
   },
@@ -25,23 +32,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/pricing",
-    title: "Pricing | Developer Services - Neeraj Rekwar",
-    description: "Professional Web3 and Software Development Services. Choose a development package or monthly maintenance plan.",
+    title: "Hire Freelance Web Developer | Developer Services - Neeraj Rekwar",
+    description: "Hire a freelance full stack developer for custom website development services. Remote Next.js expert available for startups, business websites, SEO redesigns, and performance fixes.",
     siteName: "Neeraj Rekwar Portfolio",
     images: [
       {
         url: "/me_profile.webp",
         width: 1200,
         height: 630,
-        alt: "Developer Services Pricing - Neeraj Rekwar",
+        alt: "Freelance Full Stack Developer - Neeraj Rekwar",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@neerajrekwar",
-    title: "Pricing | Developer Services - Neeraj Rekwar",
-    description: "Professional Web3 and Software Development Services.",
+    title: "Hire Freelance Web Developer | Developer Services - Neeraj Rekwar",
+    description: "Hire a freelance full stack developer for custom website development services.",
     images: ["/me_profile.webp"],
     creator: "@neerajrekwar",
   },
@@ -54,7 +61,7 @@ export default function PricingLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${alata.className} min-h-screen bg-primary text-slate-800`}>
+      <body className={`${alata.className} min-h-screen bg-primary text-secondary`}>
         <div className="flex flex-col items-center p-4 md:p-8">
 
           {/* Navigation */}
@@ -75,21 +82,20 @@ export default function PricingLayout({
 
               {/* Updated Links */}
               <Link href="/pricing" className="hover:text-four transition-colors">Pricing</Link>
-              <Link href="/packages" className="hover:text-four transition-colors">Packages</Link>
-
-              <Link href="/deployments" className="hover:text-four transition-colors">Deployments</Link>
+              <Link href="/pricing/packages" className="hover:text-four transition-colors">Packages</Link>
+              <Link href="/pricing/maintenance" className="hover:text-four transition-colors">Maintenance</Link>
             </div>
 
             {/* Right Actions */}
             <div className="flex items-center gap-3">
-              <button  className="flex items-center gap-1 px-3 py-1.5 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors">
+              <button  className="flex items-center gap-1 px-3 py-1.5 bg-six rounded-full border border-seven text-sm font-medium text-four hover:bg-seven transition-colors">
                 {/* <Settings className="w-4 h-4" /> */}
                 <span>Let's talk</span>
               </button>
-              <button className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors">
+              <button className="w-8 h-8 rounded-full bg-six border border-seven flex items-center justify-center text-four hover:bg-seven transition-colors">
                 <Bell className="w-4 h-4" />
               </button>
-              <button className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-300 transition-colors">
+              <button className="w-8 h-8 rounded-full bg-six border border-seven flex items-center justify-center text-four hover:bg-seven transition-colors">
                 <User className="w-4 h-4" />
               </button>
             </div>
