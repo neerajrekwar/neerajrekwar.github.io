@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+// @ts-expect-error - ogl types might be missing or incomplete
 import { Renderer, Program, Mesh, Geometry } from 'ogl';
 
 interface LiquidChromeProps extends React.HTMLAttributes<HTMLDivElement> {
