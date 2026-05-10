@@ -1,7 +1,7 @@
 // components/TextFlipper.tsx
 "use client";
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Caveat } from "next/font/google";
 
 const caveat = Caveat({
@@ -10,10 +10,8 @@ const caveat = Caveat({
 });
 const words = [
   "Entrepreneur",
-  "Creator",
   "Developer",
   "Programmer",
-  "Designer",
   "Enthusiast",
 ];
 const TextFlipper: React.FC = () => {
@@ -29,23 +27,23 @@ const TextFlipper: React.FC = () => {
   return (
     <div className="inline-flex text-left md:h-20 lg:h-24 font-bold">
       <div className={caveat.className}>
-        <motion.div className="py-1 border-black  pr-4">
+        <div className="py-1 border-black pr-4 relative flex justify-center items-center">
+          <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0, x: 0 }}
-            exit={{ opacity: 0, x2: 10 }}
+              initial={{ opacity: 0, y: 20, rotateX: -90 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              exit={{ opacity: 0, y: -20, rotateX: 90 }}
             transition={{
-              duration: 1,
-              delay: 1,
-              ease: [0, 0.71, 0.2, 4.01],
-              damping: 10,
+                duration: 0.5,
+                ease: "easeInOut"
             }}
-            className=" z-10 text-five/70  font-bold text-center"
+              className="z-10 text-five/70 font-bold text-center origin-center"
           >
             {words[index]}
           </motion.div>
-        </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );

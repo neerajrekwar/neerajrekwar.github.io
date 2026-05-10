@@ -6,6 +6,7 @@ import ExpSection from "../components/ExpSection";
 import { VisionSection } from "../components/VisionSection";
 import StickyRelativeDemo from "../components/StickyRelativeDemo";
 import { AccordionDemo } from "@/components/ui/Accordion";
+import RotatingText from "@/components/RotatingText";
 
 
 
@@ -79,8 +80,29 @@ export default function Home() {
       <section className="">
         <HomeSectionHeader />
       </section>
-      <section className="md:min-h-screen">
-        <IntroSection />
+      <section className="md:min-h-screen mx-auto w-fit">
+        <div className="flex gap-4 items-center flex-col justify-center h-[40rem]  w-full">
+          <h3>embrace the new, seek innovation, and discover possibilities.</h3>
+          <div className="flex gap-4 items-center justify-center   w-full">
+           <span className="px-2 sm:px-2 md:px-3 text-5xl ">Build awesome apps with</span>
+            <RotatingText
+              texts={['React', 'Bits', 'Is', 'Cool!']}
+              mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300/20 text-5xl overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              staggerFrom="last"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2000}
+              animatePresenceMode="popLayout"
+              splitBy="characters"
+              auto
+              loop
+            />
+          </div>
+        </div>
       </section>
       <section className="three">
         <StickyRelativeDemo />

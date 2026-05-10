@@ -51,7 +51,7 @@ export function HeroSection() {
   return (
     <>
       <ShootingStarsAndStarsBackgroundDemo />
-      <section className="bg-primary bgrid2 text-five  min-h-screen">
+      {/* <section className="bg-primary bgrid2 text-five  min-h-screen">
         <div className=" max-w-6xl m-auto">
           <div className=" bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
@@ -179,7 +179,7 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="bgrid2  text-five min-h-screen">
         <div className=" max-w-6xl m-auto">
           <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
