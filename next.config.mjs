@@ -2,6 +2,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'standalone',
+    allowedDevOrigins: [
+      '3000-firebase-neerajrekwar-1778441261450.cluster-m7dwy2bmizezqukxkuxd55k5ka.cloudworkstations.dev'
+    ],
     images: {
       remotePatterns: [
         {
@@ -16,7 +19,7 @@ const nextConfig = {
         },
         {
           protocol: 'https',
-          hostname: '3000-firebase-neerajrekwar-1765735531609.cluster-htdgsbmflbdmov5xrjithceibm.cloudworkstations.dev',
+          hostname: '3000-firebase-neerajrekwar-1778441261450.cluster-m7dwy2bmizezqukxkuxd55k5ka.cloudworkstations.dev',
           pathname: '**',
         },
       ],

@@ -3,16 +3,9 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ShootingStarsAndStarsBackgroundDemo } from "./ShootingVsStarts";
-import { WobbleCardDemo } from "./WobbleCard";
-import AgeCalculator from "./AgeCalculator";
-import CountAnimation from "./CountAnimation";
-import { ImageSlides } from "./ImageSlides";
-import TextRotator from "./TextsRefresh";
-import { CoverDemo } from "./CoverDemo";
-import { MultiStepLoader } from "./MultiStepLoader";
+import TextType from "./TextType";
+import dynamic from "next/dynamic";
 import { Source_Code_Pro } from "next/font/google";
-import ReactMarkdown from "react-markdown";
 import {
   IconAdFilled,
   IconBrandGoogleAnalytics,
@@ -26,8 +19,25 @@ import {
   IconSortAscendingSmallBig,
   IconWorldWww,
 } from "@tabler/icons-react";
-import { ParallaxScrollDemo } from "./ParallaxScrollImages";
-import { InfiniteImageScroller } from "./InfiniteImageScroller";
+
+const LoadingFallback = () => (
+  <div className="animate-pulse w-full h-full bg-white/5 rounded-md min-h-[2rem] flex items-center justify-center text-white/50 text-sm tracking-widest">
+    Loading...
+  </div>
+);
+
+const LiquidChrome = dynamic(() => import("./LiquidChrome"), { ssr: false, loading: () => <LoadingFallback /> });
+const TextGenerateEffectDemo = dynamic(() => import("./textGenerate").then((mod) => mod.TextGenerateEffectDemo), { loading: () => <LoadingFallback /> });
+const WobbleCardDemo = dynamic(() => import("./WobbleCard").then((mod) => mod.WobbleCardDemo), { loading: () => <LoadingFallback /> });
+const AgeCalculator = dynamic(() => import("./AgeCalculator"), { loading: () => <LoadingFallback /> });
+const CountAnimation = dynamic(() => import("./CountAnimation"), { loading: () => <LoadingFallback /> });
+const ImageSlides = dynamic(() => import("./ImageSlides").then((mod) => mod.ImageSlides), { loading: () => <LoadingFallback /> });
+const TextRotator = dynamic(() => import("./TextsRefresh"), { loading: () => <LoadingFallback /> });
+const CoverDemo = dynamic(() => import("./CoverDemo").then((mod) => mod.CoverDemo), { loading: () => <LoadingFallback /> });
+const MultiStepLoader = dynamic(() => import("./MultiStepLoader").then((mod) => mod.MultiStepLoader), { loading: () => <LoadingFallback /> });
+const ParallaxScrollDemo = dynamic(() => import("./ParallaxScrollImages").then((mod) => mod.ParallaxScrollDemo), { loading: () => <LoadingFallback /> });
+const InfiniteImageScroller = dynamic(() => import("./InfiniteImageScroller").then((mod) => mod.InfiniteImageScroller), { loading: () => <LoadingFallback /> });
+const ReactMarkdown = dynamic(() => import("react-markdown"), { loading: () => <LoadingFallback /> });
 
 const markdown = `
 [![Deploy Next.js site to Pages](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/neerajrekwar/neerajrekwar.github.io/actions/workflows/nextjs.yml)
@@ -50,8 +60,132 @@ const source_code_pro = Source_Code_Pro({
 export function HeroSection() {
   return (
     <>
-      <ShootingStarsAndStarsBackgroundDemo />
-      {/* <section className="bg-primary bgrid2 text-five  min-h-screen">
+      <section className="relative flex min-h-screen flex-col items-start justify-center overflow-hidden bg-black w-full">
+        <div className="absolute inset-0 z-0">
+          <LiquidChrome
+            baseColor={[0.1, 0.1, 0.1]}
+            speed={0.2}
+            amplitude={0.5}
+            interactive={true}
+          />
+        </div>
+        
+        <figure className="w-auto z-10 m-auto max-w-7xl lg:flex-col justify-center sm:justify-evenly items-center sm:flex md:flex-row-reverse relative py-20">
+          <div className="md:flex md:flex-row-reverse max-w-7xl w-full">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+              animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+                type: "spring", stiffness: 400, damping: 20,
+              }}
+              className="flex flex-col basis-1/2 justify-center h-60 md:h-auto items-center"
+            >
+              <Image
+                src="/me.webp"
+                width={350}
+                height={350}
+                priority
+                alt="Picture of the author"
+                className="rounded md:h-[18rem] aspact-sqaure boreder-2 sm:w-[18rem] sm:h-[18rem] h-[8rem] w-[8rem] shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
+              />
+            </motion.div>
+            
+            <div className="flex text-five basis-1/2 flex-col m-auto justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+                animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.5,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}
+                className="text-xl m-2 px-8 py-4 md:text-3xl"
+              >
+                <p className="font-normal text-md text-white/75 drop-shadow-md">Hello, World! </p>
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl mt-2 min-h-[4rem] sm:min-h-[5rem] lg:min-h-[4rem] leading-tight">
+                  <span className="pr-2">I am</span>
+                  <TextType
+                    as="span"
+                    text={["Programmer", "Environmentalist", "Freelancer"]}
+                    className="drop-shadow-lg"
+                    textColors={["#38bdf8", "#34d399", "#fbbf24", "#f472b6"]}
+                  />
+                </h2>
+              </motion.div>
+              
+              <div className="text-base text-gray-300 md:text-xl m-2 mx-8 pb-6 drop-shadow-md font-medium">
+                <TextGenerateEffectDemo />
+              </div>
+              
+              <div className="text-base md:mt-10 flex gap-4 md:text-xl m-2 mx-8">
+                <motion.button
+                  className="rounded-full shadow-xl bg-white text-black"
+                  initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+                  animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01], type: "spring", stiffness: 400 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Link href="/contact" className="block py-2 px-6 font-bold rounded-full">
+                    Let&apos;s talk
+                  </Link>
+                </motion.button>
+                <motion.button
+                  className="rounded-full shadow-lg bg-transparent border-2 border-white text-white hover:bg-white/10"
+                  initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
+                  animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1, ease: [0, 0.71, 0.2, 1.01], type: "spring", stiffness: 400 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Link href="/contact" className="block py-2 px-6 font-bold rounded-full">
+                    Contact
+                  </Link>
+                </motion.button>
+              </div>
+              
+              <div className="text-base md:text-xl m-2 mx-8">
+                <div className="flex text-white py-6 gap-2">
+                  <motion.span
+                    initial={{ scale: 0.2, x: -200, y: -200 }}
+                    animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 20, delay: 2, duration: 5 }}
+                    className="p-3 shadow-lg bg-white/10 border border-white/20 backdrop-blur-md rounded-full flex justify-center items-center hover:bg-white/20 transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="hover:text-[#e7700d] active:text-[#e7700d] transition-all duration-[1s] icon icon-tabler icons-tabler-outline icon-tabler-brand-stackoverflow"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" /><path d="M8 16h8" /><path d="M8.322 12.582l7.956 .836" /><path d="M8.787 9.168l7.826 1.664" /><path d="M10.096 5.764l7.608 2.472" /></svg>
+                  </motion.span>
+                  <motion.span
+                    initial={{ scale: 0.2, x: -400, y: -200 }}
+                    animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 20, delay: 3, duration: 5 }}
+                    className="p-3 shadow-lg bg-white/10 border border-white/20 backdrop-blur-md rounded-full flex justify-center items-center hover:bg-white/20 transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="hover:text-[#053eff] active:text-[#053eff] transition-all duration-[1s] icon icon-tabler icons-tabler-outline icon-tabler-brand-behance"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5" /><path d="M3 12l4.5 0" /><path d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1" /><path d="M16 6l3 0" /></svg>
+                  </motion.span>
+                  <motion.span
+                    initial={{ scale: 0.2, x: -400, y: -200 }}
+                    animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 20, delay: 12, duration: 5 }}
+                    className="p-3 shadow-lg bg-white/10 border border-white/20 backdrop-blur-md rounded-full flex justify-center items-center hover:bg-white/20 transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="hover:text-[#e60023] active:text-[#e60023] transition-all duration-[1s] icon icon-tabler icons-tabler-outline icon-tabler-brand-pinterest"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg>
+                  </motion.span>
+                  <motion.span
+                    initial={{ scale: 0.2, x: -400, y: -200 }}
+                    animate={{ rotate: 360, scale: 1, x: 0, y: 0 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 20, delay: 5, duration: 5 }}
+                    className="p-3 shadow-lg bg-white/10 border border-white/20 backdrop-blur-md rounded-full flex justify-center items-center hover:bg-white/20 transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="hover:text-[#068932] active:text-[#068932] transition-all duration-[1s] icon icon-tabler icons-tabler-outline icon-tabler-brand-hackerrank"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M19.484 5.667c-1.146 -.904 -3.35 -2.394 -6.497 -3.429c-.484 -.159 -.725 -.238 -1.04 -.238c-.314 0 -.556 .08 -1.04 .238c-3.147 1.035 -5.35 2.525 -6.496 3.43c-.402 .317 -.604 .476 -.797 .816c-.194 .341 -.233 .62 -.309 1.178a33 33 0 0 0 -.305 4.338c0 1.742 .165 3.317 .305 4.338c.076 .558 .115 .837 .309 1.178c.193 .34 .395 .5 .797 .817c1.146 .904 3.35 2.394 6.497 3.429c.483 .159 .725 .238 1.04 .238c.314 0 .555 -.08 1.04 -.238c3.146 -1.035 5.35 -2.525 6.496 -3.43c.402 -.317 .603 -.476 .797 -.816c.194 -.341 .232 -.62 .309 -1.178c.14 -1.021 .305 -2.596 .305 -4.338s-.165 -3.317 -.305 -4.338c-.077 -.558 -.115 -.837 -.309 -1.178s-.395 -.5 -.797 -.817" /><path d="M9 8v7" /><path d="M9 12h6" /><path d="M16 16h-2l1 1z" /><path d="M8 8h2l-1 -1z" /><path d="M15 9v7" /></svg>
+                  </motion.span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </section>
+      <section className="bg-primary bgrid2 text-five  min-h-screen">
         <div className=" max-w-6xl m-auto">
           <div className=" bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
             <motion.h2
@@ -179,7 +313,7 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
       <section className="bgrid2  text-five min-h-screen">
         <div className=" max-w-6xl m-auto">
           <div className="bgrid2 z-10 md:flex justify-center md:text-3xl pt-16 font-bold ">
@@ -193,286 +327,7 @@ export function HeroSection() {
               My Skill
             </motion.h2>
           </div>
-          <div className="overflow-hidden min-h-screen pb-20 lg:flex-row gap-2 lg:flex">
-            <div className="border-five flex-col justify-between m-2 p-2 z-10 pb-4 rounded-lg basis-1/2">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                animate={{}}
-                transition={{ delay: 1 }}
-                className="w-fit overflow-x-hidden  z-9 py-2 font-semibold  px-2 md:p-4  md:px-4 text-2xl  md:text-6xl "
-              >
-                Evolving digital landscape in my expertise below the showcase.{" "}
-              </motion.p>
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                animate={{}}
-                className="py-8 my-6  px-2 md:p-4  md:px-4 text-xl sm:text-2xl md:text-3xl"
-              >
-                <span className="text-third">&#9679;</span> Digital marketing
-                specialize
-              </motion.h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo voluptates molestiae sequi.
-              </p>
-              <div className="">
-                <h6 className="font-semibold mt-8 text-xl md:text-2xl">
-                  Certifications
-                </h6>
-                <ul className="py-2 my-2 ">
-                  <motion.li
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    animate={{}}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex-col justify-start items-center"
-                  >
-                    <motion.p
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      animate={{}}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold"
-                    >
-                      Fundamental of Digital Marketing
-                    </motion.p>
-                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        animate={{}}
-                        transition={{}}
-                        className="pl-1 text-sm"
-                      >
-                        Google Digital Unlocked
-                      </motion.p>
-                      <motion.p className="pl-1 text-sm md:pr-6">
-                        September 2020
-                      </motion.p>
-                    </div>
-                  </motion.li>
-                </ul>
-                <ul className="py-2 my-4 ">
-                  <motion.li
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    animate={{}}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex-col justify-start items-center"
-                  >
-                    <motion.p
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      animate={{}}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold"
-                    >
-                      Email Marketing
-                    </motion.p>
-                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        animate={{}}
-                        transition={{}}
-                        className="pl-1 text-sm"
-                      >
-                        Hubspot Academy
-                      </motion.p>
-                      <motion.p className="pl-1 text-sm md:pr-6">
-                        October 2023
-                      </motion.p>
-                    </div>
-                  </motion.li>
-                </ul>
-                <ul className="py-2 my-4 ">
-                  <motion.li
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    animate={{}}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex-col justify-start items-center"
-                  >
-                    <motion.p
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      animate={{}}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                      className="pl-1 font-semibold"
-                    >
-                      Entrepreneurship: From Business Idea to Action
-                    </motion.p>
-                    <div className="flex justify-between border-b-1 border-dashed border-five pb-2">
-                      <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        animate={{}}
-                        transition={{}}
-                        className="pl-1 text-sm"
-                      >
-                        Futurelearn{" "}
-                        <motion.span
-                          animate={{}}
-                          transition={{}}
-                          className="overflow-hidden   border-five"
-                        >
-                          <motion.a
-                            initial={{ opacity: 0, x: 200 }}
-                            whileInView={{ opacity: 0, x: 200 }}
-                            whileHover={{ opacity: 1, x: 0 }}
-                            href="https://www.futurelearn.com/certificates/tgje1n2"
-                          >
-                            link
-                          </motion.a>
-                        </motion.span>
-                      </motion.p>
-                      <motion.p className="pl-1 text-sm md:pr-6">
-                        June 2021
-                      </motion.p>
-                    </div>
-                  </motion.li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-five flex  justify-center items-center border-five min-h-screen  m-2 rounded-lg basis-1/2">
-              <div>
-                <motion.ul
-                  initial={{ opacity: 0, x: 40, y: 40 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  transition={{ duration: 1.2, delay: 0.4 }}
-                  className="container flex flex-wrap md:grid md:grid-flow-row-dense md:grid-cols-2 md:grid-rows "
-                >
-                  <motion.li
-                    initial={{ opacity: 0, x: 40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
-                  >
-                    <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
-                        Search Engine Optimization
-                      </h4>
-
-                      <p className="m-2 text-five">
-                        SEO is search engine results
-                        pages (SERPs) like Google, bing, DuckDuckGo, yahoo!{" "}
-                      </p>
-                    </div>
-                    <IconSearch width={44} height={44} />
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: 40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 0.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
-                  >
-                    <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
-                        Socail Media Optimization
-                      </h4>
-                      <p className="m-2 text-five">
-                        Define clear objectives for,
-                        brand awareness, generating leads, or
-                        driving sales.
-                      </p>
-                    </div>
-                    <IconSocial width={44} height={44} />
-                  </motion.li>
-
-                  <motion.li
-                    initial={{ opacity: 0, x: 40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
-                  >
-                    <div className="md:pb-4  text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
-                        How to Grow Online
-                      </h4>
-                      <p className="m-2 text-five">
-                        Understand your ideal customer&apos;s needs,
-                        preferences, and online behavior.
-                      </p>
-                    </div>
-                    <IconWorldWww width={44} height={44} />
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: 40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1.2 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
-                  >
-                    <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
-                        Localization
-                      </h4>
-                      <p className="m-2 text-five">
-
-                        Your business, including location, hours of operation,
-                        and contact details.
-                      </p>
-                    </div>
-                    <IconBuildingStore width={44} height={44} />
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: 40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1.4 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col  aspect-video rounded-lg text-five bg-six border-seven border"
-                  >
-                    <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
-                        Google Analytics
-                      </h4>
-                      <p className="m-2 text-five">
-                        It helps businesses understand their audience, measure
-                        online marketing effectiveness, and make data-driven
-                        decisions.
-                      </p>
-                    </div>
-                    <IconBrandGoogleAnalytics width={44} height={44} />
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: 40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1.6 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-five bg-six border-seven border"
-                  >
-                    <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
-                        Google Ads
-                      </h4>
-                      <p className="m-2 text-five">
-                        It provides a powerful tool for reaching potential
-                        customers and driving traffic to your website.
-                      </p>
-                    </div>
-                    <IconAdFilled width={44} height={44} />
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: 40, y: 40 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ delay: 1.8 }}
-                    className="m-2 flex justify-between items-end text-right p-3 flex-col aspect-video rounded-lg text-five bg-six border-seven border"
-                  >
-                    <div className="md:pb-4 text-five">
-                      <h4 className="px-2 text-2xl md:text-xl font-bold text-five">
-                        Email Marketing
-                      </h4>
-                      <p className="m-2 text-five">
-                        Boost your sales, build customer loyalty, and increase
-                        brand awareness with effective email marketing
-                        strategies.
-                      </p>
-                    </div>
-                    <IconMailbox width={44} height={44} />
-                  </motion.li>
-                </motion.ul>
-              </div>
-            </div>
-          </div>
+          
           <div className="overflow-hidden min-h-screen pb-20 lg:flex-row-reverse gap-2 lg:flex">
             <div className="border-five flex-col justify-between m-2 p-2 z-10 pb-4 rounded-lg basis-1/2">
               <motion.p
