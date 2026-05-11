@@ -99,10 +99,13 @@ export default function ServicePricingPage() {
               ))}
             </div>
 
-            <div className="text-center mt-auto">
-               <button className="w-full px-8 py-3 bg-primary text-secondary border border-seven rounded-full text-sm font-bold shadow-sm hover:bg-seven hover:shadow-md transition-all">
-                 Subscribe
-               </button>
+            <div className="text-center mt-auto flex flex-col gap-3">
+               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20subscribe%20to%20the%20Care%20%26%20Secure%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-[#25D366] text-black border border-[#25D366] rounded-full text-sm font-bold shadow-sm hover:opacity-90 hover:shadow-md transition-all">
+                 Book via WhatsApp
+               </a>
+               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-transparent text-[#0088cc] border border-[#0088cc] rounded-full text-sm font-bold hover:bg-[#0088cc]/10 transition-all">
+                 Book via Telegram
+               </a>
             </div>
           </div>
 
@@ -142,10 +145,13 @@ export default function ServicePricingPage() {
               ))}
             </div>
 
-            <div className="text-center mt-auto">
-               <button className="w-full px-8 py-3 bg-third text-four rounded-full text-sm font-bold shadow-lg hover:opacity-90 transition-all">
-                 Start Optimization
-               </button>
+            <div className="text-center mt-auto flex flex-col gap-3">
+               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20subscribe%20to%20the%20Growth%20%26%20Rank%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-[#25D366] text-black border border-[#25D366] rounded-full text-sm font-bold shadow-lg hover:opacity-90 transition-all">
+                 Book via WhatsApp
+               </a>
+               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-transparent text-[#0088cc] border border-[#0088cc] rounded-full text-sm font-bold hover:bg-[#0088cc]/10 transition-all">
+                 Book via Telegram
+               </a>
             </div>
           </div>
 
@@ -181,10 +187,13 @@ export default function ServicePricingPage() {
               ))}
             </div>
 
-            <div className="text-center mt-auto">
-               <button className="w-full px-8 py-3 bg-primary border border-seven text-secondary rounded-full text-sm font-bold shadow-sm hover:bg-seven hover:shadow-md transition-all">
-                 Contact for Scope
-               </button>
+            <div className="text-center mt-auto flex flex-col gap-3">
+               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20discuss%20the%20Future%20Architect%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-[#25D366] text-black border border-[#25D366] rounded-full text-sm font-bold shadow-sm hover:opacity-90 hover:shadow-md transition-all">
+                 Book via WhatsApp
+               </a>
+               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-transparent text-[#0088cc] border border-[#0088cc] rounded-full text-sm font-bold hover:bg-[#0088cc]/10 transition-all">
+                 Book via Telegram
+               </a>
             </div>
           </div>
 

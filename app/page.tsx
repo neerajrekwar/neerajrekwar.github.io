@@ -74,9 +74,100 @@ export const metadata: Metadata = {
     },
   },
 };
+
 export default function Home() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What kind of web development services do you offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "I offer full-stack web development and responsive web design services to improve user experience across all devices. My custom solutions are built to boost user engagement and conversion rates for your business. Let's discuss how I can tailor my services to meet your exact needs.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are the websites and applications you build scalable?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "I design and build applications with scalability in mind from day one. Using modern frameworks like Next.js and robust backend architectures, I ensure your website can easily handle increased traffic and grow seamlessly alongside your business.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you customize the website to fit my specific business needs?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. I don't use one-size-fits-all templates. Every project I take on is fully tailored to match your specific business requirements, brand identity, and long-term goals.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do you ensure the projects you deliver are reliable?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "I build my projects on a foundation of modern, industry-standard technologies and follow best practices for clean code. Combined with rigorous testing and performance optimization, I ensure your website is fast, secure, and highly reliable.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How can I get in touch with you to discuss my project?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can reach out to me directly via email at dev.neerajrekwar@gmail.com or by calling +91 704 214 9836. I am always excited to discuss new ideas and look forward to connecting with you.",
+        },
+      },
+    ],
+  };
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Neeraj Rekwar",
+    url: "https://neerajrekwar.github.io",
+    image: "https://neerajrekwar.github.io/me_profile.webp",
+    jobTitle: "Freelance Full Stack Developer",
+    description: "Freelance Full Stack Developer specializing in Next.js, React, and custom website development services.",
+    sameAs: [
+      "https://www.linkedin.com/in/neeraj-rekwar/",
+      "https://github.com/neerajrekwar",
+      "https://x.com/neerajrekwar"
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "New Delhi",
+      addressRegion: "Delhi",
+      addressCountry: "IN"
+    }
+  };
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Neeraj Rekwar - Web Development Services",
+    image: "https://neerajrekwar.github.io/me_profile.webp",
+    description: "Expert full-stack web development, SEO optimization, and performance fixes for startups and businesses.",
+    url: "https://neerajrekwar.github.io",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "New Delhi",
+      addressRegion: "Delhi",
+      addressCountry: "IN"
+    },
+    priceRange: "$$"
+  };
+
   return (
     <main className="scroll-smooth bg-primary  focus:scroll-auto scrollbar-thumb-rounded-full scrollbar-thin scrollbar-thumb-four scrollbar-track-seven">
+      {/* JSON-LD Scripts for Google Rich Results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, professionalServiceSchema, faqSchema]) }}
+      />
+
       <section className="">
         <HomeSectionHeader />
       </section>
@@ -86,10 +177,10 @@ export default function Home() {
             embrace the new, seek innovation, and discover possibilities.
           </h3>
           <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center w-full">
-           <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-five">Build awesome apps with</span>
+           <span className="px-2 sm:px-2 md:px-3 text-3xl sm:text-4xl md:text-5xl font-bold text-four">Build awesome apps with</span>
             <RotatingText
-              texts={['React', 'Bits', 'Is', 'Cool!']}
-              mainClassName="px-4 sm:px-5 md:px-6 bg-third/10 text-third text-3xl sm:text-4xl md:text-5xl font-bold overflow-hidden py-1 sm:py-2 md:py-3 justify-center rounded-xl shadow-lg border border-third/20"
+              texts={['React', 'Bigfdfgfdgts', 'Is', 'Cool!']}
+              mainClassName="px-4 sm:px-5 md:px-6 bg-five text-white text-3xl sm:text-4xl md:text-5xl font-bold overflow-hidden py-1 sm:py-2 md:py-3 justify-center rounded-xl border border-four/20"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}

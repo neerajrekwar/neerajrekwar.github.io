@@ -246,10 +246,23 @@ export default function CombinedPricingPage() {
               </div>
 
               {/* Action Button */}
-              <div className="text-center mt-auto">
-                 <button className={`w-full px-8 py-4 rounded-full text-sm font-bold shadow-sm transition-all border ${plan.highlight ? 'bg-third text-four border-transparent hover:opacity-90' : 'bg-seven/30 text-four border-seven hover:bg-seven hover:shadow-md'}`}>
-                   {serviceType === 'build' ? 'Book Project' : 'Subscribe'}
-                 </button>
+              <div className="text-center mt-auto flex flex-col gap-3">
+                 <a 
+                   href={`https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'm%20interested%20in%20the%20${encodeURIComponent(plan.title)}%20plan.%20Here%20are%20my%20project%20details%3A`} 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   className={`flex items-center justify-center w-full px-8 py-3 rounded-full text-sm font-bold shadow-sm transition-all border ${plan.highlight ? 'bg-[#25D366] text-black border-[#25D366] hover:opacity-90' : 'bg-[#25D366]/10 text-[#25D366] border-[#25D366]/30 hover:bg-[#25D366]/20'}`}
+                 >
+                   Book via WhatsApp
+                 </a>
+                 <a 
+                   href="https://t.me/neerajrekwar" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   className={`flex items-center justify-center w-full px-8 py-3 rounded-full text-sm font-bold transition-all border ${plan.highlight ? 'bg-transparent text-[#0088cc] border-[#0088cc] hover:bg-[#0088cc]/10' : 'bg-[#0088cc]/10 text-[#0088cc] border-[#0088cc]/30 hover:bg-[#0088cc]/20'}`}
+                 >
+                   Book via Telegram
+                 </a>
               </div>
             </motion.div>
           ))}

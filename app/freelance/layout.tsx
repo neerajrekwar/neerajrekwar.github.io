@@ -67,7 +67,7 @@ export default function PricingLayout({
           {/* Navigation */}
           <nav className="w-full max-w-7xl flex items-center justify-between mb-12">
             <div className="flex items-center justify-center gap-2">
-              <Link href="/" className={`${caveat.className}  flex items-center justify-center gap-2 text-five  font-sans gap-2 text-four text-3xl sm:text-4xl md:text-5xl font-bold hover:opacity-80 transition-opacity`}>
+              <Link href="/" aria-label="Home" className={`${caveat.className}  flex items-center justify-center gap-2 text-five  font-sans gap-2 text-four text-3xl sm:text-4xl md:text-5xl font-bold hover:opacity-80 transition-opacity`}>
                 <div className=" rounded-md flex px-2 items-center justify-center justify-center">
                   <Terminal className="w-5 h-5" />
                   nee
@@ -92,10 +92,10 @@ export default function PricingLayout({
                 {/* <Settings className="w-4 h-4" /> */}
                 <span>Let's talk</span>
               </button>
-              <button className="w-8 h-8 rounded-full bg-six border border-seven flex items-center justify-center text-four hover:bg-seven transition-colors">
+              <button aria-label="Notifications" className="w-8 h-8 rounded-full bg-six border border-seven flex items-center justify-center text-four hover:bg-seven transition-colors">
                 <Bell className="w-4 h-4" />
               </button>
-              <button className="w-8 h-8 rounded-full bg-six border border-seven flex items-center justify-center text-four hover:bg-seven transition-colors">
+              <button aria-label="User Profile" className="w-8 h-8 rounded-full bg-six border border-seven flex items-center justify-center text-four hover:bg-seven transition-colors">
                 <User className="w-4 h-4" />
               </button>
             </div>

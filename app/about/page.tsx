@@ -118,8 +118,8 @@ export default function About() {
               </div>
               
               <div className="text-base md:mt-10 flex gap-4 md:text-xl m-2 mx-8">
-                <motion.button
-                  className="rounded-full shadow-xl bg-white text-black"
+                <motion.div
+                  className="rounded-full shadow-xl bg-white text-black flex"
                   initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
                   animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01], type: "spring", stiffness: 400 }}
@@ -128,9 +128,9 @@ export default function About() {
                   <Link href="/contact" className="block py-2 px-6 font-bold rounded-full">
                     Let&apos;s talk
                   </Link>
-                </motion.button>
-                <motion.button
-                  className="rounded-full shadow-lg bg-transparent border-2 border-white text-white hover:bg-white/10"
+                </motion.div>
+                <motion.div
+                  className="rounded-full shadow-lg bg-transparent border-2 border-white text-white hover:bg-white/10 flex"
                   initial={{ opacity: 0, scale: 0.2, x: -200, y: -200 }}
                   animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                   transition={{ duration: 0.8, delay: 1, ease: [0, 0.71, 0.2, 1.01], type: "spring", stiffness: 400 }}
@@ -139,7 +139,7 @@ export default function About() {
                   <Link href="/contact" className="block py-2 px-6 font-bold rounded-full">
                     Contact
                   </Link>
-                </motion.button>
+                </motion.div>
               </div>
               
               <div className="text-base md:text-xl m-2 mx-8">
@@ -350,9 +350,9 @@ export default function About() {
                 influence web application performance.
               </p>
               <div className="">
-                <h6 className="font-semibold mt-8 text-xl md:text-2xl">
+                <h3 className="font-semibold mt-8 text-xl md:text-2xl">
                   Certifications
-                </h6>
+                </h3>
 
                 <ul className="py-2 my-4 ">
                   <motion.li
@@ -476,7 +476,7 @@ export default function About() {
                       transition={{ duration: 0.4, delay: 0.8 }}
                       className="py-4 basis-1/2"
                     >
-                      <h1>Deployment Badge</h1>
+                      <h3 className="text-xl font-bold">Deployment Badge</h3>
                       <ReactMarkdown>{markdown}</ReactMarkdown>
                     </motion.li>
                   </motion.ul>
@@ -534,7 +534,7 @@ export default function About() {
                       transition={{ duration: 0.4, delay: 0.6 }}
                       className="py-4 basis-1/2"
                     >
-                      <h1>Current</h1>
+                      <h3 className="text-xl font-bold">Current</h3>
                       <p className="font-bold text-[#8f5b84]">
                         ▲ Next.js 14.2.5
                       </p>
@@ -625,7 +625,7 @@ export default function About() {
                       </div>
                     </motion.li>
                     <li className="py-4 basis-1/2">
-                      <h1>back-end with Database</h1>
+                      <h3 className="text-xl font-bold">back-end with Database</h3>
                     </li>
                   </motion.ul>
                 </div>
@@ -646,9 +646,9 @@ export default function About() {
                     transition={{ duration: 0.4, delay: 0.6 }}
                     className="m-2 flex flex-col justify-between  sm:w-auto rounded-lg text-right text-five/60 bg-[#242424] aspect-square"
                   >
-                    <motion.h4 className="px-2 text-4xl font-bold text-five/60">
+                    <motion.h3 className="px-2 text-4xl font-bold text-five/60">
                       <TextRotator />
-                    </motion.h4>
+                    </motion.h3>
                     <div className="flex m-2 justify-center items-center aspect-[16/9]  rounded-lg bg-custom-radial-s">
                       <motion.p
                         initial={{ opacity: 0 }}
@@ -668,10 +668,10 @@ export default function About() {
                     transition={{ duration: 0.5, delay: 0.6 }}
                     className="m-2 flex border border-seven  col-span-2 rounded-lg text-five/60 bg-[#242424] aspect-square"
                   >
-                    <h4 className="px-2 basis-1/2 text-4xl m-2 font-bold text-five/60">
+                    <h3 className="px-2 basis-1/2 text-4xl m-2 font-bold text-five/60">
                       {" "}
                       Leveraging modern JavaScript features
-                    </h4>
+                    </h3>
                     <div className="basis-1/2 pt-2 bg-custom-radial flex justify-center items-center">
                       <CountAnimation />
                     </div>
@@ -687,7 +687,7 @@ export default function About() {
                     <div className="rounded-lg m-2 h-60 overflow-hidden  z-20">
                       <ImageSlides />
                     </div>
-                    <motion.h4
+                    <motion.h3
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -695,7 +695,7 @@ export default function About() {
                       className="px-2 text-4xl m-2 overflow-hidden font-bold text-five/60 "
                     >
                       Efficient algorithms and data structures
-                    </motion.h4>
+                    </motion.h3>
                   </motion.li>
                   <motion.li
                     initial={{ opacity: 0, y: 40, x: -40 }}
@@ -704,7 +704,7 @@ export default function About() {
                     transition={{ duration: 0.7, delay: 0.6 }}
                     className="m-2  rounded-lg  sm:w-auto text-five/60 bg-[#242424] aspect-square"
                   >
-                    <motion.h4
+                    <motion.h3
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -712,7 +712,7 @@ export default function About() {
                       className="px-2 text-4xl md:text-2xl m-2 font-bold text-five/60  "
                     >
                       Improved User Experience
-                    </motion.h4>
+                    </motion.h3>
                     <MultiStepLoader />
                   </motion.li>
                   <motion.li
@@ -722,7 +722,7 @@ export default function About() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="m-2 col-span-2  rounded-lg  sm:w-auto text-five/60 bg-[#242424] aspect-square"
                   >
-                    <motion.h4
+                    <motion.h3
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -730,7 +730,7 @@ export default function About() {
                       className="px-2 basis-1/2 text-4xl md:text-5xl m-2 font-bold text-five/60"
                     >
                       versions to access the latest performance optimizations
-                    </motion.h4>
+                    </motion.h3>
                     <p className="m-2 text-five px-2">
                       The best way to access the latest performance
                       optimizations is to stay informed about updates.
@@ -752,7 +752,7 @@ export default function About() {
                     transition={{ duration: 1, delay: 0.6 }}
                     className="m-2  rounded-lg  sm:w-auto text-five/60 bg-[#242424] aspect-square"
                   >
-                    <motion.h4
+                    <motion.h3
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -760,7 +760,7 @@ export default function About() {
                       className="px-2 basis-1/2 text-4xl md:text-2xl m-2 font-bold text-five/60"
                     >
                       Rigorously test your application
-                    </motion.h4>
+                    </motion.h3>
                     <p className="m-2 text-five px-2">
                       {" "}
                       satisfaction, minimize risks, and improve
@@ -884,17 +884,16 @@ export default function About() {
                     exit={{}}
                     className="lg:basis-1/2 text-five overflow-hidden flex flex-col justify-center sm:min-h-shv m-2 mx-2 my-4 py-2 px-2  md:m-12 border-gray-600 rounded-lg"
                   >
-                    <motion.h2
+                    <motion.div
                       initial={{ opacity: 0 }}
-                      animate={{ opacity: 0.5 }}
-                      whileHover={{ opacity: 1, scale: 1.2 }}
-                      whileInView={{ opacity: 0.1, scale: 1.1 }}
-                      transition={{ duration: 4, delay: 0.8 }}
-                      className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
+                      animate={{ opacity: 1 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 1 }}
+                      className="aspect-video bg-white/5 flex justify-center items-center rounded-lg text-white font-semibold"
                     >
                       {" "}
                       video will be soon
-                    </motion.h2>
+                    </motion.div>
                     {/* <iframe
                       className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
                       src="https://www.youtube.com/embed/l8knG0BPr-o"
@@ -1072,12 +1071,15 @@ export default function About() {
                     >
                       <motion.img
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.5 }}
-                        whileHover={{ opacity: 1, scale: 1.2 }}
-                        whileInView={{ opacity: 0.1, scale: 1.1 }}
-                        transition={{ duration: 4, delay: 0.8 }}
-                        className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg"
+                        animate={{ opacity: 1 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="aspect-video hover:bg-seven flex justify-center items-center rounded-lg object-cover"
                         src="https://images.unsplash.com/photo-1723142481057-49e9a440c014?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Search a path nature image"
+                        width={1470}
+                        height={980}
                       />
                     </motion.div>
                     {/* <iframe
@@ -1135,8 +1137,6 @@ export default function About() {
                 concepts into tangible results.
               </motion.p>
               <div className="mx-4 md:mx-10">
-                <button >
-
                   <motion.a
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -1150,13 +1150,12 @@ export default function About() {
                     whileHover={{ scale: 1.1 }}
                     whileFocus={{ scale: 1.1 }}
                     href="/about/book-meeting"
-                    className=" mt-4 border-1 border-secondary rounded-full flex justify-center items-center gap-2 text-lg relative py-1  px-3 mx-2 z-40  w-fit"
+                    className=" mt-4 border border-secondary rounded-full flex justify-center items-center gap-2 text-lg relative py-2 px-4 mx-2 z-40 w-fit"
                   >
                     <IconCalendarClock />
                     Let&apos;s talk
                     <span className="absolute bottom-2 p-1  -z-50 left-2  h-[1%] w-20  bg-custom-radial-sm"></span>
                   </motion.a>
-                </button>
               </div>
             </div>
           </div>
