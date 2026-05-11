@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     
   ],
   alternates: {
-    canonical: "/pricing",
+    canonical: "/freelance",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/pricing",
+    url: "/freelance",
     title: "Hire Freelance Web Developer | Developer Services - Neeraj Rekwar",
     description: "Hire a freelance full stack developer for custom website development services. Remote Next.js expert available for startups, business websites, SEO redesigns, and performance fixes.",
     siteName: "Neeraj Rekwar Portfolio",
@@ -81,9 +81,9 @@ export default function PricingLayout({
               <Link href="/projects" className="hover:text-four transition-colors">Projects</Link>
 
               {/* Updated Links */}
-              <Link href="/pricing" className="hover:text-four transition-colors">Pricing</Link>
-              <Link href="/pricing/packages" className="hover:text-four transition-colors">Packages</Link>
-              <Link href="/pricing/maintenance" className="hover:text-four transition-colors">Maintenance</Link>
+              <Link href="/freelance" className="hover:text-four transition-colors">Pricing</Link>
+              <Link href="/freelance/packages" className="hover:text-four transition-colors">Packages</Link>
+              <Link href="/freelance/maintenance" className="hover:text-four transition-colors">Maintenance</Link>
             </div>
 
             {/* Right Actions */}

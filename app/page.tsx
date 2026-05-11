@@ -80,14 +80,16 @@ export default function Home() {
       <section className="">
         <HomeSectionHeader />
       </section>
-      <section className="md:min-h-screen mx-auto w-fit">
-        <div className="flex gap-4 items-center flex-col justify-center h-[40rem]  w-full">
-          <h3>embrace the new, seek innovation, and discover possibilities.</h3>
-          <div className="flex gap-4 items-center justify-center   w-full">
-           <span className="px-2 sm:px-2 md:px-3 text-5xl ">Build awesome apps with</span>
+      <section className="md:min-h-screen mx-auto w-full max-w-7xl px-4">
+        <div className="flex gap-6 items-center flex-col justify-center h-[40rem] w-full text-center">
+          <h3 className="text-sm sm:text-base md:text-lg text-four tracking-wide uppercase opacity-80">
+            embrace the new, seek innovation, and discover possibilities.
+          </h3>
+          <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center w-full">
+           <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-five">Build awesome apps with</span>
             <RotatingText
               texts={['React', 'Bits', 'Is', 'Cool!']}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300/20 text-5xl overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              mainClassName="px-4 sm:px-5 md:px-6 bg-third/10 text-third text-3xl sm:text-4xl md:text-5xl font-bold overflow-hidden py-1 sm:py-2 md:py-3 justify-center rounded-xl shadow-lg border border-third/20"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}

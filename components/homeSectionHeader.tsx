@@ -23,7 +23,7 @@ export default function HomeSectionHeader() {
   return (
     <>
       <header className="min-h-screen relative flex items-center text-primary overflow-hidden w-full">
-        <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-6 z-50">
+        <nav className="absolute top-0 left-0 w-full flex justify-between items-start px-6 md:px-12 py-6 z-50">
           <div className={`${alata.className} ${caveat.className}`}>
             <Link
               href={"/"}
@@ -32,7 +32,7 @@ export default function HomeSectionHeader() {
               nee.
             </Link>
           </div>
-          <div className="text-five flex justify-end items-center gap-4 font-medium text-sm md:text-base opacity-90">
+          <div className="text-five flex flex-col items-end justify-start text-start">
             <DeviceAddress />
             <Weather />
           </div>

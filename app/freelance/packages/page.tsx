@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Check, X, Terminal, Layout, Database, Cpu } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Optional: Define the interface to satisfy TypeScript completely
 interface Plan {
@@ -21,7 +22,7 @@ export default function CombinedPricingPage() {
   const [billingCycle, setBillingCycle] = useState<'annual' | 'monthly'>('annual');
 
   // --- DATA: Retainer Plans (Monthly) ---
-  const retainerPlans: Plan[] = [
+  const retainerPlans: Plan[] = [ 
     {
       title: "Care & Secure",
       price: 299,
@@ -37,7 +38,7 @@ export default function CombinedPricingPage() {
       limitIndex: 4,
       icon: <Terminal className="w-6 h-6 text-four" />,
       highlight: false,
-      color: "bg-six border-seven text-secondary" // Added to match shape
+      color: "bg-primary border-seven/50 text-four" // Added to match shape
     },
     {
       title: "Growth & Rank",
@@ -54,7 +55,7 @@ export default function CombinedPricingPage() {
       limitIndex: 5,
       icon: <Layout className="w-6 h-6 text-third" />,
       highlight: true,
-      color: "bg-four border-third text-primary" // Added to match shape
+      color: "bg-four border-third text-primary" 
     }
   ];
 
@@ -77,7 +78,7 @@ export default function CombinedPricingPage() {
       limitIndex: 5,
       icon: <Layout className="w-6 h-6 text-four" />,
       highlight: false,
-      color: "bg-six border-seven text-secondary"
+      color: "bg-primary border-seven/50 text-four"
     },
     {
       title: "Functional Web2",
@@ -115,7 +116,7 @@ export default function CombinedPricingPage() {
       limitIndex: 7,
       icon: <Cpu className="w-6 h-6 text-four" />,
       highlight: false,
-      color: "bg-seven border-seven text-secondary"
+      color: "bg-primary border-seven/50 text-four"
     }
   ];
 
@@ -127,16 +128,16 @@ export default function CombinedPricingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-primary font-sans text-secondary p-4 md:p-8 flex flex-col items-center">
+    <div className="min-h-screen bg-primary font-sans text-four p-4 md:p-8 flex flex-col items-center relative overflow-hidden">
       
 
       {/* Main Content */}
-      <div className="w-full max-w-7xl">
+      <div className="w-full max-w-7xl relative z-10">
         
         {/* Controls Section */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-6">
           <div>
-            <h1 className="text-4xl font-normal text-secondary">
+            <h1 className="text-4xl font-extrabold text-four tracking-tight">
               {serviceType === 'retainer' ? 'Maintenance Plans' : 'Development Packages'}
             </h1>
             <p className="text-five mt-2">
@@ -146,51 +147,61 @@ export default function CombinedPricingPage() {
             </p>
           </div>
           
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             {/* Main Service Type Toggle */}
-            <div className="bg-seven p-1 rounded-full flex">
+            <div className="bg-seven/30 p-1.5 rounded-full flex border border-seven/50">
               <button 
                 onClick={() => setServiceType('retainer')}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${serviceType === 'retainer' ? 'bg-primary shadow-sm text-secondary' : 'text-four hover:text-secondary'}`}
+                className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all ${serviceType === 'retainer' ? 'bg-primary shadow-sm text-four' : 'text-five hover:text-four'}`}
               >
                 Monthly Service
               </button>
               <button 
                 onClick={() => setServiceType('build')}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${serviceType === 'build' ? 'bg-primary shadow-sm text-secondary' : 'text-four hover:text-secondary'}`}
+                className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all ${serviceType === 'build' ? 'bg-primary shadow-sm text-four' : 'text-five hover:text-four'}`}
               >
                 Project Build
               </button>
             </div>
 
             {/* Billing Cycle (Only shows for Retainer) */}
-            {serviceType === 'retainer' && (
-              <div className="bg-seven border border-seven p-1 rounded-full flex">
+            <AnimatePresence>
+              {serviceType === 'retainer' && (
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  className="bg-seven/30 border border-seven/50 p-1.5 rounded-full flex"
+                >
                 <button 
                   onClick={() => setBillingCycle('annual')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${billingCycle === 'annual' ? 'bg-primary text-secondary shadow-sm' : 'text-four hover:text-secondary'}`}
+                    className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all ${billingCycle === 'annual' ? 'bg-primary text-four shadow-sm' : 'text-five hover:text-four'}`}
                 >
                   Yearly
                 </button>
                 <button 
                   onClick={() => setBillingCycle('monthly')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${billingCycle === 'monthly' ? 'bg-primary text-secondary shadow-sm' : 'text-four hover:text-secondary'}`}
+                    className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all ${billingCycle === 'monthly' ? 'bg-primary text-four shadow-sm' : 'text-five hover:text-four'}`}
                 >
                   Monthly
                 </button>
-              </div>
-            )}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className={`grid grid-cols-1 gap-6 ${activePlans.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : 'md:grid-cols-3'}`}>
+        <div className={`grid grid-cols-1 gap-8 ${activePlans.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : 'md:grid-cols-3'}`}>
           
           {activePlans.map((plan, index) => (
-            <div 
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               key={index}
               // We use plan.color to determine background
-              className={`relative rounded-3xl p-8 border flex flex-col transition-all duration-300 ${plan.color} ${plan.highlight ? 'border-dashed shadow-xl transform md:-translate-y-2' : ''}`}
+              className={`relative rounded-[2rem] p-8 border flex flex-col transition-all duration-300 ${plan.color} ${plan.highlight ? 'shadow-2xl ring-1 ring-third transform md:-translate-y-2' : 'hover:border-seven'}`}
             >
               {plan.highlight && (
                 <div className="absolute -top-3 right-8 bg-third text-primary text-xs font-bold px-3 py-1 rounded-full">
@@ -201,17 +212,17 @@ export default function CombinedPricingPage() {
               {/* Card Header */}
               <div className="text-center mb-8 mt-4">
                 <div className="flex justify-center mb-4">{plan.icon}</div>
-                <h3 className="text-lg font-medium mb-2">{plan.title}</h3>
+                <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
                 <div className="flex items-center justify-center gap-1 mb-1">
-                  <span className={`text-4xl font-normal ${plan.highlight ? 'text-third' : 'inherit'}`}>
+                  <span className={`text-5xl font-extrabold ${plan.highlight ? 'text-third' : 'inherit'}`}>
                     ${getDisplayPrice(plan)}
                   </span>
-                  <span className={`text-xs flex flex-col items-start leading-tight ${plan.highlight ? 'text-primary/70' : 'text-five'}`}>
+                  <span className={`text-xs font-semibold flex flex-col items-start leading-tight ${plan.highlight ? 'text-primary/70' : 'text-five'}`}>
                     <span>{plan.period}</span>
                     <span>(USD)</span>
                   </span>
                 </div>
-                <p className={`text-xs mt-4 px-4 leading-relaxed h-10 ${plan.highlight ? 'text-primary/70' : 'text-five'}`}>
+                <p className={`text-sm mt-4 px-4 leading-relaxed h-10 ${plan.highlight ? 'text-primary/80' : 'text-five'}`}>
                   {plan.desc}
                 </p>
               </div>
@@ -225,9 +236,9 @@ export default function CombinedPricingPage() {
                         <Check className={`w-3 h-3 ${plan.highlight ? 'text-four' : 'text-secondary'}`} strokeWidth={3} />
                       </div>
                     ) : (
-                      <X className={`flex-shrink-0 w-5 h-5 p-0.5 ${plan.highlight ? 'text-primary/50' : 'text-five/50'}`} />
+                      <X className={`flex-shrink-0 w-5 h-5 p-0.5 ${plan.highlight ? 'text-primary/40' : 'text-five/40'}`} />
                     )}
-                    <span className={`text-xs ${idx < plan.limitIndex ? (plan.highlight ? 'text-primary' : 'text-four') : (plan.highlight ? 'text-primary/50' : 'text-five/50')}`}>
+                    <span className={`text-sm font-medium ${idx < plan.limitIndex ? (plan.highlight ? 'text-primary' : 'text-four') : (plan.highlight ? 'text-primary/50' : 'text-five/50')}`}>
                       {feature}
                     </span>
                   </div>
@@ -236,11 +247,11 @@ export default function CombinedPricingPage() {
 
               {/* Action Button */}
               <div className="text-center mt-auto">
-                 <button className={`w-full px-8 py-3 rounded-full text-sm font-bold shadow-sm transition-all border ${plan.highlight ? 'bg-third text-four border-transparent hover:opacity-90' : 'bg-primary text-secondary border-seven hover:bg-seven hover:shadow-md'}`}>
+                 <button className={`w-full px-8 py-4 rounded-full text-sm font-bold shadow-sm transition-all border ${plan.highlight ? 'bg-third text-four border-transparent hover:opacity-90' : 'bg-seven/30 text-four border-seven hover:bg-seven hover:shadow-md'}`}>
                    {serviceType === 'build' ? 'Book Project' : 'Subscribe'}
                  </button>
               </div>
-            </div>
+            </motion.div>
           ))}
 
         </div>
