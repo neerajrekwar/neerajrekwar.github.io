@@ -61,14 +61,7 @@ export function HeroSection() {
   return (
     <>
       <section className="relative flex min-h-screen flex-col items-start justify-center overflow-hidden bg-black w-full">
-        <div className="absolute inset-0 z-0">
-          <LiquidChrome
-            baseColor={[0.1, 0.1, 0.1]}
-            speed={0.2}
-            amplitude={0.5}
-            interactive={true}
-          />
-        </div>
+        
         
         <figure className="w-auto z-10 m-auto max-w-7xl lg:flex-col justify-center sm:justify-evenly items-center sm:flex md:flex-row-reverse relative py-20">
           <div className="md:flex md:flex-row-reverse max-w-7xl w-full">
