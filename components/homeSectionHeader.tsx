@@ -120,8 +120,9 @@ export default function HomeSectionHeader() {
               }}
               className="relative text-five font-bold z-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight mb-6"
             >
-              Build the right way <br className="hidden sm:block" /> with              <span className="flex items-center gap-3">
-                 <TextFlipper />
+              Build the right way <br className="hidden sm:block" />
+              <span className="flex items-center gap-3">
+                with <TextFlipper />
               </span>
             </motion.h1>
 
