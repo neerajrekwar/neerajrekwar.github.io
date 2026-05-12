@@ -14,7 +14,7 @@ const source_Code_Pro = Source_Code_Pro({
 const StickyRelativeDemo: NextPage = () => {
   return (
     <section className="m-auto scroll-smooth text-secondary justify-between p-2 max-h-fit max-w-6xl">
-      <header className="justify-start flex text-secondary items-center gap-2 sm:gap-1 py-10 text-2xl font-semibold visible sm:text-4xl">
+      <header className="justify-start flex text-secondary items-center gap-2 sm:gap-1 pt-10 text-2xl font-semibold visible sm:text-4xl">
         <div className="text-4xl text-third sm:text-5xl sm:mx-2">&#8226;</div>
         <h2>Recent projects</h2>
       </header>

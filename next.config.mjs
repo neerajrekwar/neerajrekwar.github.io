@@ -22,6 +22,11 @@ const nextConfig = {
           hostname: '3000-firebase-neerajrekwar-1778441261450.cluster-m7dwy2bmizezqukxkuxd55k5ka.cloudworkstations.dev',
           pathname: '**',
         },
+        {
+          protocol: 'https',
+          hostname: 'api.dicebear.com',
+          pathname: '**',
+        },
       ],
     },
     webpack: (config) => {

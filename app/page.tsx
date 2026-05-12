@@ -180,7 +180,7 @@ export default function Home() {
            <span className="px-2 sm:px-2 md:px-3 text-3xl sm:text-4xl md:text-5xl font-bold text-four">Build awesome apps with</span>
             <RotatingText
               texts={['Next.js', 'React', 'TypeScript', 'Tailwind CSS']}
-              mainClassName="px-4 sm:px-5 md:px-6 bg-five text-white text-3xl sm:text-4xl md:text-5xl font-bold overflow-hidden py-1 sm:py-2 md:py-3 justify-center rounded-xl  "
+              mainClassName="px-4 sm:px-5 md:px-6 bg-four text-white text-3xl sm:text-4xl md:text-5xl font-bold overflow-hidden py-1 sm:py-2 md:py-3 justify-center rounded-xl  "
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}

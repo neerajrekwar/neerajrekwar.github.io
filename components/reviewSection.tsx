@@ -8,37 +8,37 @@ const testimonials = [
         quote: "Pulsefy's our daily tool to bypass averages and reveal true insights, for the whole team!",
         name: "Hikmet Atçeken",
         handle: "@hiatceken",
-        image: "/testimonials/hikmet.png",
+        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Hikmet",
     },
     {
         quote: "Pulsefy levels the analytics field for our team, enabling both beginners and pros to easily bypass average data and uncover the actionable insights that truly shape our marketing strategies.",
         name: "Arda Guler",
         handle: "@ardaguler_",
-        image: "/testimonials/arda.png",
+        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Arda",
     },
     {
         quote: "From novice to pro, Pulsefy helps our team uncover the extraordinary in our marketing data!",
         name: "Maria Ancelotti",
         handle: "@maria_ancelotti",
-        image: "/testimonials/maria.png",
+        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Maria",
     },
     {
         quote: "Pulsefy empowers our whole team, techies or not, to dive into marketing analytics and spot the insights that really matter—no more average data!",
         name: "Ragip Diler",
         handle: "@rgdiler",
-        image: "/testimonials/ragip.png",
+        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Ragip",
     },
     {
         quote: "Pulsefy's user-friendly analytics let our whole team, regardless of skill, bypass averages to unearth and act on true, game-changing marketing insights every day.",
         name: "Jenny Wilson",
         handle: "@wilson_jenny_19",
-        image: "/testimonials/jenny.png",
+        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Jenny",
     },
     {
         quote: "Pulsefy is a game-changer for our team—easy for beginners and powerful for digging beyond average data. It's our daily ally in unearthing those pivotal marketing insights that really drive strategy!",
         name: "Guy Hawkins",
         handle: "@ghawkins",
-        image: "/testimonials/guy.png",
+        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Guy",
     },
 ];
 
