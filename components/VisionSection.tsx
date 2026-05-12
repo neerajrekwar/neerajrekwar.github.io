@@ -102,6 +102,7 @@ const features = [
 const PrevButton = (props: React.ComponentProps<"button">) => (
   <button
     {...props}
+    suppressHydrationWarning
     className="bg-seven rounded-full p-2 disabled:opacity-50"
   >
     <IconArrowLeft />
@@ -111,6 +112,7 @@ const PrevButton = (props: React.ComponentProps<"button">) => (
 const NextButton = (props: React.ComponentProps<"button">) => (
   <button
     {...props}
+    suppressHydrationWarning
     className="bg-seven rounded-full p-2 disabled:opacity-50"
   >
     <IconArrowRight />
@@ -170,6 +172,7 @@ export const VisionSection: React.FC = () => {
                   src={"/projects/home/elements.svg"}
                   height={300}
                   width={300}
+                  style={{ width: "auto", height: "auto" }}
                   loading="lazy"
                   alt="UI/UX design elements"
                 />
@@ -210,6 +213,7 @@ export const VisionSection: React.FC = () => {
                     src="/projects/home/Programming.svg"
                     className="aspect-square"
                     width={300}
+                    style={{ width: "auto", height: "auto" }}
                     height={300}
                     loading="lazy"
                     alt="best programing tech development"
@@ -423,6 +427,7 @@ export const VisionSection: React.FC = () => {
                   src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDl8fHxlbnwwfHx8fHw%3D"
                   width={500}
                   height={500}
+                  unoptimized
                   alt="dsa"
                   className="bg-cover rounded-md h-full md:aspect-video bg-center"
                 />
@@ -445,9 +450,10 @@ export const VisionSection: React.FC = () => {
             <div className="border-seven md:flex justify-center  items-center md:flex-row-reverse md:flex ">
               <div className="text-five    p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
                 <Image
-                  className="bg-seven h-full rounded-lg p-2 w-fit"
+                  className="bg-seven h-64  rounded-lg p-2 w-fit"
                   src="/projects/home/Futuristic_interface.svg"
                   width={300}
+                  
                   height={300}
                   alt="how's the Futuristic interface"
                 />
@@ -473,7 +479,7 @@ export const VisionSection: React.FC = () => {
                     Make a Innovative customization
                   </h3>
                 </div>
-                <div className="flex justify-center my-16">
+                <div className="flex justify-center mb-16">
                   <span className="p-2 px-3 text-four bg-seven border-seven border rounded-full w-fit ">
                     How &apos;s need it
                   </span>

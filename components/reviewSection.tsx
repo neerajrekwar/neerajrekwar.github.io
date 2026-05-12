@@ -8,7 +8,7 @@ const testimonials = [
         quote: "Pulsefy's our daily tool to bypass averages and reveal true insights, for the whole team!",
         name: "Hikmet Atçeken",
         handle: "@hiatceken",
-        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Hikmet",
+        image: "https://api.dicebear.com/9.x/adventurer/svg?seed=Easton",
     },
     {
         quote: "Pulsefy levels the analytics field for our team, enabling both beginners and pros to easily bypass average data and uncover the actionable insights that truly shape our marketing strategies.",
@@ -62,7 +62,7 @@ export function ReviewSection() {
                         >
                             <div className="flex items-center justify-between mb-4">
                                 <div className="flex items-center">
-                                    <Image src={testimonial.image} alt={testimonial.name} width={40} height={40} className="rounded-full object-cover" />
+                                    <Image src={testimonial.image} alt={testimonial.name} width={10} height={10} unoptimized className="rounded-full w-10 h-10 object-cover" />
                                     <div className="ml-3">
                                         <p className="font-semibold text-secondary">{testimonial.name}</p>
                                         <p className="text-sm text-four">{testimonial.handle}</p>

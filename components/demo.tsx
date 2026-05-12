@@ -328,7 +328,7 @@ export const VisionSection: React.FC = () => {
                     Make a Innovative customization
                   </h3>
                 </div>
-                <div className="flex justify-center my-16">
+                <div className="flex justify-center my-t6">
                   <span className="p-2 px-3 text-four bg-seven border-seven border rounded-full w-fit ">
                     How &apos;s need it
                   </span>
