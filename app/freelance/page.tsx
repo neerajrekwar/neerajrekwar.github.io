@@ -5,8 +5,44 @@ import { motion } from "framer-motion";
 import { Terminal, Layers, ArrowRight } from "lucide-react";
 
 export default function PricingHubPage() {
+  // JSON-LD Schema for Google Rich Results
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Freelance Web Developer Services",
+    "description": "Hire a freelance full stack developer for custom website development services. Remote Next.js expert available for startups, business websites, SEO redesigns, and performance fixes.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Project Build Packages",
+          "description": "Custom website development services for startups. Hire a Next.js developer to architect and build your Web2 or Web3 product from zero to launch.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "url": "https://neerajrekwar.github.io/freelance/packages"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Monthly Maintenance Plans",
+          "description": "Remote web developer for startup ongoing support, fix website performance issues, security patching, and SEO optimization on a monthly retainer.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "url": "https://neerajrekwar.github.io/freelance/maintenance"
+        }
+      }
+    ]
+  };
+
   return (
     <section className="flex flex-col items-center justify-center min-h-[80vh] py-20 relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       
       {/* Subtle Background Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-third/10 rounded-full blur-3xl pointer-events-none"></div>

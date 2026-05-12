@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Check, X, Terminal, Layout, Database, Cpu } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { IconBrandWhatsapp, IconBrandTelegram } from '@tabler/icons-react';
 
 // Optional: Define the interface to satisfy TypeScript completely
 interface Plan {
@@ -127,8 +128,70 @@ export default function CombinedPricingPage() {
     return billingCycle === 'annual' ? Math.floor(plan.price * 0.85) : plan.price;
   };
 
+  // JSON-LD Schema for Google Rich Results
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Custom Website Development Packages",
+    "description": "Explore custom website development services and scalable packages by a freelance full stack developer. Perfect for when you need to hire a developer for a business website or startup.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Static Presence Package",
+          "description": "Fast, beautiful static site for portfolios using React and Next.js. Hire a freelance web developer for a responsive UI and fast delivery.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "offers": {
+            "@type": "Offer",
+            "price": "900",
+            "priceCurrency": "USD",
+            "url": "https://neerajrekwar.github.io/freelance/packages"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Functional Web2 Package",
+          "description": "Full stack application with database and authentication. Hire a Next.js developer for a startup website with advanced SEO setup.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "offers": {
+            "@type": "Offer",
+            "price": "3500",
+            "priceCurrency": "USD",
+            "url": "https://neerajrekwar.github.io/freelance/packages"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "Dynamic Web3/4 Package",
+          "description": "Custom website development services for decentralized ecosystems. Includes smart contract audits, AI agent integration, and full-stack Web3 solutions.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "offers": {
+            "@type": "Offer",
+            "price": "8000",
+            "priceCurrency": "USD",
+            "url": "https://neerajrekwar.github.io/freelance/packages"
+          }
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-primary font-sans text-four p-4 md:p-8 flex flex-col items-center relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       
 
       {/* Main Content */}
@@ -246,22 +309,24 @@ export default function CombinedPricingPage() {
               </div>
 
               {/* Action Button */}
-              <div className="text-center mt-auto flex flex-col gap-3">
+              <div className="text-center mt-auto flex flex-col gap-3 pt-4">
                  <a 
                    href={`https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'm%20interested%20in%20the%20${encodeURIComponent(plan.title)}%20plan.%20Here%20are%20my%20project%20details%3A`} 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className={`flex items-center justify-center w-full px-8 py-3 rounded-full text-sm font-bold shadow-sm transition-all border ${plan.highlight ? 'bg-[#25D366] text-black border-[#25D366] hover:opacity-90' : 'bg-[#25D366]/10 text-[#25D366] border-[#25D366]/30 hover:bg-[#25D366]/20'}`}
+                   className={`group flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 border ${plan.highlight ? 'bg-[#25D366] text-white border-[#25D366] shadow-lg shadow-[#25D366]/30 hover:bg-[#1DA851] hover:shadow-xl hover:-translate-y-0.5' : 'bg-[#25D366]/10 text-[#25D366] border-[#25D366]/20 hover:bg-[#25D366] hover:text-white hover:shadow-lg hover:shadow-[#25D366]/20'}`}
                  >
-                   Book via WhatsApp
+                   <IconBrandWhatsapp size={18} className="group-hover:scale-110 transition-transform" />
+                   Discuss on WhatsApp
                  </a>
                  <a 
                    href="https://t.me/neerajrekwar" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className={`flex items-center justify-center w-full px-8 py-3 rounded-full text-sm font-bold transition-all border ${plan.highlight ? 'bg-transparent text-[#0088cc] border-[#0088cc] hover:bg-[#0088cc]/10' : 'bg-[#0088cc]/10 text-[#0088cc] border-[#0088cc]/30 hover:bg-[#0088cc]/20'}`}
+                   className={`group flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 border ${plan.highlight ? 'bg-[#0088cc] text-white border-[#0088cc] shadow-lg shadow-[#0088cc]/30 hover:bg-[#0077b5] hover:shadow-xl hover:-translate-y-0.5' : 'bg-[#0088cc]/10 text-[#0088cc] border-[#0088cc]/20 hover:bg-[#0088cc] hover:text-white hover:shadow-lg hover:shadow-[#0088cc]/20'}`}
                  >
-                   Book via Telegram
+                   <IconBrandTelegram size={18} className="group-hover:scale-110 transition-transform" />
+                   Message on Telegram
                  </a>
               </div>
             </motion.div>

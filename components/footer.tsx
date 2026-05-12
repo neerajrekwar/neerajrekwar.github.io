@@ -12,6 +12,7 @@ import {
   IconDeviceMobile,
   IconAt,
   IconExternalLink,
+  IconArrowRight,
 } from "@tabler/icons-react";
 import posts from "@/app/blog/data/posts.json";
 import DarkModebtn from "./theme/DarkModebtn";
@@ -25,205 +26,154 @@ export default function Footer() {
   const latestPosts = posts.slice(0, 2);
 
   return (
-    <footer className="bg-primary border border-2 border-red-500 bg-custom-radial-sm border-seven text-secondary">
-      <div className="p-4 text-four flex flex-col md:flex-row justify-between py-10 max-w-7xl m-auto">
-        <div className="flex gap-2 mb-8 items-start flex-col">
-          <div className={caveat.className}>
-            <Link href={"/"} className="text-5xl text-five font-bold">
-              nee.
-            </Link>
-          </div>
-          <p className="text-1xl flex mb-4 justify-start text-five items-start">
-            Let&apos;s start creating something new, You & I at same
-          </p>
-        </div>
-        <ul className="flex gap-2 text-five h-fit">
-          <li>
-            <a
-              href="https://x.com/neerajrekwar"
-              target="_blank"
-              className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four flex justify-center items-center"
-              aria-label="Neeraj Rekwar on X"
-            >
-              <IconBrandXFilled />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/neeraj-rekwar/"
-              target="_blank"
-              className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four flex justify-center items-center"
-              aria-label="Neeraj Rekwar on LinkedIn"
-            >
-              <IconBrandLinkedin />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/neerajrekwar"
-              target="_blank"
-              className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four flex justify-center items-center"
-              aria-label="Neeraj Rekwar on Github"
-            >
-              <IconBrandGithubFilled />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://discordapp.com/users/neerajrekwar"
-              target="_blank"
-              className="aspect-square p-2 h-10 w-10 active:bg-seven rounded-full active:text-four transition-all duration-600 hover:text-four flex justify-center items-center"
-              aria-label="Neeraj Rekwar on Discord"
-            >
-              <IconBrandDiscordFilled />
-            </a>
-          </li>
-          <li>
-            <DarkModebtn />
-          </li>
-        </ul>
-      </div>
-      <div className="py-10 max-w-7xl m-auto mx-auto grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4 justify-center items-start h-auto">
-        <aside className="p-4 mb-10 text-four">
-          <h2 className="text-xl text-five mb-8">About</h2>
-          <address className="not-italic">
-            <ul className="space-y-4 text-sm text-four">
-              {/* Location */}
-              <li className="group flex items-start gap-4">
-                <div className="mt-0.5 flex-shrink-0 text-five transition-transform group-hover:scale-110">
-                  <IconLocation size={20} />
-                </div>
-                <span className="leading-relaxed">
-                  Sec 7 Dwarka, New Delhi,<br />
-                  Delhi, India 110075
-                </span>
-              </li>
-
-              {/* Phone */}
-              <li className="group flex items-center gap-4">
-                <div className="flex-shrink-0 text-five transition-transform group-hover:scale-110">
-                  <IconDeviceMobile size={20} />
-                </div>
-                <a
-                  href="tel:+917042149836"
-                  className="transition-colors hover:text-five hover:underline underline-offset-4"
-                >
-                  +91 704 214 9836
-                </a>
-              </li>
-
-              {/* Email */}
-              <li className="group flex items-center gap-4">
-                <div className="flex-shrink-0 text-five transition-transform group-hover:scale-110">
-                  <IconAt size={20} />
-                </div>
-                <a
-                  href="mailto:dev.neerajrekwar@gmail.com"
-                  className="flex items-center gap-1 transition-colors hover:text-five hover:underline underline-offset-4"
-                >
-                  dev.neerajrekwar@gmail.com
-                  <IconExternalLink size={14} className="opacity-0 transition-opacity group-hover:opacity-100" />
-                </a>
-              </li>
-            </ul>
-          </address>
-        </aside>
-        <aside className="p-4 mb-10 text-four">
-          <h2 className="text-xl text-five mb-8">Latest News</h2>
-          <ul>
-            {latestPosts.map((post) => (
-              <li
-                key={post.slug}
-                className="flex gap-1 m justify-start items-start mb-4"
-              >
-                <div className="basis-1/4 m-1 aspect-square">
-                  {post.imageUrl ? (
-                    <Image
-                      className="w-full rounded aspect-square object-cover"
-                      src={post.imageUrl}
-                      width={80}
-                      height={80}
-                      alt={post.title}
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-seven flex items-center justify-center text-four rounded">
-                      No image
-                    </div>
-                  )}
-                </div>
-                <div className="basis-3/4 m-1 flex justify-start items-start flex-col">
-                  <h3>
-                    <Link
-                      className="md:text-sm text-four"
-                      href={`/blog/${post.slug}`}
+    <footer className="bg-primary border-t border-seven text-secondary relative overflow-hidden">
+      {/* Optional decorative background element */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-five/50 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-16">
+          <div className="flex flex-col max-w-sm">
+            <div className={caveat.className}>
+              <Link href={"/"} className="text-5xl text-five font-bold hover:opacity-80 transition-opacity inline-block mb-4">
+                nee.
+              </Link>
+            </div>
+            <p className="text-four text-base leading-relaxed mb-8">
+              Let&apos;s start creating something new, You & I at the same time. Crafting digital experiences with passion and precision.
+            </p>
+            <div className="flex items-center gap-4">
+              <ul className="flex flex-wrap gap-3 text-five">
+                {[
+                  { icon: <IconBrandXFilled size={20} />, href: "https://x.com/neerajrekwar", label: "X (Twitter)" },
+                  { icon: <IconBrandLinkedin size={20} />, href: "https://www.linkedin.com/in/neeraj-rekwar/", label: "LinkedIn" },
+                  { icon: <IconBrandGithubFilled size={20} />, href: "https://github.com/neerajrekwar", label: "GitHub" },
+                  { icon: <IconBrandDiscordFilled size={20} />, href: "https://discordapp.com/users/neerajrekwar", label: "Discord" },
+                ].map((social, index) => (
+                  <li key={index}>
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-seven/50 hover:bg-five hover:text-primary transition-all duration-300 shadow-sm"
+                      aria-label={`Neeraj Rekwar on ${social.label}`}
                     >
-                      {post.title || "Title in processing"}
-                    </Link>
-                  </h3>
-                  <div className="flex gap-1 text-sm opacity-50">
-                    <p>{post.author || "unknown"}</p>
-                    <p>{post.date ? new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : "unknown"}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </aside>
-        <nav className="p-4 mb-10 text-four" aria-label="Footer Navigation">
-          <h2 className="text-xl text-five mb-8">Information</h2>
-          <ul className="text-four text-sm">
-            <li className="p-1">
-              <a
-                href="/about"
-                className="hover:pl-1 hover:translate-x-1 transition-all"
-              >
-                About
-              </a>
-            </li>
-            
-            <li className="p-1">
-              <a
-                href="/blog"
-                className="hover:pl-1 hover:translate-x-1 transition-all"
-              >
-                Blog
-              </a>
-            </li>
-            <li className="p-1">
-              <a
-                href="/contact"
-                className="hover:pl-1 hover:text-four hover:translate-x-1 transition-all"
-              >
-                Contact
-              </a>
-            </li>
-            <li className="p-1">
-              <a
-                href="/freelance"
-                className="hover:pl-1 hover:translate-x-1 transition-all"
-              >
-                freelance
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <figure className="p-4 mb-10 text-four">
-          <h2 className="text-xl text-five mb-8">Instagram</h2>
-          <figcaption className="text-sm text-four mb-4">Follow me on Instagram for more updates</figcaption>
-          <div className="grid grid-cols-2 gap-2">
-            {/* Instagram images will be dynamically loaded here */}
+                      {social.icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="h-8 w-px bg-seven/50" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-seven/50 hover:bg-seven transition-all duration-300 shadow-sm cursor-pointer">
+                <DarkModebtn />
+              </div>
+            </div>
           </div>
-        </figure>
-      </div>
-      <div className="text-xs px-4 max-w-7xl mx-auto w-full" role="contentinfo">
-        <div className="py-6 opacity-50 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <span>
-            &copy; {new Date().getFullYear()} All rights reserved neerajrekwar
-          </span>
 
-          <span className="flex items-center gap-1">
-            Built by <a href="https://github.com/neerajrekwar" target="_blank" rel="noopener noreferrer" className="hover:underline hover:opacity-100 transition-opacity">neerajrekwar</a>
-          </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full md:w-auto flex-1 md:ml-10">
+            {/* Contact Info */}
+            <div className="flex flex-col">
+              <h3 className="text-lg font-semibold text-five mb-6 tracking-wide">Contact</h3>
+              <ul className="space-y-4 text-sm text-four">
+                <li className="group flex items-start gap-3">
+                  <IconLocation size={18} className="mt-0.5 text-five/70 group-hover:text-five transition-colors" />
+                  <span className="leading-relaxed">
+                    Sec 7 Dwarka, New Delhi,<br />
+                    Delhi, India 110075
+                  </span>
+                </li>
+                <li className="group flex items-center gap-3">
+                  <IconDeviceMobile size={18} className="text-five/70 group-hover:text-five transition-colors" />
+                  <a href="tel:+917042149836" className="transition-colors hover:text-five">
+                    +91 704 214 9836
+                  </a>
+                </li>
+                <li className="group flex items-center gap-3">
+                  <IconAt size={18} className="text-five/70 group-hover:text-five transition-colors" />
+                  <a href="mailto:dev.neerajrekwar@gmail.com" className="flex items-center gap-1 transition-colors hover:text-five truncate">
+                    dev.neerajrekwar@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Quick Links */}
+            <div className="flex flex-col">
+              <h3 className="text-lg font-semibold text-five mb-6 tracking-wide">Explore</h3>
+              <ul className="space-y-3 text-sm text-four">
+                {[
+                  { name: 'About', path: '/about' },
+                  { name: 'Blog', path: '/blog' },
+                  { name: 'Contact', path: '/contact' },
+                  { name: 'Freelance', path: '/freelance' }
+                ].map((link) => (
+                  <li key={link.name}>
+                    <Link 
+                      href={link.path}
+                      className="group flex items-center gap-2 w-fit transition-colors hover:text-five"
+                    >
+                      <IconArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-five" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Latest News */}
+            <div className="flex flex-col sm:col-span-2 lg:col-span-1">
+              <h3 className="text-lg font-semibold text-five mb-6 tracking-wide">Latest Thoughts</h3>
+              <ul className="space-y-5">
+                {latestPosts.map((post) => (
+                  <li key={post.slug} className="group flex gap-3 items-center">
+                    <div className="flex-shrink-0 w-16 h-16 overflow-hidden rounded-md bg-seven/50">
+                      {post.imageUrl ? (
+                        <Image
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          src={post.imageUrl}
+                          width={64}
+                          height={64}
+                          alt={post.title}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-xs text-four/50">
+                          No img
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="text-sm font-medium text-four group-hover:text-five transition-colors line-clamp-2 mb-1"
+                      >
+                        {post.title || "Title in processing"}
+                      </Link>
+                      <span className="text-xs text-four/60">
+                        {post.date ? new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : "Unknown date"}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-seven/50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-four/60">
+          <p>
+            &copy; {new Date().getFullYear()} Neeraj Rekwar. All rights reserved.
+          </p>
+          <p className="flex items-center gap-1">
+            Designed & Built by 
+            <a 
+              href="https://github.com/neerajrekwar" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-four hover:text-five font-medium transition-colors"
+            >
+              @neerajrekwar
+            </a>
+          </p>
         </div>
       </div>
     </footer>

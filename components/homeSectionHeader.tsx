@@ -32,7 +32,7 @@ export default function HomeSectionHeader() {
               nee.
             </Link>
           </div>
-          <div className="text-five flex flex-col items-end justify-start text-start">
+          <div className="text-five flex flex-col md:flex-row items-center justify-start gap-3 text-start">
             <DeviceAddress />
             <Weather />
           </div>

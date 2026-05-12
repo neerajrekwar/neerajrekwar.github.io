@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Check, X, Bell, Settings, User, Code, Terminal, Cpu } from 'lucide-react';
+import { IconBrandWhatsapp, IconBrandTelegram } from '@tabler/icons-react';
 
 
 export default function ServicePricingPage() {
@@ -30,10 +31,70 @@ export default function ServicePricingPage() {
     "Web3 & AI Agent Integration",       // 8
   ];
 
+  // JSON-LD Schema for Google Rich Results
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Custom Website Maintenance & Development Plans",
+    "description": "Hire a remote Next.js developer for startup website maintenance, fix website performance issues, and redesign your website to be SEO friendly.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Care & Secure Maintenance Plan",
+          "description": "Essential website maintenance services to fix website performance issues, including 24/7 uptime monitoring, security patching, and bug fixes.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "offers": {
+            "@type": "Offer",
+            "price": "299",
+            "priceCurrency": "USD",
+            "url": "https://neerajrekwar.github.io/freelance/maintenance"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Growth & Rank SEO Plan",
+          "description": "Hire an SEO expert for your website to improve rankings. Includes technical SEO audits, core web vitals speed optimization, and redesigning your website to be SEO friendly.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "offers": {
+            "@type": "Offer",
+            "price": "999",
+            "priceCurrency": "USD",
+            "url": "https://neerajrekwar.github.io/freelance/maintenance"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "Future Architect Web3 Plan",
+          "description": "Custom website development services for startups. Let a remote web developer for startup build smart contracts, integrate AI agents, and provide full-stack Next.js solutions.",
+          "provider": { "@type": "Person", "name": "Neeraj Rekwar" },
+          "offers": {
+            "@type": "Offer",
+            "price": "2499",
+            "priceCurrency": "USD",
+            "url": "https://neerajrekwar.github.io/freelance/maintenance"
+          }
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-primary font-sans text-secondary p-4 md:p-8 flex flex-col items-center">
-      
-     
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
 
       {/* Main Content */}
       <div className="w-full max-w-7xl">
@@ -100,11 +161,13 @@ export default function ServicePricingPage() {
             </div>
 
             <div className="text-center mt-auto flex flex-col gap-3">
-               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20subscribe%20to%20the%20Care%20%26%20Secure%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-[#25D366] text-black border border-[#25D366] rounded-full text-sm font-bold shadow-sm hover:opacity-90 hover:shadow-md transition-all">
-                 Book via WhatsApp
+               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20subscribe%20to%20the%20Care%20%26%20Secure%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 rounded-full text-sm font-bold hover:bg-[#25D366] hover:text-white hover:shadow-lg hover:shadow-[#25D366]/20 transition-all duration-300">
+                 <IconBrandWhatsapp size={18} className="group-hover:scale-110 transition-transform" />
+                 Discuss on WhatsApp
                </a>
-               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-transparent text-[#0088cc] border border-[#0088cc] rounded-full text-sm font-bold hover:bg-[#0088cc]/10 transition-all">
-                 Book via Telegram
+               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#0088cc]/10 text-[#0088cc] border border-[#0088cc]/20 rounded-full text-sm font-bold hover:bg-[#0088cc] hover:text-white hover:shadow-lg hover:shadow-[#0088cc]/20 transition-all duration-300">
+                 <IconBrandTelegram size={18} className="group-hover:scale-110 transition-transform" />
+                 Message on Telegram
                </a>
             </div>
           </div>
@@ -146,11 +209,13 @@ export default function ServicePricingPage() {
             </div>
 
             <div className="text-center mt-auto flex flex-col gap-3">
-               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20subscribe%20to%20the%20Growth%20%26%20Rank%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-[#25D366] text-black border border-[#25D366] rounded-full text-sm font-bold shadow-lg hover:opacity-90 transition-all">
-                 Book via WhatsApp
+               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20subscribe%20to%20the%20Growth%20%26%20Rank%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#25D366] text-white border border-[#25D366] rounded-full text-sm font-bold shadow-lg shadow-[#25D366]/30 hover:bg-[#1DA851] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                 <IconBrandWhatsapp size={18} className="group-hover:scale-110 transition-transform" />
+                 Discuss on WhatsApp
                </a>
-               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-transparent text-[#0088cc] border border-[#0088cc] rounded-full text-sm font-bold hover:bg-[#0088cc]/10 transition-all">
-                 Book via Telegram
+               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#0088cc] text-white border border-[#0088cc] rounded-full text-sm font-bold shadow-lg shadow-[#0088cc]/30 hover:bg-[#0077b5] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                 <IconBrandTelegram size={18} className="group-hover:scale-110 transition-transform" />
+                 Message on Telegram
                </a>
             </div>
           </div>
@@ -188,11 +253,13 @@ export default function ServicePricingPage() {
             </div>
 
             <div className="text-center mt-auto flex flex-col gap-3">
-               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20discuss%20the%20Future%20Architect%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-[#25D366] text-black border border-[#25D366] rounded-full text-sm font-bold shadow-sm hover:opacity-90 hover:shadow-md transition-all">
-                 Book via WhatsApp
+               <a href="https://wa.me/917042149836?text=Hi%20Neeraj%2C%20I'd%20like%20to%20discuss%20the%20Future%20Architect%20plan.%20Here%20are%20my%20project%20details%3A" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 rounded-full text-sm font-bold hover:bg-[#25D366] hover:text-white hover:shadow-lg hover:shadow-[#25D366]/20 transition-all duration-300">
+                 <IconBrandWhatsapp size={18} className="group-hover:scale-110 transition-transform" />
+                 Discuss on WhatsApp
                </a>
-               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full px-8 py-3 bg-transparent text-[#0088cc] border border-[#0088cc] rounded-full text-sm font-bold hover:bg-[#0088cc]/10 transition-all">
-                 Book via Telegram
+               <a href="https://t.me/neerajrekwar" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 w-full px-6 py-3 bg-[#0088cc]/10 text-[#0088cc] border border-[#0088cc]/20 rounded-full text-sm font-bold hover:bg-[#0088cc] hover:text-white hover:shadow-lg hover:shadow-[#0088cc]/20 transition-all duration-300">
+                 <IconBrandTelegram size={18} className="group-hover:scale-110 transition-transform" />
+                 Message on Telegram
                </a>
             </div>
           </div>

@@ -43,8 +43,51 @@ export const metadata: Metadata = {
 };
 
 const ContactPage: React.FC = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How quickly can you start if I need a website developer urgently?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "I can usually prioritize and start within 24-48 hours for urgent projects. Please fill out the contact form or message me directly on WhatsApp for the fastest response.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I hire you as a remote full stack developer for my startup?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely! I offer freelance full stack development services and monthly retainer plans to support, maintain, and scale your business website or startup.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do your web development services include SEO optimization?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, I ensure that all the websites I build or redesign are fully SEO-friendly, optimized for core web vitals and technical performance to help you rank better.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the best way to discuss my custom website development needs?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can reach out by filling out the contact form on this page, emailing me, or connecting via Telegram or WhatsApp. We can then schedule a discovery call to discuss your exact needs.",
+        },
+      }
+    ],
+  };
+
   return(
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <FillForm/>
     </main>
   );
