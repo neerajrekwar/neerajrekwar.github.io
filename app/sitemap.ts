@@ -28,16 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://neerajrekwar.github.io/blog/first-post',
-      lastModified: '2026-01-27T19:24:11+00:00',
-      priority: 0.8,
-    },
-    {
-      url: 'https://neerajrekwar.github.io/blog/second-post',
-      lastModified: '2026-01-27T19:24:11+00:00',
-      priority: 0.8,
-    },
-    {
       url: 'https://neerajrekwar.github.io/pricing',
       lastModified: '2026-01-27T19:24:11+00:00',
       priority: 0.8,
@@ -48,20 +38,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.64,
     },
     {
-      url: 'https://neerajrekwar.github.io/blog/third-post',
+      url: 'https://neerajrekwar.github.io/freelance/maintenance',
       lastModified: '2026-01-27T19:24:11+00:00',
       priority: 0.64,
     },
     {
-      url: 'https://neerajrekwar.github.io/pricing/packages',
+      url: 'https://neerajrekwar.github.io/freelance/packages',
       lastModified: '2026-01-27T19:24:11+00:00',
       priority: 0.64,
-    },
-    {
-      url: 'https://neerajrekwar.github.io/pricing/maintenance',
-      lastModified: '2026-01-27T19:24:10+00:00',
-      priority: 0.64,
-    },
+    }
   ];
   // Generate dynamic routes for the blog posts
   const blogRoutes = posts.map((post) => ({
