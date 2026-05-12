@@ -28,22 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://neerajrekwar.github.io/pricing',
+      url: 'https://neerajrekwar.github.io/freelance',
       lastModified: '2026-01-27T19:24:11+00:00',
       priority: 0.8,
     },
     {
       url: 'https://neerajrekwar.github.io/about/book-meeting',
-      lastModified: '2026-01-27T19:24:11+00:00',
-      priority: 0.64,
-    },
-    {
-      url: 'https://neerajrekwar.github.io/freelance/maintenance',
-      lastModified: '2026-01-27T19:24:11+00:00',
-      priority: 0.64,
-    },
-    {
-      url: 'https://neerajrekwar.github.io/freelance/packages',
       lastModified: '2026-01-27T19:24:11+00:00',
       priority: 0.64,
     }
@@ -61,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     // Included both physical and canonical paths for completeness
     "/freelance/maintenance",
-    "/pricing/maintenance",
+    "/freelance/packages",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
