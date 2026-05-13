@@ -76,7 +76,7 @@ const StickyRelativeDemo: NextPage = () => {
                 width={552}
                 height={310}
                 loading="lazy"
-                style={{ width: "100%", height: "auto" }}
+               
                 className="object-cover rounded-2xl"
               />
             </figure>
@@ -87,7 +87,7 @@ const StickyRelativeDemo: NextPage = () => {
                 width={552}
                 height={310}
                 loading="lazy"
-                style={{ width: "100%", height: "auto" }}
+               
                 className="object-cover rounded-2xl"
               />
             </figure>
@@ -98,7 +98,7 @@ const StickyRelativeDemo: NextPage = () => {
                 width={552}
                 height={310}
                 loading="lazy"
-                style={{ width: "100%", height: "auto" }}
+               
                 className="object-cover rounded-2xl"
               />
             </figure>
