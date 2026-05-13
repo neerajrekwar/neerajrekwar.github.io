@@ -27,6 +27,11 @@ const nextConfig = {
           hostname: 'api.dicebear.com',
           pathname: '**',
         },
+        {
+          protocol: 'https',
+          hostname: 'miro.medium.com',
+          pathname: '**',
+        },
       ],
     },
     webpack: (config) => {
