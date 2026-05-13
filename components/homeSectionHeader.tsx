@@ -2,13 +2,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Alata, Caveat } from "next/font/google";
-import DeviceAddress from "./DeviceAddress";
-
-import Weather from "./WeatherApp";
-import { AuroraBackgroundDemo as BackgroundAurra } from "./BackgroundAurra";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import TextFlipper from "./TextFlipper";
+import dynamic from "next/dynamic";
+
+// Dynamically import client components to reduce initial JS payload
+const DeviceAddress = dynamic(() => import("./DeviceAddress.js").then((mod) => mod.default as any), { ssr: false });
+const Weather = dynamic(() => import("./WeatherApp.js").then((mod) => mod.default as any), { ssr: false });
+const TextFlipper = dynamic(() => import("./TextFlipper.js").then((mod) => mod.default as any), { ssr: false });
 
 const alata = Alata({
   weight: "400",

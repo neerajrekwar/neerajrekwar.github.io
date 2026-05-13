@@ -86,8 +86,7 @@ const StickyRelativeDemo: NextPage = () => {
                 alt={"My Profile Picture"}
                 width={552}
                 height={310}
-                loading="lazy"
-               
+                priority
                 className="object-cover rounded-2xl"
               />
             </figure>
