@@ -71,7 +71,7 @@ const StickyRelativeDemo: NextPage = () => {
           <div className="grid gap-4 p-2 pt-4 sm:gap-10">
             <figure>
               <Image
-                src={"/screen.jpg"}
+                src={"/screen.webp"}
                 alt={"My Profile Picture"}
                 width={552}
                 height={310}
@@ -82,7 +82,7 @@ const StickyRelativeDemo: NextPage = () => {
             </figure>
             <figure>
               <Image
-                src={"/screen.jpg"}
+                src={"/screen.webp"}
                 alt={"My Profile Picture"}
                 width={552}
                 height={310}
@@ -93,7 +93,7 @@ const StickyRelativeDemo: NextPage = () => {
             </figure>
             <figure>
               <Image
-                src={"/screen.jpg"}
+                src={"/screen.webp"}
                 alt={"My Profile Picture"}
                 width={552}
                 height={310}

@@ -1,20 +1,14 @@
-import { Alata, Source_Code_Pro, DM_Sans } from "next/font/google";
+import { Source_Code_Pro } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import { FloatingNavDemo } from "../components/floatingNavBar";
 import { ThemeProvider } from "../components/context/ThemeContext";
-import Script from "next/script";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 import GoogleTagManager from "../components/GoogleTagManager";
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/footer";
 
-const dm_Sans = DM_Sans({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-const alata = Source_Code_Pro({
+const sourceCodePro = Source_Code_Pro({
   variable: "--font-sans",
   weight: "400",
   subsets: ["latin"],
@@ -41,16 +35,16 @@ export default function RootLayout({
       lang="en"
       className="scroll-smooth bg-primary focus:scroll-auto scrollbar-thumb-rounded-full scrollbar-thin scrollbar-thumb-four scrollbar-track-seven"
     >
-      <ThemeProvider>
-        <body className={`${alata.className} bg-primary`}>
+      <body className={`${sourceCodePro.className} bg-primary`}>
+        <ThemeProvider>
           <GoogleTagManager containerId="GTM-MV3R5HQL" />
           <FloatingNavDemo />
           <GoogleAnalytics gaId="G-0PCHHEHDFJ" />
           {children}
           <Footer />
           <Toaster />
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
