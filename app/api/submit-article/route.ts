@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 
+export const dynamic = 'force-static';
+
 // Define the type for a post to be added
 interface NewPost {
     slug: string;
