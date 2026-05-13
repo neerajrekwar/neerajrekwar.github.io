@@ -71,12 +71,11 @@ export default function HomeSectionHeader() {
               >
                 <Image
                   src={"/me.webp"}
-                  width={96}
-                  height={96}
-                  sizes="(max-width: 640px) 36px, (max-width: 768px) 40px, 48px"
+                  width={36}
+                  height={36}
                   priority
                   alt="Neeraj Rekwar"
-                  className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 aspect-square object-cover rounded-full shadow-sm"
+                  className="aspect-square object-cover rounded-full shadow-sm"
                 />
               </motion.div>
               <motion.div
