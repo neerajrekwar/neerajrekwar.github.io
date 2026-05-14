@@ -1,6 +1,7 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: 'export',
     allowedDevOrigins: [
       '3000-firebase-neerajrekwar-1778786240989.cluster-bqwaigqtxbeautecnatk4o6ynk.cloudworkstations.dev'
     ],
