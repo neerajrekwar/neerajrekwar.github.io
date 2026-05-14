@@ -1,6 +1,5 @@
-import { IconHeartFilled } from '@tabler/icons-react';
+import { IconHeartFilled, IconSparkles } from '@tabler/icons-react';
 import { CheckCircle, AlertCircle, BarChart } from 'lucide-react';
-import posts from '../data/posts.json';
 import Image from "next/image";
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -10,55 +9,81 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+type Article = {
+  id: string;
+  slug: string;
+  title: string;
+  imageUrl?: string;
+  description: string;
+  date: string | any;
+  author?: string;
+  duration?: string;
+  content: string | any; // Accommodates string or your existing structured JSON content
+};
+
 // Generate static routes for all blog posts at build time
 export async function generateStaticParams() {
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  try {
+    const res = await fetch('https://nee-one.vercel.app/api');
+    if (!res.ok) return [];
+    const posts: Article[] = await res.json();
+    return posts.map((post) => ({
+      slug: post.slug,
+    }));
+  } catch {
+    return [];
+  }
 }
 
 // Generate metadata dynamically based on the current post
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
 
-  if (!post) {
+  try {
+    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`);
+    if (!res.ok) throw new Error("Not found");
+    const post: Article = await res.json();
+
+    const isValidDate = post.date && !isNaN(new Date(post.date).getTime());
+
+    return {
+      title: `${post.title} | Neeraj Rekwar Blog`,
+      description: post.description || "Read this amazing article on Neeraj Rekwar's blog.",
+      alternates: {
+        canonical: `https://neerajrekwar.github.io/blog/${slug}`,
+      },
+      openGraph: {
+        title: post.title,
+        description: post.description,
+        url: `https://neerajrekwar.github.io/blog/${slug}`,
+        type: 'article',
+        publishedTime: isValidDate ? new Date(post.date).toISOString() : undefined,
+        authors: [post.author || 'Neeraj Rekwar'],
+        images: post.imageUrl ? [{ url: post.imageUrl, width: 1200, height: 630, alt: post.title }] : [],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: post.title,
+        description: post.description,
+        images: post.imageUrl ? [post.imageUrl] : [],
+      }
+    };
+  } catch {
     return {
       title: "Post Not Found",
     };
   }
-
-  const isValidDate = post.date && !isNaN(new Date(post.date).getTime());
-
-  return {
-    title: `${post.title} | Neeraj Rekwar Blog`,
-    description: post.description || "Read this amazing article on Neeraj Rekwar's blog.",
-    alternates: {
-      canonical: `https://neerajrekwar.github.io/blog/${slug}`,
-    },
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      url: `https://neerajrekwar.github.io/blog/${slug}`,
-      type: 'article',
-      publishedTime: isValidDate ? new Date(post.date).toISOString() : undefined,
-      authors: [post.author || 'Neeraj Rekwar'],
-      images: post.imageUrl ? [{ url: post.imageUrl, width: 1200, height: 630, alt: post.title }] : [],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.description,
-      images: post.imageUrl ? [post.imageUrl] : [],
-    }
-  };
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
 
-  if (!post) {
+  let post: Article;
+  try {
+    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`);
+    if (!res.ok) notFound();
+    post = await res.json();
+  } catch {
     notFound();
   }
 
@@ -129,108 +154,117 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   return (
-    <main className="prose min-h-screen max-w-5xl bg-primary m-auto text-four mx-auto py-2">
+    <main className="bg-primary min-h-screen pb-20 overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      <section className="mb-44">
-        <p className="p-[4px] font-semibold flex justify-center rounded-full items-center my-10 max-w-fit m-auto text-four border-2 border-four bg-primary px-2 uppercase text-sm">
-          think it
-        </p>
-        <article className="prose max-w-none min-h-screen p-4">
-          <h1 className="text-3xl text-five md:text-center md:text-4xl font-bold mb-4">
-            {post.title ? (
-              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-            ) : (
-              <div className="">title in processing</div>
-            )}
-          </h1>
-          <div className="flex gap-2 md:gap-4 md:pb-4 tracking-wide text-xs uppercase py-4 justify-center">
-            <span className="opacity-75">by</span>
-            <span className="text-four">{post.author || 'admin'}</span>
-            <span>/</span>
-            <span className="opacity-75">
-              {post.date
-                ? new Date(post.date).toLocaleString("en-US", {
-                    month: 'long',
-                    year: 'numeric',
-                  })
-                : 'Date not available'}
-            </span>
-            <span>/</span>
-            <span className="opacity-75">{post.duration || 'N/A'}</span>
+      
+      {/* Hero Header Section */}
+      <header className="max-w-5xl mx-auto px-4 sm:px-6 pt-2 md:pt-6 pb-10 text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-five uppercase bg-secondary/10 rounded-full border border-five/20">
+          <IconSparkles size={14} />
+          Article
+        </div>
+
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-third tracking-tight mb-8 leading-tight">
+          {post.title || "Untitled Post"}
+        </h1>
+
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-sm font-medium text-four/80">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-five text-primary flex items-center justify-center font-bold text-xs">
+              {post.author ? post.author[0].toUpperCase() : 'A'}
+            </div>
+            <span className="text-five font-bold text-base">{post.author || 'Admin'}</span>
           </div>
-          <p className="first-letter:text-xl text-sm p-2 opacity-75 rounded-sm my-2 first-letter:font-bold first-letter:ml-1">
-            {post.description}
-          </p>
-          <div>
-            {post.imageUrl && (
+          <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-secondary/40"></span>
+          <time dateTime={post.date}>
+            {post.date && !isNaN(new Date(post.date).getTime())
+              ? new Date(post.date).toLocaleDateString("en-US", { month: 'long', day: 'numeric', year: 'numeric' })
+              : 'Date unknown'}
+          </time>
+          <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-secondary/40"></span>
+          <span className="flex items-center gap-1">
+            {post.duration || '5 min read'}
+          </span>
+        </div>
+      </header>
+
+      {/* Featured Breakout Image */}
+      {post.imageUrl && (
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-12 md:mb-16">
+          <div className="relative w-full rounded-3xl overflow-hidden shadow-xl border border-secondary/10 bg-secondary/5 group">
               <Image
                 src={post.imageUrl}
                 alt={post.title || "Blog post image"}
-                width={600}
-                height={400}
-                className="float-left mr-4 mb-2 w-1/3 h-auto object-cover rounded-lg"
+                width={1200}
+                height={600}
+              className="w-full max-h-[600px] object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-in-out"
               />
-            )}
-            <div>
-              {typeof post.content === 'object' &&
-              post.content !== null &&
-              'data-ctn' in (post.content as any) ? (
-                (post.content as any)['data-ctn'].map((contentItem: any) => (
-                  <div key={contentItem.id}>
-                    {contentItem.heading3 && (
-                      <h3 className="text-xl md:opacity-95 font-medium md:text-2xl text-five pt-2">
-                        {contentItem.heading3}
-                      </h3>
-                    )}
-                    {contentItem.paraChildPara && (
-                      <p className="pb-4">{contentItem.paraChildPara}</p>
-                    )}
-                  </div>
-                ))
-              ) : (
-                <div className="pb-4 prose-content" dangerouslySetInnerHTML={{ __html: post.content as string }} />
-              )}
-            </div>
-            
-            {/* SEO Status Card embedded in Article Page */}
-            <div className="mt-16 bg-six/10 border border-seven rounded-3xl p-6 md:p-8 shadow-sm max-w-3xl mx-auto flex flex-col md:flex-row gap-8 items-center justify-between not-prose">
-              <div className="flex flex-col items-center justify-center shrink-0">
-                <div className="flex items-center gap-2 mb-4">
-                  <BarChart className="w-5 h-5 text-third" />
-                  <h3 className="text-lg font-bold text-four m-0">Article SEO Status</h3>
-                </div>
-                <div className={`w-28 h-28 rounded-full border-[6px] flex items-center justify-center mb-2 transition-colors duration-500 ${getScoreBg(seoScore)}`}>
-                  <span className={`text-3xl font-extrabold ${getScoreColor(seoScore)}`}>
-                    {seoScore}%
-                  </span>
-                </div>
-                <p className="text-five font-medium text-xs uppercase tracking-wider">Accuracy Score</p>
-              </div>
+          </div>
+        </div>
+      )}
 
-              <div className="space-y-4 w-full md:flex-1">
-                <SeoCheckItem label={`Title Length (${titleLength} chars)`} passed={titleLength >= 40 && titleLength <= 60} />
-                <SeoCheckItem label={`Description Length (${descLength} chars)`} passed={descLength >= 120 && descLength <= 160} />
-                <SeoCheckItem label={`Content Length (${wordCount} words)`} passed={wordCount >= 300} />
+      {/* Main Content Body */}
+      <article className="max-w-3xl mx-auto px-4 sm:px-6">
+        {post.description && (
+          <div className="mb-12 p-6 sm:p-8 bg-secondary/5 rounded-2xl border-l-4 border-five shadow-sm">
+            <p className="text-lg sm:text-xl text-five/90 font-medium leading-relaxed m-0">
+              {post.description}
+            </p>
+          </div>
+        )}
+
+        <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none w-full prose-headings:text-five prose-headings:font-bold prose-p:text-four prose-p:leading-relaxed prose-a:text-third hover:prose-a:text-five prose-strong:text-five prose-strong:font-bold prose-ul:text-four prose-ol:text-four prose-li:text-four prose-blockquote:text-five prose-blockquote:bg-secondary/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:border-five prose-blockquote:rounded-r-xl prose-code:text-five prose-code:bg-secondary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-secondary prose-pre:text-primary prose-img:rounded-2xl prose-img:shadow-md">
+          {typeof post.content === 'object' && post.content !== null && 'data-ctn' in (post.content as any) ? (
+            (post.content as any)['data-ctn'].map((contentItem: any) => (
+              <div key={contentItem.id}>
+                {contentItem.heading3 && <h3>{contentItem.heading3}</h3>}
+                {contentItem.paraChildPara && <p>{contentItem.paraChildPara}</p>}
               </div>
+            ))
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: post.content as string }} />
+          )}
+        </div>
+      </article>
+
+      {/* Post Footer & SEO Stats */}
+      <footer className="max-w-3xl mx-auto px-4 sm:px-6 mt-16 pt-10 border-t border-secondary/20">
+        {/* <div className="mb-12 bg-secondary/5 border border-secondary/20 rounded-3xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row gap-8 items-center justify-between">
+          <div className="flex flex-col items-center justify-center shrink-0">
+            <div className="flex items-center gap-2 mb-4">
+              <BarChart className="w-5 h-5 text-five" />
+              <h3 className="text-lg font-bold text-five m-0">Post Quality</h3>
+            </div>
+            <div className={`w-28 h-28 rounded-full border-[6px] flex items-center justify-center mb-2 transition-colors duration-500 ${getScoreBg(seoScore)}`}>
+              <span className={`text-3xl font-extrabold ${getScoreColor(seoScore)}`}>
+                {seoScore}%
+              </span>
             </div>
           </div>
-        </article>
-      </section>
-      <section className="min-h-screen border-third uppercase tracking-wide text-four">
-        <div className="flex items-center py-4 justify-center">
-          <span className="flex items-center bg-secondary rounded-full gap-2 text-primary p-2 px-3">
-            <IconHeartFilled /> like this
-          </span>
+
+          <div className="space-y-4 w-full md:flex-1 bg-primary p-6 rounded-2xl border border-secondary/10">
+            <SeoCheckItem label={`Title Length (${titleLength} chars)`} passed={titleLength >= 40 && titleLength <= 60} />
+            <SeoCheckItem label={`Description Length (${descLength} chars)`} passed={descLength >= 120 && descLength <= 160} />
+            <SeoCheckItem label={`Content Length (${wordCount} words)`} passed={wordCount >= 300} />
+          </div>
+        </div> */}
+
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 py-6 bg-secondary/5 rounded-full px-8 border border-secondary/10">
+          <button className="flex items-center gap-2 text-primary bg-five hover:bg-five/90 px-6 py-3 rounded-full font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <IconHeartFilled size={20} />
+            <span>Like this post</span>
+          </button>
+          <div className="flex gap-2 text-sm items-center justify-center text-four">
+            <span className="font-bold text-five">Himanshu</span> 
+            <span className="opacity-70">and</span>
+            <span className="font-bold text-five">12 others</span>
+            <span className="opacity-70">liked this</span>
+          </div>
         </div>
-        <div className="flex gap-4 text-sm py-2 items-center font-semibold justify-center">
-          <span className="font-bold">Himanshu</span> <span className="opacity-50">and</span>
-          <span className="font-bold">12</span>
-          <p className="opacity-50">others love this</p>
-        </div>
-      </section>
+      </footer>
     </main>
   );
 }

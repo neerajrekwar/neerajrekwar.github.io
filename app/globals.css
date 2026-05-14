@@ -2,6 +2,7 @@
 @import '../styles/_keyframe-animations.scss';
 
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ======================================================
    Theme Tokens
@@ -10,7 +11,7 @@
   --font-sans: var(--font-sans);
   --color-primary: #ffffff;
   --color-secondary: #000000;
-  --color-third: #2cffbf;
+  --color-third: #10a87b;
   --color-four: #1d2421;
   --color-five: #5c7979;
   --color-six: #e0f2e9;

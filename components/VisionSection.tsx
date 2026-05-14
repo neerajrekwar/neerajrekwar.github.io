@@ -172,7 +172,7 @@ export const VisionSection: React.FC = () => {
                   src={"/projects/home/elements.svg"}
                   height={300}
                   width={300}
-                  style={{ width: "auto", height: "auto" }}
+                 
                   loading="lazy"
                   alt="UI/UX design elements"
                 />
@@ -198,8 +198,8 @@ export const VisionSection: React.FC = () => {
               </div>
             </div>
             <div className="basis-1/2 p-2 lg:flex flex-col justify-between">
-              <div className="basis-1/2 md:flex-row md:flex gap-4">
-                <div className="basis-1/2  rounded-lg md:aspect-video m-3 flex-col flex justify-center  text-base md:text-base p-4">
+              <div className="basis-1/2 p-2 md:flex-row md:flex gap-4">
+                <div className="basis-1/2 rounded-lg aspect-video m-3 flex-col flex justify-center text-base md:text-base p-4">
                   <h3 className="text-2xl md:text-4xl font-bold pb-2  text-four  ">
                     Change your old from new engaging user interface
                   </h3>
@@ -208,12 +208,12 @@ export const VisionSection: React.FC = () => {
                     selection based on your browsing history and past purchases.
                   </p>
                 </div>
-                <figure className="text-five  p-2 basis-1/2  md:aspect-video font-bold flex justify-center items-center  rounded-2xl m-2 p-4 h-60 md:h-auto">
+                <figure className="text-five bg-seven p-2 basis-1/2 md:aspect-video font-bold flex justify-center items-center rounded-2xl m-2 p-4 h-60 md:h-auto">
                   <Image
                     src="/projects/home/Programming.svg"
-                    className="aspect-square"
+                    className="bg-transparent"
                     width={300}
-                    style={{ width: "auto", height: "auto" }}
+                   
                     height={300}
                     loading="lazy"
                     alt="best programing tech development"

@@ -1,16 +1,49 @@
 'use client';
-import posts from "./data/posts.json";
 import Link from "next/link";
 import Image from "next/image";
 import BlogExcerpt from "../../components/BlogExcerpt";
 import { IconLink, IconPointFilled, IconShare, IconSparkles } from "@tabler/icons-react";
 import LikeButton from "../../components/LikeButton";
 import ShareDialog from "../../components/ShareDialog"; // Import the ShareDialog component
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+type Article = {
+  id: string;
+  slug: string;
+  title: string;
+  imageUrl?: string;
+  description: string;
+  date?: string;
+  author?: string;
+  duration?: string;
+  content: string;
+};
 
 export default function BlogIndexPage() {
+  const [posts, setPosts] = useState<Article[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [isDialogOpen, setDialogOpen] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch("/api/external-posts");
+        if (!response.ok) {
+          throw new Error("Error reading posts");
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (err: any) {
+        setError(err.message || "Failed to load posts");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
 
   const openShareDialog = (url: string) => {
     setShareUrl(url);
@@ -32,6 +65,8 @@ export default function BlogIndexPage() {
             </p>
           </div>
         </div>
+        {isLoading && <p className="text-center text-four py-10">Loading articles...</p>}
+        {error && <p className="text-center text-red-500 py-10">{error}</p>}
         <ul className="basis-2/2 max-w-5xl m-auto flex-col flex gap-6">
           {posts.map((post) => (
             <li key={post.slug}>

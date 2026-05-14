@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Caveat } from "next/font/google";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   IconBrandXFilled,
   IconBrandLinkedin,
@@ -14,8 +14,18 @@ import {
   IconExternalLink,
   IconArrowRight,
 } from "@tabler/icons-react";
-import posts from "@/app/blog/data/posts.json";
 import DarkModebtn from "./theme/DarkModebtn";
+
+type LatestArticle = {
+  id: string;
+  slug: string;
+  title: string;
+  imageUrl?: string;
+  description: string;
+  date: string | any;
+  author?: string;
+  duration?: string;
+};
 
 const caveat = Caveat({
   weight: "400",
@@ -23,7 +33,25 @@ const caveat = Caveat({
 });
 
 export default function Footer() {
-  const latestPosts = posts.slice(0, 2);
+  const [latestPosts, setLatestPosts] = useState<LatestArticle[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLatestPosts = async () => {
+      try {
+        const res = await fetch("/api/external-articles");
+        if (res.ok) {
+          const data = await res.json();
+          setLatestPosts(data);
+        }
+      } catch (err) {
+        console.error("Error fetching latest posts:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchLatestPosts();
+  }, []);
 
   return (
     <footer className="bg-primary border-t border-seven text-secondary relative overflow-hidden">
@@ -123,7 +151,9 @@ export default function Footer() {
             <div className="flex flex-col sm:col-span-2 lg:col-span-1">
               <h3 className="text-lg font-semibold text-five mb-6 tracking-wide">Latest Thoughts</h3>
               <ul className="space-y-5">
-                {latestPosts.map((post) => (
+                {isLoading ? (
+                  <li className="text-sm text-four/60">Loading recent thoughts...</li>
+                ) : latestPosts.length > 0 ? latestPosts.map((post) => (
                   <li key={post.slug} className="group flex gap-3 items-center">
                     <div className="flex-shrink-0 w-16 h-16 overflow-hidden rounded-md bg-seven/50">
                       {post.imageUrl ? (
@@ -152,7 +182,9 @@ export default function Footer() {
                       </span>
                     </div>
                   </li>
-                ))}
+                )) : (
+                  <li className="text-sm text-four/60">No recent thoughts available.</li>
+                )}
               </ul>
             </div>
           </div>
