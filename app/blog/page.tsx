@@ -35,9 +35,9 @@ export default async function BlogIndexPage() {
 
   return (
     <main className="bg-primary">
-      <section className="prose border-five">
-        <div className="m-auto max-w-5xl">
-          <div className="max-w-5xl py-6 md:py-8 mx-2 flex justify-between rounded-full items-center">
+      <section className="border-five mx-auto">
+        <div className="m-auto">
+          <div className="max-w-5xl py-6 md:py-8 mx-auto flex justify-between rounded-full items-center">
             <p className="m-1 px-2 text-four">start for beginning</p>
             <p className="m-1 px-2 text-four text-xl">
               <IconSparkles />
@@ -45,68 +45,81 @@ export default async function BlogIndexPage() {
           </div>
         </div>
         {error && <p className="text-center text-red-500 py-10">{error}</p>}
-        <ul className="basis-2/2 max-w-5xl m-auto flex-col flex gap-6">
+        <ul className="w-full max-w-5xl mx-auto flex flex-col gap-10 md:gap-16 px-2">
           {posts.map((post) => (
-            <li key={post.slug}>
-              <article className="p-2 border-b-2 bg-custom-radial-sm md:bg-none rounded border-seven sm:flex gap-10 flex-row-reverse m-2">
-                <div className="basis-1/4 rounded md:rounded-none flex justify-center items-center md:aspect-square aspect-video overflow-hidden">
+            <li key={post.slug} className="group">
+              <article className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-stretch pb-10 md:pb-16 border-b border-seven/30 last:border-0">
+                <Link 
+                  href={`/blog/${post.slug}`}
+                  className="w-full md:w-2/5 shrink-0 overflow-hidden rounded-2xl md:rounded-3xl shadow-lg border border-seven/20 block relative aspect-video md:aspect-[4/3] bg-seven/10"
+                >
                   {post.imageUrl ? (
                     <Image
-                      className="w-full aspect-square object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       src={post.imageUrl}
-                      width={200}
-                      height={200}
+                      width={600}
+                      height={400}
                       alt={post.title}
                     />
                   ) : (
-                    <div className="w-full h-full bg-seven flex items-center justify-center text-four">
+                    <div className="w-full h-full flex items-center justify-center text-four font-medium">
                       No image available
                     </div>
                   )}
-                </div>
-                <div className="basis-3/4 flex-col flex justify-start">
-                  <header>
-                    <h2 className="text-2xl md:text-4xl text-five">
-                      {post.title ? (
-                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                      ) : (
-                        <span>Title not available</span>
-                      )}
-                    </h2>
-                    <div className="flex gap-1 md:gap-2 opacity-50 text-four md:pb-4 tracking-wide text-xs md:text-sm font-medium py-2 justify-start items-center">
+                </Link>
+                <div className="w-full md:w-3/5 flex flex-col justify-center py-2">
+                  <header className="mb-4">
+                    <div className="flex flex-wrap items-center gap-2 text-four/70 text-xs md:text-sm font-semibold mb-3 uppercase tracking-wider">
                       {post?.date ? (
                         <time dateTime={post.date}>
                           {new Date(post.date).toLocaleDateString("en-US", {
                             year: "numeric",
-                            month: "long",
+                            month: "short",
                             day: "numeric",
                           })}
                         </time>
                       ) : (
-                        <span>Date not available</span>
+                        <span>Date unknown</span>
                       )}
-                      <IconPointFilled size={12} />
+                      <IconPointFilled size={8} className="text-seven" />
                       {post?.author ? (
-                        <p>{post.author}</p>
+                        <span className="text-five">{post.author}</span>
                       ) : (
-                        <p>Unknown author</p>
+                        <span>Unknown author</span>
+                      )}
+                      {post?.duration && (
+                        <>
+                          <IconPointFilled size={8} className="text-seven" />
+                          <span>{post.duration}</span>
+                        </>
                       )}
                     </div>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-five leading-tight transition-colors duration-300 group-hover:text-third">
+                      {post.title ? (
+                        <Link href={`/blog/${post.slug}`} className="line-clamp-2">{post.title}</Link>
+                      ) : (
+                        <span>Title not available</span>
+                      )}
+                    </h2>
                   </header>
-                  <BlogExcerpt
-                    description={post.description || "No description available"}
-                    slug={post.slug}
-                  />
-                  <footer className="flex items-center rounded-full text-gray-400 justify-between mt-4">
-                    <div className="flex items-center gap-4">
+                  <div className="mb-6 text-four/90 leading-relaxed text-sm md:text-base">
+                    <BlogExcerpt
+                      description={post.description || "No description available"}
+                      slug={post.slug}
+                    />
+                  </div>
+                  <footer className="flex items-center justify-between mt-auto pt-4 border-t border-seven/20">
+                    <div className="flex items-center gap-4 bg-secondary/5 border border-seven/40 rounded-full px-5 py-2 shadow-sm transition-colors hover:bg-secondary/10">
                       <ShareButton url={`https://neerajrekwar.github.io/blog/${post.slug}`} />
+                      <div className="w-px h-4 bg-seven/50"></div>
                       <LikeButton />
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="border-four hover:bg-four hover:text-primary border-2 text-four rounded-full flex justify-center items-center p-1 px-3 transition-colors"
+                      className="inline-flex items-center gap-2 text-sm md:text-base font-bold text-four hover:text-third transition-colors duration-300 group/link"
                     >
-                      Read post
+                      Read Article
+                      <span className="transform transition-transform duration-300 group-hover/link:translate-x-1">&rarr;</span>
                     </Link>
                   </footer>
                 </div>
