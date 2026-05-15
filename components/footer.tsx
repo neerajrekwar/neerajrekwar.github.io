@@ -1,8 +1,7 @@
-'use client';
 import Image from "next/image";
 import Link from "next/link";
 import { Caveat } from "next/font/google";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   IconBrandXFilled,
   IconBrandLinkedin,
@@ -32,26 +31,19 @@ const caveat = Caveat({
   subsets: ["latin"],
 });
 
-export default function Footer() {
-  const [latestPosts, setLatestPosts] = useState<LatestArticle[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+export default async function Footer() {
+  let latestPosts: LatestArticle[] = [];
 
-  useEffect(() => {
-    const fetchLatestPosts = async () => {
-      try {
-        const res = await fetch("/api/external-articles");
-        if (res.ok) {
-          const data = await res.json();
-          setLatestPosts(data);
-        }
-      } catch (err) {
-        console.error("Error fetching latest posts:", err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchLatestPosts();
-  }, []);
+  try {
+    const res = await fetch("https://nee-one.vercel.app/api/articles", { 
+      next: { revalidate: 3600 } 
+    });
+    if (res.ok) {
+      latestPosts = await res.json();
+    }
+  } catch (err) {
+    console.error("Error fetching latest posts:", err);
+  }
 
   return (
     <footer className="bg-primary border-t border-seven text-secondary relative overflow-hidden">
@@ -151,9 +143,7 @@ export default function Footer() {
             <div className="flex flex-col sm:col-span-2 lg:col-span-1">
               <h3 className="text-lg font-semibold text-five mb-6 tracking-wide">Latest Thoughts</h3>
               <ul className="space-y-5">
-                {isLoading ? (
-                  <li className="text-sm text-four/60">Loading recent thoughts...</li>
-                ) : latestPosts.length > 0 ? latestPosts.map((post) => (
+                {latestPosts.length > 0 ? latestPosts.map((post) => (
                   <li key={post.slug} className="group flex gap-3 items-center">
                     <div className="flex-shrink-0 w-16 h-16 overflow-hidden rounded-md bg-seven/50">
                       {post.imageUrl ? (

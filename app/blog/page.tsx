@@ -1,11 +1,9 @@
-'use client';
 import Link from "next/link";
 import Image from "next/image";
 import BlogExcerpt from "../../components/BlogExcerpt";
-import { IconLink, IconPointFilled, IconShare, IconSparkles } from "@tabler/icons-react";
+import { IconPointFilled, IconSparkles } from "@tabler/icons-react";
 import LikeButton from "../../components/LikeButton";
-import ShareDialog from "../../components/ShareDialog"; // Import the ShareDialog component
-import { useState, useEffect } from "react";
+import ShareButton from "../../components/ShareButton";
 
 type Article = {
   id: string;
@@ -19,40 +17,21 @@ type Article = {
   content: string;
 };
 
-export default function BlogIndexPage() {
-  const [posts, setPosts] = useState<Article[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [isDialogOpen, setDialogOpen] = useState(false);
-  const [shareUrl, setShareUrl] = useState("");
+export default async function BlogIndexPage() {
+  let posts: Article[] = [];
+  let error: string | null = null;
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await fetch("/api/external-posts");
-        if (!response.ok) {
-          throw new Error("Error reading posts");
-        }
-        const data = await response.json();
-        setPosts(data);
-      } catch (err: any) {
-        setError(err.message || "Failed to load posts");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchPosts();
-  }, []);
-
-  const openShareDialog = (url: string) => {
-    setShareUrl(url);
-    setDialogOpen(true);
-  };
-
-  const closeShareDialog = () => {
-    setDialogOpen(false);
-  };
+  try {
+    const response = await fetch("https://nee-one.vercel.app/api", {
+      next: { revalidate: 3600 }
+    });
+    if (!response.ok) {
+      throw new Error("Error reading posts");
+    }
+    posts = await response.json();
+  } catch (err: any) {
+    error = err.message || "Failed to load posts";
+  }
 
   return (
     <main className="bg-primary">
@@ -65,7 +44,6 @@ export default function BlogIndexPage() {
             </p>
           </div>
         </div>
-        {isLoading && <p className="text-center text-four py-10">Loading articles...</p>}
         {error && <p className="text-center text-red-500 py-10">{error}</p>}
         <ul className="basis-2/2 max-w-5xl m-auto flex-col flex gap-6">
           {posts.map((post) => (
@@ -121,16 +99,7 @@ export default function BlogIndexPage() {
                   />
                   <footer className="flex items-center rounded-full text-gray-400 justify-between mt-4">
                     <div className="flex items-center gap-4">
-                      <button
-                        onClick={() =>
-                          openShareDialog(
-                            `https://neerajrekwar.github.io/blog/${post.slug}`
-                          )
-                        }
-                        aria-label="Share post"
-                      >
-                        <IconShare className="text-four hover:text-five" />
-                      </button>
+                      <ShareButton url={`https://neerajrekwar.github.io/blog/${post.slug}`} />
                       <LikeButton />
                     </div>
                     <Link
@@ -145,11 +114,6 @@ export default function BlogIndexPage() {
             </li>
           ))}
         </ul>
-        <ShareDialog
-          url={shareUrl}
-          isOpen={isDialogOpen}
-          onClose={closeShareDialog}
-        />
       </section>
       <section className="min-h-96">
         <div className="m-auto text-four max-w-5xl py-16 px-2 text-center">
