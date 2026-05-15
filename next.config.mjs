@@ -1,9 +1,10 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    // output: 'export',
     allowedDevOrigins: [
-      '3000-firebase-neerajrekwar-1778786240989.cluster-bqwaigqtxbeautecnatk4o6ynk.cloudworkstations.dev'
+      '3000-firebase-neerajrekwar-1778816257793.cluster-htdgsbmflbdmov5xrjithceibm.cloudworkstations.dev',
+      'https://nee-one.vercel.app'
     ],
     images: {
       remotePatterns: [
