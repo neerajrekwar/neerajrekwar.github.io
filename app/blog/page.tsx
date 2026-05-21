@@ -24,9 +24,8 @@ export default async function BlogIndexPage() {
   let error: string | null = null;
 
   try {
-    const response = await fetch("https://nee-one.vercel.app/api", {
-      cache: "force-cache"
-    });
+    const timestamp = Date.now();
+    const response = await fetch(`https://nee-one.vercel.app/api?t=${timestamp}`);
     if (!response.ok) {
       throw new Error("Error reading posts");
     }

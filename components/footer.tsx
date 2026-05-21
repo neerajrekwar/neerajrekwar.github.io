@@ -35,9 +35,8 @@ export default async function Footer() {
   let latestPosts: LatestArticle[] = [];
 
   try {
-    const res = await fetch("https://nee-one.vercel.app/api/articles", { 
-      cache: "force-cache" 
-    });
+    const timestamp = Date.now();
+    const res = await fetch(`https://nee-one.vercel.app/api/articles?t=${timestamp}`);
     if (res.ok) {
       latestPosts = await res.json();
     }

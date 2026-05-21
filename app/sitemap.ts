@@ -22,7 +22,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 2. Fetch all blog posts to generate dynamic routes
   let blogRoutes: MetadataRoute.Sitemap = [];
   try {
-    const res = await fetch('https://nee-one.vercel.app/api');
+    const timestamp = Date.now();
+    const res = await fetch(`https://nee-one.vercel.app/api?t=${timestamp}`);
     if (res.ok) {
       const posts: Article[] = await res.json();
       blogRoutes = posts.map((post) => ({

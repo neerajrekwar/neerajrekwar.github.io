@@ -26,9 +26,8 @@ export const dynamicParams = false;
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
-  const posts: Article[] = await fetch('https://nee-one.vercel.app/api', {
-    cache: "force-cache"
-  }).then((res) => res.json());
+  const timestamp = Date.now();
+  const posts: Article[] = await fetch(`https://nee-one.vercel.app/api?t=${timestamp}`).then((res) => res.json());
 
   return posts.map((post) => ({
     slug: post.slug,
@@ -40,9 +39,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
 
   try {
-    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`, {
-      cache: "force-cache"
-    });
+    const timestamp = Date.now();
+    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}?t=${timestamp}`);
     if (!res.ok) throw new Error("Not found");
     const post: Article = await res.json();
 
@@ -84,9 +82,8 @@ export default async function BlogPostPage({ params }: Props) {
 
   let post: Article;
   try {
-    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`, {
-      cache: "force-cache"
-    });
+    const timestamp = Date.now();
+    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}?t=${timestamp}`);
     if (!res.ok) notFound();
     post = await res.json();
   } catch {
