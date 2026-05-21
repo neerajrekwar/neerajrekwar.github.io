@@ -192,7 +192,7 @@ export default async function BlogPostPage({ params }: Props) {
       </header>
 
       {/* Featured Breakout Image */}
-      {post.imageUrl && (
+      {post.imageUrl && (post.imageUrl.startsWith('http') || post.imageUrl.startsWith('/')) && (
         <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-12 md:mb-16">
           <div className="relative w-full rounded-3xl overflow-hidden shadow-xl border border-secondary/10 bg-secondary/5 group">
               <Image

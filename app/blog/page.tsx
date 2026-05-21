@@ -53,7 +53,7 @@ export default async function BlogIndexPage() {
                   href={`/blog/${post.slug}`}
                   className="w-full md:w-2/5 shrink-0 overflow-hidden rounded-2xl md:rounded-3xl shadow-lg border border-seven/20 block relative aspect-video md:aspect-[4/3] bg-seven/10"
                 >
-                  {post.imageUrl ? (
+                  {post.imageUrl && (post.imageUrl.startsWith('http') || post.imageUrl.startsWith('/')) ? (
                     <Image
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       src={post.imageUrl}
