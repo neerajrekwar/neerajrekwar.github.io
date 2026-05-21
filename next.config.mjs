@@ -1,7 +1,9 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+   
     output: 'export',
+    basePath: '/neerajrekwar.github.io',
     allowedDevOrigins: [
       '3000-firebase-neerajrekwar-1778816257793.cluster-htdgsbmflbdmov5xrjithceibm.cloudworkstations.dev',
       'https://nee-one.vercel.app'
