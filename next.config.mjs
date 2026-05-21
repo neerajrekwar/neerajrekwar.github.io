@@ -1,12 +1,13 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export',
+    output: 'export',
     allowedDevOrigins: [
       '3000-firebase-neerajrekwar-1778816257793.cluster-htdgsbmflbdmov5xrjithceibm.cloudworkstations.dev',
       'https://nee-one.vercel.app'
     ],
     images: {
+      unoptimized: true,
       remotePatterns: [
         {
           protocol: 'https',
@@ -39,32 +40,6 @@ const nextConfig = {
           pathname: '**',
         },
       ],
-    },
-    async headers() {
-      return [
-        {
-          // Matches all API routes
-          source: "/api/:path*",
-          headers: [
-            { key: "Access-Control-Allow-Credentials", value: "true" },
-            { key: "Access-Control-Allow-Origin", value: "*" }, // Change * to your specific domain (e.g., 'https://neerajrekwar.github.io') for better security
-            { key: "Access-Control-Allow-Methods", value: "GET,DELETE,PATCH,POST,PUT,OPTIONS" },
-            { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
-          ]
-        }
-      ]
-    },
-    async rewrites() {
-      return [
-        {
-          source: "/api/external-posts",
-          destination: "https://nee-one.vercel.app/api",
-        },
-        {
-          source: "/api/external-articles",
-          destination: "https://nee-one.vercel.app/api/articles",
-        },
-      ];
     },
     webpack: (config) => {
       config.cache = false;
