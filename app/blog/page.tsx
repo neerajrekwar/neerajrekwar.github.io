@@ -6,6 +6,7 @@ import LikeButton from "../../components/LikeButton";
 import ShareButton from "../../components/ShareButton";
 
 export const dynamic = "force-static";
+export const revalidate = 3600 // invalidate every hour
 
 type Article = {
   id: string;
@@ -24,8 +25,7 @@ export default async function BlogIndexPage() {
   let error: string | null = null;
 
   try {
-    const timestamp = Date.now();
-    const response = await fetch(`https://nee-one.vercel.app/api?t=${timestamp}`);
+    const response = await fetch('https://nee-one.vercel.app/api');
     if (!response.ok) {
       throw new Error("Error reading posts");
     }
