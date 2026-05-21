@@ -17,13 +17,15 @@ type Article = {
   content: string;
 };
 
+export const dynamic = "force-static";
+
 export default async function BlogIndexPage() {
   let posts: Article[] = [];
   let error: string | null = null;
 
   try {
     const timestamp = Date.now();
-    const response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://nee-one.vercel.app/api?t=${timestamp}`)}`);
+    const response = await fetch(`https://nee-one.vercel.app/api?t=${timestamp}`);
     if (!response.ok) {
       throw new Error("Error reading posts");
     }
