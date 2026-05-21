@@ -26,12 +26,19 @@ export const dynamicParams = false;
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
-  const timestamp = Date.now();
-  const posts: Article[] = await fetch(`https://nee-one.vercel.app/api?t=${timestamp}`).then((res) => res.json());
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  try {
+    const timestamp = Date.now();
+    const res = await fetch(`https://nee-one.vercel.app/api?t=${timestamp}`);
+    if (!res.ok) return [];
+    const posts: Article[] = await res.json();
+  
+    return posts.map((post) => ({
+      slug: post.slug,
+    }));
+  } catch (error) {
+    console.error("Failed to generate static params:", error);
+    return [];
+  }
 }
 
 // Generate metadata dynamically based on the current post
