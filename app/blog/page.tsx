@@ -1,12 +1,12 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
 import BlogExcerpt from "../../components/BlogExcerpt";
 import { IconPointFilled, IconSparkles } from "@tabler/icons-react";
 import LikeButton from "../../components/LikeButton";
 import ShareButton from "../../components/ShareButton";
-
-export const dynamic = "force-static";
-export const revalidate = 3600 // invalidate every hour
+import { useEffect, useState } from "react";
 
 type Article = {
   id: string;
@@ -20,19 +20,29 @@ type Article = {
   content: string;
 };
 
-export default async function BlogIndexPage() {
-  let posts: Article[] = [];
-  let error: string | null = null;
+export default function BlogIndexPage() {
+  const [posts, setPosts] = useState<Article[]>([]);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  try {
-    const response = await fetch('https://nee-one.vercel.app/api');
-    if (!response.ok) {
-      throw new Error("Error reading posts");
-    }
-    posts = await response.json();
-  } catch (err: any) {
-    error = err.message || "Failed to load posts";
-  }
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch('https://nee-one.vercel.app/api');
+        if (!response.ok) {
+          throw new Error("Error reading posts");
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (err: any) {
+        setError(err.message || "Failed to load posts");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
 
   return (
     <main className="bg-primary">
@@ -45,9 +55,11 @@ export default async function BlogIndexPage() {
             </p>
           </div>
         </div>
+        {loading && <p className="text-center text-four py-10">Loading articles...</p>}
         {error && <p className="text-center text-red-500 py-10">{error}</p>}
-        <ul className="w-full max-w-5xl mx-auto flex flex-col gap-10 md:gap-16 px-2">
-          {posts.map((post) => (
+        {!loading && !error && (
+          <ul className="w-full max-w-5xl mx-auto flex flex-col gap-10 md:gap-16 px-2">
+            {posts.map((post) => (
             <li key={post.slug} className="group">
               <article className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-stretch pb-10 md:pb-16 border-b border-seven/30 last:border-0">
                 <Link 
@@ -126,8 +138,9 @@ export default async function BlogIndexPage() {
                 </div>
               </article>
             </li>
-          ))}
-        </ul>
+            ))}
+          </ul>
+        )}
       </section>
       <section className="min-h-96">
         <div className="m-auto text-four max-w-5xl py-16 px-2 text-center">
