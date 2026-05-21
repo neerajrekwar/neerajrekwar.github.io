@@ -36,7 +36,7 @@ export default async function Footer() {
 
   try {
     const res = await fetch("https://nee-one.vercel.app/api/articles", { 
-      next: { revalidate: 3600 } 
+      cache: "force-cache" 
     });
     if (res.ok) {
       latestPosts = await res.json();

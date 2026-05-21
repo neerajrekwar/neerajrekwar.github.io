@@ -5,6 +5,8 @@ import { IconPointFilled, IconSparkles } from "@tabler/icons-react";
 import LikeButton from "../../components/LikeButton";
 import ShareButton from "../../components/ShareButton";
 
+export const dynamic = "force-static";
+
 type Article = {
   id: string;
   slug: string;
@@ -23,7 +25,7 @@ export default async function BlogIndexPage() {
 
   try {
     const response = await fetch("https://nee-one.vercel.app/api", {
-      next: { revalidate: 3600 }
+      cache: "force-cache"
     });
     if (!response.ok) {
       throw new Error("Error reading posts");

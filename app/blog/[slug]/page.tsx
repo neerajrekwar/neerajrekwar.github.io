@@ -21,18 +21,18 @@ type Article = {
   content: string | any; // Accommodates string or your existing structured JSON content
 };
 
-// Generate static routes for all blog posts at build time
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+// Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
-  try {
-    const res = await fetch('https://nee-one.vercel.app/api');
-    if (!res.ok) return [];
-    const posts: Article[] = await res.json();
-    return posts.map((post) => ({
-      slug: post.slug,
-    }));
-  } catch {
-    return [];
-  }
+  const posts: Article[] = await fetch('https://nee-one.vercel.app/api', {
+    cache: "force-cache"
+  }).then((res) => res.json());
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 // Generate metadata dynamically based on the current post
@@ -40,7 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
 
   try {
-    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`);
+    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`, {
+      cache: "force-cache"
+    });
     if (!res.ok) throw new Error("Not found");
     const post: Article = await res.json();
 
@@ -75,12 +77,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+// Multiple versions of this page will be statically generated
+// using the `params` returned by `generateStaticParams`
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
 
   let post: Article;
   try {
-    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`);
+    const res = await fetch(`https://nee-one.vercel.app/api/articles/${slug}`, {
+      cache: "force-cache"
+    });
     if (!res.ok) notFound();
     post = await res.json();
   } catch {
