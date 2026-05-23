@@ -172,7 +172,7 @@ export const VisionSection: React.FC = () => {
                   src={"/projects/home/elements.svg"}
                   height={300}
                   width={300}
-                 
+
                   loading="lazy"
                   alt="UI/UX design elements"
                 />
@@ -213,7 +213,7 @@ export const VisionSection: React.FC = () => {
                     src="/projects/home/Programming.svg"
                     className="bg-transparent"
                     width={300}
-                   
+
                     height={300}
                     loading="lazy"
                     alt="best programing tech development"
@@ -437,8 +437,8 @@ export const VisionSection: React.FC = () => {
                   User-centric customization
                 </h2>
                 <p>
-                As a web developer freelance, I ensure websites seamlessly adapt to various devices,
-                delivering a uniform and exceptional
+                  As a web developer freelance, I ensure websites seamlessly adapt to various devices,
+                  delivering a uniform and exceptional
                   <strong className="text-five font-normal">
                     {" "}
                     user experience on desktops, mobiles, and tablets.
@@ -453,7 +453,7 @@ export const VisionSection: React.FC = () => {
                   className="bg-seven h-64  rounded-lg p-2 w-fit"
                   src="/projects/home/Futuristic_interface.svg"
                   width={300}
-                  
+
                   height={300}
                   alt="how's the Futuristic interface"
                 />
@@ -463,7 +463,7 @@ export const VisionSection: React.FC = () => {
                   How to evolved a screen that effectiveness in browsing
                 </h4>
                 <p>
-                  When you hire freelance developer, expect them to maintain a consistent 
+                  When you hire freelance developer, expect them to maintain a consistent
                   layout throughout the screen to create a familiar and intuitive experience.
                 </p>
               </div>

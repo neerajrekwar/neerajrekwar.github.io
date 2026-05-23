@@ -102,15 +102,14 @@ export default function About() {
                 className="text-xl m-2 px-8 py-4 md:text-3xl"
               >
                 <p className="font-normal text-md text-white/75 drop-shadow-md">Hello, World! </p>
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl mt-2 min-h-[4rem] sm:min-h-[5rem] lg:min-h-[4rem] leading-tight">
-                  <span className="pr-2">I am</span>
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl  min-h-[4rem] sm:min-h-[5rem] lg:min-h-[4rem] leading-tight">
                   <TextType
                     as="span"
-                    text={["Programmer", "Environmentalist", "Freelancer"]}
+                    text={["Programmer", "Nextjs & React Developer", "Professional Web Designer & Developer", "Remote web developer", "Freelancer"]}
                     className="drop-shadow-lg"
-                    textColors={["#38bdf8", "#34d399", "#fbbf24", "#f472b6"]}
+                    textColors={["#38bdf8", "#34d399", "#fbbf24", "#f472b6", "#a78bfa", "#f87171"]}
                   />
-                </h2>
+                </h1>
               </motion.div>
               
               <div className="text-base text-gray-300 md:text-xl m-2 mx-8 pb-6 drop-shadow-md font-medium">
