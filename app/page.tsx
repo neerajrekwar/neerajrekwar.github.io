@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     "hire Next.js developer for startup website",
     "React",
     "Tailwind CSS",
+    "Shopify",
+    "Shopify website developer",
   ],
   authors: [{ name: "Neeraj Rekwar", url: "https://neerajrekwar.github.io" }],
   creator: "Neeraj Rekwar",

@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     "hire SEO expert for website",
     "hire developer for business website",
     "remote web developer for startup",
-    "freelance full stack developer for hire"
+    "freelance full stack developer for hire",
+    "Shopify website developer"
   ],
   alternates: {
     canonical: "/contact",

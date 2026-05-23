@@ -137,10 +137,10 @@ export default function HomeSectionHeader() {
               }}
               className="max-w-2xl text-four text-base md:text-lg leading-relaxed mb-10 opacity-90"
             >
-              Build the right way with programmers who turn ideas into scalable,
-              secure, and high-performance solutions—crafted with precision,
-              collaboration, and future-ready technology to help your business
-              grow confidently.
+              Build the right way with an expert shopify website developer who turns ideas 
+              into scalable, secure, and high-performance solutions—crafted with precision,
+              collaboration, and future-ready technology to help your business grow 
+              confidently.
             </motion.p>
 
             <motion.div className="flex flex-wrap items-center gap-4 mt-2">

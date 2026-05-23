@@ -437,8 +437,8 @@ export const VisionSection: React.FC = () => {
                   User-centric customization
                 </h2>
                 <p>
-                  Websites have evolved to seamlessly adapt to various devices,
-                  ensuring a uniform and exceptional ,
+                As a web developer freelance, I ensure websites seamlessly adapt to various devices,
+                delivering a uniform and exceptional
                   <strong className="text-five font-normal">
                     {" "}
                     user experience on desktops, mobiles, and tablets.
@@ -463,8 +463,8 @@ export const VisionSection: React.FC = () => {
                   How to evolved a screen that effectiveness in browsing
                 </h4>
                 <p>
-                  Maintain a consistent layout throughout the screen to create a
-                  familiar and intuitive experience.
+                  When you hire freelance developer, expect them to maintain a consistent 
+                  layout throughout the screen to create a familiar and intuitive experience.
                 </p>
               </div>
             </div>
@@ -653,8 +653,9 @@ export const VisionSection: React.FC = () => {
                   Web Programming bugs, also known as software bugs, are errors
                   or flaws in a computer program that cause it to produce
                   incorrect outputs or behave unexpectedly. These bugs can vary
-                  from minor inconveniences to critical issues that crash the
-                  program entirely. Rest assured,{" "}
+                  from minor inconveniences to critical issues that crash your
+                  app or freelance developer website entirely. Rest
+                  assured,{" "}
                   <strong className="text-five font-normal">
                     we&apos;ll solve your web programming bugs.
                   </strong>
