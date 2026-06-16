@@ -15,15 +15,18 @@ export function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-8">
-          {['About', 'Projects', 'Packages', 'Contact'].map((item) => (
-            <Link 
-              key={item} 
-              href={`#${item.toLowerCase()}`}
-              className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
+          <Link href="/about" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
+            About
+          </Link>
+          <Link href="/#projects" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
+            Projects
+          </Link>
+          <Link href="/#packages" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
+            Packages
+          </Link>
+          <Link href="/#contact" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
+            Contact
+          </Link>
         </div>
 
         {/* CTA */}

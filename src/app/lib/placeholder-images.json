@@ -24,6 +24,12 @@
       "description": "Stark contrast geometric patterns",
       "imageUrl": "https://picsum.photos/seed/99/1200/800",
       "imageHint": "geometric pattern"
+    },
+    {
+      "id": "about-portrait",
+      "description": "Professional grayscale developer portrait",
+      "imageUrl": "https://picsum.photos/seed/dev-portrait/800/800",
+      "imageHint": "man portrait"
     }
   ]
 }
