@@ -357,7 +357,7 @@ export function ServicePlans() {
             </div>
 
             <div className="pt-4 border-t-2 border-black flex items-center justify-between text-[10px] font-headline font-bold uppercase text-black/40">
-              <span>Security ID: SEC-PROTO-{{selectedPlan?.name.substring(0,3).toUpperCase()}}</span>
+              <span>Security ID: SEC-PROTO-{selectedPlan?.name.substring(0,3).toUpperCase()}</span>
               <span>Available 24/7 for Critical Response</span>
             </div>
           </div>
