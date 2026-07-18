@@ -23,18 +23,20 @@ export function Navbar() {
           <Link href="/packages" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
             Packages
           </Link>
-          <Link href="/#contact" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
+          <Link href="/contact" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
             Contact
           </Link>
         </div>
 
         {/* CTA */}
-        <Button 
-          variant="default" 
-          className="rounded-none border-2 border-black bg-primary hover:bg-accent text-white font-headline font-bold uppercase py-6 px-8 h-12"
-        >
-          Hire Me
-        </Button>
+        <Link href="/contact">
+          <Button 
+            variant="default" 
+            className="rounded-none border-2 border-black bg-primary hover:bg-accent text-white font-headline font-bold uppercase py-6 px-8 h-12"
+          >
+            Hire Me
+          </Button>
+        </Link>
       </div>
     </nav>
   );

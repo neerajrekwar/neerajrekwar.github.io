@@ -19,7 +19,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:underline flex items-center gap-1">About <ArrowUpRight className="w-3 h-3" /></Link></li>
               <li><Link href="/#projects" className="hover:underline flex items-center gap-1">Projects <ArrowUpRight className="w-3 h-3" /></Link></li>
               <li><Link href="/packages" className="hover:underline flex items-center gap-1">Registry <ArrowUpRight className="w-3 h-3" /></Link></li>
-              <li><Link href="/#contact" className="hover:underline flex items-center gap-1">Contact <ArrowUpRight className="w-3 h-3" /></Link></li>
+              <li><Link href="/contact" className="hover:underline flex items-center gap-1">Contact <ArrowUpRight className="w-3 h-3" /></Link></li>
             </ul>
           </div>
 
