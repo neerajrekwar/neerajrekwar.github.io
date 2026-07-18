@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
@@ -16,10 +16,10 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-headline font-bold uppercase text-sm">Navigation</h4>
             <ul className="space-y-2 font-body text-sm">
-              <li><a href="#about" className="hover:underline flex items-center gap-1">About <ArrowUpRight className="w-3 h-3" /></a></li>
-              <li><a href="#projects" className="hover:underline flex items-center gap-1">Projects <ArrowUpRight className="w-3 h-3" /></a></li>
-              <li><a href="#packages" className="hover:underline flex items-center gap-1">Registry <ArrowUpRight className="w-3 h-3" /></a></li>
-              <li><a href="#contact" className="hover:underline flex items-center gap-1">Contact <ArrowUpRight className="w-3 h-3" /></a></li>
+              <li><Link href="/about" className="hover:underline flex items-center gap-1">About <ArrowUpRight className="w-3 h-3" /></Link></li>
+              <li><Link href="/#projects" className="hover:underline flex items-center gap-1">Projects <ArrowUpRight className="w-3 h-3" /></Link></li>
+              <li><Link href="/packages" className="hover:underline flex items-center gap-1">Registry <ArrowUpRight className="w-3 h-3" /></Link></li>
+              <li><Link href="/#contact" className="hover:underline flex items-center gap-1">Contact <ArrowUpRight className="w-3 h-3" /></Link></li>
             </ul>
           </div>
 

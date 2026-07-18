@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -21,7 +20,7 @@ export function Navbar() {
           <Link href="/#projects" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
             Projects
           </Link>
-          <Link href="/#packages" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
+          <Link href="/packages" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
             Packages
           </Link>
           <Link href="/#contact" className="font-headline font-medium uppercase text-sm tracking-widest hover:text-primary transition-colors">
