@@ -2,9 +2,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Check, Zap, Shield, HardHat, ArrowRight, Loader2, Cpu, Wrench } from "lucide-react";
+import { Check, Zap, Shield, HardHat, ArrowRight, Loader2, Cpu, Wrench, MessageSquare, Phone, Send, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 type CurrencyCode = 'USD' | 'EUR' | 'GBP' | 'JPY' | 'INR';
 
@@ -135,6 +142,8 @@ export function ServicePlans() {
   const [currency, setCurrency] = useState<CurrencyCode>('USD');
   const [rates, setRates] = useState<Record<CurrencyCode, number>>(INITIAL_RATES);
   const [isLoadingRates, setIsLoadingRates] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -162,6 +171,11 @@ export function ServicePlans() {
     const rate = rates[currency] || INITIAL_RATES[currency];
     const converted = Math.round(basePrice * rate);
     return `${CURRENCIES[currency].symbol}${converted.toLocaleString()}`;
+  };
+
+  const handleInitiate = (plan: Plan) => {
+    setSelectedPlan(plan);
+    setIsModalOpen(true);
   };
 
   const currentPlans = activeTab === 'services' ? SERVICE_PLANS : MAINTENANCE_PLANS;
@@ -272,6 +286,7 @@ export function ServicePlans() {
               </div>
 
               <Button 
+                onClick={() => handleInitiate(plan)}
                 variant={plan.highlight ? "secondary" : "default"}
                 className={`w-full rounded-none border-2 border-black font-headline font-bold uppercase py-6 h-auto group shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] ${
                   plan.highlight ? "bg-white text-black hover:bg-black hover:text-white" : "bg-black text-white hover:bg-primary"
@@ -283,6 +298,71 @@ export function ServicePlans() {
           ))}
         </div>
       </div>
+
+      {/* Initiation Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="rounded-none border-2 border-black bg-white shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] max-w-2xl p-0 overflow-hidden">
+          <DialogHeader className="p-8 bg-black text-white">
+            <DialogTitle className="text-3xl font-headline font-bold uppercase leading-none mb-2">
+              Protocol <span className="text-primary">Initiation</span>
+            </DialogTitle>
+            <DialogDescription className="text-white/60 font-body">
+              Select your preferred transmission channel to discuss the <span className="text-white font-bold">{selectedPlan?.name}</span>.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="p-8 space-y-8">
+            {/* Selected Plan Summary */}
+            <div className="p-6 border-2 border-black bg-[#fafafa] relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-2 bg-black text-white text-[10px] font-headline font-bold uppercase">
+                Selected Tier
+              </div>
+              <h4 className="font-headline font-bold uppercase text-lg mb-1">{selectedPlan?.name}</h4>
+              <p className="font-headline text-2xl font-bold text-primary">{formatPrice(selectedPlan?.basePrice || null)}</p>
+              <p className="font-body text-sm text-black/60 mt-2">{selectedPlan?.description}</p>
+            </div>
+
+            {/* Contact Channels */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a 
+                href="https://t.me/uneerajrekwar" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center p-6 border-2 border-black hover:bg-primary hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              >
+                <Send className="w-8 h-8 mb-3" />
+                <span className="font-headline font-bold uppercase text-xs tracking-widest">Telegram</span>
+                <ExternalLink className="w-3 h-3 mt-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+
+              <a 
+                href="https://wa.me/917042149836" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center p-6 border-2 border-black hover:bg-[#25D366] hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              >
+                <MessageSquare className="w-8 h-8 mb-3" />
+                <span className="font-headline font-bold uppercase text-xs tracking-widest">WhatsApp</span>
+                <ExternalLink className="w-3 h-3 mt-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+
+              <a 
+                href="tel:7042149836" 
+                className="group flex flex-col items-center justify-center p-6 border-2 border-black hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              >
+                <Phone className="w-8 h-8 mb-3" />
+                <span className="font-headline font-bold uppercase text-xs tracking-widest">Direct Call</span>
+                <ExternalLink className="w-3 h-3 mt-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+            </div>
+
+            <div className="pt-4 border-t-2 border-black flex items-center justify-between text-[10px] font-headline font-bold uppercase text-black/40">
+              <span>Security ID: SEC-PROTO-{{selectedPlan?.name.substring(0,3).toUpperCase()}}</span>
+              <span>Available 24/7 for Critical Response</span>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
