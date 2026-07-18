@@ -1,13 +1,24 @@
 
 "use client";
 
+import { useState } from "react";
 import { Check, Zap, Shield, HardHat, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const PLANS = [
+type CurrencyCode = 'USD' | 'EUR' | 'GBP' | 'JPY' | 'INR';
+
+const CURRENCIES: Record<CurrencyCode, { symbol: string, rate: number, label: string }> = {
+  USD: { symbol: "$", rate: 1, label: "USD" },
+  EUR: { symbol: "€", rate: 0.92, label: "EUR" },
+  GBP: { symbol: "£", rate: 0.79, label: "GBP" },
+  JPY: { symbol: "¥", rate: 150, label: "JPY" },
+  INR: { symbol: "₹", rate: 83, label: "INR" }
+};
+
+const BASE_PLANS = [
   {
     name: "Standard Maintenance",
-    price: "$499",
+    basePrice: 499,
     period: "/mo",
     description: "Essential upkeep for production systems ensuring uptime and security.",
     features: [
@@ -21,7 +32,7 @@ const PLANS = [
   },
   {
     name: "Architectural Support",
-    price: "$1,499",
+    basePrice: 1499,
     period: "/mo",
     description: "Deep technical partnership for scaling infrastructure and complex logic.",
     features: [
@@ -35,7 +46,7 @@ const PLANS = [
   },
   {
     name: "Custom Engineering",
-    price: "Custom",
+    basePrice: null, // Custom
     period: "",
     description: "Full-scale dedicated engineering for high-stakes digital infrastructure.",
     features: [
@@ -50,28 +61,54 @@ const PLANS = [
 ];
 
 export function ServicePlans() {
+  const [currency, setCurrency] = useState<CurrencyCode>('USD');
+
+  const formatPrice = (basePrice: number | null) => {
+    if (basePrice === null) return "Custom";
+    const converted = Math.round(basePrice * CURRENCIES[currency].rate);
+    return `${CURRENCIES[currency].symbol}${converted.toLocaleString()}`;
+  };
+
   return (
     <section id="service-plans" className="py-24">
       <div className="container mx-auto">
-        <div className="mb-16 border-l-8 border-black pl-8">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase tracking-tighter">
-            Service <span className="text-primary">Protocols</span>
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl font-body">
-            Professional engagement models for long-term technical stability and 
-            architectural integrity. Choose your operational tier.
-          </p>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-l-8 border-black pl-8 gap-8">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase tracking-tighter">
+              Service <span className="text-primary">Protocols</span>
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl font-body">
+              Professional engagement models for long-term technical stability and 
+              architectural integrity. Choose your operational tier and preferred currency.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2 p-1 border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            {(Object.keys(CURRENCIES) as CurrencyCode[]).map((code) => (
+              <button
+                key={code}
+                onClick={() => setCurrency(code)}
+                className={`px-4 py-2 font-headline font-bold text-xs transition-all ${
+                  currency === code 
+                    ? "bg-black text-white" 
+                    : "bg-white text-black hover:bg-muted"
+                }`}
+              >
+                {code}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border-2 border-black bg-black">
-          {PLANS.map((plan, i) => (
+          {BASE_PLANS.map((plan, i) => (
             <div 
               key={plan.name} 
               className={`p-8 md:p-12 flex flex-col justify-between transition-all ${
                 plan.highlight 
                   ? "bg-primary text-white" 
                   : "bg-white text-black"
-              } ${i !== PLANS.length - 1 ? "border-b-2 lg:border-b-0 lg:border-r-2 border-black" : ""}`}
+              } ${i !== BASE_PLANS.length - 1 ? "border-b-2 lg:border-b-0 lg:border-r-2 border-black" : ""}`}
             >
               <div>
                 <div className="flex justify-between items-start mb-8">
@@ -87,7 +124,7 @@ export function ServicePlans() {
 
                 <h3 className="text-2xl font-headline font-bold uppercase mb-2 leading-none">{plan.name}</h3>
                 <div className="flex items-baseline gap-1 mb-6">
-                  <span className="text-4xl font-headline font-bold">{plan.price}</span>
+                  <span className="text-4xl font-headline font-bold">{formatPrice(plan.basePrice)}</span>
                   <span className="text-xs font-headline uppercase opacity-60">{plan.period}</span>
                 </div>
                 
