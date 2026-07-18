@@ -1,18 +1,17 @@
-
 "use client";
 
-import { useState } from "react";
-import { Check, Zap, Shield, HardHat, ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Check, Zap, Shield, HardHat, ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type CurrencyCode = 'USD' | 'EUR' | 'GBP' | 'JPY' | 'INR';
 
-const CURRENCIES: Record<CurrencyCode, { symbol: string, rate: number, label: string }> = {
-  USD: { symbol: "$", rate: 1, label: "USD" },
-  EUR: { symbol: "€", rate: 0.92, label: "EUR" },
-  GBP: { symbol: "£", rate: 0.79, label: "GBP" },
-  JPY: { symbol: "¥", rate: 150, label: "JPY" },
-  INR: { symbol: "₹", rate: 83, label: "INR" }
+const CURRENCIES: Record<CurrencyCode, { symbol: string, label: string }> = {
+  USD: { symbol: "$", label: "USD" },
+  EUR: { symbol: "€", label: "EUR" },
+  GBP: { symbol: "£", label: "GBP" },
+  JPY: { symbol: "¥", label: "JPY" },
+  INR: { symbol: "₹", label: "INR" }
 };
 
 const BASE_PLANS = [
@@ -62,10 +61,41 @@ const BASE_PLANS = [
 
 export function ServicePlans() {
   const [currency, setCurrency] = useState<CurrencyCode>('USD');
+  const [rates, setRates] = useState<Record<CurrencyCode, number>>({
+    USD: 1,
+    EUR: 0.92,
+    GBP: 0.79,
+    JPY: 150,
+    INR: 83
+  });
+  const [isLoadingRates, setIsLoadingRates] = useState(false);
+
+  useEffect(() => {
+    async function fetchRates() {
+      setIsLoadingRates(true);
+      try {
+        const response = await fetch('https://api.frankfurter.app/latest?from=USD&to=EUR,GBP,JPY,INR');
+        if (!response.ok) throw new Error('Failed to fetch rates');
+        const data = await response.json();
+        setRates({
+          USD: 1,
+          ...data.rates
+        });
+      } catch (error) {
+        console.error("Currency API Error:", error);
+        // Fallback to initial state rates if API fails
+      } finally {
+        setIsLoadingRates(false);
+      }
+    }
+
+    fetchRates();
+  }, []);
 
   const formatPrice = (basePrice: number | null) => {
     if (basePrice === null) return "Custom";
-    const converted = Math.round(basePrice * CURRENCIES[currency].rate);
+    const rate = rates[currency] || 1;
+    const converted = Math.round(basePrice * rate);
     return `${CURRENCIES[currency].symbol}${converted.toLocaleString()}`;
   };
 
@@ -74,12 +104,16 @@ export function ServicePlans() {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-l-8 border-black pl-8 gap-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase tracking-tighter">
-              Service <span className="text-primary">Protocols</span>
-            </h2>
+            <div className="flex items-center gap-3 mb-2">
+               <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase tracking-tighter">
+                Service <span className="text-primary">Protocols</span>
+              </h2>
+              {isLoadingRates && <Loader2 className="w-6 h-6 animate-spin text-primary" />}
+            </div>
             <p className="text-muted-foreground mt-4 max-w-2xl font-body">
               Professional engagement models for long-term technical stability and 
               architectural integrity. Choose your operational tier and preferred currency.
+              Rates are updated in real-time via external API.
             </p>
           </div>
 
