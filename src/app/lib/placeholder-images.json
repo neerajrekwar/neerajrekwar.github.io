@@ -20,6 +20,12 @@
       "imageHint": "architecture structure"
     },
     {
+      "id": "project-4",
+      "description": "Abstract vault system interface",
+      "imageUrl": "https://picsum.photos/seed/22/800/600",
+      "imageHint": "secure vault"
+    },
+    {
       "id": "hero-bg",
       "description": "Stark contrast geometric patterns",
       "imageUrl": "https://picsum.photos/seed/99/1200/800",
@@ -29,7 +35,7 @@
       "id": "about-portrait",
       "description": "Professional grayscale developer portrait",
       "imageUrl": "https://picsum.photos/seed/dev-portrait/800/800",
-      "imageHint": "man portrait"
+      "imageHint": "professional portrait"
     }
   ]
 }

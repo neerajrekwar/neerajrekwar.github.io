@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -12,6 +13,14 @@ const CURRENCIES: Record<CurrencyCode, { symbol: string, label: string }> = {
   GBP: { symbol: "£", label: "GBP" },
   JPY: { symbol: "¥", label: "JPY" },
   INR: { symbol: "₹", label: "INR" }
+};
+
+const INITIAL_RATES: Record<CurrencyCode, number> = {
+  USD: 1,
+  EUR: 0.92,
+  GBP: 0.79,
+  JPY: 150,
+  INR: 83
 };
 
 const BASE_PLANS = [
@@ -61,40 +70,41 @@ const BASE_PLANS = [
 
 export function ServicePlans() {
   const [currency, setCurrency] = useState<CurrencyCode>('USD');
-  const [rates, setRates] = useState<Record<CurrencyCode, number>>({
-    USD: 1,
-    EUR: 0.92,
-    GBP: 0.79,
-    JPY: 150,
-    INR: 83
-  });
+  const [rates, setRates] = useState<Record<CurrencyCode, number>>(INITIAL_RATES);
   const [isLoadingRates, setIsLoadingRates] = useState(false);
 
   useEffect(() => {
+    let isMounted = true;
+    
     async function fetchRates() {
       setIsLoadingRates(true);
       try {
+        // Using a try-catch and checking for response validity to avoid NetworkError crashes
         const response = await fetch('https://api.frankfurter.app/latest?from=USD&to=EUR,GBP,JPY,INR');
-        if (!response.ok) throw new Error('Failed to fetch rates');
+        if (!response.ok) throw new Error('API Response was not OK');
+        
         const data = await response.json();
-        setRates({
-          USD: 1,
-          ...data.rates
-        });
+        if (isMounted && data && data.rates) {
+          setRates({
+            USD: 1,
+            ...data.rates
+          });
+        }
       } catch (error) {
-        console.error("Currency API Error:", error);
-        // Fallback to initial state rates if API fails
+        // Silently fail and keep initial rates if network is restricted or API is down
+        console.warn("Currency synchronization skipped. Using internal baseline rates.", error);
       } finally {
-        setIsLoadingRates(false);
+        if (isMounted) setIsLoadingRates(false);
       }
     }
 
     fetchRates();
+    return () => { isMounted = false; };
   }, []);
 
   const formatPrice = (basePrice: number | null) => {
     if (basePrice === null) return "Custom";
-    const rate = rates[currency] || 1;
+    const rate = rates[currency] || INITIAL_RATES[currency];
     const converted = Math.round(basePrice * rate);
     return `${CURRENCIES[currency].symbol}${converted.toLocaleString()}`;
   };
@@ -113,7 +123,7 @@ export function ServicePlans() {
             <p className="text-muted-foreground mt-4 max-w-2xl font-body">
               Professional engagement models for long-term technical stability and 
               architectural integrity. Choose your operational tier and preferred currency.
-              Rates are updated in real-time via external API.
+              Rates are synchronized via external registry when available.
             </p>
           </div>
 

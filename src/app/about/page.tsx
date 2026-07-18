@@ -2,8 +2,11 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function AboutPage() {
+  const portrait = PlaceHolderImages.find(img => img.id === "about-portrait");
+
   return (
     <div className="bg-[#FAFAFA] min-h-screen flex flex-col">
       <Navbar />
@@ -14,11 +17,11 @@ export default function AboutPage() {
           <div className="lg:col-span-4 border-b-2 lg:border-b-0 lg:border-r-2 border-black p-8 md:p-12 flex flex-col items-center justify-center bg-[#f0f0f0]">
             <div className="w-full aspect-square relative border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-white overflow-hidden group">
               <Image 
-                src="https://picsum.photos/seed/dev-portrait/800/800" 
+                src={portrait?.imageUrl || "https://picsum.photos/seed/dev-portrait/800/800"} 
                 alt="Full-Stack Engineer Portrait"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                data-ai-hint="professional portrait"
+                data-ai-hint={portrait?.imageHint || "professional portrait"}
               />
               <div className="absolute inset-0 border-[16px] border-black/5 pointer-events-none"></div>
             </div>

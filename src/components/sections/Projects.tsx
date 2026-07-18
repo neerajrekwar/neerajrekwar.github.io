@@ -4,14 +4,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Layers } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const PROJECTS = [
   {
     id: 1,
     title: "Project Alpha",
     category: "Web",
-    image: "https://picsum.photos/seed/42/800/600",
+    imageId: "project-1",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     description: "High-performance dashboard for geometric analysis."
   },
@@ -19,7 +20,7 @@ const PROJECTS = [
     id: 2,
     title: "GridEngine v2",
     category: "System",
-    image: "https://picsum.photos/seed/15/800/600",
+    imageId: "project-2",
     tags: ["Rust", "Wasm", "React"],
     description: "Core processing engine for grid-based data structures."
   },
@@ -27,7 +28,7 @@ const PROJECTS = [
     id: 3,
     title: "Structural UI",
     category: "Design",
-    image: "https://picsum.photos/seed/88/800/600",
+    imageId: "project-3",
     tags: ["Figma", "React", "SCSS"],
     description: "A component library built on architectural principles."
   },
@@ -35,7 +36,7 @@ const PROJECTS = [
     id: 4,
     title: "Vault System",
     category: "Web",
-    image: "https://picsum.photos/seed/22/800/600",
+    imageId: "project-4",
     tags: ["Solidity", "Ether.js", "Vue"],
     description: "Decentralized storage with zero-knowledge verification."
   }
@@ -48,6 +49,14 @@ export function Projects() {
   const filteredProjects = filter === "All" 
     ? PROJECTS 
     : PROJECTS.filter(p => p.category === filter);
+
+  const getImageUrl = (id: string) => {
+    return PlaceHolderImages.find(img => img.id === id)?.imageUrl || "https://picsum.photos/seed/placeholder/800/600";
+  };
+
+  const getImageHint = (id: string) => {
+    return PlaceHolderImages.find(img => img.id === id)?.imageHint || "project placeholder";
+  };
 
   return (
     <section id="projects" className="py-24 border-b-2 border-black">
@@ -81,11 +90,11 @@ export function Projects() {
             <div key={project.id} className="group relative bg-white border-2 border-black overflow-hidden hover:shadow-[12px_12px_0px_0px_#30109C] transition-all">
               <div className="aspect-video relative overflow-hidden border-b-2 border-black">
                 <Image 
-                  src={project.image} 
+                  src={getImageUrl(project.imageId)} 
                   alt={project.title} 
                   fill 
                   className="object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                  data-ai-hint={project.category + " project"}
+                  data-ai-hint={getImageHint(project.imageId)}
                 />
                 <div className="absolute top-4 right-4 flex gap-2">
                   <Badge className="rounded-none border-2 border-black bg-white text-black font-headline uppercase font-bold px-3 py-1">
