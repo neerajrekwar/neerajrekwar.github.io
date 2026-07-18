@@ -27,14 +27,16 @@ export function Footer() {
             <h4 className="font-headline font-bold uppercase text-sm">Socials</h4>
             <div className="flex gap-4">
               {[
-                { icon: <Github className="w-5 h-5" />, href: "#" },
-                { icon: <Twitter className="w-5 h-5" />, href: "#" },
-                { icon: <Linkedin className="w-5 h-5" />, href: "#" },
-                { icon: <Mail className="w-5 h-5" />, href: "#" }
+                { icon: <Github className="w-5 h-5" />, href: "https://github.com/neerajrekwar" },
+                { icon: <Twitter className="w-5 h-5" />, href: "https://x.com/neerajrekwar" },
+                { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/in/neerajrekwar" },
+                { icon: <Mail className="w-5 h-5" />, href: "mailto:dev.neerajrekwar@gmail.com" }
               ].map((social, i) => (
                 <a 
                   key={i} 
                   href={social.href}
+                  target={social.href.startsWith('mailto') ? undefined : "_blank"}
+                  rel={social.href.startsWith('mailto') ? undefined : "noopener noreferrer"}
                   className="w-10 h-10 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
                 >
                   {social.icon}
