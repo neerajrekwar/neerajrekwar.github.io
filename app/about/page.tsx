@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Source_Code_Pro } from "next/font/google";
 import { TextGenerateEffectDemo } from "@/components/textGenerate";
+
 import TextType from "@/components/TextType";
 import AgeCalculator from "@/components/AgeCalculator";
 import { MultiStepLoader } from "@/components/MultiStepLoader";
