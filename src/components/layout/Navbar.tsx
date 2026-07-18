@@ -9,7 +9,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="h-12 w-12 border-2 border-black flex items-center justify-center bg-white hover:bg-black hover:text-white transition-colors">
-          <span className="font-headline font-bold text-xl">GS</span>
+          <span className="font-headline font-bold text-lg">NJR</span>
         </Link>
 
         {/* Desktop Links */}
