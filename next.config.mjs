@@ -1,12 +1,12 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
+    
     allowedDevOrigins: [
       '0.0.0.0',
       'nee-one.vercel.app',
-      'ais-dev-odp2rljcttig5iazcc3f2j-615430009365.asia-southeast1.run.app',
-      'ais-pre-odp2rljcttig5iazcc3f2j-615430009365.asia-southeast1.run.app'
+      'https://fuzzy-waffle-74ppx6696rr2xgpp-3000.app.github.dev/',
+
     ],
     images: {
       unoptimized: true,
