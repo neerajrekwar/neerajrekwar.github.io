@@ -3,8 +3,10 @@
 const nextConfig = {
     output: 'standalone',
     allowedDevOrigins: [
-      '3000-firebase-neerajrekwar-1779358485057.cluster-cz5nqyh5nreq6ua6gaqd7okl7o.cloudworkstations.dev',
-      'https://nee-one.vercel.app'
+      '0.0.0.0',
+      'nee-one.vercel.app',
+      'ais-dev-odp2rljcttig5iazcc3f2j-615430009365.asia-southeast1.run.app',
+      'ais-pre-odp2rljcttig5iazcc3f2j-615430009365.asia-southeast1.run.app'
     ],
     images: {
       unoptimized: true,
