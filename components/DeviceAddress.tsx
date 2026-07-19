@@ -1,4 +1,3 @@
-// components/DeviceAddress.tsx
 "use client";
 import { IconLoader, IconLocationFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
@@ -14,8 +13,12 @@ type DeviceAddress = {
 const DeviceAddress: React.FC = () => {
   const [address, setAddress] = useState<DeviceAddress | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // NEW: Track mounting state to prevent hydration errors
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true); // Confirms we are running safely on the client
+
     const fetchDeviceAddress = async () => {
       try {
         const response = await fetch("https://ipapi.co/json/");
@@ -32,6 +35,17 @@ const DeviceAddress: React.FC = () => {
     fetchDeviceAddress();
   }, []);
 
+  // Server renders the loader cleanly; client matches it until state updates
+  if (!isMounted) {
+    return (
+      <div className="flex items-baseline justify-end">
+        <div className="text-center p-2">
+          <IconLoader className="animate-spin h-5 w-5" />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-baseline justify-end">
       <div className=" ">
@@ -44,13 +58,10 @@ const DeviceAddress: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 4 }}
-            className="flex text-sm  md:text-md overflow-y-hidden sm:text-sm gap-1 text-five justify-center items-center"
+            className="flex text-sm md:text-md overflow-y-hidden sm:text-sm gap-1 text-five justify-center items-center"
           >
-            {/* <h2 className="text-2xl font-bold mb-4 text-center">Device Address</h2> */}
-            {/* <p className="text-lg"><strong>IP:</strong> {address.ip}</p> */}
             <IconLocationFilled className="h-4 sm:h-10 " />
             <p className=""> {address.city},</p>
-            {/* <p className=""> {address.region},</p> */}
             <p className=""> {address.country}</p>
           </motion.div>
         ) : (

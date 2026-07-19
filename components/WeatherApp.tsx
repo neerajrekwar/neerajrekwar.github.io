@@ -1,4 +1,3 @@
-// components/Weather.tsx
 "use client";
 import {
   IconCloudFilled,
@@ -40,12 +39,13 @@ const Weather: React.FC = () => {
 
     const getLocation = () => {
       const fallbackToIp = () => {
-        // Fallback to IP-based location
-        axios.get("https://ip-api.com/json")
+        // FIXED: Switched to an HTTPS-compatible free API provider (ipapi.co)
+        axios.get("https://ipapi.co")
           .then((response) => {
             const data = response.data;
-            if (data.lat && data.lon) {
-              fetchWeather(data.lat, data.lon);
+            // ipapi.co uses latitude and longitude property keys
+            if (data.latitude && data.longitude) {
+              fetchWeather(data.latitude, data.longitude);
             } else {
               setError("Failed to retrieve location from IP.");
             }
@@ -63,7 +63,8 @@ const Weather: React.FC = () => {
             fetchWeather(latitude, longitude);
           },
           (error) => {
-            console.error("Geolocation error:", error);
+            // FIXED: Extracted standard message string from native error object
+            console.error("Geolocation error code:", error.code, "Message:", error.message);
             fallbackToIp();
           }
         );
@@ -78,29 +79,20 @@ const Weather: React.FC = () => {
   return (
     <div>
       {error ? (
-        // <motion.p
-        //   className="text-five text-sm"
-        //   initial={{ opacity: 0, x: 10 }}
-        //   animate={{ opacity: 1, x: 0 }}
-        //   whileInView={{ opacity: 1, x: 0 }}
-        //   transition={{ delay: 6, duration: 2 }}
-        // >
-        //   {error}
-        // </motion.p> 
          ""
       ) : weather ? (
-        <div className="text-sm  md:text-md">
+        <div className="text-sm md:text-md">
           <motion.div
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 4, ease: "easeInOut" }}
-            className=" flex flex-col opacity-75 sm:flex-row md:gap-2  md:p-2   rounded-md items-end"
+            className="flex flex-col opacity-75 sm:flex-row md:gap-2 md:p-2 rounded-md items-end"
           >
             <motion.p
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 4, ease: "easeInOut" }}
-              className="flex w-fit  md:bg-seven md:p-1  rounded-full md:px-2 items-center justify-center"
+              className="flex w-fit md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
             >
               <IconTemperature />
               {weather.current_weather.temperature}°C
@@ -109,7 +101,7 @@ const Weather: React.FC = () => {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 6, ease: "easeInOut" }}
-              className=" flex w-fit gap-2 md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
+              className="flex w-fit gap-2 md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
             >
               <IconCloudFilled /> {weather.hourly.cloudcover[0]}%
             </motion.p>
@@ -117,7 +109,7 @@ const Weather: React.FC = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 8, ease: "easeInOut" }}
-              className=" flex w-fit gap-2 md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
+              className="flex w-fit gap-2 md:bg-seven md:p-1 rounded-full md:px-2 items-center justify-center"
             >
               <IconWind /> {weather.hourly.wind_speed_10m[0]} km/h
             </motion.p>{" "}
