@@ -82,7 +82,7 @@ export function Hero() {
           <div className="absolute inset-0 border-2 border-black bg-[url('https://picsum.photos/seed/99/600/600')] bg-cover grayscale opacity-10"></div>
           <div className="w-full h-full border-2 border-black relative bg-white flex items-center justify-center p-12 overflow-hidden group">
             <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
-            <div className="relative z-10 w-full aspect-square border-2 border-black bg-white shadow-[12px_12px_0px_0px_#1B32A3] flex flex-col items-center justify-center text-center p-8">
+            <div className="relative z-10 w-full aspect-square border-2 border-black bg-white shadow-[12px_12px_0px_0px_#5c7979] flex flex-col items-center justify-center text-center p-8">
                <div className="w-full h-full border border-dashed border-black flex flex-col items-center justify-center gap-4">
                   <div className="w-16 h-16 border-2 border-black rotate-45 flex items-center justify-center">
                     <div className="-rotate-45 font-headline font-bold text-2xl">01</div>

@@ -1,3 +1,41 @@
+
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "Abstract geometric dashboard interface",
+      "imageUrl": "https://picsum.photos/seed/42/800/600",
+      "imageHint": "geometric dashboard"
+    },
+    {
+      "id": "project-2",
+      "description": "Minimalist code editor layout",
+      "imageUrl": "https://picsum.photos/seed/15/800/600",
+      "imageHint": "code editor"
+    },
+    {
+      "id": "project-3",
+      "description": "Structural architectural blueprint background",
+      "imageUrl": "https://picsum.photos/seed/88/800/600",
+      "imageHint": "architecture structure"
+    },
+    {
+      "id": "project-4",
+      "description": "Abstract vault system interface",
+      "imageUrl": "https://picsum.photos/seed/22/800/600",
+      "imageHint": "secure vault"
+    },
+    {
+      "id": "hero-bg",
+      "description": "Stark contrast geometric patterns",
+      "imageUrl": "https://picsum.photos/seed/99/1200/800",
+      "imageHint": "geometric pattern"
+    },
+    {
+      "id": "about-portrait",
+      "description": "Professional grayscale developer portrait",
+      "imageUrl": "https://picsum.photos/seed/dev-portrait/800/800",
+      "imageHint": "professional portrait"
+    }
+  ]
 }

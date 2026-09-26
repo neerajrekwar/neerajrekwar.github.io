@@ -11,9 +11,9 @@
 
 ## Style Guidelines:
 
-- Primary Color: Deep Cobalt (#1B32A3) used for CTA highlights to contrast with the high-intensity black and white design.
+- Primary Color: Slate Teal (#5c7979) used for CTA highlights to contrast with the high-intensity black and white design.
 - Background: Strict off-white (#FAFAFA) to maintain a sterile, modern, and architectural feeling.
-- Accent Color: Stark Violet (#30109C) used for interactive states like hover effects on links and rigid boxes.
+- Accent Color: Deep Slate (#3b5454) used for interactive states like hover effects on links and rigid boxes.
 - Headline font: 'Space Grotesk' for its techy and scientific feel, reinforcing the geometric structure. Body font: 'Inter' for a clean, machine-neutral reading experience.
 - Minimalist, thin-line icons (2px stroke width) with no rounded corners to match the border styles.
 - Grid-based architecture with absolute 'rounded-none' constraints and 2px solid black (#000000) borders dividing all functional blocks.
