@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, CheckCircle2, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
