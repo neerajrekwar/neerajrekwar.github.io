@@ -1,10 +1,15 @@
 import type {NextConfig} from 'next';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = rawBasePath === '/' ? '' : rawBasePath.replace(/\/$/, '');
 
 const nextConfig: NextConfig = {
   output: 'export',
+  trailingSlash: true,
   basePath: basePath,
+  env: {
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://neerajrekwar.github.io',
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

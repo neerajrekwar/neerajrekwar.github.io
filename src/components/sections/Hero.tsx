@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Loader2, RefreshCcw } from "lucide-react";
 import { generateDevPitch } from "@/ai/flows/generate-dev-pitch-flow";
@@ -69,11 +70,11 @@ export function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button className="rounded-none border-2 border-black bg-black text-white px-8 py-6 uppercase font-headline font-bold hover:bg-primary transition-all">
-              View Projects
+            <Button asChild className="rounded-none border-2 border-black bg-black text-white px-8 py-6 uppercase font-headline font-bold hover:bg-primary transition-all">
+              <Link href="/#projects">View Projects</Link>
             </Button>
-            <Button className="rounded-none border-2 border-black bg-white text-black px-8 py-6 uppercase font-headline font-bold hover:bg-muted transition-all">
-              Download CV
+            <Button asChild className="rounded-none border-2 border-black bg-white text-black px-8 py-6 uppercase font-headline font-bold hover:bg-muted transition-all">
+              <Link href="/contact">Contact Me</Link>
             </Button>
           </div>
         </div>

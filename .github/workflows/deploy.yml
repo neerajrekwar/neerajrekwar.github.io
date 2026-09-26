@@ -41,7 +41,10 @@ jobs:
       - name: Build and Export with Next.js
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-        run: npm run build
+          NEXT_PUBLIC_SITE_URL: 'https://neerajrekwar.github.io'
+        run: |
+          npm run build
+          touch ./out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
