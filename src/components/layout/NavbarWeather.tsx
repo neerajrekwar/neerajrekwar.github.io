@@ -107,7 +107,7 @@ export function NavbarWeather({ isMobileCompact = false }: { isMobileCompact?: b
         >
           <span className="flex items-center gap-1 text-black font-semibold">
             <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
-            <span className="truncate max-w-[85px] sm:max-w-[120px]">
+            <span className="truncate max-w-[115px] sm:max-w-[170px] md:max-w-[220px]">
               {cityName}
               {countryCode && !isMobileCompact ? `, ${countryCode}` : ""}
             </span>

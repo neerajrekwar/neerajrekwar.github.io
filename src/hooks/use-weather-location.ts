@@ -39,8 +39,8 @@ export interface WeatherLocationState {
   useDeviceGps: () => Promise<void>;
 }
 
-// v3 cache key to immediately invalidate any legacy cached "Berlin" responses
-const STORAGE_KEY = "njr_weather_location_cache_v3";
+// v5 cache key to invalidate any previously cached "Delhi" or "Berlin" values
+const STORAGE_KEY = "njr_weather_location_cache_v5";
 const CACHE_TTL_MS = 15 * 60 * 1000; // 15-minute cache
 
 export function parseWeatherCode(code: number): { condition: string; iconType: WeatherData["iconType"] } {
@@ -58,74 +58,13 @@ export function parseWeatherCode(code: number): { condition: string; iconType: W
 async function resolveLocation(customIp?: string, forceGps = false): Promise<GeoLocationData> {
   const targetIp = customIp?.trim();
 
-  // 1. If a specific IP is requested (e.g. 8.8.8.8)
-  if (targetIp && targetIp.length > 0) {
-    // Try ipapi.co first
-    try {
-      const res = await fetch(`https://ipapi.co/${encodeURIComponent(targetIp)}/json/`, {
-        headers: { Accept: "application/json" },
-      });
-      const data = await res.json().catch(() => null);
-      if (data && !data.error && data.latitude !== undefined && data.longitude !== undefined) {
-        return {
-          ipAddress: data.ip || targetIp,
-          cityName: data.city || data.region || "Location",
-          countryName: data.country_name || "",
-          countryCode: data.country_code || "",
-          regionName: data.region || "",
-          regionCode: data.region_code || "",
-          postal: data.postal || "",
-          latitude: Number(data.latitude),
-          longitude: Number(data.longitude),
-          timezone: data.timezone,
-          org: data.org,
-          asn: data.asn,
-          currency: data.currency,
-          callingCode: data.country_calling_code,
-          source: "ipapi",
-        };
-      }
-    } catch (e) {
-      console.warn("ipapi.co error for IP query:", e);
-    }
-
-    // Failover to ipwho.is for specific IP query (no rate limit)
-    try {
-      const res = await fetch(`https://ipwho.is/${encodeURIComponent(targetIp)}`);
-      const data = await res.json().catch(() => null);
-      if (data && data.success && data.latitude !== undefined && data.longitude !== undefined) {
-        return {
-          ipAddress: data.ip || targetIp,
-          cityName: data.city || data.region || "Location",
-          countryName: data.country || "",
-          countryCode: data.country_code || "",
-          regionName: data.region || "",
-          regionCode: data.region_code || "",
-          postal: data.postal || "",
-          latitude: Number(data.latitude),
-          longitude: Number(data.longitude),
-          timezone: data.timezone?.id,
-          org: data.connection?.org || data.connection?.isp,
-          asn: data.connection?.asn ? `AS${data.connection.asn}` : undefined,
-          callingCode: data.calling_code ? `+${data.calling_code}` : undefined,
-          source: "ipwhois",
-        };
-      }
-    } catch (e) {
-      console.warn("ipwho.is failover error for IP query:", e);
-    }
-
-    throw new Error(`Unable to resolve location for IP: ${targetIp}`);
-  }
-
-  // 2. Resolve caller's real current location
-  // Option A: If GPS is explicitly requested or permission is available
-  if (typeof window !== "undefined" && navigator.geolocation) {
+  // Only run browser device GPS if user explicitly clicks "Use Device GPS"
+  if (forceGps && typeof window !== "undefined" && navigator.geolocation) {
     const coords = await new Promise<{ lat: number; lon: number } | null>((resolve) => {
       navigator.geolocation.getCurrentPosition(
         (pos) => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
         () => resolve(null),
-        { timeout: forceGps ? 5000 : 2500, maximumAge: 60000, enableHighAccuracy: forceGps }
+        { timeout: 6000, maximumAge: 0, enableHighAccuracy: true }
       );
     });
 
@@ -136,8 +75,13 @@ async function resolveLocation(customIp?: string, forceGps = false): Promise<Geo
         );
         const geoData = await geoRes.json().catch(() => null);
         if (geoData && (geoData.city || geoData.locality || geoData.countryName)) {
+          let city = geoData.city || geoData.locality || "Current Location";
+          // If Delhi region, prefer "New Delhi"
+          // if (city === "Delhhggi" && (geoData.locality?.includes("Dehglhi") || geoData.principalSubdivision === "Delhi")) {
+          //   city = "New Delhfgffi";
+          // }
           return {
-            cityName: geoData.city || geoData.locality || "Current Location",
+            cityName: city,
             countryName: geoData.countryName || "",
             countryCode: geoData.countryCode || "",
             regionName: geoData.principalSubdivision || "",
@@ -149,21 +93,25 @@ async function resolveLocation(customIp?: string, forceGps = false): Promise<Geo
           };
         }
       } catch (err) {
-        console.warn("Device coordinate reverse-geocode failed, falling back to IP:", err);
+        console.warn("Device coordinate reverse-geocode failed:", err);
       }
     }
   }
 
-  // Option B: ipapi.co (GET https://ipapi.co/json/)
+  // 1. PRIMARY PROVIDER: ipapi.co (GET https://ipapi.co/{ip}/json/ or https://ipapi.co/json/)
+  const ipapiEndpoint = targetIp && targetIp.length > 0 
+    ? `https://ipapi.co/${encodeURIComponent(targetIp)}/json/`
+    : `https://ipapi.co/json/`;
+
   try {
-    const res = await fetch("https://ipapi.co/json/", {
+    const res = await fetch(ipapiEndpoint, {
       headers: { Accept: "application/json" },
     });
     const data = await res.json().catch(() => null);
     if (data && !data.error && data.latitude !== undefined && data.longitude !== undefined) {
       return {
-        ipAddress: data.ip,
-        cityName: data.city || data.region || "Current Location",
+        ipAddress: data.ip || targetIp,
+        cityName: data.city || data.country_capital || data.region || "Current Location",
         countryName: data.country_name || "",
         countryCode: data.country_code || "",
         regionName: data.region || "",
@@ -180,17 +128,26 @@ async function resolveLocation(customIp?: string, forceGps = false): Promise<Geo
       };
     }
   } catch (err) {
-    console.warn("ipapi.co rate limit or network issue:", err);
+    console.warn("ipapi.co fetch failed, attempting failover:", err);
   }
 
-  // Option C: ipwho.is (Free tier, fast, returns real user city and coordinates)
+  // 2. HIGH-AVAILABILITY FAILOVER: ipwho.is
+  const ipwhoEndpoint = targetIp && targetIp.length > 0
+    ? `https://ipwho.is/${encodeURIComponent(targetIp)}`
+    : `https://ipwho.is/`;
+
   try {
-    const res = await fetch("https://ipwho.is/");
+    const res = await fetch(ipwhoEndpoint);
     const data = await res.json().catch(() => null);
     if (data && data.success && data.latitude !== undefined && data.longitude !== undefined) {
+      // Ensure "New Delhi" is preserved when region/city is Delhi
+      const resolvedCity = (data.city === "Delhi" && data.capital === "New Delhi")
+        ? "New Delhi"
+        : (data.city || data.region || "Current Location");
+
       return {
-        ipAddress: data.ip,
-        cityName: data.city || data.region || "Current Location",
+        ipAddress: data.ip || targetIp,
+        cityName: resolvedCity,
         countryName: data.country || "",
         countryCode: data.country_code || "",
         regionName: data.region || "",
@@ -206,16 +163,20 @@ async function resolveLocation(customIp?: string, forceGps = false): Promise<Geo
       };
     }
   } catch (err) {
-    console.warn("ipwho.is error:", err);
+    console.warn("ipwho.is failover error:", err);
   }
 
-  // Option D: BigDataCloud client reverse geocoding
+  // 3. SECONDARY FAILOVER: BigDataCloud
   try {
     const res = await fetch("https://api.bigdatacloud.net/data/reverse-geocode-client");
     const data = await res.json().catch(() => null);
     if (data && data.latitude !== undefined && data.longitude !== undefined) {
+      let city = data.city || data.locality || "Current Location";
+      if (city === "Delhi" && data.principalSubdivision === "Delhi") {
+        city = "New Delhi";
+      }
       return {
-        cityName: data.city || data.locality || "Current Location",
+        cityName: city,
         countryName: data.countryName || "",
         countryCode: data.countryCode || "",
         regionName: data.principalSubdivision || "",
@@ -230,13 +191,12 @@ async function resolveLocation(customIp?: string, forceGps = false): Promise<Geo
     console.warn("bigdatacloud client lookup error:", err);
   }
 
-  // Fallback if completely offline
   return {
     cityName: "Current Location",
     countryName: "",
     countryCode: "",
-    latitude: 20.5937,
-    longitude: 78.9629,
+    latitude: 28.6355,
+    longitude: 77.2241,
     source: "fallback",
   };
 }
@@ -254,14 +214,15 @@ export function useWeatherLocation(): WeatherLocationState {
 
     const cacheKey = customIp ? `${STORAGE_KEY}_${customIp.trim()}` : STORAGE_KEY;
 
-    // 1. Check local cache unless force refresh
+    // Check local cache unless forced
     if (!force && typeof window !== "undefined") {
       try {
         const cached = localStorage.getItem(cacheKey);
         if (cached) {
           const parsed = JSON.parse(cached);
           const age = Date.now() - (parsed.timestamp || 0);
-          if (age < CACHE_TTL_MS && parsed.location && parsed.weather) {
+          // If cached city is "Delhi" instead of "New Delhi", force refresh
+          if (age < CACHE_TTL_MS && parsed.location && parsed.weather && parsed.location.cityName !== "Delhi") {
             setLocation(parsed.location);
             setWeather(parsed.weather);
             setLastUpdated(parsed.timestamp);
@@ -275,10 +236,8 @@ export function useWeatherLocation(): WeatherLocationState {
     }
 
     try {
-      // 2. Accurately resolve location
       const locData = await resolveLocation(customIp, forceGps);
 
-      // 3. Query Open-Meteo weather for coordinates
       const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${locData.latitude}&longitude=${locData.longitude}&current=temperature_2m,weather_code&hourly=temperature_2m`;
       const weatherRes = await fetch(weatherUrl);
 
@@ -303,7 +262,6 @@ export function useWeatherLocation(): WeatherLocationState {
 
       const { condition, iconType } = parseWeatherCode(code);
 
-      // Hourly forecast sample (next 5 hours)
       const hourlyForecast: { time: string; temp: number }[] = [];
       if (weatherJson.hourly?.time && weatherJson.hourly?.temperature_2m) {
         const nowIndex = 0;
@@ -329,7 +287,6 @@ export function useWeatherLocation(): WeatherLocationState {
       const now = Date.now();
       setLastUpdated(now);
 
-      // Cache the result
       if (typeof window !== "undefined") {
         try {
           localStorage.setItem(
