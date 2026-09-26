@@ -4,7 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'GridSystem Portfolio | Full-Stack Developer',
+  title: 'neerajrekwar Portfolio | Full-Stack Developer',
   description: 'Geometric architectural portfolio of a high-performance full-stack engineer.',
 };
 

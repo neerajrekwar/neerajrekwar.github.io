@@ -1,4 +1,4 @@
-# **App Name**: GridSystem Portfolio
+# **App Name**: neerajrekwar Portfolio
 
 ## Core Features:
 

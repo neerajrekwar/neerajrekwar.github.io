@@ -45,7 +45,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-headline font-bold uppercase text-xs tracking-widest text-white/40">Direct Line</h4>
-                  <p className="font-headline text-lg">comm@gridsystem.dev</p>
+                  <p className="font-headline text-lg">comm@neerajrekwar.dev</p>
                 </div>
               </div>
               

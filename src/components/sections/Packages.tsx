@@ -6,18 +6,18 @@ import { useState } from "react";
 
 const PACKAGES = [
   {
-    name: "@gridsys/geometric-ui",
+    name: "@neerajrekwar/geometric-ui",
     description: "A headless UI library for building strictly rectangular interfaces.",
     version: "v1.4.2",
     downloads: "14k/mo",
-    install: "npm install @gridsys/geometric-ui"
+    install: "npm install @neerajrekwar/geometric-ui"
   },
   {
-    name: "@gridsys/stark-auth",
+    name: "@neerajrekwar/stark-auth",
     description: "Geometric identity verification for high-security applications.",
     version: "v2.0.1",
     downloads: "8k/mo",
-    install: "yarn add @gridsys/stark-auth"
+    install: "yarn add @neerajrekwar/stark-auth"
   }
 ];
 

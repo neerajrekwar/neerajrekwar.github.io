@@ -33,6 +33,15 @@ const PROJECT_IMAGES_BY_ID: Record<string, string[]> = {
     "/images/project-1/walktrip-2.jpg",
     "/images/project-1/walktrip-3.jpg",
   ],
+  "project-2": [
+    "/images/project-2/1.jpg",
+    "/images/project-2/2.jpg",
+    "/images/project-2/3.jpg",
+    "/images/project-2/4.jpg",
+    "/images/project-2/5.jpg",
+    "/images/project-2/6.jpg",
+    "/images/project-2/7.jpg",
+  ],
 };
 
 const PROJECTS: ProjectItem[] = [
@@ -46,38 +55,48 @@ const PROJECTS: ProjectItem[] = [
       "/images/project-1/walktrip-2.jpg",
       "/images/project-1/walktrip-3.jpg",
     ],
-    tags: ["Next.js", "TypeScript", "Tailwind"],
+    tags: ["NEXT.JS 16", "TypeScript", "Tailwind"],
     description: "Full-stack travel platform connecting travelers with local Delhi guides and curated cultural experiences.",
     githubUrl: "https://github.com/neerajrekwar/walktrip-",
     liveUrl: "https://walktrip-delhi.vercel.app"
   },
   {
     id: 2,
-    title: "GridEngine v2",
-    category: "System",
-    imageId: "project-2",
-    tags: ["Rust", "Wasm", "React"],
-    description: "Core processing engine for grid-based data structures.",
-    githubUrl: "https://github.com/neerajrekwar"
-  },
-  {
-    id: 3,
-    title: "Structural UI",
-    category: "Design",
-    imageId: "project-3",
-    tags: ["Figma", "React", "SCSS"],
-    description: "A component library built on architectural principles.",
-    githubUrl: "https://github.com/neerajrekwar"
-  },
-  {
-    id: 4,
-    title: "Vault System",
+    title: "NEWSLYUSA",
     category: "Web",
-    imageId: "project-4",
-    tags: ["Solidity", "Ether.js", "Vue"],
-    description: "Decentralized storage with zero-knowledge verification.",
-    githubUrl: "https://github.com/neerajrekwar"
-  }
+    imageId: "project-2",
+    images: [
+      "/images/project-2/1.jpg",
+      "/images/project-2/2.jpg",
+      "/images/project-2/3.jpg",
+      "/images/project-2/4.jpg",
+      "/images/project-2/5.jpg",
+      "/images/project-2/6.jpg",
+      "/images/project-2/7.jpg",
+    ],
+    tags: ["NEXT.JS 16", "MONGODB", "TYPESCRIPT"],
+    description: "Modern digital news platform for discovering and organizing stories across politics, health, travel, sports, technology, and entertainment.",
+    githubUrl: "https://github.com/neerajrekwar",
+    liveUrl: "https://walktrip-delhi.vercel.app"
+  },
+  // {
+  //   id: 3,
+  //   title: "Structural UI",
+  //   category: "Design",
+  //   imageId: "project-3",
+  //   tags: ["Figma", "React", "SCSS"],
+  //   description: "A component library built on architectural principles.",
+  //   githubUrl: "https://github.com/neerajrekwar"
+  // },
+  // {
+  //   id: 4,
+  //   title: "Vault System",
+  //   category: "Web",
+  //   imageId: "project-4",
+  //   tags: ["Solidity", "Ether.js", "Vue"],
+  //   description: "Decentralized storage with zero-knowledge verification.",
+  //   githubUrl: "https://github.com/neerajrekwar"
+  // }
 ];
 
 interface ProjectMediaProps {
