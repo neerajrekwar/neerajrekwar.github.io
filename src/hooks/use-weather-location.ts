@@ -8,9 +8,16 @@ export interface GeoLocationData {
   countryName: string;
   countryCode: string;
   regionName?: string;
+  regionCode?: string;
+  postal?: string;
   latitude: number;
   longitude: number;
-  timeZones?: string[];
+  timezone?: string;
+  org?: string;
+  asn?: string;
+  currency?: string;
+  callingCode?: string;
+  source?: "device-gps" | "ipapi" | "ipwhois" | "bigdatacloud" | "fallback";
 }
 
 export interface WeatherData {
@@ -28,14 +35,15 @@ export interface WeatherLocationState {
   isLoading: boolean;
   error: string | null;
   lastUpdated: number | null;
-  refresh: () => Promise<void>;
+  refresh: (customIp?: string) => Promise<void>;
+  useDeviceGps: () => Promise<void>;
 }
 
-const STORAGE_KEY = "njr_weather_location_cache_v1";
-const CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes to strictly stay within FreeIPAPI rate limits (10 req/10s, 60/min)
+// v3 cache key to immediately invalidate any legacy cached "Berlin" responses
+const STORAGE_KEY = "njr_weather_location_cache_v3";
+const CACHE_TTL_MS = 15 * 60 * 1000; // 15-minute cache
 
 export function parseWeatherCode(code: number): { condition: string; iconType: WeatherData["iconType"] } {
-  // WMO Weather interpretation codes
   if (code === 0) return { condition: "Clear Sky", iconType: "sun" };
   if (code === 1 || code === 2) return { condition: "Partly Cloudy", iconType: "cloud-sun" };
   if (code === 3) return { condition: "Overcast", iconType: "cloud" };
@@ -47,6 +55,192 @@ export function parseWeatherCode(code: number): { condition: string; iconType: W
   return { condition: "Clear", iconType: "sun" };
 }
 
+async function resolveLocation(customIp?: string, forceGps = false): Promise<GeoLocationData> {
+  const targetIp = customIp?.trim();
+
+  // 1. If a specific IP is requested (e.g. 8.8.8.8)
+  if (targetIp && targetIp.length > 0) {
+    // Try ipapi.co first
+    try {
+      const res = await fetch(`https://ipapi.co/${encodeURIComponent(targetIp)}/json/`, {
+        headers: { Accept: "application/json" },
+      });
+      const data = await res.json().catch(() => null);
+      if (data && !data.error && data.latitude !== undefined && data.longitude !== undefined) {
+        return {
+          ipAddress: data.ip || targetIp,
+          cityName: data.city || data.region || "Location",
+          countryName: data.country_name || "",
+          countryCode: data.country_code || "",
+          regionName: data.region || "",
+          regionCode: data.region_code || "",
+          postal: data.postal || "",
+          latitude: Number(data.latitude),
+          longitude: Number(data.longitude),
+          timezone: data.timezone,
+          org: data.org,
+          asn: data.asn,
+          currency: data.currency,
+          callingCode: data.country_calling_code,
+          source: "ipapi",
+        };
+      }
+    } catch (e) {
+      console.warn("ipapi.co error for IP query:", e);
+    }
+
+    // Failover to ipwho.is for specific IP query (no rate limit)
+    try {
+      const res = await fetch(`https://ipwho.is/${encodeURIComponent(targetIp)}`);
+      const data = await res.json().catch(() => null);
+      if (data && data.success && data.latitude !== undefined && data.longitude !== undefined) {
+        return {
+          ipAddress: data.ip || targetIp,
+          cityName: data.city || data.region || "Location",
+          countryName: data.country || "",
+          countryCode: data.country_code || "",
+          regionName: data.region || "",
+          regionCode: data.region_code || "",
+          postal: data.postal || "",
+          latitude: Number(data.latitude),
+          longitude: Number(data.longitude),
+          timezone: data.timezone?.id,
+          org: data.connection?.org || data.connection?.isp,
+          asn: data.connection?.asn ? `AS${data.connection.asn}` : undefined,
+          callingCode: data.calling_code ? `+${data.calling_code}` : undefined,
+          source: "ipwhois",
+        };
+      }
+    } catch (e) {
+      console.warn("ipwho.is failover error for IP query:", e);
+    }
+
+    throw new Error(`Unable to resolve location for IP: ${targetIp}`);
+  }
+
+  // 2. Resolve caller's real current location
+  // Option A: If GPS is explicitly requested or permission is available
+  if (typeof window !== "undefined" && navigator.geolocation) {
+    const coords = await new Promise<{ lat: number; lon: number } | null>((resolve) => {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+        () => resolve(null),
+        { timeout: forceGps ? 5000 : 2500, maximumAge: 60000, enableHighAccuracy: forceGps }
+      );
+    });
+
+    if (coords) {
+      try {
+        const geoRes = await fetch(
+          `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${coords.lat}&longitude=${coords.lon}`
+        );
+        const geoData = await geoRes.json().catch(() => null);
+        if (geoData && (geoData.city || geoData.locality || geoData.countryName)) {
+          return {
+            cityName: geoData.city || geoData.locality || "Current Location",
+            countryName: geoData.countryName || "",
+            countryCode: geoData.countryCode || "",
+            regionName: geoData.principalSubdivision || "",
+            regionCode: geoData.principalSubdivisionCode || "",
+            postal: geoData.postcode || "",
+            latitude: coords.lat,
+            longitude: coords.lon,
+            source: "device-gps",
+          };
+        }
+      } catch (err) {
+        console.warn("Device coordinate reverse-geocode failed, falling back to IP:", err);
+      }
+    }
+  }
+
+  // Option B: ipapi.co (GET https://ipapi.co/json/)
+  try {
+    const res = await fetch("https://ipapi.co/json/", {
+      headers: { Accept: "application/json" },
+    });
+    const data = await res.json().catch(() => null);
+    if (data && !data.error && data.latitude !== undefined && data.longitude !== undefined) {
+      return {
+        ipAddress: data.ip,
+        cityName: data.city || data.region || "Current Location",
+        countryName: data.country_name || "",
+        countryCode: data.country_code || "",
+        regionName: data.region || "",
+        regionCode: data.region_code || "",
+        postal: data.postal || "",
+        latitude: Number(data.latitude),
+        longitude: Number(data.longitude),
+        timezone: data.timezone,
+        org: data.org,
+        asn: data.asn,
+        currency: data.currency,
+        callingCode: data.country_calling_code,
+        source: "ipapi",
+      };
+    }
+  } catch (err) {
+    console.warn("ipapi.co rate limit or network issue:", err);
+  }
+
+  // Option C: ipwho.is (Free tier, fast, returns real user city and coordinates)
+  try {
+    const res = await fetch("https://ipwho.is/");
+    const data = await res.json().catch(() => null);
+    if (data && data.success && data.latitude !== undefined && data.longitude !== undefined) {
+      return {
+        ipAddress: data.ip,
+        cityName: data.city || data.region || "Current Location",
+        countryName: data.country || "",
+        countryCode: data.country_code || "",
+        regionName: data.region || "",
+        regionCode: data.region_code || "",
+        postal: data.postal || "",
+        latitude: Number(data.latitude),
+        longitude: Number(data.longitude),
+        timezone: data.timezone?.id,
+        org: data.connection?.org || data.connection?.isp,
+        asn: data.connection?.asn ? `AS${data.connection.asn}` : undefined,
+        callingCode: data.calling_code ? `+${data.calling_code}` : undefined,
+        source: "ipwhois",
+      };
+    }
+  } catch (err) {
+    console.warn("ipwho.is error:", err);
+  }
+
+  // Option D: BigDataCloud client reverse geocoding
+  try {
+    const res = await fetch("https://api.bigdatacloud.net/data/reverse-geocode-client");
+    const data = await res.json().catch(() => null);
+    if (data && data.latitude !== undefined && data.longitude !== undefined) {
+      return {
+        cityName: data.city || data.locality || "Current Location",
+        countryName: data.countryName || "",
+        countryCode: data.countryCode || "",
+        regionName: data.principalSubdivision || "",
+        regionCode: data.principalSubdivisionCode || "",
+        postal: data.postcode || "",
+        latitude: Number(data.latitude),
+        longitude: Number(data.longitude),
+        source: "bigdatacloud",
+      };
+    }
+  } catch (err) {
+    console.warn("bigdatacloud client lookup error:", err);
+  }
+
+  // Fallback if completely offline
+  return {
+    cityName: "Current Location",
+    countryName: "",
+    countryCode: "",
+    latitude: 20.5937,
+    longitude: 78.9629,
+    source: "fallback",
+  };
+}
+
 export function useWeatherLocation(): WeatherLocationState {
   const [location, setLocation] = useState<GeoLocationData | null>(null);
   const [weather, setWeather] = useState<WeatherData | null>(null);
@@ -54,14 +248,16 @@ export function useWeatherLocation(): WeatherLocationState {
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<number | null>(null);
 
-  const fetchData = useCallback(async (force = false) => {
+  const fetchData = useCallback(async (customIp?: string, force = false, forceGps = false) => {
     setIsLoading(true);
     setError(null);
 
-    // 1. Check local cache if not forcing refresh
+    const cacheKey = customIp ? `${STORAGE_KEY}_${customIp.trim()}` : STORAGE_KEY;
+
+    // 1. Check local cache unless force refresh
     if (!force && typeof window !== "undefined") {
       try {
-        const cached = localStorage.getItem(STORAGE_KEY);
+        const cached = localStorage.getItem(cacheKey);
         if (cached) {
           const parsed = JSON.parse(cached);
           const age = Date.now() - (parsed.timestamp || 0);
@@ -79,49 +275,15 @@ export function useWeatherLocation(): WeatherLocationState {
     }
 
     try {
-      // 2. Fetch IP location from free.freeipapi.com/api/v1/
-      let lat = 52.52;
-      let lon = 13.41;
-      let locData: GeoLocationData = {
-        cityName: "Berlin",
-        countryName: "Germany",
-        countryCode: "DE",
-        latitude: lat,
-        longitude: lon,
-      };
+      // 2. Accurately resolve location
+      const locData = await resolveLocation(customIp, forceGps);
 
-      try {
-        const ipRes = await fetch("https://free.freeipapi.com/api/v1/json", {
-          headers: { Accept: "application/json" },
-        });
-
-        if (ipRes.ok) {
-          const ipJson = await ipRes.json();
-          if (ipJson.latitude !== undefined && ipJson.longitude !== undefined) {
-            lat = Number(ipJson.latitude);
-            lon = Number(ipJson.longitude);
-            locData = {
-              ipAddress: ipJson.ipAddress,
-              cityName: ipJson.cityName || ipJson.regionName || "Current Location",
-              countryName: ipJson.countryName || "",
-              countryCode: ipJson.countryCode || "",
-              regionName: ipJson.regionName || "",
-              latitude: lat,
-              longitude: lon,
-              timeZones: ipJson.timeZones,
-            };
-          }
-        }
-      } catch (ipErr) {
-        console.warn("FreeIPAPI fetch error, using fallback coordinates:", ipErr);
-      }
-
-      // 3. Fetch atmospheric weather from Open-Meteo
-      const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&hourly=temperature_2m`;
+      // 3. Query Open-Meteo weather for coordinates
+      const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${locData.latitude}&longitude=${locData.longitude}&current=temperature_2m,weather_code&hourly=temperature_2m`;
       const weatherRes = await fetch(weatherUrl);
 
       if (!weatherRes.ok) {
-        throw new Error(`Weather service returned ${weatherRes.status}`);
+        throw new Error(`Weather service returned HTTP ${weatherRes.status}`);
       }
 
       const weatherJson = await weatherRes.json();
@@ -133,7 +295,7 @@ export function useWeatherLocation(): WeatherLocationState {
       if (weatherJson.current) {
         temp = Math.round(weatherJson.current.temperature_2m * 10) / 10;
         unit = weatherJson.current_units?.temperature_2m || "°C";
-        code = weatherJson.current.weather_code ?? 0;
+        code = weatherJson.current_weather_code ?? 0;
       } else if (weatherJson.hourly && weatherJson.hourly.temperature_2m?.length) {
         temp = Math.round(weatherJson.hourly.temperature_2m[0] * 10) / 10;
         unit = weatherJson.hourly_units?.temperature_2m || "°C";
@@ -171,32 +333,36 @@ export function useWeatherLocation(): WeatherLocationState {
       if (typeof window !== "undefined") {
         try {
           localStorage.setItem(
-            STORAGE_KEY,
+            cacheKey,
             JSON.stringify({
               timestamp: now,
               location: locData,
               weather: weatherData,
             })
           );
-        } catch {
-          // localStorage full or unavailable
+        } catch (storageErr) {
+          console.warn("Could not cache weather location", storageErr);
         }
       }
     } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : "Failed to load weather & location";
-      console.error("Location/Weather fetch failed:", err);
-      setError(message);
+      const msg = err instanceof Error ? err.message : "Failed to load telemetry";
+      setError(msg);
+      console.error("Telemetry fetch error:", err);
     } finally {
       setIsLoading(false);
     }
   }, []);
 
-  useEffect(() => {
-    fetchData();
+  const refresh = useCallback(async (customIp?: string) => {
+    await fetchData(customIp, true, false);
   }, [fetchData]);
 
-  const refresh = useCallback(async () => {
-    await fetchData(true);
+  const useDeviceGps = useCallback(async () => {
+    await fetchData(undefined, true, true);
+  }, [fetchData]);
+
+  useEffect(() => {
+    fetchData();
   }, [fetchData]);
 
   return {
@@ -206,5 +372,6 @@ export function useWeatherLocation(): WeatherLocationState {
     error,
     lastUpdated,
     refresh,
+    useDeviceGps,
   };
 }

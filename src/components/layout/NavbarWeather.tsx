@@ -11,9 +11,11 @@ import {
   CloudLightning, 
   CloudFog, 
   CloudDrizzle, 
-  RefreshCw,
-  Loader2,
-  Activity
+  RefreshCw, 
+  Loader2, 
+  Activity, 
+  Globe,
+  Navigation
 } from "lucide-react";
 import { useWeatherLocation, type WeatherData } from "@/hooks/use-weather-location";
 import {
@@ -47,14 +49,35 @@ function WeatherIcon({ type, className = "w-4 h-4" }: { type: WeatherData["iconT
 }
 
 export function NavbarWeather({ isMobileCompact = false }: { isMobileCompact?: boolean }) {
-  const { location, weather, isLoading, error, refresh, lastUpdated } = useWeatherLocation();
+  const { location, weather, isLoading, error, refresh, useDeviceGps, lastUpdated } = useWeatherLocation();
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [customIpInput, setCustomIpInput] = useState("");
 
-  const handleRefresh = async (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleRefresh = async (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     setIsRefreshing(true);
     try {
-      await refresh();
+      await refresh(customIpInput.trim() || undefined);
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
+
+  const handleLookupIp = async (targetIp?: string) => {
+    const ip = targetIp !== undefined ? targetIp : customIpInput;
+    setIsRefreshing(true);
+    try {
+      await refresh(ip.trim() || undefined);
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
+
+  const handleGpsLookup = async () => {
+    setIsRefreshing(true);
+    try {
+      setCustomIpInput("");
+      await useDeviceGps();
     } finally {
       setIsRefreshing(false);
     }
@@ -108,7 +131,7 @@ export function NavbarWeather({ isMobileCompact = false }: { isMobileCompact?: b
       <PopoverContent 
         align="end" 
         sideOffset={8}
-        className="w-80 rounded-none border-2 border-black bg-white p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-xs font-mono"
+        className="w-84 sm:w-96 rounded-none border-2 border-black bg-white p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-xs font-mono max-h-[85vh] overflow-y-auto"
       >
         <div className="space-y-3">
           {/* Header */}
@@ -123,16 +146,88 @@ export function NavbarWeather({ isMobileCompact = false }: { isMobileCompact?: b
               onClick={handleRefresh}
               disabled={isRefreshing}
               className="h-6 px-2 rounded-none border border-black hover:bg-black hover:text-white text-[10px] uppercase font-bold"
+              title="Refresh Telemetry"
             >
               {isRefreshing ? <Loader2 className="w-3 h-3 animate-spin" /> : <RefreshCw className="w-3 h-3" />}
             </Button>
           </div>
 
+          {/* Specific IP & Real GPS Tool */}
+          <div className="bg-zinc-50 border border-black p-2.5 space-y-1.5">
+            <div className="text-[10px] uppercase text-zinc-500 font-bold flex items-center justify-between">
+              <span className="flex items-center gap-1">
+                <Globe className="w-3 h-3 text-primary" />
+                Location & IP Query
+              </span>
+              <span className="text-[9px] text-zinc-600 font-bold">ipapi.co/{'{ip}'}/json/</span>
+            </div>
+            <div className="flex gap-1.5">
+              <input
+                type="text"
+                placeholder="e.g. 8.8.8.8"
+                value={customIpInput}
+                onChange={(e) => setCustomIpInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleLookupIp();
+                }}
+                className="flex-grow h-7 px-2 border border-black bg-white text-xs font-mono rounded-none focus:outline-none focus:ring-1 focus:ring-black"
+              />
+              <Button
+                size="sm"
+                onClick={() => handleLookupIp()}
+                disabled={isRefreshing}
+                className="h-7 px-2.5 rounded-none border border-black bg-black text-white hover:bg-zinc-800 text-[10px] uppercase font-bold shrink-0"
+              >
+                {isRefreshing ? <Loader2 className="w-3 h-3 animate-spin" /> : "Lookup"}
+              </Button>
+            </div>
+            <div className="flex flex-wrap items-center gap-1.5 pt-0.5 text-[10px]">
+              <button
+                type="button"
+                onClick={handleGpsLookup}
+                className="flex items-center gap-1 font-bold text-primary hover:underline cursor-pointer"
+                title="Use real GPS / WiFi device location"
+              >
+                <Navigation className="w-3 h-3" />
+                Use Device GPS
+              </button>
+              <span className="text-zinc-300">•</span>
+              <button
+                type="button"
+                onClick={() => {
+                  setCustomIpInput("8.8.8.8");
+                  handleLookupIp("8.8.8.8");
+                }}
+                className="underline hover:text-primary font-mono cursor-pointer"
+              >
+                8.8.8.8
+              </button>
+              <span className="text-zinc-300">•</span>
+              <button
+                type="button"
+                onClick={() => {
+                  setCustomIpInput("");
+                  handleLookupIp("");
+                }}
+                className="underline hover:text-primary font-mono cursor-pointer"
+              >
+                Reset (My IP)
+              </button>
+            </div>
+          </div>
+
           {/* Location details */}
-          <div className="space-y-1 bg-zinc-50 border border-black p-2.5">
-            <div className="text-[10px] uppercase text-zinc-500 font-bold">Location Telemetry</div>
+          <div className="space-y-1.5 bg-zinc-50 border border-black p-2.5">
+            <div className="text-[10px] uppercase text-zinc-500 font-bold flex items-center justify-between">
+              <span>Location Telemetry</span>
+              {location?.source && (
+                <span className="text-[9px] uppercase px-1.5 py-0.5 bg-zinc-200 text-zinc-800 font-mono font-bold">
+                  SRC: {location.source === "device-gps" ? "GPS" : location.source}
+                </span>
+              )}
+            </div>
             <div className="font-bold text-sm text-black flex items-center justify-between">
-              <span>{location?.cityName}, {location?.countryName}</span>
+              <span>{location?.cityName}{location?.countryName ? `, ${location?.countryName}` : ""}</span>
               {location?.countryCode && (
                 <span className="px-1.5 py-0.5 border border-black bg-white text-[10px]">
                   {location.countryCode}
@@ -140,10 +235,26 @@ export function NavbarWeather({ isMobileCompact = false }: { isMobileCompact?: b
               )}
             </div>
             {location?.regionName && (
-              <div className="text-zinc-600 text-[11px]">Region: {location.regionName}</div>
+              <div className="text-zinc-600 text-[11px]">
+                Region: {location.regionName} {location.regionCode ? `(${location.regionCode})` : ""}
+              </div>
             )}
-            <div className="text-zinc-500 text-[11px] pt-1">
+            {location?.postal && (
+              <div className="text-zinc-600 text-[11px]">Postal / Zip: {location.postal}</div>
+            )}
+            {location?.ipAddress && (
+              <div className="text-zinc-600 text-[11px]">
+                IP Address: <span className="font-mono text-black font-semibold">{location.ipAddress}</span>
+              </div>
+            )}
+            {(location?.org || location?.asn) && (
+              <div className="text-zinc-600 text-[11px] truncate">
+                Network: {location.org || location.asn}
+              </div>
+            )}
+            <div className="text-zinc-500 text-[11px] pt-0.5">
               Coordinates: {location?.latitude?.toFixed(4)}°, {location?.longitude?.toFixed(4)}°
+              {location?.timezone && ` • ${location.timezone}`}
             </div>
           </div>
 
@@ -187,9 +298,9 @@ export function NavbarWeather({ isMobileCompact = false }: { isMobileCompact?: b
 
           {/* API Engine Specs */}
           <div className="text-[10px] text-zinc-500 border-t border-black pt-2 space-y-0.5">
-            <div><span className="font-bold text-black">IP Geolocation:</span> free.freeipapi.com (/api/v1/ • Free Plan)</div>
+            <div><span className="font-bold text-black">Primary Provider:</span> ipapi.co (https://ipapi.co/{'{ip}'}/json/)</div>
+            <div><span className="font-bold text-black">High-Availability Failover:</span> ipwho.is / BigDataCloud GPS</div>
             <div><span className="font-bold text-black">Weather API:</span> open-meteo.com (Hourly & Current)</div>
-            <div><span className="font-bold text-black">Rate Limit Policy:</span> Max 60 req/min (Cached 15m)</div>
             {lastUpdated && (
               <div className="text-[9px] text-zinc-400 pt-0.5">
                 Last synchronized: {new Date(lastUpdated).toLocaleTimeString()}
