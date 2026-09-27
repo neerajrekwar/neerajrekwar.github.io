@@ -28,6 +28,7 @@ export default function AboutPage() {
             <div className="mt-8 w-full text-center lg:text-left">
               <h2 className="font-headline font-bold text-3xl uppercase leading-none">The Architect</h2>
               <p className="font-headline text-xs uppercase tracking-widest mt-2 text-primary font-bold">Principal Engineer / GS-01</p>
+              <p className="font-headline text-[11px] uppercase tracking-wider mt-1 text-black/60 font-semibold">Engineering &middot; Arts &middot; Humanities</p>
             </div>
           </div>
 
@@ -41,6 +42,18 @@ export default function AboutPage() {
                 </p>
                 <p>
                   My approach favors strictly typed environments, modular composition, and high-performance runtimes. I don't just build features; I design resilient systems that anticipate growth and withstand the entropy of scaling.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-sm font-headline font-bold uppercase tracking-[0.3em] text-primary">Arts & Humanities Foundation</h3>
+              <div className="space-y-4 font-body text-lg leading-relaxed text-black/80">
+                <p>
+                  Engineering is only half of the craft. With a deep foundation in the arts and humanities, I approach technology through a humanist lens—synthesizing cultural nuance, aesthetic discipline, and ethical consideration with computational rigor.
+                </p>
+                <p>
+                  Software is an expressive medium for human interaction. Bridging technical architecture with philosophical clarity and visual elegance ensures that every product is not just mathematically sound, but deeply empathetic and intuitive.
                 </p>
               </div>
             </section>
@@ -75,6 +88,10 @@ export default function AboutPage() {
                 <li className="flex gap-4">
                   <div className="w-6 h-6 border-2 border-black bg-white shrink-0"></div>
                   <p><strong>Design Fidelity:</strong> Pixel-perfect implementation of complex geometric layouts with zero rounded corners.</p>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-6 h-6 border-2 border-black bg-[#5c7979] shrink-0"></div>
+                  <p><strong>Humanist Empathy:</strong> Infusing digital architecture with arts and humanities sensibility to craft meaningful human experiences.</p>
                 </li>
               </ul>
             </section>

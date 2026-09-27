@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, CheckCircle2, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -45,7 +46,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-headline font-bold uppercase text-xs tracking-widest text-white/40">Direct Line</h4>
-                  <p className="font-headline text-lg">comm@gridsystem.dev</p>
+                  <p className="font-headline text-lg">comm@neerajrekwar.dev</p>
                 </div>
               </div>
               

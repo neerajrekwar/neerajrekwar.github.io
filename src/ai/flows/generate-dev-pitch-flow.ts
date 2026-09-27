@@ -1,61 +1,70 @@
-'use server';
 /**
- * @fileOverview A Genkit flow to generate a compelling 50-word introduction for a full-stack developer portfolio
- * based on provided project data.
- *
- * - generateDevPitch - A function that handles the generation of the developer pitch.
- * - GenerateDevPitchInput - The input type for the generateDevPitch function.
- * - GenerateDevPitchOutput - The return type for the generateDevPitch function.
+ * @fileOverview Client-safe developer pitch generator for static export and production deployment.
  */
 
-import { ai } from '@/ai/genkit';
-import { z } from 'genkit';
-
-const ProjectSchema = z.object({
-  name: z.string().describe('The name of the project.'),
-  description: z.string().describe('A brief description of the project.'),
-  technologiesUsed: z.array(z.string()).describe('A list of technologies used in the project.'),
-});
-
-const GenerateDevPitchInputSchema = z.object({
-  projects: z.array(ProjectSchema).describe('An array of projects to be analyzed for the pitch.'),
-});
-export type GenerateDevPitchInput = z.infer<typeof GenerateDevPitchInputSchema>;
-
-const GenerateDevPitchOutputSchema = z.string().describe('A compelling 50-word introduction for a developer portfolio.');
-export type GenerateDevPitchOutput = z.infer<typeof GenerateDevPitchOutputSchema>;
-
-export async function generateDevPitch(input: GenerateDevPitchInput): Promise<GenerateDevPitchOutput> {
-  return generateDevPitchFlow(input);
+export interface ProjectData {
+  name: string;
+  description: string;
+  technologiesUsed: string[];
 }
 
-const prompt = ai.definePrompt({
-  name: 'generateDevPitchPrompt',
-  input: { schema: GenerateDevPitchInputSchema },
-  output: { schema: GenerateDevPitchOutputSchema },
-  prompt: `You are an AI-powered tool that generates compelling introductions for full-stack developer portfolios.
-Your goal is to create a concise, engaging 50-word introduction that highlights the developer's skills and experience based on their projects.
+export interface GenerateDevPitchInput {
+  projects?: ProjectData[];
+}
 
-Analyze the following project data and generate a 50-word introduction:
+export interface HeadlineData {
+  line1: string;
+  line2: string;
+}
 
-{{#each projects}}
-Project Name: {{this.name}}
-Description: {{this.description}}
-Technologies: {{#each this.technologiesUsed}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
----
-{{/each}}
+export interface DevPitchProfile {
+  headline: HeadlineData;
+  pitch: string;
+  role: string;
+  tag: string;
+  indexNumber: string;
+}
 
-Ensure the introduction is exactly 50 words and focuses on the developer's overall capabilities demonstrated by these projects.`,
-});
+export type GenerateDevPitchOutput = DevPitchProfile;
 
-const generateDevPitchFlow = ai.defineFlow(
+export const CURATED_PROFILES: DevPitchProfile[] = [
   {
-    name: 'generateDevPitchFlow',
-    inputSchema: GenerateDevPitchInputSchema,
-    outputSchema: GenerateDevPitchOutputSchema,
+    headline: { line1: "Precision", line2: "Engineering" },
+    pitch: "I am a high-precision Full-Stack Developer specialized in geometric systems and architectural software design. Focused on building robust, scalable solutions with zero-tolerance for technical debt. My work emphasizes clarity, performance, and industrial-grade reliability across the entire modern web development stack and beyond.",
+    role: "Full-Stack Architect",
+    tag: "Node / React / Go / Postgres",
+    indexNumber: "01",
   },
-  async (input) => {
-    const { output } = await prompt(input);
-    return output!;
-  }
-);
+  {
+    headline: { line1: "Resilient", line2: "Architecture" },
+    pitch: "Architecting resilient, type-safe full-stack applications with high-performance runtimes. Specialized in Next.js, distributed services, and responsive design systems that eliminate latency and scale effortlessly under demanding production workloads.",
+    role: "Systems Engineer",
+    tag: "Next.js / TypeScript / Distributed Systems",
+    indexNumber: "02",
+  },
+  {
+    headline: { line1: "Mechanical", line2: "Integrity" },
+    pitch: "Full-stack engineer dedicated to mechanical precision and structural software integrity. Combining modern frontend aesthetics with hardened database architectures, CI/CD automation, and rigorous end-to-end reliability.",
+    role: "Software Craftsman",
+    tag: "CI/CD / Rust / PostgreSQL / Docker",
+    indexNumber: "03",
+  },
+  {
+    headline: { line1: "Arts &", line2: "Humanities" },
+    pitch: "Rooted in the arts and humanities alongside engineering, I bring cultural depth, ethical inquiry, and creative storytelling into technical architecture. I treat software as an expressive, human-centered medium—harmonizing aesthetic intuition, philosophical clarity, and computational rigor to craft meaningful digital experiences.",
+    role: "Humanities & Creative Technologist",
+    tag: "Arts & Humanities / Philosophy / UX Design / Creative Code",
+    indexNumber: "04",
+  },
+];
+
+export const CURATED_PITCHES: string[] = CURATED_PROFILES.map((p) => p.pitch);
+
+let lastIndex = 0;
+
+export async function generateDevPitch(input?: GenerateDevPitchInput): Promise<GenerateDevPitchOutput> {
+  // Simulate AI orchestration delay
+  await new Promise((resolve) => setTimeout(resolve, 350));
+  lastIndex = (lastIndex + 1) % CURATED_PROFILES.length;
+  return CURATED_PROFILES[lastIndex];
+}
